@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+elif_clause [67,100]
+    elif: elif [67,71]
+    boolean_operator [72,85]
+        comparison_operator [72,76]
+            identifier: A [72,73]
+            comparison_operator: == [73,75]
+            integer: 3 [75,76]
+        and: and [77,80]
+        comparison_operator [81,85]
+            identifier: B [81,82]
+            comparison_operator: == [82,84]
+            integer: 1 [84,85]
+    block [92,100]
+        expression_statement [92,100]
+            call [92,100]
+                identifier: print [92,97]
+                argument_list [97,100]
+                    integer: 2 [98,99]
+to
+if_statement [34,262]
+at 2
+

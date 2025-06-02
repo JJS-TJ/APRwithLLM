@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 'NO' to 'No'
+------------
+===
+update-node
+---
+string: 'NO' [213,217]
+replace 'NO' by 'No'
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Arice" to "Alice"
+------------
+===
+update-node
+---
+string: "Arice" [236,243]
+replace "Arice" by "Alice"
+

@@ -1,0 +1,37 @@
+New cluster:
+MOVE from argument_list [304,314]
+------------
+===
+move-tree
+---
+binary_operator [305,309]
+    integer: 2 [305,306]
+    **: ** [306,308]
+    identifier: N [308,309]
+to
+argument_list [304,314]
+at 0
+
+New cluster:
+===
+delete-node
+---
+binary_operator [305,313]
+===
+------------
+===
+delete-node
+---
+integer: 1 [312,313]
+===
+===
+delete-node
+---
++: + [310,311]
+===
+===
+delete-node
+---
+binary_operator [305,313]
+===
+

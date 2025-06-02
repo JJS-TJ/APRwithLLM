@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: j [494,495]
+to
+binary_operator [492,495]
+at 2
+------------
+===
+insert-node
+---
+identifier: j [494,495]
+to
+binary_operator [492,495]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [494,495]
+===
+------------
+===
+delete-node
+---
+integer: 1 [494,495]
+===
+

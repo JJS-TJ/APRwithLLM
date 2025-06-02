@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+call [67,84]
+to
+assignment [57,79]
+at 2
+------------
+===
+insert-node
+---
+argument_list [70,84]
+to
+call [67,84]
+at 1
+===
+insert-node
+---
+call [67,84]
+to
+assignment [57,79]
+at 2
+===
+insert-node
+---
+identifier: int [67,70]
+to
+call [67,84]
+at 0
+
+New cluster:
+MOVE from argument_list [70,84]
+------------
+===
+move-tree
+---
+binary_operator [67,79]
+    parenthesized_expression [67,77]
+        binary_operator [68,76]
+            call [68,74]
+                identifier: sum [68,71]
+                argument_list [71,74]
+                    identifier: D [72,73]
+            +: + [74,75]
+            integer: 1 [75,76]
+    /: / [77,78]
+    integer: 2 [78,79]
+to
+argument_list [70,84]
+at 0
+

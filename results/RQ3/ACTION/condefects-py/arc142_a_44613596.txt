@@ -1,0 +1,72 @@
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [327,362]
+to
+binary_operator [322,342]
+at 2
+------------
+===
+insert-node
+---
+parenthesized_expression [327,362]
+to
+binary_operator [322,342]
+at 2
+===
+insert-node
+---
+integer: 0 [360,361]
+to
+conditional_expression [328,361]
+at 3
+===
+insert-node
+---
+conditional_expression [328,361]
+to
+parenthesized_expression [327,362]
+at 0
+===
+insert-node
+---
+else: else [355,359]
+to
+conditional_expression [328,361]
+at 2
+
+New cluster:
+MOVE from conditional_expression [328,361]
+------------
+===
+move-tree
+---
+call [331,342]
+    identifier: cnt [331,334]
+    argument_list [334,342]
+        call [335,341]
+            identifier: rev [335,338]
+            argument_list [338,341]
+                identifier: K [339,340]
+to
+conditional_expression [328,361]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [343,354]
+    identifier: K [343,344]
+    comparison_operator: != [345,347]
+    call [348,354]
+        identifier: rev [348,351]
+        argument_list [351,354]
+            identifier: K [352,353]
+to
+conditional_expression [328,361]
+at 1
+

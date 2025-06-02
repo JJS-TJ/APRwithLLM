@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from '011' to '110'
+------------
+===
+update-node
+---
+string: '011' [1374,1379]
+replace '011' by '110'
+

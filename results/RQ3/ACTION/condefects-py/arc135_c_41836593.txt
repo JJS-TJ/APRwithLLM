@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+integer: 30 [225,227]
+to
+argument_list [224,227]
+at 0
+------------
+===
+insert-node
+---
+integer: 30 [225,227]
+to
+argument_list [224,227]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: k [225,226]
+===
+------------
+===
+delete-node
+---
+identifier: k [225,226]
+===
+

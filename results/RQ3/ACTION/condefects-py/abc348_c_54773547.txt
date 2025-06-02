@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from num to _min
+------------
+===
+update-node
+---
+identifier: num [111,114]
+replace num by _min
+
+New cluster:
+UPDATE from _min to num
+------------
+===
+update-node
+---
+identifier: _min [116,120]
+replace _min by num
+

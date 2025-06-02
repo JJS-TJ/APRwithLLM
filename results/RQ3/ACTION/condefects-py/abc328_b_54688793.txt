@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+comment:     #print(a,b) [306,318]
+to
+block [122,414]
+at 10
+------------
+===
+insert-node
+---
+comment:     #print(a,b) [306,318]
+to
+block [122,414]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [306,316]
+    call [306,316]
+        identifier: print [306,311]
+        argument_list [311,316]
+            identifier: a [312,313]
+            identifier: b [314,315]
+

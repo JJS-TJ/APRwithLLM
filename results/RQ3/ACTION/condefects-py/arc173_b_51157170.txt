@@ -1,0 +1,67 @@
+New cluster:
+MOVE from assignment [2199,2216]
+------------
+===
+move-tree
+---
+binary_operator [2203,2213]
+    binary_operator [2203,2208]
+        identifier: px [2203,2205]
+        *: * [2205,2206]
+        identifier: qy [2206,2208]
+    -: - [2209,2210]
+    identifier: py [2211,2213]
+to
+assignment [2199,2216]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [2211,2216]
+    identifier: py [2211,2213]
+    *: * [2213,2214]
+    identifier: qx [2214,2216]
+to
+binary_operator [2203,2213]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: py [2211,2213]
+===
+------------
+===
+delete-node
+---
+identifier: py [2211,2213]
+===
+
+New cluster:
+===
+delete-node
+---
+binary_operator [2203,2216]
+===
+------------
+===
+delete-node
+---
+-: - [2213,2214]
+===
+===
+delete-node
+---
+binary_operator [2203,2216]
+===
+===
+delete-node
+---
+identifier: qx [2214,2216]
+===
+

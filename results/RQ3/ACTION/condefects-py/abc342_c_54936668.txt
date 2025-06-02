@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "abcdefghijklmnopqrstuvwsyz" to "abcdefghijklmnopqrstuvwxyz"
+------------
+===
+update-node
+---
+string: "abcdefghijklmnopqrstuvwsyz" [83,111]
+replace "abcdefghijklmnopqrstuvwsyz" by "abcdefghijklmnopqrstuvwxyz"
+

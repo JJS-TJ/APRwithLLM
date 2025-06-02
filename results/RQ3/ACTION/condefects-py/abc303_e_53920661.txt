@@ -1,0 +1,44 @@
+New cluster:
+===
+insert-node
+---
+call [276,285]
+to
+comparison_operator [276,285]
+at 0
+------------
+===
+insert-node
+---
+identifier: len [276,279]
+to
+call [276,285]
+at 0
+===
+insert-node
+---
+call [276,285]
+to
+comparison_operator [276,285]
+at 0
+===
+insert-node
+---
+argument_list [279,285]
+to
+call [276,285]
+at 1
+
+New cluster:
+MOVE from argument_list [279,285]
+------------
+===
+move-tree
+---
+subscript [276,280]
+    identifier: G [276,277]
+    identifier: i [278,279]
+to
+argument_list [279,285]
+at 0
+

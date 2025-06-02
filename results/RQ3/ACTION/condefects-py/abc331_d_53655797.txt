@@ -1,0 +1,18 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+for_statement [656,686]
+    identifier: i [660,661]
+    identifier: score [665,670]
+    block [677,686]
+        expression_statement [677,686]
+            call [677,686]
+                identifier: print [677,682]
+                argument_list [682,686]
+                    list_splat [683,685]
+                        *: * [683,684]
+                        identifier: i [684,685]
+

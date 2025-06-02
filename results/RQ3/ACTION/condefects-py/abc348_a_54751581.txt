@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from     ans += 'x' if i % 3 == 0 else '¡ð' to 'o'
+------------
+===
+update-node
+---
+string:     ans += 'x' if i % 3 == 0 else '¡ð' [89,94]
+replace     ans += 'x' if i % 3 == 0 else '¡ð' by 'o'
+

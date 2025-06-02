@@ -1,0 +1,178 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1582,1594]
+    call [1582,1594]
+        identifier: print [1582,1587]
+        argument_list [1587,1594]
+            string: 'Yes' [1588,1593]
+to
+block [1788,1798]
+at 0
+
+New cluster:
+===
+insert-node
+---
+comment:                 # print(*p1, sep='\n') [1612,1635]
+to
+block [1788,1798]
+at 1
+------------
+===
+insert-node
+---
+comment:                 # print(*p1, sep='\n') [1612,1635]
+to
+block [1788,1798]
+at 1
+
+New cluster:
+===
+insert-node
+---
+comment:                 # print() [1652,1662]
+to
+block [1788,1798]
+at 2
+------------
+===
+insert-node
+---
+comment:                 # print() [1652,1662]
+to
+block [1788,1798]
+at 2
+
+New cluster:
+===
+insert-node
+---
+comment:                 # print(*p2, sep='\n') [1679,1702]
+to
+block [1788,1798]
+at 3
+------------
+===
+insert-node
+---
+comment:                 # print(*p2, sep='\n') [1679,1702]
+to
+block [1788,1798]
+at 3
+
+New cluster:
+===
+insert-node
+---
+comment:                 # print() [1719,1729]
+to
+block [1788,1798]
+at 4
+------------
+===
+insert-node
+---
+comment:                 # print() [1719,1729]
+to
+block [1788,1798]
+at 4
+
+New cluster:
+===
+insert-node
+---
+comment:                 # print(*p3, sep='\n') [1746,1769]
+to
+block [1788,1798]
+at 5
+------------
+===
+insert-node
+---
+comment:                 # print(*p3, sep='\n') [1746,1769]
+to
+block [1788,1798]
+at 5
+
+New cluster:
+===
+delete-node
+---
+comment:                 # print('Yes') [1582,1597]
+===
+------------
+===
+delete-node
+---
+comment:                 # print('Yes') [1582,1597]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:                 # print(*p1, sep='\n') [1614,1637]
+===
+------------
+===
+delete-node
+---
+comment:                 # print(*p1, sep='\n') [1614,1637]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:                 # print() [1654,1664]
+===
+------------
+===
+delete-node
+---
+comment:                 # print() [1654,1664]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:                 # print(*p2, sep='\n') [1681,1704]
+===
+------------
+===
+delete-node
+---
+comment:                 # print(*p2, sep='\n') [1681,1704]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:                 # print() [1721,1731]
+===
+------------
+===
+delete-node
+---
+comment:                 # print() [1721,1731]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:                 # print(*p3, sep='\n') [1748,1771]
+===
+------------
+===
+delete-node
+---
+comment:                 # print(*p3, sep='\n') [1748,1771]
+===
+

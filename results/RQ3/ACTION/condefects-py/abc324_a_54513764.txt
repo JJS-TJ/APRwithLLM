@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Yse" to "Yes"
+------------
+===
+update-node
+---
+string: "Yse" [7,12]
+replace "Yse" by "Yes"
+

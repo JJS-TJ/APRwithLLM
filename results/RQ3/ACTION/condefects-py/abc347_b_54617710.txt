@@ -1,0 +1,54 @@
+New cluster:
+===
+insert-node
+---
+call [117,135]
+to
+expression_statement [117,130]
+at 0
+------------
+===
+insert-node
+---
+identifier: print [117,122]
+to
+call [117,135]
+at 0
+===
+insert-node
+---
+argument_list [122,135]
+to
+call [117,135]
+at 1
+===
+insert-node
+---
+call [117,135]
+to
+expression_statement [117,130]
+at 0
+
+New cluster:
+MOVE from argument_list [122,135]
+------------
+===
+move-tree
+---
+call [117,130]
+    identifier: print [117,122]
+    argument_list [122,130]
+        identifier: S_part [123,129]
+to
+argument_list [122,135]
+at 0
+
+New cluster:
+UPDATE from print to len
+------------
+===
+update-node
+---
+identifier: print [117,122]
+replace print by len
+

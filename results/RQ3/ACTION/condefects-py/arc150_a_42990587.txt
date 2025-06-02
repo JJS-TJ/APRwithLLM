@@ -1,0 +1,45 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [351,360]
+to
+argument_list [350,357]
+at 0
+------------
+===
+insert-node
+---
++: + [357,358]
+to
+binary_operator [351,360]
+at 1
+===
+insert-node
+---
+binary_operator [351,360]
+to
+argument_list [350,357]
+at 0
+===
+insert-node
+---
+integer: 1 [359,360]
+to
+binary_operator [351,360]
+at 2
+
+New cluster:
+MOVE from binary_operator [351,360]
+------------
+===
+move-tree
+---
+binary_operator [351,356]
+    identifier: N [351,352]
+    -: - [353,354]
+    identifier: K [355,356]
+to
+binary_operator [351,360]
+at 0
+

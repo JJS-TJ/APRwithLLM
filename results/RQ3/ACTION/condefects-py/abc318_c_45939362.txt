@@ -1,0 +1,41 @@
+New cluster:
+MOVE from slice [135,148]
+------------
+===
+move-tree
+---
+binary_operator [139,146]
+    identifier: d [139,140]
+    *: * [140,141]
+    parenthesized_expression [141,146]
+        binary_operator [142,145]
+            identifier: i [142,143]
+            +: + [143,144]
+            integer: 1 [144,145]
+to
+slice [135,148]
+at 1
+
+New cluster:
+===
+delete-node
+---
+binary_operator [139,148]
+===
+------------
+===
+delete-node
+---
++: + [146,147]
+===
+===
+delete-node
+---
+integer: 1 [147,148]
+===
+===
+delete-node
+---
+binary_operator [139,148]
+===
+

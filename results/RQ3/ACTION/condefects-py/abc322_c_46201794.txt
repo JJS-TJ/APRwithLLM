@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 2 to 1
+------------
+===
+update-node
+---
+integer: 2 [123,124]
+replace 2 by 1
+

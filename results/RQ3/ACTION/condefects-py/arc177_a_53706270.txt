@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [478,483]
+    identifier: B [478,479]
+    -: - [480,481]
+    integer: 1 [482,483]
+to
+assignment [474,482]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+unary_operator [479,482]
+    -: - [479,480]
+    integer: 1 [481,482]
+

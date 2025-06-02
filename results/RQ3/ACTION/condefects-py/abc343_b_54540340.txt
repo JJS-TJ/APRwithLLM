@@ -1,0 +1,15 @@
+New cluster:
+MOVE from block [109,199]
+------------
+===
+move-tree
+---
+expression_statement [75,83]
+    assignment [75,83]
+        identifier: ans [75,78]
+        =: = [79,80]
+        list [81,83]
+to
+block [109,199]
+at 0
+

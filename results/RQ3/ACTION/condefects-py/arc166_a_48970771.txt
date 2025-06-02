@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from sx to sy
+------------
+===
+update-node
+---
+identifier: sx [1219,1221]
+replace sx by sy
+

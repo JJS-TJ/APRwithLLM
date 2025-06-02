@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from min to max
+------------
+===
+update-node
+---
+identifier: min [248,251]
+replace min by max
+

@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [47,50]
+    identifier: A [47,48]
+    +: + [48,49]
+    identifier: D [49,50]
+to
+comparison_operator [47,51]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: A [47,48]
+===
+------------
+===
+delete-node
+---
+identifier: A [47,48]
+===
+

@@ -1,0 +1,15 @@
+New cluster:
+MOVE from block [188,226]
+------------
+===
+move-tree
+---
+expression_statement [188,194]
+    assignment [188,194]
+        identifier: Gi [188,190]
+        =: = [191,192]
+        identifier: G [193,194]
+to
+block [188,226]
+at 1
+

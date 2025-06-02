@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "AtCorder" to "AtCoder"
+------------
+===
+update-node
+---
+string: "AtCorder" [33,43]
+replace "AtCorder" by "AtCoder"
+

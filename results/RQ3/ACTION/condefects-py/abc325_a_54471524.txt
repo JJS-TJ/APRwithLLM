@@ -1,0 +1,27 @@
+New cluster:
+UPDATE from ' to +
+------------
+===
+update-node
+---
++: ' [43,44]
+replace ' by +
+
+New cluster:
+UPDATE from san') to 'san'
+------------
+===
+update-node
+---
+string: san') [44,49]
+replace san') by 'san'
+
+New cluster:
+UPDATE from '¡¡'+ to ' '
+------------
+===
+update-node
+---
+string: '¡¡'+ [38,43]
+replace '¡¡'+ by ' '
+

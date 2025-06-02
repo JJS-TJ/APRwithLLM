@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+identifier: end [151,154]
+to
+slice [145,156]
+at 1
+------------
+===
+insert-node
+---
+identifier: end [151,154]
+to
+slice [145,156]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [151,156]
+    identifier: end [151,154]
+    +: + [154,155]
+    integer: 1 [155,156]
+

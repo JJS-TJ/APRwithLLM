@@ -1,0 +1,50 @@
+New cluster:
+===
+insert-node
+---
+subscript [489,507]
+to
+assignment [485,501]
+at 2
+------------
+===
+insert-node
+---
+subscript [489,507]
+to
+assignment [485,501]
+at 2
+
+New cluster:
+MOVE from subscript [489,507]
+------------
+===
+move-tree
+---
+call [489,501]
+    identifier: sub [489,492]
+    argument_list [492,501]
+        subscript [493,500]
+            identifier: A [493,494]
+            slice [495,499]
+                unary_operator [497,499]
+                    -: - [497,498]
+                    integer: 1 [498,499]
+to
+subscript [489,507]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+slice [502,506]
+    unary_operator [504,506]
+        -: - [504,505]
+        integer: 1 [505,506]
+to
+subscript [489,507]
+at 1
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from t to s
+------------
+===
+update-node
+---
+identifier: t [205,206]
+replace t by s
+

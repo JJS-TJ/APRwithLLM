@@ -1,0 +1,51 @@
+New cluster:
+===
+insert-node
+---
+subscript [143,149]
+to
+argument_list [142,149]
+at 0
+------------
+===
+insert-node
+---
+subscript [143,149]
+to
+argument_list [142,149]
+at 0
+===
+insert-node
+---
+identifier: s [143,144]
+to
+subscript [143,149]
+at 0
+
+New cluster:
+MOVE from subscript [143,149]
+------------
+===
+move-tree
+---
+comparison_operator [144,147]
+    identifier: X [144,145]
+    comparison_operator: < [145,146]
+    identifier: Y [146,147]
+to
+subscript [143,149]
+at 1
+
+New cluster:
+===
+delete-node
+---
+list [143,148]
+===
+------------
+===
+delete-node
+---
+list [143,148]
+===
+

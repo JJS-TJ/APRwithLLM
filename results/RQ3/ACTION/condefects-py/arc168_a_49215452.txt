@@ -1,0 +1,14 @@
+New cluster:
+UPDATE from n to i
+------------
+===
+update-node
+---
+identifier: n [201,202]
+replace n by i
+===
+update-node
+---
+identifier: n [198,199]
+replace n by i
+

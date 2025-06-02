@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [112,117]
+    binary_operator [113,116]
+        identifier: N [113,114]
+        -: - [114,115]
+        integer: 1 [115,116]
+to
+binary_operator [112,115]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: N [112,113]
+===
+------------
+===
+delete-node
+---
+identifier: N [112,113]
+===
+

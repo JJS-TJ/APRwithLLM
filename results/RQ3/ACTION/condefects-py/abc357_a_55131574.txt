@@ -1,0 +1,27 @@
+New cluster:
+===
+insert-node
+---
+integer: 0 [170,171]
+to
+comparison_operator [166,174]
+at 2
+------------
+===
+insert-node
+---
+integer: 0 [170,171]
+to
+comparison_operator [166,174]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [170,174]
+    identifier: H [170,171]
+    identifier: i [172,173]
+

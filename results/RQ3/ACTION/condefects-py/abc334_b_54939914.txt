@@ -1,0 +1,76 @@
+New cluster:
+MOVE from assignment [36,53]
+------------
+===
+move-tree
+---
+binary_operator [43,52]
+    unary_operator [43,49]
+        -: - [43,44]
+        parenthesized_expression [44,49]
+            binary_operator [45,48]
+                identifier: L [45,46]
+                -: - [46,47]
+                identifier: A [47,48]
+    //: // [49,51]
+    identifier: M [51,52]
+to
+assignment [36,53]
+at 2
+
+New cluster:
+MOVE from binary_operator [43,52]
+------------
+===
+move-tree
+---
+parenthesized_expression [44,49]
+    binary_operator [45,48]
+        identifier: L [45,46]
+        -: - [46,47]
+        identifier: A [47,48]
+to
+binary_operator [43,52]
+at 0
+
+New cluster:
+===
+delete-node
+---
+unary_operator [43,49]
+===
+------------
+===
+delete-node
+---
+unary_operator [43,49]
+===
+===
+delete-node
+---
+-: - [43,44]
+===
+
+New cluster:
+===
+delete-node
+---
+unary_operator [41,53]
+===
+------------
+===
+delete-node
+---
+-: - [41,42]
+===
+===
+delete-node
+---
+unary_operator [41,53]
+===
+===
+delete-node
+---
+parenthesized_expression [42,53]
+===
+

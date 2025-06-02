@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [170,185]
+    identifier: max [170,173]
+    argument_list [173,185]
+        subscript [174,181]
+            identifier: memo [174,178]
+            identifier: x [179,180]
+        identifier: y [183,184]
+to
+assignment [160,171]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: y [170,171]
+===
+------------
+===
+delete-node
+---
+identifier: y [170,171]
+===
+

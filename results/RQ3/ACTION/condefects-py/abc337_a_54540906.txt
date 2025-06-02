@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Takahasi" to "Takahashi"
+------------
+===
+update-node
+---
+string: "Takahasi" [138,148]
+replace "Takahasi" by "Takahashi"
+

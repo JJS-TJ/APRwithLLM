@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [608,612]
+    identifier: mx [608,610]
+    +: + [610,611]
+    integer: 1 [611,612]
+to
+argument_list [605,611]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: mx [608,610]
+===
+------------
+===
+delete-node
+---
+identifier: mx [608,610]
+===
+

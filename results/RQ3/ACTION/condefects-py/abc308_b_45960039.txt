@@ -1,0 +1,67 @@
+New cluster:
+===
+insert-node
+---
+augmented_assignment [203,212]
+to
+expression_statement [203,214]
+at 0
+------------
+===
+insert-node
+---
+identifier: s [203,204]
+to
+augmented_assignment [203,212]
+at 0
+===
+insert-node
+---
+augmented_assignment [203,212]
+to
+expression_statement [203,214]
+at 0
+===
+insert-node
+---
++=: += [205,207]
+to
+augmented_assignment [203,212]
+at 1
+
+New cluster:
+MOVE from augmented_assignment [203,212]
+------------
+===
+move-tree
+---
+subscript [209,213]
+    identifier: p [209,210]
+    integer: 0 [211,212]
+to
+augmented_assignment [203,212]
+at 2
+
+New cluster:
+===
+delete-node
+---
+call [203,214]
+===
+------------
+===
+delete-node
+---
+identifier: print [203,208]
+===
+===
+delete-node
+---
+argument_list [208,214]
+===
+===
+delete-node
+---
+call [203,214]
+===
+

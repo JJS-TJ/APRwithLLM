@@ -1,0 +1,51 @@
+New cluster:
+===
+insert-node
+---
+call [13,52]
+to
+expression_statement [13,45]
+at 0
+------------
+===
+insert-node
+---
+call [13,52]
+to
+expression_statement [13,45]
+at 0
+===
+insert-node
+---
+identifier: print [13,18]
+to
+call [13,52]
+at 0
+===
+insert-node
+---
+argument_list [18,52]
+to
+call [13,52]
+at 1
+
+New cluster:
+MOVE from argument_list [18,52]
+------------
+===
+move-tree
+---
+call [13,45]
+    attribute [13,19]
+        identifier: re [13,15]
+        identifier: sub [16,19]
+    argument_list [19,45]
+        string: "a|e|i|o|u" [20,31]
+        string: "" [33,35]
+        call [37,44]
+            identifier: input [37,42]
+            argument_list [42,44]
+to
+argument_list [18,52]
+at 0
+
