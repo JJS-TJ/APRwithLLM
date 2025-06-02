@@ -1,0 +1,204 @@
+No.0 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	if (x <= y && x <= z && x <= t)
+		a = x;
+	if (y <= x && y <= z && y <= t)
+		a = y;
+	if (z <= x && z <= y && z <= t)
+		a = z;
+	if (t <= x && t <= y && t <= z)
+		a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+No.1 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	if (x <= y && x <= z && x <= t)
+	a = x;
+	else if (y <= x && y <= z && y <= t)
+	a = y;
+	else if (z <= x && z <= y && z <= t)
+	a = z;
+	else
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+
+/*
+1. The bug was that the code was trying to find the largest number instead of the smallest. 
+2. The comparison operators were also incorrect for finding the smallest number. 
+3. The fixed code checks each number against all the other numbers and assigns the smallest number to the variable a.
+*/
+No.2 Patch
+int main() {
+    int x, y, z, t, a;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d %d %d %d", &x, &y, &z, &t);
+    if (x <= y && x <= z && x <= t)
+        a = x;
+    else if (y <= x && y <= z && y <= t)
+        a = y;
+    else if (z <= x && z <= y && z <= t)
+        a = z;
+    else if (t <= x && t <= y && t <= z)
+        a = t;
+    printf("%d is the smallest \n", a);
+    return 0;
+}
+No.3 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	
+	if (x <= y && x <= z && x <= t)
+		a = x;
+	else if (y <= x && y <= z && y <= t)
+		a = y;
+	else if (z <= x && z <= y && z <= t)
+		a = z;
+	else if (t <= x && t <= y && t <= z)
+		a = t;
+	
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+No.4 Patch
+#include <stdio.h>
+
+int main() {
+    int x, y, z, t, a;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d %d %d %d", &x, &y, &z, &t);
+    if (x <= y && x <= z && x <= t)
+        a = x;
+    else if (y <= x && y <= z && y <= t)
+        a = y;
+    else if (z <= x && z <= y && z <= t)
+        a = z;
+    else
+        a = t;
+    printf("%d is the smallest\n", a);
+    return 0;
+}
+No.5 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	if (x >= y)
+	a = y;
+	else
+	a = x;
+	if (a >= z)
+	a = z;
+	if (a >= t)
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+
+/* Please provide a fix for the buggy function */
+No.6 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	if (x <= y && x <= z && x <= t)
+	a = x;
+	else if (y <= x && y <= z && y <= t)
+	a = y;
+	else if (z <= x && z <= y && z <= t)
+	a = z;
+	else
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+No.7 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	a = x;
+	if (y < a)
+	a = y;
+	if (z < a)
+	a = z;
+	if (t < a)
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+No.8 Patch
+#include <stdio.h>
+
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	if (x <= y && x <= z && x <= t)
+	a = x;
+	else if (y <= x && y <= z && y <= t)
+	a = y;
+	else if (z <= x && z <= y && z <= t)
+	a = z;
+	else
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+No.9 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	a = x; //a is the smallest now
+	if (y < a) //if y is less than a, make a = y
+	a = y;
+	if (z < a) //if z is less than a, make a = z
+	a = z;
+	if (t < a) //if t is less than a, make a = t
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+No.10 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	if (x <= y && x <= z && x <= t)
+	a = x;
+	if (y <= x && y <= z && y <= t)
+	a = y;
+	if (z <= x && z <= y && z <= t)
+	a = z;
+	if (t <= x && t <= y && t <= z)
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}
+No.11 Patch
+int main() {
+	int x, y, z, t, a;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &x, &y, &z, &t);
+	if (x <= y)
+	a = x;
+	else
+	a = y;
+	if (a >= z)
+	a = z;
+	if (a >= t)
+	a = t;
+	printf("%d is the smallest \n", a);
+	return 0;
+}

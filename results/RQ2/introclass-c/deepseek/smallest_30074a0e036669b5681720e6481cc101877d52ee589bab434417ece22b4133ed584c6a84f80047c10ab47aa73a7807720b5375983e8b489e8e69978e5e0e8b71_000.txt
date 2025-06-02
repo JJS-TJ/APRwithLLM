@@ -1,0 +1,205 @@
+No.0 Patch
+int main() {
+    int a, b, c, d;
+    int smallest;
+
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    smallest = a;
+    if(b < smallest) smallest = b;
+    if(c < smallest) smallest = c;
+    if(d < smallest) smallest = d;
+
+    printf("%d is the smallest integer\n", smallest);
+
+    return 0;
+}
+No.2 Patch
+int main() {
+
+int a, b, c, d, smallest;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &a, &b, &c, &d);
+	smallest = a;
+	if(b < smallest) smallest = b;
+	if(c < smallest) smallest = c;
+	if(d < smallest) smallest = d;
+	printf("%d is the smallest integer\n", smallest);
+
+return 0;
+}
+No.3 Patch
+int main () {
+
+int a, b, c, d;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+	if(a<=b && a<=c && a<=d)
+		printf("%d is the smallest integer\n", a);
+	else if(b<=a && b<=c && b<=d)
+		printf("%d is the smallest integer\n", b);
+	else if(c<=a && c<=b && c<=d)
+		printf("%d is the smallest integer\n", c);
+	else if(d<=a && d<=c && d<=b)
+		printf("%d is the smallest integer\n", d);
+	else printf("I don't know what I'm doing. \n");
+
+
+return 0;
+
+}
+No.4 Patch
+int main () {
+
+int a, b, c, d, smallest;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+		
+		if(a<b)
+			smallest=a;
+		else 
+			smallest=b;
+		
+		if(c<smallest)
+			smallest=c;
+		if(d<smallest)
+			smallest=d;
+		
+		printf("%d is the smallest integer\n", smallest);
+
+return 0;
+
+}
+No.6 Patch
+#include <stdio.h>
+
+int main() {
+
+  int a, b, c, d, smallest;
+
+  printf("Please enter 4 numbers separated by spaces > ");
+  scanf("%d %d %d %d", &a, &b, &c, &d);
+
+  smallest = a;
+
+  if(b < smallest)
+    smallest = b;
+
+  if(c < smallest)
+    smallest = c;
+
+  if(d < smallest)
+    smallest = d;
+
+  printf("%d is the smallest integer\n", smallest);
+
+  return 0;
+}
+
+/* You should compare each number with the current smallest number
+   and then replace it with the smaller one if it exists. */
+No.8 Patch
+int main () {
+
+int a, b, c, d;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+	if(a<=b && a<=c && a<=d)
+		printf("%d is the smallest integer\n", a);
+	else if(b<a && b<=c && b<=d)
+		printf("%d is the smallest integer\n", b);
+	else if(c<a && c<b && c<=d)
+		printf("%d is the smallest integer\n", c);
+	else if(d<a && d<b && d<c)
+		printf("%d is the smallest integer\n", d);
+	else printf("I don't know what I'm doing. \n");
+
+
+return 0;
+
+}
+No.9 Patch
+int main () {
+
+int a, b, c, d, min;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+
+		min = a;
+		if(b < min) min = b;
+		if(c < min) min = c;
+		if(d < min) min = d;
+
+		printf("%d is the smallest integer\n", min);
+
+return 0;
+
+}
+No.13 Patch
+int main() {
+
+	int a, b, c, d, min;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+	
+	min = a;
+	if(b < min) min = b;
+	if(c < min) min = c;
+	if(d < min) min = d;
+
+	printf("%d is the smallest integer\n", min);
+
+return 0;
+
+}
+No.15 Patch
+int main() {
+
+int a, b, c, d, min;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+		min = a;
+	if(b < min)
+		min = b;
+	if(c < min)
+		min = c;
+	if(d < min)
+		min = d;
+	printf("%d is the smallest integer\n", min);
+
+
+return 0;
+
+}
+No.16 Patch
+int main () {
+
+int a, b, c, d;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+	if(a<=b && a<=c && a<=d)
+		printf("%d is the smallest integer\n", a);
+	else if(b<=a && b<=c && b<=d)
+		printf("%d is the smallest integer\n", b);
+	else if(c<=a && c<=b && c<=d)
+		printf("%d is the smallest integer\n", c);
+	else if(d<=a && d<=c && d<=b)
+		printf("%d is the smallest integer\n", d);
+	else printf("I don't know what I'm doing. \n");
+
+
+return 0;
+
+}
+
+/* Explain the bug and the fix. */
+/* The bug in the original program is that it fails to check the equality of the numbers, it only checks if a number is less than another, which is incorrect as a number could be equal to the other number. The fix is to check for less than or equal to instead of only less than. */

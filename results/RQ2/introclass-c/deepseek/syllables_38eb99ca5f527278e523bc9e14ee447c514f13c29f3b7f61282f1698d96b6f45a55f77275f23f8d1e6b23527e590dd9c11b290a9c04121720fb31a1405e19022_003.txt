@@ -1,0 +1,191 @@
+No.0 Patch
+#include <stdio.h>
+#include <string.h>
+#define sizeA 100
+
+int main () {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+  
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.4 Patch
+int main () {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+  
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.5 Patch
+int main () {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA,stdin);
+  
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+
+/* This function counts the number of vowels (a,e,i,o,u,y) in a string and should be modified to check if the vowels include capital letters */
+No.7 Patch
+int main() {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+  
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+
+
+// The bug was in the condition of the if statement, the condition "||" was not included in the condition and the 'i' letter was not included. This resulted in the counting of 'i' as a syllable which is not correct.
+No.10 Patch
+int main() {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+  
+  printf("Please enter a string > ");
+  fgets(string,sizeA-1,stdin);
+  
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y' || string[i] == 'i')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.11 Patch
+#include <stdio.h>
+#include <string.h>
+
+#define sizeA 1000
+
+int main () {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.17 Patch
+#include <stdio.h>
+#include <string.h>
+#define sizeA 256
+
+int main () {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+  
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.20 Patch
+#include<stdio.h>
+#include<string.h>
+
+#define sizeA 50
+
+int main () {
+
+  char string[sizeA];
+  int i;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+  
+  for (i = 0; i < strlen(string); i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}

@@ -1,0 +1,114 @@
+No.1 Patch
+int
+main(void)
+{
+	double first, second, third;
+
+	printf("Please enter 3 numbers seperated by spaces > ");
+	scanf("%lf %lf %lf", &first, &second, &third);
+
+	if ((first>=second && first<=third) || (first<=second && first>=third))
+		printf("%.0lf is the median\n",first);
+	if ((second>=first && second<=third) || (second<=first && second>=third))
+		printf("%.0lf is the median\n",second);
+	if ((third>=first && third<=second) || (third<=first && third>=second))
+		printf("%.0lf is the median\n", third);
+	return(0);
+}
+No.2 Patch
+int
+main(void)
+{
+	double first, second, third;
+
+	printf("Please enter 3 numbers seperated by spaces > ");
+	scanf("%lf", &first);
+	scanf("%lf", &second);
+	scanf("%lf", &third);
+
+	if ((first >= second && first <= third) || (first <= second && first >= third))
+		printf("%.0lf is the median\n", first);
+	if ((second >= first && second <= third) || (second <= first && second >= third))
+		printf("%.0lf is the median\n", second);
+	if ((third >= first && third <= second) || (third <= first && third >= second))
+		printf("%.0lf is the median\n", third);
+	return(0);
+}
+No.3 Patch
+int
+main(void)
+{
+	double first, second, third;
+
+	printf("Please enter 3 numbers seperated by spaces > ");
+	scanf("%lf", &first);
+	scanf("%lf", &second);
+	scanf("%lf", &third);
+
+	if ((first>=second && first<=third) || (first<=second && first>=third))
+		printf("%.0lf is the median\n",first);
+	if ((second>=first && second<=third) || (second<=first && second>=third))
+		printf("%.0lf is the median\n",second);
+	if ((third>=first && third<=second) || (third<=first && third>=second))
+		printf("%.0lf is the median\n", third);
+	return(0);
+}
+
+/* Given below is the code for the function that is supposed to return the largest of three integers.
+ * The code is buggy, find the bug and correct it. */
+No.5 Patch
+int
+main(void)
+{
+	double first, second, third;
+
+	printf("Please enter 3 numbers seperated by spaces > ");
+	scanf("%lf", &first);
+	scanf("%lf", &second);
+	scanf("%lf", &third);
+
+	if ((first>=second && first<=third) || (first<=second && first>=third))
+		printf("%.0lf is the median\n",first);
+	if ((second>=first && second<=third) || (second<=first && second>=third))
+		printf("%.0lf is the median\n",second);
+	if ((third>=first && third<=second) || (third<=first && third>=second))
+		printf("%.0lf is the median\n", third);
+	return(0);
+}
+No.14 Patch
+int
+main(void)
+{
+	double first, second, third;
+
+	printf("Please enter 3 numbers seperated by spaces > ");
+	scanf("%lf", &first);
+	scanf("%lf", &second);
+	scanf("%lf", &third);
+
+	if ((first >= second && first <= third) || (first <= second && first >= third))
+		printf("%.0lf is the median\n",first);
+	if ((second >= first && second <= third) || (second <= first && second >= third))
+		printf("%.0lf is the median\n",second);
+	if ((third >= first && third <= second) || (third <= first && third >= second))
+		printf("%.0lf is the median\n", third);
+	return(0);
+}
+No.15 Patch
+int main(void)
+{
+	double first, second, third;
+
+	printf("Please enter 3 numbers seperated by spaces > ");
+	scanf("%lf", &first);
+	scanf("%lf", &second);
+	scanf("%lf", &third);
+
+	if ((first >= second && first <= third) || (first <= second && first >= third))
+		printf("%.0lf is the median\n",first);
+	if ((second >= first && second <= third) || (second <= first && second >= third))
+		printf("%.0lf is the median\n",second);
+	if ((third >= first && third <= second) || (third <= first && third >= second))
+		printf("%.0lf is the median\n", third);
+	return(0);
+}

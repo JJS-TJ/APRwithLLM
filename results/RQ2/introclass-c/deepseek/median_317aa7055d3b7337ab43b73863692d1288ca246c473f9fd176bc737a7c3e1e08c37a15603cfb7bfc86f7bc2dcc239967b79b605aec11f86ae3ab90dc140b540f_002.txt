@@ -1,0 +1,467 @@
+No.1 Patch
+int main () {
+
+  int a,b,c,temp;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  if (a>b)
+  {
+    temp=a;
+    a=b;
+    b=temp;
+  }
+
+  if (b>c)
+  {
+    temp=b;
+    b=c;
+    c=temp;
+  }
+
+  if (a>b)
+  {
+    temp=a;
+    a=b;
+    b=temp;
+  }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+No.4 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=b;
+    b=c;
+    c=temp2;
+    }
+  
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+No.6 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=b;
+    b=c;
+    c=temp2;
+    }
+  
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+}
+No.8 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>c)
+    {
+    temp1=c;
+    c=a;
+    a=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=c;
+    c=b;
+    b=temp2;
+    }
+  
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+No.9 Patch
+int main () {
+
+  int a,b,c,temp;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  if (a > b)
+    {
+      temp = a;
+      a = b;
+      b = temp;
+    }
+
+  if (b > c)
+    {
+      temp = b;
+      b = c;
+      c = temp;
+    }
+
+  if (a > b)
+    {
+      temp = a;
+      a = b;
+      b = temp;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+}
+No.10 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=b;
+    b=c;
+    c=temp2;
+    }
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+No.11 Patch
+#include<stdio.h>
+
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>c)
+    {
+    temp1=a;
+    a=c;
+    c=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=b;
+    b=c;
+    c=temp2;
+    }
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+
+/* The buggy function was swapping variables where it wasn't needed to be swapped. We fixed this by creating
+   two new temporary variables (temp1 and temp2) to hold the original values of a and b respectively. Then,
+   we swap these temporary variables with a and b when appropriate. */
+No.12 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>c)
+    {
+    temp1=a;
+    a=c;
+    c=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=b;
+    b=c;
+    c=temp2;
+    }
+  
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+No.14 Patch
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    
+    printf("Please enter 3 numbers separated by spaces > ");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if (a > b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+    
+    if (b > c) {
+        int temp = b;
+        b = c;
+        c = temp;
+    }
+    
+    if (a > b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+    
+    printf("%d is the median\n", b);
+    
+    return 0;
+}
+
+/* The code is wrong, you must modify it to be correct. */
+No.15 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>c)
+    {
+    temp1=a;
+    a=c;
+    c=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=b;
+    b=c;
+    c=temp2;
+    }
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+No.16 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  if (a > b) {
+      temp1 = a;
+      a = b;
+      b = temp1;
+  }
+  if (b > c) {
+      temp2 = b;
+      b = c;
+      c = temp2;
+  }
+  if (a > b) {
+      temp1 = a;
+      a = b;
+      b = temp1;
+  }
+  
+  printf("%d is the median",b);
+
+  return 0;
+}
+No.18 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  if (b>c)
+    {
+    temp2=b;
+    b=c;
+    c=temp2;
+    }
+  
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }
+No.19 Patch
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare (const void * a, const void * b)
+{
+  return ( *(int*)a - *(int*)b );
+}
+
+int main () {
+
+  int arr[3];
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&arr[0],&arr[1],&arr[2]);
+
+  qsort(arr, 3, sizeof(int), compare);
+
+  printf("%d is the median", arr[1]);
+
+  return 0;
+}
+No.20 Patch
+int main () {
+
+  int a,b,c,temp1,temp2;
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d %d %d",&a,&b,&c);
+
+  temp1=a;
+  temp2=b;
+
+  if (a>c)
+    {
+    a=c;
+    c=temp1;
+    }
+
+  if (b>c)
+    {
+    b=c;
+    c=temp2;
+    }
+  
+  
+  if (a>b)
+    {
+    temp1=a;
+    a=b;
+    b=temp1;
+    }
+
+  printf("%d is the median",b);
+
+  return 0;
+  }

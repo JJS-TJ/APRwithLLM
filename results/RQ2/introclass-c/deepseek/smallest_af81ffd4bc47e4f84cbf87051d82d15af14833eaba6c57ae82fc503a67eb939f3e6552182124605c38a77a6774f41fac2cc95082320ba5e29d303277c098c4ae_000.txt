@@ -1,0 +1,434 @@
+No.1 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else 
+m=a;
+
+if (m > c)
+n=c;
+else 
+n=m;
+
+if (n > d)
+p=d;
+else 
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+
+/* The buggy code was a small typo in the scanf function that separated the arguments with quotes instead of spaces. 
+This caused the scanf function to interpret the numbers as a single string, which is not what is intended.
+The corrected code now uses spaces instead of quotes, making the scanf function read the numbers as individual doubles. */
+No.2 Patch
+int main() {
+
+    double a, b, c, d, m, n, p;
+
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf%lf%lf%lf", &a, &b, &c, &d);
+
+    if (a > b)
+        m=b;
+    else 
+        m=a;
+
+    if (m > c)
+        n=c;
+    else 
+        n=m;
+
+    if (n > d)
+        p=d;
+    else 
+        p=n;
+
+    printf("%.0f is the smallest\n", p);
+
+    return(0);
+
+}
+No.5 Patch
+int main() {
+
+    double a, b, c, d, m, n, p;
+
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+    if (a > b)
+        m=b;
+    else 
+        m=a;
+
+    if (m > c)
+        n=c;
+    else 
+        n=m;
+
+    if (n > d)
+        p=d;
+    else 
+        p=n;
+
+    printf("%.0f is the smallest\n", p);
+
+    return(0);
+
+}
+No.6 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else 
+m=a;
+
+if (m > c)
+n=c;
+else 
+n=m;
+
+if (n > d)
+p=d;
+else 
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.7 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else
+m=a;
+
+if (m > c)
+n=c;
+else
+n=m;
+
+if (n > d)
+p=d;
+else
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.8 Patch
+int main() {
+
+    double a, b, c, d, m, n, p;
+
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+    if (a > b)
+        m = b;
+    else
+        m = a;
+
+    if (m > c)
+        n = c;
+    else
+        n = m;
+
+    if (n > d)
+        p = d;
+    else
+        p = n;
+
+    printf("%.0f is the smallest\n", p);
+
+    return(0);
+
+}
+No.9 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else 
+m=a;
+
+if (m > c)
+n=c;
+else
+n=m;
+
+if (n > d)
+p=d;
+else 
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.11 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else if (a <= b)
+m=a;
+
+if (m > c)
+n=c;
+else if (m <= c)
+n=m;
+
+if (n > d)
+p=d;
+else if (n <= d)
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+
+/* Write a program that calculates the total cost of a purchase. The user inputs the cost of the item and the number of items purchased.
+The total cost is the product of these two values. */
+No.12 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else 
+m=a;
+
+if (m > c)
+n=c;
+else 
+n=m;
+
+if (n > d)
+p=d;
+else 
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.13 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else 
+m=a;
+
+if (m > c)
+n=c;
+else
+n=m;
+
+if (n > d)
+p=d;
+else
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.14 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else 
+m=a;
+
+if (m > c)
+n=c;
+else 
+n=m;
+
+if (n > d)
+p=d;
+else 
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+
+/* The code is wrong, you must modify it to be correct. */
+No.16 Patch
+#include <stdio.h>
+
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else 
+m=a;
+
+if (m > c)
+n=c;
+else 
+n=m;
+
+if (n > d)
+p=d;
+else 
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.17 Patch
+#include <stdio.h>
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else
+m=a;
+
+if (m > c)
+n=c;
+else
+n=m;
+
+if (n > d)
+p=d;
+else
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.18 Patch
+#include <stdio.h>
+
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+if (a > b)
+m=b;
+else
+m=a;
+
+if (m > c)
+n=c;
+else
+n=m;
+
+if (n > d)
+p=d;
+else
+p=n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.19 Patch
+int main() {
+
+    double a, b, c, d, m, n, p;
+
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
+
+    if (a < b)
+        m=a;
+    else
+        m=b;
+
+    if (m < c)
+        n=m;
+    else
+        n=c;
+
+    if (n < d)
+        p=n;
+    else
+        p=d;
+
+    printf("%.0f is the smallest\n", p);
+
+    return(0);
+
+}

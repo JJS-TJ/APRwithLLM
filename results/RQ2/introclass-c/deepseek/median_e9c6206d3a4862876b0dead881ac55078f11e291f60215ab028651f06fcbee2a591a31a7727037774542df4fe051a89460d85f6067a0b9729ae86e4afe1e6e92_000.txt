@@ -1,0 +1,111 @@
+No.8 Patch
+int main()
+{
+
+int a, b, c; //**/
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d%d%d", &a, &b, &c);
+
+if ((a <= b && b <= c) || (c <= b && b <= a))
+	printf("%d is the median\n", b);
+else if ((b <= a && a <= c) || (c <= a && a <= b))
+	printf("%d is the median\n", a);
+else if ((a <= c && c <= b) || (b <= c && c <= a))
+	printf("%d is the median\n", c);
+
+return 0;
+
+}
+No.12 Patch
+int main()
+{
+
+int a, b, c;
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d%d%d", &a, &b, &c);
+
+if ((a <= b && b <= c) || (c <= b && b <= a))
+	printf("%d is the median\n", b);
+else if ((b <= a && a <= c) || (c <= a && a <= b))
+	printf("%d is the median\n", a);
+else if ((a <= c && c <= b) || (b <= c && c <= a))
+	printf("%d is the median\n", c);
+
+return 0;
+
+}
+No.14 Patch
+int main()
+{
+
+int a, b, c; //**/
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d%d%d", &a, &b, &c);
+
+if ((a <= b && b <= c) || (c <= b && b <= a))
+	printf("%d is the median\n", b);
+else if ((b <= a && a <= c) || (c <= a && a <= b))
+	printf("%d is the median\n", a);
+else if ((a <= c && c <= b) || (b <= c && c <= a))
+	printf("%d is the median\n", c);
+
+return 0;
+
+}
+
+/* The buggy function was failing because it was checking for strictly less than or greater than, which did not cover all cases
+   For example if a=1, b=2 and c=3, then it would print out b is the median, even though b is in the middle of the numbers.
+
+   The correct function now checks for less than or equal to and greater than or equal to, which covers all cases.
+*/
+No.20 Patch
+int main()
+{
+
+int a, b, c; //**/
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d%d%d", &a, &b, &c);
+
+if ((a <= b && b <= c) || (c <= b && b <= a))
+	printf("%d is the median\n", b);
+else if ((b <= a && a <= c) || (c <= a && a <= b))
+	printf("%d is the median\n", a);
+else if ((a <= c && c <= b) || (b <= c && c <= a))
+	printf("%d is the median\n", c);
+
+return 0;
+
+}
+
+/* The given code is checking for the median of the three numbers entered by the user.
+It had a mistake in the logic used for checking the median. It should be "<=" instead of "<".
+This is because, for a number to be a median, it should be greater than or equal to both of its neighbours and less than or equal to both of its neighbours.
+This fix corrects the bug in the logic and provides the correct solution. */
+No.24 Patch
+int main()
+{
+
+int a, b, c;
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d%d%d", &a, &b, &c);
+
+if ((a <= b && b <= c) || (c <= b && b <= a))
+	printf("%d is the median\n", b);
+else if ((b <= a && a <= c) || (c <= a && a <= b))
+	printf("%d is the median\n", a);
+else if ((a <= c && c <= b) || (b <= c && c <= a))
+	printf("%d is the median\n", c);
+
+return 0;
+
+}
+
+/* This function is supposed to take in three numbers, and print the median.
+   The original code has a bug where it only checked if B was less than the other two numbers.
+   This would not correctly identify B as the median if B was the largest or smallest of the three numbers,
+   so the correct code checks if B is in between A and C, A and B, or B and C. */

@@ -1,0 +1,163 @@
+No.2 Patch
+int main () {
+
+  char string[sizeA];
+  int i, length;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+
+   length = strlen(string);
+  
+  for (i = 0; i < length; i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.3 Patch
+#include <stdio.h>
+#include <string.h>
+
+#define sizeA 100
+
+int main () {
+
+  char string[sizeA];
+  int i, length;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+   
+   length = strlen(string);
+  
+  for (i = 0; i < length; i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.6 Patch
+int main () {
+
+  char string[sizeA];
+  int i, length;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+   
+   length = strlen(string);
+  
+  for (i = 0; i < length; i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+No.13 Patch
+#include <stdio.h>
+#include <string.h>
+
+#define sizeA 256
+
+int main () {
+
+  char string[sizeA];
+  int i, length;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+   
+   length = strlen(string);
+  
+  for (i = 0; i < length; i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+
+/* The function should calculate the number of syllables in a word. A syllable is when a vowel is present, it can be followed by a consonant or end of word. */
+/* You should add other vowels to be able to calculate syllables properly */
+/* Make sure your code works correctly for other cases */
+/* The function is supposed to take in a string, then count the number of vowels in the string, as these vowels are considered syllables. */
+
+// The issue in the code was the missing 'i' in the if condition.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.14 Patch
+int main () {
+
+  char string[sizeA];
+  int i, length;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+  
+   /* length of string -1 is used to remove the '\n' entered when pressed enter */
+   length = strlen(string)-1;
+  
+  for (i = 0; i < length; i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}
+
+/* The program counts the number of syllables in the string entered by the user */
+No.20 Patch
+#include <stdio.h>
+#include <string.h>
+
+#define sizeA 200
+
+int main () {
+
+  char string[sizeA];
+  int i, length;
+  int count = 0;
+
+   printf("Please enter a string > ");
+   fgets(string,sizeA-1,stdin);
+   
+   length = strlen(string);
+  
+  for (i = 0; i < length; i++){
+	if (string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u' || string[i] == 'y')
+	{
+	count++;
+	}
+    }
+
+  printf("The number of syllables is %d.\n", count);
+
+  return 0;
+}

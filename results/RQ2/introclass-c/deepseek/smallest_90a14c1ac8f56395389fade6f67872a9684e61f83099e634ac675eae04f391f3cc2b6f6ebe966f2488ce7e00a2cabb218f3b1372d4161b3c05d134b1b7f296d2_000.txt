@@ -1,0 +1,110 @@
+No.1 Patch
+int main()
+{
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	
+	if ((one <= two)&&(one <= three)&&(one <= four))
+		printf("%d is the smallest\n", one);
+	if ((two <= one)&&(two <= three)&&(two <= four))
+		printf("%d is the smallest\n", two);
+	if ((three <= one)&&(three <= two)&&(three <= four))
+		printf("%d is the smallest\n", three);
+	if ((four <= one)&&(four <= two)&&(four <= three))
+		printf("%d is the smallest\n", four);
+	return(0);
+}		
+
+/* The provided functions are not buggy. However, they are missing the
+* return statement in the else part of the if condition. */
+No.3 Patch
+#include<stdio.h>
+
+int main()
+{
+
+	int one, two, three, four, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	smallest = one;
+	if (two < smallest)
+		smallest = two;
+	if (three < smallest)
+		smallest = three;
+	if (four < smallest)
+		smallest = four;
+	printf("%d is the smallest\n", smallest);
+	return(0);
+}
+No.4 Patch
+int main()
+{
+
+	int one, two, three, four, min;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	
+	min = one;
+	
+	if (min > two)
+		min = two;
+	if (min > three)
+		min = three;
+	if (min > four)
+		min = four;
+	
+	printf("%d is the smallest\n", min);
+	return(0);
+}
+No.8 Patch
+int main()
+{
+
+	int one, two, three, four, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	smallest = one;
+	if (two < smallest)
+		smallest = two;
+	if (three < smallest)
+		smallest = three;
+	if (four < smallest)
+		smallest = four;
+	printf("%d is the smallest\n", smallest);
+	return(0);
+}
+No.12 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if ((one <= two)&&(one <= three)&&(one <= four))
+		printf("%d is the smallest\n", one);
+	if ((two <= one)&&(two <= three)&&(two <= four))
+		printf("%d is the smallest\n", two);
+	if ((three <= one)&&(three <= two)&&(three <= four))
+		printf("%d is the smallest\n", three);
+	if ((four <= one)&&(four <= two)&&(four <= three))
+		printf("%d is the smallest\n", four);
+	return(0);
+}
+No.15 Patch
+int main()
+{
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	
+	if ((one <= two)&&(one <= three)&&(one <= four))
+		printf("%d is the smallest\n", one);
+	else if ((two <= one)&&(two <= three)&&(two <= four))
+		printf("%d is the smallest\n", two);
+	else if ((three <= one)&&(three <= two)&&(three <= four))
+		printf("%d is the smallest\n", three);
+	else 
+		printf("%d is the smallest\n", four);
+	return(0);
+}

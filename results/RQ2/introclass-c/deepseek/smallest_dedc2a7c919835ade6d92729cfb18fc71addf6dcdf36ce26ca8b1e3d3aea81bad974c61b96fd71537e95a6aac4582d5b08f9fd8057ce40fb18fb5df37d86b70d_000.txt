@@ -1,0 +1,270 @@
+No.0 Patch
+int
+main(void){
+	float a, b, c, d, min;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	min = a;
+
+	if(b < min) min = b;
+	if(c < min) min = c;
+	if(d < min) min = d;
+
+	printf("%.0f is the smallest\n", min);
+
+	return(0);
+}
+No.1 Patch
+int main(void)
+{
+    float a, b, c, d, smallest;
+
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%f %f %f %f", &a, &b, &c, &d);
+
+    smallest = a;
+
+    if (b < smallest)
+        smallest = b;
+
+    if (c < smallest)
+        smallest = c;
+
+    if (d < smallest)
+        smallest = d;
+
+    printf("%.0f is the smallest\n", smallest);
+
+    return 0;
+}
+No.2 Patch
+int
+main(void){
+	float a, b, c, d, min;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+	
+	min = a;
+	if (b < min) min = b;
+	if (c < min) min = c;
+	if (d < min) min = d;
+	
+	printf("%.0f is the smallest\n", min);
+
+	return(0);
+}
+No.5 Patch
+int
+main(void){
+	float a, b, c, d;
+	float smallest;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	smallest = a;
+
+	if(b < smallest) smallest = b;
+	if(c < smallest) smallest = c;
+	if(d < smallest) smallest = d;
+	
+	printf("%.0f is the smallest\n", smallest);
+	
+	return(0);
+}
+No.6 Patch
+int
+main(void){
+	float a, b, c, d, smallest;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	smallest = a;
+
+	if(smallest > b) smallest = b;
+	if(smallest > c) smallest = c;
+	if(smallest > d) smallest = d;
+
+	printf("%.0f is the smallest\n", smallest);
+
+	return(0);
+}
+
+/* What if the problem was to make this function correct? */
+/* Function */
+int binarySearch(int arr[], int l, int r, int x)
+{
+    while (l <= r) {
+        int mid = l + (r - l) / 2;
+  
+        if (arr[mid] == x)
+            return mid;
+
+        if (arr[mid] < x)
+            l = mid + 1;
+  
+        else
+            r = mid - 1;
+    }
+    return -1;
+}
+No.7 Patch
+int main(void){
+	float a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	if((a <= b) && (a <= c) && (a <= d))
+		printf("%.0f is the smallest\n", a);
+	else if ((b <= a) && (b <= c) && (b <= d))
+		printf("%.0f is the smallest\n", b);
+	else if ((c <= a) && (c <= b) && (c <= d))
+		printf("%.0f is the smallest\n", c);
+	else printf("%.0f is the smallest\n", d);
+
+	return(0);
+}
+No.12 Patch
+int
+main(void){
+	float a, b, c, d, smallest;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	if(a < b) smallest = a;
+	else smallest = b;
+
+	if(c < smallest) smallest = c;
+	if(d < smallest) smallest = d;
+
+	printf("%.0f is the smallest\n", smallest);
+
+	return(0);
+}
+No.13 Patch
+int
+main(void){
+	float a, b, c, d, smallest;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	if((a <= b) && (a <= c) && (a <= d))
+		smallest = a;
+	if ((b <= a) && (b <= c) && (b <= d))
+		smallest = b;
+	if ((c <= a) && (c <= b) && (c <= d))
+		smallest = c;
+	if ((d <= a) && (d <= b) && (d <= c))
+		smallest = d;
+
+	printf("%.0f is the smallest\n", smallest);
+
+	return(0);
+}
+No.14 Patch
+int
+main(void){
+	float a, b, c, d, min;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	min = a;
+	if(b < min) min = b;
+	if(c < min) min = c;
+	if(d < min) min = d;
+
+	printf("%.0f is the smallest\n", min);
+
+	return(0);
+}
+No.15 Patch
+int
+main(void){
+	float a, b, c, d, min;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+	
+	min = a;
+	if(b < min)
+		min = b;
+	if(c < min)
+		min = c;
+	if(d < min)
+		min = d;
+	
+	printf("%.0f is the smallest\n", min);
+	
+	return(0);
+}
+No.16 Patch
+int
+main(void){
+	float a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	float smallest = a;
+	
+	if(smallest > b){
+		smallest = b;
+	}
+	if(smallest > c){
+		smallest = c;
+	}
+	if(smallest > d){
+		smallest = d;
+	}
+	printf("%.0f is the smallest\n", smallest);
+
+	return(0);
+}
+No.17 Patch
+int
+main(void){
+	float a, b, c, d, smallest;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	smallest = a;
+
+	if(b < smallest) smallest = b;
+	if(c < smallest) smallest = c;
+	if(d < smallest) smallest = d;
+
+	printf("%.0f is the smallest\n", smallest);
+
+	return(0);
+}
+No.18 Patch
+int
+main(void){
+	float a, b, c, d;
+	float smallest;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%f %f %f %f", &a, &b, &c, &d);
+
+	smallest = a;
+
+	if(b < smallest)
+		smallest = b;
+	if(c < smallest)
+		smallest = c;
+	if(d < smallest)
+		smallest = d;
+	
+	printf("%.0f is the smallest\n", smallest);
+
+	return(0);
+}

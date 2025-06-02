@@ -1,0 +1,118 @@
+No.0 Patch
+int main() {
+	int a, b, c, m;
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d %d %d", &a, &b, &c);
+	if ((a>=b && a<=c) || (a>=c && a<=b))
+		m = a;
+	else if ((b>=a && b<=c) || (b>=c && b<=a))
+		m = b;
+	else if ((c>=a && c<=b) || (c>=b && c<=a))
+		m = c;
+		
+	printf("%d is the median\n", m);
+	return 0;
+}
+No.1 Patch
+int main() {
+	int a, b, c, m;
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d %d %d", &a, &b, &c);
+	if ((a>=b && a<=c) || (a<=b && a>=c))
+		m = a;
+	else if ((b>=a && b<=c) || (b<=a && b>=c))
+		m = b;
+	else if ((c>=a && c<=b) || (c<=a && c>=b))
+		m = c;
+		
+	printf("%d is the median\n", m);
+	return 0;
+}
+
+/* Write a program that reads an integer n from the user and then reads n more integers. Your program should add up all the integers and then calculate the average. */
+No.2 Patch
+int main() {
+	int a, b, c, m;
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d %d %d", &a, &b, &c);
+	if ((a>=b && a<=c) || (a>=c && a<=b))
+		m = a;
+	else if ((b>=a && b<=c) || (b>=c && b<=a))
+		m = b;
+	else if ((c>=a && c<=b) || (c>=b && c<=a))
+		m = c;
+		
+	printf("%d is the median\n", m);
+	return 0;
+}
+
+/* The problem with the original code is that it is checking if the variable 'b' is greater than or equal to 'a' and 'b' is less than or equal to 'c' and then assigning 'b' to 'm'. However, this is incorrect because we do not know which is the median number. We need to check for every number if it is greater than or equal to the other two numbers and if it is less than or equal to the other two numbers.
+*/
+
+/* Problem: The function should return 4, but it returns 5.*/
+No.3 Patch
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int a, b, c, m;
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d %d %d", &a, &b, &c);
+	if ((a>=b && a<=c) || (a>=c && a<=b))
+		m = a;
+	else if ((b>=a && b<=c) || (b>=c && b<=a))
+		m = b;
+	else if ((c>=a && c<=b) || (c>=b && c<=a))
+		m = c;
+		
+	printf("%d is the median\n", m);
+	return 0;
+}
+No.5 Patch
+int main() {
+	int a, b, c, m;
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d %d %d", &a, &b, &c);
+	
+	if ((a>=b && a<=c) || (a>=c && a<=b))
+		m = a;
+	else if ((b>=a && b<=c) || (b>=c && b<=a))
+		m = b;
+	else if ((c>=a && c<=b) || (c>=b && c<=a))
+		m = c;
+		
+	printf("%d is the median\n", m);
+	return 0;
+}
+No.6 Patch
+int main() {
+	int a, b, c, m;
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d %d %d", &a, &b, &c);
+	if ((a>=b && a<=c) || (a<=b && a>=c))
+		m = a;
+	else if ((b>=a && b<=c) || (b<=a && b>=c))
+		m = b;
+	else if ((c>=a && c<=b) || (c<=a && c>=b))
+		m = c;
+		
+	printf("%d is the median\n", m);
+	return 0;
+}
+No.8 Patch
+int main() {
+	int a, b, c, m;
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d %d %d", &a, &b, &c);
+	if ((a>=b && a<=c) || (a>=c && a<=b))
+		m = a;
+	else if ((b>=a && b<=c) || (b>=c && b<=a))
+		m = b;
+	else if ((c>=a && c<=b) || (c>=b && c<=a))
+		m = c;
+		
+	printf("%d is the median\n", m);
+	return 0;
+}
+
+/* Please provide a fix for the buggy function */

@@ -1,0 +1,152 @@
+No.0 Patch
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+if (x>y)
+a = y;
+else
+a = x;
+if (a > z)
+a = z;
+if (a > t)
+a = t;
+printf("%d is the smallest\n", a);
+return 0;
+}
+
+/* Write a program that reads two integers and determines if the first is multiple of the second. */
+No.1 Patch
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+if (x>y)
+a = y;
+else
+a = x;
+if (a>z)
+a = z;
+if (a>t)
+a = t;
+printf("%d is the smallest\n", a);
+return 0;
+}
+No.2 Patch
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+if (x>y)
+a = y;
+else
+a = x;
+if (a > z)
+a = z;
+if (a > t)
+a = t;
+printf("%d is the smallest\n", a);
+return 0;
+}
+No.3 Patch
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+a = x; //assign a to x initially
+if (a>y)
+a = y;
+if (a>z)
+a = z;
+if (a>t)
+a = t;
+printf("%d is the smallest\n", a);
+return 0;
+}
+No.4 Patch
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+if (x>y){
+a = y;
+}
+else{
+a = x;
+}
+if (a>z){
+a = z;
+}
+if (a>t){
+a = t;
+}
+printf("%d is the smallest\n", a);
+return 0;
+}
+No.5 Patch
+#include <stdio.h>
+
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+if (x<y)
+a = x;
+else
+a = y;
+if (a>z)
+a = z;
+if (a>t)
+a = t;
+printf("%d is the smallest\n", a);
+return 0;
+}
+No.7 Patch
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+if (x<y)
+a = x;
+else
+a = y;
+if (z<a)
+a = z;
+if (t<a)
+a = t;
+printf("%d is the smallest\n", a);
+return 0;
+}
+No.8 Patch
+#include <stdio.h>
+
+int main(){
+    int x, y, z, t, a;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d %d %d %d", &x, &y, &z, &t);
+    a = x;
+    if (a>y)
+        a = y;
+    if (a>z)
+        a = z;
+    if (a>t)
+        a = t;
+    printf("%d is the smallest\n", a);
+    return 0;
+}
+No.9 Patch
+int main(){
+int x, y, z, t, a;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &x, &y, &z, &t);
+if (x<y)
+a = x;
+else
+a = y;
+if (a>z)
+a = z;
+if (a>t)
+a = t;
+printf("%d is the smallest\n", a);
+return 0;
+}

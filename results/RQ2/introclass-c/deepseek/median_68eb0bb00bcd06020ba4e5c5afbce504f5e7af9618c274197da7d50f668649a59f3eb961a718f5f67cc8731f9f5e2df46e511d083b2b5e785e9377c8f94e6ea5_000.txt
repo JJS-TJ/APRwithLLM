@@ -1,0 +1,379 @@
+No.0 Patch
+int main(void)
+{
+
+    int x, y, z;
+
+    //**/
+    printf("Please enter 3 numbers separated by space  > ");
+    scanf("%d%d%d", &x, &y, &z);
+
+    if ((x >= y && x <= z) || (x <= y && x >= z))
+        printf("%d is the median\n", x);
+
+    else if ((y >= x && y <= z) || (y <= x && y >= z))
+        printf("%d is the median\n", y);
+
+    else
+        printf("%d is the median\n", z);
+
+    return (0);
+}
+No.1 Patch
+int
+main(void)
+{
+    int x, y, z;
+    printf("Please enter 3 numbers separated by space  > ");
+    scanf("%d%d%d", &x, &y, &z);
+    if ((x >= y && x <= z) || (x <= y && x >= z))
+        printf("%d is the median\n", x);
+    else if ((y >= x && y <= z) || (y <= x && y >= z))
+        printf("%d is the median\n", y);
+    else
+        printf("%d is the median\n", z);
+    return (0);
+}
+No.2 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x>=y && x<=z) || (x<=y && x>=z))
+printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y<=x && y>=z))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.3 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+/* Fixed Code */
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x>=y && x<=z) || (x>=z && x<=y))
+printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y>=z && y<=x))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.4 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x>=y && x<=z) || (x>=z && x<=y))
+printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y>=z && y<=x))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.5 Patch
+#include <stdio.h>
+
+int main(void)
+{
+	int x, y, z;
+
+	printf("Please enter 3 numbers separated by space > ");
+	scanf("%d%d%d", &x, &y, &z);
+
+	if ((x >= y && x <= z) || (x >= z && x <= y))
+		printf("%d is the median\n", x);
+	else if ((y >= x && y <= z) || (y >= z && y <= x))
+		printf("%d is the median\n", y);
+	else
+		printf("%d is the median\n", z);
+
+	return 0;
+}
+No.6 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+/* */
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x>=y && x<=z) || (x<=y && x>=z))
+printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y<=x && y>=z))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.7 Patch
+int main(void)
+{
+
+int x, y, z;
+
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d", &x, &y, &z);
+
+if ((x >= y && x <= z) || (x <= y && x >= z))
+    printf("%d is the median\n", x);
+else if ((y >= x && y <= z) || (y <= x && y >= z))
+    printf("%d is the median\n", y);
+else
+    printf("%d is the median\n", z);
+
+return 0;
+}
+No.8 Patch
+#include<stdio.h>
+
+int
+main(void)
+{
+
+int x, y, z;
+
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x>=y && x<=z) || (x>=z && x<=y))
+printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y>=z && y<=x))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.12 Patch
+#include <stdio.h>
+
+int main(void)
+{
+    int x, y, z;
+
+    printf("Please enter 3 numbers separated by space  > ");
+    scanf("%d %d %d", &x, &y, &z);
+
+    if (x <= y) {
+        if (y <= z)
+            printf("%d is the median\n", y);
+        else if (x <= z)
+            printf("%d is the median\n", z);
+        else
+            printf("%d is the median\n", x);
+    } else {
+        if (x <= z)
+            printf("%d is the median\n", x);
+        else if (y <= z)
+            printf("%d is the median\n", z);
+        else
+            printf("%d is the median\n", y);
+    }
+
+    return(0);
+}
+No.14 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x >= y && x <= z) || (x >= z && x <= y))
+    printf("%d is the median\n",x);
+
+else if ((y >= x && y <= z) || (y >= z && y <= x))
+    printf("%d is the median\n",y);
+
+else
+    printf("%d is the median\n",z);
+
+return(0);
+}
+No.15 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x >= y && x <= z) || (x <= y && x >= z))
+printf("%d is the median\n",x);
+
+else if ((y >= x && y <= z) || (y <= x && y >= z))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.16 Patch
+int
+main(void)
+{
+    int x,y,z;
+
+    printf("Please enter 3 numbers separated by space > ");
+    scanf("%d%d%d",&x,&y,&z);
+
+    if ((x>=y && x<=z) || (x<=y && x>=z))
+        printf("%d is the median\n",x);
+
+    else if ((y>=x && y<=z) || (y<=x && y>=z))
+        printf("%d is the median\n",y);
+
+    else
+        printf("%d is the median\n",z);
+
+    return(0);
+}
+
+/* Fix the buggy function */
+No.17 Patch
+int
+main(void)
+{
+
+int x, y, z;
+
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x >= y && x <= z) || (x <= y && x >= z))
+    printf("%d is the median\n", x);
+else if ((y >= x && y <= z) || (y <= x && y >= z))
+    printf("%d is the median\n", y);
+else
+    printf("%d is the median\n", z);
+
+return(0);
+}
+No.18 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+//**/
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x>=y && x<=z) || (x>=z && x<=y))
+printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y>=z && y<=x))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.19 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+//**/
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+if ((x>=y && x<=z) || (x<=y && x>=z))
+printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y<=x && y>=z))
+printf("%d is the median\n",y);
+
+else
+printf("%d is the median\n",z);
+
+return(0);
+}
+No.20 Patch
+int
+main(void)
+{
+
+int x,y, z;
+
+/* Read the 3 numbers from user */
+printf("Please enter 3 numbers separated by space  > ");
+scanf("%d%d%d",&x,&y,&z);
+
+/* Check which number is the median and print it */
+if ((x>=y && x<=z) || (x<=y && x>=z))
+    printf("%d is the median\n",x);
+
+else if ((y>=x && y<=z) || (y<=x && y>=z))
+    printf("%d is the median\n",y);
+
+else
+    printf("%d is the median\n",z);
+
+return(0);
+}
+No.21 Patch
+#include <stdio.h>
+
+int main(void)
+{
+    int x, y, z;
+
+    printf("Please enter 3 numbers separated by space > ");
+    scanf("%d%d%d", &x, &y, &z);
+
+    if ((x >= y && x <= z) || (x <= y && x >= z))
+        printf("%d is the median\n", x);
+    else if ((y >= x && y <= z) || (y <= x && y >= z))
+        printf("%d is the median\n", y);
+    else
+        printf("%d is the median\n", z);
+
+    return (0);
+}

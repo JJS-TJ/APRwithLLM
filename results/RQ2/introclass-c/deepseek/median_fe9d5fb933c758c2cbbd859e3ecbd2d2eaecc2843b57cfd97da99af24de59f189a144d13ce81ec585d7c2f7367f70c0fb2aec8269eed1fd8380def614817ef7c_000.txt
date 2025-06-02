@@ -1,0 +1,357 @@
+No.0 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    small = num2;
+    big = num1;
+  }
+  else{
+    big = num2;
+    small = num1;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+
+/* In the function, you are checking if num1 > num2, if it is, then big = num1 and small = num2. But if it's not true, then you are assigning big = num2 and small = num2. So, you need to change small = num2 to small = num1 */
+No.1 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    small = num2;
+    big = num1;
+  }
+  else{
+    small = num1;
+    big = num2;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+
+/* What is the bug? */
+/* There is an error in the first part of the function where it determines whether num1 is bigger than num2 or not. If num1 is bigger, then num2 is the small number and num1 is the big number. If not, then num1 is the small number and num2 is the big number. */
+/* How can it be fixed? */
+/* I fixed the bug by changing "small = num2;" to "small = num1;" in the else statement because if num1 is not bigger than num2, then num1 is smaller. */
+No.2 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    small = num2;
+    big = num1;
+  }
+  else{
+    big = num2;
+    small = num1;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+No.3 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    big = num1;
+    small = num2;
+  }
+  else{
+    big = num2;
+    small = num1;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+No.4 Patch
+#include <stdio.h>
+
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    big = num1;
+    small = num2;
+  }
+  else{
+    big = num2;
+    small = num1;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+No.6 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    small = num2;
+    big = num1;
+  }
+  else{
+    big = num2;
+    small = num1;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+}
+No.8 Patch
+#include <stdio.h>
+
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    big = num1;
+    if( num2 > num3 )
+      median = num2;
+    else if( num1 > num3 )
+      median = num3;
+    else 
+      median = num1;
+  }
+  else{
+    big = num2;
+    if( num1 > num3 )
+      median = num1;
+    else if( num2 > num3 )
+      median = num3;
+    else 
+      median = num2;
+  }
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+No.9 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    big = num1;
+    if( num3 > num1)
+      small = num2;
+    else if( num3 > num2 )
+      small = num3;
+    else 
+      small = num2;
+  }
+  else{
+    big = num2;
+    if( num3 > num2)
+      small = num1;
+    else if( num3 > num1 )
+      small = num3;
+    else 
+      small = num1;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+No.10 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    big = num1;
+    if( num2 > num3 )
+      median = num2;
+    else if( num3 > num1 )
+      median = num1;
+    else
+      median = num3;
+  }
+  else{
+    big = num2;
+    if( num1 > num3 )
+      median = num1;
+    else if( num3 > num2 )
+      median = num2;
+    else 
+      median = num3;
+  }
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+No.11 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    big = num1;
+    if(num3 > num1)
+      median = num1;
+    else if(num3 > num2)
+      median = num3;
+    else
+      median = num2;
+  }
+  else{
+    big = num2;
+    if(num3 > num2)
+      median = num2;
+    else if(num3 > num1)
+      median = num3;
+    else
+      median = num1;
+  }
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}
+No.12 Patch
+#include<stdio.h>
+
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    big = num1;
+    small = num2;
+  }
+  else{
+    big = num2;
+    small = num1;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+}
+No.13 Patch
+int main(){
+  int num1, num2, num3, median, big, small;
+
+  printf( "Please enter 3 numbers separated by spaces > " );
+  scanf( "%d %d %d", &num1, &num2, &num3 );
+
+  if( num1 > num2 ){
+    small = num2;
+    big = num1;
+  }
+  else{
+    small = num1;
+    big = num2;
+  }
+  if( num3 > big )
+    median = big;
+  else if( num3 < small )
+    median = small;
+  else 
+    median = num3;
+
+  printf( "%d is the median\n", median );
+
+  return 0;
+
+}

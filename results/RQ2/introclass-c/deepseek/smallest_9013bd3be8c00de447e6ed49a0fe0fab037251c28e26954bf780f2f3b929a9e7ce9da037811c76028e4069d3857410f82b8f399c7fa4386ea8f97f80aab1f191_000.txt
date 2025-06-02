@@ -1,0 +1,138 @@
+No.0 Patch
+int
+main(void)
+{
+	int first, second, third, fourth, min;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i", &first);
+	scanf("%i", &second);
+	scanf("%i", &third);
+	scanf("%i", &fourth);
+
+	min = first;
+	if (second < min)
+		min = second;
+	if (third < min)
+		min = third;
+	if (fourth < min)
+		min = fourth;
+	printf("%i is the smallest\n", min);
+
+	return(0);
+}
+No.3 Patch
+int
+main(void)
+{
+	int first, second, third, fourth, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i", &first);
+	scanf("%i", &second);
+	scanf("%i", &third);
+	scanf("%i", &fourth);
+
+	smallest = first;
+	if (second < smallest)
+		smallest = second;
+	if (third < smallest)
+		smallest = third;
+	if (fourth < smallest)
+		smallest = fourth;
+
+	printf("%i is the smallest\n", smallest);
+
+	return(0);
+}
+No.7 Patch
+int
+main(void)
+{
+	int first, second, third, fourth, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i", &first);
+	scanf("%i", &second);
+	scanf("%i", &third);
+	scanf("%i", &fourth);
+
+	smallest = first;
+
+	if (second < smallest)
+		smallest = second;
+	if (third < smallest)
+		smallest = third;
+	if (fourth < smallest)
+		smallest = fourth;
+
+	printf("%i is the smallest\n", smallest);
+
+	return(0);
+}
+No.8 Patch
+int
+main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i", &first);
+	scanf("%i", &second);
+	scanf("%i", &third);
+	scanf("%i", &fourth);
+
+	int smallest = first;
+
+	if (smallest > second)
+		smallest = second;
+	if (smallest > third)
+		smallest = third;
+	if (smallest > fourth)
+		smallest = fourth;
+	printf("%i is the smallest\n", smallest);
+
+	return(0);
+}
+No.9 Patch
+int
+main(void)
+{
+	int first, second, third, fourth, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i", &first);
+	scanf("%i", &second);
+	scanf("%i", &third);
+	scanf("%i", &fourth);
+	
+	smallest = first;
+
+	if (second < smallest)
+		smallest = second;
+	if (third < smallest)
+		smallest = third;
+	if (fourth < smallest)
+		smallest = fourth;
+
+	printf("%i is the smallest\n", smallest);
+
+	return(0);
+}
+No.13 Patch
+int
+main(void)
+{
+	int first, second, third, fourth, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &first, &second, &third, &fourth);
+
+	smallest = first;
+	if (second < smallest)
+		smallest = second;
+	if (third < smallest)
+		smallest = third;
+	if (fourth < smallest)
+		smallest = fourth;
+
+	printf("%i is the smallest\n", smallest);
+
+	return(0);
+}
+
+/* Write a function that returns the largest of four integers */

@@ -1,0 +1,189 @@
+No.2 Patch
+int main()
+  {
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    sm = a;
+    if (b<sm)
+       sm = b;
+    if (c<sm)
+       sm = c;
+    if (d<sm)
+       sm = d;
+    printf ("%d is the smallest\n", sm);
+    return 0;
+  }
+No.5 Patch
+int main()
+  {
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    sm = a;
+    if (b < sm) sm = b;
+    if (c < sm) sm = c;
+    if (d < sm) sm = d;
+    printf ("%d is the smallest\n", sm);
+    return 0;
+  }
+No.8 Patch
+#include <stdio.h>
+int main()
+  {
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    sm = a;
+    if (b < sm)
+      sm = b;
+    if (c < sm)
+      sm = c;
+    if (d < sm)
+      sm = d;
+    printf("%d is the smallest\n", sm);
+    return 0;
+  }
+No.9 Patch
+int main()
+{
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    if (a<b) 
+    {
+        sm = a;
+    }
+    else 
+    {
+        sm = b;
+    }
+
+    if (c<sm) 
+    {
+        sm = c;
+    }
+
+    if (d<sm) 
+    {
+        sm = d;
+    }
+
+    printf ("%d is the smallest\n", sm);
+    return 0;
+}
+No.11 Patch
+int main()
+{
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    sm = a;
+    if (b < sm)
+        sm = b;
+    if (c < sm)
+        sm = c;
+    if (d < sm)
+        sm = d;
+    printf("%d is the smallest\n", sm);
+    return 0;
+}
+
+/* Fix the code below to find the largest number in the array. */
+No.13 Patch
+int main()
+  {
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    if (a<=b && a<=c && a<=d)
+       printf ("%d is the smallest\n", a);
+    else if (b<=a && b<=c && b<=d)
+       printf ("%d is the smallest\n", b);
+    else if (c<=a && c<=b && c<=d)
+       printf ("%d is the smallest\n", c);
+    else if (d<=a && d<=b && d<=c)
+       printf ("%d is the smallest\n", d);
+    else 
+       printf ("They have to be different numbers");
+    return 0;
+  }
+No.15 Patch
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+    int a, b, c, d, sm = INT_MAX;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    if (a<sm) sm = a;
+    if (b<sm) sm = b;
+    if (c<sm) sm = c;
+    if (d<sm) sm = d;
+    printf ("%d is the smallest\n", sm);
+    return 0;
+}
+No.17 Patch
+int main()
+  {
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    sm = a;
+    if (b < sm)
+       sm = b;
+    if (c < sm)
+       sm = c;
+    if (d < sm)
+       sm = d;
+    printf ("%d is the smallest\n", sm);
+    return 0;
+  }
+No.18 Patch
+int main()
+{
+  int a, b, c, d, sm;
+  printf("Please enter 4 numbers separated by spaces > ");
+  scanf("%d%d%d%d", &a, &b, &c, &d);
+  sm = a;
+  if (b < sm)
+     sm = b;
+  if (c < sm)
+     sm = c;
+  if (d < sm)
+     sm = d;
+  printf("%d is the smallest\n", sm);
+  return 0;
+}
+No.20 Patch
+int main()
+  {
+    int a, b, c, d, sm;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    if (a<b)
+        sm = a;
+    else 
+        sm = b;
+    if (c<sm)
+        sm = c;
+    if (d<sm)
+        sm = d;
+    printf ("%d is the smallest\n", sm);
+    return 0;
+  }
+No.21 Patch
+#include <stdio.h>
+int main()
+{
+    int a, b, c, d, smallest;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    smallest = a;
+    if (b < smallest) smallest = b;
+    if (c < smallest) smallest = c;
+    if (d < smallest) smallest = d;
+    printf("%d is the smallest\n", smallest);
+    return 0;
+}

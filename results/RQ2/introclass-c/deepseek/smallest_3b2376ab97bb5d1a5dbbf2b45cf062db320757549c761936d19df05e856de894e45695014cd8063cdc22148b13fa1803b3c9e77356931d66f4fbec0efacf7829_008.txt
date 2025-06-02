@@ -1,0 +1,230 @@
+No.0 Patch
+int main(){
+
+        int n1, n2, n3, n4;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        if (n1 <= n2 && n1 <= n3 && n1 <= n4)
+                printf("%d is the smallest ", n1);
+
+        else if (n2 <= n1 && n2 <= n3 && n2 <= n4)
+                printf("%d is the smallest", n2);
+
+        else if (n3 <= n1 && n3 <= n2 && n3 <= n4)
+                printf("%d is the smallest", n3);
+
+        else
+                printf("%d is the smallest", n4);
+
+        return 0;
+}
+No.1 Patch
+int main(){
+
+        int n1, n2, n3, n4, smallest;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        smallest = n1;
+
+        if (n2 < smallest)
+                smallest = n2;
+        if (n3 < smallest)
+                smallest = n3;
+        if (n4 < smallest)
+                smallest = n4;
+
+        printf("%d is the smallest", smallest);
+
+        return 0;
+}
+No.2 Patch
+int main(){
+
+        int n1, n2, n3, n4, smallest;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        smallest = n1;
+
+        if (n2 < smallest)
+                smallest = n2;
+
+        if (n3 < smallest)
+                smallest = n3;
+
+        if (n4 < smallest)
+                smallest = n4;
+
+        printf("%d is the smallest ", smallest);
+
+        return 0;
+}
+No.3 Patch
+int main(){
+
+        int n1, n2, n3, n4;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        if (n1 <= n2 && n1 <= n3 && n1 <= n4)
+                printf("%d is the smallest ", n1);
+
+        else if (n2 <= n1 && n2 <= n3 && n2 <= n4)
+                printf("%d is the smallest", n2);
+      
+        else if (n3 <= n1 && n3 <= n2 && n3 <= n4)
+                printf("%d is the smallest", n3);
+
+        else
+                printf("%d is the smallest", n4);
+
+        return 0;
+}
+No.4 Patch
+int main(){
+
+        int n1, n2, n3, n4;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        if (n1 <= n2 && n1 <= n3 && n1 <= n4)
+                printf("%d is the smallest ", n1);
+
+        else if (n2 <= n1 && n2 <= n3 && n2 <= n4)
+                printf("%d is the smallest", n2);
+      
+        else if (n3 <= n1 && n3 <= n2 && n3 <= n4)
+                printf("%d is the smallest", n3);
+
+	else
+                printf("%d is the smallest", n4);
+
+        return 0;
+}
+No.7 Patch
+int main(){
+
+        int n1, n2, n3, n4, smallest;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        smallest = n1;
+        if (n2 < smallest)
+                smallest = n2;
+        if (n3 < smallest)
+                smallest = n3;
+        if (n4 < smallest)
+                smallest = n4;
+
+        printf("%d is the smallest", smallest);
+        return 0;
+}
+No.8 Patch
+int main(){
+
+        int n1, n2, n3, n4;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        if (n1 <= n2 && n1 <= n3 && n1 <= n4)
+                printf("%d is the smallest ", n1);
+
+        else if (n2 <= n1 && n2 <= n3 && n2 <= n4)
+                printf("%d is the smallest", n2);
+      
+        else if (n3 <= n1 && n3 <= n2 && n3 <= n4)
+                printf("%d is the smallest", n3);
+
+	else
+                printf("%d is the smallest", n4);
+
+        return 0;
+}
+
+/* Please provide a fix for the buggy function */
+No.10 Patch
+int main(){
+
+        int n1, n2, n3, n4, min;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        if (n1 < n2)
+                min = n1;
+        else
+                min = n2;
+
+        if (n3 < min)
+                min = n3;
+
+        if (n4 < min)
+                min = n4;
+
+        printf("%d is the smallest", min);
+
+        return 0;
+}
+No.11 Patch
+int main(){
+
+        int n1, n2, n3, n4, min;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        min = n1;
+
+        if (n2 < min)
+                min = n2;
+
+        if (n3 < min)
+                min = n3;
+
+        if (n4 < min)
+                min = n4;
+
+        printf("%d is the smallest", min);
+
+        return 0;
+}
+No.13 Patch
+int main(){
+
+        int n1, n2, n3, n4, smallest;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+        if (n1 < n2){
+		if(n1 < n3){
+			if(n1 < n4)
+				smallest = n1;
+			else
+				smallest = n4;
+		}
+		else{
+			if(n3 < n4)
+				smallest = n3;
+			else
+				smallest = n4;
+		}
+	}
+	else{
+		if(n2 < n3){
+			if(n2 < n4)
+				smallest = n2;
+			else
+				smallest = n4;
+		}
+		else{
+			if(n3 < n4)
+				smallest = n3;
+			else
+				smallest = n4;
+		}
+	}
+
+        printf("%d is the smallest ", smallest);
+
+        return 0;
+}

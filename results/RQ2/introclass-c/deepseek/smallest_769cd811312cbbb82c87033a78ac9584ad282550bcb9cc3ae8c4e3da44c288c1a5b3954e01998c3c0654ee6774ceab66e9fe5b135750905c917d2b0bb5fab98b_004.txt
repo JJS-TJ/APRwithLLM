@@ -1,0 +1,129 @@
+No.2 Patch
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+if (a<=b)
+x = a;
+else
+x = b;
+if (x >= c)
+x = c;
+if (x >= d)
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}
+No.4 Patch
+#include <stdio.h>
+
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+if (a<=b && a<=c && a<=d)
+x = a;
+else if (b<=a && b<=c && b<=d)
+x = b;
+else if (c<=a && c<=b && c<=d)
+x = c;
+else
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}
+No.6 Patch
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+if (a<=b && a<=c && a<=d)
+x = a;
+else if (b<=a && b<=c && b<=d)
+x = b;
+else if (c<=a && c<=b && c<=d)
+x = c;
+else
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}
+No.8 Patch
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+if (a<=b && a<=c && a<=d)
+x = a;
+else if (b<=a && b<=c && b<=d)
+x = b;
+else if (c<=a && c<=b && c<=d)
+x = c;
+else if (d<=a && d<=b && d<=c)
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}
+
+/* The code is wrong, you must modify it to be correct. */
+No.10 Patch
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+x = a;
+if (b < x)
+x = b;
+if (c < x)
+x = c;
+if (d < x)
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}
+No.11 Patch
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+x = a;
+if (b<x)
+x = b;
+if (c<x)
+x = c;
+if (d<x)
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}
+No.12 Patch
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+x = a;
+if (x>b)
+x = b;
+if (x>c)
+x = c;
+if (x>d)
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}
+No.18 Patch
+int main(){
+int a, b, c, d, x;
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d %d %d %d", &a, &b, &c, &d);
+if (a>=b)
+x = b;
+else
+x = a;
+if (x >= c)
+x = c;
+if (x >= d)
+x = d;
+printf("%d is the smallest\n", x);
+return 0;
+}

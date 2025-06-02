@@ -1,0 +1,213 @@
+No.0 Patch
+#include <stdio.h>
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	if (num1<=num2 && num1<=num3 && num1<=num4)
+	printf("%.0lf is the smallest\n",num1);
+	if (num2<=num1 && num2<=num3 && num2<=num4)
+	printf("%.0lf is the smallest\n",num2);
+	if (num3<=num1 && num3<=num2 && num3<=num4)
+	printf("%.0lf is the smallest\n",num3);
+	if (num4<=num1 && num4<=num2 && num4<=num3)
+	printf("%.0lf is the smallest\n",num4);
+	return 0; 
+}
+No.1 Patch
+int main(){
+	double num1, num2, num3, num4, min;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	min = num1;
+	if (num2<min)
+		min = num2;
+	if (num3<min)
+		min = num3;
+	if (num4<min)
+		min = num4;
+	printf("%.0lf is the smallest\n",min);
+	return 0; 
+}
+No.3 Patch
+int main(){
+	double num1, num2, num3, num4, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	smallest = num1;
+	if (num2<smallest)
+		smallest = num2;
+	if (num3<smallest)
+		smallest = num3;
+	if (num4<smallest)
+		smallest = num4;
+	printf("%.0lf is the smallest\n",smallest);
+	return 0; 
+}
+No.4 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	if (num1<=num2 && num1<=num3 && num1<=num4)
+	printf("%.0lf is the smallest\n",num1);
+	if (num2<=num1 && num2<=num3 && num2<=num4)
+	printf("%.0lf is the smallest\n",num2);
+	if (num3<=num1 && num3<=num2 && num3<=num4)
+	printf("%.0lf is the smallest\n",num3);
+	if (num4<=num1 && num4<=num2 && num4<=num3)
+	printf("%.0lf is the smallest\n",num4);
+	return 0; 
+}
+No.5 Patch
+int main(){
+	double num1, num2, num3, num4, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	smallest = num1;
+	if (num2 < smallest)
+		smallest = num2;
+	if (num3 < smallest)
+		smallest = num3;
+	if (num4 < smallest)
+		smallest = num4;
+	printf("%.0lf is the smallest\n",smallest);
+	return 0; 
+}
+No.6 Patch
+int main(){
+	double num1, num2, num3, num4;
+	double min;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	min = num1;
+	if (num2<min)
+		min = num2;
+	if (num3<min)
+		min = num3;
+	if (num4<min)
+		min = num4;
+	printf("%.0lf is the smallest\n",min);
+	return 0; 
+}
+No.7 Patch
+int main(){
+	double num1, num2, num3, num4, min;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	min = num1;
+	if (num2 < min)
+		min = num2;
+	if (num3 < min)
+		min = num3;
+	if (num4 < min)
+		min = num4;
+	printf("%.0lf is the smallest\n",min);
+	return 0; 
+}
+No.11 Patch
+int main(){
+	double num1, num2, num3, num4;
+	double smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	smallest = num1;
+	if (num2 < smallest)
+		smallest = num2;
+	if (num3 < smallest)
+		smallest = num3;
+	if (num4 < smallest)
+		smallest = num4;
+	printf("%.0lf is the smallest\n",smallest);
+	return 0; 
+}
+No.12 Patch
+int main(){
+	double num1, num2, num3, num4, min;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	min=num1;
+	if (num2<min)
+	min=num2;
+	if (num3<min)
+	min=num3;
+	if (num4<min)
+	min=num4;
+	printf("%.0lf is the smallest\n",min);
+	return 0;
+}
+No.13 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	double smallest = num1;
+	if (num2<smallest)
+		smallest = num2;
+	if (num3<smallest)
+		smallest = num3;
+	if (num4<smallest)
+		smallest = num4;
+	printf("%.0lf is the smallest\n",smallest);
+	return 0; 
+}
+No.14 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	if (num1<=num2 && num1<=num3 && num1<=num4)
+	printf("%.0lf is the smallest\n",num1);
+	if (num2<num1 && num2<=num3 && num2<=num4)
+	printf("%.0lf is the smallest\n",num2);
+	if (num3<num1 && num3<num2 && num3<=num4)
+	printf("%.0lf is the smallest\n",num3);
+	if (num4<num1 && num4<num2 && num4<num3)
+	printf("%.0lf is the smallest\n",num4);
+	return 0; 
+}
+No.15 Patch
+int main(){
+	double num1, num2, num3, num4, min;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	min = num1;
+	if (num2 < min) min = num2;
+	if (num3 < min) min = num3;
+	if (num4 < min) min = num4;
+	printf("%.0lf is the smallest\n", min);
+	return 0; 
+}
+No.17 Patch
+int main(){
+	double num1, num2, num3, num4, smallest;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	smallest = num1;
+	if (num2 < smallest)
+		smallest = num2;
+	if (num3 < smallest)
+		smallest = num3;
+	if (num4 < smallest)
+		smallest = num4;
+	printf("%.0lf is the smallest\n",smallest);
+	return 0; 
+}
+
+/* In the fixed function, we only print out the smallest number that we find.
+We can't print out that a number is the smallest if it's not the smallest one.
+So we use a variable smallest to store the smallest number we found.
+The if statements are used to check whether the number is the smallest.
+If it is, we update the smallest to that number. At the end of the program, we print out the smallest number. */
+No.18 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	double smallest = num1;
+	if (num2<smallest) smallest = num2;
+	if (num3<smallest) smallest = num3;
+	if (num4<smallest) smallest = num4;
+	printf("%.0lf is the smallest\n",smallest);
+	return 0; 
+}

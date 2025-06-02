@@ -1,0 +1,82 @@
+No.2 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int smallest = first;
+	if (second < smallest) smallest = second;
+	if (third < smallest) smallest = third;
+	if (fourth < smallest) smallest = fourth;
+	printf("%d is the smallest \n ", smallest);
+	
+	return 0;
+}
+No.4 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	if (first <= second && first <= third && first <= fourth)
+	printf("%d is the smallest \n ", first);
+	else if (second <= first && second <= third && second <= fourth)
+	printf("%d is the smallest \n ", second);
+	else if (third <= first && third <= second && third <= fourth)
+	printf("%d is the smallest \n ", third);
+	else if (fourth <= first && fourth <= second && fourth <= third)
+	printf("%d is the smallest \n ", fourth);
+	
+	return 0;
+}
+No.6 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int smallest = first;
+	
+	if (second < smallest)
+		smallest = second;
+	if (third < smallest)
+		smallest = third;
+	if (fourth < smallest)
+		smallest = fourth;
+		
+	printf("%d is the smallest \n ", smallest);
+
+	return 0;
+}
+
+/* 
+	This program has a few errors.
+
+	1. The program doesn't check whether the input is valid. 
+	2. The program doesn't ask for new input if the current input is not valid.
+	3. The program doesn't handle negative numbers correctly.
+	4. The program doesn't handle the case where the smallest number is negative.
+*/
+No.9 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	if (first <= second && first <= third && first <= fourth)
+	printf("%d is the smallest \n ", first);
+	else if (second <= first && second <= third && second <= fourth)
+	printf("%d is the smallest \n ", second);
+	else if (third <= first && third <= second && third <= fourth)
+	printf("%d is the smallest \n ", third);
+	else if (fourth <= first && fourth <= second && fourth <= third)
+	printf("%d is the smallest \n ", fourth);
+	
+	return 0;
+}
+
+/* The code was wrong because the comparision was not correct, it should be a less than or equals to comparison to determine the smallest number */

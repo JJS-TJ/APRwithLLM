@@ -1,0 +1,164 @@
+No.0 Patch
+int main()
+{
+	int A, B, C, D;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &A, &B, &C, &D);
+
+	if ( A <= B && A <= C && A <= D)
+		{ printf("%i is the smallest\n", A);
+		  return 0;}
+	else if ( B <= A && B <= C && B <= D)
+		{ printf("%i is the smallest\n", B);
+		  return 0;}
+	else if ( C <= A && C <= B && C <= D)
+		{ printf("%i is the smallest\n", C);
+		  return 0;}
+	else if ( D <= A && D <= B && D <= C )
+		{ printf("%i is the smallest\n", D);
+		  return 0;}
+}
+No.1 Patch
+#include <stdio.h>
+
+int main()
+{
+	int A, B, C, D;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &A, &B, &C, &D);
+
+	if ( A <= B && A <= C && A <= D)
+		{ printf("%i is the smallest\n", A);
+		  return 0;}
+	else if ( B <= A && B <= C && B <= D)
+		{ printf("%i is the smallest\n", B);
+		  return 0;}
+	else if ( C <= A && C <= B && C <= D)
+		{ printf("%i is the smallest\n", C);
+		  return 0;}
+	else if ( D <= A && D <= B && D <= C )
+		{ printf("%i is the smallest\n", D);
+		  return 0;}
+}
+No.7 Patch
+int main()
+{
+	int A, B, C, D;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &A, &B, &C, &D);
+
+	int smallest = 0;
+
+	if ( A < B )
+		smallest = A;
+	else
+		smallest = B;
+
+	if ( C < smallest )
+		smallest = C;
+
+	if ( D < smallest )
+		smallest = D;
+
+	printf("%i is the smallest\n", smallest);
+	return 0;
+}
+No.8 Patch
+int main()
+{
+	int A, B, C, D, min;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &A, &B, &C, &D);
+
+	min = A;
+
+	if ( B < min)
+		min = B;
+	if ( C < min)
+		min = C;
+	if ( D < min )
+		min = D;
+
+	printf("%i is the smallest\n", min);
+
+	return 0;
+}
+No.9 Patch
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int A, B, C, D;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &A, &B, &C, &D);
+
+	int smallest;
+
+	smallest = A;
+
+	if(smallest > B)
+		smallest = B;
+
+	if(smallest > C)
+		smallest = C;
+
+	if(smallest > D)
+		smallest = D;
+
+	printf("%i is the smallest\n", smallest);
+
+	return 0;
+}
+No.11 Patch
+#include <stdio.h>
+
+int main()
+{
+	int A, B, C, D;
+	int smallest;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &A, &B, &C, &D);
+
+	if ( A <= B && A <= C && A <= D)
+		{ smallest = A; }
+	else if ( B <= A && B <= C && B <= D)
+		{ smallest = B; }
+	else if ( C <= A && C <= B && C <= D)
+		{ smallest = C; }
+	else if ( D <= A && D <= B && D <= C )
+		{ smallest = D; }
+
+	printf("%i is the smallest\n", smallest);
+
+	return 0;
+}
+No.13 Patch
+int main()
+{
+	int A, B, C, D;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%i %i %i %i", &A, &B, &C, &D);
+
+	if ( A <= B && A <= C && A <= D)
+		{ printf("%i is the smallest\n", A);
+		  return 0;}
+	else if ( B <= A && B <= C && B <= D)
+		{ printf("%i is the smallest\n", B);
+		  return 0;}
+	else if ( C <= A && C <= B && C <= D)
+		{ printf("%i is the smallest\n", C);
+		  return 0;}
+	else if ( D <= A && D <= B && D <= C )
+		{ printf("%i is the smallest\n", D);
+		  return 0;}
+}
+
+/* The code is wrong, you must modify it to be correct. */

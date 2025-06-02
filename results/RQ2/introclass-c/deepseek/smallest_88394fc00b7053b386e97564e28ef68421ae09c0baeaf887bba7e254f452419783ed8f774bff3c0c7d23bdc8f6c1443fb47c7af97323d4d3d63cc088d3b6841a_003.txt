@@ -1,0 +1,240 @@
+No.0 Patch
+int main() {
+	
+	int a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	int smallest;
+	
+	smallest = a;
+	
+	if (b < smallest)
+		smallest = b;
+	if (c < smallest)
+		smallest = c;
+	if (d < smallest)
+		smallest = d;
+	
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+}
+No.4 Patch
+int main() {
+	
+	int a, b, c, d, smallest;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	smallest = a;
+	
+	if (b < smallest)
+		smallest = b;
+	if (c < smallest)
+		smallest = c;
+	if (d < smallest)
+		smallest = d;
+
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+	
+	}
+	
+	
+	
+
+
+/* Given two numbers x and y, the problem is to find the last digit of a^b */
+No.6 Patch
+int main() {
+	
+	int a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	int smallest;
+	
+	smallest = a;
+	
+	if (b < smallest)
+		smallest = b;
+	if (c < smallest)
+		smallest = c;
+	if (d < smallest)
+		smallest = d;
+
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+	
+	}
+No.7 Patch
+int main() {
+	
+	int a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	int smallest;
+	
+	smallest = a;
+	
+	if (a > b)
+		smallest = b;
+	if (smallest > c)
+		smallest = c;
+	if (smallest > d)
+		smallest = d;
+	
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+	
+	}
+No.9 Patch
+int main() {
+	
+	int a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	int smallest;
+	
+	smallest = a;
+	
+	if (b < smallest)
+		smallest = b;
+	if (c < smallest)
+		smallest = c;
+	if (d < smallest)
+		smallest = d;
+	
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+	
+	}
+No.13 Patch
+int main() {
+
+int a, b, c, d, smallest;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%d%d%d%d", &a, &b, &c, &d);
+
+smallest = a;
+
+if (a > b)
+	smallest = b;
+if (smallest > c)
+	smallest = c;
+if (smallest > d)
+	smallest = d;
+
+printf("%d is the smallest\n", smallest);
+
+return 0;
+}
+
+
+/*
+	This program has an issue with indentation. C programming language does not allow statements, declarations, and function calls to be by themselves at the start of a block (after {) or end of a block (before }).
+	The else if (a > d) should be changed to if (a > d)
+	This is because the else keyword is used with if statements. If the statement (a > d) is true then it will go in this if block and assign a to smallest. 
+	In our case it would not make any difference because we are already comparing smallest with a,b,c, and d but in other cases it might.
+	So, we should use if and not else if.
+*/
+No.14 Patch
+int main() {
+	
+	int a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	int smallest;
+	
+	smallest = a;
+	
+	if (b < smallest)
+		smallest = b;
+	if (c < smallest)
+		smallest = c;
+	if (d < smallest)
+		smallest = d;
+	
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+	
+	}
+	
+		
+
+/* What is the bug? */
+/* The bug is that the code is comparing the wrong variables to find the smallest value. 
+ * The initial smallest value should be compared to each other variable, not the other way around. */
+ 
+ /* How do you fix it? */
+ /* I fix it by replacing the ">" with "<" so that the code will correctly compare each variable to the current smallest value. 
+  * I also removed the extra else if and the brackets that were unnecessarily added. */
+No.16 Patch
+int main() {
+	
+	int a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	int smallest;
+	
+	smallest = a;
+	
+	if (b < smallest)
+		smallest = b;
+	if (c < smallest)
+		smallest = c;
+	if (d < smallest)
+		smallest = d;
+	
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+	
+	}
+
+
+/* The code is wrong, you must modify it to be correct. */
+No.17 Patch
+int main() {
+	
+	int a, b, c, d;
+	
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	
+	int smallest;
+	
+	smallest = a;
+	
+	if (a > b)
+		smallest = b;
+	if (smallest > c)
+		smallest = c;
+	if (smallest > d)
+		smallest = d;
+	
+	printf("%d is the smallest\n", smallest);
+	
+	return 0;
+	
+	}
+
+/* Find the bug in the code below */

@@ -1,0 +1,124 @@
+No.0 Patch
+int main () {
+
+int a, b, c, d;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+	if(a<=b && a<=c && a<=d)
+		printf("%d is the smallest\n", a);
+	else if(b<=a && b<=c && b<=d)
+		printf("%d is the smallest\n", b);
+	else if(c<=a && c<=b && c<=d)
+		printf("%d is the smallest\n", c);
+	else if(d<=a && d<=c && d<=b)
+		printf("%d is the smallest\n", d);
+	else printf("I don't know what I'm doing. \n");
+
+
+return 0;
+
+}
+No.2 Patch
+int main () {
+
+	int a, b, c, d, smallest;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &a, &b, &c, &d);
+
+	smallest = a;
+
+	if(b < smallest) smallest = b;
+	if(c < smallest) smallest = c;
+	if(d < smallest) smallest = d;
+
+	printf("%d is the smallest\n", smallest);
+
+	return 0;
+
+}
+
+/* 
+In the buggy function, the code is not properly checking all four variables. 
+It does not take into account if the numbers are the same and does not give the correct output.
+
+In the fixed function, we have created a variable smallest and set it to be the first variable. 
+Then we check if any of the other variables are smaller than the smallest, if they are, we set smallest to that value.
+In the end we print out the smallest variable which should be the smallest number from the input.
+*/
+
+/*
+Given a string, count the number of words in it. The words are separated by following characters: space, newline, or tab.
+*/
+No.8 Patch
+#include <stdio.h>
+
+int main () {
+
+int a, b, c, d;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+	if(a<=b && a<=c && a<=d)
+		printf("%d is the smallest\n", a);
+	else if(b<=a && b<=c && b<=d)
+		printf("%d is the smallest\n", b);
+	else if(c<=a && c<=b && c<=d)
+		printf("%d is the smallest\n", c);
+	else if(d<=a && d<=c && d<=b)
+		printf("%d is the smallest\n", d);
+	else printf("I don't know what I'm doing. \n");
+
+
+return 0;
+
+}
+
+/* The buggy function was not checking for equal elements in the if else statements. The fixed function checks for equal elements as well. */
+No.9 Patch
+#include <stdio.h>
+
+int main () {
+
+int a, b, c, d;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+	if(a<=b && a<=c && a<=d)
+		printf("%d is the smallest\n", a);
+	else if(b<a && b<=c && b<=d)
+		printf("%d is the smallest\n", b);
+	else if(c<a && c<b && c<=d)
+		printf("%d is the smallest\n", c);
+	else if(d<a && d<b && d<c)
+		printf("%d is the smallest\n", d);
+	else printf("I don't know what I'm doing. \n");
+
+
+return 0;
+
+}
+No.11 Patch
+int main() {
+
+int a, b, c, d, min;
+
+		printf("Please enter 4 numbers separated by spaces > ");
+		scanf("%d %d %d %d", &a, &b, &c, &d);
+
+	min = a;
+	if (b < min) {
+		min = b;
+	}
+	if (c < min) {
+		min = c;
+	}
+	if (d < min) {
+		min = d;
+	}
+	printf("%d is the smallest\n", min);
+
+return 0;
+
+}

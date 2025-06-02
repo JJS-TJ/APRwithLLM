@@ -1,0 +1,432 @@
+No.0 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = tolower(inputString[k]);
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 6;
+        //
+      }
+    }
+  } 
+
+  printf("The number of syllables is %d.",syl);
+  return 0;
+}
+No.2 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 6;
+      }
+    } 
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+No.5 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 6;
+      }
+    }
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+
+
+// Correct version of this function would be to modify the loop to iterate over the array and not break the loop
+// when a vowel is found. After breaking out of the inner loop, increment the count of syllables.
+// Also, the vowel array was missing a 'y' which needs to be added in the array of vowels.
+// Also, length of the array 'vowels' was incorrect in the loop. It should be less than 6, not 5.
+
+// Please correct the function and provide the corrected function as a part of your answer.
+No.8 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 6;
+        //
+      }
+    } 
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+No.9 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        break;
+      }
+    } 
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+No.11 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = tolower(inputString[k]);
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 5;
+      }
+    } 
+  }
+  printf("The number of syllables is %d.",syl);
+  return 0;
+}
+
+/* Fix the function */
+No.12 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 6;
+      }
+    } 
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+
+/* In the buggy function the "y" is not being considered as a vowel, and the second for loop condition should have 6 instead of 5. */
+No.14 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  fgets(inputString, sizeof(inputString), stdin);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = tolower(inputString[k]);
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        break;
+      }
+    } 
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+No.15 Patch
+int main() {
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        break;
+      }
+    } 
+  }
+
+  printf("The number of syllables is %d.",syl);
+  return 0;
+}
+No.16 Patch
+#include <stdio.h>
+#include <string.h>
+
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6] = {'a', 'e', 'i', 'o', 'u', 'y'};
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 6;
+      }
+    }
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+No.17 Patch
+int main ()
+{
+  char inputString[20];
+  int length, k, j, syl;
+  char vowels[6];
+  vowels[0] = 'a';
+  vowels[1] = 'e';
+  vowels[2] = 'i';
+  vowels[3] = 'o';
+  vowels[4] = 'u';
+  vowels[5] = 'y';
+  char temp;
+
+  k = 0;
+  j = 0;
+  syl = 0;
+
+  printf("Please enter a string > ");
+  gets(inputString);
+
+  length = strlen(inputString);
+
+  for(k = 0; (k < length); k++)
+  {
+    temp = inputString[k];
+    for(j = 0; (j < 6); j++)
+    {
+      if(temp == vowels[j])
+      {
+        syl = syl + 1;
+        j = 6;
+      }
+    } 
+  }
+printf("The number of syllables is %d.",syl);
+return 0;
+}
+
+/* The code is wrong, you must modify it to be correct. */
