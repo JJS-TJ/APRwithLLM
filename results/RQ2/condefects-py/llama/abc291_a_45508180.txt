@@ -1,0 +1,12 @@
+No.2 Patch
+S = input()
+
+for i in range(len(S)):
+  if ord(S[i]) > 64 and ord(S[i]) < 91:
+    print(i + 1)
+No.3 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)

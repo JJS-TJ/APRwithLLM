@@ -1,0 +1,8 @@
+No.1 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print((n + 998244353) % 998244353)
+No.2 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n%998244353)

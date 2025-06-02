@@ -1,0 +1,29 @@
+No.1 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a>c:
+    print("Aoki")
+elif b<=d:
+    print("Takahashi")
+else:
+    print("Aoki")
+No.3 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c and b<=d:
+    print("Takahashi")
+else:
+    print("Aoki")
+No.4 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
