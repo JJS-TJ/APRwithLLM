@@ -1,0 +1,387 @@
+No.0 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Provide a fix for the buggy function */
+No.3 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+        return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Provide a fix for the buggy function */
+No.4 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Fix for the buggy function */
+No.5 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Fixes the problem where the compiler does not recognize that the program will never use the return value of pj_get_spheroid_def. */
+No.6 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Fix the bug in the function */
+No.7 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+        return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+No.9 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+No.10 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Fix the incorrect use of atan2 in the buggy function */
+No.11 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Fix buggy function (C++) */
+
+static double compute_x(double phi, double q, double m) {
+    return q * sin(phi) * m;
+}
+
+static double compute_y(double phi, double q, double m) {
+    return q * (m * m - 1.) + q * cos(phi) - 1.;
+}
+
+static double compute_z(double phi, double q, double m) {
+    return q * sin(phi) / m;
+}
+
+/* Provide a fix for the buggy function */
+No.13 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Fix to make code compile */
+No.14 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Fix the function that incorrectly computes the distance to a node */
+No.15 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+        Q->n = 1.;
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Provide a fix for the buggy function */
+No.16 Patch
+PJ *PROJECTION(urm5) {
+    double alpha, t;
+    struct pj_opaque *Q = static_cast<struct pj_opaque*>(pj_calloc (1, sizeof (struct pj_opaque)));
+    if (nullptr==Q)
+        return pj_default_destructor(P, ENOMEM);
+    P->opaque = Q;
+
+    if (pj_param(P->ctx, P->params, "tn").i) {
+        Q->n = pj_param(P->ctx, P->params, "dn").f;
+        if (Q->n <= 0. || Q->n > 1.)
+            return pj_default_destructor(P, PJD_ERR_N_OUT_OF_RANGE);
+    } else {
+        Q->n = 1.0;
+    }
+    Q->q3 = pj_param(P->ctx, P->params, "dq").f / 3.;
+    alpha = pj_param(P->ctx, P->params, "ralpha").f;
+    t = Q->n * sin (alpha);
+    Q->m = cos (alpha) / sqrt (1. - t * t);
+    Q->rmn = 1. / (Q->m * Q->n);
+
+    P->es = 0.;
+    P->inv = nullptr;
+    P->fwd = s_forward;
+
+    return P;
+}
+
+/* Provide a fix for the buggy function */

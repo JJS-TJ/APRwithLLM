@@ -1,0 +1,201 @@
+No.7 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+	int key_buf_cursor;
+
+	if ( !ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if ( ! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	key_buf_cursor = pgdata->chiSymbolCursor;
+	if ( pgdata->chiSymbolBufLen == 0 || key_buf_cursor < 0 )
+		key_buf_cursor = 0;
+	else
+		key_buf_cursor--;
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if ( ! pgdata->symbolKeyBuf[ key_buf_cursor ] ) {
+		if ( pgdata->bSelect ) {
+			ChoiceEndChoice( pgdata );
+		}
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.11 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+	int key_buf_cursor;
+
+	if ( !ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if ( ! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	key_buf_cursor = pgdata->chiSymbolCursor;
+	// FIXME: when pgdata->chiSymbolBufLen == 0, key_buf_cursor will be -1.
+	if ( pgdata->chiSymbolCursor == pgdata->chiSymbolBufLen )
+		key_buf_cursor--;
+
+	// FIXME: when pgdata->chiSymbolBufLen == 0, key_buf_cursor will be -1.
+	if ( pgdata->chiSymbolCursor == -1 ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	} else {
+		if ( pgdata->bSelect ) {
+			ChoiceEndChoice( pgdata );
+		}
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.23 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+	int key_buf_cursor;
+
+	if ( !ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if ( ! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	key_buf_cursor = pgdata->chiSymbolCursor;
+	// FIXME: when pgdata->chiSymbolBufLen == 0, key_buf_cursor will be -1.
+	if ( pgdata->chiSymbolCursor == pgdata->chiSymbolBufLen )
+		key_buf_cursor--;
+
+	if ( pgdata->bSelect ) {
+		ChoiceEndChoice( pgdata );
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.31 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+	int key_buf_cursor;
+
+	if ( !ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if ( ! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	key_buf_cursor = pgdata->chiSymbolCursor;
+	// FIXME: when pgdata->chiSymbolBufLen == 0, key_buf_cursor will be -1.
+	if ( pgdata->chiSymbolCursor == pgdata->chiSymbolBufLen )
+		key_buf_cursor--;
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if ( pgdata->bSelect ) {
+		ChoiceEndChoice( pgdata );
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.48 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+	int key_buf_cursor;
+
+	if ( !ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if ( ! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	key_buf_cursor = pgdata->chiSymbolCursor;
+	// FIXME: when pgdata->chiSymbolBufLen == 0, key_buf_cursor will be -1.
+	if ( pgdata->chiSymbolCursor == pgdata->chiSymbolBufLen )
+		key_buf_cursor--;
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if ( ! pgdata->symbolKeyBuf[ key_buf_cursor ] ) {
+		if ( pgdata->bSelect ) {
+			ChoiceEndChoice( pgdata );
+		}
+	}
+
+	/*
+	 * make sure the candidate list is closed first, if you're not sure
+	 * about the bSelect.
+	 */
+	if ( pgdata->bSelect ) {
+		ChoiceEndChoice( pgdata );
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */

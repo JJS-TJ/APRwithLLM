@@ -1,0 +1,70 @@
+No.5 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '.' || ch == '&' || ch == ',';
+}
+
+/* Provide a fix for the buggy function */
+No.15 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '.' || ch == ',' || ch == '&';
+}
+
+/* Provide a fix for the buggy function */
+No.18 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == ',' || ch == '.' || ch == '&';
+}
+
+/* Provide a fix for the buggy function */
+No.23 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '.' || ch == '&' || ch == '\'' || ch == ',';
+}
+
+/* Provide a fix for the buggy function */
+No.24 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '&' || ch == '.' || ch == ',' || ch == ';';
+}
+
+/* Provide a fix for the buggy function */
+No.29 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '.' || ch == '&' || ch == ',' || ch == '=';
+}
+
+/* Provide a fix for the buggy function */
+No.32 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '.' || ch == '&' || ch == ',' || ch == ':';
+}
+
+/* Provide a fix for the buggy function */
+No.36 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == ',' || ch == '.';
+}
+
+/* Provide a fix for the buggy function */
+No.40 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '.' || ch == '&' || ch == '=' || ch == ',';
+}
+
+/* Provide a fix for the buggy function */
+No.45 Patch
+static bool isIgnoredChar(char ch) {
+    return ch == ' ' || ch == '_' || ch == '-' || ch == '/' || ch == '(' ||
+           ch == ')' || ch == '.' || ch == '&' || ch == ',' || ch == ';';
+}
+
+/* Provide a fix for the buggy function */
