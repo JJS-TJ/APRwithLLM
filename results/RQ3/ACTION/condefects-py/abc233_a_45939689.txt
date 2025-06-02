@@ -1,0 +1,53 @@
+New cluster:
+===
+insert-node
+---
+call [61,73]
+to
+binary_operator [61,69]
+at 0
+------------
+===
+insert-node
+---
+identifier: max [61,64]
+to
+call [61,73]
+at 0
+===
+insert-node
+---
+integer: 0 [71,72]
+to
+argument_list [64,73]
+at 1
+===
+insert-node
+---
+call [61,73]
+to
+binary_operator [61,69]
+at 0
+===
+insert-node
+---
+argument_list [64,73]
+to
+call [61,73]
+at 1
+
+New cluster:
+MOVE from argument_list [64,73]
+------------
+===
+move-tree
+---
+parenthesized_expression [61,66]
+    binary_operator [62,65]
+        identifier: y [62,63]
+        -: - [63,64]
+        identifier: x [64,65]
+to
+argument_list [64,73]
+at 0
+

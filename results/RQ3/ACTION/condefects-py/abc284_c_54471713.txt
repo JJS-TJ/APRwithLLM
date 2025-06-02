@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from i to x
+------------
+===
+update-node
+---
+identifier: i [407,408]
+replace i by x
+

@@ -1,0 +1,29 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [230,239]
+    subscript [230,237]
+        identifier: li [230,232]
+        identifier: per [233,236]
+    -: - [237,238]
+    integer: 1 [238,239]
+to
+assignment [224,239]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [230,239]
+    identifier: li [230,232]
+    binary_operator [233,238]
+        identifier: per [233,236]
+        -: - [236,237]
+        integer: 1 [237,238]
+

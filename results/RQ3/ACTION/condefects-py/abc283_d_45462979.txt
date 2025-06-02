@@ -1,0 +1,29 @@
+New cluster:
+===
+insert-node
+---
+comment:          #   print(t) [278,291]
+to
+for_statement [252,314]
+at 2
+------------
+===
+insert-node
+---
+comment:          #   print(t) [278,291]
+to
+for_statement [252,314]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [281,289]
+    call [281,289]
+        identifier: print [281,286]
+        argument_list [286,289]
+            identifier: t [287,288]
+

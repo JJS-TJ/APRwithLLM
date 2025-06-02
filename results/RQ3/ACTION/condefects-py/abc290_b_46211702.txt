@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: K [168,169]
+to
+comparison_operator [162,169]
+at 2
+------------
+===
+insert-node
+---
+identifier: K [168,169]
+to
+comparison_operator [162,169]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 3 [168,169]
+===
+------------
+===
+delete-node
+---
+integer: 3 [168,169]
+===
+

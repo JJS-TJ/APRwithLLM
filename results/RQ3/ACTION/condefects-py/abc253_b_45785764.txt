@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from 0 to 1
+------------
+===
+update-node
+---
+integer: 0 [247,248]
+replace 0 by 1
+
+New cluster:
+UPDATE from 1 to 0
+------------
+===
+update-node
+---
+integer: 1 [244,245]
+replace 1 by 0
+

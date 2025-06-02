@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+//: // [2034,2036]
+to
+binary_operator [2030,2039]
+at 1
+------------
+===
+insert-node
+---
+//: // [2034,2036]
+to
+binary_operator [2030,2039]
+at 1
+
+New cluster:
+===
+delete-node
+---
+/: / [2034,2035]
+===
+------------
+===
+delete-node
+---
+/: / [2034,2035]
+===
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "atcorder" to "atcoder"
+------------
+===
+update-node
+---
+string: "atcorder" [4,14]
+replace "atcorder" by "atcoder"
+

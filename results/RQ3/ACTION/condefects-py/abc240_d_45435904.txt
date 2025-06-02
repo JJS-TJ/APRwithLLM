@@ -1,0 +1,136 @@
+New cluster:
+MOVE from if_statement [143,183]
+------------
+===
+move-tree
+---
+else_clause [237,335]
+    else: else [237,241]
+    block [252,335]
+        expression_statement [252,265]
+            augmented_assignment [252,265]
+                subscript [252,260]
+                    subscript [252,257]
+                        identifier: Q [252,253]
+                        unary_operator [254,256]
+                            -: - [254,255]
+                            integer: 1 [255,256]
+                    integer: 1 [258,259]
+                +=: += [261,263]
+                integer: 1 [264,265]
+        if_statement [275,335]
+            comparison_operator [278,291]
+                subscript [278,286]
+                    subscript [278,283]
+                        identifier: Q [278,279]
+                        unary_operator [280,282]
+                            -: - [280,281]
+                            integer: 1 [281,282]
+                    integer: 1 [284,285]
+                comparison_operator: == [287,289]
+                identifier: a [290,291]
+            block [306,335]
+                expression_statement [306,313]
+                    call [306,313]
+                        attribute [306,311]
+                            identifier: Q [306,307]
+                            identifier: pop [308,311]
+                        argument_list [311,313]
+                expression_statement [327,335]
+                    augmented_assignment [327,335]
+                        identifier: ans [327,330]
+                        -=: -= [331,333]
+                        identifier: a [334,335]
+to
+if_statement [143,183]
+at 3
+===
+move-tree
+---
+comparison_operator [192,205]
+    subscript [192,200]
+        subscript [192,197]
+            identifier: Q [192,193]
+            unary_operator [194,196]
+                -: - [194,195]
+                integer: 1 [195,196]
+        integer: 0 [198,199]
+    comparison_operator: != [201,203]
+    identifier: a [204,205]
+to
+elif_clause [189,233]
+at 1
+===
+move-tree
+---
+block [216,231]
+    expression_statement [216,231]
+        call [216,231]
+            attribute [216,224]
+                identifier: Q [216,217]
+                identifier: append [218,224]
+            argument_list [224,231]
+                list [225,230]
+                    identifier: a [226,227]
+                    integer: 1 [228,229]
+to
+if_statement [143,183]
+at 1
+
+New cluster:
+===
+insert-node
+---
+elif_clause [189,233]
+to
+if_statement [143,183]
+at 2
+------------
+===
+insert-node
+---
+elif_clause [189,233]
+to
+if_statement [143,183]
+at 2
+===
+insert-node
+---
+elif: elif [189,193]
+to
+elif_clause [189,233]
+at 0
+
+New cluster:
+MOVE from elif_clause [189,233]
+------------
+===
+move-tree
+---
+block [168,183]
+    expression_statement [168,183]
+        call [168,183]
+            attribute [168,176]
+                identifier: Q [168,169]
+                identifier: append [170,176]
+            argument_list [176,183]
+                list [177,182]
+                    identifier: a [178,179]
+                    integer: 1 [180,181]
+to
+elif_clause [189,233]
+at 2
+
+New cluster:
+===
+delete-node
+---
+if_statement [189,335]
+===
+------------
+===
+delete-node
+---
+if_statement [189,335]
+===
+

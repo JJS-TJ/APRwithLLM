@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [92,100]
+    identifier: q [92,93]
+    //: // [93,95]
+    binary_operator [95,100]
+        integer: 10 [95,97]
+        **: ** [97,99]
+        identifier: i [99,100]
+to
+comparison_operator [92,98]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: q [92,93]
+===
+------------
+===
+delete-node
+---
+identifier: q [92,93]
+===
+

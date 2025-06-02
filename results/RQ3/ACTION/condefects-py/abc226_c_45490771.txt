@@ -1,0 +1,17 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [257,290]
+    comparison_operator [260,271]
+        identifier: node [260,264]
+        identifier: got [268,271]
+    block [282,290]
+        continue_statement [282,290]
+            continue: continue [282,290]
+to
+block [233,388]
+at 1
+

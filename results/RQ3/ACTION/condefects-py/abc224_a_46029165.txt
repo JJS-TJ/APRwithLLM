@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+slice [16,19]
+to
+subscript [14,19]
+at 1
+------------
+===
+insert-node
+---
+slice [16,19]
+to
+subscript [14,19]
+at 1
+
+New cluster:
+MOVE from slice [16,19]
+------------
+===
+move-tree
+---
+unary_operator [16,18]
+    -: - [16,17]
+    integer: 2 [17,18]
+to
+slice [16,19]
+at 0
+

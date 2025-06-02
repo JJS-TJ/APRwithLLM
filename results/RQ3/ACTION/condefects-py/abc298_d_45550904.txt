@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+identifier: a [376,377]
+to
+binary_operator [376,396]
+at 0
+------------
+===
+insert-node
+---
+identifier: a [376,377]
+to
+binary_operator [376,396]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [376,381]
+    identifier: a [376,377]
+    *: * [378,379]
+    identifier: a [380,381]
+

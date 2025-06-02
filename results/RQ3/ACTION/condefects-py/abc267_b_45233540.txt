@@ -1,0 +1,54 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [570,579]
+    identifier: f_s [570,573]
+    comparison_operator: != [573,575]
+    none: None [575,579]
+to
+boolean_operator [570,581]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [584,593]
+    identifier: e_s [584,587]
+    comparison_operator: != [587,589]
+    none: None [589,593]
+to
+boolean_operator [570,581]
+at 3
+
+New cluster:
+===
+delete-node
+---
+identifier: f_s [570,573]
+===
+------------
+===
+delete-node
+---
+identifier: f_s [570,573]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: e_s [578,581]
+===
+------------
+===
+delete-node
+---
+identifier: e_s [578,581]
+===
+

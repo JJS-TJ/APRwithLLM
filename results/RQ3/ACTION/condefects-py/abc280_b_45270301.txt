@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list_splat [128,132]
+    *: * [128,129]
+    identifier: ans [129,132]
+to
+argument_list [127,132]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [128,131]
+===
+------------
+===
+delete-node
+---
+identifier: ans [128,131]
+===
+

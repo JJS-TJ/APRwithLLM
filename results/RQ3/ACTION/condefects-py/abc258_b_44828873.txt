@@ -1,0 +1,22 @@
+New cluster:
+MOVE from block [207,302]
+------------
+===
+move-tree
+---
+expression_statement [312,336]
+    call [312,336]
+        attribute [312,322]
+            identifier: ans [312,315]
+            identifier: append [316,322]
+        argument_list [322,336]
+            call [323,335]
+                attribute [323,330]
+                    string: "" [323,325]
+                    identifier: join [326,330]
+                argument_list [330,335]
+                    identifier: tmp [331,334]
+to
+block [207,302]
+at 2
+

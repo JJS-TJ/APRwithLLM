@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+-: - [97,98]
+to
+binary_operator [95,110]
+at 1
+------------
+===
+insert-node
+---
+-: - [97,98]
+to
+binary_operator [95,110]
+at 1
+
+New cluster:
+===
+delete-node
+---
++: + [97,98]
+===
+------------
+===
+delete-node
+---
++: + [97,98]
+===
+

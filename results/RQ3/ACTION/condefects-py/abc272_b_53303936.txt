@@ -1,0 +1,204 @@
+New cluster:
+MOVE from for_statement [163,330]
+------------
+===
+move-tree
+---
+block [225,330]
+    if_statement [225,330]
+        boolean_operator [228,255]
+            comparison_operator [228,239]
+                subscript [228,234]
+                    identifier: cmb [228,231]
+                    integer: 0 [232,233]
+                identifier: i [238,239]
+            and: and [240,243]
+            comparison_operator [244,255]
+                subscript [244,250]
+                    identifier: cmb [244,247]
+                    integer: 1 [248,249]
+                identifier: i [254,255]
+        block [264,286]
+            expression_statement [264,273]
+                assignment [264,273]
+                    identifier: flag [264,268]
+                    =: = [268,269]
+                    true: True [269,273]
+            break_statement [281,286]
+                break: break [281,286]
+        else_clause [292,330]
+            else: else [292,296]
+            block [305,330]
+                expression_statement [305,316]
+                    call [305,316]
+                        identifier: print [305,310]
+                        argument_list [310,316]
+                            string: "No" [311,315]
+                expression_statement [324,330]
+                    call [324,330]
+                        identifier: exit [324,328]
+                        argument_list [328,330]
+to
+for_statement [163,330]
+at 2
+
+New cluster:
+MOVE from block [225,330]
+------------
+===
+move-tree
+---
+for_statement [208,330]
+    identifier: i [212,213]
+    identifier: X [217,218]
+    block [225,330]
+        if_statement [225,330]
+            boolean_operator [228,255]
+                comparison_operator [228,239]
+                    subscript [228,234]
+                        identifier: cmb [228,231]
+                        integer: 0 [232,233]
+                    identifier: i [238,239]
+                and: and [240,243]
+                comparison_operator [244,255]
+                    subscript [244,250]
+                        identifier: cmb [244,247]
+                        integer: 1 [248,249]
+                    identifier: i [254,255]
+            block [264,286]
+                expression_statement [264,273]
+                    assignment [264,273]
+                        identifier: flag [264,268]
+                        =: = [268,269]
+                        true: True [269,273]
+                break_statement [281,286]
+                    break: break [281,286]
+            else_clause [292,330]
+                else: else [292,296]
+                block [305,330]
+                    expression_statement [305,316]
+                        call [305,316]
+                            identifier: print [305,310]
+                            argument_list [310,316]
+                                string: "No" [311,315]
+                    expression_statement [324,330]
+                        call [324,330]
+                            identifier: exit [324,328]
+                            argument_list [328,330]
+to
+block [225,330]
+at 0
+
+New cluster:
+MOVE from for_statement [208,330]
+------------
+===
+move-tree
+---
+block [208,330]
+    for_statement [208,330]
+        identifier: i [212,213]
+        identifier: X [217,218]
+        block [225,330]
+            if_statement [225,330]
+                boolean_operator [228,255]
+                    comparison_operator [228,239]
+                        subscript [228,234]
+                            identifier: cmb [228,231]
+                            integer: 0 [232,233]
+                        identifier: i [238,239]
+                    and: and [240,243]
+                    comparison_operator [244,255]
+                        subscript [244,250]
+                            identifier: cmb [244,247]
+                            integer: 1 [248,249]
+                        identifier: i [254,255]
+                block [264,286]
+                    expression_statement [264,273]
+                        assignment [264,273]
+                            identifier: flag [264,268]
+                            =: = [268,269]
+                            true: True [269,273]
+                    break_statement [281,286]
+                        break: break [281,286]
+                else_clause [292,330]
+                    else: else [292,296]
+                    block [305,330]
+                        expression_statement [305,316]
+                            call [305,316]
+                                identifier: print [305,310]
+                                argument_list [310,316]
+                                    string: "No" [311,315]
+                        expression_statement [324,330]
+                            call [324,330]
+                                identifier: exit [324,328]
+                                argument_list [328,330]
+to
+for_statement [208,330]
+at 2
+
+New cluster:
+MOVE from for_statement [208,330]
+------------
+===
+move-tree
+---
+else_clause [292,330]
+    else: else [292,296]
+    block [305,330]
+        expression_statement [305,316]
+            call [305,316]
+                identifier: print [305,310]
+                argument_list [310,316]
+                    string: "No" [311,315]
+        expression_statement [324,330]
+            call [324,330]
+                identifier: exit [324,328]
+                argument_list [328,330]
+to
+for_statement [208,330]
+at 3
+
+New cluster:
+MOVE from block [208,330]
+------------
+===
+move-tree
+---
+if_statement [225,330]
+    boolean_operator [228,255]
+        comparison_operator [228,239]
+            subscript [228,234]
+                identifier: cmb [228,231]
+                integer: 0 [232,233]
+            identifier: i [238,239]
+        and: and [240,243]
+        comparison_operator [244,255]
+            subscript [244,250]
+                identifier: cmb [244,247]
+                integer: 1 [248,249]
+            identifier: i [254,255]
+    block [264,286]
+        expression_statement [264,273]
+            assignment [264,273]
+                identifier: flag [264,268]
+                =: = [268,269]
+                true: True [269,273]
+        break_statement [281,286]
+            break: break [281,286]
+    else_clause [292,330]
+        else: else [292,296]
+        block [305,330]
+            expression_statement [305,316]
+                call [305,316]
+                    identifier: print [305,310]
+                    argument_list [310,316]
+                        string: "No" [311,315]
+            expression_statement [324,330]
+                call [324,330]
+                    identifier: exit [324,328]
+                    argument_list [328,330]
+to
+block [208,330]
+at 0
+

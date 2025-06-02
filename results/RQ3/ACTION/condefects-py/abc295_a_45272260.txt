@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [105,113]
+    call [105,113]
+        identifier: print [105,110]
+        argument_list [110,113]
+            identifier: i [111,112]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [119,130]
+    call [119,130]
+        identifier: print [119,124]
+        argument_list [124,130]
+            subscript [125,129]
+                identifier: x [125,126]
+                identifier: i [127,128]
+

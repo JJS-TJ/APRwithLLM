@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [666,671]
+    identifier: n [666,667]
+    +: + [668,669]
+    integer: 1 [670,671]
+to
+argument_list [662,671]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: n [666,667]
+===
+------------
+===
+delete-node
+---
+identifier: n [666,667]
+===
+

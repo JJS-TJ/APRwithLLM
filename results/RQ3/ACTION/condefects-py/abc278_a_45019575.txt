@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list_splat [141,144]
+    *: * [141,142]
+    identifier: li [142,144]
+to
+argument_list [140,144]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: li [141,143]
+===
+------------
+===
+delete-node
+---
+identifier: li [141,143]
+===
+

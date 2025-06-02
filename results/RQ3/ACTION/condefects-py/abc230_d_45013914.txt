@@ -1,0 +1,20 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+keyword_argument [139,158]
+    identifier: key [139,142]
+    =: = [142,143]
+    lambda [143,158]
+        lambda: lambda [143,149]
+        lambda_parameters [150,151]
+            identifier: x [150,151]
+        subscript [154,158]
+            identifier: x [154,155]
+            integer: 1 [156,157]
+to
+argument_list [138,140]
+at 0
+

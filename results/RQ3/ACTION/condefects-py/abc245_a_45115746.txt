@@ -1,0 +1,91 @@
+New cluster:
+===
+insert-node
+---
+elif_clause [67,153]
+to
+if_statement [34,65]
+at 2
+------------
+===
+insert-node
+---
+elif_clause [67,153]
+to
+if_statement [34,65]
+at 2
+===
+insert-node
+---
+elif: elif [67,71]
+to
+elif_clause [67,153]
+at 0
+
+New cluster:
+MOVE from if_statement [34,65]
+------------
+===
+move-tree
+---
+else_clause [153,177]
+    else: else [153,157]
+    block [164,177]
+        expression_statement [164,177]
+            call [164,177]
+                identifier: print [164,169]
+                argument_list [169,177]
+                    string: "Aoki" [170,176]
+to
+if_statement [34,65]
+at 3
+===
+move-tree
+---
+block [81,151]
+    if_statement [81,151]
+        comparison_operator [84,88]
+            identifier: b [84,85]
+            comparison_operator: <= [85,87]
+            identifier: d [87,88]
+        block [99,117]
+            expression_statement [99,117]
+                call [99,117]
+                    identifier: print [99,104]
+                    argument_list [104,117]
+                        string: "Takahashi" [105,116]
+        else_clause [123,151]
+            else: else [123,127]
+            block [138,151]
+                expression_statement [138,151]
+                    call [138,151]
+                        identifier: print [138,143]
+                        argument_list [143,151]
+                            string: "Aoki" [144,150]
+to
+elif_clause [67,153]
+at 2
+===
+move-tree
+---
+comparison_operator [70,74]
+    identifier: a [70,71]
+    comparison_operator: == [71,73]
+    identifier: c [73,74]
+to
+elif_clause [67,153]
+at 1
+
+New cluster:
+===
+delete-node
+---
+if_statement [67,177]
+===
+------------
+===
+delete-node
+---
+if_statement [67,177]
+===
+

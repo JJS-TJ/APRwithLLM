@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Friay" to "Friday"
+------------
+===
+update-node
+---
+string: "Friay" [147,154]
+replace "Friay" by "Friday"
+

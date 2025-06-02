@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 23 to 24
+------------
+===
+update-node
+---
+integer: 23 [212,214]
+replace 23 by 24
+

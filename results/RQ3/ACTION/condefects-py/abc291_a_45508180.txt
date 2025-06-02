@@ -1,0 +1,14 @@
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+comparison_operator: < [56,57]
+replace < by <=
+===
+update-node
+---
+comparison_operator: < [49,50]
+replace < by <=
+

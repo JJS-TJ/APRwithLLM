@@ -1,0 +1,51 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [644,661]
+to
+argument_list [643,658]
+at 0
+------------
+===
+insert-node
+---
+%: % [657,658]
+to
+binary_operator [644,661]
+at 1
+===
+insert-node
+---
+identifier: mod [658,661]
+to
+binary_operator [644,661]
+at 2
+===
+insert-node
+---
+binary_operator [644,661]
+to
+argument_list [643,658]
+at 0
+
+New cluster:
+MOVE from binary_operator [644,661]
+------------
+===
+move-tree
+---
+subscript [644,657]
+    subscript [644,654]
+        subscript [644,649]
+            identifier: dp [644,646]
+            identifier: k [647,648]
+        binary_operator [650,653]
+            identifier: t [650,651]
+            -: - [651,652]
+            integer: 1 [652,653]
+    integer: 0 [655,656]
+to
+binary_operator [644,661]
+at 0
+

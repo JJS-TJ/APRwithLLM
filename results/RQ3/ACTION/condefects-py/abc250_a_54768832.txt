@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from w to c
+------------
+===
+update-node
+---
+identifier: w [128,129]
+replace w by c
+

@@ -1,0 +1,21 @@
+New cluster:
+MOVE from module [0,204]
+------------
+===
+move-tree
+---
+expression_statement [186,204]
+    call [186,204]
+        identifier: print [186,191]
+        argument_list [191,204]
+            binary_operator [192,203]
+                binary_operator [192,199]
+                    identifier: ans [192,195]
+                    *: * [196,197]
+                    identifier: N [198,199]
+                %: % [200,201]
+                identifier: M [202,203]
+to
+module [0,204]
+at 4
+

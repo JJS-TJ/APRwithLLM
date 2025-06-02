@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [221,234]
+    call [221,234]
+        identifier: print [221,226]
+        argument_list [226,234]
+            identifier: aksort [227,233]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [236,248]
+    call [236,248]
+        identifier: print [236,241]
+        argument_list [241,248]
+            identifier: asort [242,247]
+

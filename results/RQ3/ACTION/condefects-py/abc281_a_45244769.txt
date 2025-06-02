@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: n [40,41]
+to
+argument_list [39,49]
+at 0
+------------
+===
+insert-node
+---
+identifier: n [40,41]
+to
+argument_list [39,49]
+at 0
+
+New cluster:
+===
+delete-node
+---
+integer: 10 [40,42]
+===
+------------
+===
+delete-node
+---
+integer: 10 [40,42]
+===
+

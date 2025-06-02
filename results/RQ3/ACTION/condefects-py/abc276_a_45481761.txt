@@ -1,0 +1,57 @@
+New cluster:
+===
+insert-node
+---
+else_clause [90,110]
+to
+for_statement [11,114]
+at 3
+------------
+===
+insert-node
+---
+else_clause [90,110]
+to
+for_statement [11,114]
+at 3
+===
+insert-node
+---
+block [101,110]
+to
+else_clause [90,110]
+at 1
+===
+insert-node
+---
+else: else [90,94]
+to
+else_clause [90,110]
+at 0
+
+New cluster:
+MOVE from block [101,110]
+------------
+===
+move-tree
+---
+expression_statement [94,103]
+    call [94,103]
+        identifier: print [94,99]
+        argument_list [99,103]
+            unary_operator [100,102]
+                -: - [100,101]
+                integer: 1 [101,102]
+to
+block [101,110]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [109,114]
+    break: break [109,114]
+

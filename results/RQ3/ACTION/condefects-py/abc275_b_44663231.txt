@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [105,116]
+to
+argument_list [104,111]
+at 0
+------------
+===
+insert-node
+---
+identifier: mod [113,116]
+to
+binary_operator [105,116]
+at 2
+===
+insert-node
+---
+binary_operator [105,116]
+to
+argument_list [104,111]
+at 0
+===
+insert-node
+---
+%: % [112,113]
+to
+binary_operator [105,116]
+at 1
+===
+insert-node
+---
+parenthesized_expression [105,112]
+to
+binary_operator [105,116]
+at 0
+
+New cluster:
+MOVE from parenthesized_expression [105,112]
+------------
+===
+move-tree
+---
+binary_operator [105,110]
+    identifier: a1 [105,107]
+    -: - [107,108]
+    identifier: a2 [108,110]
+to
+parenthesized_expression [105,112]
+at 0
+

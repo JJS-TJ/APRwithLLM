@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+integer: 0 [455,456]
+to
+subscript [452,457]
+at 1
+------------
+===
+insert-node
+---
+integer: 0 [455,456]
+to
+subscript [452,457]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: j [455,456]
+===
+------------
+===
+delete-node
+---
+identifier: j [455,456]
+===
+

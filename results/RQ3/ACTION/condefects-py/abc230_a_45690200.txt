@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from f"AGC0{x}" to f"AGC{x:03}"
+------------
+===
+update-node
+---
+string: f"AGC0{x}" [56,66]
+replace f"AGC0{x}" by f"AGC{x:03}"
+

@@ -1,0 +1,140 @@
+New cluster:
+===
+insert-node
+---
+call [20,54]
+to
+expression_statement [20,45]
+at 0
+------------
+===
+insert-node
+---
+call [20,54]
+to
+expression_statement [20,45]
+at 0
+===
+insert-node
+---
+identifier: print [20,25]
+to
+call [20,54]
+at 0
+
+New cluster:
+MOVE from call [20,54]
+------------
+===
+move-tree
+---
+argument_list [25,45]
+    call [26,44]
+        attribute [26,42]
+            subscript [26,36]
+                call [26,32]
+                    identifier: hex [26,29]
+                    argument_list [29,32]
+                        identifier: n [30,31]
+                slice [33,35]
+                    integer: 2 [33,34]
+            identifier: upper [37,42]
+        argument_list [42,44]
+to
+call [20,54]
+at 1
+
+New cluster:
+MOVE from argument_list [25,45]
+------------
+===
+move-tree
+---
+call [20,45]
+    identifier: print [20,25]
+    argument_list [25,45]
+        call [26,44]
+            attribute [26,42]
+                subscript [26,36]
+                    call [26,32]
+                        identifier: hex [26,29]
+                        argument_list [29,32]
+                            identifier: n [30,31]
+                    slice [33,35]
+                        integer: 2 [33,34]
+                identifier: upper [37,42]
+            argument_list [42,44]
+to
+argument_list [25,45]
+at 0
+
+New cluster:
+===
+insert-node
+---
+attribute [26,50]
+to
+call [20,45]
+at 0
+------------
+===
+insert-node
+---
+identifier: zfill [45,50]
+to
+attribute [26,50]
+at 1
+===
+insert-node
+---
+attribute [26,50]
+to
+call [20,45]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+argument_list [50,53]
+    integer: 2 [51,52]
+to
+call [20,45]
+at 1
+
+New cluster:
+MOVE from attribute [26,50]
+------------
+===
+move-tree
+---
+call [26,44]
+    attribute [26,42]
+        subscript [26,36]
+            call [26,32]
+                identifier: hex [26,29]
+                argument_list [29,32]
+                    identifier: n [30,31]
+            slice [33,35]
+                integer: 2 [33,34]
+        identifier: upper [37,42]
+    argument_list [42,44]
+to
+attribute [26,50]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: print [20,25]
+===
+------------
+===
+delete-node
+---
+identifier: print [20,25]
+===
+

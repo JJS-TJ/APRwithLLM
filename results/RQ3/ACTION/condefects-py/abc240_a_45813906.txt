@@ -1,0 +1,64 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [33,43]
+    binary_operator [33,38]
+        identifier: b [33,34]
+        -: - [35,36]
+        identifier: a [37,38]
+    comparison_operator: == [39,41]
+    integer: 1 [42,43]
+to
+boolean_operator [33,50]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [47,57]
+    binary_operator [47,52]
+        identifier: b [47,48]
+        -: - [49,50]
+        identifier: a [51,52]
+    comparison_operator: == [53,55]
+    integer: 9 [56,57]
+to
+boolean_operator [33,50]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+comparison_operator [33,45]
+    call [33,41]
+        identifier: abs [33,36]
+        argument_list [36,41]
+            binary_operator [37,40]
+                identifier: a [37,38]
+                -: - [38,39]
+                identifier: b [39,40]
+    comparison_operator: == [41,43]
+    integer: 1 [44,45]
+
+New cluster:
+===
+delete-node
+---
+integer: 9 [49,50]
+===
+------------
+===
+delete-node
+---
+integer: 9 [49,50]
+===
+

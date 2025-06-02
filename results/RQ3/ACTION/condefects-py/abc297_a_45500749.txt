@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [138,141]
+    identifier: i [138,139]
+    +: + [139,140]
+    integer: 1 [140,141]
+to
+subscript [133,140]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: i [138,139]
+===
+------------
+===
+delete-node
+---
+identifier: i [138,139]
+===
+
