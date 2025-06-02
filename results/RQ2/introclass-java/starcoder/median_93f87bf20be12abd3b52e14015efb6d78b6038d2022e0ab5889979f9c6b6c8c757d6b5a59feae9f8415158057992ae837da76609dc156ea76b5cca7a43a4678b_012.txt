@@ -1,0 +1,393 @@
+No.2 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((((int1.value <= int2.value)) && (int1.value >= int3.value))
+            || ((int1.value <= int3.value) && (int1.value >= int2.value))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (((int2.value <= int1.value) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((((int3.value <= int1.value)) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.6 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if (((int1.value <= int2.value) && (int1.value >= int3.value))
+            || ((int1.value <= int3.value) && (int1.value >= int2.value))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((((int2.value <= int1.value)) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (((int3.value <= int1.value) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.10 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((((int1.value <= int2.value) && (int1.value >= int3.value))
+         || ((int1.value <= int3.value) && (int1.value >= int2.value)))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (((int2.value <= int1.value) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((((int3.value <= int1.value) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value)))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.15 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if (int1.value <= int2.value && int1.value >= int3.value
+        || int1.value <= int3.value && int1.value >= int2.value) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (int2.value <= int1.value && int2.value >= int3.value
+               || int2.value <= int3.value && int2.value >= int1.value) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (int3.value <= int1.value && int3.value >= int2.value
+               || int3.value <= int2.value && int3.value >= int1.value) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.21 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((int1.value <= int2.value && int1.value >= int3.value)
+            || (int1.value <= int3.value && int1.value >= int2.value)) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((int2.value <= int1.value && int2.value >= int3.value)
+               || (int2.value <= int3.value && int2.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((int3.value <= int1.value && int3.value >= int2.value)
+               || (int3.value <= int2.value && int3.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.24 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((((int1.value <= int2.value)) && (int1.value >= int3.value))
+            || ((int1.value <= int3.value) && (int1.value >= int2.value))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((((int2.value <= int1.value)) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (((int3.value <= int1.value) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.25 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if (int1.value <= int2.value && int1.value >= int3.value ||
+            int1.value >= int2.value && int1.value <= int3.value) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (int2.value <= int1.value && int2.value >= int3.value ||
+               int2.value >= int1.value && int2.value <= int3.value) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (int3.value <= int1.value && int3.value >= int2.value ||
+               int3.value >= int1.value && int3.value <= int2.value) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.33 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((((int1.value <= int2.value) && (int1.value >= int3.value))
+            || ((int1.value <= int3.value) && (int1.value >= int2.value)))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((((int2.value <= int1.value) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value)))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((((int3.value <= int1.value) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value)))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.35 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((int1.value <= int2.value && int1.value >= int3.value)
+            || (int1.value <= int3.value && int1.value >= int2.value)) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (((int2.value <= int1.value) && (int2.value >= int3.value))
+               || (int2.value <= int3.value && int2.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((int3.value <= int1.value && int3.value >= int2.value)
+               || (int3.value <= int2.value && int3.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.41 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output += (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((int1.value <= int2.value && int1.value >= int3.value) ||
+        (int1.value <= int3.value && int1.value >= int2.value)) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (int2.value <= int1.value && int2.value >= int3.value ||
+               int2.value <= int3.value && int2.value >= int1.value) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (int3.value <= int1.value && int3.value >= int2.value ||
+               int3.value <= int2.value && int3.value >= int1.value) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.48 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((((int1.value <= int2.value)) && (int1.value >= int3.value))
+        || ((int1.value <= int3.value) && (int1.value >= int2.value))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (((int2.value <= int1.value) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (((int3.value <= int1.value) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.51 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((((int1.value <= int2.value)) && (int1.value >= int3.value))
+            || ((int1.value <= int3.value) && (int1.value >= int2.value))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((((int2.value <= int1.value)) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((((int3.value <= int1.value)) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.59 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((int1.value <= int2.value && int1.value >= int3.value) ||
+        (int1.value <= int3.value && int1.value >= int2.value)) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((int2.value <= int1.value && int2.value >= int3.value) ||
+               (int2.value <= int3.value && int2.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((int3.value <= int1.value && int3.value >= int2.value) ||
+               (int3.value <= int2.value && int3.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.62 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output += (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if (((int1.value <= int2.value) && (int1.value >= int3.value))
+            || ((int1.value <= int3.value) && (int1.value >= int2.value))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (((int2.value <= int1.value) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (((int3.value <= int1.value) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.68 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((int1.value <= int2.value) && (int1.value >= int3.value)
+            || (int1.value <= int3.value) && (int1.value >= int2.value)) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (((int2.value <= int1.value) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((int3.value <= int1.value) && (int3.value >= int2.value)
+               || (int3.value <= int2.value) && (int3.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.75 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if (int1.value <= int2.value && int1.value >= int3.value
+        || int1.value >= int2.value && int1.value <= int3.value) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if (int2.value <= int1.value && int2.value >= int3.value
+               || int2.value >= int1.value && int2.value <= int3.value) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (int3.value <= int1.value && int3.value >= int2.value
+               || int3.value >= int1.value && int3.value <= int2.value) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.76 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((int1.value <= int2.value && int1.value >= int3.value) || (int1.value <= int3.value && int1.value >= int2.value)) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((int2.value <= int1.value && int2.value >= int3.value) || (int2.value <= int3.value && int2.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((int3.value <= int1.value && int3.value >= int2.value) || (int3.value <= int2.value && int3.value >= int1.value)) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.78 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output += (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if (((int1.value <= int2.value) && (int1.value >= int3.value))
+            || ((int1.value <= int3.value) && (int1.value >= int2.value))) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((((int2.value <= int1.value)) && (int2.value >= int3.value))
+               || ((int2.value <= int3.value) && (int2.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if (((int3.value <= int1.value) && (int3.value >= int2.value))
+               || ((int3.value <= int2.value) && (int3.value >= int1.value))) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}
+No.84 Patch
+public void exec () throws Exception {
+    IntObj int1 = new IntObj (), int2 = new IntObj (), int3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    int1.value = scanner.nextInt ();
+    int2.value = scanner.nextInt ();
+    int3.value = scanner.nextInt ();
+    if ((int1.value <= int2.value && int1.value >= int3.value) ||
+            int1.value <= int3.value && int1.value >= int2.value) {
+        output += (String.format ("%d is the median\n", int1.value));
+    } else if ((int2.value <= int1.value && int2.value >= int3.value) ||
+               int2.value <= int3.value && int2.value >= int1.value) {
+        output += (String.format ("%d is the median\n", int2.value));
+    } else if ((int3.value <= int1.value && int3.value >= int2.value) ||
+               int3.value <= int2.value && int3.value >= int1.value) {
+        output += (String.format ("%d is the median\n", int3.value));
+    }
+    if (true)
+        return;;
+}

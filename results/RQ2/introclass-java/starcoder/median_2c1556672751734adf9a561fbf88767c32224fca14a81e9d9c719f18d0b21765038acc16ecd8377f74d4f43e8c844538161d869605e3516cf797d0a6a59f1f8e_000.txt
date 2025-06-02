@@ -1,0 +1,28 @@
+No.9 Patch
+public void exec () throws Exception {
+    IntObj i1 = new IntObj (), i2 = new IntObj (), i3 = new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    i1.value = scanner.nextInt ();
+    i2.value = scanner.nextInt ();
+    i3.value = scanner.nextInt ();
+    if (i1.value > i2.value) {
+        int temp = i1.value;
+        i1.value = i2.value;
+        i2.value = temp;
+    }
+    if (i2.value > i3.value) {
+        int temp = i2.value;
+        i2.value = i3.value;
+        i3.value = temp;
+    }
+    if (i1.value > i2.value) {
+        int temp = i1.value;
+        i1.value = i2.value;
+        i2.value = temp;
+    }
+    output +=
+        (String.format ("%d is the median\n", (i2.value)));
+    if (true)
+        return;;
+}

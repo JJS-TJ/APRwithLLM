@@ -1,0 +1,128 @@
+No.8 Patch
+public void exec () throws Exception {
+    IntObj frst = new IntObj (), scnd = new IntObj (), thrd =
+        new IntObj (), frth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    frst.value = scanner.nextInt ();
+    scnd.value = scanner.nextInt ();
+    thrd.value = scanner.nextInt ();
+    frth.value = scanner.nextInt ();
+    int min = frst.value;
+    if (scnd.value < min)
+        min = scnd.value;
+    if (thrd.value < min)
+        min = thrd.value;
+    if (frth.value < min)
+        min = frth.value;
+    output += (String.format ("%d is the smallest\n", min));
+    if (true)
+        return;;
+}
+No.11 Patch
+public void exec () throws Exception {
+    IntObj frst = new IntObj (), scnd = new IntObj (), thrd =
+        new IntObj (), frth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    frst.value = scanner.nextInt ();
+    scnd.value = scanner.nextInt ();
+    thrd.value = scanner.nextInt ();
+    frth.value = scanner.nextInt ();
+    int smallest = frst.value;
+    if (scnd.value < smallest)
+        smallest = scnd.value;
+    if (thrd.value < smallest)
+        smallest = thrd.value;
+    if (frth.value < smallest)
+        smallest = frth.value;
+    output += (String.format ("%d is the smallest\n", smallest));
+    if (true)
+        return;;
+}
+No.13 Patch
+public void exec () throws Exception {
+    IntObj frst = new IntObj (), scnd = new IntObj (), thrd =
+        new IntObj (), frth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    frst.value = scanner.nextInt ();
+    scnd.value = scanner.nextInt ();
+    thrd.value = scanner.nextInt ();
+    frth.value = scanner.nextInt ();
+    int min = 0;
+    if (frst.value <= scnd.value && frst.value <= thrd.value
+            && frst.value <= frth.value) {
+        min = frst.value;
+    } else if (scnd.value <= frst.value && scnd.value <= thrd.value
+               && scnd.value <= frth.value) {
+        min = scnd.value;
+    } else if (thrd.value <= frst.value && thrd.value <= scnd.value
+               && thrd.value <= frth.value) {
+        min = thrd.value;
+    } else {
+        min = frth.value;
+    }
+    output += (String.format ("%d is the smallest\n", min));
+    if (true)
+        return;;
+}
+No.14 Patch
+public void exec () throws Exception {
+    IntObj frst = new IntObj (), scnd = new IntObj (), thrd =
+        new IntObj (), frth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    frst.value = scanner.nextInt ();
+    scnd.value = scanner.nextInt ();
+    thrd.value = scanner.nextInt ();
+    frth.value = scanner.nextInt ();
+    int min = frst.value < scnd.value? frst.value : scnd.value;
+    min = min < thrd.value? min : thrd.value;
+    min = min < frth.value? min : frth.value;
+    output += (String.format ("%d is the smallest\n", min));
+    if (true)
+        return;;
+}
+No.17 Patch
+public void exec () throws Exception {
+    IntObj frst = new IntObj (), scnd = new IntObj (), thrd =
+        new IntObj (), frth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    frst.value = scanner.nextInt ();
+    scnd.value = scanner.nextInt ();
+    thrd.value = scanner.nextInt ();
+    frth.value = scanner.nextInt ();
+    int min = frst.value;
+    if (min > scnd.value)
+        min = scnd.value;
+    if (min > thrd.value)
+        min = thrd.value;
+    if (min > frth.value)
+        min = frth.value;
+    output += (String.format ("%d is the smallest\n", min));
+    if (true)
+        return;;
+}
+No.20 Patch
+public void exec () throws Exception {
+    IntObj frst = new IntObj (), scnd = new IntObj (), thrd =
+        new IntObj (), frth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    frst.value = scanner.nextInt ();
+    scnd.value = scanner.nextInt ();
+    thrd.value = scanner.nextInt ();
+    frth.value = scanner.nextInt ();
+    int minVal = frst.value;
+    if (scnd.value < minVal)
+        minVal = scnd.value;
+    if (thrd.value < minVal)
+        minVal = thrd.value;
+    if (frth.value < minVal)
+        minVal = frth.value;
+    output += (String.format ("%d is the smallest\n", minVal));
+    if (true)
+        return;;
+}

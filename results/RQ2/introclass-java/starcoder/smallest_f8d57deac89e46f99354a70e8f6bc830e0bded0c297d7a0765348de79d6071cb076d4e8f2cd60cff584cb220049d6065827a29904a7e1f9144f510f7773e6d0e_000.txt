@@ -1,0 +1,21 @@
+No.0 Patch
+public void exec () throws Exception {
+    IntObj v1 = new IntObj (), v2 = new IntObj (), v3 = new IntObj (), v4 =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    v1.value = scanner.nextInt ();
+    v2.value = scanner.nextInt ();
+    v3.value = scanner.nextInt ();
+    v4.value = scanner.nextInt ();
+    int min = v1.value;
+    if (v2.value < min)
+        min = v2.value;
+    if (v3.value < min)
+        min = v3.value;
+    if (v4.value < min)
+        min = v4.value;
+    output += (String.format ("%d is the smallest\n", min));
+    if (true)
+        return;;
+}

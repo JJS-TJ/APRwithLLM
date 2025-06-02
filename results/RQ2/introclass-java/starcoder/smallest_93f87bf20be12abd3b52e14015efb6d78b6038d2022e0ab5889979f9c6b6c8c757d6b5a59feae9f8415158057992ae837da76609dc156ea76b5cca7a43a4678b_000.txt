@@ -1,0 +1,46 @@
+No.3 Patch
+public void exec () throws Exception {
+    IntObj first = new IntObj (), second = new IntObj (), third =
+        new IntObj (), fourth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    first.value = scanner.nextInt ();
+    second.value = scanner.nextInt ();
+    third.value = scanner.nextInt ();
+    fourth.value = scanner.nextInt ();
+    int min = first.value;
+    if (second.value < min)
+        min = second.value;
+    if (third.value < min)
+        min = third.value;
+    if (fourth.value < min)
+        min = fourth.value;
+    output += (String.format ("%d is the smallest \n ", min));
+    if (true)
+        return;;
+}
+No.6 Patch
+public void exec () throws Exception {
+    IntObj first = new IntObj (), second = new IntObj (), third =
+        new IntObj (), fourth = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    first.value = scanner.nextInt ();
+    second.value = scanner.nextInt ();
+    third.value = scanner.nextInt ();
+    fourth.value = scanner.nextInt ();
+    int smallest = first.value;
+    if (first.value < second.value && first.value < third.value
+            && first.value < fourth.value)
+        smallest = first.value;
+    if (second.value < first.value && second.value < third.value
+            && second.value < fourth.value)
+        smallest = second.value;
+    if (third.value < first.value && third.value < second.value
+            && third.value < fourth.value)
+        smallest = third.value;
+    if (fourth.value < first.value && fourth.value < second.value
+            && fourth.value < third.value)
+        smallest = fourth.value;
+    output += (String.format ("%d is the smallest \n ", smallest));
+}
