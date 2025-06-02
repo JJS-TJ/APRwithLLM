@@ -1,0 +1,8 @@
+No.0 Patch
+s1 = input()
+s2 = input()
+
+if [s1, s2]==["#.",".#"] or [s1, s2]==[".#","#."]:
+    print('No')
+else:
+    print('Yes')<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

@@ -1,0 +1,80 @@
+No.0 Patch
+N = int(input())
+S = [input() for _ in range(N)]
+
+dx = [1,0,1,-1]
+dy = [0,1,1,1]
+
+for h in range(N):
+    for w in range(N):
+        for i in range(4):
+            cnt = 0
+            for j in range(6):
+                nh = h + dy[i]*j
+                nw = w + dx[i]*j
+                if not (0 <= nh < N and 0 <= nw < N):
+                    cnt = 0
+                    break
+                if S[nh][nw] == "#":
+                    cnt += 1
+            if cnt >= 4:
+                print('Yes')
+                exit()
+print('No')<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+N = int(input())
+S = [input() for _ in range(N)]
+
+dx = [1,0,1,-1]
+dy = [0,1,1,1]
+
+def check(h, w, dx, dy):
+    cnt = 0
+    for i in range(6):
+        nh = h + dy*i
+        nw = w + dx*i
+        if not (0 <= nh < N and 0 <= nw < N):
+            return False
+        if S[nh][nw] == "#":
+            cnt += 1
+    if cnt >= 4:
+        return True
+    else:
+        return False
+
+for h in range(N):
+    for w in range(N):
+        for i in range(4):
+            if check(h, w, dx[i], dy[i]):
+                print("Yes")
+                exit()
+print("No")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+N = int(input())
+S = [input() for _ in range(N)]
+
+def check(h, w, dx, dy):
+    cnt = 0
+    for i in range(6):
+        nh = h + dy*i
+        nw = w + dx*i
+        if not (0 <= nh < N and 0 <= nw < N):
+            return False
+        if S[nh][nw] == "#":
+            cnt += 1
+    if cnt >= 4:
+        return True
+    else:
+        return False
+
+def solve():
+    dx = [1,0,1,-1]
+    dy = [0,1,1,1]
+    for h in range(N):
+        for w in range(N):
+            for i in range(4):
+                if check(h, w, dx[i], dy[i]):
+                    return True
+    return False
+
+print('Yes' if solve() else 'No')<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

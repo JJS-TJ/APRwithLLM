@@ -1,0 +1,24 @@
+No.1 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+if X % N != 0:
+    print(ascii_uppercase[X // N])
+else:
+    print(ascii_uppercase[X // N - 1])<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+if X % N == 0:
+    print(ascii_uppercase[X // N - 1])
+else:
+    print(ascii_uppercase[X // N])<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+print(ascii_uppercase[(X - 1) // N])<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

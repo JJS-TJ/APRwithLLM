@@ -1,0 +1,12 @@
+No.1 Patch
+def find_different_char(S):
+    if len(set(S)) == 1:
+        return -1
+    elif len(set(S)) == 3:
+        return S[0]
+    else:
+        return next(ch for ch in S if S.count(ch) == 1)
+
+
+S = input()
+print(find_different_char(S))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

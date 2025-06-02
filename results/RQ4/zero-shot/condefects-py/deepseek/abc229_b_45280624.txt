@@ -1,0 +1,11 @@
+No.0 Patch
+a, b = map(int, input().split())
+
+while a > 0 and b > 0:
+    if (a % 10) + (b % 10) >= 10:
+        print("Hard")
+        exit(0)
+    a //= 10
+    b //= 10
+
+print("Easy")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

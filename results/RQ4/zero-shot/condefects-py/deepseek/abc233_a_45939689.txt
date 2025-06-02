@@ -1,0 +1,14 @@
+No.1 Patch
+import math
+x,y = map(int,input().split())
+if y > x:
+    print(math.ceil((y-x)/10))
+else:
+    print(0)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+import math
+x,y = map(int,input().split())
+if y <= x:
+    print(0)
+else:
+    print(math.ceil((y-x)/10))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

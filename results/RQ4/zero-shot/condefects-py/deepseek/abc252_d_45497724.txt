@@ -1,0 +1,29 @@
+No.0 Patch
+N = int(input())
+A = list(map(int,input().split()))
+B = [0]*1000000
+for i in A:
+  B[i] += 1
+ans = N*(N-1)*(N-2)//6
+for i in B:
+  ans -= i*(i-1)*(i-2)//6
+  ans -= i*(i-1)//2*(N-i)
+print(ans)
+
+# This fix is required as in the original function, the list B is not being properly initialized.
+# The original function uses the append() function to add elements to the list, which is not necessary here.
+# By using the multiplication operator "*", we can ensure that the list B is properly initialized with zeros.
+# Then, we can proceed with the rest of the function to calculate the desired output.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+N = int(input())
+A = list(map(int,input().split()))
+B=[]
+for i in range(1000000):
+  B.append(0)
+for i in A:
+  B[i]+=1
+ans = N*(N-1)*(N-2)//6
+for i in B:
+  ans -= i*(i-1)*(N-i)//2
+  ans -= i*(i-1)*(i-2)//6
+print(ans)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

@@ -1,0 +1,25 @@
+No.3 Patch
+def is_prime(n):
+    if n == 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+A,B,C,D=map(int,input().split())
+for i in range(A,B+1):
+    q=True
+    for j in range(C,D+1):
+        num=i+j
+        if is_prime(num):
+            q=False
+            break
+    if q==True:
+        print("Takahashi")
+        exit()
+print("Aoki")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

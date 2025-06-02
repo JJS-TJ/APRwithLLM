@@ -1,0 +1,25 @@
+No.0 Patch
+# https://atcoder.jp/contests/abc258/tasks/abc258_a
+
+K = int(input())
+
+if K >= 60:
+    print(f"22:{K - 60 if K - 60 >= 10 else '0' + str(K - 60)}")
+else:
+    print(f"21:{K if K >= 10 else '0' + str(K)}")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+K = int(input())
+
+if K >= 60:
+    print(f"22:{str(K - 60).zfill(2)}")
+else:
+    print(f"21:{str(K).zfill(2)}")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+# https://atcoder.jp/contests/abc258/tasks/abc258_a
+
+K = int(input())
+
+if K >= 60:
+    print(f"22:{str(K - 60).zfill(2)}")
+else:
+    print(f"21:{str(K).zfill(2)}")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

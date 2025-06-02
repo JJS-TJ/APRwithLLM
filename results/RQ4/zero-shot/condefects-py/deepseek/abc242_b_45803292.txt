@@ -1,0 +1,11 @@
+No.2 Patch
+def func():
+    # 入力を取得
+    S = input()
+    S_list = sorted(S)
+
+    # スペースを空白に変換
+    print(''.join(S_list))
+
+if __name__ == '__main__':
+    func()<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

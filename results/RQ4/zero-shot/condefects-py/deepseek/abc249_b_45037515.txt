@@ -1,0 +1,12 @@
+No.1 Patch
+S=input()
+if any(map(str.isupper,S)) and any(map(str.islower,S)) and len(set(S))==len(S):
+  print("Yes")
+else:
+  print("No")
+No.2 Patch
+S=input()
+if S.upper()==S or S.lower()==S or len(set(list(S)))<len(S):
+  print("No")
+else:
+  print("Yes")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
