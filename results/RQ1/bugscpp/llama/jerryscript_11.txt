@@ -1,0 +1,143 @@
+No.7 Patch
+static void
+ecma_op_internal_buffer_append (ecma_collection_t *container_p, /**< internal container pointer */
+                                ecma_value_t key_arg, /**< key argument */
+                                ecma_value_t value_arg, /**< value argument */
+                                lit_magic_string_id_t lit_id) /**< class id */
+{
+  JERRY_ASSERT (container_p != NULL);
+  ecma_value_t key_value = ecma_copy_value_if_not_object (key_arg);
+  if (JERRY_UNLIKELY (ecma_is_value_undefined (key_value)))
+  {
+    return;
+  }
+  ecma_collection_push_back (container_p, key_value);
+
+  ecma_value_t value_value = ecma_copy_value_if_not_object (value_arg);
+  if (JERRY_UNLIKELY (ecma_is_value_undefined (value_value)))
+  {
+    return;
+  }
+  if (lit_id == LIT_MAGIC_STRING_WEAKMAP_UL || lit_id == LIT_MAGIC_STRING_MAP_UL)
+  {
+    ecma_collection_push_back (container_p, value_value);
+  }
+  ECMA_CONTAINER_SET_SIZE (container_p, ECMA_CONTAINER_GET_SIZE (container_p) + 1);
+} /* ecma_op_internal_buffer_append */
+
+/* Provide a fix for the buggy function */
+No.24 Patch
+static void
+ecma_op_internal_buffer_append (ecma_collection_t *container_p, /**< internal container pointer */
+                                ecma_value_t key_arg, /**< key argument */
+                                ecma_value_t value_arg, /**< value argument */
+                                lit_magic_string_id_t lit_id) /**< class id */
+{
+  JERRY_ASSERT (container_p != NULL);
+
+  ecma_value_t key_value;
+  ecma_value_t value_value;
+
+  if (!ecma_is_value_object (key_arg) && !ecma_is_value_null (key_arg))
+  {
+    key_value = ecma_copy_value_if_not_object (key_arg);
+  }
+  else
+  {
+    key_value = ECMA_VALUE_UNDEFINED;
+  }
+
+  if (lit_id == LIT_MAGIC_STRING_WEAKMAP_UL || lit_id == LIT_MAGIC_STRING_MAP_UL)
+  {
+    if (!ecma_is_value_object (value_arg) && !ecma_is_value_null (value_arg))
+    {
+      value_value = ecma_copy_value_if_not_object (value_arg);
+    }
+    else
+    {
+      value_value = ECMA_VALUE_UNDEFINED;
+    }
+  }
+  else
+  {
+    value_value = ECMA_VALUE_UNDEFINED;
+  }
+
+  ecma_collection_push_back (container_p, key_value);
+
+  if (lit_id == LIT_MAGIC_STRING_WEAKMAP_UL || lit_id == LIT_MAGIC_STRING_MAP_UL)
+  {
+    ecma_collection_push_back (container_p, value_value);
+  }
+
+  ECMA_CONTAINER_SET_SIZE (container_p, ECMA_CONTAINER_GET_SIZE (container_p) + 2);
+} /* ecma_op_internal_buffer_append */
+
+/* Provide a fix for the buggy function */
+No.35 Patch
+static void
+ecma_op_internal_buffer_append (ecma_collection_t *container_p, /**< internal container pointer */
+                                ecma_value_t key_arg, /**< key argument */
+                                ecma_value_t value_arg, /**< value argument */
+                                lit_magic_string_id_t lit_id) /**< class id */
+{
+  JERRY_ASSERT (container_p != NULL);
+
+  if (ecma_is_value_undefined (key_arg) || ecma_is_value_null (key_arg))
+  {
+    return;
+  }
+
+  if (ecma_is_value_undefined (value_arg) || ecma_is_value_null (value_arg))
+  {
+    return;
+  }
+
+  ecma_value_t key = ecma_copy_value_if_not_object (key_arg);
+
+  if (ecma_is_value_undefined (key) || ecma_is_value_null (key))
+  {
+    return;
+  }
+
+  ecma_collection_push_back (container_p, key);
+
+  if (lit_id == LIT_MAGIC_STRING_WEAKMAP_UL || lit_id == LIT_MAGIC_STRING_MAP_UL)
+  {
+    ecma_collection_push_back (container_p, ecma_copy_value_if_not_object (value_arg));
+  }
+
+  ECMA_CONTAINER_SET_SIZE (container_p, ECMA_CONTAINER_GET_SIZE (container_p) + 1);
+} /* ecma_op_internal_buffer_append */
+
+/* Provide a fix for the buggy function */
+No.43 Patch
+static void
+ecma_op_internal_buffer_append (ecma_collection_t *container_p, /**< internal container pointer */
+                                ecma_value_t key_arg, /**< key argument */
+                                ecma_value_t value_arg, /**< value argument */
+                                lit_magic_string_id_t lit_id) /**< class id */
+{
+  JERRY_ASSERT (container_p != NULL);
+
+  ecma_value_t key = ecma_copy_value_if_not_object (key_arg);
+
+  if (key != key_arg)
+  {
+    ecma_collection_push_back (container_p, key);
+  }
+
+  if (lit_id == LIT_MAGIC_STRING_WEAKMAP_UL || lit_id == LIT_MAGIC_STRING_MAP_UL)
+  {
+    ecma_value_t value = ecma_copy_value_if_not_object (value_arg);
+
+    if (value != value_arg)
+    {
+      ecma_collection_push_back (container_p, value);
+    }
+  }
+
+  ECMA_CONTAINER_SET_SIZE (container_p, ECMA_CONTAINER_GET_SIZE (container_p) + 1);
+} /* ecma_op_internal_buffer_append */
+
+/* Provide a fix for the buggy function */

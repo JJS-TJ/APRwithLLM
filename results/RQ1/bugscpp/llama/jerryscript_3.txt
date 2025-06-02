@@ -1,0 +1,182 @@
+No.5 Patch
+ecma_value_t
+ecma_regexp_match_helper (ecma_value_t this_arg, /**< this argument */
+                          ecma_value_t string_arg) /**< source string */
+{
+  JERRY_ASSERT (this_arg != ECMA_VALUE_NULL);
+
+  ecma_object_t *regexp_obj_p = ecma_get_object_from_value (this_arg);
+
+  ecma_string_t *str_p = ecma_op_to_string (string_arg);
+
+  if (JERRY_UNLIKELY (str_p == NULL))
+  {
+    return ECMA_VALUE_ERROR;
+  }
+
+  ecma_object_t *result_array_p = ecma_op_new_array_object (0);
+  uint32_t n = 0;
+
+  while (true)
+  {
+    ecma_value_t result_value = ecma_op_regexp_exec (this_arg, str_p);
+
+    if (ECMA_IS_VALUE_ERROR (result_value))
+    {
+      break;
+    }
+
+    if (ecma_is_value_null (result_value))
+    {
+      if (n == 0)
+      {
+        return ECMA_VALUE_NULL;
+      }
+
+      ecma_deref_ecma_string (str_p);
+      return ecma_make_object_value (result_array_p);
+    }
+
+    ecma_object_t *result_value_p = ecma_get_object_from_value (result_value);
+    ecma_value_t match_value = ecma_op_object_get_by_index (result_value_p, 0);
+
+    ecma_deref_object (result_value_p);
+
+    if (ECMA_IS_VALUE_ERROR (match_value))
+    {
+      break;
+    }
+
+    ecma_string_t *match_str_p = ecma_op_to_string (match_value);
+    ecma_free_value (match_value);
+
+    if (JERRY_UNLIKELY (match_str_p == NULL))
+    {
+      break;
+    }
+
+    ecma_value_t new_prop = ecma_builtin_helper_def_prop_by_index (result_array_p,
+                                                                   n,
+                                                                   ecma_make_string_value (match_str_p),
+                                                                   ECMA_PROPERTY_CONFIGURABLE_ENUMERABLE_WRITABLE);
+
+    JERRY_ASSERT (!ECMA_IS_VALUE_ERROR (new_prop));
+
+    const bool is_match_empty = ecma_string_is_empty (match_str_p);
+    ecma_deref_ecma_string (match_str_p);
+
+    if (is_match_empty)
+    {
+      ecma_value_t last_index = ecma_op_object_get_by_magic_id (regexp_obj_p, LIT_MAGIC_STRING_LASTINDEX_UL);
+
+      if (ECMA_IS_VALUE_ERROR (last_index))
+      {
+        break;
+      }
+
+#if JERRY_ESNEXT
+      ecma_length_t index;
+      ecma_value_t length_value = ecma_op_to_length (last_index, &index);
+
+      ecma_free_value (last_index);
+
+      if (ECMA_IS_VALUE_ERROR (length_value))
+      {
+        break;
+      }
+
+      index = ecma_op_advance_string_index (str_p, index, false);
+
+      last_index = ecma_make_length_value (index);
+      ecma_value_t next_set_status = ecma_op_object_put (regexp_obj_p,
+                                                         ecma_get_magic_string (LIT_MAGIC_STRING_LASTINDEX_UL),
+                                                         last_index,
+                                                         true);
+#else /* !JERRY_ESNEXT */
+      ecma_number_t index = ecma_get_number_from_value (last_index);
+      ecma_free_value (last_index);
+
+      last_index = ecma_make_number_value (index + 1);
+      ecma_value_t next_set_status = ecma_op_object_put (regexp_obj_p,
+                                                         ecma_get_magic_string (LIT_MAGIC_STRING_LASTINDEX_UL),
+                                                         last_index,
+                                                         true);
+#endif /* JERRY_ESNEXT */
+      ecma_free_value (last_index);
+
+      if (ECMA_IS_VALUE_ERROR (next_set_status))
+      {
+        break;
+      }
+    }
+
+    n++;
+  }
+
+  ecma_deref_ecma_string (str_p);
+  ecma_deref_object (result_array_p);
+
+  return ECMA_VALUE_UNDEFINED;
+} /* ecma_regexp_match_helper */
+No.6 Patch
+ecma_value_t
+ecma_regexp_match_helper (ecma_value_t this_arg, /**< this argument */
+                          ecma_value_t string_arg) /**< source string */
+{
+  JERRY_ASSERT (ecma_is_value_object (this_arg));
+
+  ecma_object_t *obj_p = ecma_get_object_from_value (this_arg);
+
+  ecma_string_t *str_p = ecma_op_to_string (string_arg);
+
+  if (JERRY_UNLIKELY (str_p == NULL))
+  {
+    return ECMA_VALUE_ERROR;
+  }
+
+  if (ecma_op_object_get_by_magic_id (obj_p, LIT_MAGIC_STRING_LASTINDEX_UL) != ECMA_VALUE_UNDEFINED)
+  {
+    ecma_deref_ecma_string (str_p);
+    return ECMA_VALUE_UNDEFINED;
+  }
+
+  ecma_free_value (ecma_op_object_get_by_magic_id (obj_p, LIT_MAGIC_STRING_GLOBAL));
+  ecma_free_value (ecma_op_object_get_by_magic_id (obj_p, LIT_MAGIC_STRING_UNICODE));
+  ecma_free_value (ecma_op_object_get_by_magic_id (obj_p, LIT_MAGIC_STRING_LASTINDEX_UL));
+
+  ecma_object_t *result_array_p = ecma_op_new_array_object (0);
+
+  ecma_value_t new_prop = ecma_builtin_helper_def_prop_by_index (result_array_p,
+                                                                 0,
+                                                                 ecma_make_string_value (str_p),
+                                                                 ECMA_PROPERTY_CONFIGURABLE_ENUMERABLE_WRITABLE);
+
+  JERRY_ASSERT (!ECMA_IS_VALUE_ERROR (new_prop));
+
+  ecma_deref_ecma_string (str_p);
+
+  ecma_value_t last_index = ecma_op_object_get_by_magic_id (obj_p, LIT_MAGIC_STRING_LASTINDEX_UL);
+
+  if (ECMA_IS_VALUE_ERROR (last_index))
+  {
+    return last_index;
+  }
+
+  const ecma_number_t index = ecma_get_number_from_value (last_index);
+  ecma_free_value (last_index);
+
+  ecma_number_t new_index = index + 1;
+  ecma_value_t next_set_status = ecma_op_object_put (obj_p,
+                                                     ecma_get_magic_string (LIT_MAGIC_STRING_LASTINDEX_UL),
+                                                     ecma_make_number_value (new_index),
+                                                     true);
+
+  if (ECMA_IS_VALUE_ERROR (next_set_status))
+  {
+    return next_set_status;
+  }
+
+  return ecma_make_object_value (result_array_p);
+} /* ecma_regexp_match_helper */
+
+/* Provide a fix for the buggy function */
