@@ -1,0 +1,69 @@
+No.1 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in); 
+    int n = Integer.parseInt(sc.next());
+    
+    List<XY> xy = new ArrayList<XY>();
+    
+    for(int i = 0; i < n; i++){
+        xy.add(new XY(Integer.parseInt(sc.next()), Integer.parseInt(sc.next())));
+    }
+    sc.close();
+    
+    for(int i = 0; i < n; i++){
+        float farthestDist = 0;
+        int farthestPoint = 0;
+        for(int j = 0; j < n; j++){
+            
+            float calc = (float)Math.sqrt((Math.pow(xy.get(i).x - xy.get(j).x, 2)) + (Math.pow(xy.get(i).y - xy.get(j).y, 2)));
+            if(i == j){
+
+            }
+            else if(farthestDist < calc){
+                farthestDist = calc;
+                farthestPoint = j+1;
+            }
+        }
+        System.out.println(farthestPoint);
+    }
+}
+No.2 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in); 
+    int n = Integer.parseInt(sc.next());
+    
+    List<XY> xy = new ArrayList<XY>();
+    
+    for(int i = 0; i < n; i++){
+        xy.add(new XY(Integer.parseInt(sc.next()), Integer.parseInt(sc.next())));
+    }
+    sc.close();
+    
+    float[][] dist = new float[n][n];
+    
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            dist[i][j] = (float)Math.sqrt((Math.pow(xy.get(i).x - xy.get(j).x, 2)) + (Math.pow(xy.get(i).y - xy.get(j).y, 2)));
+        }
+    }
+    
+    float[] farthestDist = new float[n];
+    int[] farthestPoint = new int[n];
+    
+    for(int i = 0; i < n; i++){
+        farthestDist[i] = dist[i][0];
+        farthestPoint[i] = 1;
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(farthestDist[i] < dist[i][j]){
+                farthestDist[i] = dist[i][j];
+                farthestPoint[i] = j+1;
+            }
+        }
+    }
+    
+    for(int i = 0; i < n; i++){
+        System.out.println(farthestPoint[i]);
+    }
+}

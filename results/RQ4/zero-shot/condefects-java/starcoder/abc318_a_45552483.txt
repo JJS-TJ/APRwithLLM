@@ -1,0 +1,38 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in); // 標準入力受取内容を書く
+    int N = sc.nextInt();
+    int M = sc.nextInt();
+    int P = sc.nextInt();
+    int c = 0;
+    for(int i = 0; i < N; i++){
+        if(N >= M+P*i){
+            c += 1;
+        }else{
+            break;
+        }
+    }
+    System.out.println(c);
+    sc.close();
+    return; //「おわり」の呪文
+}
+No.2 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in); // 標準入力受取内容を書く
+    int N = sc.nextInt();
+    int M = sc.nextInt();
+    int P = sc.nextInt();
+    int c = 0;
+    int i = 0;
+    while(true){
+        if(N >= M+P*i){
+            c += 1;
+            i += 1;
+        }else{
+            System.out.println(c);
+            break;
+        }
+    }
+    sc.close();
+    return; //「おわり」の呪文
+}

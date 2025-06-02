@@ -1,0 +1,31 @@
+No.0 Patch
+public static void solve(Read br, Write out) {
+  long x = br.readL();
+  long min = 1000000000000000000L;
+  if (x < 10) {
+    out.pl(x);
+    return;
+  }
+  int k = 0;
+  long t = 1;
+  while (t <= x) {
+    t *= 10;
+    k++;
+  }
+  for (int i = 1; i <= 9; i++) {
+    for (int d = -9; d <= 9; d++) {
+      long a = 0;
+      for (int w = 0; w < k; w++) {
+        int q = i + d * w;
+        if (q < 0 || q > 9) {
+          continue;
+        }
+        a = a * 10 + q;
+      }
+      if (a >= x && a < min) {
+        min = a;
+      }
+    }
+  }
+  out.pl(min);
+}

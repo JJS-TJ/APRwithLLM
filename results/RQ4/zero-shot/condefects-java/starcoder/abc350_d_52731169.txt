@@ -1,0 +1,29 @@
+No.3 Patch
+public static void main(String[] args) {
+	try(Scanner sc = new Scanner(System.in);) {
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		UnionFind uf = new UnionFind(n);
+		for(int i = 0; i < m; i++) {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			a--;
+			b--;
+			uf.unite(a, b);
+		}
+		
+		long ans = 0;
+		for(int i = 0; i < n; i++) {
+			if(uf.root(i) == i) {
+				int s = uf.siz(i);
+				for(int j = 0; j < s; j++) {
+					for(int k = j + 1; k < s; k++) {
+						ans++;
+					}
+				}
+			}
+		}
+		
+		System.out.println(ans - m);
+	}
+}

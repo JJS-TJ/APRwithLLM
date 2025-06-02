@@ -1,0 +1,74 @@
+No.2 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の親は人1の何代後か？
+		//a[parent]が答え
+		dp[i] = dp[parent] + 1;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+No.4 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		dp[i] = dp[a[i]] + 1;
+	}
+	
+	println(dp[n-1]);
+	
+}
+No.5 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}

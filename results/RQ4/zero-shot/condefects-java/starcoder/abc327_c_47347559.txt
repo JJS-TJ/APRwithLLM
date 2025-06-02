@@ -1,0 +1,47 @@
+No.3 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[][] matrix = new int[9][9];
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+            matrix[i][j] = sc.nextInt();
+        }
+    }
+
+    for (int i = 0; i < 9; i++) {
+        Set<Integer> s = new HashSet<Integer>();
+        for (int j = 0; j < 9; j++) {
+            s.add(matrix[i][j]);
+        }
+        if (s.size() != 9) {
+            System.out.println("No");
+            return;
+        }
+    }
+    for (int i = 0; i < 9; i++) {
+        Set<Integer> s = new HashSet<Integer>();
+        for (int j = 0; j < 9; j++) {
+            s.add(matrix[j][i]);
+        }
+        if (s.size() != 9) {
+            System.out.println("No");
+            return;
+        }
+    }
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            Set<Integer> s = new HashSet<Integer>();
+            for (int k = i * 3; k < i * 3 + 3; k++) {
+                for (int l = j * 3; l < j * 3 + 3; l++) {
+                    s.add(matrix[k][l]);
+                }
+            }
+            if (s.size() != 9) {
+                System.out.println("No");
+                return;
+            }
+        }
+    }
+    System.out.println("Yes");
+}

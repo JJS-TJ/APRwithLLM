@@ -1,0 +1,29 @@
+No.0 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here!
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}
+No.3 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here!
+    Scanner in = new Scanner(System.in);
+    
+    String str = in.next();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = str.charAt(a - 1);
+    str = str.substring(0, a - 1) + str.charAt(b - 1) + str.substring(a, b - 1) + str.charAt(a - 1) + str.substring(b);
+    
+    System.out.println(str);
+}

@@ -1,0 +1,14 @@
+No.0 Patch
+boolean isLower(char c) {
+	return Character.isLowerCase(c);
+}
+
+// The Java standard library provides a fix for this buggy function
+No.2 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+No.3 Patch
+boolean isLower(char c) {
+	return Character.isLowerCase(c);
+}

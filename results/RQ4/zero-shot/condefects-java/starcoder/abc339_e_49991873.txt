@@ -1,0 +1,10 @@
+No.0 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        for(int i = 1; i > lowbit(x); i <<= 1){
+            tree[x] = Math.max(tree[x], tree[x - i]);
+        }
+        x+=lowbit(x);
+    }
+}

@@ -1,0 +1,17 @@
+No.3 Patch
+public static void main(String[] args){
+    Scanner scan = new Scanner(System.in);
+    int a = scan.nextInt();
+    int b = scan.nextInt();
+    HashSet<Integer> set = new HashSet<>();
+    for(int i = 0 ; i < a ; i++){
+        set.add(scan.nextInt());
+    }
+    int arg = b;
+    for(int i = 0 ; i < a ; i++){
+        if(!set.contains(i) && i < arg){
+            arg = i;
+        }
+    }
+    System.out.println(arg);
+}

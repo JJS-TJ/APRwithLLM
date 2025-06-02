@@ -1,0 +1,108 @@
+No.3 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = Integer.parseInt(sc.next());
+    int[][] grid = new int[N][N];
+    for (int i = 0; i < N; i++) {
+        String s = sc.next();
+        for (int j = 0; j < N; j++) {
+            if (s.charAt(j) == '0') {
+                grid[i][j] = 0;
+            } else {
+                grid[i][j] = 1;
+            }
+        }
+    }
+    sc.close();
+
+    int[][] newGrid = new int[N][N];
+
+    // Loop through the grid
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            // Check if on the first row
+            if (i == 0) {
+                // Check if not on the first column
+                if (j != 0) {
+                    newGrid[i][j] = grid[i][j - 1];
+                } else {
+                    // If it is on the first column, use the next row
+                    newGrid[i][j] = grid[i + 1][j];
+                }
+            } else if (i == N - 1) {
+                // Check if not on the last column
+                if (j != N - 1) {
+                    newGrid[i][j] = grid[i][j + 1];
+                } else {
+                    // If it is on the last column, use the previous row
+                    newGrid[i][j] = grid[i - 1][j];
+                }
+            } else {
+                // Check if on the first column
+                if (j == 0) {
+                    // Use the next row
+                    newGrid[i][j] = grid[i + 1][j];
+                } else if (j == N - 1) {
+                    // Use the previous row
+                    newGrid[i][j] = grid[i - 1][j];
+                } else {
+                    // If it is not the first row or column, use the current value
+                    newGrid[i][j] = grid[i][j];
+                }
+            }
+        }
+    }
+
+    // Print the result
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            System.out.print(newGrid[i][j]);
+        }
+        System.out.println();
+    }
+}
+No.4 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = Integer.parseInt(sc.next());
+    int[][] grid = new int[N][N];
+    for (int i = 0; i < N; i++) {
+        String s = sc.next();
+        for (int j = 0; j < N; j++) {
+            if (s.charAt(j) == '0') {
+                grid[i][j] = 0;
+            } else {
+                grid[i][j] = 1;
+            }
+        }
+    }
+    sc.close();
+
+    // Print the result
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (i == 0) {
+                if (j != 0) {
+                    System.out.print(grid[i][j - 1]);
+                } else {
+                    System.out.print(grid[i + 1][j]);
+                }
+            } else if (i == N - 1) {
+                if (j != N - 1) {
+                    System.out.print(grid[i][j + 1]);
+                } else {
+                    System.out.print(grid[i - 1][j]);
+                }
+            } else {
+                if (j == 0) {
+                    System.out.print(grid[i + 1][j]);
+                } else if (j == N - 1) {
+                    System.out.print(grid[i - 1][j]);
+                } else {
+                    System.out.print(grid[i][j]);
+                }
+            }
+        }
+        System.out.println();
+    }
+}

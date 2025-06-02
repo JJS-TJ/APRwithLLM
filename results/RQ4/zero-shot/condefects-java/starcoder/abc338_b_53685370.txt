@@ -1,0 +1,17 @@
+No.5 Patch
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String S = input.next();
+    int[] arr = new int[26];
+    for (char c : S.toCharArray()) {
+        arr[c - 'a']++;
+    }
+    char max = 'a';
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] > arr[max - 'a'] || (arr[i] == arr[max - 'a'] && (char) (max + 'a') < (char) (i + 'a'))) {
+            max = (char) (i + 'a');
+        }
+    }
+    System.out.printf("%c\n", max);
+    input.close();
+}

@@ -1,0 +1,72 @@
+No.2 Patch
+public static void main (String[]args){
+    Scanner scn = new Scanner(System.in);
+
+    String S = scn.nextLine();
+    String checkS = "0123456789";
+
+    int Array [] = new int [S.length()];
+    boolean checkArray [] = new boolean[checkS.length()];
+
+    for ( int x = 0 ; x < S.length() ; x++){
+        Array[x] = S.charAt(x);
+    }
+    for ( int x = 0 ; x < checkS.length() ; x++){
+        checkArray[x] = false;
+    }
+    for ( int x = 0 ; x < Array.length ; x++){
+        checkArray[Array[x]-'0'] = true;
+    }
+
+    for ( int x = 0 ; x < checkS.length() ; x++){
+        if ( checkArray[x] == false){
+            System.out.println(x);
+            break;
+        }
+    }
+}
+No.4 Patch
+public static void main (String[]args){
+    Scanner scn = new Scanner(System.in);
+
+    String S = scn.nextLine();
+
+    char [] Array = S.toCharArray();
+
+    int [] checkArray = new int [10];
+
+    for ( int x = 0 ; x < Array.length ; x++){
+        checkArray[Array[x]-'0'] = 1;
+    }
+
+    for ( int x = 0 ; x < checkArray.length ; x++){
+        if ( checkArray[x] == 0){
+            System.out.println(x);
+            break;
+        }
+    }
+}
+No.5 Patch
+public static void main (String[]args){
+    Scanner scn = new Scanner(System.in);
+
+    String S = scn.nextLine(); // 길이 9
+
+    char Array[] = new char[S.length()];
+    int checkArray [] = new int[10];
+
+    for ( int x = 0 ; x < S.length() ; x++){
+        Array[x] = S.charAt(x);
+    }
+
+    for ( int x = 0 ; x < S.length() ; x++){
+        checkArray[Array[x]-'0']++;
+    }
+
+    for ( int x = 0 ; x < 10 ; x++){
+        if ( checkArray[x] == 0){
+            System.out.println(x);
+            break;
+        }
+    }
+}

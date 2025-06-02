@@ -1,0 +1,155 @@
+No.3 Patch
+public static void main(String[] args) throws FileNotFoundException {
+    PrintWriter out = new PrintWriter(System.out);
+    Scanner in = new Scanner();
+    int T = in.nextInt();
+    for (int z = 0; z < T; z++) {
+        int n = in.nextInt();
+        int k = in.nextInt();
+        boolean ok = true;
+        int first = -1;
+        int last = -1;
+        int zero = -1;
+        String data = in.next();
+        if (n == 1) {
+            out.println("Yes");
+            continue;
+        }
+        for (int i = 0; i < n && ok; i++) {
+            if (data.charAt(i) == '1') {
+                if (first == -1) {
+                    first = i;
+                }
+                if (zero != -1 && first != -1 && first < zero && zero < i) {
+                    ok = false;
+                    break;
+                }
+                last = i;
+                continue;
+            }
+            if (data.charAt(i) == '?') {
+                continue;
+            }
+            zero = i;
+        }
+        // System.out.println(ok);
+        if (!ok) {
+            out.println("No");
+            continue;
+        }
+        if (first == -1) {
+            int cur = 0;
+            int total = 0;
+            for (int i = 0; i < n; i++) {
+                if (data.charAt(i) == '?') {
+                    cur++;
+                    continue;
+                }
+                if (cur == k) {
+                    total++;
+                    cur = 0;
+                    continue;
+                }
+                if (cur > k) {
+                    ok = false;
+                    break;
+                }
+                cur = 0;
+            }
+            if (cur == k) {
+                total++;
+            } else if (cur > k) {
+                ok = false;
+            }
+            out.println((ok && total == 1) ? "Yes" : "No");
+            continue;
+        }
+        int a = first;
+        int b = last;
+        while (a > 0 && data.charAt(a - 1) == '?' && (last - a + 2) <= k) {
+            a--;
+        }
+        while (b < n - 1 && data.charAt(b + 1) == '?' && (b - first + 2) <= k) {
+            b++;
+        }
+        // System.out.println(a + " " + b);
+        out.println(((b - a + 1) == k) ? "Yes" : "No");
+    }
+    out.close();
+}
+No.6 Patch
+public static void main(String[] args) throws FileNotFoundException {
+    // PrintWriter out = new PrintWriter(new FileOutputStream(new File(
+    // "output.txt")));
+    PrintWriter out = new PrintWriter(System.out);
+    Scanner in = new Scanner();
+    int T = in.nextInt();
+    for (int z = 0; z < T; z++) {
+        int n = in.nextInt();
+        int k = in.nextInt();
+        boolean ok = true;
+        int first = -1;
+        int last = -1;
+        int zero = -1;
+        String data = in.next();
+
+        for (int i = 0; i < n && ok; i++) {
+            if (data.charAt(i) == '1') {
+                if (first == -1) {
+                    first = i;
+                }
+                if (zero != -1 && first != -1 && first < zero && zero < i) {
+                    ok = false;
+                    break;
+                }
+                last = i;
+                continue;
+            }
+            if (data.charAt(i) == '?') {
+                continue;
+            }
+            zero = i;
+        }
+        if (!ok) {
+            out.println("No");
+            continue;
+        }
+        if (first == -1) {
+            int cur = 0;
+            int total = 0;
+            for (int i = 0; i < n; i++) {
+                if (data.charAt(i) == '?') {
+                    cur++;
+                    continue;
+                }
+                if (cur == k) {
+                    total++;
+                    cur = 0;
+                    continue;
+                }
+                if (cur > k) {
+                    ok = false;
+                    break;
+                }
+                cur = 0;
+            }
+            if (cur == k) {
+                total++;
+            } else if (cur > k) {
+                ok = false;
+            }
+            out.println((ok && total == 1) ? "Yes" : "No");
+            continue;
+        }
+        int a = first;
+        int b = last;
+        while (a > 0 && data.charAt(a - 1) == '?' && (last - a + 2) <= k) {
+            a--;
+        }
+        while (b < n - 1 && data.charAt(b + 1) == '?' && (b - first + 2) <= k) {
+            b++;
+        }
+        out.println(((b - a + 1) == k) ? "Yes" : "No");
+    }
+    out.close();
+}

@@ -1,0 +1,11 @@
+No.3 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if(s.contains(t)){
+		System.out.println("Yes");
+	}else{
+		System.out.println("No");
+	}
+}

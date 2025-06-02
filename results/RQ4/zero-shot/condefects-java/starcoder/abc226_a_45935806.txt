@@ -1,0 +1,9 @@
+No.1 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    BigDecimal result = x.setScale(0,BigDecimal.ROUND_HALF_UP);
+    System.out.println(result);
+}

@@ -1,0 +1,35 @@
+No.0 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int q = sc.nextInt();
+	Set<Pair> follow = new TreeSet<>();
+	int t,a,b;
+	
+	for(int i = 0;i < q;i++) {
+		t = Integer.parseInt(sc.next());
+		a = Integer.parseInt(sc.next());	
+		b = Integer.parseInt(sc.next());
+		switch(t) {
+		case 1:
+			follow.add(new Pair(a,b));
+			break;
+		case 2:
+			follow.remove(new Pair(a,b));
+			break;
+		case 3:
+			Pair p1 = new Pair(a,b); Pair p2 = new Pair(b,a);
+			if(follow.contains(p1) == true && follow.contains(p2) == true) {
+				System.out.println("Yes");
+			}else
+				System.out.println("No");
+		}
+	}
+}
+
+// 参考URL : 
+// http://www.se-ap.jp/contest/2011/
+
+// 解説URL : 
+// http://www.se-ap.jp/wp-content/uploads/2011/03/%E3%82%B3%E3%83%83%E3%83%89%E6%8F%90%E5%87%BA%E7%89%88.pdf

@@ -1,0 +1,81 @@
+No.1 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+        continue;
+      }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+      continue;
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+No.7 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+        continue;
+      }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+      continue;
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+
+/*
+Sample Input/Output
+
+Input
+3
+1000000000
+1000000000
+
+Output
+1
+
+Input
+5
+10101
+1
+
+Output
+1
+
+*/
