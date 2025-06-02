@@ -1,0 +1,59 @@
+No.0 Patch
+public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+    long D = sc.nextLong();
+
+    long res = D;
+    for (int x = 0; x <= 2000000; x++) {
+        long square = (long) x * x;
+        if (square > D) {
+            res = Math.min(res, square - D);
+            break;
+        } else {
+            long y = (long) Math.sqrt(Math.abs(square - D));
+            long res1 = Math.min(Math.abs(square + y * y - D), Math.abs(square + (y + 1) * (y + 1) - D));
+            res = Math.min(res, res1);
+        }
+    }
+
+    System.out.println(res);
+
+}
+No.1 Patch
+public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+    long D = sc.nextLong();
+
+    long res = D;
+    for (long x = 0; x <= 2000000; x++) {
+        if (x * x > D) {
+            res = Math.min(res, x * x - D);
+            break;
+        } else {
+            long y = (long) Math.sqrt(Math.abs(x * x - D));
+            long res1 = Math.min(Math.abs(x * x + y * y - D), Math.abs(x * x + (y + 1) * (y + 1) - D));
+            res = Math.min(res, res1);
+        }
+    }
+
+    System.out.println(res);
+
+}
+No.2 Patch
+public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+    long D = sc.nextLong();
+
+    long res = D;
+    for (long x = 0; x * x <= D; x++) {
+        long y = (long) Math.sqrt(Math.abs(x * x - D));
+        long res1 = Math.min(Math.abs(x * x + y * y - D), Math.abs(x * x + (y + 1) * (y + 1) - D));
+        res = Math.min(res, res1);
+    }
+
+    System.out.println(res);
+
+}

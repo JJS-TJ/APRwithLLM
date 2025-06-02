@@ -1,0 +1,25 @@
+No.2 Patch
+void calc() {
+	if (N > 70L) {
+		this.writer.println(0L);
+		return;
+	}
+	long[] patterns = Arrays.copyOf(basePatterns, this.basePatterns.length);
+	for (int i = 1; i < this.N; ++i) {
+		long[] nexts = new long[patterns.length];
+		Arrays.fill(nexts, 0L);
+		long sum = 0L;
+		for (int j = i; j + 1 < patterns.length; ++j) {
+			sum += patterns[j];
+			sum %= MOD;
+			nexts[j + 1] = sum * basePatterns[j + 1] % MOD;
+		}
+		patterns = nexts;
+	}
+	long result = 0L;
+	for (int i = 0; i < patterns.length; ++i) {
+		result += patterns[i];
+		result %= MOD;
+	}
+	this.writer.println(result);
+}

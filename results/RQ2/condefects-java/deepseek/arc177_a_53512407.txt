@@ -1,0 +1,88 @@
+No.0 Patch
+public static void main(String[] args) throws IOException {
+    int[] crons = new int[6];
+    int[] cronss = new int[]{1, 5, 10, 50, 100, 500};
+    for (int i = 0; i < 6; i++) {
+        crons[i] = nextInt();
+    }
+    int N = nextInt();
+    int[] Xs = new int[N];
+    for (int i = 0; i < N; i++) {
+        Xs[i] = nextInt();
+    }
+    for (int X : Xs) {
+        int cron = 0;
+        for (int i = 5; i >= 0 && X > 0; i--) {
+            cron = X / cronss[i];
+            X -= Math.min(cron, crons[i]) * cronss[i];
+            crons[i] = Math.max(0, crons[i] - cron);
+        }
+        if (X > 0) {
+            System.out.println("No");
+            return;
+        }
+    }
+    System.out.println("Yes");
+
+    out.flush();
+}
+
+//Provide a fix for the buggy function
+No.1 Patch
+public static void main(String[] args) throws IOException {
+    int[] crons = new int[6];
+    int[] cronss = new int[]{1, 5, 10, 50, 100, 500};
+    for (int i = 0; i < 6; i++) {
+        crons[i] = nextInt();
+    }
+    int N = nextInt();
+    int[] Xs = new int[N];
+    for (int i = 0; i < N; i++) {
+        Xs[i] = nextInt();
+    }
+    for (int X : Xs) {
+        int cron = 0;
+        for (int i = 5; i >= 0 && X > 0; i--) {
+            cron = Math.min(X / cronss[i], crons[i]);
+            X -= cron * cronss[i];
+            crons[i] -= cron;
+        }
+        if (X > 0) {
+            System.out.println("No");
+            return;
+        }
+    }
+    System.out.println("Yes");
+
+    out.flush();
+}
+
+// This function is supposed to do a binary search of a sorted array but it doesn't work. Please provide a fix for it.
+No.2 Patch
+public static void main(String[] args) throws IOException {
+    int[] crons = new int[6];
+    int[] cronss = new int[]{1, 5, 10, 50, 100, 500};
+    for (int i = 0; i < 6; i++) {
+        crons[i] = nextInt();
+    }
+    int N = nextInt();
+    int[] Xs = new int[N];
+    for (int i = 0; i < N; i++) {
+        Xs[i] = nextInt();
+    }
+    for (int X : Xs) {
+        int cron = 0;
+        for (int i = 5; i >= 0 && X > 0; i--) {
+            cron = X / cronss[i];
+            X -= Math.min(cron, crons[i]) * cronss[i];
+            crons[i] = Math.max(0, crons[i] - cron);
+        }
+        if (X > 0) {
+            System.out.println("No");
+            return;
+        }
+    }
+    System.out.println("Yes");
+
+    out.flush();
+}

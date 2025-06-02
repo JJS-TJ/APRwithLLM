@@ -1,0 +1,15 @@
+No.3 Patch
+public static void main(String args[]){
+	Scanner sc = new Scanner(System.in);
+	long N = sc.nextLong();
+	long A = sc.nextLong();
+	long B = sc.nextLong();
+
+	if(A > B){
+		long ans = Math.max(N - A + 1, 0);
+		ans = B * (ans / A) + Math.min(ans % A, B);
+		System.out.println(ans);
+	}else{
+		System.out.println(Math.max(N - A + 1, 0));
+	}
+}

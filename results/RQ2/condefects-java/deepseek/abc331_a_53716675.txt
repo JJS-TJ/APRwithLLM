@@ -1,0 +1,57 @@
+No.0 Patch
+public static void main(String[]args){
+  Scanner sc = new Scanner(System.in);
+  int month = sc.nextInt();
+  int day = sc.nextInt();
+  int y = sc.nextInt();
+  int m = sc.nextInt();
+  int d = sc.nextInt();
+  
+  if(day == d){
+    if(month == m){
+      System.out.println((y + 1) + " " + "1 " + "1");
+    }else{
+      System.out.println(y +" " + (m + 1) +" " + "1" );
+    }
+  }else{
+      System.out.println(y + " " + m + " " + (d + 1));
+  }
+}
+No.2 Patch
+public static void main(String[]args){
+  Scanner sc = new Scanner(System.in);
+  int month = sc.nextInt();
+  int day = sc.nextInt();
+  int y = sc.nextInt();
+  int m = sc.nextInt();
+  int d = sc.nextInt();
+  
+  if(day == d){
+    if(month == m){
+      System.out.println((y + 1) + " " + "1" + " " + "1");
+    }else{
+      System.out.println(y + " " + (m + 1) + " " + "1");
+    }
+  }else{
+      System.out.println(y + " " + m + " " + (d + 1));
+  }
+}
+No.3 Patch
+public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  int month = sc.nextInt();
+  int day = sc.nextInt();
+  int y = sc.nextInt();
+  int m = sc.nextInt();
+  int d = sc.nextInt();
+
+  if (day == d) {
+    if (month == m) {
+      System.out.println((y + 1) + " " + "1 " + "1");
+    } else {
+      System.out.println(y + " " + (m + 1) + " " + "1");
+    }
+  } else {
+    System.out.println(y + " " + m + " " + (d + 1));
+  }
+}

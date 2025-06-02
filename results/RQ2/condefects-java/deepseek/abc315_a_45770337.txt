@@ -1,0 +1,97 @@
+No.0 Patch
+public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String text = scanner.next();
+  char[] work = new char[text.length()];
+  int j = 0;
+  
+  for(int i = 0; i < text.length(); i++){
+    if((text.charAt(i) != 'a') && (text.charAt(i) != 'e') && (text.charAt(i) != 'i')
+      && (text.charAt(i) != 'o') && (text.charAt(i) != 'u')) {
+      work[j] = text.charAt(i);
+      j = j + 1;
+    }
+  }
+  
+  StringBuilder newText = new StringBuilder();
+  for(int i = 0; i < j; i++) {
+      newText.append(work[i]);
+  }
+  
+  if (newText.length() == 0) {
+    System.out.println(text);
+  }
+  else {
+    System.out.println(newText);
+  }
+}
+No.1 Patch
+public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String text = scanner.next();
+  StringBuilder work = new StringBuilder();
+  
+  for (char c : text.toCharArray()) {
+    if (!"aeiou".contains(String.valueOf(c))) {
+      work.append(c);
+    }
+  }
+  
+  if (work.length() == 0) {
+    System.out.println(text);
+  }
+  else {
+    System.out.println(work);
+  }
+}
+No.2 Patch
+public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String text = scanner.next();
+  char[] work = new char[text.length()];
+  int j = 0;
+  
+  for(int i = 0; i < text.length(); i++){
+    if((text.charAt(i) != 'a') && (text.charAt(i) != 'e') && (text.charAt(i) != 'i')
+      && (text.charAt(i) != 'o') && (text.charAt(i) != 'u')) {
+      work[j] = text.charAt(i);
+      j = j + 1;
+    }
+  }
+  
+  String newText = new String(work, 0, j);
+  
+  if (newText.equals("")) {
+    System.out.println(text);
+  }
+  else {
+    System.out.println(newText);
+  }
+}
+No.3 Patch
+public static void main(String[] args) {
+  Scanner scanner = new Scanner(System.in);
+  String text = scanner.next();
+  char[] work = new char[text.length()];
+  int j = 0;
+  
+  for(int i = 0; i < text.length(); i++){
+    if((text.charAt(i) != 'a') && (text.charAt(i) != 'e') && (text.charAt(i) != 'i')
+      && (text.charAt(i) != 'o') && (text.charAt(i) != 'u')) {
+      work[j] = text.charAt(i);
+      j = j + 1;
+    }
+  }
+  
+  String newText = "";
+  for(int i = 0; i < j; i++) {
+      newText = newText + work[i];
+  }
+  
+  if (newText.equals("")) {
+    System.out.println(text);
+  }
+  else {
+    System.out.println(newText);
+  }
+}

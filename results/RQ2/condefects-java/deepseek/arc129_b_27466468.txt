@@ -1,0 +1,44 @@
+No.2 Patch
+private static void solve(InputReader in, PrintWriter out,int caseID) {
+    long N = in.nextLong();
+    long ak = -1;
+    long bk = (int)1e9 + 7;
+    for (int i = 0; i < N; i++) {
+        ak = Math.max(ak,in.nextInt());
+        bk = Math.min(bk,in.nextInt());            
+        if(ak<=bk) out.println(0);
+        else out.println((ak-bk+1)/2);
+    }
+    
+}
+No.3 Patch
+private static void solve(InputReader in, PrintWriter out,int caseID) {
+    long N = in.nextLong();
+    long ak = -1;
+    long bk = (int)1e9 + 7;
+    for (int i = 0; i < N; i++) {
+        ak = Math.max(ak,in.nextInt());
+        bk = Math.min(bk,in.nextInt());            
+        if(ak<=bk) out.println(0);
+        else out.println((ak-bk+1)/2);
+    }
+    
+}
+
+
+// Write a function that will return the number of different ways to make change for an amount of money, given an array of coin denominations.
+No.4 Patch
+private static void solve(InputReader in, PrintWriter out,int caseID) {
+    long N = in.nextLong();
+    long ak = -1;
+    long bk = (int)1e9 + 7;
+    for (int i = 0; i < N; i++) {
+        ak = Math.max(ak,in.nextInt());
+        bk = Math.min(bk,in.nextInt());            
+        if(ak<=bk) out.println(0);
+        else out.println((ak-bk+1)/2);
+    }
+    
+}
+
+//Provide a fix for the buggy function

@@ -1,0 +1,27 @@
+No.3 Patch
+public static void main(String[] args){
+    FastScanner sc = new FastScanner();
+    int T = sc.nextInt();
+    List<Long> zi = new ArrayList<Long>();
+    List<Long> san = new ArrayList<Long>();
+    for(long i = 1; i < 1000000000000000000l; i *= 2){
+        zi.add(i);
+    }
+    for(int a = 0; a < zi.size() - 2; a++){
+        for(int b = a + 1; b < zi.size() - 1; b++){
+            for(int c = b + 1; c < zi.size(); c++){
+                san.add(zi.get(a) + zi.get(b) + zi.get(c));
+            }
+        }
+    }
+    Collections.sort(san);
+    san.remove(san.size()-1);
+    for(int i = 0; i < T; i++){
+        long N = sc.nextLong();
+        if(N < 7){
+            System.out.println(-1);
+        }else{
+            System.out.println(san.get(bisect_left(N,san) - 1));
+        }
+    }
+}

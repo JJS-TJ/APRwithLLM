@@ -1,0 +1,95 @@
+No.1 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    int n = in.nextInt();
+    String s = in.next();
+    List<Integer> list = new ArrayList<>();
+    for(int i = 1; i < n - 1; i++){
+        if(s.charAt(i) == 'R'){
+            int l = i;
+            while(l - 1 >= 0 && s.charAt(l - 1) == 'A'){
+                l --;
+            }
+            int r = i;
+            while(r + 1 < n && s.charAt(r + 1) == 'C'){
+                r ++;
+            }
+            list.add(Math.min(i - l, r - i));
+        }
+    }
+
+    int sum = 0;
+    for(int e : list){
+        sum += e;
+    }
+    System.out.println(Math.min(2*list.size(), sum));
+
+    in.close();
+}
+No.2 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    int n = in.nextInt();
+    String s = in.next();
+    List<Integer> list = new ArrayList<>();
+    for(int i = 1; i < n - 1; i++){
+        if(s.charAt(i) == 'R'){
+            int l = i;
+            while(l - 1 >= 0 && s.charAt(l - 1) == 'A'){
+                l --;
+            }
+            int r = i;
+            while(r + 1 < n && s.charAt(r + 1) == 'C'){
+                r ++;
+            }
+            list.add(Math.min(i - l, r - i));
+        }
+    }
+
+    int sum = 0;
+    for(int e : list){
+        sum += e;
+    }
+    System.out.println(Math.min(2*list.size(), sum));
+
+    in.close();
+}
+
+// Explain the output of the function
+
+// The function calculates the minimum number of times it takes for a person to pass by two houses. It does this by keeping track of the distances between each house and the nearest 'R' house. It also makes sure the houses between the 'R' houses are 'A'. It then calculates the sum of all these distances and the minimum of this sum and twice the number of 'R' houses.
+
+// Explain the bug in the function
+
+// The function is buggy because the while loop to find the rightmost 'C' house is decrementing the 'r' variable instead of incrementing it. This can lead to an infinite loop if there are 'C's after the 'R' house.
+No.3 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    int n = in.nextInt();
+    String s = in.next();
+    List<Integer> list = new ArrayList<>();
+    for(int i = 1; i < n - 1; i++){
+        if(s.charAt(i) == 'R'){
+            int l = i;
+            while(l - 1 >= 0 && s.charAt(l - 1) == 'A'){
+                l --;
+            }
+            int r = i;
+            while(r + 1 < n && s.charAt(r + 1) == 'C'){
+                r ++; // Change here to increment 'r' not 'l'
+            }
+            list.add(Math.min(i - l, r - i));
+        }
+    }
+
+    int sum = 0;
+    for(int e : list){
+        sum += e;
+    }
+    System.out.println(Math.min(2*list.size(), sum));
+
+    in.close();
+}

@@ -1,0 +1,63 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int N = scanner.nextInt();
+    int M = scanner.nextInt();
+
+    ArrayList<String> list = new ArrayList<>();
+    int[] price = new int[M];
+    String[] strs = new String[N];
+    for (int i = 0; i < N; i++) {
+        strs[i] = scanner.next();
+    }
+
+    for (int i = 0; i < M; i++) {
+        String str = scanner.next();
+        list.add(str);
+    }
+
+    int default_price = scanner.nextInt();
+    for (int i = 0; i < M; i++) {
+        price[i] = scanner.nextInt();
+    }
+
+    int result = 0;
+    for (String key : strs) {
+        int money = list.contains(key) ? price[list.indexOf(key)] : default_price;
+        result += money;
+    }
+    System.out.println(result);
+}
+No.2 Patch
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	Scanner scanner = new Scanner(System.in);
+	int N = scanner.nextInt();
+	int M = scanner.nextInt();
+	
+	ArrayList<String> list = new ArrayList<>();
+	int[] price = new int[M];
+	String[] strs = new String[N];
+	for(int i = 0; i < N; i++) {
+		strs[i] = scanner.next();
+	}
+	
+	for(int i = 0; i < M; i++) {
+		String str = scanner.next();
+		list.add(str);
+	}
+	
+	int default_price = scanner.nextInt();
+	for(int i = 0; i < M; i++) {
+		price[i] = scanner.nextInt();
+	}
+	
+	int result = 0;
+	for(String key : strs) {
+		int index = list.indexOf(key);
+		int money = (index != -1) ? price[index] : default_price;
+		result += money;
+	}
+	System.out.println(result);
+
+}

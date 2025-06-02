@@ -1,0 +1,99 @@
+No.0 Patch
+public static void main(String[] args) throws IOException {
+
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+    Set<Integer> set = new HashSet<>();
+    for (int i = 1; i <= n; i++) { // Change the condition from i<n to i<=n
+        set.add(i);
+    }
+    for (int i = 0; i < m; i++) {
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        set.remove(b);
+    }
+
+    if (set.size() != 1) {
+        System.out.println(-1);
+    } else {
+        System.out.println(set.iterator().next());
+    }
+
+
+}
+No.1 Patch
+public static void main(String[] args) throws IOException {
+
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+    Set<Integer> set = new HashSet<>();
+    for (int i = 1; i <= n; i++) {
+        set.add(i);
+    }
+    for (int i = 0; i < m; i++) {
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        set.remove(b);
+    }
+
+    if (set.size() != 1) {
+        System.out.println(-1);
+    } else {
+        System.out.println(set.iterator().next());
+    }
+
+
+}
+No.2 Patch
+public static void main(String[] args) throws IOException {
+
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+    Set<Integer> set = new HashSet<>();
+    for (int i = 1; i <= n; i++) {
+        set.add(i);
+    }
+    for (int i = 0; i < m; i++) {
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if (a != b)
+            set.remove(b);
+    }
+
+    if (set.size() != 1) {
+        System.out.println(-1);
+    } else {
+        System.out.println(set.iterator().next());
+    }
+}
+No.3 Patch
+public static void main(String[] args) throws IOException {
+
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+    Set<Integer> set = new HashSet<>();
+    for (int i = 1; i <= n; i++) { // change '<' to '<=' in the loop condition
+        set.add(i);
+    }
+    for (int i = 0; i < m; i++) {
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        set.remove(b);
+    }
+
+    if (set.size() != 1) {
+        System.out.println(-1);
+    } else {
+        System.out.println(set.iterator().next());
+    }
+
+
+}

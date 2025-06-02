@@ -1,0 +1,64 @@
+No.2 Patch
+public static long getMin(long x[], long a, long b, long c){
+    long min = Long.MAX_VALUE;
+    List<Node> t1 = new ArrayList<>();
+    for(int i = 0;i < x.length;i++){
+        t1.add(new Node((a-x[i]%a)%a, i));
+    }
+    t1.sort(Comparator.comparingLong(o -> o.diff));
+    List<Node> t2 = new ArrayList<>();
+    for(int i = 0;i < x.length;i++){
+        t2.add(new Node((b-x[i]%b)%b, i));
+    }
+
+    t2.sort(Comparator.comparingLong(o -> o.diff));
+    List<Node> t3 = new ArrayList<>();
+    for(int i = 0;i < x.length;i++){
+        t3.add(new Node((c-x[i]%c)%c, i));
+    }
+
+    t3.sort(Comparator.comparingLong(o -> o.diff));
+    for(int i = 0;i < 3;i++){
+        for(int j = 0;j < 3;j++){
+            if(t1.get(i).i == t2.get(j).i) continue;
+            for(int k = 0;k < 3;k++){
+                if(t1.get(i).i == t3.get(k).i || t2.get(j).i == t3.get(k).i) continue;
+                min = Math.min(min, t1.get(i).diff+t2.get(j).diff+t3.get(k).diff);
+            }
+        }
+    }
+    return min;
+}
+No.4 Patch
+public static long getMin(long x[], long a, long b, long c){
+    long min = Long.MAX_VALUE;
+    List<Node> t1 = new ArrayList<>();
+    for(int i = 0;i < x.length;i++){
+        t1.add(new Node((a-x[i]%a)%a, i));
+    }
+    t1.sort(Comparator.comparingLong(o -> o.diff));
+    List<Node> t2 = new ArrayList<>();
+    for(int i = 0;i < x.length;i++){
+        t2.add(new Node((b-x[i]%b)%b, i));
+    }
+
+    t2.sort(Comparator.comparingLong(o -> o.diff));
+    List<Node> t3 = new ArrayList<>();
+    for(int i = 0;i < x.length;i++){
+        t3.add(new Node((c-x[i]%c)%c, i));
+    }
+
+    t3.sort(Comparator.comparingLong(o -> o.diff));
+    for(int i = 0;i < 3;i++){
+        for(int j = 0;j < 3;j++){
+            if(t1.get(i).i == t2.get(j).i) continue;
+            for(int k = 0;k < 3;k++){
+                if(t1.get(i).i == t3.get(k).i || t2.get(j).i == t3.get(k).i) continue;
+                min = Math.min(min, t1.get(i).diff+t2.get(j).diff+t3.get(k).diff);
+            }
+        }
+    }
+    return min;
+}
+
+//  Write a function that will return the shortest path between two nodes in a given graph. The function should accept a start and end node and return an array representing the shortest path.

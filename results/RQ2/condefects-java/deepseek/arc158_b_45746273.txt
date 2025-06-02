@@ -1,0 +1,100 @@
+No.0 Patch
+void solve() {
+    int n = in.nextInt();
+    List<Double> list = new ArrayList<>();
+    double mx = -1e18;
+    double mi = 1e18;
+    List<Double> list1 = new ArrayList<>(), list2 = new ArrayList<>();
+    for (int i = 0; i < n; i++) {
+        double v = in.nextInt();
+        if (v > 0) list1.add(v);
+        else list2.add(v);
+    }
+
+    Collections.sort(list1);
+    Collections.sort(list2, Collections.reverseOrder());
+
+    if (list1.size() > 6) {
+        for (int i = 0; i < 3; i++) {
+            list.add(list1.get(i));
+        }
+        for (int i = list1.size() - 1; i >= list1.size() - 3; i--) {
+            list.add(list1.get(i));
+        }
+    } else {
+        list.addAll(list1);
+    }
+    if (list2.size() > 6) {
+        for (int i = 0; i < 3; i++) {
+            list.add(list2.get(i));
+        }
+        for (int i = list2.size() - 1; i >= list2.size() - 3; i--) {
+            list.add(list2.get(i));
+        }
+    } else {
+        list.addAll(list2);
+    }
+
+    for (int i = 0; i < list.size(); i++) {
+        for (int j = i + 1; j < list.size(); j++) {
+            for (int k = j + 1; k < list.size(); k++) {
+                if (list.get(i) * list.get(j) * list.get(k) != 0) {
+                    mi = Math.min(mi, (list.get(i) + list.get(j) + list.get(k)) / (list.get(i) * list.get(j) * list.get(k)));
+                    mx = Math.max(mx, (list.get(i) + list.get(j) + list.get(k)) / (list.get(i) * list.get(j) * list.get(k)));
+                }
+            }
+        }
+    }
+    out.printf("%.15f\n", mi);
+    out.printf("%.15f\n", mx);
+}
+No.5 Patch
+void solve() {
+    int n = in.nextInt();
+    List<Double> list = new ArrayList<>();
+    double mx = -1e18;
+    double mi = 1e18;
+    List<Double> list1 = new ArrayList<>(), list2 = new ArrayList<>();
+    for (int i = 0; i < n; i++) {
+        double v = in.nextInt();
+        if (v > 0) list1.add(v);
+        else list2.add(v);
+    }
+
+    Collections.sort(list1);
+    Collections.sort(list2);
+
+    if (list1.size() > 6) {
+        for (int i = 0; i < 3; i++) {
+            list.add(list1.get(i));
+        }
+        for (int i = list1.size() - 1; i >= list1.size() - 3; i--) {
+            list.add(list1.get(i));
+        }
+    }else {
+        list.addAll(list1);
+    }
+    if (list2.size() > 6) {
+        for (int i = 0; i < 3; i++) {
+            list.add(list2.get(i));
+        }
+        for (int i = list2.size() - 1; i >= list2.size() - 3; i--) {
+            list.add(list2.get(i));
+        }
+    }else {
+        list.addAll(list2);
+    }
+
+
+    for (int i = 0; i < list.size(); i++) {
+        for (int j = i + 1; j < list.size(); j++) {
+            for (int k = j + 1; k < list.size(); k++) {
+                mi = Math.min(mi, (list.get(i) + list.get(j) + list.get(k)) / (list.get(i) * list.get(j) * list.get(k)));
+                mx = Math.max(mx, (list.get(i) + list.get(j) + list.get(k)) / (list.get(i) * list.get(j) * list.get(k)));
+            }
+        }
+    }
+    out.printf("%.15f\n", mi);
+    out.printf("%.15f\n", mx);
+
+}

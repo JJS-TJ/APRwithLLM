@@ -1,0 +1,66 @@
+No.1 Patch
+public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    int N = Utility.readInt();
+    int[] month = new int[N];
+    int sum = 0;
+    for(int i = 0; i < N; i++) {
+        month[i] = Utility.readInt();
+        sum += month[i];
+    }
+    
+    int remain = (sum + 1) / 2;
+    for(int i = 0; i < N; i++) {
+        if(remain <= month[i]) {
+            System.out.println((i+1) + " " + remain);
+            break;
+        }
+        remain -= month[i];
+    }
+    
+    
+
+}
+No.2 Patch
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	int N = Utility.readInt();
+	int[] month = new int[N];
+	int sum = 0;
+	for(int i = 0; i < N; i++) {
+		month[i] = Utility.readInt();
+		sum += month[i];
+	}
+	
+	int remain = (sum + 1) / 2;
+	for(int i = 0; i < N; i++) {
+		if(remain <= month[i]) {
+			System.out.println((i+1) + " " + remain);
+			break;
+		}
+		remain -= month[i];
+	}
+	
+	
+
+}
+No.4 Patch
+public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    int N = Utility.readInt();
+    int[] month = new int[N];
+    int sum = 0;
+    for(int i = 0; i < N; i++) {
+        month[i] = Utility.readInt();
+        sum += month[i];
+    }
+    
+    int remain = (sum + 1) / 2;
+    for(int i = 0; i < N; i++) {
+        if(remain <= month[i]) {
+            System.out.println((i+1) + " " + remain);
+            break;
+        }
+        remain -= month[i];
+    }
+}

@@ -1,0 +1,28 @@
+No.0 Patch
+public static void main(String[] args) {
+    int n = nextInt();
+    int l = nextInt();
+    int[] a = nextIntArray(n);
+
+    int pair = 0;
+    while (l > 0 && pair < n) {
+        int ai = a[pair];
+        if (ai <= l) {
+            l -= (ai+1);
+            pair++;
+        } else {
+            break;
+        }
+    }
+
+    for (int i = pair; i < n; i++) {
+        if (a[i] == 2) {
+            System.out.println("No");
+            return;
+        }
+    }
+
+    System.out.println("Yes");
+
+    out.flush();
+}

@@ -1,0 +1,28 @@
+No.1 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+No.2 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// The bug in the buggy function is that it uses a special character instead of a space. 
+// This can cause the output to display incorrectly, or not display at all. 
+// The fixed function replaces the special character with a space, which should fix the issue.
