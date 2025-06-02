@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [564,615]
+    MethodInvocation [564,614]
+        METHOD_INVOCATION_RECEIVER [564,574]
+            QualifiedName: System.out [564,574]
+        SimpleName: println [575,582]
+        METHOD_INVOCATION_ARGUMENTS [583,613]
+            InfixExpression [583,613]
+                MethodInvocation [583,594]
+                    METHOD_INVOCATION_RECEIVER [583,587]
+                        SimpleName: pSet [583,587]
+                    SimpleName: last [588,592]
+                INFIX_EXPRESSION_OPERATOR: + [595,596]
+                StringLiteral: " " [596,599]
+                MethodInvocation [601,613]
+                    METHOD_INVOCATION_RECEIVER [601,605]
+                        SimpleName: pSet [601,605]
+                    SimpleName: first [606,611]
+

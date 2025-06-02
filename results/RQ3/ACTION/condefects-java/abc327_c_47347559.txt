@@ -1,0 +1,60 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1324,1333]
+    InfixExpression [1324,1329]
+        SimpleName: j [1324,1325]
+        INFIX_EXPRESSION_OPERATOR: * [1326,1327]
+        NumberLiteral: 3 [1328,1329]
+    INFIX_EXPRESSION_OPERATOR: + [1330,1331]
+    SimpleName: l [1332,1333]
+to
+ArrayAccess [1307,1319]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1314,1322]
+    InfixExpression [1314,1318]
+        SimpleName: i [1314,1315]
+        INFIX_EXPRESSION_OPERATOR: * [1316,1317]
+        NumberLiteral: 3 [1317,1318]
+    INFIX_EXPRESSION_OPERATOR: + [1319,1320]
+    SimpleName: k [1321,1322]
+to
+ArrayAccess [1307,1316]
+at 1
+
+New cluster:
+===
+delete-node
+---
+SimpleName: k [1314,1315]
+===
+------------
+===
+delete-node
+---
+SimpleName: k [1314,1315]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: l [1317,1318]
+===
+------------
+===
+delete-node
+---
+SimpleName: l [1317,1318]
+===
+

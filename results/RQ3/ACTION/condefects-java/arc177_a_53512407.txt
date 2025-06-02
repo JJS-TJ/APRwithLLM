@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from X to cron
+------------
+===
+update-node
+---
+SimpleName: X [1483,1484]
+replace X by cron
+

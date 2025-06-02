@@ -1,0 +1,40 @@
+New cluster:
+===
+insert-node
+---
+CastExpression [1104,1122]
+to
+Assignment [1098,1117]
+at 2
+------------
+===
+insert-node
+---
+PrimitiveType: int [1105,1108]
+to
+CastExpression [1104,1122]
+at 0
+===
+insert-node
+---
+CastExpression [1104,1122]
+to
+Assignment [1098,1117]
+at 2
+
+New cluster:
+MOVE from CastExpression [1104,1122]
+------------
+===
+move-tree
+---
+MethodInvocation [1105,1117]
+    METHOD_INVOCATION_RECEIVER [1105,1109]
+        SimpleName: Math [1105,1109]
+    SimpleName: sqrt [1110,1114]
+    METHOD_INVOCATION_ARGUMENTS [1115,1116]
+        SimpleName: N [1115,1116]
+to
+CastExpression [1104,1122]
+at 1
+

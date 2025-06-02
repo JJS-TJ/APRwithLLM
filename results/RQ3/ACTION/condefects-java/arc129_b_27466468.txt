@@ -1,0 +1,96 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1446,1459]
+to
+METHOD_INVOCATION_ARGUMENTS [1446,1455]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1446,1459]
+to
+METHOD_INVOCATION_ARGUMENTS [1446,1455]
+at 0
+===
+insert-node
+---
+NumberLiteral: 2 [1458,1459]
+to
+InfixExpression [1446,1459]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: / [1457,1458]
+to
+InfixExpression [1446,1459]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1446,1459]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [1446,1453]
+    InfixExpression [1447,1452]
+        SimpleName: ak [1447,1449]
+        INFIX_EXPRESSION_OPERATOR: - [1449,1450]
+        SimpleName: bk [1450,1452]
+to
+InfixExpression [1446,1459]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [1446,1453]
+------------
+===
+move-tree
+---
+InfixExpression [1446,1455]
+    ParenthesizedExpression [1446,1453]
+        InfixExpression [1447,1452]
+            SimpleName: ak [1447,1449]
+            INFIX_EXPRESSION_OPERATOR: - [1449,1450]
+            SimpleName: bk [1450,1452]
+    INFIX_EXPRESSION_OPERATOR: / [1453,1454]
+    NumberLiteral: 2 [1454,1455]
+to
+ParenthesizedExpression [1446,1453]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1446,1455]
+------------
+===
+move-tree
+---
+InfixExpression [1447,1452]
+    SimpleName: ak [1447,1449]
+    INFIX_EXPRESSION_OPERATOR: - [1449,1450]
+    SimpleName: bk [1450,1452]
+to
+InfixExpression [1446,1455]
+at 0
+
+New cluster:
+UPDATE from / to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: / [1453,1454]
+replace / by +
+
+New cluster:
+UPDATE from 2 to 1
+------------
+===
+update-node
+---
+NumberLiteral: 2 [1454,1455]
+replace 2 by 1
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 40010 to 400010
+------------
+===
+update-node
+---
+NumberLiteral: 40010 [566,571]
+replace 40010 by 400010
+

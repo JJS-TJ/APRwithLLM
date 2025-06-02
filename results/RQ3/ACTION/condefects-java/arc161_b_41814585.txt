@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from a to b
+------------
+===
+update-node
+---
+SimpleName: a [561,562]
+replace a by b
+
+New cluster:
+UPDATE from 2 to 1
+------------
+===
+update-node
+---
+NumberLiteral: 2 [565,566]
+replace 2 by 1
+

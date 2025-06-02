@@ -1,0 +1,50 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [1094,1135]
+    MethodInvocation [1094,1134]
+        METHOD_INVOCATION_RECEIVER [1094,1099]
+            SimpleName: list1 [1094,1099]
+        SimpleName: sort [1100,1104]
+        METHOD_INVOCATION_ARGUMENTS [1105,1133]
+            MethodInvocation [1105,1133]
+                METHOD_INVOCATION_RECEIVER [1105,1115]
+                    SimpleName: Comparator [1105,1115]
+                SimpleName: comparing [1116,1125]
+                METHOD_INVOCATION_ARGUMENTS [1126,1132]
+                    LambdaExpression [1126,1132]
+                        VariableDeclarationFragment [1126,1127]
+                            SimpleName: e [1126,1127]
+                        SimpleName: e [1131,1132]
+to
+Block [717,2240]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [1144,1185]
+    MethodInvocation [1144,1184]
+        METHOD_INVOCATION_RECEIVER [1144,1149]
+            SimpleName: list2 [1144,1149]
+        SimpleName: sort [1150,1154]
+        METHOD_INVOCATION_ARGUMENTS [1155,1183]
+            MethodInvocation [1155,1183]
+                METHOD_INVOCATION_RECEIVER [1155,1165]
+                    SimpleName: Comparator [1155,1165]
+                SimpleName: comparing [1166,1175]
+                METHOD_INVOCATION_ARGUMENTS [1176,1182]
+                    LambdaExpression [1176,1182]
+                        VariableDeclarationFragment [1176,1177]
+                            SimpleName: e [1176,1177]
+                        SimpleName: e [1181,1182]
+to
+Block [717,2240]
+at 7
+

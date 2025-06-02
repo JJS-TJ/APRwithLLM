@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "GB" to "GBD"
+------------
+===
+update-node
+---
+StringLiteral: "GB" [325,329]
+replace "GB" by "GBD"
+

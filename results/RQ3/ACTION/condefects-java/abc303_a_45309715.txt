@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from '0' to 'o'
+------------
+===
+update-node
+---
+CharacterLiteral: '0' [509,512]
+replace '0' by 'o'
+
+New cluster:
+UPDATE from 'o' to '0'
+------------
+===
+update-node
+---
+CharacterLiteral: 'o' [531,534]
+replace 'o' by '0'
+

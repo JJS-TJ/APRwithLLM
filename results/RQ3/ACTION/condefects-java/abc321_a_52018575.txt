@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+PrefixExpression [203,205]
+    PREFIX_EXPRESSION_OPERATOR: - [203,204]
+    NumberLiteral: 1 [204,205]
+to
+VariableDeclarationFragment [196,204]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [203,204]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [203,204]
+===
+

@@ -1,0 +1,69 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [757,772]
+to
+IfStatement [753,819]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: == [765,767]
+to
+InfixExpression [757,772]
+at 1
+===
+insert-node
+---
+BooleanLiteral: true [768,772]
+to
+InfixExpression [757,772]
+at 2
+===
+insert-node
+---
+InfixExpression [757,772]
+to
+IfStatement [753,819]
+at 0
+
+New cluster:
+MOVE from InfixExpression [757,772]
+------------
+===
+move-tree
+---
+ArrayAccess [757,764]
+    ArrayAccess [757,761]
+        SimpleName: g [757,758]
+        SimpleName: i [759,760]
+    SimpleName: j [762,763]
+to
+InfixExpression [757,772]
+at 0
+
+New cluster:
+===
+delete-node
+---
+Assignment [757,771]
+===
+------------
+===
+delete-node
+---
+BooleanLiteral: true [767,771]
+===
+===
+delete-node
+---
+Assignment [757,771]
+===
+===
+delete-node
+---
+ASSIGNMENT_OPERATOR: = [765,766]
+===
+

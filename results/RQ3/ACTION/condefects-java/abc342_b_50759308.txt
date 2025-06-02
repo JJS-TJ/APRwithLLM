@@ -1,0 +1,58 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [538,555]
+    SimpleName: order [538,543]
+    InfixExpression [544,554]
+        SimpleName: query1 [544,550]
+        INFIX_EXPRESSION_OPERATOR: - [551,552]
+        NumberLiteral: 1 [553,554]
+to
+InfixExpression [538,553]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [558,575]
+    SimpleName: order [558,563]
+    InfixExpression [564,574]
+        SimpleName: query2 [564,570]
+        INFIX_EXPRESSION_OPERATOR: - [571,572]
+        NumberLiteral: 1 [573,574]
+to
+InfixExpression [538,553]
+at 3
+
+New cluster:
+===
+delete-node
+---
+SimpleName: query1 [538,544]
+===
+------------
+===
+delete-node
+---
+SimpleName: query1 [538,544]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: query2 [547,553]
+===
+------------
+===
+delete-node
+---
+SimpleName: query2 [547,553]
+===
+

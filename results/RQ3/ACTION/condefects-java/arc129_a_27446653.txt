@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+ContinueStatement [597,606]
+to
+IfStatement [571,603]
+at 1
+------------
+===
+insert-node
+---
+ContinueStatement [597,606]
+to
+IfStatement [571,603]
+at 1
+
+New cluster:
+===
+delete-node
+---
+BreakStatement [597,603]
+===
+------------
+===
+delete-node
+---
+BreakStatement [597,603]
+===
+

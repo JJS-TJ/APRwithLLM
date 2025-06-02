@@ -1,0 +1,50 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [801,830]
+to
+InfixExpression [801,838]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: mod [827,830]
+to
+InfixExpression [801,830]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [826,827]
+to
+InfixExpression [801,830]
+at 1
+===
+insert-node
+---
+InfixExpression [801,830]
+to
+InfixExpression [801,838]
+at 0
+
+New cluster:
+MOVE from InfixExpression [801,830]
+------------
+===
+move-tree
+---
+CastExpression [801,826]
+    PrimitiveType: long [802,806]
+    MethodInvocation [807,826]
+        METHOD_INVOCATION_RECEIVER [807,811]
+            SimpleName: Math [807,811]
+        SimpleName: pow [812,815]
+        METHOD_INVOCATION_ARGUMENTS [816,825]
+            NumberLiteral: 10 [816,818]
+            SimpleName: digits [819,825]
+to
+InfixExpression [801,830]
+at 0
+

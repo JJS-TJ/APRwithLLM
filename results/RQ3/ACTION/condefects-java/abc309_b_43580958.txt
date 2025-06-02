@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Block [1364,1439]
+    ExpressionStatement [1390,1417]
+        Assignment [1390,1416]
+            ArrayAccess [1390,1403]
+                ArrayAccess [1390,1400]
+                    SimpleName: newGrid [1390,1397]
+                    SimpleName: i [1398,1399]
+                SimpleName: j [1401,1402]
+            ASSIGNMENT_OPERATOR: = [1404,1405]
+            ArrayAccess [1406,1416]
+                ArrayAccess [1406,1413]
+                    SimpleName: grid [1406,1410]
+                    SimpleName: i [1411,1412]
+                SimpleName: j [1414,1415]
+to
+IfStatement [1263,1358]
+at 2
+

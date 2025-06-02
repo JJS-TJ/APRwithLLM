@@ -1,0 +1,19 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [815,855]
+    MethodInvocation [815,854]
+        METHOD_INVOCATION_RECEIVER [815,825]
+            QualifiedName: System.out [815,825]
+        SimpleName: println [826,833]
+        METHOD_INVOCATION_ARGUMENTS [834,853]
+            MethodInvocation [834,853]
+                METHOD_INVOCATION_RECEIVER [834,840]
+                    SimpleName: Arrays [834,840]
+                SimpleName: toString [841,849]
+                METHOD_INVOCATION_ARGUMENTS [850,852]
+                    SimpleName: aa [850,852]
+

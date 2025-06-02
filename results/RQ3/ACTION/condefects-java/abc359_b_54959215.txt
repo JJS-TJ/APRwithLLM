@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [324,327]
+    NumberLiteral: 2 [324,325]
+    INFIX_EXPRESSION_OPERATOR: * [325,326]
+    SimpleName: n [326,327]
+to
+InfixExpression [324,329]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: n [324,325]
+===
+------------
+===
+delete-node
+---
+SimpleName: n [324,325]
+===
+

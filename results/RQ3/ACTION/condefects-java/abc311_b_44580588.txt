@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: D [1065,1066]
+to
+InfixExpression [1061,1070]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: D [1065,1066]
+to
+InfixExpression [1061,1070]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1065,1070]
+    SimpleName: D [1065,1066]
+    INFIX_EXPRESSION_OPERATOR: - [1067,1068]
+    SimpleName: i [1069,1070]
+

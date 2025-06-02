@@ -1,0 +1,39 @@
+New cluster:
+===
+insert-node
+---
+CastExpression [253,269]
+to
+InfixExpression [253,274]
+at 0
+------------
+===
+insert-node
+---
+PrimitiveType: long [254,258]
+to
+CastExpression [253,269]
+at 0
+===
+insert-node
+---
+CastExpression [253,269]
+to
+InfixExpression [253,274]
+at 0
+
+New cluster:
+MOVE from CastExpression [253,269]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [253,262]
+    InfixExpression [254,261]
+        SimpleName: x1 [254,256]
+        INFIX_EXPRESSION_OPERATOR: - [257,258]
+        SimpleName: x2 [259,261]
+to
+CastExpression [253,269]
+at 1
+

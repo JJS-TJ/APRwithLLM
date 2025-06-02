@@ -1,0 +1,39 @@
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [537,572]
+------------
+===
+move-tree
+---
+MethodInvocation [553,572]
+    METHOD_INVOCATION_RECEIVER [553,565]
+        SimpleName: inputStrings [553,565]
+    SimpleName: get [566,569]
+    METHOD_INVOCATION_ARGUMENTS [570,571]
+        SimpleName: i [570,571]
+to
+METHOD_INVOCATION_ARGUMENTS [537,572]
+at 0
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [537,572]
+===
+------------
+===
+delete-node
+---
+StringLiteral: "Answer is: " [537,550]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: + [551,552]
+===
+===
+delete-node
+---
+InfixExpression [537,572]
+===
+

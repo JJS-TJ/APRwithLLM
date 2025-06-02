@@ -1,0 +1,32 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [966,990]
+    METHOD_INVOCATION_RECEIVER [966,970]
+        SimpleName: Math [966,970]
+    SimpleName: max [971,974]
+    METHOD_INVOCATION_ARGUMENTS [975,989]
+        SimpleName: value [975,980]
+        ArrayAccess [982,989]
+            SimpleName: tree [982,986]
+            SimpleName: x [987,988]
+to
+Assignment [956,971]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: value [966,971]
+===
+------------
+===
+delete-node
+---
+SimpleName: value [966,971]
+===
+

@@ -1,0 +1,148 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1035,1091]
+to
+IfStatement [1032,1072]
+at 0
+------------
+===
+insert-node
+---
+MethodInvocation [1065,1074]
+to
+FieldAccess [1065,1076]
+at 0
+===
+insert-node
+---
+FieldAccess [1065,1076]
+to
+InfixExpression [1065,1091]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: == [1077,1079]
+to
+InfixExpression [1065,1091]
+at 1
+===
+insert-node
+---
+SimpleName: get [1068,1071]
+to
+MethodInvocation [1065,1074]
+at 1
+===
+insert-node
+---
+InfixExpression [1035,1091]
+to
+IfStatement [1032,1072]
+at 0
+===
+insert-node
+---
+SimpleName: i [1075,1076]
+to
+FieldAccess [1065,1076]
+at 1
+===
+insert-node
+---
+InfixExpression [1065,1091]
+to
+InfixExpression [1035,1091]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [1062,1064]
+to
+InfixExpression [1035,1091]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1035,1091]
+------------
+===
+move-tree
+---
+InfixExpression [1035,1061]
+    FieldAccess [1035,1046]
+        MethodInvocation [1035,1044]
+            METHOD_INVOCATION_RECEIVER [1035,1037]
+                SimpleName: t1 [1035,1037]
+            SimpleName: get [1038,1041]
+            METHOD_INVOCATION_ARGUMENTS [1042,1043]
+                SimpleName: i [1042,1043]
+        SimpleName: i [1045,1046]
+    INFIX_EXPRESSION_OPERATOR: == [1047,1049]
+    FieldAccess [1050,1061]
+        MethodInvocation [1050,1059]
+            METHOD_INVOCATION_RECEIVER [1050,1052]
+                SimpleName: t3 [1050,1052]
+            SimpleName: get [1053,1056]
+            METHOD_INVOCATION_ARGUMENTS [1057,1058]
+                SimpleName: j [1057,1058]
+        SimpleName: i [1060,1061]
+to
+InfixExpression [1035,1091]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+FieldAccess [1080,1091]
+    MethodInvocation [1080,1089]
+        METHOD_INVOCATION_RECEIVER [1080,1082]
+            SimpleName: t3 [1080,1082]
+        SimpleName: get [1083,1086]
+        METHOD_INVOCATION_ARGUMENTS [1087,1088]
+            SimpleName: k [1087,1088]
+    SimpleName: i [1090,1091]
+to
+InfixExpression [1065,1091]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [1057,1058]
+    SimpleName: k [1057,1058]
+to
+MethodInvocation [1050,1059]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [1065,1067]
+    SimpleName: t2 [1065,1067]
+to
+MethodInvocation [1065,1074]
+at 0
+
+New cluster:
+MOVE from MethodInvocation [1065,1074]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_ARGUMENTS [1057,1058]
+    SimpleName: j [1057,1058]
+to
+MethodInvocation [1065,1074]
+at 2
+

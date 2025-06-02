@@ -1,0 +1,33 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [506,516]
+    InfixExpression [507,515]
+        InfixExpression [507,513]
+            SimpleName: bit [507,510]
+            INFIX_EXPRESSION_OPERATOR: >> [510,512]
+            SimpleName: i [512,513]
+        INFIX_EXPRESSION_OPERATOR: & [513,514]
+        NumberLiteral: 1 [514,515]
+to
+InfixExpression [506,519]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [506,516]
+    SimpleName: bit [506,509]
+    INFIX_EXPRESSION_OPERATOR: >> [509,511]
+    ParenthesizedExpression [511,516]
+        InfixExpression [512,515]
+            SimpleName: i [512,513]
+            INFIX_EXPRESSION_OPERATOR: & [513,514]
+            NumberLiteral: 1 [514,515]
+

@@ -1,0 +1,33 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [2235,2258]
+    MethodInvocation [2235,2245]
+        METHOD_INVOCATION_RECEIVER [2235,2236]
+            SimpleName: s [2235,2236]
+        SimpleName: length [2237,2243]
+    INFIX_EXPRESSION_OPERATOR: < [2246,2247]
+    MethodInvocation [2248,2258]
+        METHOD_INVOCATION_RECEIVER [2248,2249]
+            SimpleName: t [2248,2249]
+        SimpleName: length [2250,2256]
+to
+ReturnStatement [2228,2241]
+at 0
+
+New cluster:
+===
+delete-node
+---
+BooleanLiteral: false [2235,2240]
+===
+------------
+===
+delete-node
+---
+BooleanLiteral: false [2235,2240]
+===
+

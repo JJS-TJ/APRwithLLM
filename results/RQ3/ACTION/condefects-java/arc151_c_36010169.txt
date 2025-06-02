@@ -1,0 +1,13 @@
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [733,734]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [733,734]
+===
+

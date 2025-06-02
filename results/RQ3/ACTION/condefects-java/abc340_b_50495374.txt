@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: i [462,463]
+to
+ArrayAccess [456,474]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: i [462,463]
+to
+ArrayAccess [456,474]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [462,473]
+    METHOD_INVOCATION_RECEIVER [462,466]
+        SimpleName: list [462,466]
+    SimpleName: size [467,471]
+

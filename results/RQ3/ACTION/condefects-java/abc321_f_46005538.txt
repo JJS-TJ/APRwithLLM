@@ -1,0 +1,108 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [607,638]
+to
+Assignment [599,632]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: mod [635,638]
+to
+InfixExpression [607,638]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [633,634]
+to
+InfixExpression [607,638]
+at 1
+===
+insert-node
+---
+InfixExpression [607,638]
+to
+Assignment [599,632]
+at 2
+
+New cluster:
+MOVE from InfixExpression [607,638]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [607,626]
+    InfixExpression [608,625]
+        ArrayAccess [608,613]
+            SimpleName: dp [608,610]
+            SimpleName: i [611,612]
+        INFIX_EXPRESSION_OPERATOR: - [614,615]
+        ArrayAccess [616,625]
+            SimpleName: dp [616,618]
+            InfixExpression [619,624]
+                SimpleName: i [619,620]
+                INFIX_EXPRESSION_OPERATOR: - [621,622]
+                SimpleName: x [623,624]
+to
+InfixExpression [607,638]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [607,626]
+------------
+===
+move-tree
+---
+InfixExpression [607,632]
+    ParenthesizedExpression [607,626]
+        InfixExpression [608,625]
+            ArrayAccess [608,613]
+                SimpleName: dp [608,610]
+                SimpleName: i [611,612]
+            INFIX_EXPRESSION_OPERATOR: - [614,615]
+            ArrayAccess [616,625]
+                SimpleName: dp [616,618]
+                InfixExpression [619,624]
+                    SimpleName: i [619,620]
+                    INFIX_EXPRESSION_OPERATOR: - [621,622]
+                    SimpleName: x [623,624]
+    INFIX_EXPRESSION_OPERATOR: % [627,628]
+    SimpleName: mod [629,632]
+to
+ParenthesizedExpression [607,626]
+at 0
+
+New cluster:
+MOVE from InfixExpression [607,632]
+------------
+===
+move-tree
+---
+InfixExpression [608,625]
+    ArrayAccess [608,613]
+        SimpleName: dp [608,610]
+        SimpleName: i [611,612]
+    INFIX_EXPRESSION_OPERATOR: - [614,615]
+    ArrayAccess [616,625]
+        SimpleName: dp [616,618]
+        InfixExpression [619,624]
+            SimpleName: i [619,620]
+            INFIX_EXPRESSION_OPERATOR: - [621,622]
+            SimpleName: x [623,624]
+to
+InfixExpression [607,632]
+at 0
+
+New cluster:
+UPDATE from % to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: % [627,628]
+replace % by +
+

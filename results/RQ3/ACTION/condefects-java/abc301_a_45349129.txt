@@ -1,0 +1,47 @@
+New cluster:
+===
+insert-node
+---
+IfStatement [3618,3673]
+to
+IfStatement [3559,3664]
+at 2
+------------
+===
+insert-node
+---
+IfStatement [3618,3673]
+to
+IfStatement [3559,3664]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [3621,3626]
+    SimpleName: a [3621,3622]
+    INFIX_EXPRESSION_OPERATOR: < [3623,3624]
+    SimpleName: b [3625,3626]
+to
+IfStatement [3618,3673]
+at 0
+
+New cluster:
+MOVE from IfStatement [3618,3673]
+------------
+===
+move-tree
+---
+Block [3618,3664]
+    ExpressionStatement [3636,3650]
+        Assignment [3636,3649]
+            SimpleName: judge [3636,3641]
+            ASSIGNMENT_OPERATOR: = [3642,3643]
+            BooleanLiteral: false [3644,3649]
+to
+IfStatement [3618,3673]
+at 1
+

@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: p [1246,1247]
+to
+METHOD_INVOCATION_ARGUMENTS [1246,1247]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: p [1246,1247]
+to
+METHOD_INVOCATION_ARGUMENTS [1246,1247]
+at 0
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 5 [1246,1247]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 5 [1246,1247]
+===
+

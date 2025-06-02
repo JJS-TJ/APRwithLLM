@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: pt1 [534,537]
+to
+METHOD_INVOCATION_ARGUMENTS [531,539]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: pt1 [534,537]
+to
+METHOD_INVOCATION_ARGUMENTS [531,539]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [534,539]
+    SimpleName: pt1 [534,537]
+    INFIX_EXPRESSION_OPERATOR: - [537,538]
+    NumberLiteral: 1 [538,539]
+

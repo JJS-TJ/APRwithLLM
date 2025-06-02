@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [1324,1338]
+    MethodInvocation [1324,1337]
+        METHOD_INVOCATION_RECEIVER [1324,1328]
+            SimpleName: keep [1324,1328]
+        SimpleName: add [1329,1332]
+        METHOD_INVOCATION_ARGUMENTS [1333,1336]
+            SimpleName: now [1333,1336]
+to
+Block [1302,1351]
+at 0
+
+New cluster:
+===
+delete-node
+---
+ContinueStatement [1324,1333]
+===
+------------
+===
+delete-node
+---
+ContinueStatement [1324,1333]
+===
+

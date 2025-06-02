@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from c to j
+------------
+===
+update-node
+---
+SimpleName: c [5681,5682]
+replace c by j
+
+New cluster:
+UPDATE from r to i
+------------
+===
+update-node
+---
+SimpleName: r [5678,5679]
+replace r by i
+

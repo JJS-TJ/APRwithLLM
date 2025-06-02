@@ -1,0 +1,58 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [353,363]
+    ArrayAccess [353,357]
+        SimpleName: s [353,354]
+        SimpleName: i [355,356]
+    INFIX_EXPRESSION_OPERATOR: < [358,359]
+    CharacterLiteral: 'a' [360,363]
+to
+InfixExpression [353,377]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [367,377]
+    CharacterLiteral: 'z' [367,370]
+    INFIX_EXPRESSION_OPERATOR: < [371,372]
+    ArrayAccess [373,377]
+        SimpleName: s [373,374]
+        SimpleName: i [375,376]
+to
+InfixExpression [353,377]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [353,363]
+    ArrayAccess [353,357]
+        SimpleName: s [353,354]
+        NumberLiteral: 0 [355,356]
+    INFIX_EXPRESSION_OPERATOR: < [358,359]
+    CharacterLiteral: 'a' [360,363]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [367,377]
+    CharacterLiteral: 'z' [367,370]
+    INFIX_EXPRESSION_OPERATOR: < [371,372]
+    ArrayAccess [373,377]
+        SimpleName: s [373,374]
+        NumberLiteral: 0 [375,376]
+

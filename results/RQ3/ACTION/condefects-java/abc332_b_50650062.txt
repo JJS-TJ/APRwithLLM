@@ -1,0 +1,15 @@
+New cluster:
+MOVE from Block [399,450]
+------------
+===
+move-tree
+---
+ExpressionStatement [411,416]
+    Assignment [411,415]
+        SimpleName: gc [411,413]
+        ASSIGNMENT_OPERATOR: = [413,414]
+        SimpleName: g [414,415]
+to
+Block [399,450]
+at 1
+

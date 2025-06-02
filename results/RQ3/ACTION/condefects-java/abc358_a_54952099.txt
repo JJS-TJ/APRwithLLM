@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Lnad" to "Land"
+------------
+===
+update-node
+---
+StringLiteral: "Lnad" [249,255]
+replace "Lnad" by "Land"
+

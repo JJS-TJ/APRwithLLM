@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from r to l
+------------
+===
+update-node
+---
+SimpleName: r [604,605]
+replace r by l
+

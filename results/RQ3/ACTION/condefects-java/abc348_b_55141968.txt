@@ -1,0 +1,17 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [913,947]
+    MethodInvocation [913,946]
+        METHOD_INVOCATION_RECEIVER [913,923]
+            QualifiedName: System.out [913,923]
+        SimpleName: println [924,931]
+        METHOD_INVOCATION_ARGUMENTS [932,945]
+            SimpleName: farthestPoint [932,945]
+to
+Block [432,959]
+at 3
+

@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [832,860]
+to
+METHOD_INVOCATION_ARGUMENTS [832,852]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [832,860]
+to
+METHOD_INVOCATION_ARGUMENTS [832,852]
+at 0
+===
+insert-node
+---
+SimpleName: mod [857,860]
+to
+InfixExpression [832,860]
+at 2
+===
+insert-node
+---
+ParenthesizedExpression [832,854]
+to
+InfixExpression [832,860]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [855,856]
+to
+InfixExpression [832,860]
+at 1
+
+New cluster:
+MOVE from ParenthesizedExpression [832,854]
+------------
+===
+move-tree
+---
+InfixExpression [832,852]
+    SimpleName: ans_left [832,840]
+    INFIX_EXPRESSION_OPERATOR: + [841,842]
+    SimpleName: ans_right [843,852]
+to
+ParenthesizedExpression [832,854]
+at 0
+

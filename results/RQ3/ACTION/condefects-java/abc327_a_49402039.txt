@@ -1,0 +1,56 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [192,228]
+to
+IfStatement [189,314]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [209,211]
+to
+InfixExpression [192,228]
+at 1
+===
+insert-node
+---
+InfixExpression [192,228]
+to
+IfStatement [189,314]
+at 0
+
+New cluster:
+MOVE from InfixExpression [192,228]
+------------
+===
+move-tree
+---
+MethodInvocation [192,208]
+    METHOD_INVOCATION_RECEIVER [192,193]
+        SimpleName: s [192,193]
+    SimpleName: contains [194,202]
+    METHOD_INVOCATION_ARGUMENTS [203,207]
+        StringLiteral: "ab" [203,207]
+to
+InfixExpression [192,228]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [212,228]
+    METHOD_INVOCATION_RECEIVER [212,213]
+        SimpleName: s [212,213]
+    SimpleName: contains [214,222]
+    METHOD_INVOCATION_ARGUMENTS [223,227]
+        StringLiteral: "ba" [223,227]
+to
+InfixExpression [192,228]
+at 2
+
