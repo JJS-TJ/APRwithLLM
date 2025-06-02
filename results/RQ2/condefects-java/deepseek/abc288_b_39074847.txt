@@ -1,0 +1,33 @@
+No.2 Patch
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    TreeSet<String> set = new TreeSet<String>();
+    for(int i=0;i<k;i++) {
+        String temp = input.next();
+        set.add(temp);
+    }
+    Iterator<String> iterator = set.iterator();
+    while(iterator.hasNext() && n > 0) {
+        System.out.println(iterator.next());
+        n--;
+    }
+}
+No.3 Patch
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    TreeSet<String> set = new TreeSet<String>();
+    for(int i=0;i<k;i++) {
+        String temp = input.next();
+        set.add(temp);
+    }
+    int cnt = 0;
+    Iterator<String> iterator = set.iterator();
+    while(iterator.hasNext() && cnt < n) {
+        System.out.println(iterator.next());
+        cnt++;
+    }
+}

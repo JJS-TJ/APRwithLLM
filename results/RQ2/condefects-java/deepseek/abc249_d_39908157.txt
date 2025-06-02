@@ -1,0 +1,30 @@
+No.0 Patch
+public static void solve () {
+	
+	int n = nextInt();
+	int[] a = nextIntArray(n);
+	
+	//a[i]がそれぞれ何個あるかを数える
+	int[] count = new int[200009];
+	for (int i=0; i<n; i++) count[a[i]] += 1;
+	
+	long ans = 0;
+	
+	for (int i=0; i<n; i++) {
+		//a[i]を全列挙する
+		
+		List<Integer> divList = allDivisor(a[i]);
+		
+		for (int div : divList) {
+			
+			int jNum = count[div];
+			int kNum = count[a[i] / div];
+			
+			ans += 1L * jNum * kNum;
+			
+		}
+	}
+	
+	println(ans);
+	
+}

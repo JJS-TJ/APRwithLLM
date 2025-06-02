@@ -1,0 +1,32 @@
+No.0 Patch
+static void solve () {
+	
+	char[] s = nextCharArray();
+	String t = next();
+	
+	for (int i=0; i<=25; i++) {
+		if (t.equals(slide(s, i))) {
+			println("Yes");
+			return;
+		}
+	}
+	
+	println("No");
+	
+}
+No.3 Patch
+static void solve () {
+	
+	char[] s = nextCharArray();
+	String t = next();
+	
+	for (int i=0; i<26; i++) {
+		if (t.equals(slide(s, i))) {
+			println("Yes");
+			return;
+		}
+	}
+	
+	println("No");
+	
+}

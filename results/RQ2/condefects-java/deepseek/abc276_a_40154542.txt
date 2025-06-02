@@ -1,0 +1,49 @@
+No.3 Patch
+public static void main(String[] args) throws IOException{
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    // BufferedReader br = new BufferedReader(new FileReader("atcoder_abc/input.in"));
+
+    char[] arr = br.readLine().toCharArray();
+
+    for(int i = arr.length - 1;i >= 0;i--){
+        if(arr[i] == 'a'){
+            System.out.println(i + 1);
+            return;
+        }            
+    }
+    System.out.println(-1);
+}
+
+// Given a sorted array, find the number of times an element is present in the array. 
+// Note that the array may contain duplicate elements.
+No.7 Patch
+public static void main(String[] args) throws IOException{
+    //BufferedReader br = new BufferedReader(new FileReader("atcoder_abc/input.in"));
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    char[] arr = br.readLine().toCharArray();
+    int result = -1;
+
+    for(int i = arr.length - 1;i >= 0;i--){
+        if(arr[i] == 'a'){
+            result = i + 1;
+            break;
+        }
+    }
+    System.out.println(result);
+}
+No.8 Patch
+public static void main(String[] args) throws IOException{
+    //BufferedReader br = new BufferedReader(new FileReader("atcoder_abc/input.in"));
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    String s = br.readLine();
+
+    for(int i = s.length() - 1;i >= 0;i--){
+        if(s.charAt(i) == 'a'){
+            System.out.println(i + 1);
+            return;
+        }            
+    }
+    System.out.println(-1);
+}

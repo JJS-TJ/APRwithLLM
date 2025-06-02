@@ -1,0 +1,117 @@
+No.0 Patch
+public static void main(String[] args) throws Exception {
+  final NextScanner sc = new NextScanner(System.in);
+  final int n = Integer.parseInt(sc.next());
+  final List<List<Integer>> skill_graph = new ArrayList<>();
+  for (int i = 0; i < n; i++) {
+    skill_graph.add(new ArrayList<>());
+  }
+  final long[] times_to_learn = new long[n];
+  for (int i = 0; i < n; i++) {
+    times_to_learn[i] = Long.parseLong(sc.next());
+    int k = Integer.parseInt(sc.next());
+    for (int j = 0; j < k; j++) {
+      int a = Integer.parseInt(sc.next()) - 1;
+      skill_graph.get(i).add(a);
+    }
+  }
+  sc.close();
+  boolean[] learned = new boolean[n];
+  long ans = 0;
+  //要求されるスキルをキューで管理する
+  Queue<Integer> skill_to_learn = new ArrayDeque<>();
+  skill_to_learn.add(n - 1);
+  while (!skill_to_learn.isEmpty()) {
+    int skill = skill_to_learn.poll();
+    if (learned[skill]) {
+      continue;
+    } else {
+      ans += times_to_learn[skill];
+      learned[skill] = true;
+    }
+    for (int next_skill : skill_graph.get(skill)) {
+      if (!learned[next_skill]) {
+        skill_to_learn.add(next_skill);
+      }
+    }
+  }
+  System.out.println(ans);
+}
+No.1 Patch
+public static void main(String[] args) throws Exception {
+  final NextScanner sc = new NextScanner(System.in);
+  final int n = Integer.parseInt(sc.next());
+  final List<List<Integer>> skill_graph = new ArrayList<>();
+  for (int i = 0; i < n; i++) {
+    skill_graph.add(new ArrayList<>());
+  }
+  final long[] times_to_learn = new long[n];
+  for (int i = 0; i < n; i++) {
+    times_to_learn[i] = Long.parseLong(sc.next());
+    int k = Integer.parseInt(sc.next());
+    for (int j = 0; j < k; j++) {
+      int a = Integer.parseInt(sc.next()) - 1;
+      skill_graph.get(i).add(a);
+    }
+  }
+  sc.close();
+  boolean[] learned = new boolean[n];
+  long ans = 0;
+  //要求されるスキルをキューで管理する
+  Queue<Integer> skill_to_learn = new ArrayDeque<>();
+  skill_to_learn.add(n - 1);
+  while (!skill_to_learn.isEmpty()) {
+    int skill = skill_to_learn.poll();
+    if (learned[skill]) {
+      // do nothing
+    } else {
+      ans += times_to_learn[skill];
+      learned[skill] = true;
+      for (int next_skill : skill_graph.get(skill)) {
+        if (!learned[next_skill]) {
+          skill_to_learn.add(next_skill);
+        }
+      }
+    }
+  }
+  System.out.println(ans);
+}
+No.2 Patch
+public static void main(String[] args) throws Exception {
+  final NextScanner sc = new NextScanner(System.in);
+  final int n = Integer.parseInt(sc.next());
+  final List<List<Integer>> skill_graph = new ArrayList<>();
+  for (int i = 0; i < n; i++) {
+    skill_graph.add(new ArrayList<>());
+  }
+  final long[] times_to_learn = new long[n];
+  for (int i = 0; i < n; i++) {
+    times_to_learn[i] = Long.parseLong(sc.next());
+    int k = Integer.parseInt(sc.next());
+    for (int j = 0; j < k; j++) {
+      int a = Integer.parseInt(sc.next()) - 1;
+      skill_graph.get(i).add(a);
+    }
+  }
+  sc.close();
+  boolean[] learned = new boolean[n];
+  long ans = 0;
+  //要求されるスキルをキューで管理する
+  Queue<Integer> skill_to_learn = new ArrayDeque<>();
+  skill_to_learn.add(n - 1);
+  while (!skill_to_learn.isEmpty()) {
+    int skill = skill_to_learn.poll();
+    if (learned[skill]) {
+      // do nothing
+    } else {
+      ans += times_to_learn[skill];
+      learned[skill] = true;
+    }
+    for (int next_skill : skill_graph.get(skill)) {
+      if (!learned[next_skill]) {
+        skill_to_learn.add(next_skill);
+      }
+    }
+  }
+  System.out.println(ans);
+}

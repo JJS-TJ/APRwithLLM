@@ -1,0 +1,20 @@
+No.3 Patch
+private int calc(int a, int b, int c, int x) {
+	boolean rest = false;
+	int last = -1, ans = 0;
+	for (int i = 0; i < x; ++i) {
+		if (!rest) {
+			ans += b;
+			if (i - last == a) {
+				last = i;
+				rest = !rest;
+			}
+		} else {
+			if (i - last == c) {
+				last = i;
+				rest = !rest;
+			}
+		}
+	}
+	return ans;
+}

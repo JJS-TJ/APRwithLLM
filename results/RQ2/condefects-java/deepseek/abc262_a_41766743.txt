@@ -1,0 +1,8 @@
+No.0 Patch
+public static void solve() {
+    int Y = in.nextInt();
+    while (Y % 4 != 2) {
+        Y++;
+    }
+    System.out.println(Y);
+}

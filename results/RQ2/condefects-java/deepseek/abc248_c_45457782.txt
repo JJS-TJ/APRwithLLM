@@ -1,0 +1,16 @@
+No.3 Patch
+private static void tc() {
+    int p=998244353;        
+    int n=io.nextInt(),m=io.nextInt(),k=io.nextInt();
+    long []f=new long[k+1];f[0]=1;
+    for(int i=0;i<n;i++) {
+        int up=Math.min(k,m*(i+1));
+        long s=0;for(int j=up-m+1;j<=up;j++)s+=f[j];
+        for(int j=up;j>=0;j--){
+            s+=j-m>=0?f[j-m]:0;
+            s-=f[j];f[j]=s;
+            f[j] %= p; // Add this line to ensure the value of f[j] is always within the range of 0 to p
+        }
+    }
+    io.println(Arrays.stream(f).sum()%p);
+}

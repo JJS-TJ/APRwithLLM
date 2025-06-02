@@ -1,0 +1,108 @@
+No.1 Patch
+public static void main(String[] args)throws Exception { 
+	Scanner scanner = new Scanner(System.in);
+	int n=scanner.nextInt();
+	int ans=0;
+	
+	for(int i=1;i<n;i++){
+	    int X=i;
+	    int Y=n-i;
+	    int x=0;
+	    int y=0;
+	    for(int j=1;j*j<=X;j++){
+	        if(X%j==0){
+	            x++;
+	            if(X/j != j)x++;
+	        }
+	    }
+	    for(int j=1;j*j<=Y;j++){
+	        if(Y%j==0){
+	            y++;
+	            if(Y/j != j)y++;
+	        }
+	    }
+	    ans+=x*y;
+	}
+	System.out.println(ans);
+}
+No.2 Patch
+public static void main(String[] args) throws Exception {
+    Scanner scanner = new Scanner(System.in);
+    int n = scanner.nextInt();
+    long ans = 0;
+    
+    for (int i = 1; i < n; i++) {
+        int X = i;
+        int Y = n - i;
+        int x = 0;
+        int y = 0;
+        for (int j = 1; j * j <= X; j++) {
+            if (X % j == 0) {
+                x++;
+                if (X != j * j) x++;
+            }
+        }
+        for (int j = 1; j * j <= Y; j++) {
+            if (Y % j == 0) {
+                y++;
+                if (Y != j * j) y++;
+            }
+        }
+        ans += (long) x * y;
+    }
+    System.out.println(ans);
+}
+No.3 Patch
+public static void main(String[] args)throws Exception { 
+	Scanner scanner = new Scanner(System.in);
+	int n=scanner.nextInt();
+	int ans=0;
+	
+	for(int i=1;i<n;i++){
+	    int X=i;
+	    int Y=n-i;
+	    int x=0;
+	    int y=0;
+	    for(int j=1;j*j<=X;j++){
+	        if(X%j==0){
+	            x++;
+	            if(X/j>j)x++;
+	        }
+	    }
+	    for(int j=1;j*j<=Y;j++){
+	        if(Y%j==0){
+	            y++;
+	            if(Y/j>j)y++;
+	        }
+	    }
+	    ans+=x*y;
+	}
+	System.out.println(ans);
+}
+No.6 Patch
+public static void main(String[] args)throws Exception { 
+	Scanner scanner = new Scanner(System.in);
+	int n=scanner.nextInt();
+	long ans=0;
+	
+	for(int i=1;i<n;i++){
+	    int X=i;
+	    int Y=n-i;
+	    long x=0;
+	    long y=0;
+	    for(int j=1;j*j<=X;j++){
+	        if(X%j==0){
+	            x++;
+	            if(X/j != j)x++;
+	        }
+	    }
+	    for(int j=1;j*j<=Y;j++){
+	        if(Y%j==0){
+	            y++;
+	            if(Y/j != j)y++;
+	        }
+	    }
+	    ans+=x*y;
+	}
+	System.out.println(ans);
+}

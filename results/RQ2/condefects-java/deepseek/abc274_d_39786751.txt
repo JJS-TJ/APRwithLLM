@@ -1,0 +1,45 @@
+No.4 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int x = sc.nextInt();
+    int y = sc.nextInt();
+    int maxRangeX = 0;
+    int maxRangeY = 0;
+    boolean[][] dpX = new boolean[20001][n + 1];
+    boolean[][] dpY = new boolean[20001][n + 1];
+    int a = sc.nextInt();
+    int whichXY = -1;
+    int lastX = 0;
+    int lastY = 0;
+    dpX[10000 + a][1] = true;
+    // dpX[10000 - a][1] = true;
+    dpY[10000][0] = true;
+    maxRangeX += Math.abs(a);
+    for(int i = 2; i <= n; i++) {
+        a = Integer.parseInt(sc.next());
+        if(whichXY == 1) {
+            for(int j = 10000 - maxRangeX; j <= 10000 + maxRangeX; j++) {
+                if(dpX[j][i - 2]) {
+                    dpX[j + a][i] = true;
+                    dpX[j - a][i] = true;
+                }
+            }
+            maxRangeX += Math.abs(a);
+            whichXY *= -1;
+            lastX = i;
+        } else {
+            for(int j = 10000 - maxRangeY; j <= 10000 + maxRangeY; j++) {
+                if(dpY[j][i - 2]) {
+                    dpY[j + a][i] = true;
+                    dpY[j - a][i] = true;
+                }
+            }
+            maxRangeY += Math.abs(a);
+            whichXY *= -1;
+            lastY = i;
+        }
+    }
+    if(dpX[10000 + x][lastX] && dpY[10000 + y][lastY]) System.out.println("Yes");
+    else System.out.println("No");
+}

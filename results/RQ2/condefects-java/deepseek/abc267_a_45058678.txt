@@ -1,0 +1,45 @@
+No.0 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		switch (sc.next()) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		}
+	}
+}
+No.1 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		final String day = sc.next();
+		switch (day) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		}
+	}
+}

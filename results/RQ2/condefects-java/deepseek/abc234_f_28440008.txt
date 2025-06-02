@@ -1,0 +1,55 @@
+No.1 Patch
+long choose(int n, int r){
+    if(map[n][r] != 0){
+        return map[n][r];
+    }
+    if(n == r || r == 0){
+        return 1;
+    }
+
+    long ans = choose(n-1, r-1) + choose(n-1, r);
+    map[n][r] = ans % mod;
+    return map[n][r];
+}
+No.3 Patch
+long choose(int n, int r) {
+    if(map[n][r] != 0) {
+        return map[n][r];
+    }
+    if(r == 0 || n == r) {
+        return 1;
+    }
+
+    long ans = choose(n - 1, r - 1) + choose(n - 1, r);
+    map[n][r] = ans % mod;
+    return map[n][r];
+}
+No.4 Patch
+long choose(int n,int r){
+    if(map[n][r] != 0){
+        return map[n][r];
+    }
+    if(n == r || r == 0) {
+        return 1;
+    }
+
+    long ans = choose(n-1, r-1) + choose(n-1, r);
+    map[n][r] = ans % mod;
+    return map[n][r];
+}
+
+// The buggy function doesn't have base cases for r = 0 and n = r, so it will recurse infinitely.
+// The fixed function has a base case for both n = r and r = 0, which prevents the infinite recursion.
+No.5 Patch
+long choose(int n,int r){
+    if(map[n][r] != 0){
+        return map[n][r];
+    }
+    if(r == 0 || n == r){
+        return 1;
+    }
+
+    long ans = choose(n-1, r) + choose(n-1, r-1);
+    map[n][r] = ans % mod;
+    return map[n][r];
+}

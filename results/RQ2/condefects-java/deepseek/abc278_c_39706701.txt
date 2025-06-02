@@ -1,0 +1,116 @@
+No.0 Patch
+public static void main(String[] args) {
+    // TODO 自動生成されたメソッド・スタブ
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int q = sc.nextInt();
+    Set<Pair> follow = new TreeSet<>();
+    int t,a,b;
+
+    for(int i = 0;i < q;i++) {
+        t = Integer.parseInt(sc.next());
+        a = Integer.parseInt(sc.next());
+        b = Integer.parseInt(sc.next());
+        switch(t) {
+        case 1:
+            follow.add(new Pair(a,b));
+            break;
+        case 2:
+            follow.remove(new Pair(a,b));
+            break;
+        case 3:
+            Pair p1 = new Pair(a,b); Pair p2 = new Pair(b,a);
+            //System.out.println(follow);
+            if(follow.contains(p1) == true && follow.contains(p2) == true) {
+                System.out.println("Yes");
+            }else
+                System.out.println("No");
+        }
+    }
+}
+No.1 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int q = sc.nextInt();
+	Set<Pair> follow = new TreeSet<>();
+	int t,a,b;
+	
+	for(int i = 0;i < q;i++) {
+		t = Integer.parseInt(sc.next());
+		a = Integer.parseInt(sc.next());	
+		b = Integer.parseInt(sc.next());
+		switch(t) {
+		case 1:
+			follow.add(new Pair(a,b));
+			break;
+		case 2:
+			follow.remove(new Pair(a,b));
+			break;
+		case 3:
+			Pair p1 = new Pair(a,b); Pair p2 = new Pair(b,a);
+			//System.out.println(follow);
+			if(follow.contains(p1) == true && follow.contains(p2) == true) {
+				System.out.println("Yes");
+			}else
+				System.out.println("No");
+		}
+	}
+}
+No.4 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int q = sc.nextInt();
+	Set<Pair> follow = new TreeSet<>();
+	int t, a, b;
+	
+	for(int i = 0; i < q; i++) {
+		t = Integer.parseInt(sc.next());
+		a = Integer.parseInt(sc.next());	
+		b = Integer.parseInt(sc.next());
+		switch(t) {
+		case 1:
+			follow.add(new Pair(a,b));
+			break;
+		case 2:
+			follow.remove(new Pair(a,b));
+			break;
+		case 3:
+			Pair p1 = new Pair(a,b); Pair p2 = new Pair(b,a);
+			if(follow.contains(p1) && follow.contains(p2)) {
+				System.out.println("Yes");
+			}else
+				System.out.println("No");
+		}
+	}
+}
+No.6 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int q = sc.nextInt();
+    Set<Pair> follow = new TreeSet<>();
+    int t,a,b;
+
+    for(int i = 0;i < q;i++) {
+        t = sc.nextInt();
+        a = sc.nextInt();
+        b = sc.nextInt();
+        switch(t) {
+            case 1:
+                follow.add(new Pair(a,b));
+                break;
+            case 2:
+                follow.remove(new Pair(a,b));
+                break;
+            case 3:
+                Pair p1 = new Pair(a,b); Pair p2 = new Pair(b,a);
+                if(follow.contains(p1) && follow.contains(p2)) {
+                    System.out.println("Yes");
+                }else
+                    System.out.println("No");
+        }
+    }
+}

@@ -1,0 +1,39 @@
+No.0 Patch
+public static void solve () {
+	
+	int n = nextInt();
+	Deque<Ball> q = new ArrayDeque<>();
+	
+	long size = 0;
+	
+	for (int i=0; i<n; i++) {
+		
+		int num = nextInt();
+		
+		if (q.size() == 0) {
+			q.addLast(new Ball(num, 1));
+			size += 1;
+			println(size);
+			continue;
+		}
+		
+		Ball b = q.getLast();
+		
+		if (b.num == num) {
+			b.count += 1;
+			size += 1;
+			if (b.count == b.num) {
+				size -= b.count;
+				q.removeLast();
+			}
+		}
+		else {
+			q.addLast(new Ball(num, 1));
+			size += 1;
+		}
+		
+		println(size);
+		
+	}
+	
+}

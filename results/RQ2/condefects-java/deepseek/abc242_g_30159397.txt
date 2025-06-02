@@ -1,0 +1,42 @@
+No.1 Patch
+static void solve(PrintWriter o, FastScanner sc){
+    try {
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        for(int i=0;i<N;i++){
+            arr[i] = sc.nextInt();
+        }
+        int Q = sc.nextInt();
+        int d = Math.max(1, (int)(N / Math.sqrt(N)));
+        int cur = 0;
+        int nl = 0, nr = -1;
+        int[] res = new int[Q];
+        int[] count = new int[1000001];
+        int[][] qq = new int[Q][4];
+        for(int i=0;i<Q;i++){
+            int l = sc.nextInt()-1, r = sc.nextInt()-1;
+            qq[i] = new int[]{l, r, i, r/d};
+        }
+        Arrays.sort(qq, (a,b) -> a[3] == b[3] ? ((a[3] & 1) == 1 ? a[0] - b[0] : b[0] - a[0]) : a[3] - b[3]);
+        for(int[] q: qq){
+            while(nl < q[0]){
+                cur = addAndRemove(nl++, cur, arr, count, -1);
+            }
+            while(nl > q[0]){
+                cur = addAndRemove(--nl, cur, arr, count, +1);
+            }
+            while(nr < q[1]){
+                cur = addAndRemove(++nr, cur, arr, count, +1);
+            }
+            while(nr > q[1]){
+                cur = addAndRemove(nr--, cur, arr, count, -1);
+            }
+            res[q[2]] = cur;
+        }
+        for(int i=0;i<Q;i++){
+            o.println(res[i]);
+        }
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+}

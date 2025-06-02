@@ -1,0 +1,38 @@
+No.1 Patch
+public static void main(String[] args) {
+
+    String s = "atcoder";
+    Scanner sc = new Scanner(System.in);
+    int l = sc.nextInt();
+    int r = sc.nextInt();
+    String ans = s.substring(l-1,r);
+    System.out.println(ans);
+
+}
+No.2 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();
+int r = sc.nextInt();
+ String ans = s.substring(l-1,r);
+    System.out.println(ans);
+
+}
+No.3 Patch
+public static void main(String[] args) {
+
+    String s = "atcoder";
+    Scanner sc = new Scanner(System.in);
+    int l = sc.nextInt();
+    int r = sc.nextInt();
+    
+    // Correct the indexes as string indices start from 0
+    l = l - 1;
+    r = r - 1;
+    
+    String ans = s.substring(l, r + 1);
+    System.out.println(ans);
+
+}

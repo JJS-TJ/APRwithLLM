@@ -1,0 +1,193 @@
+No.0 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = 0;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+//				println(count);
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+No.1 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+//				println(count);
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+No.3 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = 0;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+
+//Provide a fix for the buggy function
+No.4 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+No.5 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+//				println(count);
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(Math.max(max, count));
+	
+}
+
+// Fix a bug in the following function
+No.6 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = 0;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}

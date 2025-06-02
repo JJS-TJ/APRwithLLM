@@ -1,0 +1,31 @@
+No.1 Patch
+public static void main(String args[]) {
+
+    Scanner input = new Scanner(System.in);
+
+    long N = input.nextLong();
+
+    long result = (long) Math.pow(2, 31);
+
+    if (N >= -result && N <= result-1) {
+        System.out.println("Yes");
+    } else {
+        System.out.println("No");
+    }
+}
+No.2 Patch
+public static void main(String ars[]) {
+	
+	Scanner input = new Scanner(System.in);
+	
+	long N = input.nextLong();
+	
+	if (N >= -2147483648 && N <= 2147483647 ) {
+
+	System.out.println("Yes");
+	
+	}
+	else {
+		System.out.println("No");
+	}
+}

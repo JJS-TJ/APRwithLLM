@@ -1,0 +1,39 @@
+No.3 Patch
+public static void main(String[] args) {
+    Kattio io = new Kattio();
+    int n = io.nextInt();
+    int k = io.nextInt();
+    PriorityQueue<Long> queue = new PriorityQueue<Long>(((o1, o2) -> Long.compare(o2,o1)));
+    int[][] que = new int[n + 1][2];
+    que[0][0] = 1;
+    que[0][1] = 0;
+    for (int i = 1; i <= n; i++) {
+        que[i][0] = io.nextInt();
+        que[i][1] = io.nextInt();
+    }
+    long sum = 0;
+    int cnt1 = 0;
+    long now = 0;
+    long ans = Long.MIN_VALUE;
+    for (int i = que.length - 1; i >= 0; i--) {
+        long a = que[i][0];
+        long b = que[i][1];
+        if (a == 1) {
+            cnt1++;
+            sum += b - now;
+            now = b;
+            if (k + 1 < cnt1) break;
+            int v = k - cnt1 + 1;
+            while (queue.size() > v) {
+                sum += queue.poll();
+            }
+            ans = Math.max(ans, sum);
+        } else if (b > 0) {
+            sum += b;
+        } else {
+            queue.add(b);
+        }
+    }
+    io.println(ans);
+    io.flush();
+}

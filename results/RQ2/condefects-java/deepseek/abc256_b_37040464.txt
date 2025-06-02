@@ -1,0 +1,61 @@
+No.1 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) {
+		total +=a[i];
+		if(total>=4)break;
+		ans--;
+	}
+	
+     System.out.println(ans);
+}
+No.2 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) { // start from i = n-1
+		total += a[i];
+		if(total>=4) break;
+		ans--;
+	}
+	System.out.println(ans);
+}
+No.3 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) {
+		total +=a[i];
+		if(total>=4)break;
+		ans--;
+	}
+     System.out.println(ans);
+}
+
+// Given a string S, the task is to find the sum of the ASCII values of the characters in the string.
+
+// Example:
+
+// Input: S = "abc"
+// Output: 294
+// Explanation: ASCII value of 'a' is 97, 'b' is 98 and 'c' is 99.
+// So, the sum of the ASCII values is 97 + 98 + 99 = 294.

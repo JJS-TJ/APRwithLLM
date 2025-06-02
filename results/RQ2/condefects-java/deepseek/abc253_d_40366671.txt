@@ -1,0 +1,33 @@
+No.0 Patch
+static void solve() throws IOException{
+    long n=in.nextLong(),a=in.nextLong(),b=in.nextLong();
+    long sum=(n*(n+1))/2;
+    long sum1=a*((n/a)*((n/a) +1))/2;
+    long sum2=b*((n/b)*((n/b) +1))/2;
+    long p=(a*b)/gcd(a,b);
+    long sum3=p*((n/p)*((n/p) +1))/2;
+    out.println(sum-(sum1+sum2-sum3));
+
+
+}
+No.2 Patch
+static void solve() throws IOException{
+    long n=in.nextLong(),a=in.nextLong(),b=in.nextLong();
+    long sum=(n*(n+1))/2;
+    long sum1=a*((n/a)*((n/a) +1))/2;
+    long sum2=b*((n/b)*((n/b) +1))/2;
+    long p=a*b/gcd(a,b);
+    long sum3=p*((n/p)*((n/p) +1))/2;
+    out.println(sum-(sum1+sum2-sum3));
+
+}
+No.3 Patch
+static void solve() throws IOException{
+    long n=in.nextLong(),a=in.nextLong(),b=in.nextLong();
+    long sum=(n*(n+1))/2;
+    long sum1=a*((n/a)*(n/a+1))/2;
+    long sum2=b*((n/b)*(n/b+1))/2;
+    long p=a*b/gcd(a,b);
+    long sum3=p*((n/p)*(n/p+1))/2;
+    out.println(sum-(sum1+sum2-sum3));
+}

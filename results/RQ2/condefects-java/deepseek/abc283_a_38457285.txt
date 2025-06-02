@@ -1,0 +1,6 @@
+No.1 Patch
+void solve(FScanner sc, FWriter out) {
+    long a = sc.nextLong(), b = sc.nextLong();
+    
+    out.println((long)Math.pow(a, b));
+}

@@ -1,0 +1,73 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);
+}
+No.2 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);  // 駒同士の距離を出力
+}
+No.5 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    if (distance == 0) {
+        System.out.println(0);  // 駒が同じ位置にある場合、移動が必要ないため、0を出力
+    } else {
+        System.out.println(distance);
+    }
+}

@@ -1,0 +1,86 @@
+No.0 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+    }
+
+    if (dp[N-1] == INF) {
+        return -1;
+    }
+
+    return dp[N-1];
+}
+No.1 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        if (dp[e.a] != INF) {
+            dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+        }
+    }
+
+    return dp[N-1] == INF ? -1 : dp[N-1];
+}
+No.2 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+    }
+
+    // 辺を一度も使わなかった場合
+    if (dp[N-1] == INF) {
+        return -1;
+    }
+
+    return dp[N-1];
+}
+No.3 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < P.length; i++) {
+        var e = E[P[i]];
+        dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+    }
+
+    return dp[N-1] == INF ? -1 : dp[N-1];
+}
+No.5 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+    }
+
+    return dp[N-1] == INF ? -1 : dp[N-1];
+}

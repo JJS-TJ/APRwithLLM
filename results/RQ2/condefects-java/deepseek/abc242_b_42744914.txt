@@ -1,0 +1,27 @@
+No.0 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	out.println(ss);
+	
+	
+	out.flush();
+}
+No.1 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	out.println(ss);
+	
+	out.flush();
+}

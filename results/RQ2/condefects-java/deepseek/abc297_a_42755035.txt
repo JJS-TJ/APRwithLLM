@@ -1,0 +1,26 @@
+No.0 Patch
+public static void main(String[] args) {
+
+    int n = sc.nextInt();
+    if (n < 2) {
+        sc.close();
+        System.out.println(FAILURE);
+        return;
+    }
+
+    int d = sc.nextInt();
+    int t1 = sc.nextInt();
+    
+    while(sc.hasNext()) {
+        int t2 = sc.nextInt();
+        if (t2 - t1 <= d) {
+            sc.close();
+            System.out.println(t2);
+            return;
+        }
+        t1 = t2;
+    }
+
+    sc.close();
+    System.out.println(FAILURE);
+}

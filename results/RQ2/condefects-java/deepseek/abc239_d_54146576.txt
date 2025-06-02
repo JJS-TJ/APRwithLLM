@@ -1,0 +1,66 @@
+No.1 Patch
+public static void main(String[] args) {
+    prepareOsaK(10000);
+    int a = getInt();
+    int b = getInt();
+    int c = getInt();
+    int d = getInt();
+    for(int i = a;i <= b;i++){
+        boolean find = false;
+        for(int j = c;j <= d;j++){
+            if(prime[i+j]){
+                find = true;
+            }
+        }
+        if(!find){
+            out("Takahashi");
+            return;
+        }
+    }
+    out("Aoki");
+}
+No.2 Patch
+public static void main(String[] args) {
+    prepareOsaK(10000);
+    int a = getInt();
+    int b = getInt();
+    int c = getInt();
+    int d = getInt();
+    boolean takahashiWin = false;
+    for(int i = a; i <= b; i++){
+        boolean find = false;
+        for(int j = c; j <= d; j++){
+            if(prime[i+j]){
+                find = true;
+                break;
+            }
+        }
+        if(!find){
+            takahashiWin = true;
+            break;
+        }
+    }
+    out(takahashiWin ? "Takahashi" : "Aoki");
+}
+No.3 Patch
+public static void main(String[] args) {
+    prepareOsaK(10000);
+    int a = getInt();
+    int b = getInt();
+    int c = getInt();
+    int d = getInt();
+    for(int i = a;i <= b;i++){
+        boolean find = false;
+        for(int j = c;j <= d;j++){
+            if(prime[i+j]){
+                find = true;
+                break;
+            }
+        }
+        if(!find){
+            out("Takahashi");
+            return;
+        }
+    }
+    out("Aoki");
+}

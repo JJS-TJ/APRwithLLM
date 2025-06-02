@@ -1,0 +1,22 @@
+No.0 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    int s=c%100;
+    if(s==0 && c != 0){
+    System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+No.4 Patch
+public static void main (String[]args) {
+    Scanner scan = new Scanner(System.in);
+    int c = scan.nextInt();
+    int s = c % 100;
+    if (s == 0 && c != 0) {
+        System.out.println("Yes");
+    } else {
+        System.out.println("No");
+    }
+}

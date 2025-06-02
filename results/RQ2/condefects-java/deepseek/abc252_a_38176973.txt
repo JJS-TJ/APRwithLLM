@@ -1,0 +1,49 @@
+No.0 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    if (n >= 0 && n <= 65535) {
+        char c = (char)n;
+        System.out.println(c);
+    } else {
+        System.out.println("Invalid Input");
+    }
+}
+No.1 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  if(n>=0 && n<=65535) {
+      char c = (char)n;
+      System.out.println(c);
+  }
+  else
+      System.out.println("Invalid Number");
+ 
+}
+No.2 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}
+No.4 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    char c = (char)n;
+    System.out.println(c);
+}
+No.5 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  if (n > 0 && n < 255) {
+    char c = (char)n;
+    System.out.println(c);
+  } else {
+    System.out.println("Invalid Input");
+  }
+}

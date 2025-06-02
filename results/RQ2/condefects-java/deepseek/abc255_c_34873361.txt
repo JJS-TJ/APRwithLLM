@@ -1,0 +1,18 @@
+No.0 Patch
+void solve() {
+
+    long X = sc.nextLong();
+    long A = sc.nextLong();
+    long D = sc.nextLong();
+    long N = sc.nextLong();
+
+    long l = A + D * (N - 1);
+
+    long max = Math.max(A, l);
+    long min = Math.min(A, l);
+
+    if(X <= min) System.out.println(Math.abs(min - X));
+    else if(X >= max) System.out.println(Math.abs(max - X));
+    else System.out.println(Math.min(Math.abs((X - A) % D), Math.abs(D - (X - A) % D)));
+
+}

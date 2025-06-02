@@ -1,0 +1,20 @@
+No.3 Patch
+static void fk() {
+    int q = in.nextInt();
+    long cur = 1;
+    LinkedList<Long> dq = new LinkedList<>();
+    dq.add(1L);
+    for (int i = 0; i < q; i++) {
+        int c = in.nextInt();
+        if (c == 1) {
+            long cv = in.nextLong();
+            cur = (cur * 10 + cv) % mod;
+            dq.add(cv);
+        } else if (c == 2) {
+            long fv = dq.pollFirst();
+            cur = (cur - (fv * powWithMod(10, dq.size(), mod)) % mod + mod) % mod;
+        } else {
+            out.println(cur);
+        }
+    }
+}

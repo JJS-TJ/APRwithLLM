@@ -1,0 +1,107 @@
+No.0 Patch
+public static void main(String[] args) {
+    var sc = new Scanner(System.in);
+    var n = sc.nextInt();
+    var m = sc.nextInt();
+    var a = IntStream.range(0, n).map(i -> sc.nextInt()).toArray();
+    var c = IntStream.range(0, n).map(i -> sc.nextInt()).toArray();
+    var x = IntStream.range(0, m).map(i -> sc.nextInt()).toArray();
+    sc.close();
+
+    var seg = new Main().new SegmentTree(n);
+    for (var i = 0; i < n; i++) {
+        seg.update(i, c[i]);
+    }
+    var set = Arrays.stream(x).boxed().collect(Collectors.toSet());
+
+    var dp = new long[n + 1][n + 1];
+    for (var i = 0; i <= n; i++) {
+        for (var j = 0; j <= n; j++) {
+            dp[i][j] = Long.MAX_VALUE;
+        }
+    }
+    dp[0][0] = 0L;
+    for (var i = 0; i < n; i++) {
+        for (var j = 0; j <= i; j++) {
+            if (dp[i][j] == Long.MAX_VALUE) {
+                continue;
+            }
+            var v = dp[i][j] + a[i] + seg.get(i - j, i + 1);
+            //System.out.printf("%d %d %d\r\n", i, j, v);
+            if (set.contains(i + 1)) {
+                dp[i + 1][j + 1] = Math.min(dp[i + 1][j + 1], v);
+            } else {
+                dp[i + 1][j] = Math.min(dp[i + 1][j], dp[i][j]);
+                dp[i + 1][j + 1] = Math.min(dp[i + 1][j + 1], v);
+            }
+        }
+    }
+
+    var result = Long.MAX_VALUE;
+    for (var i = 0; i <= n; i++) {
+        result = Math.min(result, dp[n][i]);
+    }
+    System.out.print(result);
+}
+No.4 Patch
+public static void main(String[] args) {
+	var sc = new Scanner(System.in);
+	var n = sc.nextInt();
+	var m = sc.nextInt();
+	var a = IntStream.range(0, n).map(i -> sc.nextInt()).toArray();
+	var c = IntStream.range(0, n).map(i -> sc.nextInt()).toArray();
+	var x = IntStream.range(0, m).map(i -> sc.nextInt()).toArray();
+	sc.close();
+
+	var seg = new Main().new SegmentTree(n);
+	for (var i = 0;; i++) {
+		if (i >= n) {
+			break;
+		}
+		seg.update(i, c[i]);
+	}
+	var set = Arrays.stream(x).boxed().collect(Collectors.toSet());
+
+	var dp = new long[n + 1][n + 1];
+	for (var i = 0;; i++) {
+		if (i > n) {
+			break;
+		}
+		for (var j = 0;; j++) {
+			if (j > i) {
+				break;
+			}
+			dp[i][j] = Long.MAX_VALUE;
+		}
+	}
+	dp[0][0] = 0L;
+	for (var i = 0;; i++) {
+		if (i >= n) {
+			break;
+		}
+		for (var j = 0;; j++) {
+			if (j > i) {
+				break;
+			}
+			if (dp[i][j] == Long.MAX_VALUE) {
+				continue;
+			}
+			var v = dp[i][j] + a[i] + seg.get(i - j, i + 1);
+			if (set.contains(i + 1)) {
+				dp[i + 1][j + 1] = Math.min(dp[i + 1][j + 1], v);
+			} else {
+				dp[i + 1][j] = Math.min(dp[i + 1][j], dp[i][j]);
+				dp[i + 1][j + 1] = Math.min(dp[i + 1][j + 1], v);
+			}
+		}
+	}
+
+	var result = Long.MAX_VALUE;
+	for (var i = 0;; i++) {
+		if (i > n) {
+			break;
+		}
+		result = Math.min(result, dp[n][i]);
+	}
+	System.out.print(result);
+}

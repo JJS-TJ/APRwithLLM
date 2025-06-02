@@ -1,0 +1,42 @@
+No.3 Patch
+public static void solve() {
+    int n = rI();
+    int[] c = rIv(9);
+    int min = min(c);
+    int minidx = -1;
+    for (int i = 0; i < 9; i++) {
+        if(c[i] == min){
+            minidx = i;
+        }
+    }
+    int times = n/min;
+    if(times == 0) {
+        oI(0);
+        return;
+    }
+
+    int[] ans = new int[times];
+    Arrays.fill(ans,minidx+1);
+    int left = n%min;
+    int[] nc = new int[9-minidx];
+    for (int i = 0; i < 9 - minidx; i++) {
+        nc[i] = c[i+minidx] - min;
+    }
+    int idx = 0;
+    out:for (int i = 8-minidx; i >= 0; i--) {
+        if(left == 0) break;
+        while (left >= nc[i] && idx < times){
+            ans[idx] = i+minidx+1;
+            left -= nc[i];
+            idx++;
+        }
+    }
+    StringBuilder an = new StringBuilder();
+    for (int i = 0; i < times; i++) {
+        an.append(ans[i]);
+    }
+    oS(an.toString());
+
+
+
+}

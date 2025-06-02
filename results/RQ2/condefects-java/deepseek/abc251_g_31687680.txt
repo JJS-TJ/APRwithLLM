@@ -1,0 +1,34 @@
+No.1 Patch
+public static void main(String[] args) throws Exception {
+    ContestScanner sc = new ContestScanner();
+    ContestPrinter cp = new ContestPrinter();
+    int N = sc.nextInt();
+    long[][] poly = sc.nextLongMatrix(N, 2);
+    int M = sc.nextInt();
+    long[][] shift = sc.nextLongMatrix(M, 2);
+    int Q = sc.nextInt();
+    long[][] query = sc.nextLongMatrix(Q, 2);
+    long[][] edge = new long[N][2];
+    for (int n = 0; n < N; n++) {
+        edge[n][0] = poly[(n + 1) % N][0] - poly[n][0];
+        edge[n][1] = poly[(n + 1) % N][1] - poly[n][1];
+    }
+    long[] maxvalue = new long[N];
+    Arrays.fill(maxvalue, Long.MIN_VALUE);
+    for (long[] sh : shift) {
+        for (int n = 0; n < N; n++) {
+            maxvalue[n] = Math.max(maxvalue[n],
+                    -((long) poly[n][0] + sh[0]) * edge[n][1] + ((long) poly[n][1] + sh[1]) * edge[n][0]);
+        }
+    }
+    for (long[] q : query) {
+        boolean ok = true;
+        for (int n = 0; n < N; n++) {
+            if (-(long) q[0] * edge[n][1] + (long) q[1] * edge[n][0] < maxvalue[n]) {
+                ok = false;
+            }
+        }
+        cp.println(ok ? "Yes" : "No");
+    }
+    cp.close();
+}
