@@ -1,0 +1,58 @@
+No.0 Patch
+n = 10
+s = [input() for i in range(n)]
+
+# Initialize variables
+min_i = 100
+max_i = 0
+min_j = 100
+max_j = 0
+
+# Loop through each row
+for i in range(n):
+    # Loop through each column
+    for j in range(n):
+        if s[i][j] == "#":
+            # If the current cell is a wall, then update the variables
+            if i < min_i:
+                min_i = i
+            if i > max_i:
+                max_i = i
+            if j < min_j:
+                min_j = j
+            if j > max_j:
+                max_j = j
+
+# Print the result
+print(min_i+1, max_i+1)
+print(min_j+1, max_j+1)
+No.3 Patch
+n = 10
+s = [input() for i in range(n)]
+
+x = []
+y = []
+for i in range(n):
+    for j in range(n):
+        if s[i][j] == '#':
+            x.append(i)
+            y.append(j)
+print(min(x)+1,max(x)+1)
+print(min(y)+1,max(y)+1)
+
+# +
+# Print the first half of the string
+No.4 Patch
+n = 10
+s = [input()for i in range(n)]
+
+a,b,c,d = 100, 0, 100, 0
+for i in range(n):
+    for j in range(n):
+      if s[i][j]=='#':
+        if a>i : a=i
+        if b<i : b=i
+        if c>j : c=j
+        if d<j : d=j
+print(a+1,b+1)
+print(c+1,d+1)

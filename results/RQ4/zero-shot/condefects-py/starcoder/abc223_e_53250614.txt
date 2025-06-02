@@ -1,0 +1,38 @@
+No.9 Patch
+from itertools import permutations
+from sys import stdin
+
+
+def ceil(x, y):
+    return x // y + int(x % y != 0)
+
+
+def main():
+    x, y, a, b, c = map(int, stdin.readline().strip().split())
+    for perm in permutations([a, b, c], 3):
+        aa, bb, cc = perm
+        yy = ceil(aa, x)
+        rest = y - yy
+        if rest > 0 and ceil(bb, rest) + ceil(cc, rest) <= x:
+            print("Yes")
+            return
+
+        if ceil(aa, x) + ceil(bb, x) + ceil(cc, x) <= y:
+            print("Yes")
+            return
+
+        if ceil(aa, y) + ceil(bb, y) + ceil(cc, y) <= x:
+            print("Yes")
+            return
+
+        xx = ceil(aa, y)
+        rest = x - xx
+        if rest > 0 and ceil(bb, rest) + ceil(cc, rest) <= y:
+            print("Yes")
+            return
+
+    print("No")
+
+
+if __name__ == "__main__":
+    main()

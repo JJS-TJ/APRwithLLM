@@ -1,0 +1,13 @@
+No.1 Patch
+def encrypt(phrase, operation):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for _ in range(operation):
+        original, become = input().split()
+        alphabet = alphabet.replace(original, become)
+    return "".join([alphabet[ord(ch)-97] for ch in phrase])
+
+n = int(input())
+phrase = input().lower()
+operation = int(input())
+
+print(encrypt(phrase, operation))

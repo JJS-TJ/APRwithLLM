@@ -1,0 +1,17 @@
+No.2 Patch
+N = int(input())
+S = input()
+
+print(max([S.find('A'), S.find('B'), S.find('C')])+1)
+No.3 Patch
+N = int(input())
+S = input()
+
+a = S.find('A')
+b = S.find('B')
+c = S.find('C')
+
+if a == -1 and b == -1 and c == -1:
+    print(0)
+else:
+    print(max([a,b,c])+1)

@@ -1,0 +1,13 @@
+No.0 Patch
+Datos = input()
+Data = [int (num) for num in Datos.split()]
+
+def solucion(n, m):
+    if (n * 2) == m:
+        return "Yes"
+    elif (n * 2) + 1 == m:
+        return "Yes"
+    else:
+        return "No"
+
+print(solucion(Data[0], Data[1]))

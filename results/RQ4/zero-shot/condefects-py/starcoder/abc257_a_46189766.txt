@@ -1,0 +1,9 @@
+No.6 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+if X % N == 0:
+    print(ascii_uppercase[X // N - 1])
+else:
+    print(ascii_uppercase[X // N])

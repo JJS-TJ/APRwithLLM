@@ -1,0 +1,41 @@
+No.0 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = []
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)
+No.1 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+
+for i in range(len(a)):
+    if a[i] < L:
+        a[i] = L
+    elif a[i] > R:
+        a[i] = R
+print(*a)
+No.2 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = []
+for i in a:
+    ans.append(max(L, min(R, i)))
+print(*ans)
+No.3 Patch
+def f(N, L, R, a):
+    for i in range(N):
+        if a[i] < L:
+            a[i] = L
+        elif a[i] > R:
+            a[i] = R
+    return a
+
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+print(*f(N, L, R, a))

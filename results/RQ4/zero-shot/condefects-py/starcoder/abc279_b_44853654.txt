@@ -1,0 +1,14 @@
+No.4 Patch
+s = input()
+t = input()
+
+# Reverse the strings
+t = t[::-1]
+s = s[::-1]
+
+# Check if there is a match for the first k characters
+for i in range(len(s) - len(t) + 1):
+    if s[i:i+len(t)] == t:
+        print("Yes")
+        exit()
+print("No")

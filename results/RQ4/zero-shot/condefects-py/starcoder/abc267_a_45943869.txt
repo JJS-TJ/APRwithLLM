@@ -1,0 +1,30 @@
+No.1 Patch
+def get_day_number(day):
+    return {
+        "Monday": 5,
+        "Tuesday": 4,
+        "Wednesday": 3,
+        "Thursday": 2,
+        "Friday": 1
+    }[day]
+
+# Test case
+s=input()
+print(get_day_number(s))
+No.2 Patch
+s=input()
+print(dict(Monday=5, Tuesday=4, Wednesday=3, Thursday=2, Friday=1)[s])
+No.3 Patch
+s=input()
+if s=="Monday":
+    print(5)
+if s=="Tuesday":
+    print(4)
+if s=="Wednesday":
+    print(3)
+if s=="Thursday":
+    print(2)
+if s=="Friday":
+    print(1)
+
+# ### 3) Fix the buggy function

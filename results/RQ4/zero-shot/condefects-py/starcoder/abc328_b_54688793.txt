@@ -1,0 +1,26 @@
+No.2 Patch
+N = int(input())
+D = list(map(int,input().split()))
+ans = 0
+for x in range(1,N+1):
+  for y in range(1,D[x-1]+1):
+    x = str(x)
+    y = str(y)
+    a = list(x)
+    b = list(y)
+    a = set(a)
+    b = set(b)
+    a = list(a)
+    b = list(b)
+    if len(a) == 1 and len(b) == 1 and a == b:
+      ans += 1
+print(ans)
+No.6 Patch
+N = int(input())
+D = list(map(int,input().split()))
+ans = 0
+for x in range(1,N+1):
+  for y in range(1,D[x-1]+1):
+    if len(set(str(x))) == 1 and len(set(str(y))) == 1 and set(str(x)) == set(str(y)):
+      ans += 1
+print(ans)

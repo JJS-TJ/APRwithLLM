@@ -1,0 +1,46 @@
+No.0 Patch
+N = int(input())
+lis = list(map(int,input().split(' ')))
+result = "Yes"
+
+for i in range(len(lis)-1):
+    if lis[i] != lis[i+1]:
+        result = "No"
+        break
+
+print(result)
+No.1 Patch
+N=int(input())
+lis=list(map(int,input().split(' ')))
+
+check=False
+for i in range(len(lis)-1):
+    if lis[i]!=lis[i+1]:
+        check=True
+
+if check:
+    print("No")
+else:
+    print("Yes")
+No.3 Patch
+N=int(input())
+lis=list(map(int,input().split(' ')))
+
+def all_elements_are_same(lis):
+    for i in range(len(lis)-1):
+        if lis[i]!=lis[i+1]:
+            return False
+    return True
+
+if all_elements_are_same(lis):
+    print("Yes")
+else:
+    print("No")
+No.4 Patch
+def is_sorted(lis):
+    return all(lis[i] <= lis[i+1] for i in range(len(lis)-1))
+
+N=int(input())
+lis=list(map(int,input().split(' ')))
+
+print("Yes" if is_sorted(lis) else "No")

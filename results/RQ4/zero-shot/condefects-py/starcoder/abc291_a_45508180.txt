@@ -1,0 +1,25 @@
+No.1 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i] in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+    print(i + 1)
+
+# The End
+No.2 Patch
+S = input()
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+No.3 Patch
+S = input()
+
+for i in range(len(S)):
+  if ord(S[i]) >= 65 and ord(S[i]) <= 90:
+    print(i + 1)
+No.5 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)

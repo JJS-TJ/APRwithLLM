@@ -1,0 +1,5 @@
+No.1 Patch
+S = input()
+
+# Print the answer
+print(S[:-1] + str(int(S[-1]) + 1))

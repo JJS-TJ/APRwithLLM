@@ -1,0 +1,21 @@
+No.3 Patch
+def fixed_func(n,k,a):
+  ak = [[] for _ in range(k)]
+  for i in range(n):
+    ak[i%k].append(a[i])
+  aksort = [0]*k
+  for i in range(k):
+    aksort[i] = sorted(ak[i])
+  for i in range(n):
+    if asort[i] != aksort[i%k][i//k]:
+      return False
+  return True
+
+# Test
+n,k = map(int,input().split())
+a = list(map(int,input().split()))
+asort = sorted(a)
+if fixed_func(n,k,a):
+  print('Yes')
+else:
+  print('No')

@@ -1,0 +1,27 @@
+No.0 Patch
+N, A, B = map(int, input().split())
+C = list(map(int, input().split()))
+for i in range(len(C)):
+  if C[i] == A + B:
+    print(i+1)
+No.2 Patch
+N, A, B = map(int, input().split())
+C = list(map(int, input().split()))
+
+for i in range(len(C)):
+  if C[i] == A + B:
+    print(i+1)
+No.6 Patch
+N, A, B = map(int, input().split())
+C = list(map(int, input().split()))
+for i in range(len(C)):
+  if C[i] == A + B:
+    print(i+1)
+
+# + id="f8zX616V_p-g"
+No.7 Patch
+N, A, B = map(int, input().split())
+C = list(map(int, input().split()))
+for i in range(len(C)):
+  if C[i] == A+B:
+    print(i+1)

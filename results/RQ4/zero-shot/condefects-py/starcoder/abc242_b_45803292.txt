@@ -1,0 +1,10 @@
+No.1 Patch
+def func():
+    # 入力を取得
+    S = input()
+    
+    # 入れ替えて返す
+    return "".join(sorted(S))
+
+if __name__ == '__main__':
+    print(func())

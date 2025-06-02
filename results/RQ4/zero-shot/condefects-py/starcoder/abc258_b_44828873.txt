@@ -1,0 +1,16 @@
+No.2 Patch
+def get_flipped(arr,n):
+    D = [(1,0),(1,-1),(0,-1),(-1,-1),(-1,0),(-1,1),(0,1),(1,1)]
+    ans = []
+    for r in range(n):
+        for c in range(n):
+            for dr,dc in D:
+                tmp = []
+                for i in range(n):
+                    tmp.append(arr[(r+dr*i)%n][(c+dc*i)%n])
+                ans.append("".join(tmp))
+    return ans
+
+n = int(input())
+A = [input() for _ in range(n)]
+print(sorted(get_flipped(A,n))[-1])

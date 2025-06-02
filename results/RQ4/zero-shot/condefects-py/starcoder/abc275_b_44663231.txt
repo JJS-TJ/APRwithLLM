@@ -1,0 +1,20 @@
+No.0 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=a%mod*b%mod*c%mod
+a2=d%mod*e%mod*f%mod
+a1=(a1%mod+mod)%mod
+a2=(a2%mod+mod)%mod
+print((a1-a2)%mod)
+No.3 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=(a%mod*b%mod*c%mod)%mod
+a2=(d%mod*e%mod*f%mod)%mod
+print((a1-a2+mod)%mod)
+No.5 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=a%mod*b%mod*c%mod
+a2=d%mod*e%mod*f%mod
+print(((a1-a2)+mod)%mod)

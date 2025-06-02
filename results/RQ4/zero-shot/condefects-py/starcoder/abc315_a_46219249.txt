@@ -1,0 +1,8 @@
+No.0 Patch
+import re
+
+s = input()
+
+for c in "aeiou":
+    s = re.sub(c, "", s)
+print(s)

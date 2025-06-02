@@ -1,0 +1,4 @@
+No.2 Patch
+A, B = map(int, input().split())
+
+print(format(B/A, ".3f"))

@@ -1,0 +1,16 @@
+No.4 Patch
+S = list(map(int, input().split()))
+
+N = len(S)
+for i in range(N):
+    if sorted(S) != S:
+        print('No')
+        break
+    elif 100 > S[i] or 675 < S[i]:
+        print('No')
+        break
+    elif S[i]%25 != 0:
+        print('No')
+        break
+else:
+    print('Yes')

@@ -1,0 +1,12 @@
+No.5 Patch
+s = list(input())
+
+S = sorted(list(set(s)))
+
+str = ""
+
+for i in S:
+    if s.count(i) > s.count(str):
+        str = i
+
+print(str)

@@ -1,0 +1,34 @@
+No.1 Patch
+H, W = map(int, input().split())
+A = [list(map(int, input().split())) for _ in range(H)]
+
+Flag = True
+for a in range(H):
+	for b in range(a+1, H):
+		if A[a][0] + A[b][W-1] > A[b][0] + A[a][W-1]:
+			Flag = False
+for c in range(W):
+	for d in range(c+1, W):
+		if A[0][c] + A[H-1][d] > A[H-1][c] + A[0][d]:
+			Flag = False
+if Flag:
+	print('Yes')
+else:
+	print('No')
+No.2 Patch
+H, W = map(int, input().split())
+A = [list(map(int, input().split())) for _ in range(H)]
+
+Flag = True
+for a in range(H-1):
+	for b in range(a+1, H):
+		if A[a][0] + A[b][W-1] > A[b][0] + A[a][W-1]:
+			Flag = False
+		for c in range(W-1):
+			for d in range(c+1, W):
+				if A[a][c] + A[b][d] > A[b][c] + A[a][d]:
+					Flag = False
+if Flag:
+	print('Yes')
+else:
+	print('No')

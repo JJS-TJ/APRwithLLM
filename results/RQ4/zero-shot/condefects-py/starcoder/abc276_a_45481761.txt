@@ -1,0 +1,16 @@
+No.0 Patch
+s=input()
+for i in range(len(s)):
+  if s[-i-1]=="a":
+    print((len(s))-i)
+    break
+  if i==(len(s)-1):
+    print(-1)
+No.3 Patch
+s=input()
+if "a" in s:
+  print(len(s)-s[::-1].find("a"))
+else:
+  print(-1)
+
+# + id="5r0v7r7n7V9X"

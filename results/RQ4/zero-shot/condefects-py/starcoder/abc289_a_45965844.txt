@@ -1,0 +1,4 @@
+No.1 Patch
+print(input().translate(str.maketrans('01', '10')))
+No.3 Patch
+print(input().translate(str.maketrans("01", "10")))

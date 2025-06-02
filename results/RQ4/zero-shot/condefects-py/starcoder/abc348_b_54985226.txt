@@ -1,0 +1,52 @@
+No.5 Patch
+import math
+import sys
+
+N = int(input())
+
+poi = [list(map(int, input().split())) for _ in range(N)]
+
+for x, y in poi:
+    ans = 0
+    dist = 0
+    for i, (x_i, y_i) in enumerate(poi, 1):
+        if dist < math.sqrt((x - x_i) ** 2 + (y - y_i) ** 2):
+            dist = math.sqrt((x - x_i) ** 2 + (y - y_i) ** 2)
+            ans = i
+    sys.stdout.write(str(ans) + '\n')
+No.7 Patch
+import math
+
+N=int(input())
+poi=[list(map(int,input().split())) for _ in range(N)]
+
+# Get the distance between 2 points
+def distance(x1, y1, x2, y2):
+    return math.sqrt((x1-x2)**2 + (y1-y2)**2)
+
+# Find the index of the point of interest
+def find_poi(poi, x, y):
+    dist = 0
+    idx = 0
+    for i, (x_i, y_i) in enumerate(poi, 1):
+        if dist < distance(x, y, x_i, y_i):
+            dist = distance(x, y, x_i, y_i)
+            idx = i
+    return idx
+
+for x,y in poi:
+    print(find_poi(poi, x, y))
+No.8 Patch
+import math
+
+N=int(input())
+poi=[list(map(int,input().split())) for _ in range(N)]
+
+for x,y in poi:
+    ans=0
+    dist=0
+    for i,(x_i,y_i) in enumerate(poi,1):
+        if dist<math.sqrt((x-x_i)**2+(y-y_i)**2):
+            dist=math.sqrt((x-x_i)**2+(y-y_i)**2)
+            ans=i
+    print(ans)

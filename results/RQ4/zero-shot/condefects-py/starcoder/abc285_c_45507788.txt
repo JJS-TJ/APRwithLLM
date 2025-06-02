@@ -1,0 +1,23 @@
+No.2 Patch
+#N=int(input())
+S=input()
+
+ans=0
+for i in range(len(S)):
+    ans+=26**(len(S)-i-1)*(ord(S[i])-ord('A')+1)
+    
+print(ans)
+No.4 Patch
+#N=int(input())
+S=input()
+
+ans=0
+
+for i in range(len(S)):
+    x=ord(S[i])-ord('A')+1
+
+    ans+=26**(len(S)-i-1)*x
+    
+
+#a,b=map(int,input().split())
+print(ans)

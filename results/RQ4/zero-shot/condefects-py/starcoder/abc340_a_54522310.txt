@@ -1,0 +1,8 @@
+No.4 Patch
+# +
+A,B,D=map(int,input().split())
+ans=[]
+while A<=B:
+  ans.append(A)
+  A=A+D
+print(*ans)

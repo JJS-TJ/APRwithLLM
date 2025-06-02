@@ -1,0 +1,3 @@
+No.4 Patch
+S = input()
+print(S.split(".")[-1])
