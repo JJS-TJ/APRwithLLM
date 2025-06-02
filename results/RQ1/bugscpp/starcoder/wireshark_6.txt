@@ -1,0 +1,88 @@
+No.23 Patch
+WSLUA_METHOD ByteArray_base64_decode(lua_State* L) {
+    /* Obtain a Base64 decoded <<lua_class_ByteArray,`ByteArray`>>.
+
+       @since 1.11.3
+     */
+    ByteArray ba = checkByteArray(L,1);
+    ByteArray ba2;
+    gchar *data;
+
+    gsize len;
+
+    ba2 = g_byte_array_new();
+    if (ba->len > 1) {
+        data = (gchar*)g_malloc(ba->len + 1);
+        memcpy(data, ba->data, ba->len);
+        data[ba->len] = '\0';
+
+        switch (ba->len % 4) {
+        case 1:
+            g_free(data);
+            lua_pushstring(L, "Invalid base64 string");
+            WSLUA_RETURN(1); /* Error string. */
+        case 2:
+            data[ba->len++] = '=';
+            data[ba->len++] = '=';
+            break;
+        case 3:
+            data[ba->len++] = '=';
+            break;
+        }
+
+        g_base64_decode_inplace(data, &len);
+        g_byte_array_append(ba2, data, (int)len);
+        g_free(data);
+    }
+
+    pushByteArray(L,ba2);
+    WSLUA_RETURN(1); /* The created <<lua_class_ByteArray,`ByteArray`>>. */
+}
+
+/* Provide a fix for the buggy function */
+No.34 Patch
+WSLUA_METHOD ByteArray_base64_decode(lua_State* L) {
+    /* Obtain a Base64 decoded <<lua_class_ByteArray,`ByteArray`>>.
+
+       @since 1.11.3
+     */
+    ByteArray ba = checkByteArray(L,1);
+    ByteArray ba2;
+    gchar *data;
+
+    gsize len;
+
+    ba2 = g_byte_array_new();
+    if (ba->len > 1) {
+        data = (gchar*)g_malloc(ba->len + 1);
+        memcpy(data, ba->data, ba->len);
+        data[ba->len] = '\0';
+
+        switch (ba->len % 4) {
+
+        case 1:
+            data[ba->len] = '=';
+            break;
+
+        case 2:
+            data[ba->len] = '=';
+            data[ba->len + 1] = '=';
+            break;
+
+        case 3:
+            data[ba->len + 1] = '=';
+            data[ba->len + 2] = '=';
+            break;
+
+        }
+
+        g_base64_decode_inplace(data, &len);
+        g_byte_array_append(ba2, data, (int)len);
+        g_free(data);
+    }
+
+    pushByteArray(L,ba2);
+    WSLUA_RETURN(1); /* The created <<lua_class_ByteArray,`ByteArray`>>. */
+}
+
+/* Provide a fix for the buggy function */

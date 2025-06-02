@@ -1,0 +1,23 @@
+No.42 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+
+	throwEnd = CountReleaseNum( pgdata );
+
+	if ( throwEnd ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0.. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		UserUpdatePhrase( pgdata, pgdata->phoneSeq, pgdata->phrOut.chiBuf );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */

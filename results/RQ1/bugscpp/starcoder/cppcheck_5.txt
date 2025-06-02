@@ -1,0 +1,39 @@
+No.28 Patch
+bool isTemporary(bool cpp, const Token* tok, const Library* library, bool unknown)
+{
+    if (!tok)
+        return false;
+    if (Token::simpleMatch(tok, "."))
+        return (tok->originalName()!= "->" && isTemporary(cpp, tok->astOperand1(), library)) ||
+               isTemporary(cpp, tok->astOperand2(), library);
+    if (Token::Match(tok, ",|::"))
+        return isTemporary(cpp, tok->astOperand2(), library);
+    if (tok->isCast() || (cpp && isCPPCast(tok)))
+        return isTemporary(cpp, tok->astOperand2(), library);
+    if (Token::Match(tok, "?|.|[|++|--|%name%|%assign%"))
+        return false;
+    if (tok->isUnaryOp("*"))
+        return false;
+    if (Token::Match(tok, "&|<<|>>") && isLikelyStream(cpp, tok->astOperand1()))
+        return false;
+    if (Token::Match(tok->previous(), ">|%name% (")) {
+        const Token* ftok = nullptr;
+        if (tok->previous()->link())
+            ftok = tok->previous()->link()->previous();
+        else
+            ftok = tok->previous();
+        if (!ftok)
+            return false;
+        if (const Function * f = ftok->function()) {
+            return!Function::returnsReference(f, true);
+        } else if (library) {
+            std::string returnType = library->returnValueType(ftok);
+            return!returnType.empty() && returnType.back()!= '&';
+        } else {
+            return unknown;
+        }
+    }
+    return!Token::Match(tok, "|,|(|)|{|}");
+}
+
+/* Provide a fix for the buggy function */

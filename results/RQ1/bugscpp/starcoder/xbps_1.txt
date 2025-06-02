@@ -1,0 +1,2888 @@
+No.4 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.removepkg = removepkg;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.8 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.type = type;
+			item->old.size = size;
+			item->old.index = idx;
+			item->old.preserve = preserve;
+			item->old.update = update;
+			item->old.removepkg = removepkg;
+			item->old.target = target;
+			if (sha256)
+				item->old.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			item->new.pkgname = pkgname;
+			item->new.pkgver = pkgver;
+			item->new.type = type;
+			item->new.size = size;
+			item->new.index = idx;
+			item->new.preserve = preserve;
+			item->new.update = update;
+			item->new.removepkg = removepkg;
+			item->new.target = target;
+			if (sha256)
+				item->new.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.9 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.index = idx;
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.index = idx;
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.17 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (strcmp(item->old.pkgname, pkgname)!= 0) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->old.pkgver, file);
+				item->old.pkgname = pkgname;
+				item->old.pkgver = pkgver;
+				item->old.index = idx;
+				item->old.preserve = preserve;
+				item->old.update = update;
+				item->old.removepkg = removepkg;
+				item->old.target = target;
+				if (sha256)
+					item->old.sha256 = strdup(sha256);
+			}
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			if (strcmp(item->new.pkgname, pkgname)!= 0) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->new.pkgver, file);
+				item->new.pkgname = pkgname;
+				item->new.pkgver = pkgver;
+				item->new.index = idx;
+				item->new.preserve = preserve;
+				item->new.update = update;
+				item->new.removepkg = removepkg;
+				item->new.target = target;
+			}
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.18 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (strcmp(item->old.pkgname, pkgname) == 0) {
+				return 0;
+			}
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			if (strcmp(item->new.pkgname, pkgname) == 0) {
+				return 0;
+			}
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.21 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (strcmp(pkgname, item->old.pkgname) == 0)
+				return 0;
+		} else if (strcmp(pkgname, item->old.pkgname) == 0) {
+			/*
+			 * Same package removing same file.
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 * Record the last package to create this directory.
+			 */
+			if (strcmp(pkgname, item->new.pkgname) == 0)
+				return 0;
+		} else if (strcmp(pkgname, item->new.pkgname) == 0) {
+			/*
+			 * Same package creating same file.
+			 */
+			if (!item->new.update) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EEXIST, pkgver,
+				    "%s: file `%s' already installed by package %s.",
+				    pkgver, file, item->new.pkgver);
+				if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+					return 0;
+
+				return EEXIST;
+			}
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.23 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (strcmp(item->old.pkgname, pkgname) == 0) {
+				free(item->old.pkgver);
+				item->old.pkgver = strdup(pkgver);
+				return 0;
+			}
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			if (strcmp(item->new.pkgname, pkgname) == 0) {
+				free(item->new.pkgver);
+				item->new.pkgver = strdup(pkgver);
+				return 0;
+			}
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = strdup(pkgver);
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = strdup(pkgver);
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.25 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (item->old.update &&!update) {
+				if (item->old.update &&!update) {
+					item->old.pkgver = pkgver;
+					item->old.update = update;
+					item->old.removepkg = removepkg;
+					item->old.target = target;
+				}
+				return 0;
+			}
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.31 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.preserve = preserve;
+			item->old.update = update;
+			item->old.removepkg = removepkg;
+			item->old.target = target;
+			if (sha256)
+				item->old.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.41 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.index = idx;
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			item->new.pkgname = pkgname;
+			item->new.pkgver = pkgver;
+			item->new.index = idx;
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.46 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.type = type;
+			item->old.size = size;
+			item->old.index = idx;
+			item->old.preserve = preserve;
+			item->old.update = update;
+			item->old.removepkg = removepkg;
+			item->old.target = target;
+			if (sha256)
+				item->old.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			item->new.pkgname = pkgname;
+			item->new.pkgver = pkgver;
+			item->new.type = type;
+			item->new.size = size;
+			item->new.index = idx;
+			item->new.preserve = preserve;
+			item->new.update = update;
+			item->new.removepkg = removepkg;
+			item->new.target = target;
+			if (sha256)
+				item->new.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.48 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (item->old.pkgver!= pkgver) {
+				item->old.pkgver = strdup(pkgver);
+				assert(item->old.pkgver);
+			}
+			goto add;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			if (item->new.pkgver!= pkgver) {
+				item->new.pkgver = strdup(pkgver);
+				assert(item->new.pkgver);
+			}
+			goto add;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.53 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgver = pkgver;
+			goto add;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			item->new.pkgver = pkgver;
+			goto add;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.55 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (strcmp(item->old.pkgver, pkgver) == 0)
+				return 0;
+			goto add;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			if (strcmp(item->new.pkgver, pkgver) == 0)
+				return 0;
+			goto add;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.57 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.type = type;
+			item->old.size = size;
+			item->old.index = idx;
+			item->old.preserve = preserve;
+			item->old.update = update;
+			item->old.removepkg = removepkg;
+			item->old.target = target;
+			if (sha256)
+				item->old.sha256 = strdup(sha256);
+
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.62 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+			goto add;
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.index = idx;
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+			goto add;
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.67 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (item->old.removepkg)
+				return 0;
+			item->old.removepkg = true;
+			item->old.target = pkgname;
+		} else if (item->old.removepkg) {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		} else {
+			/*
+			 * File removed by one package and
+			 * created by another package.
+			 */
+			if (item->old.update) {
+				if (strcmp(item->old.pkgname, pkgname)!= 0) {
+					xbps_dbg_printf(xhp, "[files] %s: %s"
+					    " moved to package `%s': %s\n", pkgver, typestr(item->old.type),
+					    item->old.pkgver, file);
+				}
+			} else {
+				if (strcmp(item->old.pkgname, pkgname)!= 0) {
+					xbps_dbg_printf(xhp, "[files] %s: %s"
+					    " moved to package `%s': %s\n", pkgver, typestr(item->old.type),
+					    pkgname, file);
+				}
+			}
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.78 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.index = idx;
+			item->old.preserve = preserve;
+			item->old.update = update;
+			item->old.removepkg = removepkg;
+			item->old.target = target;
+			if (sha256)
+				item->old.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.80 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			item->old.pkgname = pkgname;
+			item->old.pkgver = pkgver;
+			item->old.index = idx;
+			item->old.preserve = preserve;
+			item->old.update = update;
+			item->old.removepkg = removepkg;
+			item->old.target = target;
+			if (sha256)
+				item->old.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			item->deleted = false;
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			item->new.pkgname = pkgname;
+			item->new.pkgver = pkgver;
+			item->new.index = idx;
+			item->new.preserve = preserve;
+			item->new.update = update;
+			item->new.removepkg = removepkg;
+			item->new.target = target;
+			if (sha256)
+				item->new.sha256 = strdup(sha256);
+			return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.82 Patch
+static int
+collect_file(struct xbps_handle *xhp, const char *file, size_t size,
+		const char *pkgname, const char *pkgver, unsigned int idx,
+		const char *sha256, enum type type, bool update, bool removepkg,
+		bool preserve, bool removefile, const char *target)
+{
+	struct item *item;
+
+	assert(file);
+
+	if ((item = lookupItem(file)) == NULL) {
+		item = addItem(file);
+		if (item == NULL)
+			return ENOMEM;
+		item->deleted = false;
+		goto add;
+	}
+
+	if (removefile) {
+		if (item->old.type == 0) {
+			/*
+			 * File wasn't removed before.
+			 */
+		} else if (type == TYPE_DIR && item->old.type == TYPE_DIR) {
+			/*
+			 * Multiple packages removing the same directory.
+			 * Record the last package to remove this directory.
+			 */
+			if (item->old.pkgver && strcmp(item->old.pkgver, pkgver) == 0)
+				return 0;
+		} else {
+			/*
+			 * Multiple packages removing the same file.
+			 * Shouldn't happen, but its not fatal.
+			 */
+			xbps_dbg_printf(xhp, "[files] %s: file already removed"
+			    " by package `%s': %s\n", pkgver, item->old.pkgver, file);
+
+			/*
+			 * Check if `preserve` is violated.
+			 */
+			if (item->old.preserve &&!preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, item->old.pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    item->old.pkgver, file, pkgver);
+				return EPERM;
+			} else if (preserve &&!item->old.preserve) {
+				xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+				    EPERM, pkgver,
+				    "%s: preserved file `%s' removed by %s.",
+				    pkgver, file, item->old.pkgver);
+				return EPERM;
+			}
+			return 0;
+		}
+		goto add;
+	} else {
+		/*
+		 * Multiple packages creating the same directory.
+		 */
+		if (item->new.type == 0) {
+			/*
+			 * File wasn't created before.
+			 */
+		} else if (type == TYPE_DIR && item->new.type == TYPE_DIR) {
+			/*
+			 * Multiple packages creating the same directory.
+			 */
+			if (item->new.pkgver && strcmp(item->new.pkgver, pkgver) == 0)
+				return 0;
+		} else {
+			/*
+			 * Multiple packages creating the same file.
+			 * This should never happen in a transaction.
+			 */
+			xbps_set_cb_state(xhp, XBPS_STATE_FILES_FAIL,
+			    EEXIST, pkgver,
+			    "%s: file `%s' already installed by package %s.",
+			    pkgver, file, item->new.pkgver);
+			if (xhp->flags & XBPS_FLAG_IGNORE_FILE_CONFLICTS)
+				return 0;
+
+			return EEXIST;
+		}
+		goto add;
+	}
+
+	return 0;
+add:
+	if (removefile) {
+		item->old.pkgname = pkgname;
+		item->old.pkgver = pkgver;
+		item->old.type = type;
+		item->old.size = size;
+		item->old.index = idx;
+		item->old.preserve = preserve;
+		item->old.update = update;
+		item->old.removepkg = removepkg;
+		item->old.target = target;
+		if (sha256)
+			item->old.sha256 = strdup(sha256);
+	} else {
+		item->new.pkgname = pkgname;
+		item->new.pkgver = pkgver;
+		item->new.type = type;
+		item->new.size = size;
+		item->new.index = idx;
+		item->new.preserve = preserve;
+		item->new.update = update;
+		item->new.removepkg = removepkg;
+		item->new.target = target;
+	}
+	if (item->old.type && item->new.type) {
+		/*
+		 * The file was removed by one package
+		 * and installed by another package.
+		 */
+		if (strcmp(item->new.pkgname, item->old.pkgname)!= 0) {
+			if (removefile) {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved to"
+				    " package `%s': %s\n", pkgver, typestr(item->old.type),
+				    item->new.pkgver, file);
+			} else {
+				xbps_dbg_printf(xhp, "[files] %s: %s moved from"
+				    " package `%s': %s\n", pkgver, typestr(item->new.type),
+				    item->old.pkgver, file);
+			}
+		}
+	}
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */

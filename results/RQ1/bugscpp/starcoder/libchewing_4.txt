@@ -1,0 +1,184 @@
+No.22 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+
+	if (!ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if (! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if ( pgdata->bSelect ) {
+		ChoiceEndChoice( pgdata );
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.32 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+	int key_buf_cursor;
+
+	if (!ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if (! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	key_buf_cursor = pgdata->chiSymbolCursor;
+	if ( pgdata->chiSymbolCursor == 0 )
+		key_buf_cursor++;
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if (! pgdata->symbolKeyBuf[ key_buf_cursor ] ) {
+		if ( pgdata->bSelect ) {
+			ChoiceEndChoice( pgdata );
+		}
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.39 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+
+	if (!ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if (! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	if ( pgdata->symbolKeyBuf[ pgdata->chiSymbolCursor ] ) {
+		pgdata->chiSymbolCursor--;
+	}
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if (! pgdata->symbolKeyBuf[ pgdata->chiSymbolCursor ] ) {
+		if ( pgdata->bSelect ) {
+			ChoiceEndChoice( pgdata );
+		}
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.41 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+
+	if (!ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	if (! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	if ( pgdata->chiSymbolCursor < 0 ) {
+		pgdata->chiSymbolCursor = 0;
+		// FIXME:
+		// if pgdata->chiSymbolCursor == pgdata->chiSymbolBufLen,
+		// pgdata->chiSymbolBufLen will be 0.
+	} else {
+		pgdata->chiSymbolCursor--;
+	}
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if (! pgdata->symbolKeyBuf[ pgdata->chiSymbolCursor ] ) {
+		if ( pgdata->bSelect ) {
+			ChoiceEndChoice( pgdata );
+		}
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.60 Patch
+CHEWING_API int chewing_handle_Up( ChewingContext *ctx )
+{
+	ChewingData *pgdata;
+	ChewingOutput *pgo;
+	int keystrokeRtn = KEYSTROKE_ABSORB;
+	int key_buf_cursor;
+
+	if (!ctx ) {
+		return -1;
+	}
+	pgdata = ctx->data;
+	pgo = ctx->output;
+
+	LOG_API();
+
+	CheckAndResetRange( pgdata );
+
+	if (! ChewingIsEntering( pgdata ) ) {
+		keystrokeRtn = KEYSTROKE_IGNORE;
+	}
+
+	key_buf_cursor = pgdata->chiSymbolCursor;
+	if (key_buf_cursor == pgdata->chiSymbolBufLen - 1)
+		key_buf_cursor = pgdata->chiSymbolBufLen;
+
+	/* close candidate list, compared to Down key to open candidate list. */
+	if (! pgdata->symbolKeyBuf[ key_buf_cursor ] ) {
+		if ( pgdata->bSelect ) {
+			ChoiceEndChoice( pgdata );
+		}
+	}
+
+	MakeOutputWithRtn( pgo, pgdata, keystrokeRtn );
+	return 0;
+}
+
+/* Provide a fix for the buggy function */

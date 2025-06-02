@@ -1,0 +1,88 @@
+No.38 Patch
+bool isLikelyStreamRead(bool cpp, const Token *op)
+{
+    if (!cpp)
+        return false;
+
+    if (!Token::Match(op, "&|>>") ||!op->isBinaryOp())
+        return false;
+
+    if (!Token::Match(op->astOperand2(), "%name%|.|*|[") && op->str()!= op->astOperand2()->str())
+        return false;
+
+    if (op->str() == "&" &&!op->astParent())
+        return false;
+
+    if (!op->astOperand1() ||!op->astOperand2())
+        return false;
+
+    if (!op->astOperand1()->valueType() ||!op->astOperand1()->valueType()->isIntegral())
+        return true;
+
+    return false;
+}
+
+/* Provide a fix for the buggy function */
+No.47 Patch
+bool isLikelyStreamRead(bool cpp, const Token *op)
+{
+    if (!cpp)
+        return false;
+
+    if (!Token::Match(op, "&|>>") ||!op->isBinaryOp())
+        return false;
+
+    if (!Token::Match(op->astOperand2(), "%name%|.|*|[") && op->str()!= op->astOperand2()->str())
+        return false;
+
+    if (op->str() == "&" && op->astParent())
+        return false;
+
+    if (!op->astOperand2()->valueType() ||!op->astOperand2()->valueType()->isIntegral())
+        return true;
+
+    if (op->astParent() && Token::Match(op->astParent(), "%oror%|&&|(|,|!"))
+        return false;
+
+    return true;
+}
+
+/* Provide a fix for the buggy function */
+No.55 Patch
+bool isLikelyStreamRead(bool cpp, const Token *op)
+{
+    if (!cpp)
+        return false;
+
+    if (!Token::Match(op, "&|>>") ||!op->isBinaryOp())
+        return false;
+
+    if (!Token::Match(op->astOperand2(), "%name%|.|*|[") && op->str()!= op->astOperand2()->str())
+        return false;
+
+    if (op->str() == "&" && op->astParent() &&!Token::Match(op->astParent(), "%oror%|&&|(|,|!"))
+        return false;
+    if (!op->astOperand1() ||!op->astOperand2())
+        return false;
+    return (!op->astOperand1()->valueType() ||!op->astOperand1()->valueType()->isIntegral());
+}
+
+/* Provide a fix for the buggy function */
+No.96 Patch
+bool isLikelyStreamRead(bool cpp, const Token *op)
+{
+    if (!cpp)
+        return false;
+
+    if (!Token::Match(op, "&|>>") ||!op->isBinaryOp())
+        return false;
+
+    if (!Token::Match(op->astOperand2(), "%name%|.|*|[") && op->str()!= op->astOperand2()->str())
+        return false;
+
+    if (op->str() == "&" && op->astParent() && Token::Match(op->astParent(), "&"))
+        return false;
+    return (!op->astOperand1() ||!op->astOperand1()->valueType() ||!op->astOperand1()->valueType()->isIntegral());
+}
+
+/* Provide a fix for the buggy function */

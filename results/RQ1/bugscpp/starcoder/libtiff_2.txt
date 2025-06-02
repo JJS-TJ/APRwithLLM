@@ -1,0 +1,107 @@
+No.16 Patch
+int
+readextension(void)
+{
+    int count;
+    char buf[255];
+    int status = 1;
+
+    while ((count = getc(infile)) && count <= 255) {
+        if (count == EOF)
+            break;
+        if (fread(buf, 1, count, infile)!= (size_t) count) {
+            fprintf(stderr, "short read from file %s (%s)\n",
+                    filename, strerror(errno));
+            status = 0;
+            break;
+        }
+    }
+    return status;
+}
+
+/* Provide a fix for the buggy function */
+No.27 Patch
+int
+readextension(void)
+{
+    int count;
+    char buf[255];
+    int status = 1;
+
+    if((count = getc(infile)) == EOF)
+        return status;
+
+    if (count <= 255) {
+        if (fread(buf, 1, count, infile)!= (size_t) count) {
+            fprintf(stderr, "short read from file %s (%s)\n",
+                    filename, strerror(errno));
+            status = 0;
+            return status;
+        }
+    } else {
+        fprintf(stderr, "extension tag too long\n");
+        status = 0;
+        return status;
+    }
+    return status;
+}
+
+/* Provide a fix for the buggy function */
+No.29 Patch
+int
+readextension(void)
+{
+    int count;
+    char buf[255];
+    int status = 1;
+
+    if ((count = getc(infile))!= EOF)
+        if (fread(buf, 1, count, infile)!= (size_t) count) {
+            fprintf(stderr, "short read from file %s (%s)\n",
+                    filename, strerror(errno));
+            status = 0;
+        }
+    return status;
+}
+No.45 Patch
+int
+readextension(void)
+{
+    int count;
+    char buf[255];
+    int status = 1;
+
+    if( (count = getc(infile))!= EOF )
+    {
+        (void) fseek(infile, -1, SEEK_CUR);
+
+        if (count <= 255)
+            if (fread(buf, 1, count, infile)!= (size_t) count) {
+                fprintf(stderr, "short read from file %s (%s)\n",
+                        filename, strerror(errno));
+                status = 0;
+            }
+    }
+    return status;
+}
+
+/* Provide a fix for the buggy function */
+No.50 Patch
+int
+readextension(void)
+{
+    int count;
+    char buf[255];
+    int status = 1;
+
+    if ((count = getc(infile)) == EOF || count > 255)
+        return 1;
+    if (fread(buf, 1, count, infile)!= (size_t) count) {
+        fprintf(stderr, "short read from file %s (%s)\n",
+                filename, strerror(errno));
+        return 0;
+    }
+    return 1;
+}
+
+/* Provide a fix for the buggy function */
