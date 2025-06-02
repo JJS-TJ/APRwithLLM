@@ -1,0 +1,86 @@
+No.2 Patch
+int main() {
+
+	int first, second, third, ans;
+	
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d%d%d",&first,&second,&third);
+	
+	if ((first>=second&&first<=third) || (first>=third&&first<=second))
+		ans=first;
+	else if ((second>=first&&second<=third) || (second>=third&&second<=first))
+		ans=second;
+	else
+		ans=third;	
+	
+	printf("%d is the median\n",ans);
+	
+	return 0;
+
+}
+No.3 Patch
+#include <stdio.h>
+
+int main() {
+
+	int first, second, third, ans;
+	
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d%d%d",&first,&second,&third);
+	
+	if ((first>=second&&first<=third) || (first>=third&&first<=second))
+		ans=first;
+	else if ((second>=first&&second<=third) || (second>=third&&second<=first))
+		ans=second;
+	else
+		ans=third;	
+	
+	printf("%d is the median\n",ans);
+	
+	return 0;
+
+}
+No.7 Patch
+int main() {
+
+	int first, second, third, ans;
+	
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d%d%d",&first,&second,&third);
+	
+	if ((first>=second&&first<=third) || (first>=third&&first<=second))
+		ans=first;
+	else if ((second>=first&&second<=third) || (second>=third&&second<=first))
+		ans=second;
+	else
+		ans=third;	
+	
+	printf("%d is the median\n",ans);
+	
+	return 0;
+
+}
+
+/* In the buggy function, the conditions used to find the median are incorrect. In the correct function, we use >= and <= instead of > and <, to ensure that the median is found correctly. */
+No.8 Patch
+int main() {
+
+	int first, second, third, ans;
+	
+	printf("Please enter 3 numbers separated by spaces > ");
+	scanf("%d%d%d",&first,&second,&third);
+	
+	if ((first>second&&first<third) || (first>third&&first<second))
+		ans=first;
+	else if ((second>first&&second<third) || (second>third&&second<first))
+		ans=second;
+	else if ((third>first&&third<second) || (third>second&&third<first))
+		ans=third;
+	else
+		ans=first;
+	
+	printf("%d is the median\n",ans);
+	
+	return 0;
+
+}

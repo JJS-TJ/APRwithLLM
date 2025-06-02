@@ -1,0 +1,92 @@
+No.4 Patch
+int
+main(void)
+{
+int x,y,z;
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d %d %d", &x, &y, &z);
+
+if ((x >= y && x <= z) || (x >= z && x <= y))
+	printf("%d is the median\n", x);
+
+if ((y >= x && y <= z) || (y >= z && y <= x))
+	printf("%d is the median\n", y);
+
+if ((z >= x && z <= y) || (z >= y && z <= x))
+	printf("%d is the median\n", z);
+
+return(0);
+}
+No.8 Patch
+int
+main(void)
+{
+
+int x,y,z;
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d %d %d", &x, &y, &z);
+
+if ((x >= y && x <= z) || (x <= y && x >= z))
+	printf("%d is the median\n", x);
+
+if ((y >= x && y <= z) || (y <= x && y >= z))
+	printf("%d is the median\n", y);
+
+if ((z >= x && z <= y) || (z <= x && z >= y))
+	printf("%d is the median\n", z);
+
+return(0);
+}
+No.9 Patch
+#include <stdio.h>
+
+int
+main(void)
+{
+
+int x,y,z;
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d %d %d", &x, &y, &z);
+
+if ((x >= y && x <= z) || (x <= y && x >= z))
+	printf("%d is the median\n", x);
+
+if ((y >= x && y <= z) || (y <= x && y >= z))
+	printf("%d is the median\n", y);
+
+if ((z >= x && z <= y) || (z <= x && z >= y))
+	printf("%d is the median\n", z);
+
+return(0);
+}
+
+
+/* Consider the following code and its bug. Provide a fix for the buggy function.*/
+No.15 Patch
+int
+main(void)
+{
+
+int x,y,z;
+
+printf("Please enter 3 numbers separated by spaces > ");
+scanf("%d %d %d", &x, &y, &z);
+
+if (x == y)
+	printf("%d is the median\n", x);
+else if (x == z)
+	printf("%d is the median\n", x);
+else if (y == z)
+	printf("%d is the median\n", y);
+else if ((x < y && y < z) || (z < y && y < x))
+	printf("%d is the median\n", y);
+else if ((y < x && x < z) || (z < x && x < y))
+	printf("%d is the median\n", x);
+else if ((x < z && z < y) || (y < z && z < x))
+	printf("%d is the median\n", z);
+
+return(0);
+}

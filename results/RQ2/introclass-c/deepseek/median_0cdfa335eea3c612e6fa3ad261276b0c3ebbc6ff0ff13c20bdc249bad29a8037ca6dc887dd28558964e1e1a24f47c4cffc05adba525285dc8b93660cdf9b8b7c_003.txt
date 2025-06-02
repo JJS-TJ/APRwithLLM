@@ -1,0 +1,80 @@
+No.0 Patch
+int main()
+{
+  int a, b, c, median;
+
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d%d%d", &a, &b, &c);
+
+  if((a >= b && a <= c) || (a <= b && a >= c))
+    median = a;
+  else if((b >= a && b <= c) || (b <= a && b >= c))
+    median = b;
+  else
+    median = c;
+
+  printf("%d is the median\n", median);
+
+  return 0;
+}
+No.1 Patch
+#include<stdio.h>
+
+int main()
+{
+  int a, b, c, median;
+
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d%d%d", &a, &b, &c);
+
+  if((a >= b && a <= c) || (a >= c && a <= b))
+    median = a;
+  else if((b >= a && b <= c) || (b >= c && b <= a))
+    median = b;
+  else
+    median = c;
+
+  printf("%d is the median\n", median);
+
+  return 0;
+}
+No.3 Patch
+#include <stdio.h>
+
+int main()
+{
+  int a, b, c, median;
+
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d%d%d", &a, &b, &c);
+
+  if((a >= b && a <= c) || (a <= b && a >= c))
+    median = a;
+  else if((b >= a && b <= c) || (b <= a && b >= c))
+    median = b;
+  else
+    median = c;
+
+  printf("%d is the median\n", median);
+
+  return 0;
+}
+No.5 Patch
+int main()
+{
+  int a, b, c, median;
+
+  printf("Please enter 3 numbers separated by spaces > ");
+  scanf("%d%d%d", &a, &b, &c);
+
+  if((a >= b && a <= c) || (a <= b && a >= c))
+    median = a;
+  if((b >= a && b <= c) || (b <= a && b >= c))
+    median = b;
+  if((c >= a && c <= b) || (c <= a && c >= b))
+    median = c;
+
+  printf("%d is the median\n", median);
+
+  return 0;
+}

@@ -1,0 +1,325 @@
+No.4 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+	if (score >= A) { printf ("Student has an A grade\n");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+
+
+	return (0);
+
+}
+No.5 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+
+
+	return (0);
+
+}
+
+/* Please provide a fix for the buggy function. */
+No.6 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+//
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade\n");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+
+	return (0);
+
+}
+
+/* The code is wrong, you must modify it to be correct. */
+No.7 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade\n");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+
+	return (0);
+
+}
+No.8 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+	
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade\n");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+	
+
+	return (0);
+
+}
+No.9 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+
+	
+
+	return (0);
+
+}
+No.10 Patch
+int main () {
+	float A, B, C, D;
+	float score;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+	if (score >= A) { printf ("Student has an A grade\n");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+	
+	return (0);
+}
+No.11 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+	
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+	
+
+	return (0);
+
+}
+
+/* The code is wrong, you must modify it to be correct. */
+No.13 Patch
+#include <stdio.h>
+
+int main () {
+
+	float A, B, C, D;
+	float score;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+	if (score >= A) { printf ("Student has an A grade");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+	
+	return (0);
+}
+No.14 Patch
+int main() {
+	float A, B, C, D;
+	float score;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+	if (score >= A) { 
+		printf ("Student has an A grade");
+	} else if (score >= B && score < A) { 
+		printf("Student has an B grade\n");
+	} else if (score >= C && score < B) { 
+		printf("Student has an C grade\n");
+	} else if (score >= D && score < C) { 
+		printf("Student has an D grade\n");
+	} else { 
+		printf("Student has failed the course\n");
+	}
+	
+	return (0);
+}
+No.15 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+
+	return (0);
+
+}
+
+/* The code is wrong, you must modify it to be correct. */
+No.16 Patch
+#include <stdio.h>
+int main () {
+
+	float A, B, C, D;
+	float score;
+	
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+	if (score >= A) { printf ("Student has an A grade\n");}
+	else if (score >= B && score < A) { printf("Student has an B grade\n");}
+	else if (score >= C && score < B) { printf("Student has an C grade\n");}
+	else if (score >= D && score < C) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+	
+	return (0);
+
+}
+
+/* The code is wrong, you must modify it to be correct. */
+No.17 Patch
+int main () {
+
+	float A, B, C, D;
+	float score;
+//
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	
+
+	printf("Thank you. Now enter student score (percent) >  ");
+	scanf("%f", &score);	
+	
+
+	if (score >= A) { printf ("Student has an A grade\n");}
+	else if (score < A && score >= B) { printf("Student has an B grade\n");}
+	else if (score < B && score >= C) { printf("Student has an C grade\n");}
+	else if (score < C && score >= D) { printf("Student has an D grade\n");}
+	else { printf("Student has failed the course\n");}
+
+
+//
+//
+//
+//
+//
+//
+//
+
+	
+
+	return (0);
+
+}

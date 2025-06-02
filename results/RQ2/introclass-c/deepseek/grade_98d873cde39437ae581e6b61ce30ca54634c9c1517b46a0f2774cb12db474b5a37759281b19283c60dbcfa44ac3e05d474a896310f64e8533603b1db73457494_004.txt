@@ -1,0 +1,224 @@
+No.1 Patch
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+No.2 Patch
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else 
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+No.3 Patch
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else if(student < d)
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+
+/* You can change the code to add more conditions to improve the code, but for now this should work. */
+No.4 Patch
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b && student < a)
+    printf("Student has an B grade\n");
+  else if(student >= c && student < b)
+    printf("Student has an C grade\n");
+  else if(student >= d && student < c)
+    printf("Student has an D grade\n");
+  else if(student < d)
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+No.7 Patch
+#include <stdio.h>
+
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+No.8 Patch
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+
+/* In the buggy function, the wrong message was printed when the student failed. Also, the condition for C grade was not met in the right way. The corrected function now includes the right message when the student failed, and the condition for C grade is met correctly. */
+No.10 Patch
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else if(student < d)
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+No.11 Patch
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else if(student < d)
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+
+/* 
+ * Provide a fix for the buggy function
+ * The function is supposed to take an array of integers and 
+ * return the index of the smallest number in the array.
+ */
+No.12 Patch
+#include <stdio.h>
+
+int main()
+{
+  float a, b, c, d, student;
+  printf("Enter thresholds for A, B, C, D");
+  printf("\nin that order, decreasing percentages > ");
+  scanf("%f%f%f%f", &a, &b, &c, &d);
+  printf("Thank you. Now enter student score (percent) >");
+  scanf("%f", &student);
+
+  if(student >= a)
+    printf("Student has an A grade\n");
+  else if(student >= b)
+    printf("Student has an B grade\n");
+  else if(student >= c)
+    printf("Student has an C grade\n");
+  else if(student >= d)
+    printf("Student has an D grade\n");
+  else
+    printf("Student has failed the course\n");
+
+  return 0;
+}
+
+/* You must not use global variables,
+   and you must not use the goto statement. */

@@ -1,0 +1,174 @@
+No.3 Patch
+int main(void) {
+
+	float a,b,c,d,s;
+	char g;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f%f%f%f",&a,&b,&c,&d);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f",&s);
+
+	if (s >= a)
+		g = 'A';
+	else if (s >= b)
+		g = 'B';
+	else if (s >= c)
+		g = 'C';
+	else if (s >= d)
+		g = 'D';
+	else
+		g = 'F';
+
+	if (g != 'F')
+		printf("Student has an %c grade\n", g);
+	else
+		printf("Student has failed the course\n");
+
+	return 0;
+}
+No.11 Patch
+int main(void) {
+
+    float a, b, c, d, s;
+    char g;
+
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &a, &b, &c, &d);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &s);
+
+    if (s < d)
+        printf("Student has failed the course\n");
+    else if (s < c)
+        g = 'D';
+    else if (s < b)
+        g = 'C';
+    else if (s < a)
+        g = 'B';
+    else
+        g = 'A';
+
+    if (g == 'A' || g == 'B' || g == 'C' || g == 'D')
+        printf("Student has an %c grade\n", g);
+
+    return (0);
+}
+No.12 Patch
+int main(void){
+
+	float a,b,c,d,s;
+	char g;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f%f%f%f",&a,&b,&c,&d);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f",&s);
+
+	if (s>=a)
+		g = 'A';
+	else if (s>=b)
+		g = 'B';
+	else if (s>=c)
+		g = 'C';
+	else if (s>=d)
+		g = 'D';
+	else
+		g = 'F';
+
+	if (g=='A'||g=='B'||g=='C'||g=='D')
+		printf("Student has an %c grade\n",g);
+	else
+		printf("Student has failed the course\n");
+
+	return(0);
+
+}
+No.13 Patch
+#include <stdio.h>
+
+int main(void){
+
+	float a,b,c,d,s;
+	char g;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f%f%f%f",&a,&b,&c,&d);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f",&s);
+
+	if (s<d)
+		printf("Student has failed the course\n");
+	else if (s>=d && s<c)
+		g='D';
+	else if (s>=c && s<b)
+		g='C';
+	else if (s>=b && s<a)
+		g='B';
+	else
+		g='A';
+
+	if (g=='A'||g=='B'||g=='C'||g=='D')
+		printf("Student has an %c grade\n",g);
+
+	return(0);
+
+}
+No.19 Patch
+#include <stdio.h>
+int main(void) {
+
+	float a, b, c, d, s;
+	char g;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f%f%f%f", &a, &b, &c, &d);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &s);
+
+	if (s < d) {
+		printf("Student has failed the course\n");
+	}
+	else {
+		if (s < c) g = 'D';
+		else if (s < b) g = 'C';
+		else if (s < a) g = 'B';
+		else g = 'A';
+
+		printf("Student has an %c grade\n", g);
+	}
+
+	return(0);
+
+}
+
+
+/* A program that calculates how much a student is owed after buying textbooks. The program should ask how much the student spent on the textbooks. */
+No.22 Patch
+int main(void){
+
+	float a,b,c,d,s;
+	char g;
+
+	printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+	scanf("%f%f%f%f",&a,&b,&c,&d);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f",&s);
+
+if	(s>=d && s<c)
+	g='D';
+else if (s>=c && s<b)
+	g='C';
+else if (s>=b && s<a)
+	g='B';
+else if (s>=a)
+	g='A';
+else 
+	printf("Student has failed the course\n");
+
+if	(g=='A'||g=='B'||g=='C'||g=='D')
+	printf("Student has an %c grade\n",g);
+
+return(0);
+
+}

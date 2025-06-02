@@ -1,0 +1,49 @@
+No.3 Patch
+int main(void){
+
+	int n,i,j;
+
+	printf("\nEnter an integer > ");
+	scanf("%i",&n);
+	printf("\n");
+	i=abs(n);
+
+	do {
+		j=i%10;
+		i=i/10;
+		if(n<0 && i==0)
+			printf("%i\n",-j);
+		else printf("%i\n",j);
+	} while (i != 0);
+
+	printf("That's all, have a nice day!\n");
+
+return(0);
+
+}
+No.10 Patch
+int main(void) {
+
+    int n, i, j;
+
+    printf("\nEnter an integer > ");
+    scanf("%i", &n);
+    printf("\n");
+    i = abs(n);
+
+    if (i == 0)
+        printf("%i\n", 0);
+
+    while (i != 0) {
+        j = i % 10;
+        i = i / 10;
+        if (n < 0 && i == 0)
+            printf("%i\n", -j);
+        else
+            printf("%i\n", j);
+    }
+
+    printf("That's all, have a nice day!\n");
+
+    return (0);
+}
