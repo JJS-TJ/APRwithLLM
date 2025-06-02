@@ -1,0 +1,25 @@
+No.0 Patch
+s = input()
+ans = []
+for i in range(len(s)):
+  if (s[i] != " " and s[i] != " "):
+    ans.append(s[i:len(s)]+s[0:i])
+  else:
+    ans.append(s[i:len(s)]+s[0:i+1])
+print(min(ans))
+print(max(ans))
+
+# Analysis
+Analysis:
+The fixed function
+No.1 Patch
+s = input()
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:len(s)]+s[0:i])
+print(min(ans))
+print(max(ans))
+
+# Analysis
+Analysis:
+The fixed function is designed to find the minimum and maximum strings in an input string after shifting the characters to the left. This function fixes the bugs in the buggy function by using the list.append() method to add elements to the list and

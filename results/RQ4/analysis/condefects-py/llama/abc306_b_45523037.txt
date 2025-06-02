@@ -1,0 +1,91 @@
+No.1 Patch
+import sys
+input = lambda: sys.stdin.readline().strip()
+
+a = list(map(int, input().split()))
+
+ans = 0
+for i in range(len(a)):
+    ans += 2 ** i * a[i]
+print(ans)
+
+# Analysis
+The fixed function works by first reading the input as a list of integers and then converting it to a list of binary digits. Then, it loops through each binary digit and adds the corresponding power of 2 to the answer. Finally, it prints the answer, which is the decimal equivalent of the input list of binary digits.
+</s>
+No.2 Patch
+import sys
+input = lambda: sys.stdin.readline().strip()
+
+a = list(map(int, input().split()))
+
+ans = 0
+for i in range(len(a)):
+    if a[i] == 0:
+        continue
+    else:
+        ans += (2 ** i)
+print(ans)
+
+# Analysis
+This is the same function as before, but with a few fixes. The bug has been fixed, and the function now works correctly.
+
+The first change is that the list is now being read as a list of integers instead of a list of binary digits. This is done by using the built-in map function to convert the list of binary digits to a list
+No.4 Patch
+import sys
+input = lambda: sys.stdin.readline().strip()
+
+a = list(map(int, input().split()))
+
+ans = 0
+for i in range(len(a)):
+    if a[i] == 0:
+        continue
+    else:
+        ans += (2 ** i)
+print(ans)
+
+# Analysis
+The fixed function is supposed to take in a list of binary digits as input and convert it into a decimal number. However, it doesn't perform this function correctly.
+
+The code tries to read the input as a list of integers, which is incorrect because it should be reading it as a list of binary digits.
+
+The code then goes through each binary
+No.5 Patch
+import sys
+input = lambda: sys.stdin.readline().strip()
+
+a = list(map(int, input().split()))
+
+ans = 0
+for i in range(len(a)):
+    if a[i] == 0:
+        continue
+    else:
+        ans += (2 ** (i))
+print(ans)
+
+# Analysis
+The code has been fixed to correctly convert a list of binary digits to a decimal number. The code now goes through each binary digit and if it's 1, it adds the corresponding power of 2 to the answer. And if it's 0, it simply skips it and moves on to the next digit.
+
+The code has also
+No.9 Patch
+# Buggy Function
+import sys
+input = lambda: sys.stdin.readline().strip()
+
+a = list(map(int, input().split()))
+
+ans = 0
+for i in range(len(a)):
+    if a[i] == 0:
+        continue
+    else:
+        ans += (2 ** i)
+print(ans)
+
+# Analysis
+The function is supposed to take in a list of binary digits as input and convert it into a decimal number. However, it doesn't perform this function correctly.
+
+The code tries to read the input as a list of integers, which is incorrect because it should be reading it as a list of binary digits.
+
+The code then

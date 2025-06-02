@@ -1,0 +1,9 @@
+No.6 Patch
+n = int(input())
+print(n % 998244353)
+
+# Analysis
+# Solution
+The function is trying to find the modulo of a given number.
+
+A modulo operation is an operation that finds the remainder after division of one number by another.

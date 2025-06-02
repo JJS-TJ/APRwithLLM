@@ -1,0 +1,49 @@
+No.0 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
+
+# Analysis
+// Analysis
+The code above is correct because it handles the case where Takahashi's hour and minute are the same as Aoki's hour and minute. If this happens, it will check to see if Takahashi's minute is less than or equal to Aoki's, which is the case. Therefore, the correct answer
+No.3 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b==d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
+
+# Analysis
+// Analysis
+The code above is correct because it checks if both the hour and minute are the same, and if they are, Takahashi wins.
+
+# Tips
+// Tips
+The buggy code is incorrect because it only checks the hour and minute of Aoki's time, not the hour and minute of Takahashi
+No.8 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
+
+# Analysis
+// Analysis
+The code above is now correct because it handles the case where the hour and minute are the same by checking if Takahashi's time is less than or equal to Aoki's time regardless of the minute. Therefore, if Takahashi's time is the same as Aoki's time, it will always print "

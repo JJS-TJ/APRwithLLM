@@ -1,0 +1,39 @@
+No.6 Patch
+s = input()
+
+A = [int(x) for x in s]
+
+for i in range(10):
+    if i not in A:
+        print(i)
+        exit()
+
+# Analysis
+Analysis:
+This code fixes the issues in the buggy code. The input is now being treated as a string, and a list of integers is being created using the list comprehension. The for loop is iterating through the integers from
+No.7 Patch
+n = input()
+
+A = [int(x) for x in n]
+
+for i in range(10):
+    if i not in A:
+        print(i)
+        exit()
+
+# Analysis
+Analysis:
+The fixed code fixes the problems in the buggy code. It converts the input into a list of integers, and then loops through the numbers from 1 to 9 (and not from 1 to 10
+No.8 Patch
+s = input()
+
+A = [int(x) for x in s]
+
+for i in range(0, 10):
+    if i not in A:
+        print(i)
+        exit()
+
+# Analysis
+Analysis:
+The fixed code is still not completely correct. The problem statement says that the input will be a list of integers, and the code is now treating the input as a list of integers and converting it into a

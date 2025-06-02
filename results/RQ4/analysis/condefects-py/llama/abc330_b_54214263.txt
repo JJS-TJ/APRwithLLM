@@ -1,0 +1,82 @@
+No.2 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)
+
+# Analysis
+The function correctly checks for all the possible values of i with the correct if, elif and else statements. 
+</s>
+No.3 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)
+
+// Analysis
+Correct the bugs in the code with the correct function.
+
+// Corrected Function
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else
+No.5 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)
+
+# Explanation
+
+The problem in the original function lies in the elif statement. It was checking if i > L and i < R, which is not necessary. The else statement was already covering this case. Also, the elif statement was not checking for when i is greater than R. 
+
+The corrected function first checks if the number is less than L
+</s>
+No.6 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)
+
+Explanation:
+
+The problem in the original function lies in the elif statement. It was checking if i > L and i < R, which is not necessary. The else statement was already covering this case. Also, the elif statement was not checking for when i is greater than R. 
+
+The corrected function first checks if the number is less than L
+
+# Fixed Function
+N, L, R = map(int, input

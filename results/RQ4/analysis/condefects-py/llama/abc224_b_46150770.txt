@@ -1,0 +1,51 @@
+No.0 Patch
+H, W = map(int, input().split())
+A = [list(map(int, input().split())) for _ in range(H)]
+
+Flag = True
+for a in range(H):
+	for b in range(a+1, H):
+		for c in range(W):
+			for d in range(c+1, W):
+				if A[a][c] + A[b][d] > A[a][d] + A[b][c]:
+					Flag = False
+					break
+if Flag:
+	print('Yes')
+else:
+	print('No')
+
+# Analysis
+// Analysis
+This code is supposed to check if a 2D matrix A satisfies the following property:
+For every pair of rows (a, b) and columns (c, d), the sum of A[a][c] and A[b][d] is not greater than the sum of A[a][d] and A[b][c].
+
+However, the function fails to correctly compare the sums of the elements. The code should check if the sum of A[a][c] and A[b][d] is not greater than the sum of A[a][d] and A[b][c].
+
+Here is the corrected code:
+No.5 Patch
+H, W = map(int, input().split())
+A = [list(map(int, input().split())) for _ in range(H)]
+
+Flag = True
+for a in range(H):
+	for b in range(a+1, H):
+		for c in range(W):
+			for d in range(c+1, W):
+				if A[a][c] + A[b][d] > A[a][d] + A[b][c]:
+					Flag = False
+if Flag:
+	print('Yes')
+else:
+	print('No')
+
+# Analysis
+// Analysis
+This code is supposed to check if a 2D matrix A satisfies the following property:
+For every pair of rows (a, b) and columns (c, d), the sum of A[a][c] and A[b][d] is not greater than the sum of A[b][c] and A[a][d].
+
+However, the function fails to correctly compare the sums of the elements. The code should check if the sum of A[a][c] and A[b][d] is not greater than the sum of A[a][d] and A[b][c].
+
+Here is the corrected code:
+
+H, W = map(int,

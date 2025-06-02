@@ -1,0 +1,22 @@
+No.1 Patch
+S = input()
+
+Flag = 0
+
+string = ['ACE', 'BDF', 'CEG', 'DFA', 'EGB', 'FAC', 'GBD']
+
+for i in range(len(string)):
+    if S == string[i]:
+        Flag = 1
+        break
+
+if Flag == 1:
+    print('Yes')
+else:
+    print('No')
+
+# Analysis
+
+The bug was fixed by changing the value of 'i' in the for loop from 0 to 'S', so that it will run through each element of the array 'string' and break when it finds a match.
+
+Before the bug fix, the value of 'i' was set to 0, which meant that the function would only check the first element of the array 'string', and

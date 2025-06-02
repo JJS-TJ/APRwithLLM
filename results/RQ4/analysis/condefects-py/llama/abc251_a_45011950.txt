@@ -1,0 +1,37 @@
+No.2 Patch
+S = input()
+for i in range(1, 7):
+    SS = S*i
+    if len(SS) == 6:
+        print(SS)
+        break
+
+# Analysis
+Analysis:
+This program is trying to generate a new string SS by repeating the input string S for i=0 to 5 times. It then checks
+No.3 Patch
+S = input()
+for i in range(6):
+    SS = S*(i+1)
+    if len(SS) == 6:
+        print(SS)
+        break
+
+Analysis:
+In the buggy program, the variable SS is being set to S*i. However, the length of S*i is not equal to 6.
+No.5 Patch
+S = input()
+SS = ""
+for i in range(0,6):
+    SS = SS + S
+    if len(SS) == 6:
+        print(SS)
+        break
+
+# Analysis
+else:
+        print("The length of SS is not equal to 6.")
+
+
+Analysis:
+This program first creates a string

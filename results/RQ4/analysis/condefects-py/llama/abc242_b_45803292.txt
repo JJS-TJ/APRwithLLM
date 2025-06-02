@@ -1,0 +1,16 @@
+No.4 Patch
+def func():
+    # 入力を取得
+    S = input()
+    
+    # 文字列をソート
+    s = ''.join(sorted(S))
+    
+    # ソート済み文字列を表示
+    print(s)
+
+if __name__ == '__main__':
+    func()
+
+# Analysis
+Anal

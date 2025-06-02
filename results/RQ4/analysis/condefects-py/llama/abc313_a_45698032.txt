@@ -1,0 +1,13 @@
+No.0 Patch
+n=int(input())
+p=list(map(int,input().split()))
+ans=0 if p[0]==max(p) and p.count(max(p))==1 else max(p)+1-p[0]
+print(ans)
+
+# Analysis
+// Analysis
+The fixed function works by checking if there is only one maximum element in the list. If that is the case, it returns the maximum element. Otherwise, it returns the maximum element plus one less than the first element in the list.
+
+# Approach
+// Approach
+The fixed function

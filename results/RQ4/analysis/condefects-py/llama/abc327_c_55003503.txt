@@ -1,0 +1,321 @@
+No.0 Patch
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+            for row in range(i,i+3):
+                for col in range(j,j+3):
+                    num.add(data[row][col])
+            if nine != num:
+                return False
+    return True
+
+for i in range(9):
+    a = list(map(int,input().split()))
+    numbers.append(a)
+
+if check_col(numbers) and check_row(numbers) and check_block(numbers):
+    print("Yes")
+else:
+    print("No")
+
+
+# Analysis
+Analysis:
+
+The given code contains a logical error. The function check_block does not correctly iterate through the 3x3 blocks in a sudoku board.
+It uses the same range for both i and j, which leads to it checking the same block over and over again.
+The range should be (0,9,3) for both i and j to correctly iterate through each 3x3 block in the sudoku board.
+
+Corrected Code:
+
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+            for
+No.1 Patch
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+            for row in range(i,i+3):
+                for col in range(j,j+3):
+                    num.add(data[row][col])
+            if nine != num:
+                return False
+    return True
+
+for i in range(9):
+    a = list(map(int,input().split()))
+    numbers.append(a)
+
+if check_col(numbers) and check_row(numbers) and check_block(numbers):
+    print("Yes")
+else:
+    print("No")
+
+<|EOT|>
+
+# Reflection
+## What concepts did you review in this challenge?
+
+This challenge allowed me to review the use of set in Python. 
+
+## What is still confusing to you about concepts reviewed in earlier challenges?
+
+## What new skills did you learn from this challenge?
+
+## What made you feel successful in this challenge?
+
+## What difficulties did you run into?
+
+The biggest difficulty I ran into was identifying the bug in the check_block function. I needed to think carefully about the logic of this function, and look for any issues in the code that may be leading to incorrect results. 
+
+## What process did you follow?
+
+To identify the bug in the check_block function, I first reviewed the code to understand its purpose and how it was supposed to work. Then I began testing different input and output scenarios to check if the function was working as expected. This helped me to identify the bug in the code, and I was able to fix it by changing the range used in the for loop. 
+
+## What resources did you find to help when you
+No.4 Patch
+# Buggy Function
+
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+            for row in range(i,i+3):
+                for col in range(j,j+3):
+                    num.add(data[row][col])
+            if nine != num:
+                return False
+    return True
+
+for i in range(9):
+    a = list(map(int,input().split()))
+    numbers.append(a)
+
+if check_col(numbers) and check_row(numbers) and check_block(numbers):
+    print("Yes")
+else:
+    print("No")
+
+# Analysis
+Analysis:
+
+The given code contains a logical error. The function check_block does not correctly iterate through the 3x3 blocks in a sudoku board.
+It uses the same range for both i and j, which leads to it checking the same block over and over again.
+The range should be (0,9,3) for both i and j to correctly iterate through each 3x3 block in the sudoku board.
+
+Corrected Code:
+
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num
+No.6 Patch
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+            for row in range(i,i+3):
+                for col in range(j,j+3):
+                    num.add(data[row][col])
+            if nine != num:
+                return False
+    return True
+
+for i in range(9):
+    a = list(map(int,input().split()))
+    numbers.append(a)
+
+if check_col(numbers) and check_row(numbers) and check_block(numbers):
+    print("Yes")
+else:
+    print("No")
+
+
+# Analysis
+Analysis:
+
+The given code contains a logical error. The function check_block does not correctly iterate through the 3x3 blocks in a sudoku board.
+It uses the same range for both i and j, which leads to it checking the same block over and over again.
+The range should be (0,9,3) for both i and j to correctly iterate through each 3x3 block in the sudoku board.
+
+Corrected Code:
+
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+No.7 Patch
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+            for row in range(i,i+3):
+                for col in range(j,j+3):
+                    num.add(data[row][col])
+            if nine != num:
+                return False
+    return True
+
+for i in range(9):
+    a = list(map(int,input().split()))
+    numbers.append(a)
+
+if check_col(numbers) and check_row(numbers) and check_block(numbers):
+    print("Yes")
+else:
+    print("No")
+
+
+# Analysis
+Analysis:
+
+The buggy function incorrectly iterates through the 3x3 blocks in a sudoku board.
+It uses the same range for both i and j, which leads to it checking the same block over and over again.
+The range should be (0,9,3) for both i and j to correctly iterate through each 3x3 block in the sudoku board.
+
+Corrected Code:
+
+numbers = []
+nine = set(list(i for i in range(1,10)))
+
+def check_row(data):
+    for i in data:
+        if nine != set(i):
+            return False
+    return True
+
+def check_col(data):
+    for i in zip(*data):
+        if nine != set(i):
+            return False
+    return True
+
+def check_block(data):
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            num = set()
+            for row in range(i,i+3):

@@ -1,0 +1,12 @@
+No.5 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+Analysis:
+
+The fixed function is identical to the buggy function except for one difference: the word "AtCoder" was changed to "AtCoder" in

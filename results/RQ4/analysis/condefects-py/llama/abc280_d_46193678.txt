@@ -1,0 +1,33 @@
+No.6 Patch
+n=int(input())
+f=[]
+y=n
+for i in range(2,int(y**0.5)+1):
+    while n%i==0:
+        f.append(i)
+        n//=i
+if n!=1:
+    f.append(n)
+if max(f)>int(y**0.5)+1:
+    print(max(f))
+
+else:
+    import math
+    x=2
+    while True:
+        y//=math.gcd(y,x)
+        if y==1:
+            print(x)
+            exit()
+        else:
+            x+=1
+
+# Analysis
+The code works fine, but it seems to have a logical error. The program checks if the maximum factor of the input number is greater than its square root plus one. If it is, the program prints the original number. However, this condition is not necessary for the correct functionality of the code.
+
+The program can be modified to check the maximum factor of the input number and print it if it is greater than the square root plus one. If it is not, the program should find the smallest number that is not divisible by any number from 2 to the square root of the number and print that number.
+
+Here is the corrected code:
+
+# Corrected Function
+n = int(

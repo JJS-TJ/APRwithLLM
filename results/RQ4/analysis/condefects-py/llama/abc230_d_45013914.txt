@@ -1,0 +1,56 @@
+No.0 Patch
+from collections import deque
+
+n, d = map(int, input().split())
+wall = [list(map(int, input().split())) for _ in range(n)]
+
+wall.sort(key = lambda x: x[1])
+q = deque(wall)
+ans = 0
+now = 0
+while q:
+    nex = q.popleft()
+    if nex[0] <= now:
+        continue
+    now = nex[1] + d - 1
+    ans += 1
+
+print(ans)
+
+# Analysis
+This code is supposed to calculate the minimum number of breaks needed to fix all broken wall panels.
+However, the code has several bugs:
+
+1. The wall list is sorted based on the first element of each sublist, but it should be sorted based on the second element of each sublist.
+
+2. The code is using a deque data structure to store the wall panels, but the deque is not needed for this problem. A simple list would suffice.
+
+3. The
+No.9 Patch
+from collections import deque
+
+n, d = map(int, input().split())
+wall = [list(map(int, input().split())) for _ in range(n)]
+
+wall.sort(key=lambda x: x[1])
+q = deque(wall)
+
+ans = 0
+now = 0
+while q:
+    nex = q.popleft()
+    if nex[0] <= now:
+        continue
+    now = nex[1] + d - 1
+    ans += 1
+
+print(ans)
+
+# Analysis
+// Analysis
+This code is supposed to calculate the minimum number of breaks needed to fix all broken wall panels.
+However, the code has several bugs:
+
+1. The wall list is sorted based on the first element of each sublist, but it should be sorted based on the second element of each sublist.
+
+2. The code is using a deque data structure to store the wall panels, but the deque is not needed for this problem. A simple list would suffice.

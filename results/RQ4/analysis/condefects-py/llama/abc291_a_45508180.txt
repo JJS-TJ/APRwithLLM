@@ -1,0 +1,19 @@
+No.4 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Analysis
+The code is designed to print the index of all the capital letters present in the input string. The code is fixed by checking for uppercase letters in the character.</s>
+No.6 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+
+# Analysis
+The code snippet has been modified to fix the buggy code snippet. The code snippet uses Python's lower and upper
+bounds to check the character of the input string. The

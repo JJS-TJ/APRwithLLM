@@ -1,0 +1,19 @@
+No.2 Patch
+n,m = map(int,input().split())
+a = [input() for _ in range(n)]
+
+for i in range(n-4):
+    for j in range(m-4):
+        if (all(row[j:j+4] == "###." for row in a[i:i+3]) and 
+            a[i+3][j:j+4] == "...." and a[i+5][j+5:j+9] =="...." and
+            all(row[j+5:j+9] == ".###" for row in a[
+
+i+6:i+9])):
+            print(i+1,j+1)
+
+# Analysis
+The buggy function checks if the character pattern in a grid is correct and prints the coordinates of the top-left corner of the pattern if a match is found. However, it does not check if the pattern is exactly 4 characters long, which could lead to an index error. This can be solved by changing the range of the inner loop to m-4, and by changing the slicing indices in the if statement to m-4 and m-1, respectively. 
+
+Also, the function should print the coordinates of the top-left corner of the pattern, so the indices i and j in the print statement should be incremented by one. 
+
+Lastly, the function should stop searching after it has found a match, not continue to the end of the grid

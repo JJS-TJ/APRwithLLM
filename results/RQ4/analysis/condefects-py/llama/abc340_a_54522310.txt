@@ -1,0 +1,52 @@
+No.4 Patch
+A,B,D=map(int,input().split())
+ans=[A]
+A1=A+D
+while A<=B:
+  if A1<=B:
+    ans.append(A1)
+    A1+=D
+  else:
+    break
+print(*ans)
+
+# Analysis
+Analysis:
+This code is fixed by checking if 'A' is less than or equal to
+No.5 Patch
+A,B,D=map(int,input().split())
+ans=[A]
+i=1
+while ans[-1]<B:
+  ans.append(ans[-1]+D)
+  i+=1
+print(*ans)
+
+# Analysis
+Analysis:
+This code uses a variable 'i' to keep a track of the current index in the list 'ans' and checks if the last value in
+No.6 Patch
+A,B,D=map(int,input().split())
+ans=[A]
+while A<=B:
+  ans.append(A+D)
+  A+=D
+if ans[-1]>B:
+  ans=ans[:-1]
+print(*ans)
+
+# Analysis
+Analysis:
+In the 'while' loop, the condition 'A<=B' is added to ensure that the
+No.8 Patch
+A,B,D=map(int,input().split())
+ans=[A]
+while A<=B:
+  if A+D<=B:
+    ans.append(A+D)
+  A+=D
+print(*ans)
+
+# Analysis
+Analysis:
+In the fixed code, the value of 'A' is checked before appending it to the list 'ans'. This prevents the generation of incorrect

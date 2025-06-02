@@ -1,0 +1,66 @@
+No.1 Patch
+import math
+
+N=int(input())
+poi=[list(map(int,input().split())) for _ in range(N)]
+
+for x,y in poi:
+    ans=0
+    dist=0
+    for i,(x_i,y_i) in enumerate(poi,1):
+        if dist<math.sqrt((x-x_i)**2+(y-y_i)**2):
+            dist=math.sqrt((x-x_i)**2+(y-y_i)**2)
+            ans=i
+    print(ans)
+
+# Analysis
+// Analysis
+This fixed code is also trying to find the point that is furthest from the current point in a list of coordinates. The program reads in the number of points (N) and their respective coordinates (poi).
+
+The fixed code is looping over all points and for each point, it calculates the distance from the current point to all other points, storing the index of the point with the maximum distance.
+
+The fixed code is using a loop to iterate through the list of coordinates and for each point, it calculates the distance from the current point to all other points, storing the index of the point with the maximum distance
+No.4 Patch
+import math
+
+N=int(input())
+poi=[list(map(int,input().split())) for _ in range(N)]
+
+for x,y in poi:
+    ans=0
+    dist=0
+    for i,(x_i,y_i) in enumerate(poi,1):
+        if dist<math.sqrt((x-x_i)**2+(y-y_i)**2):
+            dist=math.sqrt((x-x_i)**2+(y-y_i)**2)
+            ans=i
+    print(ans)
+
+# Analysis
+// Analysis
+This buggy code is trying to find the point that is furthest from the current point in a list of coordinates. The program reads in the number of points (N) and their respective coordinates (poi).
+
+The buggy code is looping over all points and for each point, it calculates the distance from the current point to all other points, storing the index of the point with the maximum distance.
+
+The problem with the code is that it prints the answer for every point instead of once after the loop finishes. This means that for each point in the list, the code will print the index of the point
+No.9 Patch
+import math
+
+N=int(input())
+poi=[list(map(int,input().split())) for _ in range(N)]
+
+for x,y in poi:
+    ans=0
+    dist=0
+    for i,(x_i,y_i) in enumerate(poi,1):
+        if dist<math.sqrt((x-x_i)**2+(y-y_i)**2):
+            dist=math.sqrt((x-x_i)**2+(y-y_i)**2)
+            ans=i
+    print(ans)
+
+# Analysis
+// Analysis
+The buggy code is trying to find the point that is furthest from the current point in a list of coordinates. The program reads in the number of points (N) and their respective coordinates (poi).
+
+The buggy code is looping over all points and for each point, it calculates the distance from the current point to all other points, storing the index of the point with the maximum distance.
+
+The problem with the code is that it prints the answer for every point instead of once after the loop finishes. This means that for each point in the list, the code will print the index of the point
