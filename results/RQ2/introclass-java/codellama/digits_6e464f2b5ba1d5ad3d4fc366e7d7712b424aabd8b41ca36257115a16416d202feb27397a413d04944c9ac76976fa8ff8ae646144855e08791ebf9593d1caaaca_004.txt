@@ -1,0 +1,23 @@
+No.5 Patch
+public void exec () throws Exception {
+    IntObj n = new IntObj (), i = new IntObj (), j = new IntObj ();
+    output += (String.format ("\nEnter an integer > "));
+    n.value = scanner.nextInt ();
+    output += (String.format ("\n"));
+    i.value = Math.abs (n.value);
+    if (n.value == 0) {
+        output += (String.format ("%d\n", n.value));
+    }
+    while (i.value != 0) {
+        j.value = i.value % 10;
+        i.value = i.value / 10;
+        if (n.value < 0 && i.value == 0) {
+            output += (String.format ("%d\n", -j.value));
+        } else {
+            output += (String.format ("%d\n", j.value));
+        }
+    }
+    output += (String.format ("That's all, have a nice day!\n"));
+    if (true)
+        return;;
+}

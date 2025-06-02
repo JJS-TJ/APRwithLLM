@@ -1,0 +1,42 @@
+No.4 Patch
+public void exec () throws Exception {
+    DoubleObj a = new DoubleObj (), b = new DoubleObj (), c =
+        new DoubleObj (), d = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextDouble ();
+    b.value = scanner.nextDouble ();
+    c.value = scanner.nextDouble ();
+    d.value = scanner.nextDouble ();
+    if (a.value < b.value) {
+        if (a.value < c.value) {
+            if (a.value < d.value) {
+                output += (String.format ("%.0f is the smallest\n", a.value));
+            } else {
+                output += (String.format ("%.0f is the smallest\n", d.value));
+            }
+        } else {
+            if (c.value < d.value) {
+                output += (String.format ("%.0f is the smallest\n", c.value));
+            } else {
+                output += (String.format ("%.0f is the smallest\n", d.value));
+            }
+        }
+    } else {
+        if (b.value < c.value) {
+            if (b.value < d.value) {
+                output += (String.format ("%.0f is the smallest\n", b.value));
+            } else {
+                output += (String.format ("%.0f is the smallest\n", d.value));
+            }
+        } else {
+            if (c.value < d.value) {
+                output += (String.format ("%.0f is the smallest\n", c.value));
+            } else {
+                output += (String.format ("%.0f is the smallest\n", d.value));
+            }
+        }
+    }
+    if (true)
+        return;;
+}

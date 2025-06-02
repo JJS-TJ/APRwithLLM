@@ -1,0 +1,132 @@
+No.0 Patch
+public void exec () throws Exception {
+    FloatObj thresha = new FloatObj (), threshb = new FloatObj (), threshc =
+        new FloatObj (), threshd = new FloatObj (), stuscore = new FloatObj ();
+    output +=
+        (String.format
+         ("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > "));
+    thresha.value = scanner.nextFloat ();
+    threshb.value = scanner.nextFloat ();
+    threshc.value = scanner.nextFloat ();
+    threshd.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    stuscore.value = scanner.nextFloat ();
+    if (stuscore.value >= thresha.value) {
+        output += (String.format ("Student has an A grade\n"));
+    }
+    if ((stuscore.value < thresha.value) && (stuscore.value >= threshb.value)) {
+        output += (String.format ("Student has an B grade\n"));
+    }
+    if ((stuscore.value < threshb.value) && (stuscore.value >= threshc.value)) {
+        output += (String.format ("Student has an C grade\n"));
+    }
+    if ((stuscore.value < threshc.value) && (stuscore.value >= threshd.value)) {
+        output += (String.format ("Student has an D grade\n"));
+    }
+    if (stuscore.value < threshd.value) {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+No.3 Patch
+public void exec () throws Exception {
+    FloatObj thresha = new FloatObj (), threshb = new FloatObj (), threshc =
+        new FloatObj (), threshd = new FloatObj (), stuscore = new FloatObj ();
+    output +=
+        (String.format
+         ("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > "));
+    thresha.value = scanner.nextFloat ();
+    threshb.value = scanner.nextFloat ();
+    threshc.value = scanner.nextFloat ();
+    threshd.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    stuscore.value = scanner.nextFloat ();
+    if (stuscore.value >= thresha.value) {
+        output += (String.format ("Student has an A grade\n"));
+    }
+    if (stuscore.value < thresha.value) {
+        if (stuscore.value >= threshb.value) {
+            output += (String.format ("Student has an B grade\n"));
+        }
+        if ((stuscore.value < threshb.value) && (stuscore.value >= threshc.value)) {
+            output += (String.format ("Student has an C grade\n"));
+        }
+        if ((stuscore.value < threshc.value) && (stuscore.value >= threshd.value)) {
+            output += (String.format ("Student has an D grade\n"));
+        }
+        if (stuscore.value < threshd.value) {
+            output += (String.format ("Student has failed the course\n"));
+        }
+    }
+    if (true)
+        return;;
+}
+No.6 Patch
+public void exec () throws Exception {
+    FloatObj thresha = new FloatObj (), threshb = new FloatObj (), threshc =
+        new FloatObj (), threshd = new FloatObj (), stuscore = new FloatObj ();
+    output +=
+        (String.format
+         ("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > "));
+    thresha.value = scanner.nextFloat ();
+    threshb.value = scanner.nextFloat ();
+    threshc.value = scanner.nextFloat ();
+    threshd.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    stuscore.value = scanner.nextFloat ();
+    if (stuscore.value >= thresha.value) {
+        output += (String.format ("Student has an A grade\n"));
+    }
+    if ((stuscore.value >= threshb.value) && (stuscore.value < thresha.value)) {
+        output += (String.format ("Student has an B grade\n"));
+    }
+    if ((stuscore.value >= threshc.value) && (stuscore.value < threshb.value)) {
+        output += (String.format ("Student has an C grade\n"));
+    }
+    if ((stuscore.value >= threshd.value) && (stuscore.value < threshc.value)) {
+        output += (String.format ("Student has an D grade\n"));
+    }
+    if (stuscore.value < threshd.value) {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+No.7 Patch
+public void exec () throws Exception {
+    FloatObj thresha = new FloatObj (), threshb = new FloatObj (), threshc =
+        new FloatObj (), threshd = new FloatObj (), stuscore = new FloatObj ();
+    output +=
+        (String.format
+         ("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > "));
+    thresha.value = scanner.nextFloat ();
+    threshb.value = scanner.nextFloat ();
+    threshc.value = scanner.nextFloat ();
+    threshd.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    stuscore.value = scanner.nextFloat ();
+    if (stuscore.value >= thresha.value) {
+        output += (String.format ("Student has an A grade\n"));
+    }
+    if ((stuscore.value < thresha.value) && (stuscore.value >= threshb.value)) {
+        output += (String.format ("Student has an B grade\n"));
+    }
+    if ((stuscore.value < threshb.value) && (stuscore.value >= threshc.value)) {
+        output += (String.format ("Student has an C grade\n"));
+    }
+    if ((stuscore.value < threshc.value) && (stuscore.value >= threshd.value)) {
+        output += (String.format ("Student has an D grade\n"));
+    }
+    if (stuscore.value < threshd.value) {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+
+// Fix the bug in this function:
