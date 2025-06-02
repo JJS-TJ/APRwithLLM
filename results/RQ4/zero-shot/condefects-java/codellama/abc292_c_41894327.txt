@@ -1,0 +1,28 @@
+No.5 Patch
+public static void main(String[] args)throws Exception { 
+	Scanner scanner = new Scanner(System.in);
+	int n=scanner.nextInt();
+	int ans=0;
+	for(int i=1;i<n;i++){
+	    int x=0;
+	    int y=0;
+	    for(int j=1;j*j<=i;j++){
+	        if(i%j==0){
+	            x++;
+	            if(i!=j*j)x++;
+	        }
+	    }
+	    for(int j=1;j*j<=n-i;j++){
+	        if((n-i)%j==0){
+	            y++;
+	            if(n-i!=j*j)y++;
+	        }
+	    }
+	    ans+=x*y;
+	}
+	System.out.println(ans);
+}
+
+// Question 2
+// Write a function which takes an integer N and returns the sum of all the even numbers between 1 and N (inclusive).
+// Note: 1 is not considered an even number!

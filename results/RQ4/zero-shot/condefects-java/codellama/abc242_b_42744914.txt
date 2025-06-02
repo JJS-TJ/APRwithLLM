@@ -1,0 +1,18 @@
+No.0 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	
+	for(int i = 0; i < ss.length(); i++) {
+		out.print(ss.charAt(i));
+	}
+	
+	out.println();
+	
+	out.flush();
+}

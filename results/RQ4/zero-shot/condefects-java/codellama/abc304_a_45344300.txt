@@ -1,0 +1,24 @@
+No.0 Patch
+public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	
+	int N = input.nextInt();
+	int[] ages = new int[N];
+	String[] nameList = new String[N];
+	for (int i = 0; i < N; i++) {
+		nameList[i] = input.next();
+		ages[i] = input.nextInt();
+	}
+	
+	int minAgeIndex = 0;
+	for (int i = 0; i < N; i++) {
+		if (ages[i] < ages[minAgeIndex]) {
+			minAgeIndex = i;
+		}
+	}
+	
+	for (int i = 0; i < N; i++) {
+		int index = (i + minAgeIndex)%N;
+		System.out.println(nameList[index]);
+	}
+}

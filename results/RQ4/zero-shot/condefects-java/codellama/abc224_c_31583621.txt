@@ -1,0 +1,23 @@
+No.0 Patch
+static void solve() {
+	int N = readInt();
+	List<Point<Integer>> coord = new ArrayList<>();
+	for (int i=0;i<N;i++) {
+		int x=readInt(), y=readInt();
+		coord.add(new Point<Integer>(x, y));
+	}
+
+	int ans=0;
+	for (int i=0;i<N;i++)
+		for (int j=i+1;j<N;j++)
+			for (int k=j+1;k<N;k++) {
+				Point<Integer> p1 = coord.get(i);
+				Point<Integer> p2 = coord.get(j);
+				Point<Integer> p3 = coord.get(k);
+
+				long area = Math.abs(1L * (p2.getX() - p1.getX()) * (p3.getY() - p1.getY()) - 1L*(p3.getX()-p1.getX()) * (p2.getY() - p1.getY()));
+				if (area>0) ans++;
+			}
+
+	out.println(ans);
+}

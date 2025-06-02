@@ -1,0 +1,31 @@
+No.0 Patch
+public static void main(String[] args) {
+	FastScanner scan = new FastScanner();
+	int N = scan.nextInt();
+	int Q = scan.nextInt();
+	TreeSet<Integer> queue = new TreeSet<>();
+	int next = 1;
+	for (int i = 0; i < Q; i++) {
+		int x = scan.nextInt();
+		if (x == 1) {
+			queue.add(next);
+			next++;
+		}
+		if (x == 2) {
+			int n = scan.nextInt();
+			queue.remove(n);
+		}
+		if (x == 3) {
+			for (int n : queue) {
+				print(n);
+				break;
+			}
+		}
+	}
+}
+
+
+
+
+
+// =============================================================================

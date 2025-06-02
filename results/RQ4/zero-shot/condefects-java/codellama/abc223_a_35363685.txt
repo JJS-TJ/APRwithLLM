@@ -1,0 +1,19 @@
+No.2 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    int s=c%100;
+    if(s==0&&c!=0){
+    System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+
+
+// Question 12
+
+// Write a program to compute the value of sin(x + y) using the following
+// trigonometric identity:
+// sin(A + B) = sinA cosB + cosA sinB
+// You will need to use the Math.sin() and Math.cos() methods.

@@ -1,0 +1,58 @@
+No.2 Patch
+public static void main(String[] args) {
+	
+	Scanner scan = new Scanner(System.in);
+	
+	String row1 = scan.nextLine();
+	String row2 = scan.nextLine();
+	String row3 = scan.nextLine();
+	
+	String n = row1.split(" ")[0];
+	String m = row1.split(" ")[1];
+	
+	String[] arr1 = row2.split(" ");
+	String[] arr2 = row3.split(" ");
+	int count = 0;
+	
+	for( int i = 0 ; i < arr2.length ; i++) {
+		for( int j = 0 ; j<arr1.length ; j++) {
+			
+			if( arr2[i].equals(arr1[j])) {
+				count++;
+				arr1[j] = "";
+				break;
+			}
+		}
+	}
+	
+	if(count==Integer.parseInt(m)) {
+		System.out.println("Yes");
+	}else {
+		System.out.println("No");
+	}
+	
+}
+
+// Explanation
+// This is a bit of a tricky one.
+
+// The issue is the for loop at the bottom. It checks to see if the current element in the array 
+// exists in the other array.
+// 
+// The problem is that if the current element in the array is not found in the other array, the loop will still be executed
+// 
+// For example, if the array was { "1", "2", "3" } and the other array was { "1", "2" }, it would still execute the loop 
+// because "3" doesn't exist in the other array.
+// 
+// The solution is to change the order of the loops.
+// 
+// Because the loop at the bottom is nested in the loop at the top, if the inner loop is executed and the element is not found,
+// then the outer loop will just move to the next iteration.
+// 
+// This solution works because there is no point in continuing to look for the element, because it is already not in the other array.
+// 
+// In other words, the inner loop is only executed if the element is found in the other array.
+
+
+
+// A program that checks if two sets of characters are anagrams.

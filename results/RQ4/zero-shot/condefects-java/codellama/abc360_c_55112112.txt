@@ -1,0 +1,21 @@
+No.0 Patch
+public static void main(String[] args) {
+  FastScanner sc = new FastScanner();
+  int n = Integer.parseInt(sc.next());
+  List<Long> a = new ArrayList<>();
+  Long ans = 0L;
+  Map<Long, Long> w = new HashMap<>();
+  for(int j = 0; j < n; j++) {
+    a.add(sc.nextLong());
+  }
+  for(int i = 0; i < n; i++) {
+    long temp = sc.nextLong();
+    if(!w.containsKey(a.get(i))) {
+      w.put(a.get(i), temp);
+    } else {
+      ans += Math.min(w.get(a.get(i)), temp);
+      w.put(a.get(i), Math.max(w.get(a.get(i)), temp));
+    }
+  }
+  System.out.print(ans);
+}

@@ -1,0 +1,35 @@
+No.0 Patch
+public static void main(String[] args) throws Exception {
+    int n = ri();
+    String [] str = rs().split("");
+    boolean judge = true;//true = T false = A
+    int a = 0;
+    int b = 0;
+    int cnt_a = 0;
+    int cnt_b = 0;
+    for(int i=0;i<n;i++){
+        if(str[i].equals("T")){
+            a++;
+            cnt_a++;
+        }else{
+            b++;
+            cnt_b++;
+        }
+        if(a > b){
+            judge = true;
+        }else if(b > a){
+            judge = false;
+        }
+    }
+    if(cnt_a == n){
+        puts("T");
+    }else if(cnt_b == n){
+        puts("A");
+    }else{
+        if(judge){
+            puts("T");
+        }else{
+            puts("A");
+        }
+    }
+}
