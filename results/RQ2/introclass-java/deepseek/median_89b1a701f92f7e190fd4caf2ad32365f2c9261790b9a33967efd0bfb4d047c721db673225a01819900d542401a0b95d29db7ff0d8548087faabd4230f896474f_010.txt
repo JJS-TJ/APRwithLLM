@@ -1,0 +1,266 @@
+No.0 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value) {
+        m.value = a.value;
+    } else if (b.value == c.value) {
+        m.value = b.value;
+    } else if (c.value == a.value) {
+        m.value = c.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+No.2 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value || a.value == c.value) {
+        m.value = a.value;
+    } else if (b.value == c.value || b.value == a.value) {
+        m.value = b.value;
+    } else if (c.value == a.value || c.value == b.value) {
+        m.value = c.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+No.3 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value || a.value == c.value) {
+        m.value = a.value;
+    } else if (b.value == c.value || b.value == a.value) {
+        m.value = b.value;
+    } else if (c.value == a.value || c.value == b.value) {
+        m.value = c.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+
+// The code is wrong, you must modify it to be correct.
+// The code finds the median of 3 numbers.
+// The first condition checks if a is equal to b or c and assigns a to m.
+// The second condition checks if b is equal to a or c and assigns b to m.
+// The third condition checks if c is equal to a or b and assigns c to m.
+// If none of these conditions are true, it means all numbers are unique.
+// It then checks if a is between b and c or vice versa and assigns a to m.
+// It does the same for b and c. If none of these conditions are true, it means a, b, and c are all the same, so it assigns a to m.
+// Finally, it prints out the median.
+
+// The bug in the buggy function is that it is assigning the wrong value to m when all numbers are unique and when a, b, and c are all the same. It should be assigning the value of a to m.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.5 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value || a.value == c.value) {
+        m.value = a.value;
+    } else if (b.value == c.value || b.value == a.value) {
+        m.value = b.value;
+    } else if (c.value == a.value || c.value == b.value) {
+        m.value = c.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+
+// The code is wrong, you must modify it to be correct.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.7 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value) {
+        m.value = a.value;
+    } else if (b.value == c.value) {
+        m.value = b.value;
+    } else if (c.value == a.value) {
+        m.value = c.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+
+// The fixed code now works correctly, comparing the numbers as they should.
+No.9 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value || a.value == c.value) {
+        m.value = a.value;
+    } else if (b.value == c.value) {
+        m.value = b.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+No.12 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value || a.value == c.value) {
+        m.value = a.value;
+    } else if (b.value == c.value || b.value == a.value) {
+        m.value = b.value;
+    } else if (c.value == a.value || c.value == b.value) {
+        m.value = c.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+
+// Find the Bug:
+No.13 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), m =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    if (a.value == b.value) {
+        m.value = a.value;
+    } else if (b.value == c.value) {
+        m.value = b.value;
+    } else if (c.value == a.value) {
+        m.value = c.value;
+    } else {
+        if ((a.value >= b.value && a.value <= c.value)
+                || (a.value >= c.value && a.value <= b.value)) {
+            m.value = a.value;
+        } else if ((b.value >= a.value && b.value <= c.value)
+                   || (b.value >= c.value && b.value <= a.value)) {
+            m.value = b.value;
+        } else if ((c.value >= a.value && c.value <= b.value)
+                   || (c.value >= b.value && c.value <= a.value)) {
+            m.value = c.value;
+        }
+    }
+    output += (String.format ("%d is the median\n", m.value));
+    if (true)
+        return;;
+}
+
+// Code is wrong, you must modify it to be correct.

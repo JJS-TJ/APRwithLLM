@@ -1,0 +1,209 @@
+No.1 Patch
+public void exec () throws Exception {
+    DoubleObj first = new DoubleObj (), second = new DoubleObj (), third =
+        new DoubleObj ();
+    DoubleObj median = new DoubleObj ();
+    DoubleObj comp_fir = new DoubleObj (), comp_sec =
+        new DoubleObj (), comp_thi = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    first.value = scanner.nextDouble ();
+    second.value = scanner.nextDouble ();
+    third.value = scanner.nextDouble ();
+    median.value =
+        (Math.abs (first.value) + Math.abs (second.value) +
+         Math.abs (third.value)) / 3;
+    comp_fir.value = Math.abs (first.value - median.value);
+    comp_sec.value = Math.abs (second.value - median.value);
+    comp_thi.value = Math.abs (third.value - median.value);
+    if (comp_fir.value <= comp_sec.value && comp_fir.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", first.value));
+    } else if (comp_sec.value <= comp_fir.value
+               && comp_sec.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", second.value));
+    } else {
+        output += (String.format ("%.0f is the median\n", third.value));
+    }
+    if (true)
+        return;;
+}
+
+// The buggy function was comparing the absolute difference of the current number and the median with the median. This is wrong, because if the current number is exactly the median, the absolute difference will be 0. However, the median does not have to be one of the numbers inputted by the user. The median is the middle number after sorting the numbers, so it's possible for it to not be equal to any of the inputted numbers.
+// In the fixed function, I replaced the < operators with <= operators, which means the median can be one of the inputted numbers. If the absolute difference is 0, that means the current number is the median.
+No.5 Patch
+public void exec () throws Exception {
+    DoubleObj first = new DoubleObj (), second = new DoubleObj (), third =
+        new DoubleObj ();
+    DoubleObj median = new DoubleObj ();
+    DoubleObj comp_fir = new DoubleObj (), comp_sec =
+        new DoubleObj (), comp_thi = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    first.value = scanner.nextDouble ();
+    second.value = scanner.nextDouble ();
+    third.value = scanner.nextDouble ();
+    median.value =
+        (Math.abs (first.value) + Math.abs (second.value) +
+         Math.abs (third.value)) / 3;
+    comp_fir.value = Math.abs (first.value - median.value);
+    comp_sec.value = Math.abs (second.value - median.value);
+    comp_thi.value = Math.abs (third.value - median.value);
+    if (comp_fir.value <= comp_sec.value && comp_fir.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", first.value));
+    } else if (comp_sec.value <= comp_fir.value
+               && comp_sec.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", second.value));
+    } else if (comp_thi.value <= comp_fir.value
+               && comp_thi.value <= comp_sec.value) {
+        output += (String.format ("%.0f is the median\n", third.value));
+    }
+    if (true)
+        return;;
+}
+No.8 Patch
+public void exec () throws Exception {
+    DoubleObj first = new DoubleObj (), second = new DoubleObj (), third =
+        new DoubleObj ();
+    DoubleObj median = new DoubleObj ();
+    DoubleObj comp_fir = new DoubleObj (), comp_sec =
+        new DoubleObj (), comp_thi = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    first.value = scanner.nextDouble ();
+    second.value = scanner.nextDouble ();
+    third.value = scanner.nextDouble ();
+    median.value =
+        (Math.abs (first.value) + Math.abs (second.value) +
+         Math.abs (third.value)) / 3;
+    comp_fir.value = Math.abs (first.value - median.value);
+    comp_sec.value = Math.abs (second.value - median.value);
+    comp_thi.value = Math.abs (third.value - median.value);
+    if (comp_fir.value <= comp_sec.value && comp_fir.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", first.value));
+    } else if (comp_sec.value < comp_fir.value
+               && comp_sec.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", second.value));
+    } else if (comp_thi.value < comp_fir.value
+               && comp_thi.value <= comp_sec.value) {
+        output += (String.format ("%.0f is the median\n", third.value));
+    }
+    if (true)
+        return;;
+}
+No.10 Patch
+public void exec () throws Exception {
+    DoubleObj first = new DoubleObj (), second = new DoubleObj (), third =
+        new DoubleObj ();
+    DoubleObj median = new DoubleObj ();
+    DoubleObj comp_fir = new DoubleObj (), comp_sec =
+        new DoubleObj (), comp_thi = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    first.value = scanner.nextDouble ();
+    second.value = scanner.nextDouble ();
+    third.value = scanner.nextDouble ();
+    median.value =
+        (Math.abs (first.value) + Math.abs (second.value) +
+         Math.abs (third.value)) / 3;
+    comp_fir.value = Math.abs (first.value - median.value);
+    comp_sec.value = Math.abs (second.value - median.value);
+    comp_thi.value = Math.abs (third.value - median.value);
+    if (comp_fir.value <= comp_sec.value && comp_fir.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", first.value));
+    } else if (comp_sec.value <= comp_fir.value
+               && comp_sec.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", second.value));
+    } else {
+        output += (String.format ("%.0f is the median\n", third.value));
+    }
+}
+No.11 Patch
+public void exec () throws Exception {
+    DoubleObj first = new DoubleObj (), second = new DoubleObj (), third = new DoubleObj ();
+    DoubleObj median = new DoubleObj ();
+    DoubleObj comp_fir = new DoubleObj (), comp_sec = new DoubleObj (), comp_thi = new DoubleObj ();
+    output += (String.format ("Please enter 3 numbers separated by spaces > "));
+    first.value = scanner.nextDouble ();
+    second.value = scanner.nextDouble ();
+    third.value = scanner.nextDouble ();
+    median.value = (first.value + second.value + third.value) / 3;
+    comp_fir.value = Math.abs (first.value - median.value);
+    comp_sec.value = Math.abs (second.value - median.value);
+    comp_thi.value = Math.abs (third.value - median.value);
+    if (comp_fir.value <= comp_sec.value && comp_fir.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", first.value));
+    } else if (comp_sec.value < comp_fir.value && comp_sec.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", second.value));
+    } else if (comp_thi.value < comp_fir.value && comp_thi.value < comp_sec.value) {
+        output += (String.format ("%.0f is the median\n", third.value));
+    }
+    if (true)
+        return;;
+}
+No.13 Patch
+public void exec () throws Exception {
+    DoubleObj first = new DoubleObj (), second = new DoubleObj (), third =
+        new DoubleObj ();
+    DoubleObj median = new DoubleObj ();
+    DoubleObj comp_fir = new DoubleObj (), comp_sec =
+        new DoubleObj (), comp_thi = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    first.value = scanner.nextDouble ();
+    second.value = scanner.nextDouble ();
+    third.value = scanner.nextDouble ();
+    median.value =
+        (Math.abs (first.value) + Math.abs (second.value) +
+         Math.abs (third.value)) / 3;
+    comp_fir.value = Math.abs (first.value - median.value);
+    comp_sec.value = Math.abs (second.value - median.value);
+    comp_thi.value = Math.abs (third.value - median.value);
+    if (comp_fir.value <= comp_sec.value && comp_fir.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", first.value));
+    } else if (comp_sec.value < comp_fir.value
+               && comp_sec.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", second.value));
+    } else if (comp_thi.value < comp_fir.value
+               && comp_thi.value <= comp_sec.value) {
+        output += (String.format ("%.0f is the median\n", third.value));
+    }
+    if (true)
+        return;;
+}
+
+// The median will be the value in the middle when the numbers are sorted
+// The buggy code always considers first.value as median, this code fixes this bug
+// by using the <= operator so it can consider the other two values as well.
+// Also, the buggy code has a redundant semicolon at the end of the if statements. This was removed.
+No.18 Patch
+public void exec () throws Exception {
+    DoubleObj first = new DoubleObj (), second = new DoubleObj (), third =
+        new DoubleObj ();
+    DoubleObj median = new DoubleObj ();
+    DoubleObj comp_fir = new DoubleObj (), comp_sec =
+        new DoubleObj (), comp_thi = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    first.value = scanner.nextDouble ();
+    second.value = scanner.nextDouble ();
+    third.value = scanner.nextDouble ();
+    median.value =
+        (Math.abs (first.value) + Math.abs (second.value) +
+         Math.abs (third.value)) / 3;
+    comp_fir.value = Math.abs (first.value - median.value);
+    comp_sec.value = Math.abs (second.value - median.value);
+    comp_thi.value = Math.abs (third.value - median.value);
+    if (comp_fir.value <= comp_sec.value && comp_fir.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", first.value));
+    } else if (comp_sec.value < comp_fir.value
+               && comp_sec.value <= comp_thi.value) {
+        output += (String.format ("%.0f is the median\n", second.value));
+    } else if (comp_thi.value < comp_fir.value
+               && comp_thi.value <= comp_sec.value) {
+        output += (String.format ("%.0f is the median\n", third.value));
+    }
+    if (true)
+        return;;
+}
+
+// The code is wrong, you must modify it to be correct.

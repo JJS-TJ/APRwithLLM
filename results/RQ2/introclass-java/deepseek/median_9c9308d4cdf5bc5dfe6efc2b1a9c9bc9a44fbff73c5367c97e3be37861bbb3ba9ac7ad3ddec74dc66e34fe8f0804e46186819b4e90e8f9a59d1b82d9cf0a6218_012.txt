@@ -1,0 +1,191 @@
+No.0 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n3.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format ("%.0f is the median\n", median.value));
+    if (true)
+        return;;
+}
+No.3 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value <= n2.value && n1.value <= n3.value) {
+        if (n2.value <= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value <= n1.value && n2.value <= n3.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n3.value <= n1.value && n3.value <= n2.value) {
+        if (n1.value <= n2.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format ("%.0f is the median\n", median.value));
+    if (true)
+        return;;
+}
+No.10 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n3.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format ("%.0f is the median\n", median.value));
+    if (true)
+        return;;
+}
+
+
+
+// This function takes an array of integers and the size of the array and returns the index of the first even number in the array.
+No.13 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value <= n3.value) {
+        median.value = n2.value;
+    } else if (n1.value >= n3.value) {
+        median.value = n1.value;
+    } else {
+        median.value = n3.value;
+    }
+    output += (String.format ("%.0f is the median\n", median.value));
+    if (true)
+        return;;
+}
+No.14 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value && n1.value >= n3.value) {
+        if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value >= n1.value && n2.value >= n3.value) {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n1.value >= n2.value) {
+        median.value = n1.value;
+    } else {
+        median.value = n2.value;
+    }
+    output += (String.format ("%.0f is the median\n", median.value));
+    if (true)
+        return;;
+}
+
+// This function takes three numbers as input and calculates the median of the three numbers.
+// The first bug is in the way the numbers are compared to each other.
+// The second bug is in the way the median is calculated.
+// The corrected function correctly compares the numbers and calculates the median.
+No.15 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value <= n2.value && n1.value <= n3.value) {
+        if (n2.value <= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value <= n1.value && n2.value <= n3.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value <= n2.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format ("%.0f is the median\n", median.value));
+    if (true)
+        return;;
+}

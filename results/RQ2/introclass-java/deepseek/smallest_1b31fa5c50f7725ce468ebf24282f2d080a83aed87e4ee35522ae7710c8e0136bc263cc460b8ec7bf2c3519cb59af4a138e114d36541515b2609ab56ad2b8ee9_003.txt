@@ -1,0 +1,217 @@
+No.0 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int smallest = Math.min(Math.min(A.value, B.value), Math.min(C.value, D.value));
+    output += (String.format ("%d is the smallest\n", smallest));
+}
+No.1 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int min = Integer.MAX_VALUE;
+    if (A.value < min) min = A.value;
+    if (B.value < min) min = B.value;
+    if (C.value < min) min = C.value;
+    if (D.value < min) min = D.value;
+    output += (String.format ("%d is the smallest\n", min));
+}
+No.3 Patch
+public void exec() throws Exception {
+    IntObj A = new IntObj(), B = new IntObj(), C = new IntObj(), D = new IntObj();
+    output += (String.format("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt();
+    B.value = scanner.nextInt();
+    C.value = scanner.nextInt();
+    D.value = scanner.nextInt();
+    int smallest = Math.min(Math.min(A.value, B.value), Math.min(C.value, D.value));
+    output += (String.format("%d is the smallest\n", smallest));
+}
+
+//Provide a fix for the buggy function
+No.4 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int min = A.value;
+    if (B.value < min) min = B.value;
+    if (C.value < min) min = C.value;
+    if (D.value < min) min = D.value;
+    output += (String.format ("%d is the smallest\n", min));
+}
+No.5 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int smallest = Integer.MAX_VALUE;
+    if (A.value < smallest)
+        smallest = A.value;
+    if (B.value < smallest)
+        smallest = B.value;
+    if (C.value < smallest)
+        smallest = C.value;
+    if (D.value < smallest)
+        smallest = D.value;
+    output += (String.format ("%d is the smallest\n", smallest));
+}
+No.9 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int min = Math.min(A.value, Math.min(B.value, Math.min(C.value, D.value)));
+    output += (String.format ("%d is the smallest\n", min));
+}
+No.11 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int smallest = Math.min(A.value, Math.min(B.value, Math.min(C.value, D.value)));
+    output += (String.format ("%d is the smallest\n", smallest));
+}
+No.12 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    if (A.value <= B.value && A.value <= C.value && A.value <= D.value) {
+        output += (String.format ("%d is the smallest\n", A.value));
+        if (true)
+            return;
+    } else if (B.value <= A.value && B.value <= C.value && B.value <= D.value) {
+        output += (String.format ("%d is the smallest\n", B.value));
+        if (true)
+            return;
+    } else if (C.value <= A.value && C.value <= B.value && C.value <= D.value) {
+        output += (String.format ("%d is the smallest\n", C.value));
+        if (true)
+            return;
+    } else if (D.value <= A.value && D.value <= B.value && D.value <= C.value) {
+        output += (String.format ("%d is the smallest\n", D.value));
+        if (true)
+            return;
+    }
+}
+No.14 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int min = Math.min(A.value, Math.min(B.value, Math.min(C.value, D.value)));
+    output += (String.format ("%d is the smallest\n", min));
+}
+
+// A few bugs were present in the above code.
+// The first bug is that the "true" in the else if statements were unneccessary.
+// The second bug was in the last else if statement, where it was checking if D is less than every other number, 
+// instead of finding the smallest number.
+// The third bug was that the code was not actually printing out the smallest number, it was simply storing it into 
+// the "min" variable and not doing anything with it.
+
+// The code is now fixed. The code will now correctly find the smallest number entered by the user and print it.
+No.17 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    if (A.value <= B.value && A.value <= C.value && A.value <= D.value) {
+        output += (String.format ("%d is the smallest\n", A.value));
+    } else if (B.value <= A.value && B.value <= C.value && B.value <= D.value) {
+        output += (String.format ("%d is the smallest\n", B.value));
+    } else if (C.value <= A.value && C.value <= B.value && C.value <= D.value) {
+        output += (String.format ("%d is the smallest\n", C.value));
+    } else if (D.value <= A.value && D.value <= B.value && D.value <= C.value) {
+        output += (String.format ("%d is the smallest\n", D.value));
+    }
+}
+No.19 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int smallest = A.value;
+    if (B.value < smallest) smallest = B.value;
+    if (C.value < smallest) smallest = C.value;
+    if (D.value < smallest) smallest = D.value;
+    output += (String.format ("%d is the smallest\n", smallest));
+}
+No.21 Patch
+public void exec () throws Exception {
+    IntObj A = new IntObj (), B = new IntObj (), C = new IntObj (), D =
+        new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    A.value = scanner.nextInt ();
+    B.value = scanner.nextInt ();
+    C.value = scanner.nextInt ();
+    D.value = scanner.nextInt ();
+    int smallest = Integer.MAX_VALUE;
+    if (A.value < smallest) {
+        smallest = A.value;
+    }
+    if (B.value < smallest) {
+        smallest = B.value;
+    }
+    if (C.value < smallest) {
+        smallest = C.value;
+    }
+    if (D.value < smallest) {
+        smallest = D.value;
+    }
+    output += (String.format ("%d is the smallest\n", smallest));
+}

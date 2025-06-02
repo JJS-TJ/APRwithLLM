@@ -1,0 +1,267 @@
+No.0 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    if (a.value > b.value) {
+        x.value = b.value;
+    } else {
+        x.value = a.value;
+    }
+    if (b.value > c.value) {
+        if (c.value < x.value) {
+            x.value = c.value;
+        }
+    }
+    if (c.value > d.value) {
+        if (d.value < x.value) {
+            x.value = d.value;
+        }
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+No.1 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    if (a.value < b.value) {
+        x.value = a.value;
+    } else {
+        x.value = b.value;
+    }
+    if (b.value > c.value) {
+        if (c.value < x.value) {
+            x.value = c.value;
+        }
+    }
+    if (c.value > d.value) {
+        if (d.value < x.value) {
+            x.value = d.value;
+        }
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+No.3 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    if (a.value < b.value) {
+        x.value = a.value;
+    } else {
+        x.value = b.value;
+    }
+    if (c.value < x.value) {
+        x.value = c.value;
+    }
+    if (d.value < x.value) {
+        x.value = d.value;
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+No.4 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    x.value = a.value;
+    if (b.value < x.value) {
+        x.value = b.value;
+    }
+    if (c.value < x.value) {
+        x.value = c.value;
+    }
+    if (d.value < x.value) {
+        x.value = d.value;
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+No.5 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    x.value = a.value;
+    if (b.value < x.value) {
+        x.value = b.value;
+    } 
+    if (c.value < x.value) {
+        x.value = c.value;
+    } 
+    if (d.value < x.value) {
+        x.value = d.value;
+    } 
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+No.7 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    if (a.value > b.value) {
+        x.value = b.value;
+    } else {
+        x.value = a.value;
+    }
+    if (b.value > c.value && c.value < x.value) {
+        x.value = c.value;
+    }
+    if (c.value > d.value && d.value < x.value) {
+        x.value = d.value;
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+
+// Given a binary tree, find the sum of all the leaf nodes.
+No.8 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    if (a.value > b.value) {
+        x.value = b.value;
+    } else {
+        x.value = a.value;
+    }
+    if (b.value > c.value) {
+        if(c.value < x.value)
+            x.value = c.value;
+    }
+    if (c.value > d.value) {
+        if(d.value < x.value)
+            x.value = d.value;
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+No.10 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    x.value = a.value;
+    if (b.value < x.value) {
+        x.value = b.value;
+    }
+    if (c.value < x.value) {
+        x.value = c.value;
+    }
+    if (d.value < x.value) {
+        x.value = d.value;
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+
+// A buggy function is shown, provide a fix for the function.
+No.11 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    if (a.value > b.value) {
+        x.value = b.value;
+    } else {
+        x.value = a.value;
+    }
+    if (b.value > c.value) {
+        if(c.value < x.value) {
+            x.value = c.value;
+        }
+    }
+    if (c.value > d.value) {
+        if(d.value < x.value) {
+            x.value = d.value;
+        }
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}
+
+// A Function that computes the sum of two integers
+No.12 Patch
+public void exec () throws Exception {
+    IntObj a = new IntObj (), b = new IntObj (), c = new IntObj (), d =
+        new IntObj (), x = new IntObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    a.value = scanner.nextInt ();
+    b.value = scanner.nextInt ();
+    c.value = scanner.nextInt ();
+    d.value = scanner.nextInt ();
+    if (a.value > b.value) {
+        x.value = b.value;
+    } else {
+        x.value = a.value;
+    }
+    if (b.value > c.value && c.value < x.value) {
+        x.value = c.value;
+    }
+    if (d.value < x.value) {
+        x.value = d.value;
+    }
+    output += (String.format ("%d is the smallest\n", x.value));
+    if (true)
+        return;;
+}

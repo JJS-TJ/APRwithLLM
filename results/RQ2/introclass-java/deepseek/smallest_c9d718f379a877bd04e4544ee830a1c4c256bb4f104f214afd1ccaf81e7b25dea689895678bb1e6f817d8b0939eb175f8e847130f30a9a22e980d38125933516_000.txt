@@ -1,0 +1,283 @@
+No.0 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    Double smallest = Double.MAX_VALUE;
+    if (num1.value < smallest)
+        smallest = num1.value;
+    if (num2.value < smallest)
+        smallest = num2.value;
+    if (num3.value < smallest)
+        smallest = num3.value;
+    if (num4.value < smallest)
+        smallest = num4.value;
+    output += (String.format ("%.0f is the smallest\n", smallest));
+    return;
+}
+No.4 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    double min = Math.min(num1.value, Math.min(num2.value, Math.min(num3.value, num4.value)));
+    output += (String.format ("%.0f is the smallest\n", min));
+    if (true)
+        return;;
+}
+
+
+// The code is wrong, you must modify it to be correct.
+No.5 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    DoubleObj smallest = num1;
+    if (num2.value < smallest.value) {
+        smallest = num2;
+    }
+    if (num3.value < smallest.value) {
+        smallest = num3;
+    }
+    if (num4.value < smallest.value) {
+        smallest = num4;
+    }
+    output += (String.format ("%.0f is the smallest\n", smallest.value));
+}
+No.6 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    if (num1.value <= num2.value && num1.value <= num3.value
+            && num1.value <= num4.value) {
+        output += (String.format ("%.0f is the smallest\n", num1.value));
+    }
+    else if (num2.value <= num1.value && num2.value <= num3.value
+            && num2.value <= num4.value) {
+        output += (String.format ("%.0f is the smallest\n", num2.value));
+    }
+    else if (num3.value <= num1.value && num3.value <= num2.value
+            && num3.value <= num4.value) {
+        output += (String.format ("%.0f is the smallest\n", num3.value));
+    }
+    else {
+        output += (String.format ("%.0f is the smallest\n", num4.value));
+    }
+}
+No.7 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    double smallest = num1.value;
+    if(num2.value < smallest) smallest = num2.value;
+    if(num3.value < smallest) smallest = num3.value;
+    if(num4.value < smallest) smallest = num4.value;
+    output += (String.format ("%.0f is the smallest\n", smallest));
+}
+
+// The provided code has a bug in it, you must provide a fix for it.
+No.8 Patch
+public void exec() throws Exception {
+    DoubleObj num1 = new DoubleObj(), num2 = new DoubleObj(), num3 =
+        new DoubleObj(), num4 = new DoubleObj();
+    output +=
+        (String.format("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble();
+    num2.value = scanner.nextDouble();
+    num3.value = scanner.nextDouble();
+    num4.value = scanner.nextDouble();
+    double smallest = num1.value;
+    if (num2.value < smallest) {
+        smallest = num2.value;
+    }
+    if (num3.value < smallest) {
+        smallest = num3.value;
+    }
+    if (num4.value < smallest) {
+        smallest = num4.value;
+    }
+    output += (String.format("%.0f is the smallest\n", smallest));
+    if (true)
+        return;
+    ;
+}
+No.9 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+
+    Double smallestValue = Math.min(Math.min(num1.value, num2.value), Math.min(num3.value, num4.value));
+    output += (String.format ("%.0f is the smallest\n", smallestValue));
+}
+No.10 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    Double smallest = Math.min(num1.value, Math.min(num2.value, Math.min(num3.value, num4.value)));
+    output += (String.format ("%.0f is the smallest\n", smallest));
+    if (true)
+        return;;
+}
+No.12 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    double smallest = num1.value;
+    if (num2.value < smallest) {
+        smallest = num2.value;
+    }
+    if (num3.value < smallest) {
+        smallest = num3.value;
+    }
+    if (num4.value < smallest) {
+        smallest = num4.value;
+    }
+    output += (String.format ("%.0f is the smallest\n", smallest));
+    if (true)
+        return;;
+}
+No.14 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    double min = Math.min(num1.value, Math.min(num2.value, Math.min(num3.value, num4.value)));
+    output += (String.format ("%.0f is the smallest\n", min));
+    if (true)
+        return;;
+}
+No.16 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    double smallest = num1.value;
+    if(num2.value < smallest) smallest = num2.value;
+    if(num3.value < smallest) smallest = num3.value;
+    if(num4.value < smallest) smallest = num4.value;
+    output += (String.format ("%.0f is the smallest\n", smallest));
+    if (true)
+        return;;
+}
+No.17 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    double min = num1.value;
+    if (num2.value < min) {
+        min = num2.value;
+    }
+    if (num3.value < min) {
+        min = num3.value;
+    }
+    if (num4.value < min) {
+        min = num4.value;
+    }
+    output += (String.format ("%.0f is the smallest\n", min));
+}
+No.18 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    Double smallest = num1.value;
+    if (num2.value < smallest) {
+        smallest = num2.value;
+    }
+    if (num3.value < smallest) {
+        smallest = num3.value;
+    }
+    if (num4.value < smallest) {
+        smallest = num4.value;
+    }
+    output += (String.format ("%.0f is the smallest\n", smallest));
+}
+No.19 Patch
+public void exec () throws Exception {
+    DoubleObj num1 = new DoubleObj (), num2 = new DoubleObj (), num3 =
+        new DoubleObj (), num4 = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 4 numbers separated by spaces > "));
+    num1.value = scanner.nextDouble ();
+    num2.value = scanner.nextDouble ();
+    num3.value = scanner.nextDouble ();
+    num4.value = scanner.nextDouble ();
+    double smallest = num1.value;
+    if (num2.value < smallest) {
+        smallest = num2.value;
+    }
+    if (num3.value < smallest) {
+        smallest = num3.value;
+    }
+    if (num4.value < smallest) {
+        smallest = num4.value;
+    }
+    output += (String.format ("%.0f is the smallest\n", smallest));
+}

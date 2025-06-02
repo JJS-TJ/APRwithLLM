@@ -1,0 +1,383 @@
+No.0 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n3.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.1 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value <= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.4 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value <= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+
+// This function is incorrect. It is supposed to take in an array of integers and return a String of the median.
+No.5 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if ((n1.value >= n2.value && n1.value <= n3.value) || (n1.value <= n2.value && n1.value >= n3.value)) {
+        median.value = n1.value;
+    } else if ((n2.value >= n1.value && n2.value <= n3.value) || (n2.value <= n1.value && n2.value >= n3.value)) {
+        median.value = n2.value;
+    } else {
+        median.value = n3.value;
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.7 Patch
+public void exec() throws Exception {
+    DoubleObj n1 = new DoubleObj(), n2 = new DoubleObj(), n3 = new DoubleObj(), median = new DoubleObj();
+    output += (String.format("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble();
+    n2.value = scanner.nextDouble();
+    n3.value = scanner.nextDouble();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n3.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format(" %.0f is the median\n", median.value));
+}
+No.8 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value && n1.value >= n3.value) {
+        if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value >= n1.value && n2.value >= n3.value) {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n1.value >= n2.value) {
+        median.value = n1.value;
+    } else {
+        median.value = n2.value;
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.9 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value <= n3.value) {
+        median.value = n2.value;
+    } else if (n1.value >= n3.value) {
+        median.value = n1.value;
+    } else {
+        median.value = n3.value;
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.12 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 = new DoubleObj ();
+    double median;
+    output += (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median = n1.value;
+        } else if (n2.value >= n3.value) {
+            median = n2.value;
+        } else {
+            median = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median = n1.value;
+        } else if (n2.value <= n3.value) {
+            median = n2.value;
+        } else {
+            median = n3.value;
+        }
+    }
+    output += (String.format (" %.0f is the median\n", median));
+}
+No.13 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if ((n1.value >= n2.value && n1.value <= n3.value) || (n1.value >= n3.value && n1.value <= n2.value)) {
+        median.value = n1.value;
+    } else if ((n2.value >= n1.value && n2.value <= n3.value) || (n2.value >= n3.value && n2.value <= n1.value)) {
+        median.value = n2.value;
+    } else {
+        median.value = n3.value;
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.15 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value) {
+        if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value <= n3.value) {
+        median.value = n2.value;
+    } else if (n1.value >= n3.value) {
+        median.value = n1.value;
+    } else {
+        median.value = n3.value;
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.16 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 = new DoubleObj (), median = new DoubleObj ();
+    output += (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value && n1.value >= n3.value) {
+        if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value >= n1.value && n2.value >= n3.value) {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n2.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.17 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value >= n2.value && n1.value <= n3.value || n1.value <= n2.value && n1.value >= n3.value) {
+        median.value = n1.value;
+    } else if (n2.value >= n1.value && n2.value <= n3.value || n2.value <= n1.value && n2.value >= n3.value) {
+        median.value = n2.value;
+    } else if (n3.value >= n1.value && n3.value <= n2.value || n3.value <= n1.value && n3.value >= n2.value) {
+        median.value = n3.value;
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.18 Patch
+public void exec() throws Exception {
+    DoubleObj n1 = new DoubleObj(), n2 = new DoubleObj(), n3 = new DoubleObj(), median = new DoubleObj();
+    output += (String.format("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble();
+    n2.value = scanner.nextDouble();
+    n3.value = scanner.nextDouble();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n3.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format("%.0f is the median\n", median.value));
+}
+No.19 Patch
+public void exec () throws Exception {
+    DoubleObj n1 = new DoubleObj (), n2 = new DoubleObj (), n3 =
+        new DoubleObj (), median = new DoubleObj ();
+    output +=
+        (String.format ("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble ();
+    n2.value = scanner.nextDouble ();
+    n3.value = scanner.nextDouble ();
+    if (n1.value <= n2.value && n1.value <= n3.value) {
+        if (n2.value <= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else if (n2.value <= n1.value && n2.value <= n3.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value <= n2.value) {
+            median.value = n1.value;
+        } else {
+            median.value = n2.value;
+        }
+    }
+    output += (String.format (" %.0f is the median\n", median.value));
+}
+No.22 Patch
+public void exec() throws Exception {
+    DoubleObj n1 = new DoubleObj(), n2 = new DoubleObj(), n3 = new DoubleObj(), median = new DoubleObj();
+    output += (String.format("Please enter 3 numbers separated by spaces > "));
+    n1.value = scanner.nextDouble();
+    n2.value = scanner.nextDouble();
+    n3.value = scanner.nextDouble();
+    if (n1.value >= n2.value) {
+        if (n1.value <= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value >= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    } else {
+        if (n1.value >= n3.value) {
+            median.value = n1.value;
+        } else if (n2.value <= n3.value) {
+            median.value = n2.value;
+        } else {
+            median.value = n3.value;
+        }
+    }
+    output += (String.format(" %.0f is the median\n", median.value));
+}

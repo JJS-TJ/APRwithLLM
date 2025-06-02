@@ -1,0 +1,141 @@
+No.2 Patch
+public void exec () throws Exception {
+    char[] word = new char[40];
+    IntObj i = new IntObj (0);
+    IntObj count = new IntObj (0);
+    output += (String.format ("Please enter a string > "));
+    word = (scanner.nextLine () + "\n").toCharArray ();
+    while (i.value < word.length) {
+        if (word[i.value] == 'a' || word[i.value] == 'o'
+                || word[i.value] == 'e' || word[i.value] == 'u'
+                || word[i.value] == 'i' || word[i.value] == 'y') {
+            count.value++;
+        }
+        i.value++;
+    }
+    output +=
+        (String.format ("The number of syllables is %d.\n", count.value));
+}
+No.5 Patch
+public void exec () throws Exception {
+    char[] word = new char[40];
+    IntObj i = new IntObj (0);
+    IntObj count = new IntObj (0);
+    output += (String.format ("Please enter a string > "));
+    word = (scanner.nextLine () + "\n").toLowerCase().toCharArray ();
+    while (i.value < word.length) {
+        if (word[i.value] == 'a' || word[i.value] == 'o'
+                || word[i.value] == 'e' || word[i.value] == 'u'
+                || word[i.value] == 'i' || word[i.value] == 'y') {
+            count.value++;
+        }
+        i.value++;
+    }
+    output +=
+        (String.format ("The number of syllables is %d.\n", count.value));
+    if (true)
+        return;;
+}
+No.9 Patch
+public void exec () throws Exception {
+    char[] word = new char[40];
+    IntObj i = new IntObj (0);
+    IntObj count = new IntObj (0);
+    output += (String.format ("Please enter a string > "));
+    word = (scanner.nextLine () + "\n").toCharArray ();
+    while (i.value < word.length) {
+        if (word[i.value] == 'a' || word[i.value] == 'o'
+                || word[i.value] == 'e' || word[i.value] == 'u'
+                || word[i.value] == 'i' || word[i.value] == 'y') {
+            count.value++;
+        }
+        i.value++;
+    }
+    output +=
+        (String.format ("The number of syllables is %d.\n", count.value));
+    if (true)
+        return;;
+}
+No.10 Patch
+public void exec () throws Exception {
+    char[] word = new char[40];
+    IntObj i = new IntObj (0);
+    IntObj count = new IntObj (0);
+    output += (String.format ("Please enter a string > "));
+    word = (scanner.nextLine () + "\n").toCharArray ();
+    while (i.value < word.length) {
+        if (word[i.value] == 'a' || word[i.value] == 'o'
+                || word[i.value] == 'e' || word[i.value] == 'u'
+                || word[i.value] == 'y' || word[i.value] == 'i') {
+            count.value++;
+        }
+        i.value++;
+    }
+    output +=
+        (String.format ("The number of syllables is %d.\n", count.value));
+    if (true)
+        return;;
+}
+No.14 Patch
+public void exec () throws Exception {
+    char[] word = new char[40];
+    IntObj i = new IntObj (0);
+    IntObj count = new IntObj (0);
+    output += (String.format ("Please enter a string > "));
+    word = (scanner.nextLine () + "\n").toCharArray ();
+    while (i.value < word.length) {
+        if (word[i.value] == 'a' || word[i.value] == 'o'
+                || word[i.value] == 'e' || word[i.value] == 'u'
+                || word[i.value] == 'y' || word[i.value] == 'i') {
+            count.value++;
+        }
+        i.value++;
+    }
+    output +=
+        (String.format ("The number of syllables is %d.\n", count.value));
+    if (true)
+        return;
+}
+No.16 Patch
+public void exec () throws Exception {
+    char[] word = new char[40];
+    IntObj i = new IntObj (0);
+    IntObj count = new IntObj (0);
+    output += (String.format ("Please enter a string > "));
+    word = (scanner.nextLine () + "\n").toCharArray ();
+    while (i.value < word.length) {
+        if (word[i.value] == 'a' || word[i.value] == 'o'
+                || word[i.value] == 'e' || word[i.value] == 'u'
+                || word[i.value] == 'i' || word[i.value] == 'y') {
+            count.value++;
+        }
+        i.value++;
+    }
+    output +=
+        (String.format ("The number of syllables is %d.\n", count.value));
+    if (true)
+        return;
+}
+No.21 Patch
+public void exec () throws Exception {
+    char[] word = new char[40];
+    IntObj i = new IntObj (0);
+    IntObj count = new IntObj (0);
+    output += (String.format ("Please enter a string > "));
+    word = (scanner.nextLine () + "\n").toCharArray ();
+    while (i.value < word.length) {
+        if (word[i.value] == 'a' || word[i.value] == 'o'
+                || word[i.value] == 'e' || word[i.value] == 'u'
+                || word[i.value] == 'i' || word[i.value] == 'y') {
+            count.value++;
+        }
+        i.value++;
+    }
+    output +=
+        (String.format ("The number of syllables is %d.\n", count.value));
+    if (true)
+        return;;
+}
+
+// This program was written by a beginner programmer.
+// Fix any errors found and make the program more efficient.
