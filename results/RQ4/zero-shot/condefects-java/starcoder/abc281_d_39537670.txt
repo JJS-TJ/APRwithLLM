@@ -1,0 +1,28 @@
+No.3 Patch
+static void solve() throws IOException{
+	n = I();m = I();int d = I();
+	long dp[][][] = new long[n+1][n+1][d];
+	for (long [][]a:dp)
+		for (long []b:a) Arrays.fill(b, -INF);
+	for (int i = 0 ; i <=n ; i++) dp[i][0][0] = 0;
+	for (int i = 1 ; i <=n ; i++) {
+		int x = I();
+		for (int j = 1 ; j <=Math.min(i, m) ; j++)
+			for (int k = 0 ; k <d ; k++) {
+				dp[i][j][k] = Math.max(dp[i-1][j][k],dp[i-1][j-1][(d+k-x%d)%d] + x);
+			}
+	}
+	pw.println(dp[n][m][0] < 0?-1:dp[n][m][0]);
+}
+
+// Explanation
+// The bug in the original function is in the line:
+// dp[i][j][k] = Math.max(dp[i-1][j][k],dp[i-1][j-1][((d-x)%d+d)%d] + x);
+// The original function is trying to subtract x from d, then find the modulus of d. 
+// However, this is not the correct way to subtract x from d and then find the modulus. 
+// The correct way is to subtract x from the current value of k, then find the modulus of d.
+// So, the correct line should be:
+// dp[i][j][k] = Math.max(dp[i-1][j][k],dp[i-1][j-1][(d+k-x%d)%d] + x);<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given an array, for each element find its next greater element in the array. 
+// If there does not exist a next greater element, the answer should be -1.
+
+// Input: array = [4, 5

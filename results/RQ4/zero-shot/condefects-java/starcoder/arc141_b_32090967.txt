@@ -1,0 +1,45 @@
+No.7 Patch
+void calc() {
+	if (N > 70L) {
+		this.writer.println(0L);
+		return;
+	}
+	long[] patterns = Arrays.copyOf(basePatterns, this.basePatterns.length);
+	for (int i = 1; i < this.N; ++i) {
+		long[] nexts = new long[patterns.length];
+		Arrays.fill(nexts, 0L);
+		long sum = 0L;
+		for (int j = i; j + 1 < patterns.length; ++j) {
+			sum += patterns[j];
+			sum %= MOD; // Fix: Add MOD operation to avoid overflow
+			nexts[j + 1] = sum * basePatterns[j + 1] % MOD;
+		}
+		patterns = nexts;
+	}
+	long result = 0L;
+	for (int i = 0; i < patterns.length; ++i) {
+		result += patterns[i];
+		result %= MOD;
+	}
+	this.writer.println(result);
+}
+
+/*
+
+The buggy function fails to take into account that the sum of the patterns array elements can exceed the maximum value of a long integer, leading to an overflow and thus incorrect results. The fix is to include a mod operation on the sum of the patterns array elements, effectively limiting its value to within the range of a long integer, and thus preventing the overflow.
+
+*/<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//0x02-functions_nested_loops/holberton.h
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
+
+/* Function prototypes */
+int _putchar(char c);
+void print_alphabet(void);
+void print_alphabet_x10(void);
+int _islower(int c);
+int _isalpha(int c);
+int print_sign(int n);
+int _abs(int n);
+int print_last_digit(int n);
+void jack_bauer(void);
+void times_table(

@@ -1,0 +1,85 @@
+No.6 Patch
+public static void main(String[] args) throws Exception {
+    int n = ri();
+    String str = rs();
+    boolean judge = true;//true = T false = A
+    int a = 0;
+    int b = 0;
+    for(int i=0;i<n;i++){
+        if(str.charAt(i) == 'T'){
+            a++;
+        }else{
+            b++;
+        }
+        if(a > b){
+            judge = true;
+        }else if(b > a){
+            judge = false;
+        }
+    }
+    if(judge){
+        puts("T");
+    }else{
+        puts("A");
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.HashSet;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int t = Integer.parseInt(br.readLine().trim());
+
+            while (t-- > 0) {
+                int n = Integer.parseInt(br.readLine().trim());
+                String[] strings = new String[n];
+
+                for (int i = 0; i < n; i++) {
+                    strings[i] = br.read
+No.7 Patch
+public static void main(String[] args) throws Exception {
+    int n = ri();
+    String [] str = rs().split("");
+    boolean judge = true;//true = T false = A
+    int a = 0;
+    int b = 0;
+    for(int i=0;i<n;i++){
+        if(str[i].equals("T")){
+            a++;
+        }else{
+            b++;
+        }
+        if(a > b){
+            judge = true;
+        }else if (b > a) {
+            judge = false;
+        }
+    }
+    if(judge){
+        puts("T");
+    }else{
+        puts("A");
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.krish.batterylife;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class BatteryStatusActivity extends Activity {
+    private TextView mBatteryLevelText;
+    private ImageView mBatteryImage;
+    private int mBatteryLevel = 0;
+    private Handler mHandler;
+
+    private Runnable mUpdateBatteryStatus = new Runnable() {
+        public void run() {
+            // Get the current battery level.
+            mBatteryLevel = getBatteryLevel();
+
+            // Update the

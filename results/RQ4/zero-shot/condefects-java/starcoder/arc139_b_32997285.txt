@@ -1,0 +1,60 @@
+No.0 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double)cost1/(double)dist1 < (double)cost2/(double)dist2;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// You have a large text file containing words. Given any two words, find the shortest distance (in terms of number of words) between them in the file. If the operation will be repeated many times for the
+No.1 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}
+
+// In the buggy function, the result of the comparison could be wrong if the product of the two numbers is larger than the maximum integer value (2^31 - 1), as it could lead to overflow.
+// In
+No.2 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1. In other words, one of the first string's permutations is the substring of the second string
+No.3 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double) cost1/dist1 < (double) cost2/dist2;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// You are given two arrays of integers and a target value. 
+// Determine the number of pairs of array elements that have a difference equal to a target value.
+
+// For example, given the array [1,2
+No.6 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given a 2D grid, each cell is either a zombie 1 or a human 0. Zombies can turn the nearest people(up/down/left/right) into zombies every hour.
+No.7 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (long) cost1*dist2 < (long) cost2*dist1;
+}
+
+// The bug in the function is that if cost1 and/or cost2 is large and dist1 and/or dist2 is small,
+// the result might overflow as the multiplication of these two numbers might exceed the maximum limit of
+No.8 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    // We are using long to avoid overflow issues
+    return ((long)cost1) * dist2 < ((long)cost2) * dist1;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/lib/lib.h
+#pragma once
+
+#include <iostream>
+
+
+int factorial(int n);
+
+//src
+No.9 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (cost1 * 1.0 / dist1) < (cost2 * 1.0 / dist2);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// src/app/src/main/cpp/include/jni_lib/jni_lib.h
+//
+// Created by luke on 27.04.

@@ -1,0 +1,29 @@
+No.1 Patch
+private static void solve(InputReader in, PrintWriter out,int caseID) {
+    long N = in.nextLong();
+    long ak = -1;
+    long bk = (int)1e9 + 7;
+    for (int i = 0; i < N; i++) {
+        ak = Math.max(ak,in.nextInt());
+        bk = Math.min(bk,in.nextInt());            
+        if(ak<=bk) out.println(0);
+        else out.println((ak-bk+1)/2);
+    }
+    
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//
+//  DetailViewController.h
+//  Sprint 2
+//
+//  Created by Michael on 11/17/14.
+//  Copyright (c) 2014 Michael. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "ProjectObject.h"
+#import "TaskObject.h"
+#import "UserObject.h"
+
+@interface DetailViewController : UIViewController
+
+@property (strong, nonatomic) id detailItem;
+@property (weak, nonatomic) IBOutlet UIL

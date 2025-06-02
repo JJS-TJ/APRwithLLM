@@ -1,0 +1,158 @@
+No.1 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    int maxLen = 0;
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = i + 1; j <= s.length(); j++) {
+            String ws1 = s.substring(i, j);
+            String ws2 = new StringBuilder(ws1).reverse().toString();
+
+            if (ws1.equals(ws2)) {
+                maxLen = Math.max(maxLen, ws1.length());
+            }
+        }
+    }
+
+    System.out.println(maxLen);
+
+    sc.close();
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.3 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    String ws1 = "";
+    String ws2 = "";
+    StringBuilder sb = new StringBuilder();
+    int ans = 0;
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = i+1; j <= s.length(); j++) {
+            ws1 = s.substring(i, j);
+            sb.append(ws1);
+            ws2 = sb.reverse().toString();
+
+            if (ws1.equals(ws2)) {
+                ans = Math.max(ans, ws1.length());
+            }
+
+            sb.setLength(0);
+        }
+    }
+
+    System.out.println(ans);
+
+    sc.close();
+}
+
+// Explanation 
+// The bug is in the inner loop of the function where the substring is created. The substring is created from index 'i' to 'j' where 'j' is also included in the substring. 
+// This is wrong because the substring function takes two arguments which are the start and end indices of the substring. 
+// The end index is exclusive, meaning the character at the end index is not included in the substring.
+// So if you want to include the character at the end index in the substring, you should use 'j+1' as the end index.
+// In the buggy function, when 'i' equals 'j', the substring is an empty string, which doesn't make sense.
+// So, the corrected function starts the inner loop from 'i+1' to avoid creating an empty substring.
+// And the end index of the substring is 'j+1' instead of 'j', so the character at
+No.4 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    String ws1 = "";
+    String ws2 = "";
+    StringBuilder sb = new StringBuilder();
+    int ans = 0;
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = i + 1; j <= s.length(); j++) {
+            ws1 = s.substring(i, j);
+            sb.append(ws1);
+            ws2 = sb.reverse().toString();
+
+            if (ws1.equals(ws2)) {
+                ans = Math.max(ans, ws1.length());
+            }
+
+            sb.setLength(0);
+        }
+    }
+
+    System.out.println(ans);
+
+    sc.close();
+}
+
+// Correction: The loop for j should start from i + 1 instead of i, to avoid creating an empty substring.
+
+// Explanation: The original loop for j was starting from i, leading to the creation of empty substring when j = i. 
+// The comparison of the substring with its reverse is done to find palindromic substrings, and the maximum length is stored in 'ans'. 
+// The empty string is considered a palindrome, so the answer will be 0 in this case. 
+// The outer loop i runs through each character of the string, and the inner loop j generates all possible substrings starting from i. 
+// If a substring is equal to its reverse (i.e., it's a palindrome), the length of that substring is compared with 'ans' and the maximum length is stored in 'ans'.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/models/Poll.java
+package
+No.5 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    String ws1 = "";
+    String ws2 = "";
+    StringBuilder sb = new StringBuilder();
+    int ans = 0;
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = i + 1; j <= s.length(); j++) {
+            ws1 = s.substring(i, j);
+            ws2 = new StringBuilder(ws1).reverse().toString();
+
+            if (ws1.equals(ws2)) {
+                ans = Math.max(ans, ws1.length());
+            }
+        }
+    }
+
+    System.out.println(ans);
+
+    sc.close();
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//Provide a fix for the buggy function 
+
+// Buggy Function
+No.7 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    String ws1 = "";
+    String ws2 = "";
+    int ans = 0;
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = i + 1; j <= s.length(); j++) {
+            ws1 = s.substring(i, j);
+            ws2 = new StringBuilder(ws1).reverse().toString();
+
+            if (ws1.equals(ws2)) {
+                ans = Math.max(ans, ws1.length());
+            }
+        }
+    }
+
+    System.out.println(ans);
+
+    sc.close();
+}
+
+// In the buggy function, the inner loop starts from "i" instead of "i+1". This means that it checks for substrings of length 1. If the input string is "abcd", it would check for substrings "a", "b", "c", "d" which are incorrect. 
+// The buggy function also sets the length of the StringBuilder to 0 after each iteration. This is unnecessary because the StringBuilder is being created anew in each iteration. 
+// In the fixed function, the inner loop starts from "i+1" so that it checks for substrings of length 2 and above. 
+// The StringBuilder is also created anew in each iteration instead of being cleared and reused. This is more efficient.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Write a program to generate the reverse of a given number N. Print the corresponding reverse number.
+
+// Note : If a number has trailing zeros, then its reverse will not include them. For e.g., reverse of 100 is 1 not 001.
+
+import java.io.*; // for handling

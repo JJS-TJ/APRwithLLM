@@ -1,0 +1,156 @@
+No.1 Patch
+void run ()
+{
+  Scanner cin = new Scanner(System.in);
+  int N = cin.nextInt();
+  int M = cin.nextInt();
+  String S = cin.next();
+  String T = cin.next();
+  cin.close();
+  int ans = 3;
+  if (T.substring(0, N).equals(S)) {
+    ans -= 2;
+  }
+  if (T.substring(M-N).equals(S)) {
+    ans -= 1;
+  }
+
+  System.out.println(ans);
+}
+
+// The bug was in the second if statement where the substring for T is only the last 3 characters, 
+// but it should be the last N characters of T. So, we have to change T.substring(M-3, M) to T.substring(M-N).
+// The function will now return the correct result.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// 121. Best Time to Buy and Sell Stock
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that
+No.3 Patch
+public void run() {
+  Scanner cin = new Scanner(System.in);
+  int N = cin.nextInt();
+  int M = cin.nextInt();
+  cin.nextLine();  // Consume the newline character
+  String S = cin.nextLine();
+  String T = cin.nextLine();
+  cin.close();
+  int ans = 3;
+  if (T.substring(0, N).equals(S)) {
+    ans -= 2;
+  }
+  if (T.substring(M-N, M).equals(S)) {
+    ans -= 1;
+  }
+
+  System.out.println(ans);
+}
+
+// Explanation
+// The bug in the original function was due to not consuming the newline character after reading the integers N and M. 
+// This caused the subsequent call to cin.nextLine() to read the newline character as an empty string, which 
+// resulted in the comparison of T.substring(0, N) with S to always fail.
+// To fix this bug, we simply add cin.nextLine() after cin.nextInt() to consume the newline character after reading the integers.
+// This ensures that the subsequent calls to cin.nextLine() will read the
+No.4 Patch
+void run ()
+{
+  Scanner cin = new Scanner(System.in);
+  int N = cin.nextInt();
+  int M = cin.nextInt();
+  String S = cin.next();
+  String T = cin.next();
+  cin.close();
+  int ans = 3;
+  if (N <= M) {
+    if (T.substring(0, N).equals(S)) {
+      ans -= 2;
+    }
+    if (T.substring(M-N, M).equals(S)) {
+      ans -= 1;
+    }
+  } else {
+    if (T.substring(0, M).equals(S)) {
+      ans -= 2;
+    }
+    if (T.substring(N-M, N).equals(S)) {
+      ans -= 1;
+    }
+  }
+  
+  System.out.println(ans);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.6 Patch
+void run ()
+{
+  Scanner cin = new Scanner(System.in);
+  int N = cin.nextInt();
+  int M = cin.nextInt();
+  String S = cin.next();
+  String T = cin.next();
+  cin.close();
+  int ans = 3;
+  if (T.substring(0, N).equals(S)) {
+    ans -= 2;
+  }
+  if (T.substring(M-N, M).equals(S)) {
+    ans -= 1;
+  }
+
+  System.out.println(ans);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/github/sidneymiranda/loja/dto/CategoriaDTO.java
+package com.github.sidneymiranda.loja.dto;
+
+import java.io.Serializable;
+
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
+
+import com.github.sidneymiranda.loja.entities.Categoria;
+
+public class CategoriaDTO implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	private Integer id;
+No.8 Patch
+void run ()
+{
+  Scanner cin = new Scanner(System.in);
+  int N = cin.nextInt();
+  int M = cin.nextInt();
+  String S = cin.next();
+  String T = cin.next();
+  cin.close();
+  int ans = 3;
+  if (T.substring(0, N).equals(S)) {
+    ans -= 2;
+  }
+  if (T.substring(M-N, M).equals(S)) {
+    ans -= 1;
+  }
+
+  System.out.println(ans);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/entity/Employee.java
+package com.example.demo.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee")
+public class Employee {
+
+	@Id
+	@Column(name = "emp_id")
+	private Long id;
+	
+	@Column(name = "emp_name")
+	private String name;
+	
+	@Column(name =

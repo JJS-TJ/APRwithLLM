@@ -1,0 +1,175 @@
+No.1 Patch
+public static void main(String[] args){
+  var sc=new java.util.Scanner(System.in);
+  int H=sc.nextInt();
+  int W=sc.nextInt();
+  int M=sc.nextInt();
+  int[] T=new int[M],A=new int[M],X=new int[M];
+  
+  for(int i=0;i<M;i++){
+    T[i]=sc.nextInt();
+    A[i]=sc.nextInt()-1;
+    X[i]=sc.nextInt();
+  }
+  
+  var map=new java.util.HashMap<Integer,Long>();
+  boolean[] hused=new boolean[H],vused=new boolean[W];
+  
+  for(int i=M-1;i>=0;i--){
+    int t=T[i];
+    int a=A[i];
+    int x=X[i];
+    
+    if(t==1){
+      if(!hused[a]){
+        hused[a]=true;
+        map.put(x,map.getOrDefault(x,0l)+W);
+        H--;
+      }
+    }else{
+      if(!vused[a]){
+        vused[a]=true;
+        map.put(x,map.getOrDefault(x,0l)+H);
+        W--;
+      }
+    }
+  }
+  map.put(0,map.getOrDefault(0,0l)+(long)W*H);
+  
+  var colors=new java.util.ArrayList<Integer>();
+  for(var set:map.entrySet()){
+    if(set.getValue()>0)colors.add(set.getKey());
+  }
+  
+  java.util.Collections.sort(colors);
+  
+  System.out.println(colors.size());
+  for(int color:colors)System.out.println(color+" "+map.get(color));
+}
+
+/*
+The error in the provided code is due to the integer overflow issue.
+When the W and H values are large, the multiplication of W and H can result in an integer overflow.
+The solution is to explicitly cast the multiplication result to long before adding it to the map.
+This change ensures that the result of the multiplication is a long type and can be safely stored in the map.
+*/
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.3 Patch
+public static void main(String[] args){
+  var sc=new java.util.Scanner(System.in);
+  int H=sc.nextInt();
+  int W=sc.nextInt();
+  int M=sc.nextInt();
+  int[] T=new int[M],A=new int[M],X=new int[M];
+  
+  for(int i=0;i<M;i++){
+    T[i]=sc.nextInt();
+    A[i]=sc.nextInt()-1;
+    X[i]=sc.nextInt();
+  }
+  
+  var map=new java.util.HashMap<Integer,Long>();
+  boolean[] hused=new boolean[H],vused=new boolean[W];
+  
+  for(int i=M-1;i>=0;i--){
+    int t=T[i];
+    int a=A[i];
+    int x=X[i];
+    
+    if(t==1){
+      if(!hused[a]){
+        hused[a]=true;
+        map.put(x,map.getOrDefault(x,0l)+W);
+        H--;
+      }
+    }else{
+      if(!vused[a]){
+        vused[a]=true;
+        map.put(x,map.getOrDefault(x,0l)+H);
+        W--;
+      }
+    }
+  }
+  map.put(0,map.getOrDefault(0,0l)+(long)W*H);
+  
+  var colors=new java.util.ArrayList<Integer>();
+  for(var set:map.entrySet()){
+    if(set.getValue()>0)colors.add(set.getKey());
+  }
+  
+  java.util.Collections.sort(colors);
+  
+  System.out.println(colors.size());
+  for(int color:colors)System.out.println(color+" "+map.get(color));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//
+//  CKTestViewController.h
+//  CKNavigationControllerDemo
+//
+//  Created by 仇弘扬 on 15/11/18.
+//  Copyright © 2015年 仇弘扬. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface CKTestViewController : UIViewController
+
+@end<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//
+//  CKNavigationController.h
+//  CKNavigationControllerDemo
+//
+//  Created by 仇弘扬 on 15/11/18.
+//  Copyright © 2015年 仇弘扬. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface CKNavigationController : UINavigationController
+
+/**
+ *  设置导航栏背景颜色
+ *
+ *  @param color 颜色
+ */
+- (void)setNavigationBarBackgroundColor:(UIColor *)color;
+
+/**
+ *  设置导航栏字体颜色
+ *
+ *  @param color 颜色
+ */
+- (void)setNavigationBarTextColor:(UIColor *)color;
+
+/**
+ *  设置导航栏字体
+ *
+ *  @param font 字体
+ */
+- (void)setNavigationBarFont:(UIFont *)font;
+
+/**
+ *  设置导航栏透明度
+ *
+ *  @param alpha 透明度
+ */
+- (void)setNavigationBarAlpha:(CGFloat)alpha;
+
+/**
+ *  设置导航栏背景图片
+ *
+ *  @param image 图片
+ */
+- (void)setNavigationBarBackgroundImage:(UIImage *)image;
+
+/**
+ *  设置导航栏item的透明度
+ *
+ *  @param alpha 透明度
+ */
+- (void)setNavigationBarItemAlpha:(CGFloat)alpha;
+
+/**
+ *  设置导航栏item的字体
+ *
+ *  @param font 字体

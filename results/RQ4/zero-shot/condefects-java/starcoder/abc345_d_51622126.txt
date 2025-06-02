@@ -1,0 +1,158 @@
+No.0 Patch
+static boolean placeTile(boolean[][] g, int r, int c, int x, int y) {
+    if(r + x > g.length || c + y > g[0].length) {
+        return false;
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            if(g[i][j]) {
+                return false;
+            }
+        }
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            g[i][j] = true;
+        }
+    }
+    return true;
+}
+
+// The bug in the original function was that it was checking if the tile in the starting position was filled before checking if the entire tile to be placed could fit. This was corrected by changing g[r][c] to g[i][j] in the first for loop to correctly check each tile in the grid.
+// The second bug was that it was only setting the starting tile to true after checking if the tile could fit. This was corrected by moving the second for loop to after the first one so that it sets all the tiles to true after they have been checked.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String c = scan.nextLine();
+        System
+No.2 Patch
+static boolean placeTile(boolean[][] g, int r, int c, int x, int y) {
+    if(r + x > g.length || c + y > g[0].length) {
+        return false;
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            if(g[i][j]) {
+                return false;
+            }
+        }
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            g[i][j] = true;
+        }
+    }
+    return true;
+}
+
+// The bug in the original function was that it was checking g[r][c] instead of g[i][j] in the first loop. This meant that it was only checking the very first tile in the grid, not the entire tiles that were supposed to be placed.
+// It also checks the same tiles again in the second loop, but this time it sets the tiles to true.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
+
+Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
+
+Return a list of integers representing the size of these parts.
+
+Example 1:
+Input: s = "ababcbacadefegdehijh
+No.3 Patch
+static boolean placeTile(boolean[][] g, int r, int c, int x, int y) {
+    if(r + x > g.length || c + y > g[0].length) {
+        return false;
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            if(g[i][j]) {
+                return false;
+            }
+        }
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            g[i][j] = true;
+        }
+    }
+    return true;
+}
+
+// The buggy function is incorrectly checking if the tile can be placed by checking if g[r][c] is true, which is incorrect as it should be checking if the tile can be placed by checking if the tile in that location is true. 
+// The corrected function checks if the tile in the current location is true and if it is, it returns false because it cannot place the tile there. 
+// It also places the tile by setting the grid value at the current location to true.
+
+//The correct function checks if the tiles are already occupied by iterating through the grid and returning false if a tile is already occupied. 
+// It also correctly places the tiles by setting the grid values to true.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Implement a function that adds two numbers together and returns their sum in binary. 
+// The conversion can be done before,
+No.4 Patch
+static boolean placeTile(boolean[][] g, int r, int c, int x, int y) {
+    if(r + x > g.length || c + y > g[0].length) {
+        return false;
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            if(g[i][j]) {
+                return false;
+            }
+        }
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            g[i][j] = true;
+        }
+    }
+    return true;
+}
+
+// In the buggy function, the if statement in the first loop checks if the tile at position (r,c) is occupied,
+// but it should check if the tile at position (i,j) is occupied.
+
+// In the fixed function, the if statement in the first loop checks if the tile at position (i,j) is occupied,
+// which fixes the bug.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.sag.bada;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView
+No.6 Patch
+static boolean placeTile(boolean[][] g, int r, int c, int x, int y) {
+    if(r + x > g.length || c + y > g[0].length) {
+        return false;
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            if(g[i][j]) {
+                return false;
+            }
+        }
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            g[i][j] = true;
+        }
+    }
+    return true;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Write a method called printOdds that accepts a Scanner representing an input file as its argument. 
+// Your method should print the odd numbers from the file, one per line. An example of a file would look like this:
+
+// 72 3 15 89 13 24 38 56 7 34
+
+// If you passed the Scanner containing the above content to your method, it would produce the following output:
+
+// 72
+// 3
+// 89
+// 24
+// 7
+
+public static void printOdds(Scanner input) {
+    while(input.hasNextInt()) {
+        int num = input.nextInt();
+        if(num % 2 != 0) {

@@ -1,0 +1,143 @@
+No.0 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}
+
+// Note: The println() method in java after each iteration of loop print the output on the console and then moves the cursor to the next line. On the other hand, the print() method in java after each iteration of loop just print the output on the console and remain on the same line. That is why there was a gap between the characters in the output.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function
+
+// Buggy Function
+No.1 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}
+
+// In the buggy function, the else if block is printing the bit-flipped character and moving to a new line.
+// Therefore, it prints all the characters in a new line. 
+// But in the fixed function, the else if block is printing the bit-flipped character without moving to a new line.
+// Therefore, it prints all the characters in the same line.
+
+// Also, it is important to note that in programming languages like Java, the println function adds a newline at the end of
+No.2 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    for (int i = 0; i < s.length(); i++) {
+        if (s.charAt(i) == '0')
+            System.out.print('1');
+        else if (s.charAt(i) == '1') 
+            System.out.print('0');  // fixed by removing extra newline character
+    }
+}
+
+
+// The bug in the original code is that it includes an extra newline character ('\n') in the else if statement. 
+// As a result, it will print the desired character and then create a new line. However, this is not necessary for our requirement as we are only printing characters, not creating new lines. 
+// Hence, the else if statement should be fixed by removing the extra newline character ('\n'), and only the character to be printed should be printed.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    for (int i = 0; i < s.length(); i++) {
+        if (s.charAt(i) == '0')
+            System.out.print('1');
+        else if (s.charAt(i) == '1') 
+            System.out.print('0');
+    }
+}
+
+// Explanation
+// The bug in the given code was the use of the println() method instead of print() method in the else if condition. 
+// The println() method is used to print a line (or in other words, print a new line) and then moves the cursor to the beginning of the next line. 
+// This means that after each character is printed, the cursor moves to the next line, leading to an extra line break after each character. 
+// The print() method, on the other hand,
+No.4 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function
+
+// Buggy Function
+No.7 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// You are given a string s, your task is to print all the letters present in the string along with their occurrence count.
+
+import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.nextLine();
+    HashMap<Character, Integer> map = new HashMap<>();
+    for (char c : s.toCharArray()) {
+      map.put(c
+No.8 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}
+
+// Explanation: In the buggy function, the else if block is printing '0' with a newline after it. This is because the println method is used instead of the print method in the else if block.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.lqh.test.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author liqinghai
+ * @date 201
+No.9 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}
+
+// In the buggy function, the else if condition is printing '0' using println() function.
+// So, it's moving the cursor to the next line after printing '0'.
+// This is not the required output as per the problem. So, instead of println(), we should use print().
+// println() is used to print and move to the next line but we don't want to move to the next line.
+// Therefore, I have replaced the println() with print().<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//

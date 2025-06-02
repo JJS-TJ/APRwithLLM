@@ -1,0 +1,178 @@
+No.1 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    int n = in.nextInt();
+    String s = in.next();
+    List<Integer> list = new ArrayList<>();
+    for(int i = 1; i < n - 1; i++){
+        if(s.charAt(i) == 'R'){
+            int l = i;
+            while(l - 1 >= 0 && s.charAt(l - 1) == 'A'){
+                l --;
+            }
+            int r = i;
+            while(r + 1 < n && s.charAt(r + 1) == 'C'){
+                r ++;
+            }
+            list.add(Math.min(i - l, r - i));
+        }
+    }
+
+    int sum = 0;
+    for(int e : list){
+        sum += e;
+    }
+    System.out.println(Math.min(2*list.size(), sum));
+
+    in.close();
+}
+
+// Explanation
+// The bug in the function was in the while loop which incremented the value of r instead of decrementing it. This resulted in the program skipping some characters in the string. The corrected function increments the value of r in the loop as expected.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/springboot/entity/Employee.java
+package com.springboot.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "EMPLOYEES")
+public class Employee {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "FIRST_NAME")
+	private String firstName;
+
+	@Column(name = "LAST_NAME")
+	private String
+No.3 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    int n = in.nextInt();
+    String s = in.next();
+    List<Integer> list = new ArrayList<>();
+    for (int i = 1; i < n - 1; i++) {
+        if (s.charAt(i) == 'R') {
+            int l = i;
+            while (l - 1 >= 0 && s.charAt(l - 1) == 'A') {
+                l--;
+            }
+            int r = i;
+            while (r + 1 < n && s.charAt(r + 1) == 'C') {
+                r++;
+            }
+            list.add(Math.min(i - l, r - i));
+        }
+    }
+
+    int sum = 0;
+    for (int e : list) {
+        sum += e;
+    }
+    System.out.println(Math.min(2 * list.size(), sum));
+
+    in.close();
+}
+
+// The bug was in the while loop for increasing the value of 'r' when checking for 'C' characters. The loop should increment 'r', not decrease it. The bug was present because when 'r' increased, it could potentially skip over 'C' characters. The fix is to increment 'r' instead of decrementing it.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// 540. Single Element in a Sorted Array
+// You are given a sorted array consisting of only integers where every element appears exactly twice, 
+// except for one element which appears exactly once. 
+// Find this single element that appears only once.
+
+// Follow up: Your solution should run in O(log n) time and O(1) space.
+
+// Example 1:
+// Input: nums = [1,1,2,3,3,4,4,8,8]
+// Output: 2
+
+// Example 2:
+// Input: nums = [3,3,7,7,10,11,11]
+// Output: 10
+
+// Constraints:
+// 1 <= nums.length <=
+No.7 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    int n = in.nextInt();
+    String s = in.next();
+    List<Integer> list = new ArrayList<>();
+    for(int i = 1; i < n - 1; i++){
+        if(s.charAt(i) == 'R'){
+            int l = i;
+            while(l - 1 >= 0 && s.charAt(l - 1) == 'A'){
+                l --;
+            }
+            int r = i;
+            while(r + 1 < n && s.charAt(r + 1) == 'C'){
+                r ++; // change r-- to r++
+            }
+            list.add(Math.min(i - l, r - i));
+        }
+    }
+
+    int sum = 0;
+    for(int e : list){
+        sum += e;
+    }
+    System.out.println(Math.min(2*list.size(), sum));
+
+    in.close();
+}
+
+// Explanation
+// The bug was in the while loop where r is decremented instead of incremented. This is because the goal of the loop was to find the index of the last 'C' to the right of 'R'. So, it should increment r instead of decrementing it.
+// This fix ensures that the correct index of the last 'C' is found and the distance between 'R' and the last 'C' is calculated correctly.
+// So changing r-- to r++ resolves the bug.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+// Examples:
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs
+No.8 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    int n = in.nextInt();
+    String s = in.next();
+    List<Integer> list = new ArrayList<>();
+    for(int i = 1; i < n - 1; i++){
+        if(s.charAt(i) == 'R'){
+            int l = i;
+            while(l - 1 >= 0 && s.charAt(l - 1) == 'A'){
+                l --;
+            }
+            int r = i;
+            while(r + 1 < n && s.charAt(r + 1) == 'C'){
+                r ++;
+            }
+            list.add(Math.min(i - l, r - i));
+        }
+    }
+
+    int sum = 0;
+    for(int e : list){
+        sum += e;
+    }
+    System.out.println(Math.min(2*list.size(), sum));
+
+    in.close();
+}
+```
+
+The fix was to change the operator inside the while loop that increments the r variable from '--' to '++'. This change allows the r variable to increase correctly during the loop, and the increment operator was previously decrementing the value of r, which was the bug.
+
+This was a simple fix and required careful debugging and testing to identify and correct the issue. It's always a good idea to thoroughly test the code to catch any issues like these.
+<|EOT|>

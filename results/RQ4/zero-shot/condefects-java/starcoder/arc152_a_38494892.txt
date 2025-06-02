@@ -1,0 +1,70 @@
+No.1 Patch
+public static void main(String[] args) {
+    int n = nextInt();
+    int l = nextInt();
+    int[] a = nextIntArray(n);
+
+    int pair = 0;
+    while (l > 0 && pair < n) {
+        int ai = a[pair];
+        if (ai <= l) {
+            l -= (ai+1);
+            pair++;
+        } else {
+            break;
+        }
+    }
+
+    for (int i = pair; i < n; i++) {
+        if (a[i] == 2) {
+            System.out.println("No");
+            return;
+        }
+    }
+
+    System.out.println("Yes");
+
+    out.flush();
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.6 Patch
+public static void main(String[] args) {
+    int n = nextInt();
+    int l = nextInt();
+    int[] a = nextIntArray(n);
+
+    int pair = 0;
+    while (l > 0) {
+        int ai = a[pair];
+        if (ai <= l) {
+            l -= (ai+1);
+            pair++;
+        } else {
+            break;
+        }
+    }
+
+    for (int i = pair; i < n; i++) {
+        if (a[i] == 2) {
+            System.out.println("No");
+            return;
+        }
+    }
+
+    System.out.println("Yes");
+
+    out.flush();
+}
+
+// Bug Description
+// The bug in the buggy function is in the for loop. The for loop is using the variable pair instead of i as the index for the a array. This means that it will always start from the index pair, not from the beginning of the array. The correct code should use the variable i as the index.
+
+// Correction Description
+// The correction made to the function is to change the variable pair to i in the for loop. This allows the loop to iterate through the entire a array starting from the index where the loop left off in the previous while loop.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.vendingmachine.model;
+
+import java.util.Arrays;
+
+public enum Coin {
+
+    FIVE_CENTS(5), TEN_CENTS(10),

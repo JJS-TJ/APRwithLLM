@@ -1,0 +1,51 @@
+No.0 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+
+// The bug in the original function was the incorrect use of the less than operator
+// instead of the less
+No.1 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Provide a fix for the buggy function 
+
+// Buggy Function
+No.2 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.springweb.model;
+
+public class User {
+    public int id;
+No.3 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.4 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * Given a positive integer n, take the sum of the digits of n. 
+ * If
+No.5 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// This is a function that takes in 3 numbers and returns the sum of the squares of the two larger numbers
+No.6 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Find bug in a function
+
+// Buggy Function
+No.7 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package edu.pdx.cs410J.jfeng;
+
+import org.junit

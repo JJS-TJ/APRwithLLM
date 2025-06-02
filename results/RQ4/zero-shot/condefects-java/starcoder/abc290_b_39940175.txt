@@ -1,0 +1,154 @@
+No.1 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	int n = scanner.nextInt();
+	
+	int k = scanner.nextInt();
+	
+	String s = scanner.next();
+	
+	int number = 0;
+	
+	for(int i = 0; i < n; i ++) {
+		if(s.charAt(i) == 'o' && number < k) {
+			System.out.print("o");
+			number ++;
+		}else {
+			System.out.print("x");
+		}
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.2 Patch
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    int n = scanner.nextInt();
+
+    int k = scanner.nextInt();
+
+    String s = scanner.next();
+
+    int number = 0;
+
+    for(int i = 0; i < n; i ++) {
+        if(s.charAt(i) == 'o' && number < k) {
+            System.out.print("o");
+            number ++;
+        }else {
+            System.out.print("x");
+        }
+    }
+}
+
+// Explanation
+// This function is supposed to print "o" for "k" times and then "x" for the rest of the characters.
+// The bug was that the value of "k" was hardcoded to 3 which was not correct in all test cases. 
+// We needed to change "3" to "k" to match the input of "k" in all test cases.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.kodluyoruz3hafta3;
+
+public class User {
+    public static final String TABLE_NAME = "Users";
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN
+No.6 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	int n = scanner.nextInt();
+	
+	int k = scanner.nextInt();
+	
+	String s = scanner.next();
+	
+	int number = 0;
+	
+	for(int i = 0; i < n; i ++) {
+		if(s.charAt(i) == 'o' && number < k) {
+			System.out.print("o");
+			number ++;
+		}else {
+			System.out.print("x");
+		}
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String[] line = sc.nextLine().split(" ");
+        int n = Integer.parseInt(line[0]);
+        int k = Integer.parseInt(line[1]);
+        String s = sc.nextLine();
+        int oCount = 0;
+        for(int i = 0; i < n; i++){
+            if(s.charAt(i) == 'o'){
+                if(oCount < k){
+                    System.out.print("o");
+No.7 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	int n = scanner.nextInt();
+	
+	int k = scanner.nextInt();
+	
+	String s = scanner.next();
+	
+	int number = 0;
+	
+	for(int i = 0; i < n; i ++) {
+		if(s.charAt(i) == 'o' && number < k) {
+			System.out.print("o");
+			number ++;
+		}else {
+			System.out.print("x");
+		}
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/picktur/server/domain/entity/PickMeet.java
+package com.picktur.server.domain.entity;
+
+import lombok.*;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@EntityListeners(AuditingEntityListener.class)
+public class PickMeet {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private
+No.9 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	int n = scanner.nextInt();
+	
+	int k = scanner.nextInt();
+	
+	String s = scanner.next();
+	
+	int number = 0;
+	
+	for(int i = 0; i < n; i ++) {
+		if(s.charAt(i) == 'o' && number < k) {
+			System.out.print("o");
+			number ++;
+		}else {
+			System.out.print("x");
+		}
+	}
+}
+
+// The bug was that instead of printing the first 'k' occurences of 'o', the program was printing first 3 occurences of 'o'.
+// This bug was fixed by replacing 3 with 'k' in the condition.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function

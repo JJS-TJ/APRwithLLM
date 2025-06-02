@@ -1,0 +1,32 @@
+No.1 Patch
+void solve(FScanner sc, FWriter out) {
+    long a = sc.nextLong(), b = sc.nextLong();
+    
+    out.println((long)Math.pow(a, b));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package org.techtown.puppydiary.decorator;
+
+import android.graphics.Rect;
+import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
+No.4 Patch
+void solve(FScanner sc, FWriter out) {
+    long a = sc.nextLong(), b = sc.nextLong();
+    
+    out.println((long)Math.pow(a, b));
+}
+
+// Buggy Function
+No.8 Patch
+void solve(FScanner sc, FWriter out) {
+    long a = sc.nextLong(), b = sc.nextLong();
+    double res = Math.pow(a, b);
+    if (res == (long)res) {
+        out.println((long)res);
+    } else {
+        out.println(res, 0);
+    }
+}
+
+//Explanation
+// The buggy function uses the pow() function to
