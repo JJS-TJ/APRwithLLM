@@ -1,0 +1,71 @@
+No.0 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+
+Analysis:
+The code has been updated to use elif statements, which are evaluated only if an if statement is false. In this case, the function will print the correct value when the input string is "Friday". The function will print nothing when the input is "Friday" because the first if statement is false. The function will then
+No.2 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+
+Analysis:
+The bug has been fixed by adding the keyword</s>
+No.4 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+
+# Question:
+
+# Write a function to check the validity of a string as a credit card number.
+
+# Credit Card Number Validity Check
+def checkCreditCardNumber(number):
+    s = str(number)
+    num = len(s)
+    sum = 0
+    i = 0
+No.8 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+
+Analysis:
+The fixed version of the code uses the elif condition to check if the string is "Friday".
+
+# More information on If statements: 
+https://www.programiz.com/python-programming/if-</s>

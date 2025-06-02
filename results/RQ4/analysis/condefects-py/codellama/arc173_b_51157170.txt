@@ -1,0 +1,307 @@
+No.1 Patch
+n = int(input())
+
+import sys
+input = sys.stdin.readline
+mp = map(int, sys.stdin.read().split())
+xy = list(zip(mp,mp)) 
+
+stack = []
+cnt = 0
+ans = 0
+
+for i in range(n):
+    if cnt < 2:
+        stack.append(i)
+        cnt += 1
+        continue
+
+    xi,yi = xy[i]
+    flag = False
+
+    for ji in range(cnt):
+        if flag:
+            break
+        j = stack[ji]
+        
+        xj,yj = xy[j]
+
+        dx = xi-xj
+        dy = yi-yj
+        # if dx == 0:
+        #     # dx = 0
+        #     dy = 0
+        # else:
+        #     # if dx < 0:
+        #     #     dx = -dx
+        #     #     dy = -dy
+        #     pass
+
+        for ki in range(ji+1, cnt):
+            if flag:
+                break
+            k = stack[ki]
+
+            xk,yk = xy[k]
+            ex = xi-xk
+            ey = yi-yk
+
+            # if ex == 0:
+            #     # ex = 0
+            #     ey = 0
+            # else:
+            #     # if ex < 0:
+            #     #     ex = -ex
+            #     #     ey = -ey
+            #     pass
+            
+            # if (dx == ex) & (dy == ey):
+            #     print("a", i,j,k)
+            #     continue
+            # elif dx == 0:
+            #     print("b", i,j,k)
+            #     pass
+            # elif ex == 0:
+            #     print("c", i,j,k)
+            #     pass
+            # else:
+            if (dx == 0) | (ex == 0):
+                if dx == ex:
+                    continue
+                else:
+                    pass
+
+            elif (dx * ey) == (dy * ex):
+                # print("d", i,j,k)
+                continue
+            else:
+                # print("e", i,j,k)
+                pass
+            
+            stack.remove(k)
+            stack.remove(j)
+            cnt -= 2
+            ans += 1
+            flag = True
+    
+    if not flag:
+        stack.append(i)
+        cnt += 1
+
+if cnt < 3:
+    print(ans)
+    exit()
+
+j = stack[0]
+k = stack[1]
+
+# xj,yj = xy[j]
+# xk,yk = xy[k]
+
+def line(p,q):
+    """
+    2点p(px,py),q(qx,qy)を通る直線ax+by+c=0のa,b,cを返す
+    """
+    px,py = p
+    qx,qy = q
+
+    a = py - qy
+    b = qx - px
+    c = px*qy - py*qx
+
+    return a,b,c
+
+a,b,c = line(xy[j], xy[k])
+
+cnt = 0
+for i in range(n):
+    xi,yi = xy[i]
+    if (a*xi + b*yi + c) == 0:
+        cnt += 1
+    else:
+        pass
+
+
+if cnt >= (n-n//3):
+    print(n-cnt)
+else:
+    print(n//3)
+
+# Analysis
+# 上記コードは、n個の2次元ベクトル(xi,yi)を読み込み、それらのうち3つを同一直線状にするための最小の操作回数を出力するプログラムです。
+# ベクトルの組を読み込んで、同一の直線状にするための最小の操作回数を計算します。その後、最小の操作回数を出力します。
+
+# コードの説明:
+# このコードは、以下のアルゴリズムを使用しています:
+# 1. まず、入力されたベクトルを読み込みます。
+# 2. 次に、読み込んだベクトルのうち3つを同一直線状にするための最小の操作回数を計算します。これは、以下のようなアルゴリズムを使用しています:
+#     a. 最初の2つのベクトルをスタックに追加します。
+#     b. 3番目のベクトルから始めて、スタックの各ベクトルと比較します。
+#     c. もし、3番目のベクトルが、スタックの2つのベクトルと同一の直線状になっているなら、スタックからそれらのベクトルを削除し、操作回数をインクリメントします。
+#     d. もし、3番目のベクトルが、スタックの2つのベクトルと同一の直線状になっていないなら、スタックに3番目のベクトルを追加します。
+# 3. 最後に、操作回数を出力します。
+
+# また、以下のコードは、2つのベクトル(p,q)を通る直線ax+by+c=0のa,b,cを返す関数lineを定義しています:
+# a. a = qy - py
+# b. b = px - qx
+# c. c = px*qy - py*qx
+# この関数は、2つのベクトルが同一直線状にあるかどうかを判定するために使用されます。
+
+# このコードには、以下のバグが存在します:
+# 1. 入力の読み込みにおいて、n個のベクトルを読み込む前にnの値を読み込んでいます。しかし、n個のベクトルを読み込む前にnの値を読み込む必要はないので、これは不要な入力です。
+# 2. 入力の読み込みにおいて、2つのzipオブジェクトを作成しています。しかし、これは必要ありません。1つのリストで十分です。
+# 3. 直線の判定において、dx == exとdy == e
+No.7 Patch
+n = int(input())
+
+import sys
+input = sys.stdin.readline
+mp = map(int, sys.stdin.read().split())
+xy = list(zip(mp,mp)) 
+
+stack = []
+cnt = 0
+ans = 0
+
+for i in range(n):
+    if cnt < 2:
+        stack.append(i)
+        cnt += 1
+        continue
+
+    xi,yi = xy[i]
+    flag = False
+
+    for ji in range(cnt):
+        if flag:
+            break
+        j = stack[ji]
+        
+        xj,yj = xy[j]
+
+        dx = xi-xj
+        dy = yi-yj
+        # if dx == 0:
+        #     # dx = 0
+        #     dy = 0
+        # else:
+        #     # if dx < 0:
+        #     #     dx = -dx
+        #     #     dy = -dy
+        #     pass
+
+        for ki in range(ji+1, cnt):
+            if flag:
+                break
+            k = stack[ki]
+
+            xk,yk = xy[k]
+            ex = xi-xk
+            ey = yi-yk
+
+            # if ex == 0:
+            #     # ex = 0
+            #     ey = 0
+            # else:
+            #     # if ex < 0:
+            #     #     ex = -ex
+            #     #     ey = -ey
+            #     pass
+            
+            # if (dx == ex) & (dy == ey):
+            #     print("a", i,j,k)
+            #     continue
+            # elif dx == 0:
+            #     print("b", i,j,k)
+            #     pass
+            # elif ex == 0:
+            #     print("c", i,j,k)
+            #     pass
+            # else:
+            if (dx == 0) | (ex == 0):
+                if dx == ex:
+                    continue
+                else:
+                    pass
+
+            elif (dx * ey) == (dy * ex):
+                # print("d", i,j,k)
+                continue
+            else:
+                # print("e", i,j,k)
+                pass
+            
+            stack.remove(k)
+            stack.remove(j)
+            cnt -= 2
+            ans += 1
+            flag = True
+    
+    if not flag:
+        stack.append(i)
+        cnt += 1
+
+if cnt < 3:
+    print(ans)
+    exit()
+
+j = stack[0]
+k = stack[1]
+
+# xj,yj = xy[j]
+# xk,yk = xy[k]
+
+def line(p,q):
+    """
+    2点p(px,py),q(qx,qy)を通る直線ax+by+c=0のa,b,cを返す
+    """
+    px,py = p
+    qx,qy = q
+
+    a = py - qy
+    b = qx - px
+    c = px*qy - py*qx
+
+    return a,b,c
+
+a,b,c = line(xy[j], xy[k])
+
+cnt = 0
+for i in range(n):
+    xi,yi = xy[i]
+    if (a*xi + b*yi + c) == 0:
+        cnt += 1
+    else:
+        pass
+
+
+if cnt >= (n-n//3):
+    print(n-cnt)
+else:
+    print(n//3)
+# print(ans)
+
+# Analysis
+# 上記コードは、n個の2次元ベクトル(xi,yi)を読み込み、それらのうち3つを同一直線状にするための最小の操作回数を出力するプログラムです。
+# ベクトルの組を読み込んで、同一の直線状にするための最小の操作回数を計算します。その後、最小の操作回数を出力します。
+
+# コードの説明:
+# このコードは、以下のアルゴリズムを使用しています:
+# 1. まず、入力されたベクトルを読み込みます。
+# 2. 次に、読み込んだベクトルのうち3つを同一直線状にするための最小の操作回数を計算します。これは、以下のようなアルゴリズムを使用しています:
+#     a. 最初の2つのベクトルをスタックに追加します。
+#     b. 3番目のベクトルから始めて、スタックの各ベクトルと比較します。
+#     c. もし、3番目のベクトルが、スタックの2つのベクトルと同一の直線状になっているなら、スタックからそれらのベクトルを削除し、操作回数をインクリメントします。
+#     d. もし、3番目のベクトルが、スタックの2つのベクトルと同一の直線状になっていないなら、スタックに3番目のベクトルを追加します。
+# 3. 最後に、操作回数を出力します。
+
+# また、以下のコードは、2つのベクトル(p,q)を通る直線ax+by+c=0のa,b,cを返す関数lineを定義しています:
+# a. a = qy - py
+# b. b = px - qx
+# c. c = px*qy - py*qx
+# この関数は、2つのベクトルが同一直線状にあるかどうかを判定するために使用されます。
+
+# このコードには、以下のバグが存在します:
+# 1. 入力の読み込みにおいて、n個のベクトルを読み込む前にnの値を読み込んでいます。しかし、n個のベクトルを読み込む前にnの値を読み込む必要はないので、これは不要な入力です。
+# 2. 入力の読み込みにおいて、2つのzipオブジェクトを作成しています。しかし、これは必要ありません。1つのリストで十分です。
+# 3. 直線の判定において、dx

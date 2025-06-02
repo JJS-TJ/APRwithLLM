@@ -1,0 +1,12 @@
+No.6 Patch
+n, a, b = map(int, input().split())
+
+
+def f(x):
+    return x // a * min(a, b) + min(x % a, b - 1)
+
+
+print(max(f(n) - f(a - 1), 0))
+
+# Analysis
+The fixed function is just the same as the original function. The only difference is that the value of a is calculated by a - 1, which is the number of people remaining after the first round of division. The reason for this is that a is the number of people that are ready to get up. If it is

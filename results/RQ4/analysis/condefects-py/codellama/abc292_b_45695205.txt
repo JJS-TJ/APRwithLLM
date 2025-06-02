@@ -1,0 +1,20 @@
+No.6 Patch
+n, q = map(int, input().split())
+player = [0] * n
+for i in range(q):
+    c, x =   map(int,input().split())
+    if c == 1:
+        player[x - 1] += 1
+    elif c == 2:
+        player[x - 1] += 2
+    else:
+        if player[x - 1] >= 2:
+            print("Yes")
+        else:
+            print("No")
+
+# Analysis
+
+This code is very similar to the previous one. The only difference is that this function does not return "Yes" if the player's score is equal to 2. It returns "Yes" only if the player's score is equal to 2 or greater than 2.
+
+I think that it's better to make the function more general so that it can be used to solve other problems. In this case, it should return "Yes" only if the player's score is equal to 2 or greater than 2.

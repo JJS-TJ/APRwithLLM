@@ -1,0 +1,39 @@
+No.2 Patch
+N=int(input())
+index=1
+s = set()
+l=[]
+while (True):
+  flg=0
+  three=index*index*index
+  if(three>N):
+    break
+  l.append(three)
+  index+=1
+
+#print(l)
+flg=0
+for i in reversed(l):
+  flg=0
+  strthree=str(i)
+  for j in range(len(strthree)//2):
+    if(strthree[j]!=strthree[len(strthree)-1-j]):
+      flg=1
+      break
+  if(flg):
+    continue
+  print(i)
+  break
+
+# Analysis
+Analysis:
+The code reads an integer input N from the user and then proceeds to find all the cube numbers less than or equal to N. It checks each cube number to see if it is a palindrome by converting it to a string and comparing the characters from the start and the end of the string. If a cube number is a palindrome, it is printed out and the loop is broken.
+
+Bug(s):
+The bug is in the loop which checks for palindromes. The inner loop is supposed to check each character of the string from both the start and the end and compare them for equality. However, the loop condition is incorrect. It should be checking up to len(strthree)//2 (integer division) because the check is symmetrical. Currently, it checks up to len(strthree) which will cause an index out of bounds error when j becomes equal to len(strthree). The loop should break when it finds a mismatch or when it checks all pairs of characters.
+
+Correction:
+for j in range(len(strthree)//2):
+    if(strthree[j] != strthree[len(strthree)-1-j]):
+        flg=1
+        break

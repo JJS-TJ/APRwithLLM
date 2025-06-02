@@ -1,0 +1,11 @@
+No.5 Patch
+c = "atcoder"
+
+x, y = map(int, input().split())
+
+print(c[x-1:y])
+
+# Analysis
+# Analysis:
+
+Now we see that the user is prompted to input 'x' and 'y' values for the string slice. Also

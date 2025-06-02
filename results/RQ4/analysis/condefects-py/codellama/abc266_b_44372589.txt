@@ -1,0 +1,10 @@
+No.0 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n % 998244353)
+
+# Analysis
+# Solution
+The above function calculates the modulo operation of the value given.
+
+Since the code snippet was buggy,

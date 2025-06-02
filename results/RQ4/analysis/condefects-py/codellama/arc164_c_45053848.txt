@@ -1,0 +1,32 @@
+No.2 Patch
+N = int(input())
+a = [list(map(int, input().split())) for _ in range(N)]
+a.sort(key=lambda x: abs(x[0]-x[1]))
+
+cnt = 0
+for i in range(N):
+    if a[i][0] > a[i][1]:
+        cnt += 1
+if cnt & 1:
+    ans = min(a[0])
+else:
+    ans = max(a[0])
+for i in range(1, N):
+    ans += max(a[i])
+
+print(ans)
+
+# Analysis
+
+
+# The main idea of this problem is to find a way to count the number of 
+# swapping in the original array. 
+# 
+# We can notice that if a pair of numbers in the array is swapped,
+# the number of swapping will increase by 1.
+# This means we only need to know if the largest element is on the left of the smallest element.
+# 
+# If the condition holds, the answer will be the largest number of the array.
+# Otherwise, the answer will be the smallest number of the array.
+# 
+#

@@ -1,0 +1,16 @@
+No.2 Patch
+h = int(input())
+
+cnt = 0
+plant = 0
+while plant <= h:
+    plant = plant + 2**cnt
+    cnt += 1
+
+print(cnt)
+
+# Analysis
+```
+
+# References
+[Stack Overflow: What is a debugger and how can it help me diagnose problems?](https://stackoverflow.com/questions/25385173/what-

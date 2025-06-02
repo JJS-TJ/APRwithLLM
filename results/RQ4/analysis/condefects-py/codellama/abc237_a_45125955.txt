@@ -1,0 +1,8 @@
+No.6 Patch
+n=int(input())
+print('Yes' if -2**31<=n<2**31 else 'No')
+
+# Analysis
+Analysis:
+
+This function uses the conditional ternary operator to print 'Yes' if the input number n is in the range of

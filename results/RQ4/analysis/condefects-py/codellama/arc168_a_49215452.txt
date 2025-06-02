@@ -1,0 +1,172 @@
+No.0 Patch
+n=int(input())
+s=input()
+a=[]
+T=False
+b=1
+for i in range(n-1):
+  if s[i]=='>':
+    b+=1
+  else:
+    if b!=1:
+      a.append(b)
+      b=1
+if b!=1:
+  a.append(b)
+c=0
+for i in a:
+  c+=(i*(i-1))//2
+print(c)
+
+# Analysis
+# Analysis
+1. The buggy code is trying to count the number of '>' characters in a string.
+2. The code is using a list a to store the lengths of consecutive '>' characters. If the current character is '<', it adds the length of the last sequence of '>' characters to the list a and resets the counter.
+3. After the loop, it checks if there is a remaining sequence of '>' characters. If there is, it adds the length of this sequence to the list a.
+4.
+No.2 Patch
+n=int(input())
+s=input()
+a=[]
+T=False
+b=1
+for i in range(n-1):
+  if s[i]=='>':
+    b+=1
+  else:
+    if b!=1:
+      a.append(b)
+      b=1
+if b!=1:
+  a.append(b)
+c=0
+for i in a:
+  c+=(i*(i-1))//2
+print(c)
+
+# Analysis
+# Analysis
+
+1. The buggy code is trying to count the number of '>' characters in a string.
+2. The code is using a list a to store the lengths of consecutive '>' characters. If the current character is '<', it adds the length of the last sequence of '>' characters to the list a and resets the counter.
+3. After the loop, it checks if there is a remaining sequence of '>' characters. If there is, it adds the length of this sequence to the list a.
+4
+No.3 Patch
+n=int(input())
+s=input()
+a=[]
+T=False
+b=1
+for i in range(n-1):
+  if s[i]=='>':
+    b+=1
+  else:
+    if b!=1:
+      a.append(b)
+      b=1
+if b!=1:
+  a.append(b)
+c=0
+for i in a:
+  c+=(i*(i-1))//2
+print(c)
+
+# Analysis
+# Analysis
+
+1. The fixed code is the same as the buggy code, except for line 10. 
+2. Line 10 of the fixed code should be: 
+c += i*(i-1)//2
+3. This line corrects the incorrect formula that was used in line 10 of the buggy code.
+4. If there is only one '>' character, the code will now add one pair of '>' characters to the total count.
+
+# Discussion
+No.6 Patch
+n=int(input())
+s=input()
+a=[]
+T=False
+b=1
+for i in range(n-1):
+  if s[i]=='>':
+    b+=1
+  else:
+    if b!=1:
+      a.append(b)
+      b=1
+if b!=1:
+  a.append(b)
+c=0
+for i in a:
+  c+=i*(i-1)//2
+print(c)
+
+# Analysis
+# Analysis
+
+1. The fixed code is similar to the buggy code except for the last 2 lines.
+2. It calculates the total number of pairs of '>' characters in the string using the correct formula.
+3. It also adds a pair of '>' characters to the total count if there is only one '>' character.
+
+# Conclusion
+1. The buggy function was calculating the number of pairs of '>' characters incorrectly.
+2. The fix provided in the second function corrected the calculation of the number
+No.7 Patch
+n=int(input())
+s=input()
+a=[]
+T=False
+b=1
+for i in range(n-1):
+  if s[i]=='>':
+    b+=1
+  else:
+    if b!=1:
+      a.append(b)
+      b=1
+if b!=1:
+  a.append(b)
+c=0
+for i in a:
+  c+=i*(i-1)//2
+print(c)
+
+# Analysis
+# Analysis
+
+1. The buggy code is trying to count the number of '>' characters in a string.
+2. The code is using a list a to store the lengths of consecutive '>' characters. If the current character is '<', it adds the length of the last sequence of '>' characters to the list a and resets the counter.
+3. After the loop, it checks if there is a remaining sequence of '>' characters. If there is, it adds the length of this sequence to the list a.
+4.
+No.8 Patch
+n=int(input())
+s=input()
+a=[]
+T=False
+b=1
+for i in range(n-1):
+  if s[i]=='>':
+    b+=1
+  else:
+    if b!=1:
+      a.append(b)
+      b=1
+if b!=1:
+  a.append(b)
+c=0
+for i in a:
+  c+=i*(i-1)//2
+print(c)
+
+# Analysis
+# Analysis
+
+1. The fixed code is the same as the buggy code.
+2. It handles the case when there is only one '>' character. 
+3. When there is only one '>' character, it adds 0 pairs of '>' characters to the total count and this doesn't affect the result.
+
+# Discussion
+# Discussion
+
+1. The analysis above shows that the buggy function is incorrect.
+2. The fixed function is also incorrect, but it's easy to

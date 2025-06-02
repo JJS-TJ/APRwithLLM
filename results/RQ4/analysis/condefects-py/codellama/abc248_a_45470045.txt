@@ -1,0 +1,18 @@
+No.1 Patch
+s = input()
+
+A = [int(x) for x in s]
+
+i = 0
+
+while i <= 9:
+    if i not in A:
+        print(i)
+        break
+    i += 1
+
+# Analysis
+Analysis:
+The above code fixes the issues with the code provided in the question.
+
+1. The problem statement mentions that the input will be a list of integers. So, we are

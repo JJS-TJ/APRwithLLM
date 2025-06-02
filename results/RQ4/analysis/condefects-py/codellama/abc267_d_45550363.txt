@@ -1,0 +1,48 @@
+No.2 Patch
+INT = lambda : int(input())
+MI = lambda : map(int, input().split())
+MI_DEC = lambda : map(lambda x : int(x)-1, input().split())
+LI = lambda : list(map(int, input().split()))
+LI_DEC = lambda : list(map(lambda x : int(x)-1, input().split()))
+
+N, M = MI()
+A = LI()
+
+dp = [[-float('inf')]*(M+1) for i in range(N+1)]
+dp[0][0] = 0
+
+for i in range(N):
+    for j in range(M+1):
+        dp[i+1][j] = max(dp[i+1][j], dp[i][j])
+
+        if j + 1 > M:
+            continue
+
+        dp[i+1][j+1] = max(dp[i+1][j+1], dp[i][j] + (j+1)*A[i])
+            
+
+ans = -float('inf')
+for i in range(N+1):
+    ans = max(ans, dp[i][M])
+
+print(ans)
+
+# Analysis
+The code above is the fixed version of the code and solves the bug.
+The reason the code was buggy is that the variable 'ans' was initialized to -1, which is incorrect. In the loop, the maximum of 'ans' and 'dp[i][M]' is calculated and updated in 'ans'. Since the variable 'ans' is initialized to -1, the value of 'dp[i][M]' cannot be greater than 0, and thus 'ans' will not be updated to any value other than -1. 
+The code is now fixed, and the value of 'ans' is now updated within the loop.
+<|EOT|>
+
+# Provide a fix for the buggy function
+
+# Buggy Function
+INT = lambda : int(input())
+MI = lambda : map(int, input().split())
+MI_DEC = lambda : map(lambda x : int(x)-1, input().split())
+LI = lambda : list(map(int, input().split()))
+LI_DEC = lambda : list(map(lambda x : int(x)-1, input().split()))
+
+N, M = MI()
+A = LI()
+
+dp = [[-float('inf')]*(M

@@ -1,0 +1,44 @@
+No.4 Patch
+n = int(input())
+a = list(map(int, input().split()))
+
+t = []
+
+c0 = 0
+c1 = 0
+
+mx0 = 0
+mx1 = 0
+
+for i in range(n):
+    c0 = max(c0, 0)
+    c1 = max(c1, 0)
+    if a[i] == 0:
+        c0 += 1
+        c1 -= 1
+    else:
+        c1 += 1
+        c0 -= 1
+
+    mx0 = max(mx0, c0)
+    mx1 = max(mx1, c1)
+
+print(mx0 + mx1 + 1)
+
+# Analysis
+
+# The buggy function has two major problems:
+# 1. The buggy function is not updating the maximum number of 0's and 1's when the array has repeating elements.
+# 2. It is not handling the case where the first element of the array is 0 or 1.
+
+# The fix function handles these two problems.
+
+# We start with a counter variable which tracks the number of 0's and 1's.
+# In the beginning, both counters are 0.
+# Whenever we see a 0 in the array, we increment the counter for 0's.
+# Whenever we see a 1 in the array, we increment the counter for 1's.
+# The maximum number of 0's and 1's will be stored in two variables.
+# This is done at the end of each iteration.
+
+# Then, we start our iteration over the array.
+# In the beginning, we also make sure that the counter variable for 0's is greater than equal to 0 and the counter variable for 1's is greater than equal to 0.

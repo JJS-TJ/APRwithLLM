@@ -1,0 +1,13 @@
+No.6 Patch
+S = input()
+
+if (len(S) == 1 or (len(S)>= 2 and S[1:].islower())) and S[0].isupper():
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+Analysis:
+We first check if the string's length is 1 or if it is at least 2 and the rest of the string is in lowercase.
+
+If both of these conditions hold true, then we check if the first character of the string is upper

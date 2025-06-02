@@ -1,0 +1,80 @@
+No.0 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+      b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+
+# Fixed Function
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+      b.append(a[i] // k)
+No.3 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = [a[i] // k for i in range(n) if a[i] % k == 0]
+
+b.sort()
+print(*b)
+
+# Analysis
+
+# The buggy code fails in the following test cases
+# 4 2
+# 1 4 6 8
+
+# The fixed code passes the test
+# 4 2
+# 1 4 6 8
+
+# 4 3
+# 1 4 5 9
+
+# 3 2
+# 4
+No.4 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+      b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+
+
+# Note:
+#   1. The key to this problem is to be aware of the difference between the "/" and the "//" operators.
+#   As Python integers are not fixed-point numbers, the division operator, "/", is used to
+#   perform floating-point division. It returns a floating-point result and
+No.8 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+    if a[i] % k == 0:
+        b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+
+# 1. The code for solving this problem is shorter than the original one
+# 2. If the</s>

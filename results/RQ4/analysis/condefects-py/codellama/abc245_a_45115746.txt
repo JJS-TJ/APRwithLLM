@@ -1,0 +1,32 @@
+No.5 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
+
+# Analysis
+// Analysis
+The correct code above checks the same conditions as the incorrect code, but if both time and minute are the same, it prints "Takahashi" regardless of the minute.
+
+# Conclusion
+If you still have questions, please leave a message in the comments below!
+No.9 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
+
+# Analysis
+If Takahashi's hour is the same as Aoki's, the code should first check if Takahashi's hour is less than Aoki's. If it is, it should print "Takahashi" and skip the code to check the minute. If Takahashi's hour is not less than Aoki

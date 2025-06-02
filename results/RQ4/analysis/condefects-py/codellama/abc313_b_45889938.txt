@@ -1,0 +1,72 @@
+No.4 Patch
+#最強の人を求めればいいだけなので、誰かに負けたかどうかを調べる
+#負けたことがない人が複数人いたら最強は絞れない
+N,M=list(map(int,input().split()))
+player=[i for i in range(1,N+1)]
+losers=[]
+for i in range(M):
+    a,b=list(map(int,input().split()))
+    if b in player:
+        player.remove(b)
+
+if len(player)==1:
+    print(player[0])
+else:
+    print(-1)
+
+# Analysis
+This code has a bug in it. The bug is that the code is attempting to remove an element from the list that does not exist. It is trying to remove an element from the list `player` if it exists in the list. However, the code does not check if the element exists in the list or not before attempting to remove it. This can lead to a `ValueError` if the element does not exist in the list.
+
+Also, the code does not handle cases where multiple players have not lost any game. In this case, the code should print -1 because it is not possible to determine the strongest player in such a case.
+
+Here is the corrected version of the code:
+
+```python
+N,M=list(map(int
+No.6 Patch
+#最強の人を求めればいいだけなので、誰かに負けたかどうかを調べる
+#負けたことがない人が複数人いたら最強は絞れない
+N,M=list(map(int,input().split()))
+player=[i for i in range(1,N+1)]
+losers=[]
+for i in range(M):
+    a,b=list(map(int,input().split()))
+    if b in player:
+        losers.append(b)
+
+strongest_player=[p for p in player if p not in losers]
+if len(strongest_player)==1:
+    print(strongest_player[0])
+else:
+    print(-1)
+
+# Analysis
+In this version of the code, the code does not need to check if the element exists in the list before removing it. The problem that we faced was that we checked if the element was in the list, but we did not remove it if it was. We can solve this by making sure that we remove the element even if it does not exist in the list.
+
+Also, this code handles the case where there are multiple players who have not lost any game. In this case, the code prints -1 because it is not possible to determine the strongest player in such a case.
+
+<|endofexample|>
+
+### [
+No.9 Patch
+#最強の人を求めればいいだけなので、誰かに負けたかどうかを調べる
+#負けたことがない人が複数人いたら最強は絞れない
+N,M=list(map(int,input().split()))
+player=[i for i in range(1,N+1)]
+losers=[]
+for i in range(M):
+    a,b=list(map(int,input().split()))
+    losers.append(b)
+
+strongest_player=[p for p in player if p not in losers]
+if len(strongest_player)==1:
+    print(strongest_player[0])
+else:
+    print(-1)
+
+# Analysis
+This code has a bug in it. The bug is that the code is attempting to remove an element from the list that does not exist. It is trying to remove an element from the list `player` if it exists in the list. However, the code does not check if the element exists in the list or not before attempting to remove it. This can lead to a `ValueError` if the element does not exist in the list.
+
+Also, the code does not handle cases where multiple players have not lost any game. In this case, the code should print -1 because it is not possible to determine the strongest player in such a case.
+
+Here is the corrected version

@@ -1,0 +1,61 @@
+No.1 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+
+The fixed code will check if the last two characters of the string are "er". If they are, the program will
+No.2 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+Because the input string is at least 2 characters long, s[-1] cannot be "er", so we can assume
+No.3 Patch
+s=input()
+
+# Write your solution below
+# This solution is a bit too long to fit in the comment box.
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+This version
+No.4 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+This code works just as the original code does, except that it checks the last two characters instead of the last one. That'
+No.5 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+This is a much better version of the function. It is now safe for any input.
+
+# Challenges
+*
+No.7 Patch
+s = input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+The bug is fixed by adding an extra colon to the print statement.  The extra colon makes the print statement a tuple. When

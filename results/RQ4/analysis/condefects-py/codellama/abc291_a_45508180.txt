@@ -1,0 +1,52 @@
+No.0 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+
+# Analysis
+# Analysis:
+The bug is corrected by adding '=' in the code, because in Python, the character comparison operators use '==' for equality and '!=' for inequality
+No.2 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+#</s>
+No.3 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Analysis
+# Analysis:
+The code is corrected as the for loop is going through all the characters of the string, while the if condition is checking if the characters of the string are capital.
+
+# Comment
+No.4 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+
+# Analysis
+The code may have two problems:
+
+1. The loop is going through the length of the string but not the characters of the string. In Python, the range method only
+No.7 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Analysis
+The above function is fixed for all possible inputs.
+
+In the for loop, the character at index i is extracted using S[i] and then checked if it is a capital letter using the .

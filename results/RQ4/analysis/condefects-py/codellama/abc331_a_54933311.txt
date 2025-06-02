@@ -1,0 +1,19 @@
+No.5 Patch
+M,D = map(int,input().split())
+y,m,d = map(int,input().split())
+
+if d == D:  # 最後の日
+    d = 1
+    if m == M:
+        m = 1
+        y += 1
+    else:
+        m += 1
+else:
+    d += 1
+
+print(y,m,d)
+
+# Analysis
+Analysis:
+The fixed function corrects the problem by adding an additional check if the month is the same as the maximum month. If this is the case, the month should be incremented. If the month is not the maximum month, then the day should be incremented. If the day is larger than the maximum day, then it should be set

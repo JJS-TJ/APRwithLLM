@@ -1,0 +1,186 @@
+No.0 Patch
+S = input()
+t = set([])
+a=[[]]
+for i in S:
+    if i.isalpha():
+        if i in t:
+            print("No")
+            exit()
+        else:
+            t.add(i)
+            a[-1].append(i)
+    elif i==")":
+      #  print(a)
+        for j in a[-1]:
+            t.remove(j)
+        a.pop(-1)
+    elif i=="(":
+        a.append([])
+
+print("Yes")
+
+# Analysis
+Analysis:
+
+1. The buggy function does not check if the character is already in `t`. The fixed function checks if the character is already in `t` before adding it to `t` and `a[-1]`. If the character is already in `t`, it will print "No" and exit.
+
+2. In the else clause, the character is added to `t` and `a[-1]`. The character is also removed from `t` in the for loop `for j in a[-1]:`. So, `t` contains only the characters that are in the pair of brackets. So, `t` is guaranteed to be a set with the characters that are in the pair of brackets.
+
+3. The function prints "Yes" only if there are no characters in `t` that are not in `a[-1
+No.1 Patch
+S = input()
+t = set([])
+a=[[]]
+for i in S:
+    if i.isalpha():
+        if i in t:
+            print("No")
+            exit()
+        else:
+            t.add(i)
+            a[-1].append(i)
+    elif i==")":
+        for j in a[-1]:
+            t.remove(j)
+        a.pop(-1)
+    elif i=="(":
+        a.append([])
+
+print("Yes")
+
+# Analysis
+
+Analysis:
+
+1. The bug in the function was fixed by fixing the bug in point 2 and 3.
+
+2. A new bug was found in the for loop in the else clause:
+
+        for j in a[-1]:
+            t.remove(j)
+
+The for loop removes the characters from the list `a[-1]` but not from the set `t`. So, if the character is already in `t`, it will be added to `a[-1]` but not removed from `t`. This could cause the function to not detect duplicate alphabets within the same pair of brackets.
+
+3. The bug was fixed by adding the following code to the end of the else clause:
+
+        for j in a[-1]:
+            t.remove(j)
+
+This ensures that any characters in `a[-
+No.4 Patch
+S = input()
+t = set([])
+a=[[]]
+for i in S:
+    if i.isalpha() == True:
+        if i in t:
+            print("No")
+            exit()
+        else:
+            t.add(i)
+            a[-1].append(i)
+    elif i==")":
+      #  print(a)
+        for j in a[-1]:
+            t.remove(j)
+        a.pop(-1)
+    elif i=="(":
+        a.append([])
+
+
+
+  #  print(t)
+  #  print(a)
+
+print("Yes")
+
+# Analysis
+Analysis:
+The buggy function seems to be trying to check if a string has duplicate alphabets that are in a pair of brackets. The function is supposed to print "No" if it finds duplicate alphabets within the same pair of brackets and "Yes" otherwise.
+
+But there are several bugs in the function:
+
+1. The condition in the if statement `if i.isalpha() == True:` is redundant because `i.isalpha()` already returns a boolean value (`True` or `False`). So, it should be just `if i.isalpha():`.
+
+2. In the else clause, `t.add(i)` adds the character to the set `t`, but it does not add
+No.5 Patch
+S = input()
+t = set([])
+a=[[]]
+for i in S:
+    if i.isalpha():
+        if i in t:
+            print("No")
+            exit()
+        else:
+            t.add(i)
+            a[-1].append(i)
+    elif i==")":
+        for j in a[-1]:
+            t.remove(j)
+        a.pop(-1)
+    elif i=="(":
+        a.append([])
+print("Yes")
+
+# Analysis
+
+Analysis:
+
+After fixing the bugs, the function does the following:
+
+1. In the first iteration of the for loop, it checks if `i` is an alphabet or not. If yes, it checks if the character is already in `t`. If it is not, it adds it to `t` and `a[-1]`.
+
+2. In the next iteration of the for loop, if `i` is `)`, it removes all the alphabets in `a[-1]` from `t` and pops `a[-1]`.
+
+3. In the next iteration of the for loop, if `i` is `(`, it adds an empty list to `a` and adds it to `a[-1]`.
+
+So, the function does the following things:
+
+- It checks if the string contains alphabets in a pair of brackets
+No.7 Patch
+S = input()
+t = set([])
+a=[[]]
+for i in S:
+    if i.isalpha() == True:
+        if i in t:
+            print("No")
+            exit()
+        else:
+            t.add(i)
+            a[-1].append(i)
+    elif i==")":
+      #  print(a)
+        for j in a[-1]:
+            t.remove(j)
+        a.pop(-1)
+    elif i=="(":
+        a.append([])
+
+
+  #  print(t)
+  #  print(a)
+
+print("Yes")
+
+# Analysis
+
+Analysis:
+
+The code in the fixed version of the buggy function is easier to understand.
+
+The if statement `if i.isalpha() == True:` checks if the character is an alphabet and then adds the character to the list `a[-1]` if it is an alphabet.
+
+The else clause checks if the character `i` is already in the set `t`. If it is, the function prints "No" and exits.
+
+The else clause adds the character to `t` and `a[-1]` and also removes the character from `t`.
+
+# Difficulty
+
+Easy
+
+# Mentor
+
+[Sarath Babu](https://www.linkedin

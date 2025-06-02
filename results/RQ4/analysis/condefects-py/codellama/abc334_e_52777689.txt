@@ -1,0 +1,131 @@
+No.6 Patch
+class UnionFind():
+    def __init__(self, n):
+        self.par = [-1] * n
+        self.rank = [0] * n
+        self.siz = [1] * n
+    def find(self, x):
+        if self.par[x] == -1: return x 
+        else:
+          self.par[x] = self.find(self.par[x]) 
+          return self.par[x]
+    def same(self, x, y):
+        return self.find(x) == self.find(y)
+    def union(self, x, y):
+        rx = self.find(x)
+        ry = self.find(y)
+        if rx == ry: return False 
+        if self.rank[rx] < self.rank[ry]: 
+            rx, ry = ry, rx
+        self.par[ry] = rx 
+        if self.rank[rx] == self.rank[ry]:
+            self.rank[rx] += 1
+        self.siz[rx] += self.siz[ry]
+        return True
+    def size(self, x):
+        return self.siz[self.find(x)]
+    
+H, W = map(int, input().split())
+vers = [[0] * W for i in range(H)]
+cnt = 0
+color = [list(input()) for i in range(H)]
+for i in range(H):
+    for j in range(W):
+        vers[i][j] = cnt
+        cnt += 1
+        
+uf = UnionFind(H*W)
+
+for i in range(H):
+    for j in range(W):
+        if color[i][j] == ".":continue
+        for ii, jj in [(1, 0),(-1, 0),(0, 1),(0, -1)]:
+            if 0 <= i + ii < H and 0 <= j + jj < W:
+                if color[i+ii][j+jj] == "#":
+                    uf.union(vers[i][j], vers[i+ii][j+jj])
+
+greenset = set()
+greencnt = 0
+bunbo = 0
+for i in range(H):
+    for j in range(W):
+        if color[i][j] == "#":
+            greenset.add(uf.find(vers[i][j]))
+        else:
+            bunbo += 1
+greencnt = len(greenset)
+
+ans = 0
+for i in range(H):
+    for j in range(W):
+        if color[i][j] == "#":continue
+        se = set()
+        for ii, jj in [(1, 0),(-1, 0),(0, 1),(0, -1)]:
+            if 0 <= i + ii < H and 0 <= j + jj < W:
+                if color[i+ii][j+jj] == "#":
+                    se.add(uf.find(vers[i+ii][j+jj]))
+        ans +=  greencnt - len(se) + 1
+ans = ans * pow(bunbo, -1, 998244353) % 998244353
+print(ans)
+
+# Analysis
+Analysis:
+
+The provided code defines a UnionFind data structure and uses it to solve a problem related to finding the number of unique paths from a grid of colored cells.
+
+The UnionFind class implements the union-find algorithm, which is a method of solving the dynamic connectivity problem. It maintains a partition of a set of elements into disjoint subsets. The following methods are implemented:
+
+1. __init__(self, n): Initializes the parent list, rank list, and size list.
+2. find(self, x): Finds the root of the set that contains the element x. If the element is its own root, it returns x. Otherwise, it recursively finds the root of the set.
+3. same(self, x, y): Checks if the elements x and y are in the same set.
+4. union(self, x, y): Merges the sets that contain the elements x and y.
+5. size(self, x): Returns the size of the set that contains the element x.
+
+The code then reads an input grid, initializes a UnionFind object, and iterates over the grid to find connected components. It maintains a count of the number of unique green cells and a count of the number of white cells. 
+
+Afterwards, it iterates over the grid again to calculate the number of unique paths from each white cell to a green cell, and sums up the counts. 
+
+Finally, it calculates the answer as the total count divided by the total number of white cells, and prints the answer modulo 998244353.
+
+There are no syntax or logical errors in the code. However, the code might not work correctly for certain edge cases, such as when there are no green cells or when the grid is empty. 
+
+Please note that the code is not tested and it is assumed that the provided input is correct.
+
+Please provide a test case that can cause the code to fail.
+<|EOT|>
+
+
+
+# Fixed Function
+class UnionFind():
+    def __init__(self, n):
+        self.par = [-1] * n
+        self.rank = [0] * n
+        self.siz = [1] * n
+    def find(self, x):
+        if self.par[x] == -1: return x 
+        else:
+          self.par[x] = self.find(self.par[x]) 
+          return self.par[x]
+    def same(self, x, y):
+        return self.find(x) == self.find(y)
+    def union(self, x, y):
+        rx = self.find(x)
+        ry = self.find(y)
+        if rx == ry: return False 
+        if self.rank[rx] < self.rank[ry]: 
+            rx, ry = ry, rx
+        self.par[ry] = rx 
+        if self.rank[rx] == self.rank[ry]:
+            self.rank[rx] += 1
+        self.siz[rx] += self.siz[ry]
+        return True
+    def size(self, x):
+        return self.siz[self.find(x)]
+    
+H, W = map(int, input().split())
+vers = [[0] * W for i in range(H)]
+cnt = 0
+color = [list(input()) for i in range(H)]
+for i in range(H):
+    for j in range(W

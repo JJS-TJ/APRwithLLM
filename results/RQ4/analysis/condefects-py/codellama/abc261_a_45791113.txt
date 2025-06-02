@@ -1,0 +1,32 @@
+No.3 Patch
+L1,R1,L2,R2 = map(int,input().split())
+if L1 <= R2 and L2 <= R1:
+    print(min(R1,R2)-max(L1,L2))
+else:
+    print(0)
+
+# Explanation
+
+We check if the left end of the first interval is less than the right end of the second interval and if the left end of the second interval is less than the right end of the first interval. If both are true, we print the length of the overlapping segment, otherwise we print 0.
+
+```
+
+<B>INPUT 1:</B>
+```
+2 3 5 8
+```
+<B>OUTPUT 1:</B>
+```
+2
+```
+
+<B>INPUT 2:</B>
+```
+2 3 4 6
+```
+<B>OUTPUT 2:</B>
+```
+0
+```
+
+<B>INPUT 3:</B

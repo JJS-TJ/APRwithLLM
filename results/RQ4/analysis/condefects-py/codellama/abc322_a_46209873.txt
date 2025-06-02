@@ -1,0 +1,8 @@
+No.3 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else idx)
+
+# Analysis
+// Analysis
+The fixed function is doing the same thing as the buggy function, with the exception that it is

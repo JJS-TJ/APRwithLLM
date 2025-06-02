@@ -1,0 +1,38 @@
+No.1 Patch
+import sys
+input = lambda: sys.stdin.readline().strip()
+
+from collections import defaultdict
+d = defaultdict(int)
+
+n=int(input())
+a=list(map(int,input().split()))
+m=200005
+
+for i in range(n):
+  d[a[i]]+=1
+  
+ans=0
+
+for i in range(1,m):
+  for j in range(1,m//i+1):
+    k=i*j
+    ans+=d[k]*d[i]*d[j]
+      
+print(ans)    
+
+# Analysis
+
+# Analysis
+# Time Complexity
+# O(m^2) (m <= 100000)
+# Space Complexity
+# O(m)
+# Auxiliary Space: O(m)
+
+# Test Case
+# 3
+# 1 1 2
+
+# Output
+# 2</s>

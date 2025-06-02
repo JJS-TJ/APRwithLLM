@@ -1,0 +1,44 @@
+No.0 Patch
+#N=int(input())
+S=input()
+
+ans=0
+
+for i in range(len(S)-1,-1,-1):
+    x=ord(S[i])-ord('A')+1
+    ans+=26**(len(S)-i-1)*x
+    
+
+print(ans)
+
+# Analysis
+
+Analysis:
+The bug is not in the conversion function but in the function that is using the conversion function. 
+
+Issues:
+1. The code is taking the number of inputs to be converted in a string as input but is not using this input.
+2. The code is taking a string as input but is not using this input for the conversion.
+3. The loop range should be from 0 to len(S). Right now, it is from len(S)-1 to -1 which means it is iterating from the end of
+No.4 Patch
+#N=int(input())
+S=input()
+
+ans=0
+
+for i in range(len(S)):
+    x=ord(S[i])-ord('A')+1
+    #print(x)
+
+    ans+=26**(len(S)-i-1)*x
+    
+
+#a,b=map(int,input().split())
+print(ans)
+
+Analysis:
+The fixed code is similar to the buggy code but it has the following changes:
+1. It is taking the number of inputs to be converted in a string as input and storing it in the variable N.
+2. It is taking a string as input and storing it in the variable S.
+3. The loop range is from 0 to len(S)-1 which means it is iterating from the start of the string to the end.
+4. The value of ans is being

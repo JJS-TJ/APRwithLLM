@@ -1,0 +1,40 @@
+No.2 Patch
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# Analysis
+The new version of the function correctly prints the first K uppercase letters of the alphabet.
+
+# Hint
+It may
+No.4 Patch
+K = int(input())
+
+for i in range(K):
+    print(chr(65+i), end='')
+
+# Analysis
+The fixed version of the buggy function now correctly prints the first K uppercase letters of the alphabet.
+
+# Example Case
+No.5 Patch
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# Analysis
+The fixed function does not have the same bug as the original one. Rather than printing the characters corresponding to ASCII values from
+No.7 Patch
+from string import ascii_uppercase
+
+# K represents the number of uppercase letters to print
+K = int(input())
+
+# Print K uppercase letters
+print(ascii_uppercase[:K], end='')
+
+# Analysis
+The fixed version of the

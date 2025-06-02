@@ -1,0 +1,66 @@
+No.0 Patch
+a,b=map(int,input().split())
+if abs(a-b)== 1 or abs(a-b)==9:
+    print("Yes")
+else:
+    print("No")
+
+#</s>
+No.2 Patch
+a,b=map(int,input().split())
+if abs(a-b)== 1 or abs(a-b)==9:
+    print("Yes")
+else:
+    print("No")
+
+# Analysis
+Analysis:
+The code is now correct.
+</s>
+No.5 Patch
+a,b=map(int,input().split())
+if abs(a-b)== 1 or abs(a-b)==9:
+    print("Yes")
+else:
+    print("No")
+
+# Analysis
+Analysis:
+The code is supposed to check if the absolute difference between two numbers is 1 or 9, but it will always return True for the second
+No.6 Patch
+a,b=map(int,input().split())
+if abs(a-b)==1 or abs(a-b)==9:
+    print("Yes")
+else:
+    print("No")
+
+# Analysis
+Analysis:
+The code is supposed to check if the absolute difference between two numbers is 1 or 9, but it will always return True for the second condition
+No.7 Patch
+a,b=map(int,input().split())
+if abs(a-b)==1 or abs(a-b)==9:
+    print("Yes")
+else:
+    print("No")
+
+# Analysis
+The bug is fixed by adding abs() around the second condition.
+
+# Unit Tests
+The following test cases should pass:
+
+    a, b =
+No.8 Patch
+a,b=map(int,input().split())
+if abs(a-b)== 1 or abs(a-b)==9:
+    print("Yes")
+else:
+    print("No")
+
+# Analysis
+Analysis:
+The fix is to replace `or` with `or abs(a-b)==9:`
+
+# Notes
+1. The `

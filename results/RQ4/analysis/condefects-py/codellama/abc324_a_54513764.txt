@@ -1,0 +1,79 @@
+No.0 Patch
+import sys
+
+# Read input
+N = int(input())
+
+# Parse input
+lis = list(map(int, input().split()))
+
+# Check for correctness
+for i in range(N - 1):
+    if lis[i] != lis[i + 1]:
+        result = "No"
+        break
+else:
+    result = "Yes"
+
+# Output
+print(result)
+
+# Analysis
+Analysis:
+
+The above function is fixed by removing the space after the input. Also, it is checking for all the numbers in the list.
+
+The input
+No.2 Patch
+import sys
+
+def readArray(a):
+    arr = list(map(int, a.split(' ')))
+    return arr
+
+
+def buggy_function():
+    result = "Yes"
+    n = int(input())
+    lis = readArray(input())
+
+    for i in range(len(lis) - 1):
+        if lis[i] != lis[i + 1]:
+            result = "No"
+
+    print(result)
+
+
+buggy_function()
+
+# Analysis
+
+Analysis:
+
+The bug is fixed because read
+No.3 Patch
+result="Yes"
+N=int(input())
+lis=list(map(int,input().split(' ')))
+for i in range(len(lis)-1):
+    if lis[i]!=lis[i+1]:
+        result="No"
+
+print(result)
+
+# Analysis
+Analysis:
+
+The bug is gone as the list is split into integers before being compared.
+
+The input should be something like:
+
+5
+1 2 3 4 5
+
+If the user inputs:
+
+5
+1 2 3 4 5
+
+It will

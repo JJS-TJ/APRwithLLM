@@ -1,0 +1,26 @@
+No.0 Patch
+s1 = input()
+s2 = input()
+
+if [s1, s2]==["#.",".#"] or [s1, s2]==[".#","#."]:
+    print('No')
+    exit()
+else:
+    print('Yes')
+
+# Analysis
+Fixed Code Analysis
+The fixed code contains a logical error and can be corrected by fixing the if condition in the code. The current if condition is not correctly checking the contents of the two strings. The condition is always true because it is checking if the list
+No.9 Patch
+s1 = input()
+s2 = input()
+
+if [s1, s2]==["#.",".#"] or [s1, s2]==[".#","#."]:
+    print('No')
+    exit()
+else:
+    print('Yes')
+
+# Analysis
+Fixed Code Analysis
+The code in this version checks if the two strings are equal to "#.",".#" or "#.",".#". This condition is more appropriately written as ["#.",".#"]==[s1,s2] or

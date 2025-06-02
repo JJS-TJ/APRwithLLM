@@ -1,0 +1,24 @@
+No.2 Patch
+N = int(input())
+
+X = 0
+Y = 0
+for i in range(N):
+    x, y = map(int,input().split())
+    X += x
+    Y += y
+
+if X > Y:
+    print("Takahashi")
+elif X == Y:
+    print("Draw")
+else:
+    print("Aoki")
+
+
+
+# Analysis
+Analysis:
+This code is a slight improvement over the original code because it handles the case of an invalid input for N.
+However, it also has other issues. The variable names X and Y are not clear, as they don't indicate what they are.
+Another problem is that the code doesn't print "Takahashi" if X > Y, but rather prints "T

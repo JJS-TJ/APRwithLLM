@@ -1,0 +1,12 @@
+No.0 Patch
+N = int(input())
+S = input()
+
+if 'A' in S:
+    max_index = max(S.find('A'), S.find('B'), S.find('C'))
+    print(max_index+1)
+else:
+    print(0)
+    
+# Analysis
+This function checks if the substring 'A', 'B', 'C'

@@ -1,0 +1,19 @@
+No.5 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+print(ascii_uppercase[(X - 1) // N])
+
+# Analysis
+
+The bug is in the line where it calculates the index to access the alphabet character. It calculates (X - 1) // N. The problem here is
+No.6 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+print(ascii_uppercase[(X-1) // N])
+
+# Analysis
+The problem with the buggy function is that X // N - 1 is not the correct formula to calculate the index. The correct formula is (X-1) // N

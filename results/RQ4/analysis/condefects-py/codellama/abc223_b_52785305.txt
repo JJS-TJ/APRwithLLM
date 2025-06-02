@@ -1,0 +1,22 @@
+No.7 Patch
+import string
+s = input().strip()
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:len(s)]+s[0:i])
+print(min(ans))
+print(max(ans))
+
+# Analysis
+Analysis:
+The fixed function is written using the string.ascii_letters list. The string.ascii_letters list contains all the 26 alphabetic characters. The list() function uses the ascii
+No.9 Patch
+s = input()
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:len(s)]+s[0:i])
+print(min(ans))
+print(max(ans))
+
+Analysis:
+The fixed function uses the string.lower() function to convert the input string into a list of lowercase characters. The string.lower() function handles non-alphabetic characters. The function also uses the list.append() to add a new string to
