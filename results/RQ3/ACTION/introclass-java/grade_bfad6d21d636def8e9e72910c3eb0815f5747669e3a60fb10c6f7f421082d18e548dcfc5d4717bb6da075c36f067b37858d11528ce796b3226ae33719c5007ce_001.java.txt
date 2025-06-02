@@ -1,0 +1,129 @@
+New cluster:
+MOVE from IfStatement [695,834]
+------------
+===
+move-tree
+---
+IfStatement [837,976]
+    InfixExpression [841,910]
+        ParenthesizedExpression [841,873]
+            InfixExpression [842,872]
+                QualifiedName: stuscore.value [842,856]
+                INFIX_EXPRESSION_OPERATOR: < [857,858]
+                QualifiedName: threshb.value [859,872]
+        INFIX_EXPRESSION_OPERATOR: && [874,876]
+        ParenthesizedExpression [877,910]
+            InfixExpression [878,909]
+                QualifiedName: stuscore.value [878,892]
+                INFIX_EXPRESSION_OPERATOR: >= [893,895]
+                QualifiedName: threshc.value [896,909]
+    Block [912,976]
+        ExpressionStatement [918,972]
+            Assignment [918,971]
+                SimpleName: output [918,924]
+                ASSIGNMENT_OPERATOR: += [925,927]
+                ParenthesizedExpression [928,971]
+                    MethodInvocation [929,970]
+                        METHOD_INVOCATION_RECEIVER [929,935]
+                            SimpleName: String [929,935]
+                        SimpleName: format [936,942]
+                        METHOD_INVOCATION_ARGUMENTS [943,969]
+                            StringLiteral: "Student has an C grade\n" [943,969]
+to
+IfStatement [695,834]
+at 2
+===
+move-tree
+---
+IfStatement [695,834]
+    InfixExpression [699,768]
+        ParenthesizedExpression [699,731]
+            InfixExpression [700,730]
+                QualifiedName: stuscore.value [700,714]
+                INFIX_EXPRESSION_OPERATOR: < [715,716]
+                QualifiedName: thresha.value [717,730]
+        INFIX_EXPRESSION_OPERATOR: && [732,734]
+        ParenthesizedExpression [735,768]
+            InfixExpression [736,767]
+                QualifiedName: stuscore.value [736,750]
+                INFIX_EXPRESSION_OPERATOR: >= [751,753]
+                QualifiedName: threshb.value [754,767]
+    Block [770,834]
+        ExpressionStatement [776,830]
+            Assignment [776,829]
+                SimpleName: output [776,782]
+                ASSIGNMENT_OPERATOR: += [783,785]
+                ParenthesizedExpression [786,829]
+                    MethodInvocation [787,828]
+                        METHOD_INVOCATION_RECEIVER [787,793]
+                            SimpleName: String [787,793]
+                        SimpleName: format [794,800]
+                        METHOD_INVOCATION_ARGUMENTS [801,827]
+                            StringLiteral: "Student has an B grade\n" [801,827]
+to
+IfStatement [592,692]
+at 2
+===
+move-tree
+---
+IfStatement [979,1118]
+    InfixExpression [983,1052]
+        ParenthesizedExpression [983,1015]
+            InfixExpression [984,1014]
+                QualifiedName: stuscore.value [984,998]
+                INFIX_EXPRESSION_OPERATOR: < [999,1000]
+                QualifiedName: threshc.value [1001,1014]
+        INFIX_EXPRESSION_OPERATOR: && [1016,1018]
+        ParenthesizedExpression [1019,1052]
+            InfixExpression [1020,1051]
+                QualifiedName: stuscore.value [1020,1034]
+                INFIX_EXPRESSION_OPERATOR: >= [1035,1037]
+                QualifiedName: threshd.value [1038,1051]
+    Block [1054,1118]
+        ExpressionStatement [1060,1114]
+            Assignment [1060,1113]
+                SimpleName: output [1060,1066]
+                ASSIGNMENT_OPERATOR: += [1067,1069]
+                ParenthesizedExpression [1070,1113]
+                    MethodInvocation [1071,1112]
+                        METHOD_INVOCATION_RECEIVER [1071,1077]
+                            SimpleName: String [1071,1077]
+                        SimpleName: format [1078,1084]
+                        METHOD_INVOCATION_ARGUMENTS [1085,1111]
+                            StringLiteral: "Student has an D grade\n" [1085,1111]
+to
+IfStatement [837,976]
+at 2
+===
+move-tree
+---
+IfStatement [1121,1228]
+    InfixExpression [1125,1155]
+        QualifiedName: stuscore.value [1125,1139]
+        INFIX_EXPRESSION_OPERATOR: < [1140,1141]
+        QualifiedName: threshd.value [1142,1155]
+    Block [1157,1228]
+        ExpressionStatement [1163,1224]
+            Assignment [1163,1223]
+                SimpleName: output [1163,1169]
+                ASSIGNMENT_OPERATOR: += [1170,1172]
+                ParenthesizedExpression [1173,1223]
+                    MethodInvocation [1174,1222]
+                        METHOD_INVOCATION_RECEIVER [1174,1180]
+                            SimpleName: String [1174,1180]
+                        SimpleName: format [1181,1187]
+                        METHOD_INVOCATION_ARGUMENTS [1188,1221]
+                            StringLiteral: "Student has failed the course\n" [1188,1221]
+to
+IfStatement [979,1118]
+at 2
+
+New cluster:
+UPDATE from > to >=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: > [611,612]
+replace > by >=
+

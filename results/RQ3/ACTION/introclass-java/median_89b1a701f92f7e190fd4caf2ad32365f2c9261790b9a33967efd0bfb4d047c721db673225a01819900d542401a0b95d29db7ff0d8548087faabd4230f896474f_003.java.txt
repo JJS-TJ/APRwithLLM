@@ -1,0 +1,51 @@
+New cluster:
+MOVE from InfixExpression [349,389]
+------------
+===
+move-tree
+---
+InfixExpression [349,367]
+    QualifiedName: a.value [349,356]
+    INFIX_EXPRESSION_OPERATOR: >= [357,359]
+    QualifiedName: c.value [360,367]
+to
+InfixExpression [349,389]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [368,370]
+to
+InfixExpression [349,389]
+at 2
+
+New cluster:
+UPDATE from b.value to a.value
+------------
+===
+update-node
+---
+QualifiedName: b.value [408,415]
+replace b.value by a.value
+
+New cluster:
+MOVE from InfixExpression [490,530]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [509,511]
+to
+InfixExpression [490,530]
+at 2
+===
+move-tree
+---
+InfixExpression [490,508]
+    QualifiedName: b.value [490,497]
+    INFIX_EXPRESSION_OPERATOR: >= [498,500]
+    QualifiedName: c.value [501,508]
+to
+InfixExpression [490,530]
+at 2
+

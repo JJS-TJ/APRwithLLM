@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from "Studnet has an C grade\n" to "Student has an C grade\n"
+------------
+===
+update-node
+---
+StringLiteral: "Studnet has an C grade\n" [871,897]
+replace "Studnet has an C grade\n" by "Student has an C grade\n"
+
+New cluster:
+UPDATE from "Studnet has failed the course\n" to "Student has failed the course\n"
+------------
+===
+update-node
+---
+StringLiteral: "Studnet has failed the course\n" [1100,1133]
+replace "Studnet has failed the course\n" by "Student has failed the course\n"
+

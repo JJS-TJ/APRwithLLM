@@ -1,0 +1,133 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+SimpleType [40,46]
+    SimpleName: String [40,46]
+to
+VariableDeclarationStatement [40,73]
+at 0
+
+New cluster:
+MOVE from Assignment [228,265]
+------------
+===
+move-tree
+---
+MethodInvocation [237,251]
+    METHOD_INVOCATION_RECEIVER [237,244]
+        SimpleName: scanner [237,244]
+    SimpleName: next [245,249]
+to
+Assignment [228,265]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [288,303]
+    METHOD_INVOCATION_RECEIVER [288,294]
+        SimpleName: string [288,294]
+    SimpleName: length [295,301]
+to
+InfixExpression [306,330]
+at 2
+
+New cluster:
+UPDATE from next to nextLine
+------------
+===
+update-node
+---
+SimpleName: next [245,249]
+replace next by nextLine
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [342,364]
+    METHOD_INVOCATION_RECEIVER [342,348]
+        SimpleName: string [342,348]
+    SimpleName: charAt [349,355]
+    METHOD_INVOCATION_ARGUMENTS [356,363]
+        QualifiedName: i.value [356,363]
+to
+CastExpression [364,384]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ArrayType [40,46]
+    PrimitiveType: char [40,44]
+    Dimension [44,46]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ArrayCreation [56,72]
+    ArrayType [60,72]
+        PrimitiveType: char [60,64]
+        Dimension [64,72]
+            SimpleName: length [65,71]
+
+New cluster:
+===
+delete-node
+---
+MethodInvocation [237,265]
+===
+------------
+===
+delete-node
+---
+METHOD_INVOCATION_RECEIVER [237,251]
+===
+===
+delete-node
+---
+SimpleName: toCharArray [252,263]
+===
+===
+delete-node
+---
+MethodInvocation [237,265]
+===
+
+New cluster:
+===
+delete-node
+---
+QualifiedName: string.length [317,330]
+===
+------------
+===
+delete-node
+---
+QualifiedName: string.length [317,330]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ArrayAccess [369,384]
+    SimpleName: string [369,375]
+    QualifiedName: i.value [376,383]
+

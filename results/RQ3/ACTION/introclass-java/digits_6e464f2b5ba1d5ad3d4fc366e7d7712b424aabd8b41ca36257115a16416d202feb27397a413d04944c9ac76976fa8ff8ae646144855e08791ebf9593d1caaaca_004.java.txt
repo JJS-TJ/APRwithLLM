@@ -1,0 +1,80 @@
+New cluster:
+MOVE from IfStatement [401,555]
+------------
+===
+move-tree
+---
+Block [434,491]
+    ExpressionStatement [442,485]
+        Assignment [442,484]
+            SimpleName: output [442,448]
+            ASSIGNMENT_OPERATOR: += [449,451]
+            ParenthesizedExpression [452,484]
+                MethodInvocation [453,483]
+                    METHOD_INVOCATION_RECEIVER [453,459]
+                        SimpleName: String [453,459]
+                    SimpleName: format [460,466]
+                    METHOD_INVOCATION_ARGUMENTS [467,482]
+                        StringLiteral: "%d\n" [467,473]
+                        QualifiedName: j.value [475,482]
+to
+IfStatement [401,555]
+at 2
+
+New cluster:
+===
+insert-node
+---
+MethodInvocation [355,377]
+to
+Assignment [345,367]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: abs [360,363]
+to
+MethodInvocation [355,377]
+at 1
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [364,376]
+to
+MethodInvocation [355,377]
+at 2
+===
+insert-node
+---
+MethodInvocation [355,377]
+to
+Assignment [345,367]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [355,359]
+    SimpleName: Math [355,359]
+to
+MethodInvocation [355,377]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [364,376]
+------------
+===
+move-tree
+---
+InfixExpression [355,367]
+    QualifiedName: i.value [355,362]
+    INFIX_EXPRESSION_OPERATOR: % [363,364]
+    NumberLiteral: 10 [365,367]
+to
+METHOD_INVOCATION_ARGUMENTS [364,376]
+at 0
+

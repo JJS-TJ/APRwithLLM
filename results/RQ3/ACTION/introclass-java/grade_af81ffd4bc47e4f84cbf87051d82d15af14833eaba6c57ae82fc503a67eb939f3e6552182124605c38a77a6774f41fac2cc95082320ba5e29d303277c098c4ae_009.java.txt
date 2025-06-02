@@ -1,0 +1,22 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Block [945,1016]
+    ExpressionStatement [951,1012]
+        Assignment [951,1011]
+            SimpleName: output [951,957]
+            ASSIGNMENT_OPERATOR: += [958,960]
+            ParenthesizedExpression [961,1011]
+                MethodInvocation [962,1010]
+                    METHOD_INVOCATION_RECEIVER [962,968]
+                        SimpleName: String [962,968]
+                    SimpleName: format [969,975]
+                    METHOD_INVOCATION_ARGUMENTS [976,1009]
+                        StringLiteral: "Student has failed the course\n" [976,1009]
+to
+IfStatement [847,939]
+at 2
+

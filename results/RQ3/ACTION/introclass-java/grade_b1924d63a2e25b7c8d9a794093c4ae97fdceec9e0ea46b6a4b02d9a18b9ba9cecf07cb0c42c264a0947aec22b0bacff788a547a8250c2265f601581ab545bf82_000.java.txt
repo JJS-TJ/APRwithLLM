@@ -1,0 +1,90 @@
+New cluster:
+MOVE from IfStatement [528,1105]
+------------
+===
+move-tree
+---
+Block [810,874]
+    ExpressionStatement [816,870]
+        Assignment [816,869]
+            SimpleName: output [816,822]
+            ASSIGNMENT_OPERATOR: += [823,825]
+            ParenthesizedExpression [826,869]
+                MethodInvocation [827,868]
+                    METHOD_INVOCATION_RECEIVER [827,833]
+                        SimpleName: String [827,833]
+                    SimpleName: format [834,840]
+                    METHOD_INVOCATION_ARGUMENTS [841,867]
+                        StringLiteral: "Student has an A grade\n" [841,867]
+to
+IfStatement [528,1105]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Block [810,874]
+    ExpressionStatement [816,870]
+        Assignment [816,869]
+            SimpleName: output [816,822]
+            ASSIGNMENT_OPERATOR: += [823,825]
+            ParenthesizedExpression [826,869]
+                MethodInvocation [827,868]
+                    METHOD_INVOCATION_RECEIVER [827,833]
+                        SimpleName: String [827,833]
+                    SimpleName: format [834,840]
+                    METHOD_INVOCATION_ARGUMENTS [841,867]
+                        StringLiteral: "Student has an C grade\n" [841,867]
+to
+IfStatement [753,1105]
+at 1
+
+New cluster:
+UPDATE from > to <
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: > [671,672]
+replace > by <
+
+New cluster:
+UPDATE from "Student has an A grade\n" to "Student has an B grade\n"
+------------
+===
+update-node
+---
+StringLiteral: "Student has an A grade\n" [714,740]
+replace "Student has an A grade\n" by "Student has an B grade\n"
+
+New cluster:
+UPDATE from "Student has an A grade\n" to "Student has an D grade\n"
+------------
+===
+update-node
+---
+StringLiteral: "Student has an A grade\n" [968,994]
+replace "Student has an A grade\n" by "Student has an D grade\n"
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+Block [556,620]
+    ExpressionStatement [562,616]
+        Assignment [562,615]
+            SimpleName: output [562,568]
+            ASSIGNMENT_OPERATOR: += [569,571]
+            ParenthesizedExpression [572,615]
+                MethodInvocation [573,614]
+                    METHOD_INVOCATION_RECEIVER [573,579]
+                        SimpleName: String [573,579]
+                    SimpleName: format [580,586]
+                    METHOD_INVOCATION_ARGUMENTS [587,613]
+                        StringLiteral: "Student has an A grade\n" [587,613]
+

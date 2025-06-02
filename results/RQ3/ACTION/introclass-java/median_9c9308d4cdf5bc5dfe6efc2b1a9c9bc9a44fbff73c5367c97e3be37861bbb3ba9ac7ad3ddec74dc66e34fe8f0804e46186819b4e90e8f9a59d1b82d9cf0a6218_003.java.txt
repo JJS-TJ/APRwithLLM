@@ -1,0 +1,226 @@
+New cluster:
+MOVE from IfStatement [339,637]
+------------
+===
+move-tree
+---
+InfixExpression [343,363]
+    QualifiedName: n1.value [343,351]
+    INFIX_EXPRESSION_OPERATOR: >= [352,354]
+    QualifiedName: n2.value [355,363]
+to
+IfStatement [339,637]
+at 0
+===
+move-tree
+---
+InfixExpression [367,387]
+    QualifiedName: n1.value [367,375]
+    INFIX_EXPRESSION_OPERATOR: >= [376,378]
+    QualifiedName: n3.value [379,387]
+to
+IfStatement [565,743]
+at 0
+
+New cluster:
+===
+insert-node
+---
+Block [559,747]
+to
+IfStatement [339,637]
+at 3
+------------
+===
+insert-node
+---
+Block [559,747]
+to
+IfStatement [339,637]
+at 3
+===
+insert-node
+---
+IfStatement [565,743]
+to
+Block [559,747]
+at 0
+
+New cluster:
+===
+insert-node
+---
+IfStatement [441,549]
+to
+IfStatement [395,527]
+at 3
+------------
+===
+insert-node
+---
+IfStatement [441,549]
+to
+IfStatement [395,527]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Block [591,629]
+    ExpressionStatement [599,623]
+        Assignment [599,622]
+            QualifiedName: median.value [599,611]
+            ASSIGNMENT_OPERATOR: = [612,613]
+            QualifiedName: n1.value [614,622]
+to
+IfStatement [565,743]
+at 1
+
+New cluster:
+MOVE from IfStatement [565,743]
+------------
+===
+move-tree
+---
+IfStatement [537,637]
+    InfixExpression [541,561]
+        QualifiedName: n2.value [541,549]
+        INFIX_EXPRESSION_OPERATOR: >= [550,552]
+        QualifiedName: n3.value [553,561]
+    Block [563,597]
+        ExpressionStatement [569,593]
+            Assignment [569,592]
+                QualifiedName: median.value [569,581]
+                ASSIGNMENT_OPERATOR: = [582,583]
+                QualifiedName: n3.value [584,592]
+    Block [603,637]
+        ExpressionStatement [609,633]
+            Assignment [609,632]
+                QualifiedName: median.value [609,621]
+                ASSIGNMENT_OPERATOR: = [622,623]
+                QualifiedName: n2.value [624,632]
+to
+IfStatement [565,743]
+at 2
+
+New cluster:
+===
+insert-node
+---
+QualifiedName: n1.value [375,383]
+to
+InfixExpression [399,443]
+at 0
+------------
+===
+insert-node
+---
+QualifiedName: n1.value [375,383]
+to
+InfixExpression [399,443]
+at 0
+
+New cluster:
+UPDATE from && to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: && [420,422]
+replace && by <=
+
+New cluster:
+===
+insert-node
+---
+QualifiedName: n3.value [387,395]
+to
+InfixExpression [399,443]
+at 3
+------------
+===
+insert-node
+---
+QualifiedName: n3.value [387,395]
+to
+InfixExpression [399,443]
+at 3
+
+New cluster:
+MOVE from IfStatement [441,549]
+------------
+===
+move-tree
+---
+InfixExpression [399,419]
+    QualifiedName: n2.value [399,407]
+    INFIX_EXPRESSION_OPERATOR: >= [408,410]
+    QualifiedName: n3.value [411,419]
+to
+IfStatement [441,549]
+at 0
+
+New cluster:
+MOVE from IfStatement [441,549]
+------------
+===
+move-tree
+---
+Block [445,483]
+    ExpressionStatement [453,477]
+        Assignment [453,476]
+            QualifiedName: median.value [453,465]
+            ASSIGNMENT_OPERATOR: = [466,467]
+            QualifiedName: n2.value [468,476]
+to
+IfStatement [441,549]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Block [511,549]
+    ExpressionStatement [519,543]
+        Assignment [519,542]
+            QualifiedName: median.value [519,531]
+            ASSIGNMENT_OPERATOR: = [532,533]
+            QualifiedName: n3.value [534,542]
+to
+IfStatement [441,549]
+at 2
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [343,387]
+===
+------------
+===
+delete-node
+---
+InfixExpression [343,387]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: || [364,366]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [423,443]
+    QualifiedName: n1.value [423,431]
+    INFIX_EXPRESSION_OPERATOR: >= [432,434]
+    QualifiedName: n2.value [435,443]
+

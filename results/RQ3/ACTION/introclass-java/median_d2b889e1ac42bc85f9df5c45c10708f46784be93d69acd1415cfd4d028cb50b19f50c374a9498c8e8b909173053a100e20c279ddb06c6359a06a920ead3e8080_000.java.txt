@@ -1,0 +1,392 @@
+New cluster:
+MOVE from IfStatement [445,731]
+------------
+===
+move-tree
+---
+Block [406,439]
+    ExpressionStatement [412,435]
+        Assignment [412,434]
+            QualifiedName: median.value [412,424]
+            ASSIGNMENT_OPERATOR: = [425,426]
+            QualifiedName: b.value [427,434]
+to
+IfStatement [445,731]
+at 1
+===
+move-tree
+---
+InfixExpression [310,404]
+    ParenthesizedExpression [310,352]
+        InfixExpression [311,351]
+            InfixExpression [311,329]
+                QualifiedName: a.value [311,318]
+                INFIX_EXPRESSION_OPERATOR: <= [319,321]
+                QualifiedName: b.value [322,329]
+            INFIX_EXPRESSION_OPERATOR: && [330,332]
+            InfixExpression [333,351]
+                QualifiedName: b.value [333,340]
+                INFIX_EXPRESSION_OPERATOR: < [341,342]
+                PrefixExpression [343,351]
+                    PREFIX_EXPRESSION_OPERATOR: + [343,344]
+                    QualifiedName: c.value [344,351]
+    INFIX_EXPRESSION_OPERATOR: || [353,355]
+    ParenthesizedExpression [362,404]
+        InfixExpression [363,403]
+            InfixExpression [363,381]
+                QualifiedName: c.value [363,370]
+                INFIX_EXPRESSION_OPERATOR: <= [371,373]
+                QualifiedName: b.value [374,381]
+            INFIX_EXPRESSION_OPERATOR: && [382,384]
+            InfixExpression [385,403]
+                QualifiedName: b.value [385,392]
+                INFIX_EXPRESSION_OPERATOR: <= [393,395]
+                QualifiedName: a.value [396,403]
+to
+IfStatement [445,731]
+at 0
+===
+move-tree
+---
+IfStatement [445,731]
+    InfixExpression [449,550]
+        ParenthesizedExpression [449,491]
+            InfixExpression [450,490]
+                InfixExpression [450,468]
+                    QualifiedName: b.value [450,457]
+                    INFIX_EXPRESSION_OPERATOR: <= [458,460]
+                    QualifiedName: c.value [461,468]
+                INFIX_EXPRESSION_OPERATOR: && [469,471]
+                InfixExpression [472,490]
+                    QualifiedName: c.value [472,479]
+                    INFIX_EXPRESSION_OPERATOR: <= [480,482]
+                    QualifiedName: a.value [483,490]
+        INFIX_EXPRESSION_OPERATOR: || [492,494]
+        ParenthesizedExpression [508,550]
+            InfixExpression [509,549]
+                InfixExpression [509,527]
+                    QualifiedName: a.value [509,516]
+                    INFIX_EXPRESSION_OPERATOR: <= [517,519]
+                    QualifiedName: c.value [520,527]
+                INFIX_EXPRESSION_OPERATOR: && [528,530]
+                InfixExpression [531,549]
+                    QualifiedName: c.value [531,538]
+                    INFIX_EXPRESSION_OPERATOR: <= [539,541]
+                    QualifiedName: b.value [542,549]
+    Block [552,585]
+        ExpressionStatement [558,581]
+            Assignment [558,580]
+                QualifiedName: median.value [558,570]
+                ASSIGNMENT_OPERATOR: = [571,572]
+                QualifiedName: b.value [573,580]
+    IfStatement [591,731]
+        InfixExpression [595,696]
+            ParenthesizedExpression [595,637]
+                InfixExpression [596,636]
+                    InfixExpression [596,614]
+                        QualifiedName: c.value [596,603]
+                        INFIX_EXPRESSION_OPERATOR: <= [604,606]
+                        QualifiedName: a.value [607,614]
+                    INFIX_EXPRESSION_OPERATOR: && [615,617]
+                    InfixExpression [618,636]
+                        QualifiedName: a.value [618,625]
+                        INFIX_EXPRESSION_OPERATOR: <= [626,628]
+                        QualifiedName: b.value [629,636]
+            INFIX_EXPRESSION_OPERATOR: || [638,640]
+            ParenthesizedExpression [654,696]
+                InfixExpression [655,695]
+                    InfixExpression [655,673]
+                        QualifiedName: b.value [655,662]
+                        INFIX_EXPRESSION_OPERATOR: <= [663,665]
+                        QualifiedName: a.value [666,673]
+                    INFIX_EXPRESSION_OPERATOR: && [674,676]
+                    InfixExpression [677,695]
+                        QualifiedName: a.value [677,684]
+                        INFIX_EXPRESSION_OPERATOR: <= [685,687]
+                        QualifiedName: c.value [688,695]
+        Block [698,731]
+            ExpressionStatement [704,727]
+                Assignment [704,726]
+                    QualifiedName: median.value [704,716]
+                    ASSIGNMENT_OPERATOR: = [717,718]
+                    QualifiedName: c.value [719,726]
+to
+Block [36,826]
+at 5
+
+New cluster:
+MOVE from InfixExpression [595,696]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: || [638,640]
+to
+InfixExpression [595,696]
+at 2
+===
+move-tree
+---
+ParenthesizedExpression [595,637]
+    InfixExpression [596,636]
+        InfixExpression [596,614]
+            QualifiedName: c.value [596,603]
+            INFIX_EXPRESSION_OPERATOR: <= [604,606]
+            QualifiedName: a.value [607,614]
+        INFIX_EXPRESSION_OPERATOR: && [615,617]
+        InfixExpression [618,636]
+            QualifiedName: a.value [618,625]
+            INFIX_EXPRESSION_OPERATOR: <= [626,628]
+            QualifiedName: b.value [629,636]
+to
+InfixExpression [595,696]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Block [552,585]
+    ExpressionStatement [558,581]
+        Assignment [558,580]
+            QualifiedName: median.value [558,570]
+            ASSIGNMENT_OPERATOR: = [571,572]
+            QualifiedName: a.value [573,580]
+to
+IfStatement [591,731]
+at 1
+
+New cluster:
+MOVE from IfStatement [591,731]
+------------
+===
+move-tree
+---
+IfStatement [306,731]
+    InfixExpression [310,404]
+        ParenthesizedExpression [310,352]
+            InfixExpression [311,351]
+                InfixExpression [311,329]
+                    QualifiedName: a.value [311,318]
+                    INFIX_EXPRESSION_OPERATOR: <= [319,321]
+                    QualifiedName: b.value [322,329]
+                INFIX_EXPRESSION_OPERATOR: && [330,332]
+                InfixExpression [333,351]
+                    QualifiedName: b.value [333,340]
+                    INFIX_EXPRESSION_OPERATOR: < [341,342]
+                    PrefixExpression [343,351]
+                        PREFIX_EXPRESSION_OPERATOR: + [343,344]
+                        QualifiedName: c.value [344,351]
+        INFIX_EXPRESSION_OPERATOR: || [353,355]
+        ParenthesizedExpression [362,404]
+            InfixExpression [363,403]
+                InfixExpression [363,381]
+                    QualifiedName: c.value [363,370]
+                    INFIX_EXPRESSION_OPERATOR: <= [371,373]
+                    QualifiedName: b.value [374,381]
+                INFIX_EXPRESSION_OPERATOR: && [382,384]
+                InfixExpression [385,403]
+                    QualifiedName: b.value [385,392]
+                    INFIX_EXPRESSION_OPERATOR: <= [393,395]
+                    QualifiedName: a.value [396,403]
+    Block [406,439]
+        ExpressionStatement [412,435]
+            Assignment [412,434]
+                QualifiedName: median.value [412,424]
+                ASSIGNMENT_OPERATOR: = [425,426]
+                QualifiedName: b.value [427,434]
+    IfStatement [445,731]
+        InfixExpression [449,550]
+            ParenthesizedExpression [449,491]
+                InfixExpression [450,490]
+                    InfixExpression [450,468]
+                        QualifiedName: b.value [450,457]
+                        INFIX_EXPRESSION_OPERATOR: <= [458,460]
+                        QualifiedName: c.value [461,468]
+                    INFIX_EXPRESSION_OPERATOR: && [469,471]
+                    InfixExpression [472,490]
+                        QualifiedName: c.value [472,479]
+                        INFIX_EXPRESSION_OPERATOR: <= [480,482]
+                        QualifiedName: a.value [483,490]
+            INFIX_EXPRESSION_OPERATOR: || [492,494]
+            ParenthesizedExpression [508,550]
+                InfixExpression [509,549]
+                    InfixExpression [509,527]
+                        QualifiedName: a.value [509,516]
+                        INFIX_EXPRESSION_OPERATOR: <= [517,519]
+                        QualifiedName: c.value [520,527]
+                    INFIX_EXPRESSION_OPERATOR: && [528,530]
+                    InfixExpression [531,549]
+                        QualifiedName: c.value [531,538]
+                        INFIX_EXPRESSION_OPERATOR: <= [539,541]
+                        QualifiedName: b.value [542,549]
+        Block [552,585]
+            ExpressionStatement [558,581]
+                Assignment [558,580]
+                    QualifiedName: median.value [558,570]
+                    ASSIGNMENT_OPERATOR: = [571,572]
+                    QualifiedName: b.value [573,580]
+        IfStatement [591,731]
+            InfixExpression [595,696]
+                ParenthesizedExpression [595,637]
+                    InfixExpression [596,636]
+                        InfixExpression [596,614]
+                            QualifiedName: c.value [596,603]
+                            INFIX_EXPRESSION_OPERATOR: <= [604,606]
+                            QualifiedName: a.value [607,614]
+                        INFIX_EXPRESSION_OPERATOR: && [615,617]
+                        InfixExpression [618,636]
+                            QualifiedName: a.value [618,625]
+                            INFIX_EXPRESSION_OPERATOR: <= [626,628]
+                            QualifiedName: b.value [629,636]
+                INFIX_EXPRESSION_OPERATOR: || [638,640]
+                ParenthesizedExpression [654,696]
+                    InfixExpression [655,695]
+                        InfixExpression [655,673]
+                            QualifiedName: b.value [655,662]
+                            INFIX_EXPRESSION_OPERATOR: <= [663,665]
+                            QualifiedName: a.value [666,673]
+                        INFIX_EXPRESSION_OPERATOR: && [674,676]
+                        InfixExpression [677,695]
+                            QualifiedName: a.value [677,684]
+                            INFIX_EXPRESSION_OPERATOR: <= [685,687]
+                            QualifiedName: c.value [688,695]
+            Block [698,731]
+                ExpressionStatement [704,727]
+                    Assignment [704,726]
+                        QualifiedName: median.value [704,716]
+                        ASSIGNMENT_OPERATOR: = [717,718]
+                        QualifiedName: c.value [719,726]
+to
+IfStatement [591,731]
+at 2
+
+New cluster:
+MOVE from IfStatement [306,731]
+------------
+===
+move-tree
+---
+InfixExpression [449,550]
+    ParenthesizedExpression [449,491]
+        InfixExpression [450,490]
+            InfixExpression [450,468]
+                QualifiedName: b.value [450,457]
+                INFIX_EXPRESSION_OPERATOR: <= [458,460]
+                QualifiedName: c.value [461,468]
+            INFIX_EXPRESSION_OPERATOR: && [469,471]
+            InfixExpression [472,490]
+                QualifiedName: c.value [472,479]
+                INFIX_EXPRESSION_OPERATOR: <= [480,482]
+                QualifiedName: a.value [483,490]
+    INFIX_EXPRESSION_OPERATOR: || [492,494]
+    ParenthesizedExpression [508,550]
+        InfixExpression [509,549]
+            InfixExpression [509,527]
+                QualifiedName: a.value [509,516]
+                INFIX_EXPRESSION_OPERATOR: <= [517,519]
+                QualifiedName: c.value [520,527]
+            INFIX_EXPRESSION_OPERATOR: && [528,530]
+            InfixExpression [531,549]
+                QualifiedName: c.value [531,538]
+                INFIX_EXPRESSION_OPERATOR: <= [539,541]
+                QualifiedName: b.value [542,549]
+to
+IfStatement [306,731]
+at 0
+
+New cluster:
+MOVE from InfixExpression [449,550]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [449,491]
+    InfixExpression [450,490]
+        InfixExpression [450,468]
+            QualifiedName: b.value [450,457]
+            INFIX_EXPRESSION_OPERATOR: <= [458,460]
+            QualifiedName: c.value [461,468]
+        INFIX_EXPRESSION_OPERATOR: && [469,471]
+        InfixExpression [472,490]
+            QualifiedName: c.value [472,479]
+            INFIX_EXPRESSION_OPERATOR: <= [480,482]
+            QualifiedName: a.value [483,490]
+to
+InfixExpression [449,550]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: || [492,494]
+to
+InfixExpression [449,550]
+at 2
+
+New cluster:
+MOVE from IfStatement [306,731]
+------------
+===
+move-tree
+---
+Block [698,731]
+    ExpressionStatement [704,727]
+        Assignment [704,726]
+            QualifiedName: median.value [704,716]
+            ASSIGNMENT_OPERATOR: = [717,718]
+            QualifiedName: c.value [719,726]
+to
+IfStatement [306,731]
+at 1
+
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [341,342]
+replace < by <=
+
+New cluster:
+===
+insert-node
+---
+QualifiedName: c.value [344,351]
+to
+InfixExpression [333,351]
+at 2
+------------
+===
+insert-node
+---
+QualifiedName: c.value [344,351]
+to
+InfixExpression [333,351]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+PrefixExpression [343,351]
+    PREFIX_EXPRESSION_OPERATOR: + [343,344]
+    QualifiedName: c.value [344,351]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+Block [552,585]
+    ExpressionStatement [558,581]
+        Assignment [558,580]
+            QualifiedName: median.value [558,570]
+            ASSIGNMENT_OPERATOR: = [571,572]
+            QualifiedName: b.value [573,580]
+

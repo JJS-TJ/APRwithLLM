@@ -1,0 +1,361 @@
+New cluster:
+MOVE from Block [36,1196]
+------------
+===
+move-tree
+---
+IfStatement [678,1166]
+    InfixExpression [682,735]
+        InfixExpression [682,707]
+            QualifiedName: grade.value [682,693]
+            INFIX_EXPRESSION_OPERATOR: >= [694,696]
+            QualifiedName: per2.value [697,707]
+        INFIX_EXPRESSION_OPERATOR: && [708,710]
+        InfixExpression [711,735]
+            QualifiedName: grade.value [711,722]
+            INFIX_EXPRESSION_OPERATOR: < [723,724]
+            QualifiedName: per1.value [725,735]
+    Block [737,801]
+        ExpressionStatement [743,797]
+            Assignment [743,796]
+                SimpleName: output [743,749]
+                ASSIGNMENT_OPERATOR: += [750,752]
+                ParenthesizedExpression [753,796]
+                    MethodInvocation [754,795]
+                        METHOD_INVOCATION_RECEIVER [754,760]
+                            SimpleName: String [754,760]
+                        SimpleName: format [761,767]
+                        METHOD_INVOCATION_ARGUMENTS [768,794]
+                            StringLiteral: "Student has an B grade\n" [768,794]
+    IfStatement [807,1166]
+        InfixExpression [811,864]
+            InfixExpression [811,836]
+                QualifiedName: grade.value [811,822]
+                INFIX_EXPRESSION_OPERATOR: >= [823,825]
+                QualifiedName: per3.value [826,836]
+            INFIX_EXPRESSION_OPERATOR: && [837,839]
+            InfixExpression [840,864]
+                QualifiedName: grade.value [840,851]
+                INFIX_EXPRESSION_OPERATOR: < [852,853]
+                QualifiedName: per2.value [854,864]
+        Block [866,930]
+            ExpressionStatement [872,926]
+                Assignment [872,925]
+                    SimpleName: output [872,878]
+                    ASSIGNMENT_OPERATOR: += [879,881]
+                    ParenthesizedExpression [882,925]
+                        MethodInvocation [883,924]
+                            METHOD_INVOCATION_RECEIVER [883,889]
+                                SimpleName: String [883,889]
+                            SimpleName: format [890,896]
+                            METHOD_INVOCATION_ARGUMENTS [897,923]
+                                StringLiteral: "Studnet has an C grade\n" [897,923]
+        IfStatement [936,1166]
+            InfixExpression [940,993]
+                InfixExpression [940,965]
+                    QualifiedName: grade.value [940,951]
+                    INFIX_EXPRESSION_OPERATOR: >= [952,954]
+                    QualifiedName: per4.value [955,965]
+                INFIX_EXPRESSION_OPERATOR: && [966,968]
+                InfixExpression [969,993]
+                    QualifiedName: grade.value [969,980]
+                    INFIX_EXPRESSION_OPERATOR: < [981,982]
+                    QualifiedName: per3.value [983,993]
+            Block [995,1059]
+                ExpressionStatement [1001,1055]
+                    Assignment [1001,1054]
+                        SimpleName: output [1001,1007]
+                        ASSIGNMENT_OPERATOR: += [1008,1010]
+                        ParenthesizedExpression [1011,1054]
+                            MethodInvocation [1012,1053]
+                                METHOD_INVOCATION_RECEIVER [1012,1018]
+                                    SimpleName: String [1012,1018]
+                                SimpleName: format [1019,1025]
+                                METHOD_INVOCATION_ARGUMENTS [1026,1052]
+                                    StringLiteral: "Student has an D grade\n" [1026,1052]
+            IfStatement [1065,1166]
+                InfixExpression [1069,1093]
+                    QualifiedName: grade.value [1069,1080]
+                    INFIX_EXPRESSION_OPERATOR: < [1081,1082]
+                    QualifiedName: per4.value [1083,1093]
+                Block [1095,1166]
+                    ExpressionStatement [1101,1162]
+                        Assignment [1101,1161]
+                            SimpleName: output [1101,1107]
+                            ASSIGNMENT_OPERATOR: += [1108,1110]
+                            ParenthesizedExpression [1111,1161]
+                                MethodInvocation [1112,1160]
+                                    METHOD_INVOCATION_RECEIVER [1112,1118]
+                                        SimpleName: String [1112,1118]
+                                    SimpleName: format [1119,1125]
+                                    METHOD_INVOCATION_ARGUMENTS [1126,1159]
+                                        StringLiteral: "Studnet has failed the course\n" [1126,1159]
+to
+Block [36,1196]
+at 9
+===
+move-tree
+---
+InfixExpression [581,606]
+    QualifiedName: grade.value [581,592]
+    INFIX_EXPRESSION_OPERATOR: >= [593,595]
+    QualifiedName: per1.value [596,606]
+to
+IfStatement [678,1166]
+at 0
+===
+move-tree
+---
+Block [608,672]
+    ExpressionStatement [614,668]
+        Assignment [614,667]
+            SimpleName: output [614,620]
+            ASSIGNMENT_OPERATOR: += [621,623]
+            ParenthesizedExpression [624,667]
+                MethodInvocation [625,666]
+                    METHOD_INVOCATION_RECEIVER [625,631]
+                        SimpleName: String [625,631]
+                    SimpleName: format [632,638]
+                    METHOD_INVOCATION_ARGUMENTS [639,665]
+                        StringLiteral: "Student has an A grade\n" [639,665]
+to
+IfStatement [678,1166]
+at 1
+
+New cluster:
+MOVE from IfStatement [807,1166]
+------------
+===
+move-tree
+---
+InfixExpression [682,707]
+    QualifiedName: grade.value [682,693]
+    INFIX_EXPRESSION_OPERATOR: >= [694,696]
+    QualifiedName: per2.value [697,707]
+to
+IfStatement [807,1166]
+at 0
+
+New cluster:
+MOVE from IfStatement [807,1166]
+------------
+===
+move-tree
+---
+Block [737,801]
+    ExpressionStatement [743,797]
+        Assignment [743,796]
+            SimpleName: output [743,749]
+            ASSIGNMENT_OPERATOR: += [750,752]
+            ParenthesizedExpression [753,796]
+                MethodInvocation [754,795]
+                    METHOD_INVOCATION_RECEIVER [754,760]
+                        SimpleName: String [754,760]
+                    SimpleName: format [761,767]
+                    METHOD_INVOCATION_ARGUMENTS [768,794]
+                        StringLiteral: "Student has an B grade\n" [768,794]
+to
+IfStatement [807,1166]
+at 1
+
+New cluster:
+MOVE from IfStatement [936,1166]
+------------
+===
+move-tree
+---
+InfixExpression [811,836]
+    QualifiedName: grade.value [811,822]
+    INFIX_EXPRESSION_OPERATOR: >= [823,825]
+    QualifiedName: per3.value [826,836]
+to
+IfStatement [936,1166]
+at 0
+
+New cluster:
+MOVE from IfStatement [936,1166]
+------------
+===
+move-tree
+---
+Block [866,930]
+    ExpressionStatement [872,926]
+        Assignment [872,925]
+            SimpleName: output [872,878]
+            ASSIGNMENT_OPERATOR: += [879,881]
+            ParenthesizedExpression [882,925]
+                MethodInvocation [883,924]
+                    METHOD_INVOCATION_RECEIVER [883,889]
+                        SimpleName: String [883,889]
+                    SimpleName: format [890,896]
+                    METHOD_INVOCATION_ARGUMENTS [897,923]
+                        StringLiteral: "Studnet has an C grade\n" [897,923]
+to
+IfStatement [936,1166]
+at 1
+
+New cluster:
+MOVE from IfStatement [1065,1166]
+------------
+===
+move-tree
+---
+InfixExpression [940,965]
+    QualifiedName: grade.value [940,951]
+    INFIX_EXPRESSION_OPERATOR: >= [952,954]
+    QualifiedName: per4.value [955,965]
+to
+IfStatement [1065,1166]
+at 0
+
+New cluster:
+MOVE from IfStatement [1065,1166]
+------------
+===
+move-tree
+---
+Block [995,1059]
+    ExpressionStatement [1001,1055]
+        Assignment [1001,1054]
+            SimpleName: output [1001,1007]
+            ASSIGNMENT_OPERATOR: += [1008,1010]
+            ParenthesizedExpression [1011,1054]
+                MethodInvocation [1012,1053]
+                    METHOD_INVOCATION_RECEIVER [1012,1018]
+                        SimpleName: String [1012,1018]
+                    SimpleName: format [1019,1025]
+                    METHOD_INVOCATION_ARGUMENTS [1026,1052]
+                        StringLiteral: "Student has an D grade\n" [1026,1052]
+to
+IfStatement [1065,1166]
+at 1
+
+New cluster:
+UPDATE from "Studnet has an C grade\n" to "Student has an C grade\n"
+------------
+===
+update-node
+---
+StringLiteral: "Studnet has an C grade\n" [897,923]
+replace "Studnet has an C grade\n" by "Student has an C grade\n"
+
+New cluster:
+UPDATE from "Studnet has failed the course\n" to "Student has failed the course\n"
+------------
+===
+update-node
+---
+StringLiteral: "Studnet has failed the course\n" [1126,1159]
+replace "Studnet has failed the course\n" by "Student has failed the course\n"
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [682,735]
+===
+------------
+===
+delete-node
+---
+InfixExpression [682,735]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: && [708,710]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [711,735]
+    QualifiedName: grade.value [711,722]
+    INFIX_EXPRESSION_OPERATOR: < [723,724]
+    QualifiedName: per1.value [725,735]
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [811,864]
+===
+------------
+===
+delete-node
+---
+InfixExpression [811,864]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: && [837,839]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [840,864]
+    QualifiedName: grade.value [840,851]
+    INFIX_EXPRESSION_OPERATOR: < [852,853]
+    QualifiedName: per2.value [854,864]
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [940,993]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: && [966,968]
+===
+===
+delete-node
+---
+InfixExpression [940,993]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [969,993]
+    QualifiedName: grade.value [969,980]
+    INFIX_EXPRESSION_OPERATOR: < [981,982]
+    QualifiedName: per3.value [983,993]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1069,1093]
+    QualifiedName: grade.value [1069,1080]
+    INFIX_EXPRESSION_OPERATOR: < [1081,1082]
+    QualifiedName: per4.value [1083,1093]
+
+New cluster:
+===
+delete-node
+---
+IfStatement [577,1166]
+===
+------------
+===
+delete-node
+---
+IfStatement [577,1166]
+===
+

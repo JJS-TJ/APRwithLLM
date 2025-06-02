@@ -1,0 +1,258 @@
+New cluster:
+===
+insert-node
+---
+ReturnStatement [646,653]
+to
+Block [581,679]
+at 1
+------------
+===
+insert-node
+---
+ReturnStatement [646,653]
+to
+Block [581,679]
+at 1
+
+New cluster:
+MOVE from InfixExpression [689,740]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [689,712]
+    InfixExpression [690,711]
+        QualifiedName: grade.value [690,701]
+        INFIX_EXPRESSION_OPERATOR: < [702,703]
+        QualifiedName: A.value [704,711]
+to
+InfixExpression [689,740]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [713,715]
+to
+InfixExpression [689,740]
+at 2
+
+New cluster:
+===
+insert-node
+---
+ReturnStatement [785,792]
+to
+Block [742,840]
+at 1
+------------
+===
+insert-node
+---
+ReturnStatement [785,792]
+to
+Block [742,840]
+at 1
+
+New cluster:
+MOVE from InfixExpression [850,901]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [850,873]
+    InfixExpression [851,872]
+        QualifiedName: grade.value [851,862]
+        INFIX_EXPRESSION_OPERATOR: < [863,864]
+        QualifiedName: B.value [865,872]
+to
+InfixExpression [850,901]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [874,876]
+to
+InfixExpression [850,901]
+at 2
+
+New cluster:
+===
+insert-node
+---
+ReturnStatement [924,931]
+to
+Block [903,1001]
+at 1
+------------
+===
+insert-node
+---
+ReturnStatement [924,931]
+to
+Block [903,1001]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1011,1062]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [1011,1034]
+    InfixExpression [1012,1033]
+        QualifiedName: grade.value [1012,1023]
+        INFIX_EXPRESSION_OPERATOR: < [1024,1025]
+        QualifiedName: C.value [1026,1033]
+to
+InfixExpression [1011,1062]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [1035,1037]
+to
+InfixExpression [1011,1062]
+at 2
+
+New cluster:
+===
+insert-node
+---
+ReturnStatement [1063,1070]
+to
+Block [1064,1162]
+at 1
+------------
+===
+insert-node
+---
+ReturnStatement [1063,1070]
+to
+Block [1064,1162]
+at 1
+
+New cluster:
+UPDATE from D.value to C.value
+------------
+===
+update-node
+---
+QualifiedName: D.value [893,900]
+replace D.value by C.value
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [646,669]
+    BooleanLiteral: true [650,654]
+    ReturnStatement [662,669]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [674,675]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [674,675]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [807,830]
+    BooleanLiteral: true [811,815]
+    ReturnStatement [823,830]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [835,836]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [835,836]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [968,991]
+    BooleanLiteral: true [972,976]
+    ReturnStatement [984,991]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [996,997]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [996,997]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [1129,1152]
+    BooleanLiteral: true [1133,1137]
+    ReturnStatement [1145,1152]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [1157,1158]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [1157,1158]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [1242,1263]
+    BooleanLiteral: true [1246,1250]
+    ReturnStatement [1256,1263]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [1266,1267]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [1266,1267]
+===
+

@@ -1,0 +1,196 @@
+New cluster:
+MOVE from IfStatement [909,1232]
+------------
+===
+move-tree
+---
+Block [830,903]
+    ExpressionStatement [836,899]
+        Assignment [836,898]
+            SimpleName: output [836,842]
+            ASSIGNMENT_OPERATOR: += [843,845]
+            ParenthesizedExpression [846,898]
+                MethodInvocation [847,897]
+                    METHOD_INVOCATION_RECEIVER [847,853]
+                        SimpleName: String [847,853]
+                    SimpleName: format [854,860]
+                    METHOD_INVOCATION_ARGUMENTS [861,896]
+                        StringLiteral: "%.0f is the median\n" [861,883]
+                        QualifiedName: first.value [885,896]
+to
+IfStatement [909,1232]
+at 1
+===
+move-tree
+---
+IfStatement [909,1232]
+    InfixExpression [913,992]
+        InfixExpression [913,944]
+            QualifiedName: comp_sec.value [913,927]
+            INFIX_EXPRESSION_OPERATOR: < [928,929]
+            QualifiedName: comp_fir.value [930,944]
+        INFIX_EXPRESSION_OPERATOR: && [945,947]
+        InfixExpression [961,992]
+            QualifiedName: comp_sec.value [961,975]
+            INFIX_EXPRESSION_OPERATOR: < [976,977]
+            QualifiedName: comp_thi.value [978,992]
+    Block [994,1068]
+        ExpressionStatement [1000,1064]
+            Assignment [1000,1063]
+                SimpleName: output [1000,1006]
+                ASSIGNMENT_OPERATOR: += [1007,1009]
+                ParenthesizedExpression [1010,1063]
+                    MethodInvocation [1011,1062]
+                        METHOD_INVOCATION_RECEIVER [1011,1017]
+                            SimpleName: String [1011,1017]
+                        SimpleName: format [1018,1024]
+                        METHOD_INVOCATION_ARGUMENTS [1025,1061]
+                            StringLiteral: "%.0f is the median\n" [1025,1047]
+                            QualifiedName: second.value [1049,1061]
+    IfStatement [1074,1232]
+        InfixExpression [1078,1157]
+            InfixExpression [1078,1109]
+                QualifiedName: comp_thi.value [1078,1092]
+                INFIX_EXPRESSION_OPERATOR: < [1093,1094]
+                QualifiedName: comp_fir.value [1095,1109]
+            INFIX_EXPRESSION_OPERATOR: && [1110,1112]
+            InfixExpression [1126,1157]
+                QualifiedName: comp_thi.value [1126,1140]
+                INFIX_EXPRESSION_OPERATOR: < [1141,1142]
+                QualifiedName: comp_sec.value [1143,1157]
+        Block [1159,1232]
+            ExpressionStatement [1165,1228]
+                Assignment [1165,1227]
+                    SimpleName: output [1165,1171]
+                    ASSIGNMENT_OPERATOR: += [1172,1174]
+                    ParenthesizedExpression [1175,1227]
+                        MethodInvocation [1176,1226]
+                            METHOD_INVOCATION_RECEIVER [1176,1182]
+                                SimpleName: String [1176,1182]
+                            SimpleName: format [1183,1189]
+                            METHOD_INVOCATION_ARGUMENTS [1190,1225]
+                                StringLiteral: "%.0f is the median\n" [1190,1212]
+                                QualifiedName: third.value [1214,1225]
+to
+Block [36,1262]
+at 11
+
+New cluster:
+MOVE from IfStatement [1074,1232]
+------------
+===
+move-tree
+---
+Block [994,1068]
+    ExpressionStatement [1000,1064]
+        Assignment [1000,1063]
+            SimpleName: output [1000,1006]
+            ASSIGNMENT_OPERATOR: += [1007,1009]
+            ParenthesizedExpression [1010,1063]
+                MethodInvocation [1011,1062]
+                    METHOD_INVOCATION_RECEIVER [1011,1017]
+                        SimpleName: String [1011,1017]
+                    SimpleName: format [1018,1024]
+                    METHOD_INVOCATION_ARGUMENTS [1025,1061]
+                        StringLiteral: "%.0f is the median\n" [1025,1047]
+                        QualifiedName: second.value [1049,1061]
+to
+IfStatement [1074,1232]
+at 1
+
+New cluster:
+UPDATE from comp_sec.value to comp_fir.value
+------------
+===
+update-node
+---
+QualifiedName: comp_sec.value [913,927]
+replace comp_sec.value by comp_fir.value
+===
+update-node
+---
+QualifiedName: comp_sec.value [961,975]
+replace comp_sec.value by comp_fir.value
+
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [928,929]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [976,977]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [1093,1094]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [1141,1142]
+replace < by <=
+
+New cluster:
+UPDATE from comp_thi.value to comp_sec.value
+------------
+===
+update-node
+---
+QualifiedName: comp_thi.value [1126,1140]
+replace comp_thi.value by comp_sec.value
+===
+update-node
+---
+QualifiedName: comp_fir.value [930,944]
+replace comp_fir.value by comp_sec.value
+===
+update-node
+---
+QualifiedName: comp_thi.value [1078,1092]
+replace comp_thi.value by comp_sec.value
+
+New cluster:
+UPDATE from comp_sec.value to comp_thi.value
+------------
+===
+update-node
+---
+QualifiedName: comp_sec.value [1143,1157]
+replace comp_sec.value by comp_thi.value
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [762,828]
+    InfixExpression [762,793]
+        QualifiedName: comp_fir.value [762,776]
+        INFIX_EXPRESSION_OPERATOR: < [777,778]
+        QualifiedName: comp_sec.value [779,793]
+    INFIX_EXPRESSION_OPERATOR: && [794,796]
+    InfixExpression [797,828]
+        QualifiedName: comp_fir.value [797,811]
+        INFIX_EXPRESSION_OPERATOR: < [812,813]
+        QualifiedName: comp_thi.value [814,828]
+
+New cluster:
+===
+delete-node
+---
+IfStatement [758,1232]
+===
+------------
+===
+delete-node
+---
+IfStatement [758,1232]
+===
+

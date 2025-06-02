@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "%d IS the median\n" to "%d is the median\n"
+------------
+===
+update-node
+---
+StringLiteral: "%d IS the median\n" [938,958]
+replace "%d IS the median\n" by "%d is the median\n"
+

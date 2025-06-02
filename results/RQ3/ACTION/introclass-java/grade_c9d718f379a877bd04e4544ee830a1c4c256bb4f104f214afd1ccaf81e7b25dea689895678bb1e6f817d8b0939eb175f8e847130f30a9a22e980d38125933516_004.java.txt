@@ -1,0 +1,280 @@
+New cluster:
+MOVE from IfStatement [613,1052]
+------------
+===
+move-tree
+---
+InfixExpression [523,541]
+    QualifiedName: g.value [523,530]
+    INFIX_EXPRESSION_OPERATOR: >= [531,533]
+    QualifiedName: a.value [534,541]
+to
+IfStatement [613,1052]
+at 0
+===
+move-tree
+---
+Block [543,607]
+    ExpressionStatement [549,603]
+        Assignment [549,602]
+            SimpleName: output [549,555]
+            ASSIGNMENT_OPERATOR: += [556,558]
+            ParenthesizedExpression [559,602]
+                MethodInvocation [560,601]
+                    METHOD_INVOCATION_RECEIVER [560,566]
+                        SimpleName: String [560,566]
+                    SimpleName: format [567,573]
+                    METHOD_INVOCATION_ARGUMENTS [574,600]
+                        StringLiteral: "Student has an A grade\n" [574,600]
+to
+IfStatement [613,1052]
+at 1
+===
+move-tree
+---
+IfStatement [613,1052]
+    InfixExpression [617,656]
+        InfixExpression [617,635]
+            QualifiedName: g.value [617,624]
+            INFIX_EXPRESSION_OPERATOR: >= [625,627]
+            QualifiedName: b.value [628,635]
+        INFIX_EXPRESSION_OPERATOR: && [636,638]
+        InfixExpression [639,656]
+            QualifiedName: g.value [639,646]
+            INFIX_EXPRESSION_OPERATOR: < [647,648]
+            QualifiedName: a.value [649,656]
+    Block [658,722]
+        ExpressionStatement [664,718]
+            Assignment [664,717]
+                SimpleName: output [664,670]
+                ASSIGNMENT_OPERATOR: += [671,673]
+                ParenthesizedExpression [674,717]
+                    MethodInvocation [675,716]
+                        METHOD_INVOCATION_RECEIVER [675,681]
+                            SimpleName: String [675,681]
+                        SimpleName: format [682,688]
+                        METHOD_INVOCATION_ARGUMENTS [689,715]
+                            StringLiteral: "Student has an B grade\n" [689,715]
+    IfStatement [728,1052]
+        InfixExpression [732,771]
+            InfixExpression [732,750]
+                QualifiedName: g.value [732,739]
+                INFIX_EXPRESSION_OPERATOR: >= [740,742]
+                QualifiedName: c.value [743,750]
+            INFIX_EXPRESSION_OPERATOR: && [751,753]
+            InfixExpression [754,771]
+                QualifiedName: g.value [754,761]
+                INFIX_EXPRESSION_OPERATOR: < [762,763]
+                QualifiedName: b.value [764,771]
+        Block [773,837]
+            ExpressionStatement [779,833]
+                Assignment [779,832]
+                    SimpleName: output [779,785]
+                    ASSIGNMENT_OPERATOR: += [786,788]
+                    ParenthesizedExpression [789,832]
+                        MethodInvocation [790,831]
+                            METHOD_INVOCATION_RECEIVER [790,796]
+                                SimpleName: String [790,796]
+                            SimpleName: format [797,803]
+                            METHOD_INVOCATION_ARGUMENTS [804,830]
+                                StringLiteral: "Studnet has an C grade\n" [804,830]
+        IfStatement [843,1052]
+            InfixExpression [847,886]
+                InfixExpression [847,865]
+                    QualifiedName: g.value [847,854]
+                    INFIX_EXPRESSION_OPERATOR: >= [855,857]
+                    QualifiedName: d.value [858,865]
+                INFIX_EXPRESSION_OPERATOR: && [866,868]
+                InfixExpression [869,886]
+                    QualifiedName: g.value [869,876]
+                    INFIX_EXPRESSION_OPERATOR: < [877,878]
+                    QualifiedName: c.value [879,886]
+            Block [888,952]
+                ExpressionStatement [894,948]
+                    Assignment [894,947]
+                        SimpleName: output [894,900]
+                        ASSIGNMENT_OPERATOR: += [901,903]
+                        ParenthesizedExpression [904,947]
+                            MethodInvocation [905,946]
+                                METHOD_INVOCATION_RECEIVER [905,911]
+                                    SimpleName: String [905,911]
+                                SimpleName: format [912,918]
+                                METHOD_INVOCATION_ARGUMENTS [919,945]
+                                    StringLiteral: "Student has an D grade\n" [919,945]
+            IfStatement [958,1052]
+                InfixExpression [962,979]
+                    QualifiedName: g.value [962,969]
+                    INFIX_EXPRESSION_OPERATOR: < [970,971]
+                    QualifiedName: d.value [972,979]
+                Block [981,1052]
+                    ExpressionStatement [987,1048]
+                        Assignment [987,1047]
+                            SimpleName: output [987,993]
+                            ASSIGNMENT_OPERATOR: += [994,996]
+                            ParenthesizedExpression [997,1047]
+                                MethodInvocation [998,1046]
+                                    METHOD_INVOCATION_RECEIVER [998,1004]
+                                        SimpleName: String [998,1004]
+                                    SimpleName: format [1005,1011]
+                                    METHOD_INVOCATION_ARGUMENTS [1012,1045]
+                                        StringLiteral: "Studnet has failed the course\n" [1012,1045]
+to
+Block [36,1082]
+at 8
+
+New cluster:
+MOVE from IfStatement [728,1052]
+------------
+===
+move-tree
+---
+Block [658,722]
+    ExpressionStatement [664,718]
+        Assignment [664,717]
+            SimpleName: output [664,670]
+            ASSIGNMENT_OPERATOR: += [671,673]
+            ParenthesizedExpression [674,717]
+                MethodInvocation [675,716]
+                    METHOD_INVOCATION_RECEIVER [675,681]
+                        SimpleName: String [675,681]
+                    SimpleName: format [682,688]
+                    METHOD_INVOCATION_ARGUMENTS [689,715]
+                        StringLiteral: "Student has an B grade\n" [689,715]
+to
+IfStatement [728,1052]
+at 1
+===
+move-tree
+---
+InfixExpression [617,656]
+    InfixExpression [617,635]
+        QualifiedName: g.value [617,624]
+        INFIX_EXPRESSION_OPERATOR: >= [625,627]
+        QualifiedName: b.value [628,635]
+    INFIX_EXPRESSION_OPERATOR: && [636,638]
+    InfixExpression [639,656]
+        QualifiedName: g.value [639,646]
+        INFIX_EXPRESSION_OPERATOR: < [647,648]
+        QualifiedName: a.value [649,656]
+to
+IfStatement [728,1052]
+at 0
+
+New cluster:
+MOVE from IfStatement [843,1052]
+------------
+===
+move-tree
+---
+InfixExpression [732,771]
+    InfixExpression [732,750]
+        QualifiedName: g.value [732,739]
+        INFIX_EXPRESSION_OPERATOR: >= [740,742]
+        QualifiedName: c.value [743,750]
+    INFIX_EXPRESSION_OPERATOR: && [751,753]
+    InfixExpression [754,771]
+        QualifiedName: g.value [754,761]
+        INFIX_EXPRESSION_OPERATOR: < [762,763]
+        QualifiedName: b.value [764,771]
+to
+IfStatement [843,1052]
+at 0
+===
+move-tree
+---
+Block [773,837]
+    ExpressionStatement [779,833]
+        Assignment [779,832]
+            SimpleName: output [779,785]
+            ASSIGNMENT_OPERATOR: += [786,788]
+            ParenthesizedExpression [789,832]
+                MethodInvocation [790,831]
+                    METHOD_INVOCATION_RECEIVER [790,796]
+                        SimpleName: String [790,796]
+                    SimpleName: format [797,803]
+                    METHOD_INVOCATION_ARGUMENTS [804,830]
+                        StringLiteral: "Studnet has an C grade\n" [804,830]
+to
+IfStatement [843,1052]
+at 1
+
+New cluster:
+MOVE from IfStatement [958,1052]
+------------
+===
+move-tree
+---
+InfixExpression [847,886]
+    InfixExpression [847,865]
+        QualifiedName: g.value [847,854]
+        INFIX_EXPRESSION_OPERATOR: >= [855,857]
+        QualifiedName: d.value [858,865]
+    INFIX_EXPRESSION_OPERATOR: && [866,868]
+    InfixExpression [869,886]
+        QualifiedName: g.value [869,876]
+        INFIX_EXPRESSION_OPERATOR: < [877,878]
+        QualifiedName: c.value [879,886]
+to
+IfStatement [958,1052]
+at 0
+===
+move-tree
+---
+Block [888,952]
+    ExpressionStatement [894,948]
+        Assignment [894,947]
+            SimpleName: output [894,900]
+            ASSIGNMENT_OPERATOR: += [901,903]
+            ParenthesizedExpression [904,947]
+                MethodInvocation [905,946]
+                    METHOD_INVOCATION_RECEIVER [905,911]
+                        SimpleName: String [905,911]
+                    SimpleName: format [912,918]
+                    METHOD_INVOCATION_ARGUMENTS [919,945]
+                        StringLiteral: "Student has an D grade\n" [919,945]
+to
+IfStatement [958,1052]
+at 1
+
+New cluster:
+UPDATE from "Studnet has an C grade\n" to "Student has an C grade\n"
+------------
+===
+update-node
+---
+StringLiteral: "Studnet has an C grade\n" [804,830]
+replace "Studnet has an C grade\n" by "Student has an C grade\n"
+
+New cluster:
+UPDATE from "Studnet has failed the course\n" to "Student has failed the course\n"
+------------
+===
+update-node
+---
+StringLiteral: "Studnet has failed the course\n" [1012,1045]
+replace "Studnet has failed the course\n" by "Student has failed the course\n"
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [962,979]
+    QualifiedName: g.value [962,969]
+    INFIX_EXPRESSION_OPERATOR: < [970,971]
+    QualifiedName: d.value [972,979]
+
+New cluster:
+===
+delete-node
+---
+IfStatement [519,1052]
+===
+------------
+===
+delete-node
+---
+IfStatement [519,1052]
+===
+

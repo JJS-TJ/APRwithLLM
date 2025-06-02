@@ -1,0 +1,104 @@
+New cluster:
+MOVE from VariableDeclarationStatement [310,334]
+------------
+===
+move-tree
+---
+VariableDeclarationFragment [344,383]
+    SimpleName: stringlength [344,356]
+    ClassInstanceCreation [359,383]
+        SimpleType [363,369]
+            SimpleName: IntObj [363,369]
+        QualifiedName: value.length [370,382]
+to
+VariableDeclarationStatement [310,334]
+at 3
+===
+move-tree
+---
+SimpleType [337,343]
+    SimpleName: IntObj [337,343]
+to
+VariableDeclarationStatement [310,334]
+at 0
+
+New cluster:
+===
+insert-node
+---
+CastExpression [452,471]
+to
+Assignment [452,488]
+at 2
+------------
+===
+insert-node
+---
+CastExpression [452,471]
+to
+Assignment [452,488]
+at 2
+===
+insert-node
+---
+PrimitiveType: int [453,456]
+to
+CastExpression [452,471]
+at 0
+
+New cluster:
+UPDATE from next to nextLine
+------------
+===
+update-node
+---
+SimpleName: next [286,290]
+replace next by nextLine
+
+New cluster:
+MOVE from CastExpression [452,471]
+------------
+===
+move-tree
+---
+ArrayAccess [474,488]
+    SimpleName: value [474,479]
+    QualifiedName: i.value [480,487]
+to
+CastExpression [452,471]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ArrayCreation [149,163]
+    ArrayType [153,163]
+        PrimitiveType: char [153,157]
+        Dimension [157,163]
+            NumberLiteral: 1000 [158,162]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+SimpleType [310,316]
+    SimpleName: IntObj [310,316]
+
+New cluster:
+===
+delete-node
+---
+VariableDeclarationStatement [337,384]
+===
+------------
+===
+delete-node
+---
+VariableDeclarationStatement [337,384]
+===
+

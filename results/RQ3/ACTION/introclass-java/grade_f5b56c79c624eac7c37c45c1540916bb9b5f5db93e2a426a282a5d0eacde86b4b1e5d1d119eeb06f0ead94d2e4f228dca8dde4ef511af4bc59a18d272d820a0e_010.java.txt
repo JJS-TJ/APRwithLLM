@@ -1,0 +1,72 @@
+New cluster:
+MOVE from InfixExpression [654,701]
+------------
+===
+move-tree
+---
+InfixExpression [654,675]
+    QualifiedName: score.value [654,665]
+    INFIX_EXPRESSION_OPERATOR: < [666,667]
+    QualifiedName: A.value [668,675]
+to
+InfixExpression [654,701]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [676,678]
+to
+InfixExpression [654,701]
+at 2
+
+New cluster:
+MOVE from InfixExpression [777,824]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [799,801]
+to
+InfixExpression [777,824]
+at 2
+===
+move-tree
+---
+InfixExpression [777,798]
+    QualifiedName: score.value [777,788]
+    INFIX_EXPRESSION_OPERATOR: < [789,790]
+    QualifiedName: B.value [791,798]
+to
+InfixExpression [777,824]
+at 2
+
+New cluster:
+MOVE from InfixExpression [900,947]
+------------
+===
+move-tree
+---
+InfixExpression [900,921]
+    QualifiedName: score.value [900,911]
+    INFIX_EXPRESSION_OPERATOR: < [912,913]
+    QualifiedName: C.value [914,921]
+to
+InfixExpression [900,947]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [922,924]
+to
+InfixExpression [900,947]
+at 2
+
+New cluster:
+UPDATE from "Stdent has an A grade\n" to "Student has an A grade\n"
+------------
+===
+update-node
+---
+StringLiteral: "Stdent has an A grade\n" [612,637]
+replace "Stdent has an A grade\n" by "Student has an A grade\n"
+

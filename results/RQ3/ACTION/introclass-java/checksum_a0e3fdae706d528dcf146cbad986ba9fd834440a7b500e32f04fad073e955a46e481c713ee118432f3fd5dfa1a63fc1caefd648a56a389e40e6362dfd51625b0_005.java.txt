@@ -1,0 +1,32 @@
+New cluster:
+UPDATE from next to nextLine
+------------
+===
+update-node
+---
+SimpleName: next [286,290]
+replace next by nextLine
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [654,675]
+    BooleanLiteral: true [658,662]
+    ReturnStatement [668,675]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [678,679]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [678,679]
+===
+

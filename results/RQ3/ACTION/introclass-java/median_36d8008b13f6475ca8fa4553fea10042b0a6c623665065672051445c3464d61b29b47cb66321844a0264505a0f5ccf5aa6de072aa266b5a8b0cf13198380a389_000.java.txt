@@ -1,0 +1,152 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [296,338]
+    InfixExpression [297,337]
+        InfixExpression [297,315]
+            QualifiedName: a.value [297,304]
+            INFIX_EXPRESSION_OPERATOR: >= [305,307]
+            QualifiedName: b.value [308,315]
+        INFIX_EXPRESSION_OPERATOR: && [316,318]
+        InfixExpression [319,337]
+            QualifiedName: a.value [319,326]
+            INFIX_EXPRESSION_OPERATOR: <= [327,329]
+            QualifiedName: c.value [330,337]
+to
+InfixExpression [296,382]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [348,390]
+    InfixExpression [349,389]
+        InfixExpression [349,367]
+            QualifiedName: a.value [349,356]
+            INFIX_EXPRESSION_OPERATOR: <= [357,359]
+            QualifiedName: b.value [360,367]
+        INFIX_EXPRESSION_OPERATOR: && [368,370]
+        InfixExpression [371,389]
+            QualifiedName: a.value [371,378]
+            INFIX_EXPRESSION_OPERATOR: >= [379,381]
+            QualifiedName: c.value [382,389]
+to
+InfixExpression [296,382]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [430,472]
+    InfixExpression [431,471]
+        InfixExpression [431,449]
+            QualifiedName: b.value [431,438]
+            INFIX_EXPRESSION_OPERATOR: >= [439,441]
+            QualifiedName: a.value [442,449]
+        INFIX_EXPRESSION_OPERATOR: && [450,452]
+        InfixExpression [453,471]
+            QualifiedName: b.value [453,460]
+            INFIX_EXPRESSION_OPERATOR: <= [461,463]
+            QualifiedName: c.value [464,471]
+to
+InfixExpression [422,515]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [489,531]
+    InfixExpression [490,530]
+        InfixExpression [490,508]
+            QualifiedName: b.value [490,497]
+            INFIX_EXPRESSION_OPERATOR: <= [498,500]
+            QualifiedName: a.value [501,508]
+        INFIX_EXPRESSION_OPERATOR: && [509,511]
+        InfixExpression [512,530]
+            QualifiedName: b.value [512,519]
+            INFIX_EXPRESSION_OPERATOR: >= [520,522]
+            QualifiedName: c.value [523,530]
+to
+InfixExpression [422,515]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [296,334]
+    InfixExpression [296,313]
+        QualifiedName: a.value [296,303]
+        INFIX_EXPRESSION_OPERATOR: < [304,305]
+        QualifiedName: b.value [306,313]
+    INFIX_EXPRESSION_OPERATOR: && [314,316]
+    InfixExpression [317,334]
+        QualifiedName: a.value [317,324]
+        INFIX_EXPRESSION_OPERATOR: > [325,326]
+        QualifiedName: c.value [327,334]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [344,382]
+    InfixExpression [344,361]
+        QualifiedName: a.value [344,351]
+        INFIX_EXPRESSION_OPERATOR: > [352,353]
+        QualifiedName: b.value [354,361]
+    INFIX_EXPRESSION_OPERATOR: && [362,364]
+    InfixExpression [365,382]
+        QualifiedName: a.value [365,372]
+        INFIX_EXPRESSION_OPERATOR: < [373,374]
+        QualifiedName: c.value [375,382]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [422,460]
+    InfixExpression [422,439]
+        QualifiedName: b.value [422,429]
+        INFIX_EXPRESSION_OPERATOR: > [430,431]
+        QualifiedName: a.value [432,439]
+    INFIX_EXPRESSION_OPERATOR: && [440,442]
+    InfixExpression [443,460]
+        QualifiedName: b.value [443,450]
+        INFIX_EXPRESSION_OPERATOR: < [451,452]
+        QualifiedName: c.value [453,460]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [477,515]
+    InfixExpression [477,494]
+        QualifiedName: b.value [477,484]
+        INFIX_EXPRESSION_OPERATOR: < [485,486]
+        QualifiedName: a.value [487,494]
+    INFIX_EXPRESSION_OPERATOR: && [495,497]
+    InfixExpression [498,515]
+        QualifiedName: b.value [498,505]
+        INFIX_EXPRESSION_OPERATOR: > [506,507]
+        QualifiedName: c.value [508,515]
+

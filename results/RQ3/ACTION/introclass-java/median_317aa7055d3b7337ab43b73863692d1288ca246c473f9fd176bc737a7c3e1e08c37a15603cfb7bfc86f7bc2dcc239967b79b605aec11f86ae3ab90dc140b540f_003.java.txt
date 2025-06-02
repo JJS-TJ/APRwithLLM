@@ -1,0 +1,115 @@
+New cluster:
+MOVE from IfStatement [274,435]
+------------
+===
+move-tree
+---
+IfStatement [438,599]
+    InfixExpression [442,532]
+        ParenthesizedExpression [442,482]
+            InfixExpression [443,481]
+                InfixExpression [443,460]
+                    QualifiedName: c.value [443,450]
+                    INFIX_EXPRESSION_OPERATOR: > [451,452]
+                    QualifiedName: a.value [453,460]
+                INFIX_EXPRESSION_OPERATOR: && [461,463]
+                InfixExpression [464,481]
+                    QualifiedName: c.value [464,471]
+                    INFIX_EXPRESSION_OPERATOR: < [472,473]
+                    QualifiedName: b.value [474,481]
+        INFIX_EXPRESSION_OPERATOR: || [483,485]
+        ParenthesizedExpression [492,532]
+            InfixExpression [493,531]
+                InfixExpression [493,510]
+                    QualifiedName: c.value [493,500]
+                    INFIX_EXPRESSION_OPERATOR: < [501,502]
+                    QualifiedName: a.value [503,510]
+                INFIX_EXPRESSION_OPERATOR: && [511,513]
+                InfixExpression [514,531]
+                    QualifiedName: c.value [514,521]
+                    INFIX_EXPRESSION_OPERATOR: > [522,523]
+                    QualifiedName: b.value [524,531]
+    Block [534,599]
+        ExpressionStatement [540,595]
+            Assignment [540,594]
+                SimpleName: output [540,546]
+                ASSIGNMENT_OPERATOR: += [547,549]
+                ParenthesizedExpression [550,594]
+                    MethodInvocation [551,593]
+                        METHOD_INVOCATION_RECEIVER [551,557]
+                            SimpleName: String [551,557]
+                        SimpleName: format [558,564]
+                        METHOD_INVOCATION_ARGUMENTS [565,592]
+                            StringLiteral: "%d is the median" [565,583]
+                            QualifiedName: c.value [585,592]
+to
+IfStatement [274,435]
+at 2
+
+New cluster:
+MOVE from IfStatement [438,599]
+------------
+===
+move-tree
+---
+Block [698,763]
+    ExpressionStatement [704,759]
+        Assignment [704,758]
+            SimpleName: output [704,710]
+            ASSIGNMENT_OPERATOR: += [711,713]
+            ParenthesizedExpression [714,758]
+                MethodInvocation [715,757]
+                    METHOD_INVOCATION_RECEIVER [715,721]
+                        SimpleName: String [715,721]
+                    SimpleName: format [722,728]
+                    METHOD_INVOCATION_ARGUMENTS [729,756]
+                        StringLiteral: "%d is the median" [729,747]
+                        QualifiedName: a.value [749,756]
+to
+IfStatement [438,599]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [606,696]
+    ParenthesizedExpression [606,646]
+        InfixExpression [607,645]
+            InfixExpression [607,624]
+                QualifiedName: a.value [607,614]
+                INFIX_EXPRESSION_OPERATOR: > [615,616]
+                QualifiedName: b.value [617,624]
+            INFIX_EXPRESSION_OPERATOR: && [625,627]
+            InfixExpression [628,645]
+                QualifiedName: a.value [628,635]
+                INFIX_EXPRESSION_OPERATOR: < [636,637]
+                QualifiedName: c.value [638,645]
+    INFIX_EXPRESSION_OPERATOR: || [647,649]
+    ParenthesizedExpression [656,696]
+        InfixExpression [657,695]
+            InfixExpression [657,674]
+                QualifiedName: a.value [657,664]
+                INFIX_EXPRESSION_OPERATOR: < [665,666]
+                QualifiedName: b.value [667,674]
+            INFIX_EXPRESSION_OPERATOR: && [675,677]
+            InfixExpression [678,695]
+                QualifiedName: a.value [678,685]
+                INFIX_EXPRESSION_OPERATOR: > [686,687]
+                QualifiedName: c.value [688,695]
+
+New cluster:
+===
+delete-node
+---
+IfStatement [602,763]
+===
+------------
+===
+delete-node
+---
+IfStatement [602,763]
+===
+

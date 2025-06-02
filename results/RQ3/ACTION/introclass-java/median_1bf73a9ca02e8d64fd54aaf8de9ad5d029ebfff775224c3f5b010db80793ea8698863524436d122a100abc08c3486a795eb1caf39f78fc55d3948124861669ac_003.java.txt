@@ -1,0 +1,48 @@
+New cluster:
+UPDATE from > to >=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: > [592,593]
+replace > by >=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: > [517,518]
+replace > by >=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: > [346,347]
+replace > by >=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: > [413,414]
+replace > by >=
+
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [376,377]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [442,443]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [622,623]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [547,548]
+replace < by <=
+
