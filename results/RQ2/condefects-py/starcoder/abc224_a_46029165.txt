@@ -1,0 +1,18 @@
+No.1 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+No.3 Patch
+s = input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+No.4 Patch
+s = input()
+if (s.endswith('er')):
+  print("er")
+else:
+  print("ist")
