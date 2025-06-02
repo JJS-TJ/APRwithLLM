@@ -1,0 +1,23 @@
+No.0 Patch
+def who_wins(x, y):
+    if x > y:
+        return "Takahashi"
+    elif x == y:
+        return "Draw"
+    else:
+        return "Aoki"
+
+
+N = int(input())
+
+X = 0
+Y = 0
+for i in range(N):
+    x, y = map(int,input().split())
+    X += x
+    Y += y
+
+print(who_wins(X, Y))
+
+
+# ----------------------------------------------------------------

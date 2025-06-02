@@ -1,0 +1,13 @@
+No.0 Patch
+def func():
+    # 入力を取得
+    S = input()
+    
+    # ソート
+    S = ''.join(sorted(S))
+    
+    # 出力
+    print(S)
+
+if __name__ == '__main__':
+    func()
