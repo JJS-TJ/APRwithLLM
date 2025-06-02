@@ -1,0 +1,4 @@
+No.5 Patch
+n = int(input())
+
+print(hex(n)[2:].upper().rjust(2, "0"))

@@ -1,0 +1,36 @@
+No.1 Patch
+S = input()
+
+if S[0].isupper():
+    if (len(S) > 1 and S[1:].islower()) or len(S) == 1:
+        print("Yes")
+    else:
+        print("No")
+else:
+    print("No")
+No.2 Patch
+S = input()
+
+if S[0].isupper():
+  if (len(S)>= 2 and S[1:].islower()) or len(S) == 1:
+    print("Yes")
+  else:
+    print("No")
+else:
+    print("No")
+No.4 Patch
+S = input()
+
+if S[0].isupper():
+  if (len(S)>= 2 and S[1:].islower()) or len(S) == 1:
+    print("Yes")
+  else:
+    print("No")
+else:
+  print("No")
+No.5 Patch
+S = input()
+if S[0].isupper() and (len(S) >= 2 and S[1:].islower() or len(S) == 1):
+    print("Yes")
+else:
+    print("No")

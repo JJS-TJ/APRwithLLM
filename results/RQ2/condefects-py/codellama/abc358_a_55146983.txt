@@ -1,0 +1,14 @@
+No.0 Patch
+S, T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+No.3 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")

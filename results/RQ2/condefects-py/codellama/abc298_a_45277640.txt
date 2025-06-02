@@ -1,0 +1,20 @@
+No.3 Patch
+def main():
+    n = int(input())
+    s = list(input())
+
+    ok = False
+    for i in range(n):
+        if s[i] == "x":
+            return "No"
+        elif s[i] == "o":
+            ok = True
+    
+    if ok == True:
+        return "Yes"
+    else:
+        return "No"
+
+if __name__ == "__main__":
+    result = main()
+    print(result)

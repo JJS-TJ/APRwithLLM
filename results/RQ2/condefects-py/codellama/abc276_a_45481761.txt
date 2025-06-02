@@ -1,0 +1,17 @@
+No.3 Patch
+s=input()
+for i in range(len(s)):
+  if s[-i-1]=="a":
+    print((len(s))-i)
+    break
+  if i==(len(s)-1):
+    print(-1)
+    break
+No.6 Patch
+s=input()
+for i in range(len(s)):
+  if s[-i-1]=="a":
+    print((len(s))-i)
+    break
+  if i==len(s)-1:
+    print(-1)
