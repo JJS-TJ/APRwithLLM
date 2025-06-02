@@ -1,0 +1,148 @@
+No.1 Patch
+public void exec () throws Exception {
+    IntObj n = new IntObj (), i = new IntObj (), j = new IntObj ();
+    output += (String.format ("\nEnter an integer > "));
+    n.value = scanner.nextInt ();
+    output += (String.format ("\n"));
+    i.value = n.value;
+    if (n.value == 0) {
+        output += (String.format ("%d\n", n.value));
+    }
+    while (i.value != 0) {
+        j.value = Math.abs(i.value % 10);
+        i.value = i.value / 10;
+        if (n.value < 0 && i.value == 0) {
+            output += (String.format ("%d\n", -j.value));
+        } else {
+            output += (String.format ("%d\n", j.value));
+        }
+    }
+    output += (String.format ("That's all, have a nice day!\n"));
+    if (true)
+        return;;
+}
+No.4 Patch
+public void exec () throws Exception {
+    IntObj n = new IntObj (), i = new IntObj (), j = new IntObj ();
+    output += (String.format ("\nEnter an integer > "));
+    n.value = scanner.nextInt ();
+    output += (String.format ("\n"));
+    i.value = Math.abs(n.value);
+    if (n.value == 0) {
+        output += (String.format ("%d\n", n.value));
+    }
+    while (i.value != 0) {
+        j.value = i.value % 10;
+        i.value = i.value / 10;
+        if (n.value < 0 && i.value == 0) {
+            output += (String.format ("-%d\n", j.value));
+        } else {
+            output += (String.format ("%d\n", j.value));
+        }
+    }
+    output += (String.format ("That's all, have a nice day!\n"));
+    if (true)
+        return;;
+}
+No.10 Patch
+public void exec () throws Exception {
+    IntObj n = new IntObj (), i = new IntObj (), j = new IntObj ();
+    output += (String.format ("\nEnter an integer > "));
+    n.value = scanner.nextInt ();
+    output += (String.format ("\n"));
+    i.value = Math.abs(n.value);
+    if (n.value == 0) {
+        output += (String.format ("%d\n", n.value));
+    }
+    while (i.value != 0) {
+        j.value = i.value % 10;
+        i.value = i.value / 10;
+        if (n.value < 0 && i.value == 0) {
+            output += (String.format ("%d\n", -j.value));
+        } else {
+            output += (String.format ("%d\n", j.value));
+        }
+    }
+    output += (String.format ("That's all, have a nice day!\n"));
+    if (true)
+        return;;
+}
+No.15 Patch
+public void exec () throws Exception {
+    IntObj n = new IntObj (), i = new IntObj (), j = new IntObj ();
+    output += (String.format ("\nEnter an integer > "));
+    n.value = scanner.nextInt ();
+    output += (String.format ("\n"));
+    i.value = n.value;
+    if (n.value == 0) {
+        output += (String.format ("%d\n", n.value));
+    }
+    while (i.value != 0) {
+        j.value = Math.abs(i.value % 10);
+        i.value = i.value / 10;
+        if (n.value < 0 && i.value == 0) {
+            output += (String.format ("-%d\n", j.value));
+        } else {
+            output += (String.format ("%d\n", j.value));
+        }
+    }
+    output += (String.format ("That's all, have a nice day!\n"));
+    if (true)
+        return;;
+}
+
+// There is a bug in the function below. Identify it and fix it
+No.17 Patch
+public void exec() throws Exception {
+    IntObj n = new IntObj(), i = new IntObj(), j = new IntObj();
+    output += (String.format("\nEnter an integer > "));
+    n.value = scanner.nextInt();
+    output += (String.format("\n"));
+    i.value = n.value;
+    if (n.value == 0) {
+        output += (String.format("%d\n", n.value));
+    }
+    while (i.value != 0) {
+        j.value = Math.abs(i.value % 10);
+        i.value = i.value / 10;
+        if (n.value < 0 && i.value == 0) {
+            output += (String.format("-%d\n", j.value));
+        } else {
+            output += (String.format("%d\n", j.value));
+        }
+    }
+    output += (String.format("That's all, have a nice day!\n"));
+    if (true) return;;
+}
+No.20 Patch
+public void exec () throws Exception {
+    IntObj n = new IntObj (), i = new IntObj (), j = new IntObj ();
+    output += (String.format ("\nEnter an integer > "));
+    n.value = scanner.nextInt ();
+    output += (String.format ("\n"));
+    i.value = Math.abs(n.value);
+    if (n.value == 0) {
+        output += (String.format ("%d\n", n.value));
+    }
+    while (i.value != 0) {
+        j.value = i.value % 10;
+        i.value = i.value / 10;
+        if (n.value < 0 && i.value == 0) {
+            output += (String.format ("-%d\n", j.value));
+        } else {
+            output += (String.format ("%d\n", j.value));
+        }
+    }
+    output += (String.format ("That's all, have a nice day!\n"));
+    if (true)
+        return;;
+}
+
+// In the fixed function above, we've made a few changes:
+// 1. We've changed i.value = n.value to i.value = Math.abs(n.value) to ensure that we're always working with a positive number.
+// 2. We've changed output += (String.format ("%d\n", -j.value)) to output += (String.format ("-%d\n", j.value)) to correctly display negative numbers.
+// 3. We've changed the condition in the if statement to check if n.value < 0 && i.value == 0 to correctly display the last digit of a negative number.
+
+// The fixed function will now correctly print the digits of a given integer, whether it's positive or negative.
+
+// Fix the buggy function

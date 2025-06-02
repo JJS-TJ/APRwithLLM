@@ -1,0 +1,206 @@
+No.0 Patch
+public void exec () throws Exception {
+    FloatObj grade = new FloatObj (), per1 = new FloatObj (), per2 =
+        new FloatObj (), per3 = new FloatObj (), per4 = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    per1.value = scanner.nextFloat ();
+    per2.value = scanner.nextFloat ();
+    per3.value = scanner.nextFloat ();
+    per4.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    grade.value = scanner.nextFloat ();
+    if (grade.value >= per1.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (grade.value >= per2.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (grade.value >= per3.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (grade.value >= per4.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+No.1 Patch
+public void exec () throws Exception {
+    FloatObj grade = new FloatObj (), per1 = new FloatObj (), per2 =
+        new FloatObj (), per3 = new FloatObj (), per4 = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    per1.value = scanner.nextFloat ();
+    per2.value = scanner.nextFloat ();
+    per3.value = scanner.nextFloat ();
+    per4.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    grade.value = scanner.nextFloat ();
+    if (grade.value >= per1.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (grade.value >= per2.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (grade.value >= per3.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (grade.value >= per4.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;
+}
+No.2 Patch
+public void exec () throws Exception {
+    FloatObj grade = new FloatObj (), per1 = new FloatObj (), per2 =
+        new FloatObj (), per3 = new FloatObj (), per4 = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    per1.value = scanner.nextFloat ();
+    per2.value = scanner.nextFloat ();
+    per3.value = scanner.nextFloat ();
+    per4.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    grade.value = scanner.nextFloat ();
+    if (grade.value >= per1.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (grade.value >= per2.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (grade.value >= per3.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (grade.value >= per4.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+
+// What does this function do?
+int magicNumber(int a, int b) {
+    int count = 0;
+    for (int i = 1; i <= a; i++) {
+        if (a % i == 0 && b % i == 0)
+            count++;
+    }
+    return count;
+}
+
+// This function takes two integers as input, a and b.
+// It counts the number of common factors between 1 and a,
+// and also between 1 and b. It returns this count as output.
+
+// How would you test this function?
+
+// You would test this function by passing various inputs to it,
+// and checking if the output is as expected.
+// You could use different pairs of numbers as input,
+// and see if the output matches the number of common factors between 1 and a,
+// and between 1 and b.
+No.3 Patch
+public void exec () throws Exception {
+    FloatObj grade = new FloatObj (), per1 = new FloatObj (), per2 =
+        new FloatObj (), per3 = new FloatObj (), per4 = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    per1.value = scanner.nextFloat ();
+    per2.value = scanner.nextFloat ();
+    per3.value = scanner.nextFloat ();
+    per4.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    grade.value = scanner.nextFloat ();
+    if (grade.value >= per1.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (grade.value >= per2.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (grade.value >= per3.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (grade.value >= per4.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;
+}
+
+// Problem 2:
+No.4 Patch
+public void exec () throws Exception {
+    FloatObj grade = new FloatObj (), per1 = new FloatObj (), per2 =
+        new FloatObj (), per3 = new FloatObj (), per4 = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    per1.value = scanner.nextFloat ();
+    per2.value = scanner.nextFloat ();
+    per3.value = scanner.nextFloat ();
+    per4.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    grade.value = scanner.nextFloat ();
+    if (grade.value >= per1.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (grade.value >= per2.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (grade.value >= per3.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (grade.value >= per4.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+}
+No.5 Patch
+public void exec() throws Exception {
+    FloatObj grade = new FloatObj(), per1 = new FloatObj(), per2 = new FloatObj(), per3 = new FloatObj(), per4 = new FloatObj();
+    output += (String.format("Enter thresholds for A, B, C, D\n"));
+    output += (String.format("in that order, decreasing percentages > "));
+    per1.value = scanner.nextFloat();
+    per2.value = scanner.nextFloat();
+    per3.value = scanner.nextFloat();
+    per4.value = scanner.nextFloat();
+    output += (String.format("Thank you. Now enter student score (percent) >"));
+    grade.value = scanner.nextFloat();
+    if (grade.value >= per1.value) {
+        output += (String.format("Student has an A grade\n"));
+    } else if (grade.value >= per2.value) {
+        output += (String.format("Student has an B grade\n"));
+    } else if (grade.value >= per3.value) {
+        output += (String.format("Student has an C grade\n"));
+    } else if (grade.value >= per4.value) {
+        output += (String.format("Student has an D grade\n"));
+    } else {
+        output += (String.format("Student has failed the course\n"));
+    }
+    if (true) return;
+}
+No.7 Patch
+public void exec() throws Exception {
+    FloatObj grade = new FloatObj(), per1 = new FloatObj(), per2 =
+        new FloatObj(), per3 = new FloatObj(), per4 = new FloatObj();
+    output += (String.format("Enter thresholds for A, B, C, D\n"));
+    output += (String.format("in that order, decreasing percentages > "));
+    per1.value = scanner.nextFloat();
+    per2.value = scanner.nextFloat();
+    per3.value = scanner.nextFloat();
+    per4.value = scanner.nextFloat();
+    output += (String.format("Thank you. Now enter student score (percent) >"));
+    grade.value = scanner.nextFloat();
+    if (grade.value >= per1.value) {
+        output += (String.format("Student has an A grade\n"));
+    } else if (grade.value >= per2.value) {
+        output += (String.format("Student has an B grade\n"));
+    } else if (grade.value >= per3.value) {
+        output += (String.format("Student has an C grade\n"));
+    } else if (grade.value >= per4.value) {
+        output += (String.format("Student has an D grade\n"));
+    } else {
+        output += (String.format("Student has failed the course\n"));
+    }
+    if (true) return;;
+}

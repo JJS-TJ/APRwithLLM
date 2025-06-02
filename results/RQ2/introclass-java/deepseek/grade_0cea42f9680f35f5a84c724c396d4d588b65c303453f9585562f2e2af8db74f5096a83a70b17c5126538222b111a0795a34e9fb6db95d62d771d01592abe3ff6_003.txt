@@ -1,0 +1,266 @@
+No.1 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value && score.value < A.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value && score.value < B.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value && score.value < C.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+
+// The function exec() is supposed to determine the grade of a student based on his/her score and the thresholds for grades A, B, C, and D. However, the if-else conditions in the function are incorrect and will always return false. This is because the comparison operators are placed in the wrong places. The corrected function should be:
+No.2 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value && score.value < A.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value && score.value < B.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value && score.value < C.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+}
+No.5 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+No.7 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+
+// A buggy function
+
+public class BuggyFunction {
+    public int buggyFunction(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        return 1 + buggyFunction(n/2);
+    }
+}
+
+// The function should return the number of times a number n can be divided by 2 until it reaches 0.
+// But, the function is wrong. Can you identify the bug and provide a fix for it?
+No.8 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value && score.value < A.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value && score.value < B.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value && score.value < C.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+No.9 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value && score.value < A.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value && score.value < B.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value && score.value < C.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+
+// Explain why the code is wrong and how it is corrected
+
+// The code is wrong because the conditions for checking the grades are not correct. In the buggy code, the conditions for A, B, C, and D grades are written such that they are overlapping. This means that for a score that is greater than or equal to A, it will be considered for A, B, C, and D grades. This is incorrect as a score should fall into only one grade.
+
+// The corrected code corrects the bug by modifying the conditions for checking the grades. Now, the conditions are such that the score is checked in the decreasing order of the grades, and the score is only checked for the highest grade that it is greater than or equal to. This way, a score will only fall into one grade.
+No.10 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+}
+No.11 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+
+// The code has a bug where the if statements are using the same condition for all cases, which is wrong. The condition in the if statements should be the score value and not the threshold values.
+No.13 Patch
+public void exec () throws Exception {
+    FloatObj A = new FloatObj (), B = new FloatObj (), C =
+        new FloatObj (), D = new FloatObj (), score = new FloatObj ();
+    output += (String.format ("Enter thresholds for A, B, C, D\n"));
+    output += (String.format ("in that order, decreasing percentages > "));
+    A.value = scanner.nextFloat ();
+    B.value = scanner.nextFloat ();
+    C.value = scanner.nextFloat ();
+    D.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) > "));
+    score.value = scanner.nextFloat ();
+    if (score.value >= A.value) {
+        output += (String.format ("Student has an A grade\n"));
+    } else if (score.value >= B.value && score.value < A.value) {
+        output += (String.format ("Student has an B grade\n"));
+    } else if (score.value >= C.value && score.value < B.value) {
+        output += (String.format ("Student has an C grade\n"));
+    } else if (score.value >= D.value && score.value < C.value) {
+        output += (String.format ("Student has an D grade\n"));
+    } else {
+        output += (String.format ("Student has failed the course\n"));
+    }
+    if (true)
+        return;;
+}
+
+// In the buggy function, the condition of comparing the score with A.value is wrong. It should be >= A.value.
+// In the buggy function, the condition of comparing the score with B.value, C.value and D.value is wrong. It should be score.value >= B.value && score.value < A.value, score.value >= C.value && score.value < B.value, score.value >= D.value && score.value < C.value respectively.

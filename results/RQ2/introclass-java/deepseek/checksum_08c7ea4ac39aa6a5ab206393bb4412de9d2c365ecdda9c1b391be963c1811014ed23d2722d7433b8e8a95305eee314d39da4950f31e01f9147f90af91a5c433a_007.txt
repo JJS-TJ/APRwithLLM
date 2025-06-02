@@ -1,0 +1,227 @@
+No.4 Patch
+public void exec () throws Exception {
+    String string;
+    char checksumchar;
+    int checksum_summation;
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ();
+    checksum_summation = 0;
+    for (int i = 0; i < string.length(); i++) {
+        checksum_summation += (int) string.charAt(i);
+    }
+    checksum_summation %= 64;
+    checksum_summation += 32;
+    checksumchar = (char) checksum_summation;
+    output += (String.format ("Check sum is %c\n", checksumchar));
+}
+No.6 Patch
+public void exec () throws Exception {
+    char[] string;
+    CharObj checksumchar = new CharObj ();
+    IntObj i = new IntObj (), stringlength =
+        new IntObj (), checksum_summation = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ().toCharArray ();
+    stringlength.value = string.length;
+    checksum_summation.value = 0;
+    for (i.value = 0; i.value < stringlength.value; i.value++) {
+        checksum_summation.value += (int) string[i.value];
+    }
+    checksum_summation.value %= 64;
+    checksum_summation.value += 32;
+    checksumchar.value = (char) checksum_summation.value;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+    if (true)
+        return;;
+}
+
+// In the buggy code, we should read input using nextLine() not next() to read the entire line instead of just the first word.
+No.8 Patch
+public void exec () throws Exception {
+    String string;
+    char checksumchar;
+    int checksum_summation = 0;
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine();
+    for (int i = 0; i < string.length(); i++) {
+        checksum_summation += (int) string.charAt(i);
+    }
+    checksum_summation %= 64;
+    checksum_summation += 32;
+    checksumchar = (char) checksum_summation;
+    output += (String.format ("Check sum is %c\n", checksumchar));
+    if (true)
+        return;;
+}
+No.10 Patch
+public void exec () throws Exception {
+    char[] string;
+    CharObj checksumchar = new CharObj ();
+    IntObj i = new IntObj (), stringlength =
+        new IntObj (), checksum_summation = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ().toCharArray ();
+    stringlength.value = string.length;
+    checksum_summation.value = 0;
+    for (i.value = 0; i.value < stringlength.value; i.value++) {
+        checksum_summation.value += (int) string[i.value];
+    }
+    checksum_summation.value %= 64;
+    checksum_summation.value += 32;
+    checksumchar.value = (char) checksum_summation.value;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+    if (true)
+        return;
+}
+No.13 Patch
+public void exec () throws Exception {
+    char[] string = new char[1000];
+    CharObj checksumchar = new CharObj ();
+    IntObj i = new IntObj (), stringlength =
+        new IntObj (), checksum_summation = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine().toCharArray (); // Modified line
+    stringlength.value = string.length;
+    checksum_summation.value = 0;
+    for (i.value = 0; i.value < stringlength.value; i.value++) {
+        checksum_summation.value += (int) string[i.value];
+    }
+    checksum_summation.value %= 64;
+    checksum_summation.value += 32;
+    checksumchar.value = (char) checksum_summation.value;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+    if (true)
+        return;;
+}
+
+// The code is wrong, you must modify it to be correct.
+No.15 Patch
+public void exec () throws Exception {
+    String input;
+    char[] string;
+    CharObj checksumchar = new CharObj ();
+    int checksum_summation = 0;
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    input = scanner.nextLine();
+    string = input.toCharArray ();
+    for (char c : string) {
+        checksum_summation += (int) c;
+    }
+    checksum_summation %= 64;
+    checksum_summation += 32;
+    checksumchar.value = (char) checksum_summation;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+}
+No.16 Patch
+public void exec () throws Exception {
+    char[] string = new char[1000];
+    CharObj checksumchar = new CharObj ();
+    IntObj i = new IntObj (), stringlength =
+        new IntObj (), checksum_summation = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ().toCharArray ();
+    stringlength.value = string.length;
+    checksum_summation.value = 0;
+    for (i.value = 0; i.value < stringlength.value; i.value++) {
+        checksum_summation.value += (int) string[i.value];
+    }
+    checksum_summation.value %= 64;
+    checksum_summation.value += 32;
+    checksumchar.value = (char) checksum_summation.value;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+}
+No.17 Patch
+public void exec () throws Exception {
+    char[] string = new char[1000];
+    CharObj checksumchar = new CharObj ();
+    IntObj i = new IntObj (), stringlength =
+        new IntObj (), checksum_summation = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine().toCharArray ();
+    stringlength.value = string.length;
+    checksum_summation.value = 0;
+    for (i.value = 0; i.value < stringlength.value; i.value++) {
+        checksum_summation.value += (int) string[i.value];
+    }
+    checksum_summation.value %= 64;
+    checksum_summation.value += 32;
+    checksumchar.value = (char) checksum_summation.value;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+    if (true)
+        return;;
+}
+No.23 Patch
+public void exec () throws Exception {
+    char[] string = new char[1000];
+    CharObj checksumchar = new CharObj ();
+    IntObj i = new IntObj (), stringlength =
+        new IntObj (), checksum_summation = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine().toCharArray();
+    stringlength.value = string.length;
+    checksum_summation.value = 0;
+    for (i.value = 0; i.value < stringlength.value; i.value++) {
+        checksum_summation.value += (int) string[i.value];
+    }
+    checksum_summation.value %= 64;
+    checksum_summation.value += 32;
+    checksumchar.value = (char) checksum_summation.value;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+    if (true)
+        return;
+}
+No.25 Patch
+public void exec() throws Exception {
+    String string;
+    char checksumchar;
+    int checksum_summation = 0;
+    output += (String.format("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine();
+    for (int i = 0; i < string.length(); i++) {
+        checksum_summation += string.charAt(i);
+    }
+    checksum_summation %= 64;
+    checksum_summation += 32;
+    checksumchar = (char) checksum_summation;
+    output += (String.format("Check sum is %c\n", checksumchar));
+}
+No.26 Patch
+public void exec () throws Exception {
+    char[] string = new char[1000];
+    CharObj checksumchar = new CharObj ();
+    IntObj i = new IntObj (), stringlength =
+        new IntObj (), checksum_summation = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ().toCharArray ();
+    stringlength.value = string.length;
+    checksum_summation.value = 0;
+    for (i.value = 0; i.value < stringlength.value; i.value++) {
+        checksum_summation.value += (int) string[i.value];
+    }
+    checksum_summation.value %= 64;
+    checksum_summation.value += 32;
+    checksumchar.value = (char) checksum_summation.value;
+    output += (String.format ("Check sum is %c\n", checksumchar.value));
+    if (true)
+        return;;
+}

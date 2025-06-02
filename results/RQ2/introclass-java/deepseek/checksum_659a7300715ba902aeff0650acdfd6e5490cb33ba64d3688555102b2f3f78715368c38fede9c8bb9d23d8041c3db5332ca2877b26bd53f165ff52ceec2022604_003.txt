@@ -1,0 +1,117 @@
+No.4 Patch
+public void exec () throws Exception {
+    String string;
+    IntObj count = new IntObj (), i = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine();
+    count.value = 0;
+    for (i.value = 0; i.value != string.length(); ++i.value) {
+        count.value += (int) string.charAt(i.value);
+    }
+    count.value = count.value % 64 + ' ';
+    output += (String.format ("Check sum is %c\n", count.value));
+    if (true)
+        return;;
+}
+No.16 Patch
+public void exec () throws Exception {
+    String inputString;
+    int count = 0;
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    inputString = scanner.nextLine(); // scanner.next() will stop reading at the first whitespace, this might lead to incorrect output.
+    for (int i = 0; i < inputString.length(); ++i) {
+        count += (int) inputString.charAt(i);
+    }
+    count = count % 64 + ' ';
+    output += (String.format ("Check sum is %c\n", count));
+}
+No.17 Patch
+public void exec () throws Exception {
+    char[] string;
+    int count = 0;
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ().toCharArray ();
+    for (int i = 0; i < string.length; ++i) {
+        count += (int) string[i];
+    }
+    count = count % 64 + ' ';
+    output += (String.format ("Check sum is %c\n", (char) count));
+}
+No.23 Patch
+public void exec () throws Exception {
+    char[] string = new char[length];
+    IntObj count = new IntObj (), i = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ().toCharArray ();
+    count.value = 0;
+    for (i.value = 0; i.value < string.length; i.value++) {
+        count.value += (int) string[i.value];
+    }
+    count.value = count.value % 64 + ' ';
+    output += (String.format ("Check sum is %c\n", count.value));
+    if (true)
+        return;;
+}
+
+// The buggy code is missing a semicolon at the end of the for loop. The corrected version includes a semicolon at the end of the for loop. Additionally, scanner.next() was replaced with scanner.nextLine() to ensure the entire string is read including spaces.
+No.26 Patch
+public void exec () throws Exception {
+    char[] string = new char[length];
+    IntObj count = new IntObj (), i = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ().toCharArray ();
+    count.value = 0;
+    for (i.value = 0; i.value < string.length; ++i.value) {
+        count.value += (int) string[i.value];
+    }
+    count.value = count.value % 64 + ' ';
+    output += (String.format ("Check sum is %c\n", count.value));
+    if (true)
+        return;
+}
+
+// The function should accept an array of strings and return a string.
+// The string should contain the longest string in the array.
+// If there are multiple strings with the same length, it should return the first one.
+No.28 Patch
+public void exec () throws Exception {
+    String string;
+    IntObj count = new IntObj (), i = new IntObj ();
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ();
+    count.value = 0;
+    for (i.value = 0; i.value != string.length(); ++i.value) {
+        count.value += (int) string.charAt(i.value);
+    }
+    count.value = count.value % 64 + ' ';
+    output += (String.format ("Check sum is %c\n", (char) count.value));
+    if (true)
+        return;;
+}
+No.32 Patch
+public void exec () throws Exception {
+    String string;
+    int count, i;
+    output +=
+        (String.format
+         ("Enter an abitrarily long string, ending with carriage return > "));
+    string = scanner.nextLine ();
+    count = 0;
+    for (i = 0; i < string.length(); ++i) {
+        count += (int) string.charAt(i);
+    }
+    count = count % 64 + ' ';
+    output += (String.format ("Check sum is %c\n", count));
+}

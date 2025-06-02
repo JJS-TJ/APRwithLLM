@@ -1,0 +1,26 @@
+No.3 Patch
+public void exec() throws Exception {
+    CharObj orig = new CharObj();
+    IntObj code = new IntObj(), accum = new IntObj();
+    CharObj checksum = new CharObj();
+    output += (String.format("Enter an abitrarily long string, ending with carriage return > "));
+    accum.value = 0;
+    checksum.value = 0;
+    code.value = 0;
+    orig.value = ' ';
+    do {
+        try {
+            orig.value = scanner.findInLine(".").charAt(0);
+        } catch (java.lang.NullPointerException e) {
+            orig.value = '\n';
+        };
+        if (orig.value != '\n') {
+            code.value = (int) orig.value;
+            accum.value += code.value;
+        }
+    } while (orig.value != '\n');
+    checksum.value = (char) ((accum.value % 64) + 32);
+    output += (String.format("Check sum is %c\n", checksum.value));
+    if (true)
+        return;;
+}

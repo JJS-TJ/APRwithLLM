@@ -1,0 +1,58 @@
+No.7 Patch
+public void exec () throws Exception {
+    FloatObj num1 = new FloatObj (), num2 = new FloatObj (), num3 =
+        new FloatObj (), num4 = new FloatObj ();
+    FloatObj score = new FloatObj ();
+    output +=
+        (String.format
+         ("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > "));
+    num1.value = scanner.nextFloat ();
+    num2.value = scanner.nextFloat ();
+    num3.value = scanner.nextFloat ();
+    num4.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    score.value = scanner.nextFloat ();
+    if (score.value >= num1.value) {
+        output += (String.format ("Student has an A grade"));
+    } else if (score.value >= num2.value) {
+        output += (String.format ("Student has an B grade"));
+    } else if (score.value >= num3.value) {
+        output += (String.format ("Student has an C grade"));
+    } else if (score.value >= num4.value) {
+        output += (String.format ("Student has an D grade"));
+    } else {
+        output += (String.format ("Student has failed the course"));
+    }
+    if (true)
+        return;;
+}
+No.9 Patch
+public void exec () throws Exception {
+    FloatObj num1 = new FloatObj (), num2 = new FloatObj (), num3 =
+        new FloatObj (), num4 = new FloatObj ();
+    FloatObj score = new FloatObj ();
+    output +=
+        (String.format
+         ("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > "));
+    num1.value = scanner.nextFloat ();
+    num2.value = scanner.nextFloat ();
+    num3.value = scanner.nextFloat ();
+    num4.value = scanner.nextFloat ();
+    output +=
+        (String.format ("Thank you. Now enter student score (percent) >"));
+    score.value = scanner.nextFloat ();
+    if (score.value >= num1.value) {
+        output += (String.format ("Student has an A grade"));
+    } else if (score.value >= num2.value) {
+        output += (String.format ("Student has an B grade"));
+    } else if (score.value >= num3.value) {
+        output += (String.format ("Student has an C grade"));
+    } else if (score.value >= num4.value) {
+        output += (String.format ("Student has an D grade"));
+    } else {
+        output += (String.format ("Student has failed the course"));
+    }
+}
+
+// The code is wrong, you must modify it to be correct.
