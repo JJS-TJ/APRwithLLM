@@ -1,0 +1,24 @@
+No.9 Patch
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+	int w = sc.nextInt();
+	int b = sc.nextInt();
+	String wb = "wbwbwwbwbwbw", s = "";
+	for(int i = 0; i < 20; i++) s += wb;
+	int sl = s.length();
+	for(int i = 0; i < sl; i++){
+	  int wnum = 0, bnum = 0;
+	  for(int j = i; j < sl; j++){
+	    if(s.charAt(j) == 'w') wnum++;
+	    else bnum++;
+	    if(wnum == w && bnum == b){
+	      System.out.println("Yes");
+	      return;
+	    }
+	  }
+	}
+	System.out.println("No");
+}
+
+// Analysis
+The fixed function has a time complexity of O(n^2). This means it's faster than the buggy function.<|endoftext|>

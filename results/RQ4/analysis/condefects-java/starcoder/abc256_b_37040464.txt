@@ -1,0 +1,44 @@
+No.4 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) {
+		total +=a[i];
+		if(total>=4)break;
+		ans--;
+	}
+	
+     System.out.println(ans);
+}
+<|endoftext|>
+No.6 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) {
+		total +=a[i];
+		if(total>=4)break;
+		ans--;
+	}
+	
+     System.out.println(ans);
+}
+
+// Corrected Analysis
+// The first loop of the corrected version starts from the end of the array and goes till i>=0. We have to go till 0 to check the elements in the array.
+
+// We have to print the elements of the array. So, the variable 'i' should start from 0 and go till n-1. This is the reason why the first loop condition is i<n. This loop is to print the elements of the array.
+
+// Similarly, the variable ans is initialized with 0 and then incremented each time an element is counted towards the total sum. In the case of a tie, the value of ans should be

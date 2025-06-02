@@ -1,0 +1,83 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    int n = scan.nextInt();
+    int q = scan.nextInt();
+    int[] circumstance = new int[n];
+    for (int i = 0; i < n; i++) {
+        circumstance[i] = 0;
+    }
+    for (int k = 0; k < q; k++) {
+        int query1 = scan.nextInt();
+        int query2 = scan.nextInt();
+        if (query1 == 1 || query1 == 2) {
+            circumstance[query2-1] = circumstance[query2-1] + query1;
+        } else {
+            if (circumstance[query2-1] >= 2) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
+    }
+    scan.close();
+}
+<|endoftext|>
+No.4 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	int n = scan.nextInt();
+	int q = scan.nextInt();
+	int[] circumstance = new int[n];
+	for (int i = 0; i < n; i++) {
+		circumstance[i] = 0;
+	}
+	for (int k = 0; k < q; k++) {
+		int query1 = scan.nextInt();
+		int query2 = scan.nextInt();
+		if (query1 == 1 || query1 == 2) {
+			circumstance[query2-1] = circumstance[query2-1] + query1;
+		} else {
+			if (circumstance[query2-1] >= 2) {
+				System.out.println("Yes");
+			} else {
+				System.out.println("No");
+			}
+		}
+	}
+	scan.close();
+}
+
+// Analysis
+After the fix, the modified code will work correctly and produce correct output.
+
+The bug in the original code was due to not considering the value of query1. This will result in the code skipping this value.
+
+The check `circumstance[query2-1] == 2` will never print "Yes". This will result in incorrect output.
+
+The modified code uses `circumstance[query2-1] >= 2` instead. This is equivalent to the condition `circumstance[query2-1] >= 2 || circumstance[query2-1] == 2` which is always true. This condition will correctly print "Yes".<|endoftext|>
+No.6 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	int n = scan.nextInt();
+	int q = scan.nextInt();
+	int[] circumstance = new int[n];
+	for (int i = 0; i < n; i++) {
+		circumstance[i] = 0;
+	}
+	for (int k = 0; k < q; k++) {
+		int query1 = scan.nextInt();
+		int query2 = scan.nextInt();
+		if (query1 == 1 || query1 == 2) {
+			circumstance[query2-1] = circumstance[query2-1] + query1;
+		} else {
+			if (circumstance[query2-1] >= 2) {
+				System.out.println("Yes");
+			} else {
+				System.out.println("No");
+			}
+		}
+	}
+	scan.close();
+}
+<|endoftext|>

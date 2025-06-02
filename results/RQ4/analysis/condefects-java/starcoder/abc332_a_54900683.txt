@@ -1,0 +1,17 @@
+No.1 Patch
+public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt(), s = sc.nextInt(), k = sc.nextInt(), total = 0;
+  for(int i=0; i<n; i++) total += sc.nextInt() * sc.nextInt();
+  System.out.print(total >= s ? total : total + k);
+}
+
+// Analysis
+// Analysis:
+This function is the same as the buggy function, with the exception of one line.
+The line says, "The total is greater than or equal to s, then print out the total.
+Otherwise, print out the total plus k."
+
+Possible Bugs:
+1. If n is zero, the program will try to read integers from the Scanner without having any.
+2

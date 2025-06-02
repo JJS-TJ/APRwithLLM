@@ -1,0 +1,56 @@
+No.1 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}
+<|endoftext|>
+No.3 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0'); // Here it should be '0'
+  }
+  
+}
+<|endoftext|>
+No.6 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0');
+  }
+  
+}
+
+This code prints the characters as intended. The bug was caused by the else if statement. It was printing '1' when the character was '1', and it was printing '0' when the character was '0'.
+<|endoftext|>
+No.7 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  String s = sc.next();
+  for (int i = 0;i < s.length();i++) {
+    if (s.charAt(i) == '0')
+      System.out.print('1');
+    else if (s.charAt(i) == '1') 
+      System.out.print('0'); // Here it should be '0'
+  }
+  
+}
+
+// Conclusion
+The bug in the code was due to a mistake in the comparison in the else if block. The comparison was changed to check for '1' instead of '0'.<|endoftext|>

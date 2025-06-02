@@ -1,0 +1,118 @@
+No.3 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// Analysis
+// ・遅延評価は常に有効であることが知られている（1次元でも2次元でも）
+// ・遅延評価は純粋関数のみで有効である（副作用を含むと効果がなくなる）
+// ・遅延評価は循環参照を防ぐ必要がある
+// ・遅延評価のパフォーマンスは最悪とは限らない（遅延評価を避ければ）
+// ・遅延評価の典型的な使用方法
+//   - ダイクストラ法の計算量がO(n)であり、各計算はO(1)で終わる
+//   - 部分和の計算
+//   - 最長増加子列
+//   - 線形計画法
+//   -
+No.6 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// Analysis
+// ナイーブに、人i+1の親は人iだと考えればよい。
+// その人1の遠ざかり度は、人i+1の親の遠ざかり度+1になる
+// 人i+1の親の遠ざかり度は、人iの親の遠ざかり度+1になる
+// つまり、人i+1の親の遠ざかり度は、
+// 人iの親の遠ざかり度 + 1 + 1になる
+// これは、
+// 人iの親の遠ざかり度 + 2になる
+// つまり、
+// 人iの親の遠ざかり度 = dp[i-1] + 2であることがわかる。
+No.7 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+```
+
+# タグ
+- 算数
+- 動的計画法
+
+# 類題
+<|endoftext|>

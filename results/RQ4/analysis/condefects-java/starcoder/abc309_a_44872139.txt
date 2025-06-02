@@ -1,0 +1,56 @@
+No.6 Patch
+public static void main(String[] args){
+  Scanner sc = new Scanner(System.in);
+  int A = sc.nextInt();
+  int B = sc.nextInt();
+  boolean F = false;
+
+  // if(A==1 && B==2) F=true;
+  // if(A==2 && B==3) F=true;
+  // if(A==4 && B==5) F=true;
+  // if(A==5 && B==6) F=true;
+  // if(A==7 && B==8) F=true;
+  // if(A==8 && B==9) F=true;
+
+  // if(F) System.out.println("Yes");
+  // else System.out.println("No");
+
+  if(B-A == 1 && A % 3 != 0) System.out.println("Yes");
+  else System.out.println("No");  
+}
+```
+
+The code has been fixed so that it will correctly print "Yes" if the difference between A and B is 1 and A is not divisible by 3.<|endoftext|>
+No.7 Patch
+public static void main(String[] args){
+  Scanner sc = new Scanner(System.in);
+  int A = sc.nextInt();
+  int B = sc.nextInt();
+  boolean F = false;
+
+  if(B-A == 1 && A % 3 != 0) System.out.println("Yes");
+  else System.out.println("No");
+}
+
+```
+
+### Step 3: Run the program and check the output
+
+Run the program using the following command:
+
+```
+$ runhaskell Main.hs
+```
+
+You will see that the output has changed to "Yes".
+
+## Summary
+
+In this lesson, we learned how to:
+
+- Use the `if` function
+- Use `&&` and `||` to chain conditions together
+- Correct simple syntax errors
+- Use the `==` operator to check for equality
+- Use the `!=` operator to check for inequality
+<|endoftext|>

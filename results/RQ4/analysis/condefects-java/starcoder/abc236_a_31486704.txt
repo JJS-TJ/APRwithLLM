@@ -1,0 +1,144 @@
+No.1 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here!
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}
+
+// Analysis
+This code fixes the bug in the original swapping function.
+
+The problem with the function is that it swaps the characters at index a and b, but it swaps them backwards. The first character at index a is swapped with the second character at index b, but the second character at index b is swapped with the first character at index a. The correct order is to swap the characters at index a and b.
+
+This code is a solution.
+
+<|EOT
+No.2 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here!
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}
+
+// Analysis
+Analysis:
+The problem is to swap the characters at index a and index b of the input string. However, the swapping operation contains a bug: arr[b - 1] = tmp; should be arr[b - 1] = tmp;. 
+
+The corrected code should look like this:
+
+```java
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr =
+No.5 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here!
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}
+
+// Analysis
+Analysis:
+The function is intended to swap the characters at index a and index b of the input string. However, there is a mistake in the swapping operation: arr[b - 1] = tmp; should be arr[b - a] = tmp;. 
+
+The corrected code should look like this:
+
+```java
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[]
+No.7 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here!
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}
+```
+
+### 5. Reverse (String)
+
+Problem:
+You have a string, and you want to reverse it. You can perform this operation using a temporary variable, or by modifying the characters in place. However, you can’t use additional data structures.
+
+Input Format:
+
+A single string.
+
+Output Format:
+
+Print the string, reversed.
+
+Sample Input:
+
+abcde
+Sample Output:
+
+edcba
+
+Solution:
+```java
+No.9 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp; // Corrected line
+    
+    System.out.println(new String(arr));
+}
+
+// Explanation
+The function is intended to swap the characters at index a and index b of the input string. However, there is a mistake in the swapping operation: arr[b - 1] = tmp; should be arr[b - 1] = tmp;. The corrected code should look like this:
+
+```java
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[]

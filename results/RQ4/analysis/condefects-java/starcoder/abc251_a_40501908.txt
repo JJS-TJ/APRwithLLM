@@ -1,0 +1,54 @@
+No.0 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}
+<|endoftext|>
+No.4 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}<|endoftext|>
+No.5 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.substring(0, 6));
+}
+```
+
+### Case 2
+
+```Java
+// Provide a fix for the buggy function
+
+// Buggy Function
+void solve(){
+    String p = scanner.next();
+No.7 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}
+```
+
+## 3.4.5 类变量
+
+在java中，类的成员变量称为类变量，类变量属于类，所有类共享。
+
+## 3.4

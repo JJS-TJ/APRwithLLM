@@ -1,0 +1,99 @@
+No.1 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+    if(s.charAt(end) == 'X'){
+      end++;
+      maxCnt = Math.max(maxCnt, end - start);
+    }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+    }
+    else{
+      if(s.charAt(start) == 'X'){
+        start++;
+      }
+      else{
+        cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+
+// Analysis
+
+After fixing the while loop condition, the function now runs correctly, but it is not optimal.
+
+The time complexity of this code is O(n), where n is the length of the string.
+
+The space complexity of this code is O(1), because all the variables are primitive data types and do not consume any additional space.
+<|endoftext|>
+No.2 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+    }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+
+// Conclusion
+
+The first correction makes the code more readable and easier to maintain. The second correction prints the maximum length of the substring.
+<|endoftext|>
+No.4 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+    }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+<|endoftext|>

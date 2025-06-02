@@ -1,0 +1,196 @@
+No.0 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+
+// Analysis
+This is the corrected version of the solution. It is exactly the same as the original solution, except for the following line that was added:
+
+max = Math.max(max, count);
+
+This line sets the value of max to the maximum value of max and the value of count.
+
+If the value of max is less than the value of count, max will remain equal to max.
+
+If the value of max is greater than the value of count, max will be set to the value of count.
+
+If the value of max is equal to the value of count, max will be set to the value of count.
+
+In this way, we ensure that max will always hold the maximum value of the value of count seen so far.
+<|EOT|>
+
+// Corrected Function
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true
+No.1 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+<|endoftext|>
+No.2 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+
+// Analysis
+The solve method in this code is intended to solve the problem of finding the maximum angle between two cuts on a circle.
+
+The bug lies in the following line:
+println(max);
+
+This line is outside of the loop and is executed once after the loop has finished. As a result, it will always print the value of max that existed before the loop started, not the value that was present at the last iteration of the loop.
+
+To correct this bug, the println statement should be inside the loop where max is being updated. This way, it will print the value of max at each iteration of the loop, giving the correct result.
+
+The corrected code would look like this:
+
+// Corrected Function
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0;
+No.5 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			max = Math.max(max, count);
+			count = 1;
+		}
+		else {
+			count++;
+		}
+	}
+	println(max);
+	
+}
+
+// Analysis
+The bug lies in the following line:
+println(max);
+
+This line is outside of the loop and is executed once after the loop has finished. As a result, it will always print the value of max that existed before the loop started, not the value that was present at the last iteration of the loop.
+
+To correct this bug, the println statement should be inside the loop where max is being updated. This way, it will print the value of max at each iteration of the loop, giving the correct result.
+
+The corrected code would look like this:
+
+// Corrected Function
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %=

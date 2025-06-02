@@ -1,0 +1,36 @@
+No.5 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	String s = sc.next();
+	String t = sc.next();
+	String[] T = t.split("");
+	sc.close();
+	
+	boolean b = false;
+	int n = s.indexOf(T[0].toLowerCase());
+	if (n != -1) {
+		String u = s.substring(n + 1);
+		int m = u.indexOf(T[1].toLowerCase());
+		if (m != -1) {
+			String v = u.substring(m + 1);
+			int l = v.indexOf(T[2].toLowerCase());
+			if (l != -1 || "X".equals(T[2])) {
+				b = true;
+			}
+		}
+	}
+	System.out.println(b ? "Yes" : "No");
+}
+
+// Analysis
+Fixing the bug:
+The corrected code looks more or less like the original one. The problem was that the third element of the array T was not checked in the if statement. It should have been T[2].toLowerCase(), instead of T[2].equals("X"). The buggy code is now fixed, so the function should now be correct.
+
+However, in the corrected function, the variable "b" is never set to true, so it will always print "No" when the input contains t with more than two characters.
+
+The third element of T should be checked in order to find the next character in t, after the current two elements have already been checked. This will prevent the program from printing "No" when t has more than two characters, but it will still print "No" when the third character is not part of the string.
+
+The corrected function could look like this:
+
+// Corrected Function
+public static void main(String[] args

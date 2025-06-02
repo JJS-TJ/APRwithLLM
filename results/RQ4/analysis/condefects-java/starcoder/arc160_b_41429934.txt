@@ -1,0 +1,21 @@
+No.3 Patch
+private long solve(int N){
+  long ans = 0;
+
+  for (long y = 1;y *y <= N;y++) {
+    long zNum = N /y -y;
+    ans += 3 *(y -1);
+    ans += 3 *zNum;
+    ans += 6 *(y -1) *zNum;
+  }
+  ans += (long)Math.sqrt(N);
+
+  return ans %mod;
+
+}
+
+// Analysis
+The fixed function solves the buggy function. It has the same basic structure as the buggy function. However, the buggy function updates the variable "ans" by adding
+the square root of N to the sum instead of adding the square root of N to ans.
+
+The code has one more improvement: The variable "ans" is of type long, which can hold a value up to 2^63 -1

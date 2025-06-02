@@ -1,0 +1,212 @@
+No.0 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+## 2.2.2 Recursion
+
+In the last section, we introduced recursion. In this section, we will look at two applications of recursion.
+
+### 2.2.2.1 Finding Factorials
+
+Consider the following code:
+
+```java
+// Provide a fix for the buggy function
+
+// Buggy Function
+public static void
+No.1 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+This is the fixed code. This time, we are using the `System.in` stream to take a string input from the user. We are also using a regular space character to separate the characters in the output string.
+
+### Exercise 2.11
+#### (a)
+What is the output of the following Java code?
+```java
+public class Test
+No.2 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+The bug is fixed, but there is still something wrong. The output of the corrected code is not the same as the output of the buggy code. This happens because the program prints the characters in reverse order.
+
+Here is the correct code for the reverse order of the output:
+
+```java
+// Corrected Code
+public static void main(String args[]){
+  Scanner sc =
+No.3 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+The code is exactly the same as the original code, with one change that is that the space is now a regular space rather than an ideographic space.
+
+However, this solution is not perfect because it does not distinguish between Chinese characters and English characters in the string. As the following example shows:
+
+```java
+// Test Case
+public static void main(String args
+No.4 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+### Explanation
+The IDEOGRAPHIC SPACE is a special type of space that can cause some problems. Ideographic spaces should never be used when writing an English text. To fix this problem, we replace the ideographic space with a regular space.
+
+The IDEOGRAPHIC SPACE character is the Unicode character U+3000. If we replace U+
+No.5 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+
+The function is exactly the same. The main difference is that the regular space character is used to separate the characters.
+
+You can see that this problem is solved by making changes in a single line of code. That is why it is called a "one-line" bug.
+
+This is a typical example of a simple one-line bug that a programmer would like to
+No.6 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+# Test Data
+```
+<NAME>
+```
+
+# Output
+```
+<NAME>
+```
+<|endoftext|>
+No.7 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+Now, if you run the code, you will see that the output contains regular spaces between each character.
+
+**Output:**
+```java
+
+```
+This is the output that you will get if you run the fixed code. The output is blank because no input was provided.
+<|endoftext|>
+No.8 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+The fixed function is similar to the original function, except that we are replacing the ideographic space with a regular space character.<|endoftext|>
+No.9 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+As we can see from the above code, we replaced the IDEOGRAPHIC SPACE character with a regular space character. We also changed the second argument of the print function from `System.out` to `S`. This is because the `print` function in Java uses a stream object as the second argument to determine where to print the string. If the stream object is `System.

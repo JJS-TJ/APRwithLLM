@@ -1,0 +1,194 @@
+No.3 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    String s = sc.next();
+
+    int n = s.length();
+
+    boolean[][] dp = new boolean[n][n];
+
+    int maxLen = 0;
+
+    for (int gap = 0; gap < n; gap++) {
+        for (int i = 0, j = gap; j < n; i++, j++) {
+            if (s.charAt(i) == s.charAt(j) && (j - i < 2 || dp[i + 1][j - 1])) {
+                dp[i][j] = true;
+
+                if (maxLen < j - i + 1) {
+                    maxLen = j - i + 1;
+                }
+            }
+        }
+    }
+
+    System.out.println(maxLen);
+
+    sc.close();
+}
+
+// Analysis
+Analysis:
+This Java code has fixed the bugs in the previous example code. It has a time complexity of O(n^2), which is a lot better.
+
+However, the code is still not perfect. It has a memory complexity of O(n^2), which is not great. It is possible that it will exceed the memory limit if the input string is very long.
+
+To improve this, you could use a much smaller amount of memory by storing the results in a single row or column of a 2D boolean array, which would make the code use a memory complexity of O(n).
+
+Note that the code is still not perfect because it does not check the palindrome at the center of the palindrome, which
+No.4 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    int n = s.length();
+    boolean[][] dp = new boolean[n][n];
+    int maxLen = 0;
+    for (int gap = 0; gap < n; gap++) {
+        for (int i = 0, j = gap; j < n; i++, j++) {
+            if (s.charAt(i) == s.charAt(j)) {
+                if (j - i < 3) {
+                    dp[i][j] = true;
+                } else {
+                    dp[i][j] = dp[i + 1][j - 1];
+                }
+            } else {
+                dp[i][j] = false;
+            }
+
+            if (dp[i][j] && j - i + 1 > maxLen) {
+                maxLen = j - i + 1;
+            }
+        }
+    }
+
+    System.out.println(maxLen);
+
+    sc.close();
+}
+
+// Analysis
+Analysis:
+This Java code has fixed the bugs of the previous solution, but it still has a time complexity of O(n^3). It is still not efficient.
+
+One way to improve this code is to use a boolean array instead of a boolean matrix. However, that approach will only give you O(n^2) time complexity. If you are using a 16-bit Java Virtual Machine, you can use a 32-bit boolean array. This will give you O(n^2) time complexity.
+
+You can also use
+No.5 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    String s = sc.next();
+
+    int n = s.length();
+    boolean[][] dp = new boolean[n][n];
+    int maxLen = 0;
+
+    for (int gap = 0; gap < n; gap++) {
+        for (int i = 0; i < n-gap; i++) {
+            int j = i + gap;
+            if (gap == 0) {
+                dp[i][j] = true;
+            } else if (gap == 1) {
+                dp[i][j] = (s.charAt(i) == s.charAt(j));
+            } else {
+                dp[i][j] = (dp[i+1][j-1] && s.charAt(i) == s.charAt(j));
+            }
+            if (dp[i][j] && gap+1 > maxLen) {
+                maxLen = gap + 1;
+            }
+        }
+    }
+
+    System.out.println(maxLen);
+
+    sc.close();
+}
+
+// Analysis
+Analysis:
+This Java code is trying to find the length of the longest palindromic substring in a given string. It has some fixes:
+
+1. The function should not be static. In Java, the main() function should be static because it is the entry point of a Java program, and it should be public because it is called by the JVM.
+
+2. The program can consume a lot of resources because it has a time complexity of O(n^3). It checks every possible substring to determine if it
+No.6 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    int n = s.length();
+
+    boolean[][] dp = new boolean[n][n];
+
+    int maxLen = 0;
+
+    for (int gap = 0; gap < n; gap++) {
+        for (int i = 0, j = gap; j < n; i++, j++) {
+            if (gap == 0) {
+                dp[i][j] = true;
+            } else if (gap == 1) {
+                dp[i][j] = (s.charAt(i) == s.charAt(j));
+            } else {
+                dp[i][j] = (dp[i + 1][j - 1] && s.charAt(i) == s.charAt(j));
+            }
+
+            if (dp[i][j] && (j - i + 1) > maxLen) {
+                maxLen = j - i + 1;
+            }
+        }
+    }
+
+    System.out.println(maxLen);
+
+    sc.close();
+}
+
+
+Analysis:
+
+The code is optimized using dynamic programming. The time complexity of this code is O(n^2), which is better than the O(n^3) time complexity of the original code. The space complexity of the code is O(n^2), which is better than O(n) space complexity of the original code.
+
+<|endoftext|>
+No.8 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    String s = sc.next();
+
+    String ws1 = "";
+    String ws2 = "";
+    int ans = 0;
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = i; j < s.length(); j++) {
+            ws1 = s.substring(i, j + 1);
+
+            ws2 = new StringBuilder(ws1).reverse().toString();
+
+            if (ws1.equals(ws2)) {
+                ans = Math.max(ans, ws1.length());
+            }
+        }
+    }
+
+    System.out.println(ans);
+
+    sc.close();
+}
+
+// Analysis
+Analysis:
+This is a fixed version of the Java code. It has fewer bugs, but it still has a time complexity of O(n^3). There are three improvements you could make:
+
+1. You can make the time complexity O(n^2) by storing the results of palindrome checking in a boolean[][] instance variable. This way, you only need to check every possible substring once, and you can avoid reversing substrings twice.
+
+2. You can make the code more efficient by only checking one half of the palindrome, which is shorter than the other half. This reduces the time complexity to O(n^2).
+
+3. You can make the code more efficient by comparing the substring with the reversed substring only once, instead of reversing the substring twice. This reduces the time complexity to O(n).
+
+*/
+
+import java.io.*;
+import java

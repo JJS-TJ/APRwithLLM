@@ -1,0 +1,171 @@
+No.0 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+
+// Analysis
+Analysis: 
+This code has a bug in it. The comparison of the string "t" in the if statement is not accurate. It should be compared with "Land" not "Lnad".
+
+Corrected Code:
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (
+No.1 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+<|EOT|>
+<|endoftext|>
+No.2 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+
+The fixed code will always print out "Yes".<|endoftext|>
+No.3 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+
+The fixed code compares "t" to the string "Land". This change will make the if statement accurate and give the expected output.
+<|EOT|>
+
+// Fixed Code
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("
+No.4 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+
+// Conclusion
+
+The if statement uses "equals" to compare the string "t" with the string "Land". This comparison is not accurate. Changing the comparison to "equals" with the string "Land" will make the if statement accurate.
+<|endoftext|>
+No.5 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+
+// Comment
+This code has a bug in it. The comparison of the string "t" in the if statement is not accurate. It should be compared with "Land" not "Lnad".
+
+Corrected Code:
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("
+No.7 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+<|endoftext|>
+No.8 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+
+// Analysis
+Analysis: 
+This code has a bug in it. The comparison of the string "s" in the if statement is not accurate. It should be compared with "Acodr" not "AtCoder".
+
+Corrected Code:
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();

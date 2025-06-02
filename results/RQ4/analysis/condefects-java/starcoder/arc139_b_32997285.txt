@@ -1,0 +1,77 @@
+No.1 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1*dist2 < cost2*dist1
+    return cost1*(long)dist2 < cost2*(long)dist1;
+}
+
+// Analysis
+
+// Fixed Function
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1*dist2 < cost2*dist1
+    return
+No.2 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1*dist2 < cost2*dist1
+    return cost1*(long)dist2 < cost2*(long)dist1;
+}
+
+// Analysis
+The problem is fixed if we switch to using a long integer instead of an integer. This gives us 64-bit integers, which will have enough precision for representing the product.
+
+Since the maximum size
+No.3 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}
+
+// Analysis
+Analysis:
+This is because of integer division. In Java, integer division will give the floor. In this case, it will return true. However, this is not the ideal solution.
+
+For
+No.4 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1*dist2 < cost2*dist1
+    return (long) cost1*dist2 < (long) cost2*dist1;
+}
+
+// Analysis
+Analysis:
+
+This fix is simply to cast the result of cost1*dist2 and cost2*dist1 to long before comparing them.
+
+### `System.out.println` is
+No.5 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (long) cost1*dist2 < (long) cost2*dist1;
+}
+
+This is not really a big deal because the function doesn't have to do floating point division. It can just use integer division, which will truncate the fractional part and only use the integer part.
+
+When doing
+No.6 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (cost1*1.0*dist2)/dist1 < cost2;
+}
+
+// Analysis
+This function is fixed by making the division operation a floating point operation by changing the 1.0 to dist1.
+
+### 4.3.2 Divide and Conquer
+This section describes
+No.8 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1*dist2 < cost2*dist1
+    return cost1*(long)dist2 < cost2*(long)dist1;
+}
+
+// Analysis
+Analysis:
+
+Note the use of longs here to prevent integer division. The result should be the same. However, you can't do integer division and then compare it to a long.
+
+Here is

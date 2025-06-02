@@ -1,0 +1,21 @@
+No.0 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x+=lowbit(x);
+    }
+}
+<|endoftext|>
+No.8 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x += lowbit(x);
+    }
+}
+
+This code solves the above issues by performing a max operation with the given value and the current value at x, which correctly updates the tree. The code can also be optimized to only perform the max operation once at the end of the loop to make the code more efficient, but this is not necessary for this problem.
+
+To conclude, the line tree[x] = value is correct. The first line of the inner loop is rewriting the value at x, so it should be removed.
+
+The line x += lowbit(x) could be

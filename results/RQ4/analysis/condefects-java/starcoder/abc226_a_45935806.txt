@@ -1,0 +1,53 @@
+No.1 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    BigDecimal result = x.setScale(0,BigDecimal.ROUND_HALF_UP);
+    System.out.println(result);
+}
+
+// Analysis
+Analysis:
+The fixed function is correct. The BigDecimal number 'x' is rounded to 0 decimal places using the ROUND_HALF_UP method.
+<|endoftext|>
+No.2 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    int result = x.setScale(0,BigDecimal.ROUND_HALF_UP).intValue();
+    System.out.println(result);
+}
+
+// Analysis
+Analysis:
+The fixed function is similar to the buggy function. The only difference is that the scale of the BigDecimal number is set to 0 and ROUND_HALF_UP method is used to round off the BigDecimal number to an integer.
+
+// Output
+Output
+No.5 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    double result = x.setScale(0,BigDecimal.ROUND_HALF_UP).doubleValue();
+    System.out.println((int) Math.round(result));
+}
+
+// Output
+23
+<|endoftext|>
+No.6 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    double result = x.setScale(0,BigDecimal.ROUND_HALF_UP).doubleValue();
+    System.out.println(x.setScale(0,BigDecimal.ROUND_HALF_UP).intValue());
+}
+<|endoftext|>

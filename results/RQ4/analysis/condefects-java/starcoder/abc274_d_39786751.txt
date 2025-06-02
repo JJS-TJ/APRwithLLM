@@ -1,0 +1,218 @@
+No.1 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int x = sc.nextInt();
+	int y = sc.nextInt();
+	int maxRangeX = 0;
+	int maxRangeY = 0;
+	boolean[][] dpX = new boolean[20001][n + 1];
+	boolean[][] dpY = new boolean[20001][n + 1];
+	int a = sc.nextInt();
+	int whichXY = -1;
+	int lastX = 0;
+	int lastY = 0;
+	dpX[10000 + a][1] = true;
+	//dpX[10000 - a][1] = true;
+	dpY[10000][0] = true;
+	maxRangeX += a;
+	for(int i = 2;i < n + 1;i++) {
+		a = Integer.parseInt(sc.next());
+		switch(whichXY) {
+		case 1:
+			for(int j = 10000 - maxRangeX;j < 10001 + maxRangeX; j++) {
+				if(dpX[j][i - 2]) {
+					//System.out.print("j" + j + "a" + a);
+					dpX[j + a][i] = true;
+					dpX[j - a][i] = true;
+				}
+			}maxRangeX += a;
+			whichXY *= (-1);
+			lastX = i;
+			break;
+			
+		case -1:
+				for(int j = 10000 - maxRangeY;j < 10001 + maxRangeY; j++) {
+					if(dpY[j][i - 2]) {
+						//System.out.print("j" + j + "a" + a);
+						dpY[j + a][i] = true;
+						dpY[j - a][i] = true;
+					}
+				}
+				maxRangeY += a;
+				whichXY *= (-1);
+				lastY = i;
+				break;
+		}
+	}
+	if(dpX[10000 + x][lastX] && dpY[10000 + y][lastY])System.out.print("Yes");
+	else System.out.print("No");
+}
+<|endoftext|>
+No.6 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int x = sc.nextInt();
+	int y = sc.nextInt();
+	int maxRangeX = 0;
+	int maxRangeY = 0;
+	boolean[][] dpX = new boolean[20001][n + 1];
+	boolean[][] dpY = new boolean[20001][n + 1];
+	int a = sc.nextInt();
+	int whichXY = -1;
+	int lastX = 0;
+	int lastY = 0;
+	dpX[10000 + a][1] = true;
+	//dpX[10000 - a][1] = true;
+	dpY[10000][0] = true;
+	maxRangeX += a;
+	for(int i = 2;i < n + 1;i++) {
+		a = Integer.parseInt(sc.next());
+		switch(whichXY) {
+		case 1:
+			for(int j = 10000 - maxRangeX;j < 10001 + maxRangeX; j++) {
+				//System.out.println(dpX[j][i - 2]);
+				if(dpX[j][i - 2]) {
+					dpX[j + a][i] = true;
+					dpX[j - a][i] = true;
+				}
+			}maxRangeX += a;
+			whichXY *= (-1);
+			lastX = i;
+			break;
+			
+		case -1:
+				for(int j = 10000 - maxRangeY;j < 10001 + maxRangeY; j++) {
+					if(dpY[j][i - 2]) {
+						//System.out.print("j" + j + "a" + a);
+						dpY[j + a][i] = true;
+						dpY[j - a][i] = true;
+					}
+				}
+				maxRangeY += a;
+				whichXY *= (-1);
+				lastY = i;
+				break;
+		}
+	}
+	//System.out.print(dpX[10006][3]);
+	if(dpX[10000 + x][lastX] && dpY[10000 + y][lastY])System.out.print("Yes");
+	else System.out.print("No");
+}
+
+// Analysis
+// To fix the code, we need to make sure that we are updating the dpX and dpY arrays only for the current possible sums. Therefore, we need to keep track of the last possible sums from which we could update the dp arrays.
+
+// In the case where 'whichXY' is 1, we need to update the dpX array with the current sum 'a'. We will update the dpX array for all possible sums from '10000 - maxRangeX' to '10000 + maxRangeX'.
+
+// However, we should only be updating the dpX array for the current possible sums. This is what the code is doing by using the 'lastX' variable.
+
+// Similarly, in the case where 'whichXY' is -1, we need to update the dpY array with the current sum 'a'. We will update the dpY array for all possible sums from '10000 - maxRangeY' to '10000 + maxRangeY'.
+
+// However, we should only be updating the dpY array for the current possible sums. This is what the code is doing by using the 'lastY' variable.
+
+// Finally, we need to add the following code to update the 'maxRangeX' and 'maxRangeY' variables.
+
+if(whichXY == 1)maxRangeX += a;
+else if(whichXY == -1)maxRangeY += a;
+
+<|EOT|>
+
+// Fixed Function
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int x = sc.nextInt();
+	int y = sc.nextInt();
+	int maxRangeX = 0;
+	int maxRangeY = 0;
+	boolean[][] dpX = new boolean[20001][n + 1];
+	boolean[][] dpY = new boolean[20001][n + 1];
+	int a = sc.nextInt();
+	int whichXY = -1;
+	int lastX = 0;
+	int lastY = 0;
+	dpX[10000 + a][1] = true;
+	//dpX[10000 - a][1] = true;
+	dpY[10000][0] = true;
+	maxRangeX += a;
+	for(int i = 2;i < n + 1;i++) {
+		a = Integer.parseInt(sc.next());
+		switch(whichXY) {
+		case 1:
+			for(int j = 1
+No.7 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int x = sc.nextInt();
+	int y = sc.nextInt();
+	int maxRangeX = 0;
+	int maxRangeY = 0;
+	boolean[][] dpX = new boolean[20001][n + 1];
+	boolean[][] dpY = new boolean[20001][n + 1];
+	int a = sc.nextInt();
+	int whichXY = -1;
+	int lastX = 0;
+	int lastY = 0;
+	dpX[10000 + a][1] = true;
+	//dpX[10000 - a][1] = true;
+	dpY[10000][0] = true;
+	maxRangeX += a;
+	for(int i = 2;i < n + 1;i++) {
+		a = Integer.parseInt(sc.next());
+		switch(whichXY) {
+		case 1:
+			for(int j = 10000 - maxRangeX;j < 10001 + maxRangeX; j++) {
+				//System.out.println(dpX[j][i - 2]);
+				if(dpX[j][i - 2]) {
+					dpX[j + a][i] = true;
+					dpX[j - a][i] = true;
+				}
+			}maxRangeX += a;
+			whichXY *= (-1);
+			lastX = i;
+			break;
+			
+		case -1:
+				for(int j = 10000 - maxRangeY;j < 10001 + maxRangeY; j++) {
+					if(dpY[j][i - 2]) {
+						//System.out.print("j" + j + "a" + a);
+						dpY[j + a][i] = true;
+						dpY[j - a][i] = true;
+					}
+				}
+				maxRangeY += a;
+				whichXY *= (-1);
+				lastY = i;
+				break;
+		}
+	}
+	//System.out.print(dpX[10006][3]);
+	if(dpX[10000 + x][lastX] && dpY[10000 + y][lastY])System.out.print("Yes");
+	else System.out.print("No");
+}
+
+// Analysis
+// We need to correctly update the 'dpX' and 'dpY' arrays.
+
+// For 'dpX', the code was only updating the array if the previous sum (i - 2) was possible from the current sum (j). The bug lies in that the code should only check if the previous sum was possible from the current sum.
+
+// To fix this issue, the code should be updated to look at the previous possible sums from the current sum.
+
+// To do this, the code needs to be updated to look at the previous possible sums from the current sum.
+
+// For 'dpY', the code was only updating the array if the previous sum (i - 2) was possible from the current sum (j). The bug lies in that the code should only check if the previous sum was possible from the current sum.
+
+// To fix this issue, the code should be updated to look at the previous possible sums from the current sum.
+
+// To do this, the code needs to be updated to look at the previous possible sums from the current sum.
+
+// For 'whichXY' != 1 or -1, the code was not updating the arrays correctly. The code should be updated to update the arrays appropriately in such cases.
+<|EOT|>
+<|endoftext|>

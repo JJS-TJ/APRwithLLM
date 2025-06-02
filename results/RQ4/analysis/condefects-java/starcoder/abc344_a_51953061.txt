@@ -1,0 +1,29 @@
+No.4 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String str = scan.nextLine();
+	String ans="";
+	int pt1,pt2,pt3;
+	pt1=str.indexOf('|');
+	pt2=str.lastIndexOf('|');
+	pt3=str.length();
+	if (pt1==-1) {
+		System.out.println(str);
+		return;
+	}else {
+		if (pt2==-1) {
+			System.out.println(str.substring(0, pt1));
+			return;
+		}else {
+			if (pt1!=0) {
+				ans=str.substring(0, pt1);
+			}
+			if (pt2!=pt3-1) {
+				ans=ans+str.substring(pt2+1, pt3);
+			}
+		}
+	}
+	System.out.println(ans);
+}
+<|endoftext|>

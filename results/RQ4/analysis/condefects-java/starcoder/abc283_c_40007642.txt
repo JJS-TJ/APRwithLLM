@@ -1,0 +1,29 @@
+No.8 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    String s = sc.next();
+    int cnt = 0;
+    for (int i = 0; i < s.length(); i++) {
+        if (i != s.length() - 1 && s.charAt(i) == '0') {
+            Long zeroCnt = 1L;
+            while (i + 1 < s.length() && s.charAt(i + 1) == '0') {
+                zeroCnt++;
+                i++;
+            }
+            cnt += Math.round(zeroCnt / 2.0);
+        } else {
+            cnt++;
+        }
+    }
+
+    System.out.println(cnt);
+}
+```
+
+The corrected code uses the standard Scanner class to read the input string. It is also using a standard for loop to loop through each character in the string. It also uses a standard while loop to loop through additional '0' characters in the input string.
+
+## References
+
+-   <https://www.codewars.com/kata/count-zeros-in-a-string>
+<|endoftext|>

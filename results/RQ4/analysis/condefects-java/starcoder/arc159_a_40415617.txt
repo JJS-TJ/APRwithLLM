@@ -1,0 +1,42 @@
+No.5 Patch
+public static void main(String[] args) throws Exception {
+  final FastScanner sc = new FastScanner(System.in);
+  final int n = sc.nextInt();
+  final long k = sc.nextLong();
+  final int[][] dist = new int[n][n];
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      dist[i][j] = sc.nextInt();
+    }
+  }
+  final PrintWriter pw = new PrintWriter(System.out);
+  final int q = sc.nextInt();
+  for (int cnt = 0; cnt < q; cnt++) {
+    long s = sc.nextLong() - 1;
+    long t = sc.nextLong() - 1;
+    int s_modn = (int) (s % (long) n);
+    int t_modn = (int) (t % (long) n);
+    int[] temp = new int[n];
+    Arrays.fill(temp, Integer.MAX_VALUE);
+    PriorityQueue<IntPair> queue = new PriorityQueue<>();
+    queue.add(new IntPair(0, s_modn));
+    while (!queue.isEmpty()) {
+      IntPair p = queue.poll();
+      if (p.first > temp[p.second]) {
+        continue;
+      }
+      for (int j = 0; j < n; j++) {
+        if (dist[p.second][j] != 0 && temp[j] > p.first + dist[p.second][j]) {
+          temp[j] = p.first + dist[p.second][j];
+          queue.add(new IntPair(temp[j], j));
+        }
+      }
+    }
+    int ans = temp[t_modn];
+    pw.println(ans == Integer.MAX_VALUE ? -1 : ans);
+  }
+  pw.close();
+  sc.close();
+}
+```
+<|endoftext|>

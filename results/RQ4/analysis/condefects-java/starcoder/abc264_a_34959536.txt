@@ -1,0 +1,79 @@
+No.0 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();;
+int r = sc.nextInt();
+ String ans = s.substring(l-1,r);
+    System.out.println(ans);
+
+}
+
+// Analysis
+
+The solution is to make the starting index 1. So, if user inputs l=1 and r=3, it will actually print "at".
+<|endoftext|>
+No.1 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();
+int r = sc.nextInt();
+ String ans = s.substring(l-1,r);
+    System.out.println(ans);
+
+}
+
+// Analysis
+This buggy function is trying to reverse a string. However, it tries to do it by taking 2 inputs(l,r) from user and using them as index to cut the string. The problem is with the substring function, it doesn't work this way.
+Substring function takes starting index and ending index(
+No.5 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();;
+int r = sc.nextInt();
+ String ans = s.substring(l-1,r);
+    System.out.println(ans);
+
+}
+
+// Analysis
+So, we should always take starting index as l-1, because if user inputs l=1, then substring function will return "at" which is wrong answer.
+<|endoftext|>
+No.6 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();;
+int r = sc.nextInt();
+ String ans = s.substring(l-1,r);
+    System.out.println(ans);
+
+}
+
+// Analysis
+This fixed function takes starting index and ending index(end index is not inclusive) for string and returns substring from start index till end index-1.
+So, if user inputs l=1 and r=3, it will actually print "at".
+<|endoftext|>
+No.7 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();;
+int r = sc.nextInt();
+ String ans = "";
+    for(int i=l-1;i<r;i++)
+        ans += s.charAt(i);
+
+    System.out.println(ans);
+
+}
+
+// Analysis
+The fixed function is trying to do the same thing. But now, instead of using 2 inputs, it uses 2 variables(l,r) to cut the string and prints the substring from index l to r-1.

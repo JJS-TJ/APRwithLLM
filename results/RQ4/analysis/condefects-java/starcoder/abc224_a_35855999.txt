@@ -1,0 +1,59 @@
+No.6 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	
+	String str = sc.next();
+	char[] arr = {'e','r'};
+	String out = "er";
+	String in = "ist";
+	int count = 0;
+	for(int i = str.length()-2; i < str.length(); i++) {
+		if (str.charAt(i) == arr[0]) {
+			count++;
+		} else if (str.charAt(i)==arr[1]) {
+			count++;
+		}
+	}
+	if (count == 2) {
+		System.out.println(out);
+	} else {
+		System.out.println(in);
+	}
+}
+
+// Analysis
+//
+// Note that we do not have to use the Scanner class.
+// We can also use BufferedReader to solve the problem.
+
+// Explanation 3:
+
+// Write a method to remove the first and last character of a string,
+// if the first and last character of the string are the same.
+
+// Example:
+//
+// Input: "hello"
+// Output: "ell"
+
+// Solution
+
+// Approach 1: Using a String
+//
+// Time complexity: O(n)
+
+// Approach 2: Using a StringBuilder
+//
+// Time complexity: O(n)
+
+// Approach 3: Using StringBuffer
+//
+// Time complexity: O(n)
+
+// Approach 4: Using StringBuilder
+//
+// Time complexity: O(n)
+
+// Approach 5: Using a Character Array
+//
+// Time complexity: O(n)

@@ -1,0 +1,24 @@
+No.1 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Fixed Test
+public static void Main() {
+    int X = 7;
+    int Y =
+No.6 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Result
+public static void Main() {
+    // Write a simple test program to verify the function
+No.9 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Exercise 10.17
+The following function computes the value of the product 10

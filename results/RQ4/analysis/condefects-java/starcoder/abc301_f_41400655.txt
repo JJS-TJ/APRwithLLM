@@ -1,0 +1,58 @@
+No.0 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Notes
+// The reason for the buggy function is that the <= operator includes the maximum value of its
+No.1 Patch
+boolean isLower(char c) {
+	return c >= 'a' && c <= 'z';
+}
+<|endoftext|>
+No.2 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<|endoftext|>
+No.3 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// Analysis:
+// The fix for the buggy function simply includes 'z' in the
+No.4 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// Fix the bug by changing the expression from 'c < 'z' to 'c <=
+No.5 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// The bug in this function is that it does not include 'z' in the lowercase range
+No.6 Patch
+boolean isLower(char c) {
+	return c >= 'a' && c <= 'z';
+}
+
+// Note:
+// This is a very common bug in Java. If you are not sure why a function
+No.7 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+<|endoftext|>
+No.8 Patch
+boolean isLower(char c) {
+	return c >= 'a' && c <= 'z';
+}
+
+// A better fix would be to use the isLowerCase() method of the Character class.
+
+boolean is

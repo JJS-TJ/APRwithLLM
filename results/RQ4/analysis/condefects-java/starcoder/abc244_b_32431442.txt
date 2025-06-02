@@ -1,0 +1,328 @@
+No.0 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+	}
+	System.out.println(X+" "+Y);
+}
+
+// Result
+Result:
+The buggy function should be fixed by moving the printing outside of the loop.
+
+// Analysis
+Analysis:
+If the printed value is not moved outside of the loop, it will be printed every time the loop repeats.
+The final value printed is the position the robot will end up, after the whole sequence of commands is executed.
+<|endoftext|>
+No.1 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+		if(c[i] == 'S') {
+			if(muki == 'N') {
+				Y++;
+			}else if(muki == 'E') {
+				X++;					
+			}else if(muki == 'S') {
+				Y--;				
+			}else if(muki == 'W') {
+				X--;			
+			}
+		}else if(c[i] == 'R') {
+			if(muki == 'N') {
+				muki =  'E';
+			}else if(muki == 'E') {
+				muki = 'S';					
+			}else if(muki == 'S') {
+				muki = 'W';					
+			}else if(muki == 'W') {
+				muki = 'N';					
+			}
+		}
+	}
+	System.out.println(X+" "+Y);
+}
+
+// Result
+Result:
+The fixed function now correctly prints the coordinates after the last command,
+as it is the desired behavior.
+<|endoftext|>
+No.2 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+	}
+	System.out.println(X+" "+Y);
+}
+
+```
+<|endoftext|>
+No.3 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+	}
+	System.out.println(X+" "+Y);
+}
+<|endoftext|>
+No.4 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+	}
+	System.out.println(X+" "+Y);
+}
+
+```
+
+[トップページに戻る](./README.ja.md)
+<|endoftext|>
+No.5 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+	}
+	System.out.println(X+" "+Y);
+}
+
+// Result
+Result:
+Indeed, this fixes the buggy function.
+
+// Explanation
+Explanation:
+The buggy function can be fixed by moving the printing of the coordinates outside of the loop.
+This way, the coordinates of the robot will be printed at the end of all commands.
+
+// Explanation
+Explanation:
+The buggy function can be fixed by moving the printing of the coordinates outside of the loop.
+This way, the coordinates of the robot will be printed at the end of all commands.
+
+
+// おまけ:
+// 入力の方角と同じ方角を入力すると、出力値がおかしくなる問題
+// 例
+// input:
+// 1
+// N
+// output:
+// -1 0
+
+// 原因
+// 出力を書き間違えている
+// mukiが入力の方角を記憶している
+// 入力の方角を入れ替えるときは、mukiも入れ替える
+// 例
+// input:
+// 1
+// E
+// output:
+// 1 0
+
+// 修正
+// 出力を書き直す
+// if文で、入力の方角と同じ方角を入力したときに、出力値をmukiから計算する
+// 例
+// input:
+// 1
+// E
+// output:
+// 1 0
+No.6 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+			if(i == c.length-1) {
+				System.out.println(X+" "+Y);
+			}
+	}
+}
+
+// Result
+The fixed function will print the final position after all commands are executed, and the coordinates will be updated accordingly.
+This will print the final position of the robot after the input sequence is executed.<|endoftext|>

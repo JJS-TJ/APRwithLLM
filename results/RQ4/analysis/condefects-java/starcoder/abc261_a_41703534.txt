@@ -1,0 +1,117 @@
+No.2 Patch
+public static void main(String[] args){
+  Scanner in = new Scanner(System.in);
+  int L1 = in.nextInt();
+  int R1 = in.nextInt();
+  int L2 = in.nextInt();
+  int R2 = in.nextInt();
+  int ans = 0;
+  if(L1 <= L2 && R1 >= L2){
+    ans = Math.min(R1, R2) - L2 + 1;
+  } else if(L2 <= L1 && R2 >= L1){
+    ans = Math.min(R1, R2) - L1 + 1;
+  }
+  if(ans > 0){
+    ans--;
+  }
+  System.out.println(ans);
+}
+<|endoftext|>
+No.3 Patch
+public static void main(String[] args){
+  Scanner in = new Scanner(System.in);
+  int L1 = in.nextInt();
+  int R1 = in.nextInt();
+  int L2 = in.nextInt();
+  int R2 = in.nextInt();
+  int ans = 0;
+  if(L1 <= L2 && R1 >= L2){
+    ans = Math.min(R1, R2) - L2 + 1;
+  } else if(L2 <= L1 && R2 >= L1){
+    ans = Math.min(R1, R2) - L1 + 1;
+  }
+  if(ans > 0){
+    ans--;
+  }
+  System.out.println(ans);
+}
+
+// Analysis
+The fixed code takes care of the buggy code’s bug. The first if statement ensures that if L1 <= L2 and R1 >= L2, then we set ans to the minimum of R1 and R2 minus L2 plus 1. If L2 <= L1 and R2 >= L1, then we set ans to the minimum of R1 and R2 minus L1 plus 1. Note that the difference between L1 and L2 and between R1 and R2 is +1 for both cases. The second if statement
+No.7 Patch
+public static void main(String[] args){
+  Scanner in = new Scanner(System.in);
+  int L1 = in.nextInt();
+  int R1 = in.nextInt();
+  int L2 = in.nextInt();
+  int R2 = in.nextInt();
+  int ans = 0;
+  if(L1 <= L2 && R1 >= L2){
+    ans = Math.min(R1, R2) - L2 + 1;
+  } else if(L2 <= L1 && R2 >= L1){
+    ans = Math.min(R1, R2) - L1 + 1;
+  }
+  if(ans > 0){
+    ans--; 
+  }
+  System.out.println(ans);
+}
+
+```
+
+[Source](https://www.hackerrank.com/challenges/drawing-book/problem)
+<|endoftext|>
+No.8 Patch
+public static void main(String[] args){
+  Scanner in = new Scanner(System.in);
+  int L1 = in.nextInt();
+  int R1 = in.nextInt();
+  int L2 = in.nextInt();
+  int R2 = in.nextInt();
+  int ans = 0;
+  if(L1 <= L2 && R1 >= L2){
+    ans = Math.min(R1, R2) - L2 + 1;
+  } else if(L2 <= L1 && R2 >= L1){
+    ans = Math.min(R1, R2) - L1 + 1;
+  }
+  if(ans > 0){
+    ans--;
+  }
+  System.out.println(ans);
+}
+
+// Analysis
+The code now includes two if-else statements to check if L1 <= L2 and if L2 <= L1, and then it calls Math.min() with the appropriate parameters. The return value of Math.min() is then added to ans, which is then decremented if it is greater than 0.
+
+// Sample Inputs and Outputs
+Sample Input 1
+2 5 5 11
+Sample Output 1
+5
+
+Sample Input 2
+11 13 10 20
+Sample Output
+No.9 Patch
+public static void main(String[] args){
+  Scanner in = new Scanner(System.in);
+  int L1 = in.nextInt();
+  int R1 = in.nextInt();
+  int L2 = in.nextInt();
+  int R2 = in.nextInt();
+  int ans = 0;
+  if(L1 <= L2 && R1 >= L2){
+    ans = Math.min(R1, R2) - L2 + 1;
+  } else if(L2 <= L1 && R2 >= L1){
+    ans = Math.min(R1, R2) - L1 + 1;
+  }
+  if(ans > 0){
+    ans--; 
+  }
+  System.out.println(ans);
+}
+
+// Analysis
+The code reads four integers from input and then compares the values of L1 and L2. If they are equal, the code checks whether R1 is greater than or equal to R2. If the values of R1 and R2 are both greater than or equal to R2, then R2 is smaller than or equal to R1. In this case, the code sets the variable ans to be R2 minus L2 plus one, which is the number of integers in the interval of integers between L2 and R2.
+
+If the values

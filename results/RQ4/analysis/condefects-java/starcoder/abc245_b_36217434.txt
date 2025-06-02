@@ -1,0 +1,63 @@
+No.6 Patch
+public static void main(String[]args){
+    Scanner scan = new Scanner(System.in);
+    int n=scan.nextInt();
+    int ar[]=new int[n];
+    for(int i=0;i<n;i++){
+        ar[i]=scan.nextInt();
+    }
+    Arrays.sort(ar);
+
+    for(int i=0;i<2001;i++){
+        if(Arrays.binarySearch(ar,i)>=0)continue;
+        else
+            System.out.println(i);
+        break;
+    }
+}
+
+// Explanation
+// Explanation
+
+The first thing that we should do is to write the algorithm for the program.
+
+The algorithm should be the following:
+
+Sort the input array.
+
+Loop through the numbers from 0 to 2000.
+
+Check if the number is present in the array.
+
+If it is not present, print it and break the loop.
+
+After this, it will print all the numbers from 0 to 2000 which are not present in the input array.
+
+The code given in the question can
+No.8 Patch
+public static void main(String[]args){
+    Scanner scan = new Scanner(System.in);
+    int n=scan.nextInt();
+    int ar[]=new int[n];
+    for(int i=0;i<n;i++){
+        ar[i]=scan.nextInt();
+    }
+    Arrays.sort(ar);
+
+    for(int i=0;i<2001;i++){
+        if(Arrays.binarySearch(ar,i)>=0)continue;
+        else
+            System.out.println(i);
+        break;
+    }
+
+}
+
+// Explanation
+// Explanation
+
+The return type is added to the main function and the for loop's variable 'i' is changed from 'int' to 'int'. After making these changes, the code runs correctly.
+
+To print all numbers from 0 to 2000, an extra element is added to the array. The for loop runs from 0 to 2000, but the 2001st element is never reached. So, the for loop will break after the first non-present number is printed.
+
+Arrays.sort

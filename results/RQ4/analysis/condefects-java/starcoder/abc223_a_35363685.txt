@@ -1,0 +1,26 @@
+No.7 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+
+// Check if the input is less than 100
+if(c < 100){
+    System.out.println("No");
+} else {
+
+    // Perform the remaining operations
+    int s=c%100;
+    if(s==0){
+    System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+}
+
+// Output
+Your output should match the correct output below.
+
+Example Run #1
+Input
+120

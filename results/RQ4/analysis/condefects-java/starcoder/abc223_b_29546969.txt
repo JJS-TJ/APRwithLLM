@@ -1,0 +1,70 @@
+No.1 Patch
+public static void main(String[] args)throws Exception{
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  String S = br.readLine();
+  int len = S.length();
+  String[] arr = new String[len];
+  for(int i = 0; i < len; i++){
+    arr[i] = S.substring(i, len) + S.substring(0, i);
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+// Analysis
+The corrected function here is written in Java. The function firstly reads a string from the user using a BufferedReader and Scanner. The string is then split into an array of all its possible rotations. These are then sorted in lexicographically increasing order. The smallest and largest strings are then printed out.
+
+The fixed code is very similar to the buggy function. In line 6, len is the length of the string. But in line 13, the ending index is set as len, which will include the character at index len-1 as well. So the code is now correct.
+
+Finally, it is better to use StringBuilder instead of String to concatenate strings because String is
+No.5 Patch
+public static void main(String[] args)throws Exception{
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  Scanner sc = new Scanner(System.in);
+  String S = br.readLine();
+  int len = S.length();
+  String[] arr = new String[len];
+  StringBuilder sb = new StringBuilder();
+  for(int i = 0; i < len; i++){
+    sb.setLength(0);
+    sb.append(S.substring(i, len));
+    sb.append(S.substring(0, i));
+    arr[i] = sb.toString();
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+The new code is written in Java. It is almost similar to the original code, but the main difference is the use of StringBuilder instead of String in the line where a new substring is created from the original string.
+
+However, when using StringBuilder, the setLength(0) method should be called before appending the substring in order to clear the StringBuilder object and free up the memory.
+
+Finally, the use of BufferedReader and Scanner is still interchangeable, but BufferedReader is more efficient as it reads input from a file
+No.6 Patch
+public static void main(String[] args)throws Exception{
+  Scanner sc = new Scanner(System.in);
+  String S = sc.nextLine();
+  int len = S.length();
+  String[] arr = new String[len];
+  StringBuilder sb = new StringBuilder();
+
+  for(int i = 0; i < len; i++){
+    sb.setLength(0);
+    sb.append(S.substring(i, len));
+    sb.append(S.substring(0, i));
+    arr[i] = sb.toString();
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Conclusion
+When writing code, it is important to make sure that it is correct. In this problem, a bug was found in the buggy function and it was fixed by correcting the bug. It is also recommended that users avoid using mutable classes in Java, especially String, when it is possible, because they are inefficient in terms of memory usage.
+
+The code can be improved further to use StringBuilder instead of String.
+<|endoftext|>

@@ -1,0 +1,51 @@
+No.0 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  char c[] = Character.toChars(n);
+  for(int i=0;i<c.length;i++)
+      System.out.print(c[i]);
+  System.out.println();
+
+}
+
+//Analysis
+Analysis: The given code is attempting to read an integer input from the user, then
+No.1 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c[] = Character.toChars(n);
+  System.out.println(c);
+ 
+}
+<|endoftext|>
+No.2 Patch
+public static void main(String []args) {
+  Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  char c = (char)n;
+  System.out.println(Character.toChars(n));
+}
+<|endoftext|>
+No.8 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    char []temp = Character.toChars(n);
+    String s = String.valueOf(temp);
+    System.out.println(s);
+ 
+}
+<|endoftext|>
+No.9 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    char[] chars = Character.toChars(n);
+    System.out.println(chars);
+}
+
+// Analysis
+Analysis: The given code is attempting to read an integer input from the user, then convert it into a character and print it. 
+However, the conversion from int to char is not correct because it is tre
