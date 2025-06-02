@@ -1,0 +1,172 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [160,190]
+    (: ( [160,161]
+    binary_expression [161,189]
+        binary_expression [161,173]
+            identifier: num1 [161,165]
+            >=: >= [166,168]
+            identifier: num2 [169,173]
+        &&: && [174,176]
+        binary_expression [177,189]
+            identifier: num1 [177,181]
+            <=: <= [182,184]
+            identifier: num3 [185,189]
+    ): ) [189,190]
+to
+binary_expression [160,220]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [194,224]
+    (: ( [194,195]
+    binary_expression [195,223]
+        binary_expression [195,207]
+            identifier: num1 [195,199]
+            <=: <= [200,202]
+            identifier: num2 [203,207]
+        &&: && [208,210]
+        binary_expression [211,223]
+            identifier: num1 [211,215]
+            >=: >= [216,218]
+            identifier: num3 [219,223]
+    ): ) [223,224]
+to
+binary_expression [160,220]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [258,288]
+    (: ( [258,259]
+    binary_expression [259,287]
+        binary_expression [259,271]
+            identifier: num2 [259,263]
+            >=: >= [264,266]
+            identifier: num1 [267,271]
+        &&: && [272,274]
+        binary_expression [275,287]
+            identifier: num2 [275,279]
+            <=: <= [280,282]
+            identifier: num3 [283,287]
+    ): ) [287,288]
+to
+binary_expression [254,314]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [292,322]
+    (: ( [292,293]
+    binary_expression [293,321]
+        binary_expression [293,305]
+            identifier: num2 [293,297]
+            <=: <= [298,300]
+            identifier: num1 [301,305]
+        &&: && [306,308]
+        binary_expression [309,321]
+            identifier: num2 [309,313]
+            >=: >= [314,316]
+            identifier: num3 [317,321]
+    ): ) [321,322]
+to
+binary_expression [254,314]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [160,188]
+    (: ( [160,161]
+    binary_expression [161,187]
+        binary_expression [161,172]
+            identifier: num1 [161,165]
+            <: < [166,167]
+            identifier: num2 [168,172]
+        &&: && [173,175]
+        binary_expression [176,187]
+            identifier: num1 [176,180]
+            >: > [181,182]
+            identifier: num3 [183,187]
+    ): ) [187,188]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [192,220]
+    (: ( [192,193]
+    binary_expression [193,219]
+        binary_expression [193,204]
+            identifier: num1 [193,197]
+            >: > [198,199]
+            identifier: num2 [200,204]
+        &&: && [205,207]
+        binary_expression [208,219]
+            identifier: num1 [208,212]
+            <: < [213,214]
+            identifier: num3 [215,219]
+    ): ) [219,220]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [254,282]
+    (: ( [254,255]
+    binary_expression [255,281]
+        binary_expression [255,266]
+            identifier: num2 [255,259]
+            <: < [260,261]
+            identifier: num1 [262,266]
+        &&: && [267,269]
+        binary_expression [270,281]
+            identifier: num2 [270,274]
+            >: > [275,276]
+            identifier: num3 [277,281]
+    ): ) [281,282]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [286,314]
+    (: ( [286,287]
+    binary_expression [287,313]
+        binary_expression [287,298]
+            identifier: num2 [287,291]
+            >: > [292,293]
+            identifier: num1 [294,298]
+        &&: && [299,301]
+        binary_expression [302,313]
+            identifier: num2 [302,306]
+            <: < [307,308]
+            identifier: num3 [309,313]
+    ): ) [313,314]
+

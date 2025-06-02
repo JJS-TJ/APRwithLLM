@@ -1,0 +1,86 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [228,246]
+    (: ( [228,229]
+    binary_expression [229,245]
+        binary_expression [229,235]
+            identifier: b [229,230]
+            <=: <= [231,233]
+            identifier: a [234,235]
+        &&: && [236,238]
+        binary_expression [239,245]
+            identifier: a [239,240]
+            <=: <= [241,243]
+            identifier: c [244,245]
+    ): ) [245,246]
+to
+binary_expression [228,264]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [250,268]
+    (: ( [250,251]
+    binary_expression [251,267]
+        binary_expression [251,257]
+            identifier: c [251,252]
+            <=: <= [253,255]
+            identifier: a [256,257]
+        &&: && [258,260]
+        binary_expression [261,267]
+            identifier: a [261,262]
+            <=: <= [263,265]
+            identifier: b [266,267]
+    ): ) [267,268]
+to
+binary_expression [228,264]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [228,244]
+    (: ( [228,229]
+    binary_expression [229,243]
+        binary_expression [229,234]
+            identifier: b [229,230]
+            <: < [231,232]
+            identifier: a [233,234]
+        &&: && [235,237]
+        binary_expression [238,243]
+            identifier: a [238,239]
+            <: < [240,241]
+            identifier: c [242,243]
+    ): ) [243,244]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [248,264]
+    (: ( [248,249]
+    binary_expression [249,263]
+        binary_expression [249,254]
+            identifier: c [249,250]
+            <: < [251,252]
+            identifier: a [253,254]
+        &&: && [255,257]
+        binary_expression [258,263]
+            identifier: a [258,259]
+            <: < [260,261]
+            identifier: b [262,263]
+    ): ) [263,264]
+

@@ -1,0 +1,307 @@
+New cluster:
+MOVE from compound_statement [11,375]
+------------
+===
+move-tree
+---
+if_statement [174,219]
+    if: if [174,176]
+    parenthesized_expression [177,184]
+        (: ( [177,178]
+        binary_expression [178,183]
+            identifier: a [178,179]
+            >: > [180,181]
+            identifier: c [182,183]
+        ): ) [183,184]
+    compound_statement [185,219]
+        {: { [185,186]
+        expression_statement [192,198]
+            assignment_expression [192,197]
+                identifier: a [192,193]
+                =: = [194,195]
+                identifier: b [196,197]
+            ;: ; [197,198]
+        expression_statement [204,214]
+            assignment_expression [204,213]
+                identifier: b [204,205]
+                =: = [206,207]
+                identifier: temp1 [208,213]
+            ;: ; [213,214]
+        }: } [218,219]
+to
+compound_statement [11,375]
+at 8
+===
+move-tree
+---
+if_statement [225,270]
+    if: if [225,227]
+    parenthesized_expression [228,235]
+        (: ( [228,229]
+        binary_expression [229,234]
+            identifier: b [229,230]
+            >: > [231,232]
+            identifier: c [233,234]
+        ): ) [234,235]
+    compound_statement [236,270]
+        {: { [236,237]
+        expression_statement [243,249]
+            assignment_expression [243,248]
+                identifier: b [243,244]
+                =: = [245,246]
+                identifier: c [247,248]
+            ;: ; [248,249]
+        expression_statement [255,265]
+            assignment_expression [255,264]
+                identifier: c [255,256]
+                =: = [257,258]
+                identifier: temp2 [259,264]
+            ;: ; [264,265]
+        }: } [269,270]
+to
+compound_statement [11,375]
+at 8
+
+New cluster:
+UPDATE from b to temp
+------------
+===
+update-node
+---
+identifier: b [306,307]
+replace b by temp
+===
+update-node
+---
+identifier: temp1 [31,36]
+replace temp1 by temp
+===
+update-node
+---
+identifier: b [204,205]
+replace b by temp
+===
+update-node
+---
+identifier: c [255,256]
+replace c by temp
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [139,146]
+    (: ( [139,140]
+    binary_expression [140,145]
+        identifier: a [140,141]
+        >: > [142,143]
+        identifier: b [144,145]
+    ): ) [145,146]
+to
+if_statement [276,321]
+at 1
+
+New cluster:
+MOVE from compound_statement [287,321]
+------------
+===
+move-tree
+---
+expression_statement [294,300]
+    assignment_expression [294,299]
+        identifier: a [294,295]
+        =: = [296,297]
+        identifier: b [298,299]
+    ;: ; [299,300]
+to
+compound_statement [287,321]
+at 2
+
+New cluster:
+MOVE from compound_statement [236,270]
+------------
+===
+move-tree
+---
+expression_statement [243,249]
+    assignment_expression [243,248]
+        identifier: b [243,244]
+        =: = [245,246]
+        identifier: c [247,248]
+    ;: ; [248,249]
+to
+compound_statement [236,270]
+at 2
+
+New cluster:
+MOVE from if_statement [174,219]
+------------
+===
+move-tree
+---
+parenthesized_expression [279,286]
+    (: ( [279,280]
+    binary_expression [280,285]
+        identifier: a [280,281]
+        >: > [282,283]
+        identifier: b [284,285]
+    ): ) [285,286]
+to
+if_statement [174,219]
+at 1
+
+New cluster:
+MOVE from compound_statement [185,219]
+------------
+===
+move-tree
+---
+expression_statement [192,198]
+    assignment_expression [192,197]
+        identifier: a [192,193]
+        =: = [194,195]
+        identifier: b [196,197]
+    ;: ; [197,198]
+to
+compound_statement [185,219]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [181,190]
+    assignment_expression [181,189]
+        identifier: b [181,182]
+        =: = [183,184]
+        identifier: temp [185,189]
+    ;: ; [189,190]
+to
+compound_statement [287,321]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [246,255]
+    assignment_expression [246,254]
+        identifier: c [246,247]
+        =: = [248,249]
+        identifier: temp [250,254]
+    ;: ; [254,255]
+to
+compound_statement [236,270]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [311,320]
+    assignment_expression [311,319]
+        identifier: b [311,312]
+        =: = [313,314]
+        identifier: temp [315,319]
+    ;: ; [319,320]
+to
+compound_statement [185,219]
+at 3
+
+New cluster:
+UPDATE from temp1 to a
+------------
+===
+update-node
+---
+identifier: temp1 [310,315]
+replace temp1 by a
+===
+update-node
+---
+identifier: temp1 [208,213]
+replace temp1 by a
+
+New cluster:
+UPDATE from temp2 to b
+------------
+===
+update-node
+---
+identifier: temp2 [259,264]
+replace temp2 by b
+
+New cluster:
+===
+delete-node
+---
+,: , [36,37]
+===
+------------
+===
+delete-node
+---
+,: , [36,37]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: temp2 [38,43]
+===
+------------
+===
+delete-node
+---
+identifier: temp2 [38,43]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [144,154]
+    assignment_expression [144,153]
+        identifier: temp1 [144,149]
+        =: = [150,151]
+        identifier: a [152,153]
+    ;: ; [153,154]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [158,168]
+    assignment_expression [158,167]
+        identifier: temp2 [158,163]
+        =: = [164,165]
+        identifier: b [166,167]
+    ;: ; [167,168]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [177,184]
+    (: ( [177,178]
+    binary_expression [178,183]
+        identifier: a [178,179]
+        >: > [180,181]
+        identifier: c [182,183]
+    ): ) [183,184]
+

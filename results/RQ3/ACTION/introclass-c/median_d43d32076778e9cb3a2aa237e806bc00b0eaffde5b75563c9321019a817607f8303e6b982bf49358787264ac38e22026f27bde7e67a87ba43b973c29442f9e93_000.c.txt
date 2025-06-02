@@ -1,0 +1,172 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [154,184]
+    (: ( [154,155]
+    binary_expression [155,183]
+        binary_expression [155,167]
+            identifier: int1 [155,159]
+            >=: >= [160,162]
+            identifier: int2 [163,167]
+        &&: && [168,170]
+        binary_expression [171,183]
+            identifier: int1 [171,175]
+            <=: <= [176,178]
+            identifier: int3 [179,183]
+    ): ) [183,184]
+to
+binary_expression [154,214]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [188,218]
+    (: ( [188,189]
+    binary_expression [189,217]
+        binary_expression [189,201]
+            identifier: int1 [189,193]
+            <=: <= [194,196]
+            identifier: int2 [197,201]
+        &&: && [202,204]
+        binary_expression [205,217]
+            identifier: int1 [205,209]
+            >=: >= [210,212]
+            identifier: int3 [213,217]
+    ): ) [217,218]
+to
+binary_expression [154,214]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [273,303]
+    (: ( [273,274]
+    binary_expression [274,302]
+        binary_expression [274,286]
+            identifier: int2 [274,278]
+            >=: >= [279,281]
+            identifier: int3 [282,286]
+        &&: && [287,289]
+        binary_expression [290,302]
+            identifier: int2 [290,294]
+            <=: <= [295,297]
+            identifier: int1 [298,302]
+    ): ) [302,303]
+to
+binary_expression [269,329]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [307,337]
+    (: ( [307,308]
+    binary_expression [308,336]
+        binary_expression [308,320]
+            identifier: int2 [308,312]
+            <=: <= [313,315]
+            identifier: int3 [316,320]
+        &&: && [321,323]
+        binary_expression [324,336]
+            identifier: int2 [324,328]
+            >=: >= [329,331]
+            identifier: int1 [332,336]
+    ): ) [336,337]
+to
+binary_expression [269,329]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [154,182]
+    (: ( [154,155]
+    binary_expression [155,181]
+        binary_expression [155,166]
+            identifier: int1 [155,159]
+            <: < [160,161]
+            identifier: int2 [162,166]
+        &&: && [167,169]
+        binary_expression [170,181]
+            identifier: int1 [170,174]
+            >: > [175,176]
+            identifier: int3 [177,181]
+    ): ) [181,182]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [186,214]
+    (: ( [186,187]
+    binary_expression [187,213]
+        binary_expression [187,198]
+            identifier: int1 [187,191]
+            >: > [192,193]
+            identifier: int2 [194,198]
+        &&: && [199,201]
+        binary_expression [202,213]
+            identifier: int1 [202,206]
+            <: < [207,208]
+            identifier: int3 [209,213]
+    ): ) [213,214]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [269,297]
+    (: ( [269,270]
+    binary_expression [270,296]
+        binary_expression [270,281]
+            identifier: int2 [270,274]
+            <: < [275,276]
+            identifier: int3 [277,281]
+        &&: && [282,284]
+        binary_expression [285,296]
+            identifier: int2 [285,289]
+            >: > [290,291]
+            identifier: int1 [292,296]
+    ): ) [296,297]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [301,329]
+    (: ( [301,302]
+    binary_expression [302,328]
+        binary_expression [302,313]
+            identifier: int2 [302,306]
+            >: > [307,308]
+            identifier: int3 [309,313]
+        &&: && [314,316]
+        binary_expression [317,328]
+            identifier: int2 [317,321]
+            <: < [322,323]
+            identifier: int1 [324,328]
+    ): ) [328,329]
+

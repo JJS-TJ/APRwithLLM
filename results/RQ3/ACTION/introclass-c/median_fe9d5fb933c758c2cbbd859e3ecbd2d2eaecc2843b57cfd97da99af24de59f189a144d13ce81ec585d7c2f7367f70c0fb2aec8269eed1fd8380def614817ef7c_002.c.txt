@@ -1,0 +1,25 @@
+New cluster:
+MOVE from compound_statement [186,228]
+------------
+===
+move-tree
+---
+expression_statement [193,206]
+    assignment_expression [193,205]
+        identifier: small [193,198]
+        =: = [199,200]
+        identifier: num2 [201,205]
+    ;: ; [205,206]
+to
+compound_statement [186,228]
+at 2
+
+New cluster:
+UPDATE from num2 to num1
+------------
+===
+update-node
+---
+identifier: num2 [266,270]
+replace num2 by num1
+

@@ -1,0 +1,258 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [150,168]
+    (: ( [150,151]
+    binary_expression [151,167]
+        binary_expression [151,157]
+            identifier: a [151,152]
+            <=: <= [153,155]
+            identifier: b [156,157]
+        &&: && [158,160]
+        binary_expression [161,167]
+            identifier: b [161,162]
+            <=: <= [163,165]
+            identifier: c [166,167]
+    ): ) [167,168]
+to
+binary_expression [150,186]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [172,190]
+    (: ( [172,173]
+    binary_expression [173,189]
+        binary_expression [173,179]
+            identifier: c [173,174]
+            <=: <= [175,177]
+            identifier: b [178,179]
+        &&: && [180,182]
+        binary_expression [183,189]
+            identifier: b [183,184]
+            <=: <= [185,187]
+            identifier: a [188,189]
+    ): ) [189,190]
+to
+binary_expression [150,186]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [237,255]
+    (: ( [237,238]
+    binary_expression [238,254]
+        binary_expression [238,244]
+            identifier: b [238,239]
+            <=: <= [240,242]
+            identifier: a [243,244]
+        &&: && [245,247]
+        binary_expression [248,254]
+            identifier: a [248,249]
+            <=: <= [250,252]
+            identifier: c [253,254]
+    ): ) [254,255]
+to
+binary_expression [233,269]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [259,277]
+    (: ( [259,260]
+    binary_expression [260,276]
+        binary_expression [260,266]
+            identifier: c [260,261]
+            <=: <= [262,264]
+            identifier: a [265,266]
+        &&: && [267,269]
+        binary_expression [270,276]
+            identifier: a [270,271]
+            <=: <= [272,274]
+            identifier: b [275,276]
+    ): ) [276,277]
+to
+binary_expression [233,269]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [324,342]
+    (: ( [324,325]
+    binary_expression [325,341]
+        binary_expression [325,331]
+            identifier: b [325,326]
+            <=: <= [327,329]
+            identifier: c [330,331]
+        &&: && [332,334]
+        binary_expression [335,341]
+            identifier: c [335,336]
+            <=: <= [337,339]
+            identifier: a [340,341]
+    ): ) [341,342]
+to
+binary_expression [316,352]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [346,364]
+    (: ( [346,347]
+    binary_expression [347,363]
+        binary_expression [347,353]
+            identifier: a [347,348]
+            <=: <= [349,351]
+            identifier: c [352,353]
+        &&: && [354,356]
+        binary_expression [357,363]
+            identifier: c [357,358]
+            <=: <= [359,361]
+            identifier: b [362,363]
+    ): ) [363,364]
+to
+binary_expression [316,352]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [150,166]
+    (: ( [150,151]
+    binary_expression [151,165]
+        binary_expression [151,156]
+            identifier: a [151,152]
+            <: < [153,154]
+            identifier: b [155,156]
+        &&: && [157,159]
+        binary_expression [160,165]
+            identifier: b [160,161]
+            <: < [162,163]
+            identifier: c [164,165]
+    ): ) [165,166]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [170,186]
+    (: ( [170,171]
+    binary_expression [171,185]
+        binary_expression [171,176]
+            identifier: b [171,172]
+            <: < [173,174]
+            identifier: a [175,176]
+        &&: && [177,179]
+        binary_expression [180,185]
+            identifier: c [180,181]
+            <: < [182,183]
+            identifier: b [184,185]
+    ): ) [185,186]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [233,249]
+    (: ( [233,234]
+    binary_expression [234,248]
+        binary_expression [234,239]
+            identifier: b [234,235]
+            <: < [236,237]
+            identifier: a [238,239]
+        &&: && [240,242]
+        binary_expression [243,248]
+            identifier: a [243,244]
+            <: < [245,246]
+            identifier: c [247,248]
+    ): ) [248,249]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [253,269]
+    (: ( [253,254]
+    binary_expression [254,268]
+        binary_expression [254,259]
+            identifier: a [254,255]
+            <: < [256,257]
+            identifier: b [258,259]
+        &&: && [260,262]
+        binary_expression [263,268]
+            identifier: c [263,264]
+            <: < [265,266]
+            identifier: a [267,268]
+    ): ) [268,269]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [316,332]
+    (: ( [316,317]
+    binary_expression [317,331]
+        binary_expression [317,322]
+            identifier: a [317,318]
+            <: < [319,320]
+            identifier: c [321,322]
+        &&: && [323,325]
+        binary_expression [326,331]
+            identifier: c [326,327]
+            <: < [328,329]
+            identifier: b [330,331]
+    ): ) [331,332]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [336,352]
+    (: ( [336,337]
+    binary_expression [337,351]
+        binary_expression [337,342]
+            identifier: b [337,338]
+            <: < [339,340]
+            identifier: c [341,342]
+        &&: && [343,345]
+        binary_expression [346,351]
+            identifier: c [346,347]
+            <: < [348,349]
+            identifier: a [350,351]
+    ): ) [351,352]
+

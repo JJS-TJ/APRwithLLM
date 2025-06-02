@@ -1,0 +1,94 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [220,230]
+    assignment_expression [220,229]
+        identifier: a [220,221]
+        =: = [222,223]
+        identifier: temp1 [224,229]
+    ;: ; [229,230]
+to
+compound_statement [185,219]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [287,297]
+    assignment_expression [287,296]
+        identifier: b [287,288]
+        =: = [289,290]
+        identifier: temp2 [291,296]
+    ;: ; [296,297]
+to
+compound_statement [236,270]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [354,364]
+    assignment_expression [354,363]
+        identifier: a [354,355]
+        =: = [356,357]
+        identifier: temp1 [358,363]
+    ;: ; [363,364]
+to
+compound_statement [287,321]
+at 3
+
+New cluster:
+UPDATE from a to temp1
+------------
+===
+update-node
+---
+identifier: a [192,193]
+replace a by temp1
+===
+update-node
+---
+identifier: a [294,295]
+replace a by temp1
+
+New cluster:
+UPDATE from temp1 to a
+------------
+===
+update-node
+---
+identifier: temp1 [310,315]
+replace temp1 by a
+===
+update-node
+---
+identifier: temp1 [208,213]
+replace temp1 by a
+
+New cluster:
+UPDATE from b to temp2
+------------
+===
+update-node
+---
+identifier: b [243,244]
+replace b by temp2
+
+New cluster:
+UPDATE from temp2 to b
+------------
+===
+update-node
+---
+identifier: temp2 [259,264]
+replace temp2 by b
+

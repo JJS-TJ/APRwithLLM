@@ -1,0 +1,73 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [190,219]
+    call_expression [190,218]
+        identifier: fgets [190,195]
+        argument_list [195,218]
+            (: ( [195,196]
+            identifier: string [196,202]
+            ,: , [202,203]
+            number_literal: 100000 [204,210]
+            ,: , [210,211]
+            identifier: stdin [212,217]
+            ): ) [217,218]
+    ;: ; [218,219]
+to
+compound_statement [15,531]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [223,257]
+    assignment_expression [223,256]
+        subscript_expression [223,249]
+            identifier: string [223,229]
+            [: [ [229,230]
+            binary_expression [230,248]
+                call_expression [230,244]
+                    identifier: strlen [230,236]
+                    argument_list [236,244]
+                        (: ( [236,237]
+                        identifier: string [237,243]
+                        ): ) [243,244]
+                -: - [245,246]
+                number_literal: 1 [247,248]
+            ]: ] [248,249]
+        =: = [250,251]
+        char_literal [252,256]
+            ': ' [252,253]
+            escape_sequence: \0 [253,255]
+            ': ' [255,256]
+    ;: ; [256,257]
+to
+compound_statement [15,531]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [190,210]
+    call_expression [190,209]
+        identifier: scanf [190,195]
+        argument_list [195,209]
+            (: ( [195,196]
+            string_literal [196,200]
+                ": " [196,197]
+                string_content: %s [197,199]
+                ": " [199,200]
+            ,: , [200,201]
+            identifier: string [202,208]
+            ): ) [208,209]
+    ;: ; [209,210]
+

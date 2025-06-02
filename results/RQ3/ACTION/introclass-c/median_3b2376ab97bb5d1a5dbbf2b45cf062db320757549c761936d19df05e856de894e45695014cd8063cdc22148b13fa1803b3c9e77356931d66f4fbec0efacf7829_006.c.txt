@@ -1,0 +1,22 @@
+New cluster:
+UPDATE from %d IS the median to %d is the median
+------------
+===
+update-node
+---
+string_content: %d IS the median [539,555]
+replace %d IS the median by %d is the median
+
+New cluster:
+===
+delete-node
+---
+comment:   //**/ [573,579]
+===
+------------
+===
+delete-node
+---
+comment:   //**/ [573,579]
+===
+

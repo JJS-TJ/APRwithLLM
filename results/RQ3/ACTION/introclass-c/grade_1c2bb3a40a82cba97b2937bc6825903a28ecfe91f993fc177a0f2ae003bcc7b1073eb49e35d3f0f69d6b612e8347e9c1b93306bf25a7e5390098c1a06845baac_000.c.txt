@@ -1,0 +1,87 @@
+New cluster:
+===
+insert-node
+---
+if_statement [468,578]
+to
+else_clause [465,510]
+at 1
+------------
+===
+insert-node
+---
+if: if [468,470]
+to
+if_statement [468,578]
+at 0
+===
+insert-node
+---
+if_statement [468,578]
+to
+else_clause [465,510]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [471,479]
+    (: ( [471,472]
+    binary_expression [472,478]
+        identifier: e [472,473]
+        >=: >= [474,476]
+        identifier: d [477,478]
+    ): ) [478,479]
+to
+if_statement [468,578]
+at 1
+
+New cluster:
+MOVE from if_statement [468,578]
+------------
+===
+move-tree
+---
+expression_statement [475,510]
+    call_expression [475,509]
+        identifier: printf [475,481]
+        argument_list [481,509]
+            (: ( [481,482]
+            string_literal [482,508]
+                ": " [482,483]
+                string_content: Student has an D grade [483,505]
+                escape_sequence: \n [505,507]
+                ": " [507,508]
+            ): ) [508,509]
+    ;: ; [509,510]
+to
+if_statement [468,578]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+else_clause [526,578]
+    else: else [526,530]
+    expression_statement [536,578]
+        call_expression [536,577]
+            identifier: printf [536,542]
+            argument_list [542,577]
+                (: ( [542,543]
+                string_literal [543,576]
+                    ": " [543,544]
+                    string_content: Student has failed the course [544,573]
+                    escape_sequence: \n [573,575]
+                    ": " [575,576]
+                ): ) [576,577]
+        ;: ; [577,578]
+to
+if_statement [468,578]
+at 3
+

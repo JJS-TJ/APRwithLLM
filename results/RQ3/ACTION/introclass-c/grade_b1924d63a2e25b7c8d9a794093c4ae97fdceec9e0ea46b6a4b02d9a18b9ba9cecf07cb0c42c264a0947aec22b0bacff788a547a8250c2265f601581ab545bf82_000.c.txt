@@ -1,0 +1,174 @@
+New cluster:
+MOVE from parenthesized_expression [352,381]
+------------
+===
+move-tree
+---
+parenthesized_expression [353,365]
+    (: ( [353,354]
+    binary_expression [354,364]
+        identifier: score [354,359]
+        >=: >= [360,362]
+        identifier: b [363,364]
+    ): ) [364,365]
+to
+parenthesized_expression [352,381]
+at 1
+
+New cluster:
+MOVE from parenthesized_expression [438,467]
+------------
+===
+move-tree
+---
+parenthesized_expression [439,451]
+    (: ( [439,440]
+    binary_expression [440,450]
+        identifier: score [440,445]
+        >=: >= [446,448]
+        identifier: c [449,450]
+    ): ) [450,451]
+to
+parenthesized_expression [438,467]
+at 1
+
+New cluster:
+UPDATE from Student has an A grade to Student has an B grade
+------------
+===
+update-node
+---
+string_content: Student has an A grade [397,419]
+replace Student has an A grade by Student has an B grade
+
+New cluster:
+MOVE from parenthesized_expression [524,553]
+------------
+===
+move-tree
+---
+parenthesized_expression [525,537]
+    (: ( [525,526]
+    binary_expression [526,536]
+        identifier: score [526,531]
+        >=: >= [532,534]
+        identifier: d [535,536]
+    ): ) [536,537]
+to
+parenthesized_expression [524,553]
+at 1
+
+New cluster:
+UPDATE from Student has an A grade to Student has an C grade
+------------
+===
+update-node
+---
+string_content: Student has an A grade [483,505]
+replace Student has an A grade by Student has an C grade
+
+New cluster:
+UPDATE from Student has an A grade to Student has an D grade
+------------
+===
+update-node
+---
+string_content: Student has an A grade [569,591]
+replace Student has an A grade by Student has an D grade
+
+New cluster:
+===
+delete-node
+---
+binary_expression [353,380]
+===
+------------
+===
+delete-node
+---
+binary_expression [353,380]
+===
+===
+delete-node
+---
+&&: && [366,368]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [369,380]
+    (: ( [369,370]
+    binary_expression [370,379]
+        identifier: score [370,375]
+        >: > [376,377]
+        identifier: a [378,379]
+    ): ) [379,380]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [439,466]
+===
+------------
+===
+delete-node
+---
+&&: && [452,454]
+===
+===
+delete-node
+---
+binary_expression [439,466]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [455,466]
+    (: ( [455,456]
+    binary_expression [456,465]
+        identifier: score [456,461]
+        <: < [462,463]
+        identifier: b [464,465]
+    ): ) [465,466]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [525,552]
+===
+------------
+===
+delete-node
+---
+binary_expression [525,552]
+===
+===
+delete-node
+---
+&&: && [538,540]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [541,552]
+    (: ( [541,542]
+    binary_expression [542,551]
+        identifier: score [542,547]
+        <: < [548,549]
+        identifier: c [550,551]
+    ): ) [551,552]
+

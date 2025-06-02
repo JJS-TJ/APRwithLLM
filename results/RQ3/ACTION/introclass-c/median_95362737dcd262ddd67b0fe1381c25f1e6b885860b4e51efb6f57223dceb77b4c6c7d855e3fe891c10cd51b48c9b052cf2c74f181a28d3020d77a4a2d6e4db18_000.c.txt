@@ -1,0 +1,285 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [140,162]
+    (: ( [140,141]
+    binary_expression [141,161]
+        binary_expression [141,149]
+            identifier: n1 [141,143]
+            >=: >= [144,146]
+            identifier: n2 [147,149]
+        &&: && [150,152]
+        binary_expression [153,161]
+            identifier: n1 [153,155]
+            <=: <= [156,158]
+            identifier: n3 [159,161]
+    ): ) [161,162]
+to
+binary_expression [141,205]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [166,188]
+    (: ( [166,167]
+    binary_expression [167,187]
+        binary_expression [167,175]
+            identifier: n1 [167,169]
+            <=: <= [170,172]
+            identifier: n2 [173,175]
+        &&: && [176,178]
+        binary_expression [179,187]
+            identifier: n1 [179,181]
+            >=: >= [182,184]
+            identifier: n3 [185,187]
+    ): ) [187,188]
+to
+binary_expression [141,205]
+at 3
+
+New cluster:
+UPDATE from Please eneter 3 numbers separated by spaces >  to Please enter 3 numbers separated by spaces > 
+------------
+===
+update-node
+---
+string_content: Please eneter 3 numbers separated by spaces >  [49,95]
+replace Please eneter 3 numbers separated by spaces >  by Please enter 3 numbers separated by spaces > 
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [241,263]
+    (: ( [241,242]
+    binary_expression [242,262]
+        binary_expression [242,250]
+            identifier: n2 [242,244]
+            >=: >= [245,247]
+            identifier: n1 [248,250]
+        &&: && [251,253]
+        binary_expression [254,262]
+            identifier: n2 [254,256]
+            <=: <= [257,259]
+            identifier: n3 [260,262]
+    ): ) [262,263]
+to
+binary_expression [258,310]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [267,289]
+    (: ( [267,268]
+    binary_expression [268,288]
+        binary_expression [268,276]
+            identifier: n2 [268,270]
+            <=: <= [271,273]
+            identifier: n1 [274,276]
+        &&: && [277,279]
+        binary_expression [280,288]
+            identifier: n2 [280,282]
+            >=: >= [283,285]
+            identifier: n3 [286,288]
+    ): ) [288,289]
+to
+binary_expression [258,310]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [342,364]
+    (: ( [342,343]
+    binary_expression [343,363]
+        binary_expression [343,351]
+            identifier: n3 [343,345]
+            >=: >= [346,348]
+            identifier: n1 [349,351]
+        &&: && [352,354]
+        binary_expression [355,363]
+            identifier: n3 [355,357]
+            <=: <= [358,360]
+            identifier: n2 [361,363]
+    ): ) [363,364]
+to
+binary_expression [363,381]
+at 0
+
+New cluster:
+===
+insert-node
+---
+||: || [365,367]
+to
+binary_expression [363,381]
+at 1
+------------
+===
+insert-node
+---
+||: || [365,367]
+to
+binary_expression [363,381]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [368,390]
+    (: ( [368,369]
+    binary_expression [369,389]
+        binary_expression [369,377]
+            identifier: n3 [369,371]
+            <=: <= [372,374]
+            identifier: n1 [375,377]
+        &&: && [378,380]
+        binary_expression [381,389]
+            identifier: n3 [381,383]
+            >=: >= [384,386]
+            identifier: n2 [387,389]
+    ): ) [389,390]
+to
+binary_expression [363,381]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [141,183]
+    binary_expression [141,161]
+        binary_expression [141,149]
+            identifier: n1 [141,143]
+            ==: == [144,146]
+            identifier: n2 [147,149]
+        ||: || [150,152]
+        binary_expression [153,161]
+            identifier: n1 [153,155]
+            ==: == [156,158]
+            identifier: n3 [159,161]
+    ||: || [162,164]
+    binary_expression [165,183]
+        binary_expression [165,172]
+            identifier: n2 [165,167]
+            <: < [168,169]
+            identifier: n1 [170,172]
+        &&: && [173,175]
+        binary_expression [176,183]
+            identifier: n1 [176,178]
+            <: < [179,180]
+            identifier: n3 [181,183]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [187,205]
+    binary_expression [187,194]
+        identifier: n3 [187,189]
+        <: < [190,191]
+        identifier: n1 [192,194]
+    &&: && [195,197]
+    binary_expression [198,205]
+        identifier: n1 [198,200]
+        <: < [201,202]
+        identifier: n2 [203,205]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [258,288]
+    binary_expression [258,266]
+        identifier: n2 [258,260]
+        ==: == [261,263]
+        identifier: n3 [264,266]
+    ||: || [267,269]
+    binary_expression [270,288]
+        binary_expression [270,277]
+            identifier: n1 [270,272]
+            <: < [273,274]
+            identifier: n2 [275,277]
+        &&: && [278,280]
+        binary_expression [281,288]
+            identifier: n2 [281,283]
+            <: < [284,285]
+            identifier: n3 [286,288]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [292,310]
+    binary_expression [292,299]
+        identifier: n3 [292,294]
+        <: < [295,296]
+        identifier: n2 [297,299]
+    &&: && [300,302]
+    binary_expression [303,310]
+        identifier: n2 [303,305]
+        <: < [306,307]
+        identifier: n1 [308,310]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [363,370]
+    identifier: n1 [363,365]
+    <: < [366,367]
+    identifier: n3 [368,370]
+
+New cluster:
+===
+delete-node
+---
+&&: && [371,373]
+===
+------------
+===
+delete-node
+---
+&&: && [371,373]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [374,381]
+    identifier: n3 [374,376]
+    <: < [377,378]
+    identifier: n2 [379,381]
+

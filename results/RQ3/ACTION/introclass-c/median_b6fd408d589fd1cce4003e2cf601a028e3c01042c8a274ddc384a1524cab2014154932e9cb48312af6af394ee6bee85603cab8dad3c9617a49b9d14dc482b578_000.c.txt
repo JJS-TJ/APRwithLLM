@@ -1,0 +1,197 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [205,270]
+    if: if [205,207]
+    parenthesized_expression [208,217]
+        (: ( [208,209]
+        binary_expression [209,216]
+            identifier: n3 [209,211]
+            <: < [212,213]
+            identifier: n1 [214,216]
+        ): ) [216,217]
+    compound_statement [218,270]
+        {: { [218,219]
+        expression_statement [225,235]
+            assignment_expression [225,234]
+                identifier: temp [225,229]
+                =: = [230,231]
+                identifier: n3 [232,234]
+            ;: ; [234,235]
+        expression_statement [241,249]
+            assignment_expression [241,248]
+                identifier: n3 [241,243]
+                =: = [244,245]
+                identifier: n1 [246,248]
+            ;: ; [248,249]
+        expression_statement [255,265]
+            assignment_expression [255,264]
+                identifier: n1 [255,257]
+                =: = [258,259]
+                identifier: temp [260,264]
+            ;: ; [264,265]
+        }: } [269,270]
+to
+compound_statement [14,341]
+at 5
+
+New cluster:
+===
+insert-node
+---
+if_statement [274,339]
+to
+compound_statement [14,341]
+at 6
+------------
+===
+insert-node
+---
+if: if [274,276]
+to
+if_statement [274,339]
+at 0
+===
+insert-node
+---
+if_statement [274,339]
+to
+compound_statement [14,341]
+at 6
+
+New cluster:
+MOVE from if_statement [274,339]
+------------
+===
+move-tree
+---
+parenthesized_expression [212,221]
+    (: ( [212,213]
+    binary_expression [213,220]
+        identifier: n3 [213,215]
+        <: < [216,217]
+        identifier: n2 [218,220]
+    ): ) [220,221]
+to
+if_statement [274,339]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+compound_statement [287,339]
+    {: { [287,288]
+    expression_statement [294,304]
+        assignment_expression [294,303]
+            identifier: temp [294,298]
+            =: = [299,300]
+            identifier: n3 [301,303]
+        ;: ; [303,304]
+    expression_statement [310,318]
+        assignment_expression [310,317]
+            identifier: n3 [310,312]
+            =: = [313,314]
+            identifier: n2 [315,317]
+        ;: ; [317,318]
+    expression_statement [324,334]
+        assignment_expression [324,333]
+            identifier: n2 [324,326]
+            =: = [327,328]
+            identifier: temp [329,333]
+        ;: ; [333,334]
+    }: } [338,339]
+to
+if_statement [274,339]
+at 2
+
+New cluster:
+===
+delete-node
+---
+if_statement [208,288]
+===
+------------
+===
+delete-node
+---
+if_statement [208,288]
+===
+===
+delete-node
+---
+): ) [234,235]
+===
+===
+delete-node
+---
+if: if [208,210]
+===
+===
+delete-node
+---
+parenthesized_expression [211,235]
+===
+===
+delete-node
+---
+&&: && [222,224]
+===
+===
+delete-node
+---
+binary_expression [212,234]
+===
+===
+delete-node
+---
+(: ( [211,212]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [225,234]
+    (: ( [225,226]
+    binary_expression [226,233]
+        identifier: n3 [226,228]
+        >: > [229,230]
+        identifier: n1 [231,233]
+    ): ) [233,234]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+compound_statement [236,288]
+    {: { [236,237]
+    expression_statement [243,253]
+        assignment_expression [243,252]
+            identifier: temp [243,247]
+            =: = [248,249]
+            identifier: n2 [250,252]
+        ;: ; [252,253]
+    expression_statement [259,267]
+        assignment_expression [259,266]
+            identifier: n2 [259,261]
+            =: = [262,263]
+            identifier: n3 [264,266]
+        ;: ; [266,267]
+    expression_statement [273,283]
+        assignment_expression [273,282]
+            identifier: n3 [273,275]
+            =: = [276,277]
+            identifier: temp [278,282]
+        ;: ; [282,283]
+    }: } [287,288]
+

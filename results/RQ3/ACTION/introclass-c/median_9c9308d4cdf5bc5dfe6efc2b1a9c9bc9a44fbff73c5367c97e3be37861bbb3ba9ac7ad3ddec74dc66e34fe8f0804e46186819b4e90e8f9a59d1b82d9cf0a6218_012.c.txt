@@ -1,0 +1,240 @@
+New cluster:
+UPDATE from   if (n1 >= n2 || n1 >= n3)            // to   if (n1 >= n2)                        //
+------------
+===
+update-node
+---
+comment:   if (n1 >= n2 || n1 >= n3)            // [191,194]
+replace   if (n1 >= n2 || n1 >= n3)            // by   if (n1 >= n2)                        //
+
+New cluster:
+MOVE from parenthesized_expression [157,179]
+------------
+===
+move-tree
+---
+binary_expression [158,166]
+    identifier: n1 [158,160]
+    >=: >= [161,163]
+    identifier: n2 [164,166]
+to
+parenthesized_expression [157,179]
+at 1
+===
+move-tree
+---
+binary_expression [170,178]
+    identifier: n1 [170,172]
+    >=: >= [173,175]
+    identifier: n3 [176,178]
+to
+parenthesized_expression [207,229]
+at 1
+
+New cluster:
+UPDATE from       median = n3;     // to       median = n1;     //
+------------
+===
+update-node
+---
+comment:       median = n3;     // [331,334]
+replace       median = n3;     // by       median = n1;     //
+
+New cluster:
+UPDATE from     if (n2 >= n3 && n1 >= n2) // to     if (n1 >= n3) //
+------------
+===
+update-node
+---
+comment:     if (n2 >= n3 && n1 >= n2) // [230,233]
+replace     if (n2 >= n3 && n1 >= n2) // by     if (n1 >= n3) //
+
+New cluster:
+===
+insert-node
+---
+compound_statement [226,311]
+to
+if_statement [204,326]
+at 3
+------------
+===
+insert-node
+---
+compound_statement [226,311]
+to
+if_statement [204,326]
+at 3
+===
+insert-node
+---
+{: { [226,227]
+to
+compound_statement [226,311]
+at 0
+===
+insert-node
+---
+}: } [310,311]
+to
+compound_statement [226,311]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+compound_statement [374,449]
+    {: { [374,375]
+    if_statement [381,444]
+        if: if [381,383]
+        parenthesized_expression [384,394]
+            (: ( [384,385]
+            binary_expression [385,393]
+                identifier: n1 [385,387]
+                >=: >= [388,390]
+                identifier: n3 [391,393]
+            ): ) [393,394]
+        expression_statement [402,414]
+            assignment_expression [402,413]
+                identifier: median [402,408]
+                =: = [409,410]
+                identifier: n1 [411,413]
+            ;: ; [413,414]
+        else_clause [420,444]
+            else: else [420,424]
+            expression_statement [432,444]
+                assignment_expression [432,443]
+                    identifier: median [432,438]
+                    =: = [439,440]
+                    identifier: n3 [441,443]
+                ;: ; [443,444]
+    }: } [448,449]
+to
+if_statement [344,404]
+at 3
+
+New cluster:
+MOVE from compound_statement [226,311]
+------------
+===
+move-tree
+---
+if_statement [263,326]
+    if: if [263,265]
+    parenthesized_expression [266,276]
+        (: ( [266,267]
+        binary_expression [267,275]
+            identifier: n2 [267,269]
+            >=: >= [270,272]
+            identifier: n1 [273,275]
+        ): ) [275,276]
+    expression_statement [284,296]
+        assignment_expression [284,295]
+            identifier: median [284,290]
+            =: = [291,292]
+            identifier: n1 [293,295]
+        ;: ; [295,296]
+    else_clause [302,326]
+        else: else [302,306]
+        expression_statement [314,326]
+            assignment_expression [314,325]
+                identifier: median [314,320]
+                =: = [321,322]
+                identifier: n3 [323,325]
+            ;: ; [325,326]
+to
+compound_statement [226,311]
+at 1
+
+New cluster:
+MOVE from else_clause [258,326]
+------------
+===
+move-tree
+---
+expression_statement [284,296]
+    assignment_expression [284,295]
+        identifier: median [284,290]
+        =: = [291,292]
+        identifier: n1 [293,295]
+    ;: ; [295,296]
+to
+else_clause [258,326]
+at 1
+
+New cluster:
+MOVE from if_statement [263,326]
+------------
+===
+move-tree
+---
+expression_statement [240,252]
+    assignment_expression [240,251]
+        identifier: median [240,246]
+        =: = [247,248]
+        identifier: n2 [249,251]
+    ;: ; [251,252]
+to
+if_statement [263,326]
+at 2
+
+New cluster:
+UPDATE from n1 to n3
+------------
+===
+update-node
+---
+identifier: n1 [273,275]
+replace n1 by n3
+
+New cluster:
+===
+delete-node
+---
+binary_expression [158,178]
+===
+------------
+===
+delete-node
+---
+binary_expression [158,178]
+===
+===
+delete-node
+---
+||: || [167,169]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [208,228]
+    binary_expression [208,216]
+        identifier: n2 [208,210]
+        >=: >= [211,213]
+        identifier: n3 [214,216]
+    &&: && [217,219]
+    binary_expression [220,228]
+        identifier: n1 [220,222]
+        >=: >= [223,225]
+        identifier: n2 [226,228]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [366,378]
+    assignment_expression [366,377]
+        identifier: median [366,372]
+        =: = [373,374]
+        identifier: n3 [375,377]
+    ;: ; [377,378]
+

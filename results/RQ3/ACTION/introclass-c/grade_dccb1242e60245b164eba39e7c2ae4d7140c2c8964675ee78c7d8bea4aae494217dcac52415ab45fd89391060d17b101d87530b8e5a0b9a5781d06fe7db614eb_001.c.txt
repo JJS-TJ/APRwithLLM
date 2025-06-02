@@ -1,0 +1,130 @@
+New cluster:
+===
+insert-node
+---
+escape_sequence: \n [343,345]
+to
+string_literal [326,350]
+at 2
+------------
+===
+insert-node
+---
+escape_sequence: \n [343,345]
+to
+string_literal [326,350]
+at 2
+
+New cluster:
+UPDATE from Studetn has an C grade to Student has an C grade
+------------
+===
+update-node
+---
+string_content: Studetn has an C grade [489,511]
+replace Studetn has an C grade by Student has an C grade
+
+New cluster:
+===
+delete-node
+---
+comment:   // [55,58]
+===
+------------
+===
+delete-node
+---
+comment:   // [55,58]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   // [669,672]
+===
+------------
+===
+delete-node
+---
+comment:   // [669,672]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   // [675,678]
+===
+------------
+===
+delete-node
+---
+comment:   // [675,678]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   // [681,684]
+===
+------------
+===
+delete-node
+---
+comment:   // [681,684]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   // [687,690]
+===
+------------
+===
+delete-node
+---
+comment:   // [687,690]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   // [693,696]
+===
+------------
+===
+delete-node
+---
+comment:   // [693,696]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   // [699,702]
+===
+------------
+===
+delete-node
+---
+comment:   // [699,702]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   // [705,708]
+===
+------------
+===
+delete-node
+---
+comment:   // [705,708]
+===
+

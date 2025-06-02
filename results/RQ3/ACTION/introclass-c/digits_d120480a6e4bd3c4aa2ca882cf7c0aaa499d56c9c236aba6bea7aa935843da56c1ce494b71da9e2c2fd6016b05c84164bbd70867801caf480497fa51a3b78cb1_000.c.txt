@@ -1,0 +1,223 @@
+New cluster:
+===
+insert-node
+---
+if_statement [97,335]
+to
+compound_statement [15,303]
+at 4
+------------
+===
+insert-node
+---
+else: else [136,140]
+to
+else_clause [136,335]
+at 0
+===
+insert-node
+---
+{: { [141,142]
+to
+compound_statement [141,335]
+at 0
+===
+insert-node
+---
+else_clause [136,335]
+to
+if_statement [97,335]
+at 3
+===
+insert-node
+---
+}: } [334,335]
+to
+compound_statement [141,335]
+at 2
+===
+insert-node
+---
+if_statement [97,335]
+to
+compound_statement [15,303]
+at 4
+===
+insert-node
+---
+if: if [97,99]
+to
+if_statement [97,335]
+at 0
+===
+insert-node
+---
+compound_statement [141,335]
+to
+else_clause [136,335]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [100,108]
+    (: ( [100,101]
+    binary_expression [101,107]
+        identifier: n [101,102]
+        ==: == [103,105]
+        number_literal: 0 [106,107]
+    ): ) [107,108]
+to
+if_statement [97,335]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+compound_statement [109,135]
+    {: { [109,110]
+    expression_statement [116,130]
+        call_expression [116,129]
+            identifier: printf [116,122]
+            argument_list [122,129]
+                (: ( [122,123]
+                string_literal [123,128]
+                    ": " [123,124]
+                    string_content: 0 [124,125]
+                    escape_sequence: \n [125,127]
+                    ": " [127,128]
+                ): ) [128,129]
+        ;: ; [129,130]
+    }: } [134,135]
+to
+if_statement [97,335]
+at 2
+
+New cluster:
+MOVE from compound_statement [141,335]
+------------
+===
+move-tree
+---
+while_statement [117,285]
+    while: while [117,122]
+    parenthesized_expression [123,131]
+        (: ( [123,124]
+        binary_expression [124,130]
+            identifier: n [124,125]
+            !=: != [126,128]
+            number_literal: 0 [129,130]
+        ): ) [130,131]
+    compound_statement [132,285]
+        {: { [132,133]
+        expression_statement [139,154]
+            assignment_expression [139,153]
+                identifier: digit [139,144]
+                =: = [145,146]
+                binary_expression [147,153]
+                    identifier: n [147,148]
+                    %: % [149,150]
+                    number_literal: 10 [151,153]
+            ;: ; [153,154]
+        expression_statement [160,171]
+            assignment_expression [160,170]
+                identifier: n [160,161]
+                =: = [162,163]
+                binary_expression [164,170]
+                    identifier: n [164,165]
+                    /: / [166,167]
+                    number_literal: 10 [168,170]
+            ;: ; [170,171]
+        if_statement [177,280]
+            if: if [177,179]
+            parenthesized_expression [180,205]
+                (: ( [180,181]
+                binary_expression [181,204]
+                    parenthesized_expression [181,192]
+                        (: ( [181,182]
+                        binary_expression [182,191]
+                            identifier: digit [182,187]
+                            <: < [188,189]
+                            number_literal: 0 [190,191]
+                        ): ) [191,192]
+                    &&: && [193,195]
+                    parenthesized_expression [196,204]
+                        (: ( [196,197]
+                        binary_expression [197,203]
+                            identifier: n [197,198]
+                            ==: == [199,201]
+                            number_literal: 0 [202,203]
+                        ): ) [203,204]
+                ): ) [204,205]
+            expression_statement [213,235]
+                call_expression [213,234]
+                    identifier: printf [213,219]
+                    argument_list [219,234]
+                        (: ( [219,220]
+                        string_literal [220,226]
+                            ": " [220,221]
+                            string_content: %d [221,223]
+                            escape_sequence: \n [223,225]
+                            ": " [225,226]
+                        ,: , [226,227]
+                        identifier: digit [228,233]
+                        ): ) [233,234]
+                ;: ; [234,235]
+            else_clause [241,280]
+                else: else [241,245]
+                expression_statement [253,280]
+                    call_expression [253,279]
+                        identifier: printf [253,259]
+                        argument_list [259,279]
+                            (: ( [259,260]
+                            string_literal [260,266]
+                                ": " [260,261]
+                                string_content: %d [261,263]
+                                escape_sequence: \n [263,265]
+                                ": " [265,266]
+                            ,: , [266,267]
+                            call_expression [268,278]
+                                identifier: abs [268,271]
+                                argument_list [271,278]
+                                    (: ( [271,272]
+                                    identifier: digit [272,277]
+                                    ): ) [277,278]
+                            ): ) [278,279]
+                    ;: ; [279,280]
+        }: } [284,285]
+to
+compound_statement [141,335]
+at 1
+
+New cluster:
+===
+delete-node
+---
+comment:   //**/ [97,103]
+===
+------------
+===
+delete-node
+---
+comment:   //**/ [97,103]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   //**/ [108,114]
+===
+------------
+===
+delete-node
+---
+comment:   //**/ [108,114]
+===
+

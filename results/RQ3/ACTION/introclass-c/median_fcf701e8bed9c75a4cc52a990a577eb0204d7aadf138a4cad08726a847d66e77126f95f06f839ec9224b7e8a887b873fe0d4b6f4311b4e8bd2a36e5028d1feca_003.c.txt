@@ -1,0 +1,1091 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_include [0,20]
+    #include: #include [0,8]
+    system_lib_string: <stdio.h> [9,18]
+to
+translation_unit [0,832]
+at 0
+
+New cluster:
+MOVE from binary_expression [152,192]
+------------
+===
+move-tree
+---
+parenthesized_expression [140,158]
+    (: ( [140,141]
+    binary_expression [141,157]
+        binary_expression [141,147]
+            identifier: a [141,142]
+            <=: <= [143,145]
+            identifier: b [146,147]
+        &&: && [148,150]
+        binary_expression [151,157]
+            identifier: a [151,152]
+            <=: <= [153,155]
+            identifier: c [156,157]
+    ): ) [157,158]
+to
+binary_expression [152,192]
+at 0
+===
+move-tree
+---
+compound_statement [159,356]
+    {: { [159,160]
+    if_statement [166,327]
+        if: if [166,168]
+        parenthesized_expression [169,176]
+            (: ( [169,170]
+            binary_expression [170,175]
+                identifier: b [170,171]
+                <: < [172,173]
+                identifier: c [174,175]
+            ): ) [175,176]
+        compound_statement [177,249]
+            {: { [177,178]
+            expression_statement [186,218]
+                call_expression [186,217]
+                    identifier: printf [186,192]
+                    argument_list [192,217]
+                        (: ( [192,193]
+                        string_literal [193,213]
+                            ": " [193,194]
+                            string_content: %d is the median [194,210]
+                            escape_sequence: \n [210,212]
+                            ": " [212,213]
+                        ,: , [213,214]
+                        identifier: b [215,216]
+                        ): ) [216,217]
+                ;: ; [217,218]
+            comment:       // [226,229]
+            break_statement [236,242]
+                break: break [236,241]
+                ;: ; [241,242]
+            }: } [248,249]
+        else_clause [250,327]
+            else: else [250,254]
+            compound_statement [255,327]
+                {: { [255,256]
+                expression_statement [264,296]
+                    call_expression [264,295]
+                        identifier: printf [264,270]
+                        argument_list [270,295]
+                            (: ( [270,271]
+                            string_literal [271,291]
+                                ": " [271,272]
+                                string_content: %d is the median [272,288]
+                                escape_sequence: \n [288,290]
+                                ": " [290,291]
+                            ,: , [291,292]
+                            identifier: c [293,294]
+                            ): ) [294,295]
+                    ;: ; [295,296]
+                comment:       // [304,307]
+                break_statement [314,320]
+                    break: break [314,319]
+                    ;: ; [319,320]
+                }: } [326,327]
+    comment:     // [333,336]
+    comment:     // [341,344]
+    comment:     // [349,352]
+    }: } [355,356]
+to
+function_definition [0,832]
+at 2
+
+New cluster:
+MOVE from compound_statement [159,356]
+------------
+===
+move-tree
+---
+declaration [18,30]
+    primitive_type: int [18,21]
+    identifier: a [22,23]
+    ,: , [23,24]
+    identifier: b [25,26]
+    ,: , [26,27]
+    identifier: c [28,29]
+    ;: ; [29,30]
+to
+compound_statement [159,356]
+at 1
+===
+move-tree
+---
+expression_statement [34,90]
+    call_expression [34,89]
+        identifier: printf [34,40]
+        argument_list [40,89]
+            (: ( [40,41]
+            string_literal [41,88]
+                ": " [41,42]
+                string_content: Please enter 3 numbers separated by spaces >  [42,87]
+                ": " [87,88]
+            ): ) [88,89]
+    ;: ; [89,90]
+to
+compound_statement [159,356]
+at 2
+===
+move-tree
+---
+return_statement [820,829]
+    return: return [820,826]
+    number_literal: 0 [827,828]
+    ;: ; [828,829]
+to
+compound_statement [159,356]
+at 5
+===
+move-tree
+---
+expression_statement [94,122]
+    call_expression [94,121]
+        identifier: scanf [94,99]
+        argument_list [99,121]
+            (: ( [99,100]
+            string_literal [100,108]
+                ": " [100,101]
+                string_content: %d%d%d [101,107]
+                ": " [107,108]
+            ,: , [108,109]
+            pointer_expression [110,112]
+                &: & [110,111]
+                identifier: a [111,112]
+            ,: , [112,113]
+            pointer_expression [114,116]
+                &: & [114,115]
+                identifier: b [115,116]
+            ,: , [116,117]
+            pointer_expression [118,120]
+                &: & [118,119]
+                identifier: c [119,120]
+            ): ) [120,121]
+    ;: ; [121,122]
+to
+compound_statement [159,356]
+at 3
+
+New cluster:
+===
+insert-node
+---
+if_statement [148,430]
+to
+compound_statement [159,356]
+at 4
+------------
+===
+insert-node
+---
+binary_expression [175,191]
+to
+parenthesized_expression [174,192]
+at 1
+===
+insert-node
+---
+): ) [191,192]
+to
+parenthesized_expression [174,192]
+at 2
+===
+insert-node
+---
+): ) [192,193]
+to
+parenthesized_expression [151,193]
+at 2
+===
+insert-node
+---
+else: else [239,243]
+to
+else_clause [239,430]
+at 0
+===
+insert-node
+---
+(: ( [151,152]
+to
+parenthesized_expression [151,193]
+at 0
+===
+insert-node
+---
+parenthesized_expression [151,193]
+to
+if_statement [148,430]
+at 1
+===
+insert-node
+---
+else_clause [239,430]
+to
+if_statement [148,430]
+at 3
+===
+insert-node
+---
+&&: && [182,184]
+to
+binary_expression [175,191]
+at 1
+===
+insert-node
+---
+if_statement [148,430]
+to
+compound_statement [159,356]
+at 4
+===
+insert-node
+---
+(: ( [174,175]
+to
+parenthesized_expression [174,192]
+at 0
+===
+insert-node
+---
+if: if [148,150]
+to
+if_statement [148,430]
+at 0
+===
+insert-node
+---
+binary_expression [152,192]
+to
+parenthesized_expression [151,193]
+at 1
+===
+insert-node
+---
+parenthesized_expression [174,192]
+to
+binary_expression [152,192]
+at 2
+===
+insert-node
+---
+||: || [171,173]
+to
+binary_expression [152,192]
+at 1
+
+New cluster:
+MOVE from if_statement [148,430]
+------------
+===
+move-tree
+---
+compound_statement [405,477]
+    {: { [405,406]
+    expression_statement [414,446]
+        call_expression [414,445]
+            identifier: printf [414,420]
+            argument_list [420,445]
+                (: ( [420,421]
+                string_literal [421,441]
+                    ": " [421,422]
+                    string_content: %d is the median [422,438]
+                    escape_sequence: \n [438,440]
+                    ": " [440,441]
+                ,: , [441,442]
+                identifier: a [443,444]
+                ): ) [444,445]
+        ;: ; [445,446]
+    comment:       // [454,457]
+    break_statement [464,470]
+        break: break [464,469]
+        ;: ; [469,470]
+    }: } [476,477]
+to
+if_statement [148,430]
+at 2
+
+New cluster:
+MOVE from else_clause [239,430]
+------------
+===
+move-tree
+---
+if_statement [166,327]
+    if: if [166,168]
+    parenthesized_expression [169,176]
+        (: ( [169,170]
+        binary_expression [170,175]
+            identifier: b [170,171]
+            <: < [172,173]
+            identifier: c [174,175]
+        ): ) [175,176]
+    compound_statement [177,249]
+        {: { [177,178]
+        expression_statement [186,218]
+            call_expression [186,217]
+                identifier: printf [186,192]
+                argument_list [192,217]
+                    (: ( [192,193]
+                    string_literal [193,213]
+                        ": " [193,194]
+                        string_content: %d is the median [194,210]
+                        escape_sequence: \n [210,212]
+                        ": " [212,213]
+                    ,: , [213,214]
+                    identifier: b [215,216]
+                    ): ) [216,217]
+            ;: ; [217,218]
+        comment:       // [226,229]
+        break_statement [236,242]
+            break: break [236,241]
+            ;: ; [241,242]
+        }: } [248,249]
+    else_clause [250,327]
+        else: else [250,254]
+        compound_statement [255,327]
+            {: { [255,256]
+            expression_statement [264,296]
+                call_expression [264,295]
+                    identifier: printf [264,270]
+                    argument_list [270,295]
+                        (: ( [270,271]
+                        string_literal [271,291]
+                            ": " [271,272]
+                            string_content: %d is the median [272,288]
+                            escape_sequence: \n [288,290]
+                            ": " [290,291]
+                        ,: , [291,292]
+                        identifier: c [293,294]
+                        ): ) [294,295]
+                ;: ; [295,296]
+            comment:       // [304,307]
+            break_statement [314,320]
+                break: break [314,319]
+                ;: ; [319,320]
+            }: } [326,327]
+to
+else_clause [239,430]
+at 1
+
+New cluster:
+===
+insert-node
+---
+if_statement [340,430]
+to
+else_clause [250,327]
+at 1
+------------
+===
+insert-node
+---
+): ) [384,385]
+to
+parenthesized_expression [343,385]
+at 2
+===
+insert-node
+---
+parenthesized_expression [343,385]
+to
+if_statement [340,430]
+at 1
+===
+insert-node
+---
+binary_expression [344,384]
+to
+parenthesized_expression [343,385]
+at 1
+===
+insert-node
+---
+(: ( [343,344]
+to
+parenthesized_expression [343,385]
+at 0
+===
+insert-node
+---
+if_statement [340,430]
+to
+else_clause [250,327]
+at 1
+===
+insert-node
+---
+&&: && [374,376]
+to
+binary_expression [367,383]
+at 1
+===
+insert-node
+---
+if: if [340,342]
+to
+if_statement [340,430]
+at 0
+===
+insert-node
+---
+binary_expression [367,383]
+to
+parenthesized_expression [366,384]
+at 1
+===
+insert-node
+---
+(: ( [366,367]
+to
+parenthesized_expression [366,384]
+at 0
+===
+insert-node
+---
+): ) [383,384]
+to
+parenthesized_expression [366,384]
+at 2
+===
+insert-node
+---
+parenthesized_expression [366,384]
+to
+binary_expression [344,384]
+at 2
+===
+insert-node
+---
+||: || [363,365]
+to
+binary_expression [344,384]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [163,169]
+    identifier: a [163,164]
+    >=: >= [165,167]
+    identifier: c [168,169]
+to
+binary_expression [141,157]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [175,181]
+    identifier: a [175,176]
+    >=: >= [177,179]
+    identifier: b [180,181]
+to
+binary_expression [175,191]
+at 0
+
+New cluster:
+MOVE from binary_expression [175,191]
+------------
+===
+move-tree
+---
+binary_expression [151,157]
+    identifier: a [151,152]
+    <=: <= [153,155]
+    identifier: c [156,157]
+to
+binary_expression [175,191]
+at 2
+
+New cluster:
+MOVE from binary_expression [170,175]
+------------
+===
+move-tree
+---
+parenthesized_expression [368,386]
+    (: ( [368,369]
+    binary_expression [369,385]
+        binary_expression [369,375]
+            identifier: b [369,370]
+            <=: <= [371,373]
+            identifier: a [374,375]
+        &&: && [376,378]
+        binary_expression [379,385]
+            identifier: b [379,380]
+            <=: <= [381,383]
+            identifier: c [384,385]
+    ): ) [385,386]
+to
+binary_expression [170,175]
+at 0
+
+New cluster:
+===
+insert-node
+---
+||: || [267,269]
+to
+binary_expression [170,175]
+at 1
+------------
+===
+insert-node
+---
+||: || [267,269]
+to
+binary_expression [170,175]
+at 1
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [270,288]
+to
+binary_expression [170,175]
+at 2
+------------
+===
+insert-node
+---
+&&: && [278,280]
+to
+binary_expression [271,287]
+at 1
+===
+insert-node
+---
+): ) [287,288]
+to
+parenthesized_expression [270,288]
+at 2
+===
+insert-node
+---
+(: ( [270,271]
+to
+parenthesized_expression [270,288]
+at 0
+===
+insert-node
+---
+parenthesized_expression [270,288]
+to
+binary_expression [170,175]
+at 2
+===
+insert-node
+---
+binary_expression [271,287]
+to
+parenthesized_expression [270,288]
+at 1
+
+New cluster:
+MOVE from if_statement [340,430]
+------------
+===
+move-tree
+---
+compound_statement [255,327]
+    {: { [255,256]
+    expression_statement [264,296]
+        call_expression [264,295]
+            identifier: printf [264,270]
+            argument_list [270,295]
+                (: ( [270,271]
+                string_literal [271,291]
+                    ": " [271,272]
+                    string_content: %d is the median [272,288]
+                    escape_sequence: \n [288,290]
+                    ": " [290,291]
+                ,: , [291,292]
+                identifier: c [293,294]
+                ): ) [294,295]
+        ;: ; [295,296]
+    comment:       // [304,307]
+    break_statement [314,320]
+        break: break [314,319]
+        ;: ; [319,320]
+    }: } [326,327]
+to
+if_statement [340,430]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [259,265]
+    identifier: b [259,260]
+    >=: >= [261,263]
+    identifier: c [264,265]
+to
+binary_expression [369,385]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [271,277]
+    identifier: b [271,272]
+    >=: >= [273,275]
+    identifier: a [276,277]
+to
+binary_expression [271,287]
+at 0
+
+New cluster:
+MOVE from binary_expression [271,287]
+------------
+===
+move-tree
+---
+binary_expression [379,385]
+    identifier: b [379,380]
+    <=: <= [381,383]
+    identifier: c [384,385]
+to
+binary_expression [271,287]
+at 2
+
+New cluster:
+MOVE from binary_expression [344,384]
+------------
+===
+move-tree
+---
+parenthesized_expression [596,614]
+    (: ( [596,597]
+    binary_expression [597,613]
+        binary_expression [597,603]
+            identifier: c [597,598]
+            <=: <= [599,601]
+            identifier: a [602,603]
+        &&: && [604,606]
+        binary_expression [607,613]
+            identifier: c [607,608]
+            <=: <= [609,611]
+            identifier: b [612,613]
+    ): ) [613,614]
+to
+binary_expression [344,384]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [355,361]
+    identifier: c [355,356]
+    >=: >= [357,359]
+    identifier: b [360,361]
+to
+binary_expression [597,613]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [367,373]
+    identifier: c [367,368]
+    >=: >= [369,371]
+    identifier: a [372,373]
+to
+binary_expression [367,383]
+at 0
+
+New cluster:
+MOVE from binary_expression [367,383]
+------------
+===
+move-tree
+---
+binary_expression [607,613]
+    identifier: c [607,608]
+    <=: <= [609,611]
+    identifier: b [612,613]
+to
+binary_expression [367,383]
+at 2
+
+New cluster:
+===
+delete-node
+---
+comment:       // [454,457]
+===
+------------
+===
+delete-node
+---
+comment:       // [454,457]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [464,470]
+    break: break [464,469]
+    ;: ; [469,470]
+
+New cluster:
+===
+delete-node
+---
+identifier: b [170,171]
+===
+------------
+===
+delete-node
+---
+identifier: b [170,171]
+===
+
+New cluster:
+===
+delete-node
+---
+<: < [172,173]
+===
+------------
+===
+delete-node
+---
+<: < [172,173]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: c [174,175]
+===
+------------
+===
+delete-node
+---
+identifier: c [174,175]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:       // [226,229]
+===
+------------
+===
+delete-node
+---
+comment:       // [226,229]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [236,242]
+    break: break [236,241]
+    ;: ; [241,242]
+
+New cluster:
+===
+delete-node
+---
+comment:       // [304,307]
+===
+------------
+===
+delete-node
+---
+comment:       // [304,307]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [314,320]
+    break: break [314,319]
+    ;: ; [319,320]
+
+New cluster:
+===
+delete-node
+---
+comment:     // [333,336]
+===
+------------
+===
+delete-node
+---
+comment:     // [333,336]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:     // [341,344]
+===
+------------
+===
+delete-node
+---
+comment:     // [341,344]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:     // [349,352]
+===
+------------
+===
+delete-node
+---
+comment:     // [349,352]
+===
+
+New cluster:
+===
+delete-node
+---
+compound_statement [11,832]
+===
+------------
+===
+delete-node
+---
+comment:     // [577,580]
+===
+===
+delete-node
+---
+comment:     // [569,572]
+===
+===
+delete-node
+---
+compound_statement [11,832]
+===
+===
+delete-node
+---
+while: while [590,595]
+===
+===
+delete-node
+---
+while: while [134,139]
+===
+===
+delete-node
+---
+comment:     // [561,564]
+===
+===
+delete-node
+---
+{: { [11,12]
+===
+===
+delete-node
+---
+if: if [394,396]
+===
+===
+delete-node
+---
+while_statement [362,584]
+===
+===
+delete-node
+---
+while_statement [134,356]
+===
+===
+delete-node
+---
+if_statement [394,555]
+===
+===
+delete-node
+---
+{: { [387,388]
+===
+===
+delete-node
+---
+}: } [583,584]
+===
+===
+delete-node
+---
+while: while [362,367]
+===
+===
+delete-node
+---
+comment:   // [128,131]
+===
+===
+delete-node
+---
+compound_statement [387,584]
+===
+===
+delete-node
+---
+}: } [831,832]
+===
+===
+delete-node
+---
+while_statement [590,814]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [397,404]
+    (: ( [397,398]
+    binary_expression [398,403]
+        identifier: a [398,399]
+        <: < [400,401]
+        identifier: c [402,403]
+    ): ) [403,404]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+else_clause [478,555]
+    else: else [478,482]
+    compound_statement [483,555]
+        {: { [483,484]
+        expression_statement [492,524]
+            call_expression [492,523]
+                identifier: printf [492,498]
+                argument_list [498,523]
+                    (: ( [498,499]
+                    string_literal [499,519]
+                        ": " [499,500]
+                        string_content: %d is the median [500,516]
+                        escape_sequence: \n [516,518]
+                        ": " [518,519]
+                    ,: , [519,520]
+                    identifier: c [521,522]
+                    ): ) [522,523]
+            ;: ; [523,524]
+        comment:       // [532,535]
+        break_statement [542,548]
+            break: break [542,547]
+            ;: ; [547,548]
+        }: } [554,555]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+compound_statement [615,814]
+    {: { [615,616]
+    if_statement [622,783]
+        if: if [622,624]
+        parenthesized_expression [625,632]
+            (: ( [625,626]
+            binary_expression [626,631]
+                identifier: b [626,627]
+                <: < [628,629]
+                identifier: a [630,631]
+            ): ) [631,632]
+        compound_statement [633,705]
+            {: { [633,634]
+            expression_statement [642,674]
+                call_expression [642,673]
+                    identifier: printf [642,648]
+                    argument_list [648,673]
+                        (: ( [648,649]
+                        string_literal [649,669]
+                            ": " [649,650]
+                            string_content: %d is the median [650,666]
+                            escape_sequence: \n [666,668]
+                            ": " [668,669]
+                        ,: , [669,670]
+                        identifier: b [671,672]
+                        ): ) [672,673]
+                ;: ; [673,674]
+            comment:       // [682,685]
+            break_statement [692,698]
+                break: break [692,697]
+                ;: ; [697,698]
+            }: } [704,705]
+        else_clause [706,783]
+            else: else [706,710]
+            compound_statement [711,783]
+                {: { [711,712]
+                comment:       // [720,723]
+                expression_statement [730,762]
+                    call_expression [730,761]
+                        identifier: printf [730,736]
+                        argument_list [736,761]
+                            (: ( [736,737]
+                            string_literal [737,757]
+                                ": " [737,738]
+                                string_content: %d is the median [738,754]
+                                escape_sequence: \n [754,756]
+                                ": " [756,757]
+                            ,: , [757,758]
+                            identifier: a [759,760]
+                            ): ) [760,761]
+                    ;: ; [761,762]
+                break_statement [770,776]
+                    break: break [770,775]
+                    ;: ; [775,776]
+                }: } [782,783]
+    comment:     // [791,794]
+    comment:     // [799,802]
+    comment:     // [807,810]
+    }: } [813,814]
+

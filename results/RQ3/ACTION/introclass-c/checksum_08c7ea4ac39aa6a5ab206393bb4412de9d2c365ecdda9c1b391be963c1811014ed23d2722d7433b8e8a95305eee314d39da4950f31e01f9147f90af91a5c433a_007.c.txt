@@ -1,0 +1,43 @@
+New cluster:
+UPDATE from %s to %[^
+------------
+===
+update-node
+---
+string_content: %s [195,197]
+replace %s by %[^
+
+New cluster:
+===
+insert-node
+---
+escape_sequence: \n [198,200]
+to
+string_literal [194,198]
+at 2
+------------
+===
+insert-node
+---
+escape_sequence: \n [198,200]
+to
+string_literal [194,198]
+at 2
+
+New cluster:
+===
+insert-node
+---
+string_content: ]%*c [200,204]
+to
+string_literal [194,198]
+at 3
+------------
+===
+insert-node
+---
+string_content: ]%*c [200,204]
+to
+string_literal [194,198]
+at 3
+

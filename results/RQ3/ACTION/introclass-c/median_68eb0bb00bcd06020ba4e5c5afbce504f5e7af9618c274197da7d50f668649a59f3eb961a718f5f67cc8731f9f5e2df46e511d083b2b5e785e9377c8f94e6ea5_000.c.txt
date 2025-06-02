@@ -1,0 +1,182 @@
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [146,188]
+to
+if_statement [143,320]
+at 1
+------------
+===
+insert-node
+---
+parenthesized_expression [146,188]
+to
+if_statement [143,320]
+at 1
+===
+insert-node
+---
+): ) [187,188]
+to
+parenthesized_expression [146,188]
+at 2
+===
+insert-node
+---
+||: || [166,168]
+to
+binary_expression [147,187]
+at 1
+===
+insert-node
+---
+(: ( [146,147]
+to
+parenthesized_expression [146,188]
+at 0
+===
+insert-node
+---
+binary_expression [147,187]
+to
+parenthesized_expression [146,188]
+at 1
+
+New cluster:
+MOVE from binary_expression [147,187]
+------------
+===
+move-tree
+---
+parenthesized_expression [146,164]
+    (: ( [146,147]
+    binary_expression [147,163]
+        binary_expression [147,153]
+            identifier: x [147,148]
+            >=: >= [149,151]
+            identifier: y [152,153]
+        &&: && [154,156]
+        binary_expression [157,163]
+            identifier: x [157,158]
+            <=: <= [159,161]
+            identifier: z [162,163]
+    ): ) [163,164]
+to
+binary_expression [147,187]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [169,187]
+    (: ( [169,170]
+    binary_expression [170,186]
+        binary_expression [170,176]
+            identifier: x [170,171]
+            <=: <= [172,174]
+            identifier: y [175,176]
+        &&: && [177,179]
+        binary_expression [180,186]
+            identifier: x [180,181]
+            >=: >= [182,184]
+            identifier: z [185,186]
+    ): ) [186,187]
+to
+binary_expression [147,187]
+at 2
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [240,282]
+to
+if_statement [213,320]
+at 1
+------------
+===
+insert-node
+---
+parenthesized_expression [240,282]
+to
+if_statement [213,320]
+at 1
+===
+insert-node
+---
+binary_expression [241,281]
+to
+parenthesized_expression [240,282]
+at 1
+===
+insert-node
+---
+): ) [281,282]
+to
+parenthesized_expression [240,282]
+at 2
+===
+insert-node
+---
+||: || [260,262]
+to
+binary_expression [241,281]
+at 1
+===
+insert-node
+---
+(: ( [240,241]
+to
+parenthesized_expression [240,282]
+at 0
+
+New cluster:
+MOVE from binary_expression [241,281]
+------------
+===
+move-tree
+---
+parenthesized_expression [216,234]
+    (: ( [216,217]
+    binary_expression [217,233]
+        binary_expression [217,223]
+            identifier: y [217,218]
+            >=: >= [219,221]
+            identifier: x [222,223]
+        &&: && [224,226]
+        binary_expression [227,233]
+            identifier: y [227,228]
+            <=: <= [229,231]
+            identifier: z [232,233]
+    ): ) [233,234]
+to
+binary_expression [241,281]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [263,281]
+    (: ( [263,264]
+    binary_expression [264,280]
+        binary_expression [264,270]
+            identifier: y [264,265]
+            <=: <= [266,268]
+            identifier: x [269,270]
+        &&: && [271,273]
+        binary_expression [274,280]
+            identifier: y [274,275]
+            >=: >= [276,278]
+            identifier: z [279,280]
+    ): ) [280,281]
+to
+binary_expression [241,281]
+at 2
+

@@ -1,0 +1,53 @@
+New cluster:
+===
+insert-node
+---
+>=: >= [348,350]
+to
+binary_expression [342,354]
+at 1
+------------
+===
+insert-node
+---
+>=: >= [348,350]
+to
+binary_expression [342,354]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+else_clause [597,647]
+    else: else [597,601]
+    expression_statement [607,647]
+        call_expression [607,646]
+            identifier: printf [607,613]
+            argument_list [613,646]
+                (: ( [613,614]
+                string_literal [614,645]
+                    ": " [614,615]
+                    string_content: Student has failed the course [615,644]
+                    ": " [644,645]
+                ): ) [645,646]
+        ;: ; [646,647]
+to
+if_statement [535,592]
+at 3
+
+New cluster:
+===
+delete-node
+---
+>: > [348,349]
+===
+------------
+===
+delete-node
+---
+>: > [348,349]
+===
+

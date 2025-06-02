@@ -1,0 +1,72 @@
+New cluster:
+MOVE from binary_expression [342,365]
+------------
+===
+move-tree
+---
+binary_expression [342,351]
+    identifier: score [342,347]
+    <: < [348,349]
+    identifier: A [350,351]
+to
+binary_expression [342,365]
+at 2
+===
+move-tree
+---
+&&: && [352,354]
+to
+binary_expression [342,365]
+at 2
+
+New cluster:
+UPDATE from Stdent has an A grade to Student has an A grade
+------------
+===
+update-node
+---
+string_content: Stdent has an A grade [301,322]
+replace Stdent has an A grade by Student has an A grade
+
+New cluster:
+MOVE from binary_expression [424,447]
+------------
+===
+move-tree
+---
+&&: && [434,436]
+to
+binary_expression [424,447]
+at 2
+===
+move-tree
+---
+binary_expression [424,433]
+    identifier: score [424,429]
+    <: < [430,431]
+    identifier: B [432,433]
+to
+binary_expression [424,447]
+at 2
+
+New cluster:
+MOVE from binary_expression [506,529]
+------------
+===
+move-tree
+---
+&&: && [516,518]
+to
+binary_expression [506,529]
+at 2
+===
+move-tree
+---
+binary_expression [506,515]
+    identifier: score [506,511]
+    <: < [512,513]
+    identifier: C [514,515]
+to
+binary_expression [506,529]
+at 2
+

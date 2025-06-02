@@ -1,0 +1,49 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+else_clause [568,618]
+    else: else [568,572]
+    expression_statement [578,618]
+        call_expression [578,617]
+            identifier: printf [578,584]
+            argument_list [584,617]
+                (: ( [584,585]
+                string_literal [585,616]
+                    ": " [585,586]
+                    string_content: Student has failed the course [586,615]
+                    ": " [615,616]
+                ): ) [616,617]
+        ;: ; [617,618]
+to
+if_statement [536,593]
+at 3
+
+New cluster:
+===
+delete-node
+---
+comment:   float num1, num2, num3, num4; //**/ [48,54]
+===
+------------
+===
+delete-node
+---
+comment:   float num1, num2, num3, num4; //**/ [48,54]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   float score;                  //**/ [87,93]
+===
+------------
+===
+delete-node
+---
+comment:   float score;                  //**/ [87,93]
+===
+

@@ -1,0 +1,864 @@
+New cluster:
+MOVE from compound_statement [11,700]
+------------
+===
+move-tree
+---
+if_statement [355,682]
+    if: if [355,357]
+    parenthesized_expression [358,387]
+        (: ( [358,359]
+        binary_expression [359,386]
+            parenthesized_expression [359,371]
+                (: ( [359,360]
+                binary_expression [360,370]
+                    identifier: score [360,365]
+                    >=: >= [366,368]
+                    identifier: b [369,370]
+                ): ) [370,371]
+            &&: && [372,374]
+            parenthesized_expression [375,386]
+                (: ( [375,376]
+                binary_expression [376,385]
+                    identifier: score [376,381]
+                    >: > [382,383]
+                    identifier: a [384,385]
+                ): ) [385,386]
+        ): ) [386,387]
+    compound_statement [388,435]
+        {: { [388,389]
+        expression_statement [395,430]
+            call_expression [395,429]
+                identifier: printf [395,401]
+                argument_list [401,429]
+                    (: ( [401,402]
+                    string_literal [402,428]
+                        ": " [402,403]
+                        string_content: Student has an B grade [403,425]
+                        escape_sequence: \n [425,427]
+                        ": " [427,428]
+                    ): ) [428,429]
+            ;: ; [429,430]
+        }: } [434,435]
+    else_clause [436,682]
+        else: else [436,440]
+        if_statement [441,682]
+            if: if [441,443]
+            parenthesized_expression [444,473]
+                (: ( [444,445]
+                binary_expression [445,472]
+                    parenthesized_expression [445,457]
+                        (: ( [445,446]
+                        binary_expression [446,456]
+                            identifier: score [446,451]
+                            >=: >= [452,454]
+                            identifier: c [455,456]
+                        ): ) [456,457]
+                    &&: && [458,460]
+                    parenthesized_expression [461,472]
+                        (: ( [461,462]
+                        binary_expression [462,471]
+                            identifier: score [462,467]
+                            <: < [468,469]
+                            identifier: b [470,471]
+                        ): ) [471,472]
+                ): ) [472,473]
+            compound_statement [474,521]
+                {: { [474,475]
+                expression_statement [481,516]
+                    call_expression [481,515]
+                        identifier: printf [481,487]
+                        argument_list [487,515]
+                            (: ( [487,488]
+                            string_literal [488,514]
+                                ": " [488,489]
+                                string_content: Student has an C grade [489,511]
+                                escape_sequence: \n [511,513]
+                                ": " [513,514]
+                            ): ) [514,515]
+                    ;: ; [515,516]
+                }: } [520,521]
+            else_clause [522,682]
+                else: else [522,526]
+                if_statement [527,682]
+                    if: if [527,529]
+                    parenthesized_expression [530,559]
+                        (: ( [530,531]
+                        binary_expression [531,558]
+                            parenthesized_expression [531,543]
+                                (: ( [531,532]
+                                binary_expression [532,542]
+                                    identifier: score [532,537]
+                                    >=: >= [538,540]
+                                    identifier: d [541,542]
+                                ): ) [542,543]
+                            &&: && [544,546]
+                            parenthesized_expression [547,558]
+                                (: ( [547,548]
+                                binary_expression [548,557]
+                                    identifier: score [548,553]
+                                    <: < [554,555]
+                                    identifier: c [556,557]
+                                ): ) [557,558]
+                        ): ) [558,559]
+                    compound_statement [560,607]
+                        {: { [560,561]
+                        expression_statement [567,602]
+                            call_expression [567,601]
+                                identifier: printf [567,573]
+                                argument_list [573,601]
+                                    (: ( [573,574]
+                                    string_literal [574,600]
+                                        ": " [574,575]
+                                        string_content: Student has an D grade [575,597]
+                                        escape_sequence: \n [597,599]
+                                        ": " [599,600]
+                                    ): ) [600,601]
+                            ;: ; [601,602]
+                        }: } [606,607]
+                    else_clause [608,682]
+                        else: else [608,612]
+                        if_statement [613,682]
+                            if: if [613,615]
+                            parenthesized_expression [616,627]
+                                (: ( [616,617]
+                                binary_expression [617,626]
+                                    identifier: score [617,622]
+                                    <: < [623,624]
+                                    identifier: d [625,626]
+                                ): ) [626,627]
+                            compound_statement [628,682]
+                                {: { [628,629]
+                                expression_statement [635,677]
+                                    call_expression [635,676]
+                                        identifier: printf [635,641]
+                                        argument_list [641,676]
+                                            (: ( [641,642]
+                                            string_literal [642,675]
+                                                ": " [642,643]
+                                                string_content: Student has failed the course [643,672]
+                                                escape_sequence: \n [672,674]
+                                                ": " [674,675]
+                                            ): ) [675,676]
+                                    ;: ; [676,677]
+                                }: } [681,682]
+to
+compound_statement [11,700]
+at 6
+
+New cluster:
+MOVE from if_statement [355,682]
+------------
+===
+move-tree
+---
+parenthesized_expression [289,301]
+    (: ( [289,290]
+    binary_expression [290,300]
+        identifier: score [290,295]
+        >=: >= [296,298]
+        identifier: a [299,300]
+    ): ) [300,301]
+to
+if_statement [355,682]
+at 1
+===
+move-tree
+---
+else_clause [350,682]
+    else: else [350,354]
+    if_statement [355,682]
+        if: if [355,357]
+        parenthesized_expression [358,387]
+            (: ( [358,359]
+            binary_expression [359,386]
+                parenthesized_expression [359,371]
+                    (: ( [359,360]
+                    binary_expression [360,370]
+                        identifier: score [360,365]
+                        >=: >= [366,368]
+                        identifier: b [369,370]
+                    ): ) [370,371]
+                &&: && [372,374]
+                parenthesized_expression [375,386]
+                    (: ( [375,376]
+                    binary_expression [376,385]
+                        identifier: score [376,381]
+                        >: > [382,383]
+                        identifier: a [384,385]
+                    ): ) [385,386]
+            ): ) [386,387]
+        compound_statement [388,435]
+            {: { [388,389]
+            expression_statement [395,430]
+                call_expression [395,429]
+                    identifier: printf [395,401]
+                    argument_list [401,429]
+                        (: ( [401,402]
+                        string_literal [402,428]
+                            ": " [402,403]
+                            string_content: Student has an B grade [403,425]
+                            escape_sequence: \n [425,427]
+                            ": " [427,428]
+                        ): ) [428,429]
+                ;: ; [429,430]
+            }: } [434,435]
+        else_clause [436,682]
+            else: else [436,440]
+            if_statement [441,682]
+                if: if [441,443]
+                parenthesized_expression [444,473]
+                    (: ( [444,445]
+                    binary_expression [445,472]
+                        parenthesized_expression [445,457]
+                            (: ( [445,446]
+                            binary_expression [446,456]
+                                identifier: score [446,451]
+                                >=: >= [452,454]
+                                identifier: c [455,456]
+                            ): ) [456,457]
+                        &&: && [458,460]
+                        parenthesized_expression [461,472]
+                            (: ( [461,462]
+                            binary_expression [462,471]
+                                identifier: score [462,467]
+                                <: < [468,469]
+                                identifier: b [470,471]
+                            ): ) [471,472]
+                    ): ) [472,473]
+                compound_statement [474,521]
+                    {: { [474,475]
+                    expression_statement [481,516]
+                        call_expression [481,515]
+                            identifier: printf [481,487]
+                            argument_list [487,515]
+                                (: ( [487,488]
+                                string_literal [488,514]
+                                    ": " [488,489]
+                                    string_content: Student has an C grade [489,511]
+                                    escape_sequence: \n [511,513]
+                                    ": " [513,514]
+                                ): ) [514,515]
+                        ;: ; [515,516]
+                    }: } [520,521]
+                else_clause [522,682]
+                    else: else [522,526]
+                    if_statement [527,682]
+                        if: if [527,529]
+                        parenthesized_expression [530,559]
+                            (: ( [530,531]
+                            binary_expression [531,558]
+                                parenthesized_expression [531,543]
+                                    (: ( [531,532]
+                                    binary_expression [532,542]
+                                        identifier: score [532,537]
+                                        >=: >= [538,540]
+                                        identifier: d [541,542]
+                                    ): ) [542,543]
+                                &&: && [544,546]
+                                parenthesized_expression [547,558]
+                                    (: ( [547,548]
+                                    binary_expression [548,557]
+                                        identifier: score [548,553]
+                                        <: < [554,555]
+                                        identifier: c [556,557]
+                                    ): ) [557,558]
+                            ): ) [558,559]
+                        compound_statement [560,607]
+                            {: { [560,561]
+                            expression_statement [567,602]
+                                call_expression [567,601]
+                                    identifier: printf [567,573]
+                                    argument_list [573,601]
+                                        (: ( [573,574]
+                                        string_literal [574,600]
+                                            ": " [574,575]
+                                            string_content: Student has an D grade [575,597]
+                                            escape_sequence: \n [597,599]
+                                            ": " [599,600]
+                                        ): ) [600,601]
+                                ;: ; [601,602]
+                            }: } [606,607]
+                        else_clause [608,682]
+                            else: else [608,612]
+                            if_statement [613,682]
+                                if: if [613,615]
+                                parenthesized_expression [616,627]
+                                    (: ( [616,617]
+                                    binary_expression [617,626]
+                                        identifier: score [617,622]
+                                        <: < [623,624]
+                                        identifier: d [625,626]
+                                    ): ) [626,627]
+                                compound_statement [628,682]
+                                    {: { [628,629]
+                                    expression_statement [635,677]
+                                        call_expression [635,676]
+                                            identifier: printf [635,641]
+                                            argument_list [641,676]
+                                                (: ( [641,642]
+                                                string_literal [642,675]
+                                                    ": " [642,643]
+                                                    string_content: Student has failed the course [643,672]
+                                                    escape_sequence: \n [672,674]
+                                                    ": " [674,675]
+                                                ): ) [675,676]
+                                        ;: ; [676,677]
+                                    }: } [681,682]
+to
+if_statement [441,682]
+at 3
+===
+move-tree
+---
+compound_statement [302,349]
+    {: { [302,303]
+    expression_statement [309,344]
+        call_expression [309,343]
+            identifier: printf [309,315]
+            argument_list [315,343]
+                (: ( [315,316]
+                string_literal [316,342]
+                    ": " [316,317]
+                    string_content: Student has an A grade [317,339]
+                    escape_sequence: \n [339,341]
+                    ": " [341,342]
+                ): ) [342,343]
+        ;: ; [343,344]
+    }: } [348,349]
+to
+if_statement [355,682]
+at 2
+
+New cluster:
+MOVE from if_statement [441,682]
+------------
+===
+move-tree
+---
+parenthesized_expression [359,371]
+    (: ( [359,360]
+    binary_expression [360,370]
+        identifier: score [360,365]
+        >=: >= [366,368]
+        identifier: b [369,370]
+    ): ) [370,371]
+to
+if_statement [441,682]
+at 1
+
+New cluster:
+MOVE from if_statement [441,682]
+------------
+===
+move-tree
+---
+compound_statement [388,435]
+    {: { [388,389]
+    expression_statement [395,430]
+        call_expression [395,429]
+            identifier: printf [395,401]
+            argument_list [401,429]
+                (: ( [401,402]
+                string_literal [402,428]
+                    ": " [402,403]
+                    string_content: Student has an B grade [403,425]
+                    escape_sequence: \n [425,427]
+                    ": " [427,428]
+                ): ) [428,429]
+        ;: ; [429,430]
+    }: } [434,435]
+to
+if_statement [441,682]
+at 2
+
+New cluster:
+MOVE from else_clause [350,682]
+------------
+===
+move-tree
+---
+if_statement [527,682]
+    if: if [527,529]
+    parenthesized_expression [530,559]
+        (: ( [530,531]
+        binary_expression [531,558]
+            parenthesized_expression [531,543]
+                (: ( [531,532]
+                binary_expression [532,542]
+                    identifier: score [532,537]
+                    >=: >= [538,540]
+                    identifier: d [541,542]
+                ): ) [542,543]
+            &&: && [544,546]
+            parenthesized_expression [547,558]
+                (: ( [547,548]
+                binary_expression [548,557]
+                    identifier: score [548,553]
+                    <: < [554,555]
+                    identifier: c [556,557]
+                ): ) [557,558]
+        ): ) [558,559]
+    compound_statement [560,607]
+        {: { [560,561]
+        expression_statement [567,602]
+            call_expression [567,601]
+                identifier: printf [567,573]
+                argument_list [573,601]
+                    (: ( [573,574]
+                    string_literal [574,600]
+                        ": " [574,575]
+                        string_content: Student has an D grade [575,597]
+                        escape_sequence: \n [597,599]
+                        ": " [599,600]
+                    ): ) [600,601]
+            ;: ; [601,602]
+        }: } [606,607]
+    else_clause [608,682]
+        else: else [608,612]
+        if_statement [613,682]
+            if: if [613,615]
+            parenthesized_expression [616,627]
+                (: ( [616,617]
+                binary_expression [617,626]
+                    identifier: score [617,622]
+                    <: < [623,624]
+                    identifier: d [625,626]
+                ): ) [626,627]
+            compound_statement [628,682]
+                {: { [628,629]
+                expression_statement [635,677]
+                    call_expression [635,676]
+                        identifier: printf [635,641]
+                        argument_list [641,676]
+                            (: ( [641,642]
+                            string_literal [642,675]
+                                ": " [642,643]
+                                string_content: Student has failed the course [643,672]
+                                escape_sequence: \n [672,674]
+                                ": " [674,675]
+                            ): ) [675,676]
+                    ;: ; [676,677]
+                }: } [681,682]
+to
+else_clause [350,682]
+at 1
+
+New cluster:
+MOVE from if_statement [527,682]
+------------
+===
+move-tree
+---
+parenthesized_expression [445,457]
+    (: ( [445,446]
+    binary_expression [446,456]
+        identifier: score [446,451]
+        >=: >= [452,454]
+        identifier: c [455,456]
+    ): ) [456,457]
+to
+if_statement [527,682]
+at 1
+
+New cluster:
+MOVE from if_statement [527,682]
+------------
+===
+move-tree
+---
+compound_statement [474,521]
+    {: { [474,475]
+    expression_statement [481,516]
+        call_expression [481,515]
+            identifier: printf [481,487]
+            argument_list [487,515]
+                (: ( [487,488]
+                string_literal [488,514]
+                    ": " [488,489]
+                    string_content: Student has an C grade [489,511]
+                    escape_sequence: \n [511,513]
+                    ": " [513,514]
+                ): ) [514,515]
+        ;: ; [515,516]
+    }: } [520,521]
+to
+if_statement [527,682]
+at 2
+===
+move-tree
+---
+else_clause [522,682]
+    else: else [522,526]
+    if_statement [527,682]
+        if: if [527,529]
+        parenthesized_expression [530,559]
+            (: ( [530,531]
+            binary_expression [531,558]
+                parenthesized_expression [531,543]
+                    (: ( [531,532]
+                    binary_expression [532,542]
+                        identifier: score [532,537]
+                        >=: >= [538,540]
+                        identifier: d [541,542]
+                    ): ) [542,543]
+                &&: && [544,546]
+                parenthesized_expression [547,558]
+                    (: ( [547,548]
+                    binary_expression [548,557]
+                        identifier: score [548,553]
+                        <: < [554,555]
+                        identifier: c [556,557]
+                    ): ) [557,558]
+            ): ) [558,559]
+        compound_statement [560,607]
+            {: { [560,561]
+            expression_statement [567,602]
+                call_expression [567,601]
+                    identifier: printf [567,573]
+                    argument_list [573,601]
+                        (: ( [573,574]
+                        string_literal [574,600]
+                            ": " [574,575]
+                            string_content: Student has an D grade [575,597]
+                            escape_sequence: \n [597,599]
+                            ": " [599,600]
+                        ): ) [600,601]
+                ;: ; [601,602]
+            }: } [606,607]
+        else_clause [608,682]
+            else: else [608,612]
+            if_statement [613,682]
+                if: if [613,615]
+                parenthesized_expression [616,627]
+                    (: ( [616,617]
+                    binary_expression [617,626]
+                        identifier: score [617,622]
+                        <: < [623,624]
+                        identifier: d [625,626]
+                    ): ) [626,627]
+                compound_statement [628,682]
+                    {: { [628,629]
+                    expression_statement [635,677]
+                        call_expression [635,676]
+                            identifier: printf [635,641]
+                            argument_list [641,676]
+                                (: ( [641,642]
+                                string_literal [642,675]
+                                    ": " [642,643]
+                                    string_content: Student has failed the course [643,672]
+                                    escape_sequence: \n [672,674]
+                                    ": " [674,675]
+                                ): ) [675,676]
+                        ;: ; [676,677]
+                    }: } [681,682]
+to
+if_statement [527,682]
+at 3
+
+New cluster:
+MOVE from else_clause [522,682]
+------------
+===
+move-tree
+---
+if_statement [613,682]
+    if: if [613,615]
+    parenthesized_expression [616,627]
+        (: ( [616,617]
+        binary_expression [617,626]
+            identifier: score [617,622]
+            <: < [623,624]
+            identifier: d [625,626]
+        ): ) [626,627]
+    compound_statement [628,682]
+        {: { [628,629]
+        expression_statement [635,677]
+            call_expression [635,676]
+                identifier: printf [635,641]
+                argument_list [641,676]
+                    (: ( [641,642]
+                    string_literal [642,675]
+                        ": " [642,643]
+                        string_content: Student has failed the course [643,672]
+                        escape_sequence: \n [672,674]
+                        ": " [674,675]
+                    ): ) [675,676]
+            ;: ; [676,677]
+        }: } [681,682]
+to
+else_clause [522,682]
+at 1
+
+New cluster:
+MOVE from if_statement [613,682]
+------------
+===
+move-tree
+---
+parenthesized_expression [531,543]
+    (: ( [531,532]
+    binary_expression [532,542]
+        identifier: score [532,537]
+        >=: >= [538,540]
+        identifier: d [541,542]
+    ): ) [542,543]
+to
+if_statement [613,682]
+at 1
+
+New cluster:
+MOVE from if_statement [613,682]
+------------
+===
+move-tree
+---
+compound_statement [560,607]
+    {: { [560,561]
+    expression_statement [567,602]
+        call_expression [567,601]
+            identifier: printf [567,573]
+            argument_list [573,601]
+                (: ( [573,574]
+                string_literal [574,600]
+                    ": " [574,575]
+                    string_content: Student has an D grade [575,597]
+                    escape_sequence: \n [597,599]
+                    ": " [599,600]
+                ): ) [600,601]
+        ;: ; [601,602]
+    }: } [606,607]
+to
+if_statement [613,682]
+at 2
+===
+move-tree
+---
+else_clause [608,682]
+    else: else [608,612]
+    if_statement [613,682]
+        if: if [613,615]
+        parenthesized_expression [616,627]
+            (: ( [616,617]
+            binary_expression [617,626]
+                identifier: score [617,622]
+                <: < [623,624]
+                identifier: d [625,626]
+            ): ) [626,627]
+        compound_statement [628,682]
+            {: { [628,629]
+            expression_statement [635,677]
+                call_expression [635,676]
+                    identifier: printf [635,641]
+                    argument_list [641,676]
+                        (: ( [641,642]
+                        string_literal [642,675]
+                            ": " [642,643]
+                            string_content: Student has failed the course [643,672]
+                            escape_sequence: \n [672,674]
+                            ": " [674,675]
+                        ): ) [675,676]
+                ;: ; [676,677]
+            }: } [681,682]
+to
+if_statement [613,682]
+at 3
+
+New cluster:
+MOVE from else_clause [608,682]
+------------
+===
+move-tree
+---
+compound_statement [628,682]
+    {: { [628,629]
+    expression_statement [635,677]
+        call_expression [635,676]
+            identifier: printf [635,641]
+            argument_list [641,676]
+                (: ( [641,642]
+                string_literal [642,675]
+                    ": " [642,643]
+                    string_content: Student has failed the course [643,672]
+                    escape_sequence: \n [672,674]
+                    ": " [674,675]
+                ): ) [675,676]
+        ;: ; [676,677]
+    }: } [681,682]
+to
+else_clause [608,682]
+at 1
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [358,387]
+===
+------------
+===
+delete-node
+---
+): ) [386,387]
+===
+===
+delete-node
+---
+parenthesized_expression [358,387]
+===
+===
+delete-node
+---
+binary_expression [359,386]
+===
+===
+delete-node
+---
+&&: && [372,374]
+===
+===
+delete-node
+---
+(: ( [358,359]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [375,386]
+    (: ( [375,376]
+    binary_expression [376,385]
+        identifier: score [376,381]
+        >: > [382,383]
+        identifier: a [384,385]
+    ): ) [385,386]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [616,627]
+    (: ( [616,617]
+    binary_expression [617,626]
+        identifier: score [617,622]
+        <: < [623,624]
+        identifier: d [625,626]
+    ): ) [626,627]
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [530,559]
+===
+------------
+===
+delete-node
+---
+binary_expression [531,558]
+===
+===
+delete-node
+---
+&&: && [544,546]
+===
+===
+delete-node
+---
+(: ( [530,531]
+===
+===
+delete-node
+---
+parenthesized_expression [530,559]
+===
+===
+delete-node
+---
+): ) [558,559]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [547,558]
+    (: ( [547,548]
+    binary_expression [548,557]
+        identifier: score [548,553]
+        <: < [554,555]
+        identifier: c [556,557]
+    ): ) [557,558]
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [444,473]
+===
+------------
+===
+delete-node
+---
+&&: && [458,460]
+===
+===
+delete-node
+---
+(: ( [444,445]
+===
+===
+delete-node
+---
+parenthesized_expression [444,473]
+===
+===
+delete-node
+---
+): ) [472,473]
+===
+===
+delete-node
+---
+binary_expression [445,472]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [461,472]
+    (: ( [461,462]
+    binary_expression [462,471]
+        identifier: score [462,467]
+        <: < [468,469]
+        identifier: b [470,471]
+    ): ) [471,472]
+
+New cluster:
+===
+delete-node
+---
+if_statement [286,682]
+===
+------------
+===
+delete-node
+---
+if_statement [286,682]
+===
+===
+delete-node
+---
+if: if [286,288]
+===
+

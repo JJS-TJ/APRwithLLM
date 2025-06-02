@@ -1,0 +1,123 @@
+New cluster:
+===
+insert-node
+---
+else_clause [202,294]
+to
+if_statement [136,198]
+at 3
+------------
+===
+insert-node
+---
+else: else [202,206]
+to
+else_clause [202,294]
+at 0
+===
+insert-node
+---
+else_clause [202,294]
+to
+if_statement [136,198]
+at 3
+
+New cluster:
+MOVE from else_clause [202,294]
+------------
+===
+move-tree
+---
+if_statement [202,289]
+    if: if [202,204]
+    parenthesized_expression [205,247]
+        (: ( [205,206]
+        binary_expression [206,246]
+            parenthesized_expression [206,224]
+                (: ( [206,207]
+                binary_expression [207,223]
+                    binary_expression [207,213]
+                        identifier: b [207,208]
+                        >=: >= [209,211]
+                        identifier: a [212,213]
+                    &&: && [214,216]
+                    binary_expression [217,223]
+                        identifier: b [217,218]
+                        <=: <= [219,221]
+                        identifier: c [222,223]
+                ): ) [223,224]
+            ||: || [225,227]
+            parenthesized_expression [228,246]
+                (: ( [228,229]
+                binary_expression [229,245]
+                    binary_expression [229,235]
+                        identifier: b [229,230]
+                        >=: >= [231,233]
+                        identifier: c [234,235]
+                    &&: && [236,238]
+                    binary_expression [239,245]
+                        identifier: b [239,240]
+                        <=: <= [241,243]
+                        identifier: a [244,245]
+                ): ) [245,246]
+        ): ) [246,247]
+    expression_statement [253,264]
+        assignment_expression [253,263]
+            identifier: median [253,259]
+            =: = [260,261]
+            identifier: b [262,263]
+        ;: ; [263,264]
+    else_clause [268,289]
+        else: else [268,272]
+        expression_statement [278,289]
+            assignment_expression [278,288]
+                identifier: median [278,284]
+                =: = [285,286]
+                identifier: c [287,288]
+            ;: ; [288,289]
+to
+else_clause [202,294]
+at 1
+
+New cluster:
+MOVE from binary_expression [163,179]
+------------
+===
+move-tree
+---
+binary_expression [163,169]
+    identifier: a [163,164]
+    >=: >= [165,167]
+    identifier: c [168,169]
+to
+binary_expression [163,179]
+at 2
+===
+move-tree
+---
+&&: && [170,172]
+to
+binary_expression [163,179]
+at 2
+
+New cluster:
+MOVE from binary_expression [229,245]
+------------
+===
+move-tree
+---
+binary_expression [229,235]
+    identifier: b [229,230]
+    >=: >= [231,233]
+    identifier: c [234,235]
+to
+binary_expression [229,245]
+at 2
+===
+move-tree
+---
+&&: && [236,238]
+to
+binary_expression [229,245]
+at 2
+
