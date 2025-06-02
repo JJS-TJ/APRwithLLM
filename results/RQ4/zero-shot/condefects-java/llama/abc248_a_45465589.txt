@@ -1,0 +1,36 @@
+No.0 Patch
+public static void main (String[]args){
+    Scanner scn = new Scanner(System.in);
+
+    String S = scn.nextLine(); // 길이 9
+    String checkS = "0123456789"; // 길이 10
+
+    int Array [] = new int [S.length()];
+    boolean checkArray [] = new boolean[checkS.length()];
+
+    for ( int x = 0 ; x < S.length() ; x++){
+        Array[x] = S.charAt(x);             // Array[]에 char 0 ~9 까지 넣음(하나없음)
+    }
+    for ( int x = 0 ; x < 9 ; x++){
+        checkArray[Array[x]-'0'] = true;
+    }
+    for ( int x = 0 ; x < checkS.length() ; x++){
+        if ( checkArray[x] == false){
+            System.out.println(x);
+            break;
+        }
+    }
+    // for ( int x = 0 ; x < checkS.length(); x++){
+    //     if ( checkArray[x] = false){
+    //         System.out.println(x);
+    //     }
+    // }
+
+    // for ( int k : Array){
+    //     System.out.println(k);
+    // }
+
+    // for ( boolean k : checkArray){
+    //     System.out.println(k);
+    // }
+}

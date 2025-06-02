@@ -1,0 +1,18 @@
+No.0 Patch
+public static void main(String[] args){
+  Scanner in = new Scanner(System.in);
+  int L1 = in.nextInt();
+  int R1 = in.nextInt();
+  int L2 = in.nextInt();
+  int R2 = in.nextInt();
+  int ans = 0;
+  for(int i = L1 ; i <= R1; i++){
+    if(L2 <= i && i <= R2){
+      ans++;
+    }
+  }
+  if(ans > 0){
+    ans--; 
+  }
+  System.out.println(ans);
+}
