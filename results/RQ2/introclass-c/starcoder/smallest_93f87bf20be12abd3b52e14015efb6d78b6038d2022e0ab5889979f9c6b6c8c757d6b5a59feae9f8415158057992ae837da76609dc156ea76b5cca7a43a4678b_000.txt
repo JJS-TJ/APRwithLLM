@@ -1,0 +1,248 @@
+No.3 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = 100000;
+	
+	if (first < min)
+		min = first;
+	if (second < min)
+		min = second;
+	if (third < min)
+		min = third;
+	if (fourth < min)
+		min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.8 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = first;
+	if (second < min) min = second;
+	if (third < min) min = third;
+	if (fourth < min) min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.11 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int smallest = first;
+	if (second < smallest)
+	smallest = second;
+	if (third < smallest)
+	smallest = third;
+	if (fourth < smallest)
+	smallest = fourth;
+	
+	printf("%d is the smallest \n ", smallest);
+	
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.12 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = first;
+	if (second < min) min = second;
+	if (third < min) min = third;
+	if (fourth < min) min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	
+	return 0;
+}
+No.13 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = first;
+	
+	if (second < min)
+		min = second;
+	if (third < min)
+		min = third;
+	if (fourth < min)
+		min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	
+	return 0;
+}
+No.16 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = first;
+	if (second < min)
+		min = second;
+	if (third < min)
+		min = third;
+	if (fourth < min)
+		min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.18 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min;
+	if (first < second)
+		min = first;
+	else
+		min = second;
+	if (third < min)
+		min = third;
+	if (fourth < min)
+		min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	return 0;
+}
+No.19 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = first;
+	if (second < min)
+		min = second;
+	if (third < min)
+		min = third;
+	if (fourth < min)
+		min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	
+	return 0;
+}
+No.23 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int smallest = first;
+	if (second < smallest)
+		smallest = second;
+	if (third < smallest)
+		smallest = third;
+	if (fourth < smallest)
+		smallest = fourth;
+	
+	printf("%d is the smallest \n ", smallest);
+	
+	return 0;
+}
+No.27 Patch
+/* This program will return the smallest number */
+
+#include <stdio.h>
+
+int main(void)
+{
+    int first, second, third, fourth;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%d %d %d %d", &first, &second, &third, &fourth);
+    
+    int min = first;
+    if (second < min) min = second;
+    if (third < min) min = third;
+    if (fourth < min) min = fourth;
+    
+    printf("%d is the smallest \n ", min);
+    
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.29 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = first;
+	
+	if (second < min)
+	min = second;
+	
+	if (third < min)
+	min = third;
+	
+	if (fourth < min)
+	min = fourth;
+	
+	printf("%d is the smallest \n ", min);
+	
+	return 0;
+}
+No.31 Patch
+int main(void)
+{
+	int first, second, third, fourth;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &first, &second, &third, &fourth);
+	
+	int min = first;
+	if (second < min)
+		min = second;
+	if (third < min)
+		min = third;
+	if (fourth < min)
+		min = fourth;
+	
+	if (min == first)
+		printf("%d is the smallest \n ", first);
+	else if (min == second)
+		printf("%d is the smallest \n ", second);
+	else if (min == third)
+		printf("%d is the smallest \n ", third);
+	else if (min == fourth)
+		printf("%d is the smallest \n ", fourth);
+	
+	return 0;
+}
