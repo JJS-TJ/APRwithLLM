@@ -1,0 +1,272 @@
+No.1 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one < two) {
+		if (one < three) {
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	} else {
+		if (two < three) {
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	return(0);
+}
+No.5 Patch
+#include <stdio.h>
+
+int main()
+{
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int smallest = one;
+	if (two < smallest)
+		smallest = two;
+	if (three < smallest)
+		smallest = three;
+	if (four < smallest)
+		smallest = four;
+	printf("%d is the smallest\n", smallest);
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.19 Patch
+int main()
+{
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int min = one;
+	if (two < min)
+		min = two;
+	if (three < min)
+		min = three;
+	if (four < min)
+		min = four;
+	printf("%d is the smallest\n", min);
+	return(0);
+}
+No.22 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one <= two && one <= three && one <= four)
+		printf("%d is the smallest\n", one);
+	if (two <= one && two <= three && two <= four)
+		printf("%d is the smallest\n", two);
+	if (three <= one && three <= two && three <= four)
+		printf("%d is the smallest\n", three);
+	if (four <= one && four <= two && four <= three)
+		printf("%d is the smallest\n", four);
+	return(0);
+}
+No.26 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int min = one;
+	if ((two < one)&&(two < three)&&(two < four))
+		min = two;
+	if ((three < one)&&(three < two)&&(three < four))
+		min = three;
+	if ((four < one)&&(four < two)&&(four < three))
+		min = four;
+	printf("%d is the smallest\n", min);
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.29 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one < two)
+		if (one < three)
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		else
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+	else
+		if (two < three)
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		else
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.33 Patch
+int main()
+{
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int smallest = one;
+	if (two < smallest)
+		smallest = two;
+	if (three < smallest)
+		smallest = three;
+	if (four < smallest)
+		smallest = four;
+	printf("%d is the smallest\n", smallest);
+	return(0);
+}
+
+/* Provide a fix for the buggy function */
+No.35 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int min = one;
+	if ((two < min))
+		min = two;
+	if ((three < min))
+		min = three;
+	if ((four < min))
+		min = four;
+	printf("%d is the smallest\n", min);
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.38 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int min = one;
+	if (two < min)
+		min = two;
+	if (three < min)
+		min = three;
+	if (four < min)
+		min = four;
+	printf("%d is the smallest\n", min);
+	return(0);
+}
+
+/* Provide a fix for the buggy function */
+No.41 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int smallest = one;
+	if (two < smallest)
+		smallest = two;
+	if (three < smallest)
+		smallest = three;
+	if (four < smallest)
+		smallest = four;
+	printf("%d is the smallest\n", smallest);
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.43 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one < two) {
+		if (one < three) {
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		}
+		else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	else {
+		if (two < three) {
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		}
+		else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.45 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	int min = one;
+	if (two < min)
+		min = two;
+	if (three < min)
+		min = three;
+	if (four < min)
+		min = four;
+	printf("%d is the smallest\n", min);
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
