@@ -1,0 +1,6 @@
+No.0 Patch
+S=input()
+if S.upper()==S or S.lower()==S or len(set(list(S)))<len(S):
+  print("No")
+else:
+  print("Yes")

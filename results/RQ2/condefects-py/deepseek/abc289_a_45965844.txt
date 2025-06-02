@@ -1,0 +1,6 @@
+No.0 Patch
+print(input().replace("0", "x").replace("1", "0").replace("x", "1"))
+No.1 Patch
+print(input().replace("0", "X").replace("1", "0").replace("X", "1"))
+No.2 Patch
+print(input().replace("0", "2").replace("1", "0").replace("2", "1"))

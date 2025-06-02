@@ -1,0 +1,52 @@
+No.0 Patch
+N = int(input())
+A = list(map(int,input().split()))
+B=[]
+for i in range(1000000):
+  B.append(0)
+for i in A:
+  B[i]+=1
+ans = N*(N-1)*(N-2)//6
+for i in B:
+  ans -= i*(i-1)//2*(N-i)
+  ans -= i*(i-1)*(i-2)//6
+print(ans)
+No.1 Patch
+N = int(input())
+A = list(map(int,input().split()))
+B=[]
+for i in range(1000000):
+  B.append(0)
+for i in A:
+  B[i]+=1
+ans = N*(N-1)*(N-2)//6
+for i in B:
+  ans -= i*(i-1)//2*(N-i)
+  ans -= i*(i-1)*(i-2)//6
+print(int(ans))
+No.2 Patch
+N = int(input())
+A = list(map(int,input().split()))
+B=[]
+for i in range(1000000):
+  B.append(0)
+for i in A:
+  B[i]+=1
+ans = N*(N-1)*(N-2)//6
+for i in B:
+  ans -= i*(i-1)*(i-2)//6
+  ans -= i*(i-1)//2*(N-i)
+print(ans)
+No.3 Patch
+N = int(input())
+A = list(map(int,input().split()))
+B=[0]*1000000
+for i in A:
+  B[i]+=1
+ans = N*(N-1)*(N-2)//6
+for i in B:
+  ans -= i*(i-1)*(i-2)//6
+  ans -= i*(i-1)//2*(N-i)
+print(ans)
+
+# Fix the bug in the function

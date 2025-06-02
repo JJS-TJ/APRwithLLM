@@ -1,0 +1,7 @@
+No.0 Patch
+S = input()
+for i in range(1, 7):
+    SS = S*i
+    if len(SS) == 6:
+        print(SS)
+        break

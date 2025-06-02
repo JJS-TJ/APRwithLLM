@@ -1,0 +1,52 @@
+No.0 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+No.1 Patch
+s=input()
+if s=="Monday":
+    print(5)
+if s=="Tuesday":
+    print(4)
+if s=="Wednesday":
+    print(3)
+if s=="Thursday":
+    print(2)
+if s=="Friday":
+    print(1)
+No.4 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+else:
+    print("Invalid day")
+No.5 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+else:
+    print("Enter valid day")

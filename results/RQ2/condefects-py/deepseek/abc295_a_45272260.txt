@@ -1,0 +1,22 @@
+No.0 Patch
+n=int(input())
+x=list(input().split())
+eng=["and","not","that","the","you"]
+
+for i in range(n):
+    if x[i] in eng:
+        print("Yes")
+        break
+else:
+    print("No")
+No.2 Patch
+n=int(input())
+x=list(input().split())
+eng=["and","not","that","the","you"]
+
+for i in range(n):
+    if x[i] in eng:
+        print("Yes")
+        break
+    elif i==n-1:
+        print("No")

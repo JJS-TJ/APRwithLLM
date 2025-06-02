@@ -1,0 +1,18 @@
+No.1 Patch
+j_list=['a','b','c','d','e','f','g','h']
+str_list = [input() for _ in range(8)]
+counter = 0
+for i in str_list:
+    for j in range(8):
+        if(i[j]=='*'):
+            print(j_list[j]+str(8-counter))
+            break
+    counter += 1
+No.3 Patch
+j_list=['a','b','c','d','e','f','g','h']
+str_list = [input() for _ in range(8)]
+for i in range(8):
+    for j in range(8):
+        if str_list[i][j] == '*':
+            print(j_list[j]+str(8-i))
+            break

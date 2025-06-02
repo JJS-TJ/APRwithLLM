@@ -1,0 +1,14 @@
+No.0 Patch
+s = list(input())
+ans = []
+for i in range(len(s)):
+  ans.append(''.join(s[i:]+s[:i]))
+print(min(ans))
+print(max(ans))
+No.1 Patch
+s = list(input())
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:]+s[:i])
+print(''.join(min(ans)))
+print(''.join(max(ans)))

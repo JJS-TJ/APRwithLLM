@@ -1,0 +1,14 @@
+No.0 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+print(ascii_uppercase[(X - 1) // N])
+No.4 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+print(ascii_uppercase[(X - 1) // N])
+
+# Fix the bug in the given function

@@ -1,0 +1,28 @@
+No.0 Patch
+s = input()
+t = input()
+for i in range(min(len(s), len(t))):
+    if s[i] != t[i]:
+        print(i + 1)
+        exit()
+if len(s) < len(t):
+    print(len(s) + 1)
+else:
+    print(len(t) + 1)
+No.1 Patch
+s = input()
+t = input()
+for i in range(len(s)):
+    if s[i] != t[i]:
+        print(i + 1)
+        break
+else:
+    print(len(s) + 1)
+No.2 Patch
+s = input()
+t = input()
+for i in range(len(s)):
+    if s[i] != t[i]:
+        print(i + 1)
+        exit()
+print(len(s) + 1)

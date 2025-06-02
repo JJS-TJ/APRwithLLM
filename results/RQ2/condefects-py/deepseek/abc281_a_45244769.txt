@@ -1,0 +1,10 @@
+No.0 Patch
+n = input()
+n = int(n)
+for i in range(n, -1, -1):
+    print(i)
+No.3 Patch
+n = input()
+n = int(n)
+for i in range(n,-1,-1):
+    print(i)

@@ -1,0 +1,31 @@
+No.0 Patch
+# https://atcoder.jp/contests/abc258/tasks/abc258_a
+
+K = int(input())
+
+if K >= 60:
+    K = K - 60
+    print(f"22:{K if K >= 10 else '0' + str(K)}")
+else:
+    print(f"21:{K if K >= 10 else '0' + str(K)}")
+No.3 Patch
+# https://atcoder.jp/contests/abc258/tasks/abc258_a
+
+K = int(input())
+
+if K > 69:
+    print(f"22:{K - 60:02d}")
+elif K > 59:
+    print(f"22:0{K - 60}")
+else:
+    print(f"21:{K:02d}")
+No.4 Patch
+K = int(input())
+
+if K >= 60:
+    print(f"22:{K - 60:02}")
+else:
+    print(f"21:{K:02}")
+
+# 21:{K - 60} is incorrect because it will return a negative number when K < 60 and the format of time should be in 2 digits with leading zero.
+# This has been fixed by using f-string formatting with `:02` to ensure the number is always two digits long with leading zero if necessary.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

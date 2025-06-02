@@ -1,0 +1,12 @@
+No.1 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+No.2 Patch
+s=input()
+if len(s) >= 2 and s[-2:] == "er":
+  print("er")
+else:
+  print("ist")

@@ -1,0 +1,8 @@
+No.0 Patch
+n = int(input())
+
+print(hex(n)[2:].upper().zfill(2))
+No.1 Patch
+n = int(input())
+
+print(hex(n)[2:].upper().rjust(2, '0'))

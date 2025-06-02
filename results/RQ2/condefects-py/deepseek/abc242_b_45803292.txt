@@ -1,0 +1,28 @@
+No.2 Patch
+def func():
+    # 入力を取得
+    S = input()
+    
+    print("".join(sorted(S)))
+
+if __name__ == '__main__':
+    func()
+No.3 Patch
+def func():
+    # 入力を取得
+    S = input()
+    
+    print(''.join(sorted(S)))
+
+if __name__ == '__main__':
+    func()
+No.4 Patch
+def func():
+    # 入力を取得
+    S = input()
+
+    # 文字列をソートして出力
+    print(''.join(sorted(S)))
+
+if __name__ == '__main__':
+    func()
