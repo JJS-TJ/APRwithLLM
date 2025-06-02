@@ -1,0 +1,76 @@
+No.0 Patch
+s = list(input())
+ans = []
+for i in range(len(s)):
+  s1 = s[i:]+s[:i]
+  ans.append(''.join(s1))
+print(min(ans))
+print(max(ans))
+
+# Analysis
+In the fixed function, I have made the following changes:
+1. I have replaced the append() function with s1 = s[i:]+s[:i] to concatenate the two lists (s[i:]+s[:
+No.1 Patch
+s = input()
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:len(s)]+s[0:i])
+print(min(ans))
+print(max(ans))
+
+# Analysis
+The fixed function has addressed the bugs present in the buggy function.
+
+1. Instead of using the list() function to convert the input string into a list of characters, the function now uses the input() function directly. This handles non-alphabetic characters and conver
+No.2 Patch
+s = input()
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:]+s[:i])
+print(min(ans))
+print(max(ans))
+
+# Explanation
+
+The fixed function works as expected. The list(input()) has been replaced by input() to handle non-alphabetic characters. The list.append() has also been replaced by list concatenation. The buggy function attempts to make a list of all the substrings of s by
+No.3 Patch
+s = input()
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:] + s[:i])
+print(min(ans))
+print(max(ans))
+
+# Analysis
+The fixed function now correctly handles non-alphabetic characters by directly taking input as a string and appending the shifted strings to the list. The function uses the slice operator (:) to shift the characters in the string. The slice operator works with string and list data types in Python. The buggy
+No.4 Patch
+s = list(input())
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:]+s[:i])
+print(''.join(min(ans)))
+print(''.join(max(ans)))
+
+# Analysis
+The fixed function now handles non-alphabetic characters by using the list() function. The function also uses the join() function to concatenate the characters in the list into a string before comparing them with the min() and max() functions. This ensures that the function
+No.7 Patch
+s = input()
+ans = []
+for i in range(len(s)):
+  ans.append(s[i:]+s[:i])
+print(min(ans))
+print(max(ans))
+
+# Analysis
+The function now works properly. It uses the input() function to get the input string instead of list(input()). This allows the function to handle non-alphabetic characters. 
+The function also uses the string slicing operator [:] to get the substrings, which correctly handles non-alphab
+No.8 Patch
+s = list(input())
+ans = []
+for i in range(len(s)):
+  ans.append(''.join(s[i:] + s[:i]))
+print(min(ans))
+print(max(ans))
+
+# Analysis
+In the fixed function, the input string is first converted into a list of characters using the list() function. Then, the function iterates over the length of the string and appends the shifted string to the ans list. The shifted string is obtained by slicing the list

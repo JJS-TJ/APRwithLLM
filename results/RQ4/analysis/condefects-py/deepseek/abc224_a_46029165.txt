@@ -1,0 +1,78 @@
+No.1 Patch
+s=input()
+if s[-2:] == "er": # corrected if condition
+  print("er")
+else:
+  print("ist")
+
+# This code works because it correctly checks the last two characters of the string s to determine whether they are "er", not
+No.2 Patch
+s = input()
+if s[-2:] == "er":
+    print("er")
+else:
+    print("ist")
+
+# Analysis
+The fixed code is the same as the buggy code but with a fix. In the fixed code, s[-2:] is
+No.3 Patch
+s = input()
+if s.endswith("er"):
+    print("er")
+else:
+    print("ist")
+
+# The endswith() function in python is used to check if the string ends with the specified suffix. This function can also take tuple
+No.4 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+In the corrected code, we use slicing to check the last two characters of the string. The operator s[-2:] returns
+No.5 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+In the fixed code, the last two characters of the string are checked. Therefore, "er" can be checked properly. The
+No.6 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+The issue with the original function is that it's only checking the last character of the string, instead of the last two characters
+No.7 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+Analysis:
+The buggy function is incorrect because it is only checking the last character to see if it is "r". Therefore, when the
+No.8 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# Analysis
+The fixed function works by checking the last two characters of the input string. This is done using the slice s[-2:],
+No.9 Patch
+s=input()
+if s[-2:] == "er":
+  print("er")
+else:
+  print("ist")
+
+# The bug was that the code was only checking the last character of the string, not the last two characters. To fix this, you need
