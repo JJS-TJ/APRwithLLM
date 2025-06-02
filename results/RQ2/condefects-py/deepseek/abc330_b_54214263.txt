@@ -1,0 +1,12 @@
+No.0 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)

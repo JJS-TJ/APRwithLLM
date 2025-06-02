@@ -1,0 +1,8 @@
+No.0 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else idx)
+No.1 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx > -1 else idx)

@@ -1,0 +1,29 @@
+No.2 Patch
+s = list(input())
+
+S = sorted(list(set(s)))
+
+str = ""
+max_count = 0
+
+for i in range(len(S)):
+    if i == 0:
+        str = S[0]
+        max_count = s.count(S[0])
+    elif s.count(S[i]) > max_count:
+        str = S[i]
+        max_count = s.count(S[i])
+
+print(str)
+No.3 Patch
+s = list(input())
+
+S = sorted(list(set(s)))
+
+str = ""
+
+for i in range(len(S)):
+    if i == 0 or s.count(S[i]) > s.count(str):
+        str = S[i]
+
+print(str)

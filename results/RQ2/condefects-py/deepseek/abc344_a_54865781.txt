@@ -1,0 +1,46 @@
+No.1 Patch
+string = input()
+start = string.find("|", 0)
+end = string.find("|", start + 1)
+if not(start == end): string = string.replace(string[start:end+1], "")
+else: string = string.replace("|", "")
+print(string)
+No.2 Patch
+string = input()
+start = string.find("|", 0)
+end = string.find("|", start + 1)
+if end == -1:
+    string = string.replace("|", "")
+else:
+    string = string[:start] + string[end+1:]
+print(string)
+No.3 Patch
+string = input()
+start = string.find("|", 0)
+end = string.find("|", start + 1)
+if not(start == (end - 1)): string = string.replace(string[start:end+1], "")
+else: string = string.replace("|", "")
+print(string)
+No.4 Patch
+string = input()
+start = string.find("|", 0)
+end = string.find("|", start + 1)
+if not(start == (end - 2)): string = string.replace(string[start:end+1], "")
+else: string = string.replace("|", "")
+print(string)
+No.5 Patch
+string = input()
+start = string.find("|", 0)
+end = string.find("|", start + 1) + 1
+if not(start == (end - 2)): string = string.replace(string[start:end], "")
+else: string = string.replace("|", "")
+print(string)
+No.6 Patch
+string = input()
+start = string.find("|", 0)
+end = string.find("|", start + 1)
+if end == -1:
+    string = string.replace("|", "")
+else:
+    string = string.replace(string[start:end+1], "")
+print(string)

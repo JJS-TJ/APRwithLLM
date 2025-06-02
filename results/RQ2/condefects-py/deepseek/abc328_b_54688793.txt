@@ -1,0 +1,113 @@
+No.0 Patch
+N = int(input())
+D = list(map(int,input().split()))
+ans = 0
+for x in range(1,N+1):
+  for y in range(1,D[x-1]+1):
+    x = str(x)
+    a = list(x)
+    a = list(map(int,a))
+    y = str(y)
+    b = list(y)
+    b = list(map(int,b))
+    a = set(a)
+    b = set(b)
+    a = list(a)
+    b = list(b)
+    if len(a) == 1 and len(b) == 1 and a == b:
+      ans += 1
+print(ans)
+No.2 Patch
+N = int(input())
+D = list(map(int,input().split()))
+ans = 0
+for x in range(1,N+1):
+  for y in range(1,D[x-1]+1):
+    x = str(x)
+    a = list(x)
+    a = list(map(int,a))
+    y = str(y)
+    b = list(y)
+    b = list(map(int,b))
+    a = set(a)
+    b = set(b)
+    a = list(a)
+    b = list(b)
+    a = list(map(str,a))
+    b = list(map(str,b))
+    if len(a) == 1 and len(b) == 1 and a == b:
+      ans += 1
+print(ans)
+No.4 Patch
+N = int(input())
+D = list(map(int,input().split()))
+ans = 0
+for x in range(1,N+1):
+  for y in range(1,D[x-1]+1):
+    x = str(x)
+    a = list(x)
+    a = list(map(int,a))
+    y = str(y)
+    b = list(y)
+    b = list(map(int,b))
+    a = set(a)
+    b = set(b)
+    a = list(a)
+    b = list(b)
+    a = list(a)
+    b = list(b)
+    if len(a) == 1 and len(b) == 1 and a == b:
+      ans += 1
+print(ans)
+No.6 Patch
+N = int(input())
+D = list(map(int,input().split()))
+ans = 0
+for i in range(1,N+1):
+  for j in range(1,D[i-1]+1):
+    x = str(i)
+    a = list(x)
+    a = list(map(int,a))
+    y = str(j)
+    b = list(y)
+    b = list(map(int,b))
+    a = set(a)
+    b = set(b)
+    a = list(a)
+    b = list(b)
+    if len(a) == 1 and len(b) == 1 and a == b:
+      ans += 1
+print(ans)
+  
+# Explanation
+# There are two bugs in the code. First, the x and y variables should be represented as i and j respectively in the for loop. The second bug is in the calculation of the range in the second for loop. It should be from 1 to D[i-1] instead of D[x-1].<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.7 Patch
+N = int(input())
+D = list(map(int,input().split()))
+ans = 0
+for x in range(1,N+1):
+  for y in range(1,D[x-1]+1):
+    x = str(x)
+    a = list(x)
+    a = list(map(int,a))
+    y = str(y)
+    b = list(y)
+    b = list(map(int,b))
+    a = set(a)
+    b = set(b)
+    if len(a) == 1 and len(b) == 1 and a == b:
+      ans += 1
+print(ans)
+
+# Test cases
+# Input: 
+# 10
+# 1 2 3 4 5 6 7 8 9 10
+# Output: 
+# 10
+
+# Input: 
+# 5
+# 1 2 3 4 5
+# Output: 
+# 5<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
