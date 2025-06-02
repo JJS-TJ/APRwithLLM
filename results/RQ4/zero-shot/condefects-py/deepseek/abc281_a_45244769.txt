@@ -1,0 +1,9 @@
+No.0 Patch
+n = int(input())
+for i in range(n, -1, -1):
+    print(i)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+n = input()
+n = int(n)
+for i in range(n, -1, -1):
+    print(i)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

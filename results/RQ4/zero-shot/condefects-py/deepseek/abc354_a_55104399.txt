@@ -1,0 +1,10 @@
+No.0 Patch
+h = int(input())
+
+cnt = 0
+plant = -1
+while plant < h:
+    plant = plant + 2**cnt
+    cnt += 1
+
+print(cnt)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

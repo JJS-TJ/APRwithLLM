@@ -1,0 +1,21 @@
+No.1 Patch
+N, A, B = map(int, input().split())
+C = list(map(int, input().split()))
+for i in range(len(C)):
+  if C[i] == A + B:
+    print(i+1)
+    break<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+N, A, B = map(int, input().split())
+C = list(map(int, input().split()))
+for i in range(N):
+  if C[i] == A + B:
+    print(i+1)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.5 Patch
+N, A, B = map(int, input().split())
+C = list(map(int, input().split()))
+
+for i in range(N):
+  if C[i] == A + B:
+    print(i+1)
+    break<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

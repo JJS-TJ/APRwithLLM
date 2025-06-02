@@ -1,0 +1,4 @@
+No.0 Patch
+print(input().replace("0", "2").replace("1", "0").replace("2", "1"))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+print(input().translate(str.maketrans("01", "10")))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

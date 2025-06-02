@@ -1,0 +1,23 @@
+No.0 Patch
+def main():
+    n, x = map(int, input().split())
+    a, b = [], []
+    for _ in range(n):
+        ai, bi = map(int, input().split())
+        a.append(ai)
+        b.append(bi)
+
+    dp = [[False for _ in range(x + 1)] for _ in range(n + 1)]
+    dp[0][0] = True
+
+    for i in range(n):
+        for j in range(x + 1):
+            for k in range(b[i] + 1):
+                if j >= k * a[i]:
+                    dp[i + 1][j] = dp[i + 1][j] or dp[i][j - k * a[i]]
+
+    print("Yes" if dp[n][x] else "No")
+
+
+if __name__ == '__main__':
+    main()<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

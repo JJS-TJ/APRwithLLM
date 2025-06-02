@@ -1,0 +1,72 @@
+No.0 Patch
+import itertools
+
+def diff(A, B):
+  res = 0
+  for a, b in zip(A, B):
+    if a != b:
+      res += 1
+  return res
+
+N, M = map(int, input().split())
+S = [input() for _ in range(N)]
+
+for T in itertools.permutations(S):
+  ok = True
+  for i in range(N-1):
+    if diff(T[i], T[i+1]) != 1:
+      ok = False
+  if ok:
+    print("Yes")
+    break
+else:
+  print("No")
+
+
+# Here, the else block is associated with the for loop, not the if statement. This means that the code inside the else block will be executed if the for loop completes normally, i.e., if the for loop has exhausted its iterable (in this case, the permutations of S). If the for loop is exited by a break statement, the else block is skipped. This ensures that the code prints "No" if none of the permutations of S meet the condition tested in the for loop.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+import itertools
+
+def diff(A, B):
+  res = 0
+  for a, b in zip(A, B):
+    if a != b:
+      res += 1
+  return res
+
+N, M = map(int, input().split())
+S = [input() for _ in range(N)]
+
+for T in itertools.permutations(S):
+  ok = True
+  for i in range(N-1):
+    if diff(T[i], T[i+1]) != 1:
+      ok = False
+  if ok:
+    print("Yes")
+    exit()
+print("No")
+No.2 Patch
+import itertools
+
+def diff(A, B):
+  res = 0
+  for a, b in zip(A, B):
+    if a != b:
+      res += 1
+  return res
+
+N, M = map(int, input().split())
+S = [input() for _ in range(N)]
+
+for T in itertools.permutations(S):
+  ok = True
+  for i in range(N-1):
+    if diff(T[i], T[i+1]) != 1:
+      ok = False
+      break
+  if ok:
+    print("Yes")
+    break
+else:
+  print("No")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

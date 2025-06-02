@@ -1,0 +1,45 @@
+No.0 Patch
+n = 10
+s = [input()for i in range(n)]
+
+a,b,c,d = 100, 0, 100, 0
+for i in range(n):
+    for j in range(n):
+      if s[i][j]=='#':
+        if a>i : a=i
+        if b<i : b=i
+        if c>j : c=j
+        if d<j : d=j
+print(a+1,b+1)
+print(c+1,d+1)
+
+# Explanation:
+# In the buggy function, the variable B was used instead of b, which is an error because Python is case-sensitive.
+# The correct variable name should be b, not B. Therefore, changing B to b in the if statement solves the issue.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+n = 10
+s = [input()for i in range(n)]
+
+# Initialize the smallest and largest coordinates
+a,b,c,d = 100, 0, 100, 0
+for i in range(n):
+    for j in range(n):
+        if s[i][j] == '#':
+            # Update the smallest and largest coordinates
+            a, b, c, d = min(a, i), max(b, i), min(c, j), max(d, j)
+print(a+1,b+1)
+print(c+1,d+1)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+n = 10
+s = [input()for i in range(n)]
+
+a,b,c,d = 100, 0, 100, 0
+for i in range(n):
+    for j in range(n):
+        if s[i][j]=='#':
+            if a>i : a=i
+            if b<i : b=i
+            if c>j : c=j
+            if d<j : d=j
+print(a+1,b+1)
+print(c+1,d+1)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

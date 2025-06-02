@@ -1,0 +1,28 @@
+No.0 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+def solve(N, L, R, a):
+    ans = []
+    for i in a:
+        if i < L:
+            ans.append(L)
+        elif i > R:
+            ans.append(R)
+        else:
+            ans.append(i)
+    return ans
+
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+result = solve(N, L, R, a)
+print(*result)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

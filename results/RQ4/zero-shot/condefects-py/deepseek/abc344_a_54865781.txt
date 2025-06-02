@@ -1,0 +1,9 @@
+No.1 Patch
+string = input()
+start = string.find("|", 0)
+end = string.find("|", start + 1)
+if not(start == (end - 1)): 
+    string = string.replace(string[start:end+1], "")
+else: 
+    string = string.replace("|", "")
+print(string)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

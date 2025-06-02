@@ -1,0 +1,66 @@
+No.1 Patch
+N, K = map(int, input().split())
+S = input()
+cnt = 0
+s = ""
+for i in S:
+    if i == "o" and cnt < K:
+        cnt += 1
+        s = s + i
+    elif i == "o":
+        s = s + "x"
+    if i == "x":
+        s = s + "x"
+print(s)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+# F
+N, K = map(int, input().split())
+S = input()
+
+cnt = 0
+s = ""
+for i in S:
+    if i == "o" and cnt < K:
+        cnt += 1
+        s = s + i
+    else:
+        s = s + "x"
+print(s)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+N, K = map(int, input().split())
+S = input()
+
+result = ""
+
+for i in range(N):
+    if S[i] == "o" and K > 0:
+        result += "o"
+        K -= 1
+    else:
+        result += "x"
+
+print(result)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.4 Patch
+N, K = map(int, input().split())
+S = input()
+cnt = 0
+s = ""
+for i in S:
+    if i == "o" and cnt < K:
+        cnt += 1
+        s = s + i
+    else:
+        s = s + "x"
+print(s)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.5 Patch
+# F
+N, K = map(int, input().split())
+S = input()
+s = ""
+for i in range(N):
+    if S[i] == "o" and K > 0:
+        s = s + S[i]
+        K -= 1
+    else:
+        s = s + "x"
+print(s)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

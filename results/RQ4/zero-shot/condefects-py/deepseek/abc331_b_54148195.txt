@@ -1,0 +1,11 @@
+No.2 Patch
+from itertools import product
+N,S,M,L=map(int,input().split())
+ans=10**20
+for i,j,k in product(range(N+1),repeat=3):
+	if 6*i+8*j+12*k>=N:
+		ans=min(ans,S*i+M*j+L*k)
+print(ans)
+
+# The bug in the buggy function was that it was checking if the total number of bags is less than N and not if it is greater or equals to N.
+# So, it was ignoring the cases where the total number of bags is exactly N, therefore the fix was to change the less than operator to a greater than or equals operator.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

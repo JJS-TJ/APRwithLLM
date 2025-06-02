@@ -1,0 +1,12 @@
+No.0 Patch
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# A function that converts a string to an array of characters
+No.2 Patch
+K = int(input())
+
+for i in range(1, K+1):
+  print(chr(64 + i), end='')

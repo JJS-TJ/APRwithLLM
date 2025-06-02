@@ -1,0 +1,20 @@
+No.0 Patch
+S = input()
+t = set([])
+a=[[]]
+for i in S:
+    if i.isalpha() == True:
+        if i in t:
+            print("No")
+            exit()
+        else:
+            t.add(i)
+            a[-1].append(i)
+    elif i==")":
+        for j in a[-1]:
+            t.remove(j)
+        a.pop(-1)
+    elif i=="(":
+        a.append([])
+
+print("Yes")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

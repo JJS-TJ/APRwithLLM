@@ -1,0 +1,61 @@
+No.0 Patch
+N,M=map(int,input().split())
+G=[[] for _ in range(N)]
+for _ in range(M):
+    u,v=map(int,input().split())
+    G[u-1].append(v-1)
+    G[v-1].append(u-1)
+seen=set()
+cnt=0
+for i in range(N):
+    if(i not in seen):
+        stack=[i]
+        cnt+=1
+        while stack:
+            x=stack.pop()
+            if(x in seen):
+                continue
+            seen.add(x)
+            for j in G[x]:
+                if (j not in seen):
+                    stack.append(j)
+print(cnt)
+
+# The bug was in the line "for j in G[i]:". It should be "for j in G[x]:" because we want to look at the nodes that are connected to the current node, not the nodes that are connected to the start node.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+from collections import defaultdict
+
+class Graph:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = defaultdict(list)
+
+    def add_edge(self, u, v):
+        self.graph[u].append(v)
+
+    def DFSUtil(self, v, visited):
+        visited[v] = True
+        for i in self.graph[v]:
+            if visited[i] == False:
+                self.DFSUtil(i, visited)
+
+    def count_islands(self):
+        visited = [False] * (self.V)
+        count = 0
+        for i in range(self.V):
+            if visited[i] == False:
+                self.DFSUtil(i, visited)
+                count += 1
+        return count
+
+# Read input
+N, M = map(int, input().split())
+
+g = Graph(N)
+for _ in range(M):
+    u, v = map(int, input().split())
+    g.add_edge(u - 1, v - 1)
+    g.add_edge(v - 1, u - 1)
+
+# Count number of connected components
+print(g.count_islands())<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

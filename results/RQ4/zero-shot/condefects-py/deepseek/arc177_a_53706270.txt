@@ -1,0 +1,97 @@
+No.0 Patch
+A, B, C, D, E, F = map(int, input().split())
+N = int(input())
+X = list(map(int, input().split()))
+
+out = "Yes"
+
+for i in range(N):
+  while(X[i] >= 500 and F > 0):
+    X[i] -= 500
+    F -= 1
+  while(X[i] >= 100 and E > 0):
+    X[i] -= 100
+    E -= 1
+  while(X[i] >= 50 and D > 0):
+    X[i] -= 50
+    D -= 1
+  while(X[i] >= 10 and C > 0):
+    X[i] -= 10
+    C -= 1
+  while(X[i] >= 5 and B > 0):
+    X[i] -= 5
+    B -= 1
+  while(X[i] >= 1 and A > 0):
+    X[i] -= 1
+    A -= 1
+  if(X[i] != 0):
+    out = "No"
+    break
+  
+print(out)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+A, B, C, D, E, F = map(int, input().split())
+N = int(input())
+X = list(map(int, input().split()))
+
+out = "Yes"
+
+for i in range(N):
+  temp = X[i]
+  while(X[i] >= 500 and F > 0):
+    X[i] = X[i] - 500
+    F = F - 1
+  while(X[i] >= 100 and E > 0):
+    X[i] = X[i] - 100
+    E = E - 1
+  while(X[i] >= 50 and D > 0):
+    X[i] = X[i] - 50
+    D = D - 1
+  while(X[i] >= 10 and C > 0):
+    X[i] = X[i] - 10
+    C = C - 1
+  while(X[i] >= 5 and B > 0):
+    X[i] = X[i] - 5
+    B = B - 1
+  while(X[i] >= 1 and A > 0):
+    X[i] = X[i] - 1
+    A = A - 1
+  if(X[i] != 0):
+    out = "No"
+    break
+  
+print(out)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+A, B, C, D, E, F = map(int, input().split())
+N = int(input())
+X = list(map(int, input().split()))
+
+out = "Yes"
+
+for i in range(N):
+  while(X[i] >= 500 and F > 0):
+    X[i] = X[i] - 500
+    F = F - 1
+  while(X[i] >= 100 and E > 0):
+    X[i] = X[i] - 100
+    E = E - 1
+  while(X[i] >= 50 and D > 0):
+    X[i] = X[i] - 50
+    D = D - 1
+  while(X[i] >= 10 and C > 0):
+    X[i] = X[i] - 10
+    C = C - 1
+  while(X[i] >= 5 and B > 0):
+    X[i] = X[i] - 5
+    B = B - 1
+  while(X[i] >= 1 and A > 0):
+    X[i] = X[i] - 1
+    A = A - 1
+  if(X[i] != 0):
+    out = "No"
+    break
+  
+print(out)
+
+# Explanation
+# The error in the code lies in the B = B - 1 line. The bug here is that you have used B = B - 1 instead of B -= 1. This causes the code to subtract 1 from B but not to store the result back in B. This would mean that B would always be 1 less than the original value, causing an infinite loop. The solution is to use B -= 1, which subtracts 1 from B and stores the result back in B.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

@@ -1,0 +1,10 @@
+No.3 Patch
+n, d, p = map(int, input().split())
+f = list(map(int, input().split()))
+f.sort(reverse=True)
+i = 0
+ans = 0
+while d*i < n:
+    ans += min(p, sum(f[d*i:min(d*(i+1),n)]))
+    i += 1
+print(ans)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

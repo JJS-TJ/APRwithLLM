@@ -1,0 +1,3 @@
+No.1 Patch
+A, B = map(int, input().split())
+print(A**B)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

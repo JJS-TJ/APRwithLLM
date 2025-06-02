@@ -1,0 +1,8 @@
+No.1 Patch
+s = input()
+ans = "Yes"
+for i in range(len(s)):
+    if i %2 == 1 and s[i] != "0":
+        ans = "No"
+        break
+print(ans)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

@@ -1,0 +1,18 @@
+No.3 Patch
+def check(h, m):
+    b = h % 10
+    c = m // 10
+    newm = m+(b-c)*10
+    add = newm // 60
+    newh = (h-b)+c+add
+    return 0 <= newm < 60 and 0 <= newh < 24
+
+h, m = map(int, input().split())
+
+while True:
+    if check(h, m): break
+    m += 1
+    h += m//60
+    m %= 60
+    h %= 24
+print(h, m)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

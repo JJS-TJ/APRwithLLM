@@ -1,0 +1,115 @@
+No.0 Patch
+def func():
+    pattern1 = ["H","D","C","S"]
+    pattern2 = ["A","2","3","4","5","6","7","8","9","T","J","Q","K"]
+    pat_set = set()
+    
+    # 入力を取得
+    N = int(input())
+    for n in range(N):
+      s = input()
+      if (not(s[0] in pattern1)) or (not(s[1] in pattern2)):
+        print("No")
+        return
+      if s in pat_set:
+        print("No")
+        return
+      
+      pat_set.add(s)
+      
+    
+    print("Yes")
+
+if __name__ == '__main__':
+    func()<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+def func():
+    pattern1 = ["H","D","C","S"]
+    pattern2 = ["A","2","3","4","5","6","7","8","9","T","J","Q","K"]
+    pat_set = set()
+    
+    # 入力を取得
+    N = int(input())
+    for n in range(N):
+      s = input()
+      if (not(s[0] in pattern1)) or (not(s[1] in pattern2)) or (s in pat_set):
+        print("No")
+        return
+      
+      pat_set.add(s)
+      
+    
+    print("Yes")
+
+if __name__ == '__main__':
+    func()
+No.3 Patch
+def func():
+    pattern1 = ["H","D","C","S"]
+    pattern2 = ["A","2","3","4","5","6","7","8","9","T","J","Q","K"]
+    pat_set = set()
+    
+    # 入力を取得
+    N = int(input())
+    for n in range(N):
+      s = input()
+      if (not(s[0] in pattern1)) or (not(s[1] in pattern2)) or (s in pat_set):
+        print("No")
+        return
+      
+      pat_set.add(s)
+      
+    
+    print("Yes")
+
+if __name__ == '__main__':
+    func()<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.4 Patch
+def func():
+    pattern1 = ["H","D","C","S"]
+    pattern2 = ["A","2","3","4","5","6","7","8","9","T","J","Q","K"]
+    pat_set = set()
+    
+    # 入力を取得
+    N = int(input())
+    for n in range(N):
+      s = input()
+      if (s[0] not in pattern1) or (s[1] not in pattern2) or (s in pat_set):
+        print("No")
+        return
+      
+      pat_set.add(s)
+      
+    
+    print("Yes")
+
+if __name__ == '__main__':
+    func()<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.5 Patch
+def func():
+    pattern1 = ["H","D","C","S"]
+    pattern2 = ["A","2","3","4","5","6","7","8","9","T","J","Q","K"]
+    pat_set = set()
+    
+    # 入力を取得
+    N = int(input())
+    for n in range(N):
+      s = input()
+      if (not(s[0] in pattern1)) or (not(s[1] in pattern2)) or (s in pat_set):
+        print("No")
+        return
+      
+      pat_set.add(s)
+      
+    
+    print("Yes")
+
+if __name__ == '__main__':
+    func()
+
+# Unit Test
+import unittest
+
+class Test(unittest.TestCase):
+    def test_func(self):
+        self.assertEqual(func(), )<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

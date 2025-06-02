@@ -1,0 +1,24 @@
+No.1 Patch
+N, X = map(int, input().split())
+P = list(map(int, input().split()))
+
+for i in range(N):
+  if P[i] == X:
+    print(i + 1)
+    break<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.4 Patch
+N, X = map(int, input().split())
+P = list(map(int, input().split()))
+
+for i in range(N):
+  if P[i] == X:
+    print(i+1)
+    break<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.5 Patch
+N, X = map(int, input().split())
+P = list(map(int, input().split()))
+
+for i in range(N):
+  if P[i] == X:
+    print(i+1) # Changed from print(i) to print(i+1)
+    break<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

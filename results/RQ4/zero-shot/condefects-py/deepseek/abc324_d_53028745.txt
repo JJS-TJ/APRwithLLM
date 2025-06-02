@@ -1,0 +1,17 @@
+No.4 Patch
+import sys
+def main():
+    input = sys.stdin.readline
+    n = int(input())
+    s = sorted(input()[:-1])
+    max_val = int("".join(s[::-1]))
+    s = list(map(int, s))
+    cnt = 0
+    for i in range(int(max_val**0.5)+1): # fixed here
+        lst = list(map(int, str(i*i)))
+        if len(lst) < n:
+            lst += [0] * (n - len(lst))
+        if sorted(lst) == s:
+            cnt += 1
+    print(cnt)        
+main()<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

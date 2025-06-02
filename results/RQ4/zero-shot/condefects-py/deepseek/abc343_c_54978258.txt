@@ -1,0 +1,16 @@
+No.1 Patch
+def cube_palindrome(N):
+    index = 1
+    palindromes = []
+    while True:
+        cube = index ** 3
+        if cube > N:
+            break
+        str_cube = str(cube)
+        if str_cube == str_cube[::-1]:
+            palindromes.append(cube)
+        index += 1
+    return max(palindromes)
+
+N = int(input())
+print(cube_palindrome(N))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

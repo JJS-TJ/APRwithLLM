@@ -1,0 +1,54 @@
+No.0 Patch
+N = int(input())
+A = [list(map(int, input().split())) for _ in range(N)]
+ans = []
+for i in range(N):
+    for j in range(N):
+        if A[i][j] == 1:
+            ans.append(j+1)
+    print(*ans)
+    ans = []
+No.1 Patch
+N = int(input())
+A = [list(map(int, input().split())) for _ in range(N)]
+for i in range(N):
+    ans = []
+    for j in range(N):
+        if A[i][j] == 1:
+            ans.append(j+1)
+    print(*ans)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+N = int(input())
+A = [list(map(int, input().split())) for _ in range(N)]
+ans = []
+for i in range(N):
+    temp = []
+    for j in range(N):
+        if A[i][j] == 1:
+            temp.append(j+1)
+    ans.append(temp)
+for a in ans:
+    print(*a)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.3 Patch
+N = int(input())
+A = [list(map(int, input().split())) for _ in range(N)]
+ans = []
+for i in range(N):
+    for j in range(N):
+        if A[i][j] == 1:
+            ans.append(j+1)
+    print(*ans)
+    ans.clear()
+
+# Bug Description
+# In the buggy function, the ans list is not cleared after printing. As a result, the same list is printed again and again, leading to a wrong output. The list should be cleared after each row.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.5 Patch
+N = int(input())
+A = [list(map(int, input().split())) for _ in range(N)]
+ans = []
+for i in range(N):
+    ans = []
+    for j in range(N):
+        if A[i][j] == 1:
+            ans.append(j+1)
+    print(*ans)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

@@ -1,0 +1,4 @@
+No.1 Patch
+import re
+
+print(re.sub("a|e|i|o|u", "", input()))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

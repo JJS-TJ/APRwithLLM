@@ -1,0 +1,22 @@
+No.3 Patch
+n = int(input())
+s = input()
+t = input()
+
+p = 0
+
+for i in range(n):
+    if s[i] in "1l" and t[i] in "1l":
+        p += 1
+        
+    elif s[i] in "0o" and t[i] in "0o":
+        p += 1
+        
+    elif s[i] == t[i]:
+        p += 1
+    
+if p == n:
+    print("Yes")
+    
+else:
+    print("No")<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

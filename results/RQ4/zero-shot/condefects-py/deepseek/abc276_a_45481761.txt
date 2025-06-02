@@ -1,0 +1,31 @@
+No.0 Patch
+s = input()
+
+# Loop from the end of the string to the beginning
+for i in range(len(s)):
+    if s[-i-1] == "a":
+        print(len(s)-i)
+        break
+else:
+    print(-1)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+s=input()
+count = 0
+for i in range(len(s)):
+  if s[-i-1]=="a":
+    print((len(s))-i)
+    break
+  elif count == len(s)-1:
+    print(-1)
+  count += 1<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.2 Patch
+s=input()
+i=0
+while True:
+  if s[-i-1]=="a":
+    print((len(s))-i)
+    break
+  if i==len(s)-1:
+    print(-1)
+    break
+  i+=1<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

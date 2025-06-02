@@ -1,0 +1,8 @@
+No.0 Patch
+j_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+str_list = [input() for _ in range(8)]
+for i in range(8):
+    for j in range(8):
+        if str_list[i][j] == '*':
+            print(j_list[j] + str(8-i))
+            break<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

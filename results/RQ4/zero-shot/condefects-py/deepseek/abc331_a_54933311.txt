@@ -1,0 +1,29 @@
+No.0 Patch
+M,D = map(int,input().split())
+y,m,d = map(int,input().split())
+
+if d == D:  # 最後の日
+    d = 1
+    if m == M:
+        m = 1
+        y += 1
+    else:
+        m += 1
+else:
+    d += 1
+
+print(y,m,d)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+M,D = map(int,input().split())
+y,m,d = map(int,input().split())
+
+if m == M and d == D:  # 最後の日
+    m = d = 1
+    y += 1
+elif d == D:  # 月の最後の日
+    d = 1
+    m += 1
+else:
+    d += 1
+
+print(y,m,d)<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

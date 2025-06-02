@@ -1,0 +1,21 @@
+No.1 Patch
+def sum_nut(N, M, nutrition, goal):
+    result = []
+    for i in range(M):
+        sum_n = sum(int(nutrition[j][i]) for j in range(N))
+        if sum_n >= int(goal[i]):
+            result.append(1)
+        else:
+            result.append(0)
+    return result
+
+N, M = map(int, input().split())
+goal = input().split()
+nutrition = [input().split() for _ in range(N)]
+
+result = sum_nut(N, M, nutrition, goal)
+
+if sum(result) == M:
+    print("Yes")
+else:
+    print("No")

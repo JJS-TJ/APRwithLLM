@@ -1,0 +1,11 @@
+No.0 Patch
+def convert_to_number(S):
+    ans=0
+    for i in range(len(S)-1,-1,-1):
+        x=ord(S[i])-ord('A')+1
+        ans+=26**(len(S)-i-1)*x
+    return ans
+
+#N=int(input())
+S=input()
+print(convert_to_number(S))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

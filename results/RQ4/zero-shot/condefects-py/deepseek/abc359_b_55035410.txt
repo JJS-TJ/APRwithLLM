@@ -1,0 +1,11 @@
+No.0 Patch
+def count_triplets(arr):
+  res = 0
+  for i in range(len(arr)-2):
+    if arr[i+2] == arr[i]: res += 1
+  return res
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+print(count_triplets(arr))<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>

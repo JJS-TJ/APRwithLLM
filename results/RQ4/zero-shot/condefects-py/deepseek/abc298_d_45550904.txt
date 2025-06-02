@@ -1,0 +1,79 @@
+No.0 Patch
+from collections import deque, defaultdict, Counter
+Q = int(input())
+num = 1
+dq = deque([1])
+MOD = 998244353
+ans = []
+pow10 = []
+p = 1
+for i in range(600001):
+	pow10.append(p)
+	p = (p*10)%MOD
+
+for _ in range(Q):
+	q = input().split()
+	if q[0]=="1":
+		t = int(q[1])
+		num = (num*10 + t) % MOD
+		dq.append(t)
+
+	elif q[0]=="2":
+		a = dq.popleft()
+		num -= (a * pow10[len(dq)])
+		num = (num+MOD) % MOD
+
+	elif q[0]=="3":
+		ans.append(num)
+
+print(*ans ,sep='\n')
+
+# Test
+
+# Input:
+# 10
+# 1 5
+# 1 1
+# 2
+# 1 4
+# 3
+# 1 4
+# 2
+# 3
+# 2
+# 1 8
+# 3
+# Output:
+# 5451
+# 5451
+# 5454
+# 5454
+# 5458
+# 5458<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.1 Patch
+def solve():
+    from collections import deque
+
+    Q = int(input())
+    queue = deque()
+    queue.append(1)
+    num = 1
+    MOD = 998244353
+    ans = []
+
+    for _ in range(Q):
+        query = input().split()
+        if query[0] == "1":
+            digit = int(query[1])
+            num = (num * 10 + digit) % MOD
+            queue.append(digit)
+        elif query[0] == "2":
+            removed_digit = queue.popleft()
+            num -= pow(10, len(queue), MOD) * removed_digit
+            num = (num + MOD) % MOD
+        else:
+            ans.append(num)
+
+    print(*ans, sep='\n')
+
+solve()<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
