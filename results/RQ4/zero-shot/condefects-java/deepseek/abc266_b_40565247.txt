@@ -1,0 +1,96 @@
+No.0 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	Long n = sc.nextLong();
+	Long x = n - big;
+	Long sub;
+	if(x < 0) {
+		sub = -x;
+		x += sub/big * big;
+		if(x != 0)x += big;
+	}else if(x >= big) {
+		sub = x;
+		x -= (sub/big) * big;
+	}
+	System.out.print(x);
+}
+
+// Explaination
+// The buggy function was dividing the value of 'x' by 'big' which is a constant integer in the problem statement and was then subtracting it from 'x'.
+// This was creating a problem as the division was flooring the result, which was giving incorrect result.
+// The correct method was to divide 'x' by 'big' and then subtract the result from 'x' instead of the floor of the division.
+// So, the value of 'x' should be subtracted by the exact number of times 'big' can fit into 'x' from 'x'.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * Copyright (C) 2013-2017 Pierre Salvadorvy <pierre.salvadorvy@gmail.com>
+ *
+ * This library
+No.2 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    long n = sc.nextLong();
+    long x = n - big;
+    long sub;
+    if (x < 0) {
+        sub = -x;
+        x += sub / big * big;
+        if (x != 0)
+            x += big;
+    } else if (x >= big) {
+        sub = x;
+        x -= (sub / big) * big;
+    }
+    System.out.print(x);
+}
+
+// Explanation
+// The original function has a bug in the condition for reducing the value of x. The expression used in the condition is incorrect, as it doesn't correctly calculate the number of times the value of big needs to be subtracted from x.
+// The correct expression should be sub / big, not sub / big - 1. This is because we want to calculate the number of times big can be subtracted from sub, not the number of times it can be subtracted minus one.
+// Once we have corrected this, the function will work correctly.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/sbs/demo/exception/DataNotFoundException.java
+package com.example.sbs.demo.exception;
+
+public class DataNotFoundException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
+    public DataNotFoundException(String message) {
+        super(message
+No.3 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	Long n = sc.nextLong();
+	Long x = n - big;
+	Long sub;
+	if(x < 0) {
+		sub = -x;
+		x += sub/big * big;
+		if(x != 0)x += big;
+	}else if(x >= big) {
+		sub = x;
+		x -= (sub/big) * big;
+	}
+	System.out.print(x);
+}
+```<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function
+
+// Buggy Function
+No.6 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	Long n = sc.nextLong();
+	Long x = n - big;
+	Long sub;
+	if(x < 0) {
+		sub = -x;
+		x += sub/big * big;
+		if(x != 0)x += big;
+	}else if(x >= big) {
+		sub = x;
+		x -= (sub/big) * big;
+	}
+	System.out.print(x);
+}
+```
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function

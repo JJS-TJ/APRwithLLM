@@ -1,0 +1,25 @@
+No.8 Patch
+public static void main(String[] args) {
+    // 入力を受け取るためのオブジェクト
+    Scanner sc = new Scanner(System.in);
+    String line1 = sc.nextLine();
+    String[] line_1 = line1.split(" ");
+    int L = Integer.parseInt(line_1[0]);
+    int R = Integer.parseInt(line_1[1]);
+    String S = sc.nextLine();
+    StringBuilder new_S = new StringBuilder(S);
+    for (int i = L - 1; i < R; i++) {
+        new_S.setCharAt(i, S.charAt(R - i + L - 2));
+    }
+    System.out.println(new_S);
+}
+
+// Explaination
+The buggy function is not properly reversing the substring within the specified range. This is because the indexing is not correct when setting the characters in the new string. The indices in the original string and the new string are not matching correctly, which is causing the issue.
+
+In the fixed function, the loop starts from L-1 and ends at R-1 (as we are considering 0-indexed string) so that it covers the correct range of characters. This ensures that the characters are properly swapped within the specified range. 
+
+Moreover, the indexing of the original string is corrected. Now, for the i-th character of the new string, the character at the (R-i+L-1)-th position of the original string is set. 
+
+This way, the function correctly reverses the characters in the specified range of the original string and prints the modified string.
+<|EOT|>

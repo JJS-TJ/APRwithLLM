@@ -1,0 +1,64 @@
+No.9 Patch
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int n = in.nextInt();
+    int m = in.nextInt();
+
+    int[] sc = new int[n];
+    int[] bon = new int[n + 1];
+
+    for (int i = 0; i < n; i++) {
+        sc[i] = in.nextInt();
+    }
+
+    for (int i = 0; i < m; i++) {
+        bon[in.nextInt()] = in.nextInt();
+    }
+
+    long[][] dp = new long[n + 1][n + 1];
+    long ans = 0;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 0; j <= n; j++) {
+            if (j > i) break;
+            else if (j == 0){
+                dp[i][j] = ans;
+            }
+
+            else{
+                dp[i][j] = dp[i - 1][j - 1] + sc[i - 1] + bon[j];
+                ans = Math.max(ans, dp[i][j]);
+            }
+        }
+    }
+    System.out.println(ans);
+}
+
+// Explaination
+// The problem was in the condition j > i, it should be j >= i. 
+// If it was just j > i, it would skip the case where j = i and hence the maximum answer could be missed.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given a string s, return the longest palindromic substring in s.
+
+// Example 1:
+// Input: s = "babad"
+// Output: "bab"
+// Note: "aba" is also a valid answer.
+
+// Example 2:
+// Input: s = "cbbd"
+// Output: "bb"
+
+// Example 3:
+// Input: s = "a"
+// Output: "a"
+
+// Example 4:
+// Input: s = "ac"
+// Output: "a"
+
+// Constraints:
+// 1 <= s.length <= 1000
+// s consist of only digits and English letters (lower-case and/or upper-case),
+
+// Approach: Dynamic Programming
+// The idea is to maintain a boolean table[n][n] that is filled in bottom up manner. 
+// The value of table[i][j] is true, if the substring is palindrome, otherwise false.
+// To calculate table[i][j], check the value of table[i+1][j-1] and if it is true and s[i

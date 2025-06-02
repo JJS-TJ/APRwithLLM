@@ -1,0 +1,99 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int[] A = new int[N + 1];
+    int same = 0;
+    for (int i = 1; i <= N; i++) {
+        A[i] = sc.nextInt();
+        if (A[i] == i) {
+            same++;
+        }
+    }
+
+    sc.close();
+
+    long ans = (long) same * (same - 1) / 2;
+
+    for (int i = 1; i <= N; i++) {
+        if (A[i] > i && A[A[i]] == i) {
+            ans++;
+        }
+    }
+    System.out.println(ans);
+}
+
+// The bug in the code is in the calculation of `ans`. The bug causes the value of `ans` to be incorrect. The bug also leads to the wrong answer because it doesn't handle the case where `A[A[i]] == i` properly. The fixed code calculates `ans` correctly and correctly handles the `A[A[i]] == i` condition.
+//
+// The fixed code now works as expected. It reads the input, counts the number of elements that are equal to their index (`same`), calculates the number of pairs (`ans`) that can be formed by using the indices as the indices in the array `A`, and then checks for the condition `A[A[i]] == i` for each index `i`, if it's true it increments the answer.
+//
+// Note that the bug in the original code was a result of integer division, which was not precise enough to get
+No.5 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int[] A = new int[N];
+    int same = 0;
+    for(int i = 0; i < N; i++){
+        A[i] = sc.nextInt();
+        if(A[i] == i+1){
+            same++;
+        }
+    }
+
+    sc.close();
+
+    long ans = (long)same*(same-1)/2;
+
+    for(int i = 0; i < N; i++){
+        if(A[i] > i+1){
+            int j = A[i]-1;
+            if(A[j] == i+1){
+                ans++;
+            }
+        }
+    }
+    System.out.println(ans);
+}
+
+// Explanation:
+// The original code was trying to access an index of array A[] that was out of bounds. 
+// Array index in Java starts from 0, so if the length of the array is N, the last index can be accessed is N-1.
+// In the for loop, the condition was 'i <= N' and the array index was accessed as 'A[i]', this was causing the ArrayIndexOutOfBoundsException. 
+// Now, the condition in the for loop is 'i < N' and the array index accessed is 'A[i]'.
+// Similarly, the condition in the if statement is 'A[i] > i' and the index accessed is 'A[j]', this was also causing the ArrayIndexOutOfBoundsException.
+// Now, the condition in the if statement is 'A[i] > i+1' and the
+No.6 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int[] A = new int[N+1];
+    int same = 0;
+    for(int i = 1; i <= N; i++){
+        A[i] = sc.nextInt();
+        if(A[i] == i){
+            same++;
+        }
+    }
+
+    sc.close();
+
+    long ans = (long)same*(same-1)/2;
+
+    for(int i = 1; i <= N; i++){
+        if(A[i] > i){
+            int j = A[i];
+            if(A[j] == i){
+                ans++;
+            }
+        }
+    }
+    System.out.println(ans);
+}
+
+// This bug was caused by the integer division. If same or the result of same*(same-1)/2 was an odd number, this division would always be 0. By casting one of the operands to a long, the division will give the correct result.
+
+// The bug in the buggy function is the integer division of the expression same*(same-1)/2. The result should be a long, but because the numerator is an int, the division is also an int, which truncates the decimal part. This can lead to an incorrect result when same is odd. By casting one of the operands to a long, the division will give the correct result.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given an array of size n. For every i from 0 to n-1, output max(a[0],a[1],......,a[i]).
+
+// Input Format
+// First line contains an integer n. Second line contains

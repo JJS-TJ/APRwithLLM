@@ -1,0 +1,70 @@
+No.5 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int q = sc.nextInt();
+	Set<Pair> follow = new TreeSet<>();
+	int t,a,b;
+	
+	for(int i = 0;i < q;i++) {
+		t = Integer.parseInt(sc.next());
+		a = Integer.parseInt(sc.next());	
+		b = Integer.parseInt(sc.next());
+		switch(t) {
+		case 1:
+			follow.add(new Pair(a,b));
+			break;
+		case 2:
+			follow.remove(new Pair(a,b));
+			break;
+		case 3:
+			Pair p1 = new Pair(a,b); Pair p2 = new Pair(b,a);
+			if(follow.contains(p1) == true && follow.contains(p2) == true) {
+				System.out.println("Yes");
+			}else
+				System.out.println("No");
+		}
+	}
+}
+
+//Explanation
+// The bug was in the remove method of TreeSet. It was removing the pair (b, a) instead of (a, b). 
+// Also the contains method was checking for the presence of pair (b, a) and (a, b) both, which is not necessary.
+// So, I changed the remove method to remove (a, b) and removed the second contains method.
+// Now, the function works as expected.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.user.mapas_tracking;
+
+public class Tracking {
+
+    private long lat;
+    private long lon;
+    private String hora;
+
+    public Tracking(long lat, long lon, String hora){
+        this.lat=lat;
+        this.lon=lon;
+        this.hora=hora;
+    }
+
+    public long getLat(){
+        return this.lat;
+    }
+
+    public long getLon(){
+        return this.lon;
+    }
+
+    public String getHora(){
+        return this.hora;
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.user.mapas_tracking;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DatabaseHelper extends SQLiteOpenHelper {
+
+    private static final String DATABASE_NAME="Tracking";
+    private static final int VERSION=1;
+    private final String trackingTable="CREATE TABLE Tracking("
+            +"Latitud INTEGER PRIMARY

@@ -1,0 +1,57 @@
+No.5 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String S = scan.next();
+	String result = "Yes";
+
+	if (S.equals(S.toLowerCase()) || S.equals(S.toUpperCase())) {
+		result = "No";
+	} else {
+		for (int i = 0; i < S.length(); i++) {
+			if (S.indexOf(S.charAt(i)) != S.lastIndexOf(S.charAt(i))) {
+				result = "No";
+				break;
+			}
+		}
+	}
+	System.out.println(result);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.gymmanage;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+    List<String> titles;
+No.6 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String S = scan.next();
+	String result = "Yes";
+
+	if (S.equals(S.toLowerCase()) || S.equals(S.toUpperCase())) {
+		result = "No";
+	} else {
+		for (int i = 0; i < S.length(); i++) {
+			if (S.indexOf(S.charAt(i)) != S.lastIndexOf(S.charAt(i))) {
+				result = "No";
+				break;
+			}
+		}
+	}
+	System.out.println(result);
+}
+
+// This code checks if a string contains all unique characters and prints "Yes" if it does and "No" if it does not. 
+// The bug was that it was only checking if the string is all lowercase or all uppercase, and not checking if the string contains any uppercase letters.
+// This bug was fixed by adding a check to see if the string is all uppercase. If it is, it sets the result to "No". 
+// Also, a break statement is added to exit the loop as soon as a duplicate character is found, which improves efficiency. 
+// This prevents unnecessary

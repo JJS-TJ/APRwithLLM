@@ -1,0 +1,151 @@
+No.3 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int k = sc.nextInt();
+    int[] a = new int[n];
+    int max = 0;
+    for(int i=0;i<n;i++){
+        a[i] = sc.nextInt();
+        max = Math.max(a[i], max);
+    }
+
+    Set<Integer> set = new HashSet<>();
+    for(int i=0;i<n;i++){
+        if(a[i] == max){
+            set.add(i+1);
+        }
+    }
+
+    int[] b = new int[k];
+    boolean flag = false;
+    for(int i=0;i<k;i++){
+        b[i] = sc.nextInt();
+        if(set.contains(b[i])) flag = true;
+    }
+    if(flag) System.out.println("Yes");
+    else System.out.println("No");
+
+    sc.close();
+}
+
+//The bug in the initial function was that the set was only storing the index of the maximum elements and not the value of the elements. Thus, the comparison of the set elements with the values of the array b were not correct.
+//The solution is to store the index+1 of the maximum elements instead of the index. This is because the indices are 0-based, while the values are 1-based.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package frc.robot;
+
+import java.lang.Math;
+
+public class Constants {
+    // Joystick ports
+    public static final int driverControllerPort = 0;
+    public static final int operatorControllerPort = 1;
+
+    // Joystick ports
+    public static final int leftStickX = 0;
+    public static final int leftStickY = 1;
+    public static final int rightStickX = 4;
+    public static final int rightStickY = 5;
+    public static final int leftTrigger = 2;
+    public static final int rightTrigger = 3;
+
+    // Joystick Deadband
+    public static final double deadband = 0.05;
+
+    // Wheel Diameter in
+No.6 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int k = sc.nextInt();
+    int[] a = new int[n];
+    int max = 0;
+    for(int i=0;i<n;i++){
+        a[i] = sc.nextInt();
+        max = Math.max(a[i], max);
+    }
+
+    Set<Integer> set = new HashSet<>();
+    for(int i=0;i<n;i++){
+        if(a[i] == max){
+            set.add(i+1);
+        }
+    }
+
+    int[] b = new int[k];
+    boolean flag = false;
+    for(int i=0;i<k;i++){
+        b[i] = sc.nextInt();
+        if(set.contains(b[i])) flag = true;
+    }
+    if(flag) System.out.println("Yes");
+    else System.out.println("No");
+
+    sc.close();
+}
+```
+
+The bug was in the line where the maximum element's index was added to the set. The code was adding the index of the maximum element in the 0-based indexing, but in the problem statement, the input was given in 1-based indexing. Hence, adding 1 to the index while adding to the set would solve the bug.
+
+```<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># LeetCode Problems
+
+This repository contains solutions for some of the LeetCode problems I've solved. 
+
+### LeetCode Profile: https://leetcode.com/SyedAsharaf
+
+### HackerRank Profile: https://www.hackerrank.com/SyedAsharaf
+
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># LeetCode Problem 1161: Maximum Level Sum of a Binary Tree
+
+**Problem Link:** https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/
+
+**Description:**
+
+Given the `root` of a binary tree, the level of its root is `1`, the level of its children is `2`, and so on.
+No.8 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int k = sc.nextInt();
+    int[] a = new int[n];
+    int max = Integer.MIN_VALUE;
+    for(int i=0;i<n;i++){
+        a[i] = sc.nextInt();
+        max = Math.max(a[i], max);
+    }
+
+    Set<Integer> set = new HashSet<>();
+    for(int i=0;i<n;i++){
+        if(a[i] == max){
+            set.add(i);
+        }
+    }
+
+    int[] b = new int[k];
+    boolean flag = false;
+    for(int i=0;i<k;i++){
+        b[i] = sc.nextInt();
+        if(set.contains(b[i]-1)) flag = true;
+    }
+    if(flag) System.out.println("Yes");
+    else System.out.println("No");
+
+    sc.close();
+}
+
+// Explanation
+
+/*
+The bug in the provided function is in the line where it checks if the element b[i] exists in the set.
+In the problem statement, it is given that elements of array 'b' represent the indices of elements in array 'a'.
+But in the code, it checks directly whether the element b[i] exists in set or not.
+This is incorrect because b[i] contains an integer representing the index of a[i] which is 1-indexed.
+Therefore, b[i] should be checked with set.contains(b[i]-1) to get the correct index in set.
+*/<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+Given an array of integers arr, and three integers a, b and c. You need to find the number of good triplets.
+
+A triplet (arr[i], arr[j], arr[k]) is good if the following conditions are true:
+
+0 <= i < j < k < arr.length
+|arr[i] - arr[j]| <= a
+|arr[j] - arr[k]| <= b
+|arr[i] - arr[k]| <= c
+Where

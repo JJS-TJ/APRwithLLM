@@ -1,0 +1,47 @@
+No.1 Patch
+public static void main(String[] args) {
+
+    IOHandler io = new IOHandler();
+    int n = io.nextInt();
+    int m = io.nextInt();
+    int x = io.nextInt();
+    int t = io.nextInt();
+    int d = io.nextInt();
+    io.close();
+
+    io.output(m >= x ? t : d*(m-x) + t);
+}
+
+// Solution
+// The bug was in the calculation of the difference in the formula. The difference should be calculated from m and x, not m and n.
+// So, the formula should be d*(m-x) + t instead of d*(m-n) + t.
+// The bug is fixed by replacing m-n with m-x in the formula.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.crawling;
+
+import org.springframework.boot.Spring
+No.6 Patch
+public static void main(String[] args) {
+
+    IOHandler io = new IOHandler();
+    int n = io.nextInt();
+    int m = io.nextInt();
+    int x = io.nextInt();
+    int t = io.nextInt();
+    int d = io.nextInt();
+    io.close();
+
+    io.output(m >= x ? t : t + d*(m-x));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// You're given a task to write a method that takes an array of integers as input, and returns the smallest missing positive integer.
+
+// The time complexity of the method should be O(n) and the space complexity should be O(1).
+
+// Input:
+
+// An array of integers.
+
+// Output:
+
+// The smallest missing positive integer.
+
+// Examples:
+
+// smallestMissing([1, 2, 3, 10

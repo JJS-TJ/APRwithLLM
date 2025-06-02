@@ -1,0 +1,109 @@
+No.0 Patch
+public static void main (String[]args){
+    Scanner scn = new Scanner(System.in);
+
+    String S = scn.nextLine(); // 길이 9
+    String checkS = "0123456789"; // 길이 10
+
+    int Array [] = new int [S.length()];
+    boolean checkArray [] = new boolean[checkS.length()];
+
+    for ( int x = 0 ; x < S.length() ; x++){
+        Array[x] = S.charAt(x) - '0';    // Array[]에 char 0 ~9 까지 넣음
+    }
+    for ( int x = 0 ; x < 10 ; x++){
+        checkArray[x] = false;
+    }
+    for ( int x = 0 ; x < S.length() ; x++){
+        checkArray[Array[x]] = true;
+    }
+    for ( int x = 0 ; x < 10 ; x++){
+        if ( checkArray[x] == false){
+            System.out.println(x);
+            break;
+        }
+    }
+}
+
+// 문제가 되었던 부분은 Array[x] = S.charAt(x); 이 부분이었다.
+// 이 부분에서 charAt() 함수는 char 형태의 데이터를 반환하기 때문에 int 형태로 저장하면 아스키 코드로 저장되는 것이었다.
+// 따라서 이를 해결하기 위해 '0'을 빼주는 것으로 문자를 정수형으로 바꿔주는 것으로 변경했다.
+// 또한 문제에서는 숫자는 0 ~ 9 까지 10개이므로, checkArray의 길이도 10으로 바꿔주었다.
+// 이를 통해 문제를 �
+No.1 Patch
+public static void main (String[]args){
+    Scanner scn = new Scanner(System.in);
+
+    String S = scn.nextLine(); // 길이 9
+    String checkS = "0123456789"; // 길이 10
+
+    int Array [] = new int [S.length()];
+    boolean checkArray [] = new boolean[checkS.length()];
+
+    for ( int x = 0 ; x < S.length() ; x++){
+        Array[x] = S.charAt(x) - '0';       // Array[]에 char 0 ~9 까지 넣음
+    }
+    for ( int x = 0 ; x < S.length() ; x++){
+        checkArray[Array[x]] = true;
+    }
+    for ( int x = 0 ; x < checkS.length(); x++){
+        if ( checkArray[x] == false){
+            System.out.println(x);
+            break;
+        }
+    }
+}
+
+/* 배열 초기화를 잘못 함
+ * 처음에는 배열 초기화에서 문제가 있다고 생각함
+ * 그래서 입력 받은 S의 길이만큼 배열을 초기화함
+ * 그랬더니 입력 받은 숫자가 하나 빠져서 오류가 발생함
+ * 그래서 배열을 초기화할 때는 checkS.length()를 이용해서 초기화함
+ * 그럼 0 ~ 9까지의 배열이 생성됨
+ */<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.sistema.blog.dto;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+public class ComentarioDTO {
+
+	private Long id;
+	
+	@NotEmpty(message = "El nombre no debe estar vacio")
+	private String nombre;
+	
+	@NotEmpty(message = "El email no debe estar vacio")
+	@Email
+	private String email;
+	
+	@NotEmpty(message = "El cuerpo del comentario no debe estar vacio
+No.3 Patch
+public static void main (String[]args){
+    Scanner scn = new Scanner(System.in);
+
+    String S = scn.nextLine(); // 길이 9
+    String checkS = "0123456789"; // 길이 10
+
+    int Array [] = new int [S.length()];
+    boolean checkArray [] = new boolean[checkS.length()];
+
+    for ( int x = 0 ; x < S.length() ; x++){
+        Array[x] = S.charAt(x) - '0';  // charAt(x) 를 int로 형변환 해주기 위해 '0'을 빼줌
+    }
+    for ( int x = 0 ; x < S.length() ; x++){
+        checkArray[Array[x]] = true;
+    }
+    for ( int x = 0 ; x < checkS.length() ; x++){
+        if ( checkArray[x] == false){
+            System.out.println(x);
+            break;
+        }
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// 알파벳 소문자로 이루어진 N개의 단어가 들어오면 아래와 같은 조건에 따라 정렬하는 프로그램을 작성하시오.
+// 길이가 짧은 것부터
+// 길이가 같으면 사전 순으로
+
+// 단, 같은 단어가 여러 번 입력된 경우에는 한 번씩만 출력한다.
+
+// 입력: 첫째 줄에 단어의 개수 N이 주어진다. (1 ≤ N ≤ 20,000) 둘째 줄부터 N개의 줄에 걸쳐 알파벳 소문자로 이루어진 단어가 한 �

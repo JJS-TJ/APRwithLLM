@@ -1,0 +1,145 @@
+No.0 Patch
+public static void main(String[] args){
+
+    PrintWriter out = new PrintWriter(System.out);
+    ArrayList<String> list = new ArrayList<>();
+    list = lib.inputProcess();
+    int N = Integer.parseInt(lib.arrayString(list.get(0), " ")[0]);
+    int M = Integer.parseInt(lib.arrayString(list.get(0), " ")[1]);
+    boolean[][] a = new boolean[N+1][N+1];
+
+    for( int i = 1 ; i <= M ; i++){
+        int[] t = lib.StringToIntArray(lib.arrayString(list.get(i), " "));
+        int k = t[0];
+        for( int j = 1 ; j <= k ; j++){
+            for( int l = 1 ; l <= k; l++){
+                a[t[j]][t[l]] = true;
+                a[t[l]][t[j]] = true;
+            }
+        }
+    }
+
+    String ans = "Yes";
+    r:for( int i = 1 ; i <= N ;i++){
+        for( int j = i+1 ; j <= N ; j++ ){
+            if( !a[i][j]){
+                ans = "No";
+                break r;
+            }
+        }
+    }
+    out.println(ans);
+    out.flush();
+}
+
+// Explanation
+// In the fixed function, the inner loop in the for loop with the label 'r' has been modified to start from i+1 instead of i. This is because in the original code, the inner loop was also starting from i, and the condition for the inner loop was i <= N. This led to the inner loop running one extra time for each iteration of the outer loop, resulting in an array index out of bounds error. This has been corrected by starting the inner loop from i+1, so that each iteration of the outer loop only runs the same number of iterations as the outer loop, which is what the original intent of the code was.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/devsuperior/desvendas/entities/Sale.java
+package com.devsuperior.desvendas.entities;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_sales")
+public class Sale {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private Integer visited;
+	private Integer deals;
+	private Double amount;
+	private LocalDate date;
+	
+	@ManyToOne
+	@JoinColumn(name = "seller_id")
+	private Seller seller
+No.5 Patch
+public static void main(String[] args) {
+    PrintWriter out = new PrintWriter(System.out);
+    ArrayList<String> list = new ArrayList<>();
+    list = lib.inputProcess();
+    int N = Integer.parseInt(lib.arrayString(list.get(0), " ")[0]);
+    int M = Integer.parseInt(lib.arrayString(list.get(0), " ")[1]);
+    boolean[][] a = new boolean[N + 1][N + 1];
+
+    for (int i = 1; i <= M; i++) {
+        int[] t = lib.StringToIntArray(lib.arrayString(list.get(i), " "));
+        int k = t[0];
+        for (int j = 1; j <= k; j++) {
+            for (int l = 1; l <= k; l++) {
+                a[t[j]][t[l]] = true;
+                a[t[l]][t[j]] = true;
+            }
+        }
+    }
+
+    String ans = "Yes";
+    r:
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= N; j++) {
+            if (i == j) continue;
+            if (!a[i][j]) {
+                ans = "No";
+                break r;
+            }
+        }
+    }
+    out.println(ans);
+    out.flush();
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.9 Patch
+public static void main(String[] args){
+
+    PrintWriter out = new PrintWriter(System.out);
+    ArrayList<String> list = new ArrayList<>();
+    list = lib.inputProcess();
+    int N = Integer.parseInt(lib.arrayString(list.get(0), " ")[0]);
+    int M = Integer.parseInt(lib.arrayString(list.get(0), " ")[1]);
+    boolean[][] a = new boolean[N+1][N+1];
+
+    for( int i = 1 ; i <= M ; i++){
+        int[] t = lib.StringToIntArray(lib.arrayString(list.get(i), " "));
+        int k = t[0];
+        for( int j = 1 ; j <= k ; j++){
+            for( int l = 1 ; l <= k; l++){
+                a[t[j]][t[l]] = true;
+                a[t[l]][t[j]] = true;
+            }
+        }
+    }
+
+    String ans = "Yes";
+    r:for( int i = 1 ; i <= N ;i++){
+        for( int j = i + 1 ; j <= N ;j++ ){
+            if( !a[i][j]){
+                ans = "No";
+                break r;
+            }
+        }
+    }
+    out.println(ans);
+    out.flush();
+}
+
+// In the original function, there was a nested loop that was also using variable i as its incrementer. The nested loop was not correctly incrementing j, so it would never move to the next value, resulting in an infinite loop. To correct this, the nested loop needed to increment j instead of i. The inner loop should start from i+1, because each person should not be compared with themselves.
+
+// The fixed function properly uses the incrementer j in the inner loop, and also starts at i+1 to avoid comparing a person with themselves. This will ensure that the function correctly checks each person against all others to see if they are friends, and if they are not, it will return "No".<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.springboot.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldController {
+    @RequestMapping("/hello")
+    public String sayHello() {
+        return "Hello,World11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111

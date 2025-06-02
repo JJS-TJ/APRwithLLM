@@ -1,0 +1,47 @@
+No.3 Patch
+public static void main(String [] args) {
+    try(Scanner scan = new Scanner(System.in)){
+
+      int N = Integer.parseInt(scan.next()); 
+
+      String [][] fig = new String [N][N];
+      String line;
+      String[] marks;
+      
+      for(int i = 0; i < N; i++){
+        line = scan.next();
+        marks = line.split("");
+        for(int l = 0; l < marks.length; l++){
+          fig[i][l] = marks[l];
+        }
+      }
+
+      for(int i = 0; i < N; i++){
+        for(int l = 0; l < N; l++){
+          if(i == l){
+            continue;
+          }
+          if("W".equals(fig[i][l]) && !("L".equals(fig[l][i]))){
+            System.out.println("incorrect");
+            return;
+          }
+          if("L".equals(fig[i][l]) && !("W".equals(fig[l][i]))){
+            System.out.println("incorrect");
+            return;
+          }
+          if("D".equals(fig[i][l]) && !("D".equals(fig[l][i]))){
+            System.out.println("incorrect");
+            return;
+          }
+        }
+      }        
+      System.out.println("correct");
+    }
+}
+
+
+// Explanation
+// The problem with the buggy function is that it checks if the opposite element is not "L" in the if statement where it checks if the current element is "W". This should be "L" not "W" because the current element is "W".
+// The corrected function checks if the opposite element is "L" when the current element is "W" and the opposite element is "W" when the current element is "L". This means that if there is a "W" where there should be a "L" or vice versa, it will print "incorrect" and end the function.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function

@@ -1,0 +1,32 @@
+No.6 Patch
+public static void main(String[] args) {
+
+	Scanner sc = new Scanner(System.in);
+     int a = sc.nextInt();
+     int b = sc.nextInt();
+     int c = sc.nextInt();
+     int d = sc.nextInt();
+     
+     if(a == c){
+     	if(b <= d){
+     		System.out.print("Takahashi");
+     	}else{
+     		System.out.print("Aoki");
+     	}
+     }else if(a < c){
+     	System.out.print("Takahashi");
+     }else{
+     	System.out.print("Aoki");
+     }
+	
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.android.miwok;
+
+/**
+ * Created by kritisharma on 23/1/18.
+ */
+
+public class Word {
+
+    private String mDefaultTranslation;
+    private String mMiwokTranslation;
+    private int mImageResourceId = NO_IMAGE_PROVIDED

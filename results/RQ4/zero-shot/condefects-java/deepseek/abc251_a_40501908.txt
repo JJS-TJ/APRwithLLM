@@ -1,0 +1,115 @@
+No.0 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.company.model;
+No.1 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}
+
+//Explanation
+// The bug in the code is that it was printing the input string p instead of the result string res. The fix is to print the result string res by calling toString() on it.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.demo
+No.3 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString()); // Changed p to res.toString()
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/model/User.java
+package com.example.demo.model;
+
+import javax.persistence.Entity;
+import javax.
+No.4 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.luna.videoplayer;
+
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
+
+/**
+ * Created by jie on 2017
+No.5 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//Bank.h
+#ifndef BANK_H
+#define BANK_H
+
+#include <vector>
+#include <string>
+
+class Bank {
+public:
+    Bank(std::string name);
+    void add
+No.6 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}
+
+// The bug was in the printing statement. It was supposed to print the resultant string but it was printing the input string which was being appended to the resultant string. So, the output is just the input string p. 
+// To fix this
+No.7 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}
+
+// Buggy Code
+
+// Buggy Function
+No.9 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/tutorial/model/Person.java
+package com.example.tutorial.model;
+
+import java.util.Date;
+import java.util.Objects;
+
+public class

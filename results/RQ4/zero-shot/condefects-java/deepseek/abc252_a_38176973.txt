@@ -1,0 +1,109 @@
+No.0 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    char c = (char)n;
+    System.out.println(c);
+}
+
+// The buggy function was printing the integer value instead of the character representation of the integer. 
+// The line char c = (char)n; was converting the integer n into a character c. But the program was supposed to print the character representation of n, not the integer value of
+No.1 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}
+
+// In the buggy function, the integer value is being printed instead of the character value. We should change the last line to System.out.println(c) to print the character value.
+
+// The above solution will print the character equivalent of the integer value entered by the
+No.2 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+
+	@GetMapping("/")
+No.3 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// https://www.codechef.com/problems/FLOW018
+
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner
+No.5 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}
+
+// Explanation: 
+// The bug in the original code is that it attempts to print an integer (n) as a character. 
+// However, the print statement should be updated to print the character (c) instead of the integer (n). 
+// Therefore
+No.6 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    char c = (char)n;
+    System.out.println(c);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/springboot/models/User.java
+package com.example.springboot.models;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+No.7 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  char c = (char)n;
+  System.out.println(c);
+ 
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// This program is a fix for a buggy program.
+
+// Buggy Program
+public static void main(String []args) {
+ 
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+No.9 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}
+
+// In the buggy function the integer n is printed whereas the corrected function prints the character c which is equivalent to integer n
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.mycompany.jogo_de_xadrez;
+
+public enum Cor {
+    PRETO,

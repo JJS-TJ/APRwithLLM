@@ -1,0 +1,64 @@
+No.1 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		final String day = sc.next();
+		switch (day) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		default:
+			System.out.println("Invalid Day");
+			break;
+		}
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/vinsys/securitylabs/logging/HttpLoggingInterceptor.java
+package com.vinsys.securitylabs.logging;
+
+import org.apache.commons.io.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpRequest;
+import org.springframework.http.client.ClientHttpRequestExecution;
+import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.
+No.9 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		final String day = sc.next();
+		switch (day) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		}
+	}
+}
+
+// In the buggy function, the scanner is continuously scanning the user's input. The switch statement is comparing the next user's input with case values, but the program is unable to read the user's input until it's been closed. This is why the switch statement always fails to find a match.
+
+// The fix involves reading the user's input and storing it in a variable before the switch statement. Then, the switch statement compares the variable with the case values, which are constant and therefore can be evaluated immediately.
+
+// For example, in the fixed function, a String variable 'day' is created and assigned the user's input. Then, the switch statement compares '

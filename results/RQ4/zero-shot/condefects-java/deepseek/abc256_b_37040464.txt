@@ -1,0 +1,108 @@
+No.0 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) {
+		total +=a[i];
+		if(total>=4)break;
+		ans--;
+	}
+	
+     System.out.println(ans);
+}
+
+// In the buggy function, the for loop was not running, because the condition inside the loop was wrong. 
+// The condition inside the loop was set to "i>0". Since the array index starts from 0, i cannot be 0 at any point in time.
+// So, the condition should be "i>=0" so that the loop starts from the end of the array.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/book/Book.java
+package com.example.book;
+
+public class Book {
+    private int id;
+    private String title;
+    private String author;
+    private int year;
+
+    public Book()
+No.2 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) {
+		total += a[i];
+		if(total >= 4) {
+			break;
+		}
+		ans--;
+	}
+	System.out.println(ans);
+}
+
+// In the Buggy function, the loop was starting from i = n-1 and ending at i > 0. 
+// So the loop was not running for the first element of the array and hence it was not considering the first element for the sum. 
+// Hence, we started the loop from i = n-1 to i >= 0 so that we can consider the first element as well.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Find the sum of all the multiples of 3 or 5 below 1000.
+
+// In this problem, we need to find the sum of all numbers that are either a multiple of 3 or 5 and are less than 10
+No.6 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int[] a = new int[n];
+	for(int i = 0;i<n;i++) {
+		a[i] = sc.nextInt();
+	}
+	int ans = n;
+	int total = 0;
+	for(int i = n-1;i>=0;i--) {
+		total +=a[i];
+		if(total>=4)break;
+		ans--;
+	}
+	
+     System.out.println(ans);
+}
+
+// In the above code, the bug was in the for loop condition. The loop was running from n-1 to 0 but it should be running from n-1 to 1. This is because when total>=4 then the loop should break and no need to decrement the value of ans in the last iteration of the loop. So, if we start from n-1 to 1, then it won't decrement the ans value for the last iteration which is required. So, this bug is fixed by changing the condition in the loop from n-1 to 1.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.company;
+
+public class Main {
+
+    public static void main(String[]
+No.7 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int[] a = new int[n];
+    for(int i = 0;i<n;i++) {
+        a[i] = sc.nextInt();
+    }
+    int ans = n;
+    int total = 0;
+    for(int i = n-1;i>0;i--) {
+        total +=a[i];
+        if(total>=4)break;
+        ans--;
+    }
+    // Check if total is less than 4, if so update ans to 0
+    if (total < 4) {
+        ans = 0;
+    }
+    System.out.println(ans);
+}
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Implement a method that takes a string and returns the run-length encoding of the string.
+// The run-length encoding is a simple form of data compression in which consecutive occurrences
+// of the same character are replaced with the character followed by the count of the occurrences.
+
+// For example, the string "aaabbccc" would be encoded as "a3b2c3".
+
+// If the string contains a character that only appears once, it

@@ -1,0 +1,124 @@
+No.1 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        if (dp[e.a] != INF) {
+            dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+        }
+    }
+
+    return dp[N-1] == INF ? -1 : dp[N-1];
+}
+
+// ANSWER
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        if (dp[e.a
+No.4 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        if (dp[e.a] != INF) {
+            dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+        }
+    }
+
+    return dp[N-1] == INF ? -1 : dp[N-1];
+}
+
+// この問題では、最短経路を求める際に、dp[e.a] != INF という条件を追加する必要があります。
+// これは、e.a に到達することができる場合にのみ、e.b への最短経路を更新�
+No.6 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+    }
+
+    return dp[N-1] != INF ? dp[N-1] : -1;
+}
+
+
+
+
+// Provide a fix for the buggy function
+
+// Buggy Function
+No.7 Patch
+static long solve() {
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        if(dp[e.a] != INF) {
+            dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+        }
+    }
+
+    return dp[N-1] == INF ? -1 : dp[N-1];
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// 
+//   Author - Shamus Young
+//   Date - 15.11.2022
+//   Programming Language - Java
+//   Problem - https://www.codewars.com/kata/554b4ac871d6813a03000035
+//   Solution - https://www.codewars.com/kata/554b4ac871d6813a03000035/solutions/java
+// 
+
+public class Kata {
+    public static String highAndLow(String numbers) {
+      
+      String[] arr
+No.9 Patch
+static long solve() {
+    // Pの要素を使うかどうかでdp
+    var G = adjD(N, E);
+    long INF = Long.MAX_VALUE/2;
+    var dp = new long[N];
+    Arrays.fill(dp, INF);
+    dp[0] = 0;
+    for (int i = 0; i < K; i++) {
+        var e = E[P[i]];
+        if (dp[e.a] != INF) {
+            dp[e.b] = Math.min(dp[e.b], dp[e.a] + e.c);
+        }
+    }
+
+    return dp[N-1] != INF ? dp[N-1] : -1;
+}
+
+// Add more explanation of the code and your solution
+
+/*
+The given code is used to find the shortest path from the source node to the destination node in a graph. 
+The code uses a dynamic programming approach where it iterates over the edges in the order specified by the array P and updates the minimum distance to reach each node.
+
+The bug in the original code is that it doesn't check if the node `e.a` is reachable or not before updating the distance to `e.b`. This can cause the distance to `e.b` to be incorrectly updated, which can

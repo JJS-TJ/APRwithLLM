@@ -1,0 +1,111 @@
+No.3 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	int x = sc.nextInt();
+	int y = sc.nextInt();
+	int maxRangeX = 0;
+	int maxRangeY = 0;
+	boolean[][] dpX = new boolean[20001][n + 1];
+	boolean[][] dpY = new boolean[20001][n + 1];
+	int a = sc.nextInt();
+	int whichXY = -1;
+	int lastX = 0;
+	int lastY = 0;
+	dpX[10000 + a][1] = true;
+	dpY[10000][0] = true;
+	maxRangeX += a;
+	for(int i = 2;i < n + 1;i++) {
+		a = Integer.parseInt(sc.next());
+		switch(whichXY) {
+		case 1:
+			for(int j = 10000 - maxRangeX;j < 10001 + maxRangeX; j++) {
+				if(dpX[j][i - 2]) {
+					dpX[j + a][i] = true;
+					dpX[j - a][i] = true;
+				}
+			}maxRangeX += a;
+			whichXY *= (-1);
+			lastX = i;
+			break;
+			
+		case -1:
+				for(int j = 10000 - maxRangeY;j < 10001 + maxRangeY; j++) {
+					if(dpY[j][i - 2]) {
+						dpY[j + a][i] = true;
+						dpY[j - a][i] = true;
+					}
+				}
+				maxRangeY += a;
+				whichXY *= (-1);
+				lastY = i;
+				break;
+		}
+	}
+	if(dpX[10000 + x][lastX] && dpY[10000 + y][lastY])System.out.print("Yes");
+	else System.out.print("No");
+}
+```<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># FlightSimulator
+
+A flight simulator implemented in C# .NET.
+
+## Authors
+* [Nicolas Blin](https://github.com/NicolasBlin)
+* [Tanguy De Baere](https://github.com/tanguydeb)
+
+## Features
+
+### 3D Model Display
+
+The aircraft model is displayed using the 3D Toolkit.
+
+<p align="center">
+  <img src="https://github.com/NicolasBlin/FlightSimulator/blob/master/FlightSimulator/screenshot.png" width="450">
+</p>
+
+### Flight Controls
+
+The aircraft can be controlled in all three dimensions.
+
+### Simulation
+
+The flight simulator simulates the behavior of the aircraft in the physical world, taking into account the physical laws of flight and gravity.
+
+### Real-time Control
+
+The controls are real-time, meaning that they directly impact the behavior of the aircraft.
+
+## Compilation
+
+This project was developed using Visual Studio 2019. To compile and run the project, open the solution file in Visual Studio and press F5.
+
+## Usage
+
+Control the aircraft using the arrow keys. Pressing the space bar flies up, pressing the shift key flies down. Pressing the A or Z keys rotates the aircraft left and right respectively. Pressing the W or X keys tilts the aircraft up and down respectively.
+
+## Dependencies
+
+* [3D Toolkit](https://github.com/sharpdx/SharpDX)
+* [Math.NET](https://www.mathdotnet.com/)
+* [.NET Framework](https://www.microsoft.com/net/download)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># Sprint 2
+
+In Sprint 2, I worked on creating the basic skeleton of the app and connecting it with the database. I implemented the basic CRUD operations for both users and tasks. The next tasks included creating the task and user models, setting up the database, and connecting the front end with the back end.
+
+Here is a list of the main tasks I worked on:
+
+- Implemented the basic CRUD operations for both users and tasks.
+- Created the task and user models.
+- Set up the database and connected it with the back end.
+- Connected the front end with the back end.
+- Implemented user authentication and authorization using JWT.
+
+During this sprint, I encountered several challenges, such as dealing with asynchronous operations in JavaScript and setting up the database correctly. However, I was able to overcome these challenges by thoroughly reading documentation and experimenting with different approaches.
+
+In the upcoming sprint, I will focus on implementing additional features, such as user profiles, task management, and user settings. I will also continue to refine the user interface and make the app more user-friendly.
+
+Overall, Sprint 2 was successful in establishing the basic functionality of the app and connecting it with the database. The next sprint will be even more challenging, but I am confident that I will be able to overcome the obstacles and deliver a more advanced version of the

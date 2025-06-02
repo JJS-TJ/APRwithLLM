@@ -1,0 +1,31 @@
+No.9 Patch
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    long n = scan.nextLong();
+    ArrayList<Integer> list = new ArrayList<>();
+    for(int mask = 0; mask <= 60; mask++) {
+        if(((n >> mask) & 1) == 1 ) list.add(mask);
+    }
+    int max_mask = 1 << list.size();
+    for(int mask = 0; mask < max_mask; mask++){
+        long res = 0;
+        for(int i = 0; i < list.size(); i++){
+            if((mask & (1 << i)) != 0) res += 1L << list.get(i);
+        }
+        System.out.println(res);
+    }
+}
+
+// This function generates all possible non-negative numbers that can be represented by the binary representation of n. 
+// It uses a bitmask to iterate over each bit of n and if that bit is set, it adds the corresponding power of 2 to the list.
+// Then it generates all possible subsets of the list by using a bitmask. 
+// For each subset, it calculates the decimal representation of that subset by adding up the powers of 2 that correspond to the bits that are set in the subset.
+// Finally, it prints out each subset.
+// The fixed function replaces the buggy code with correct code to fix the issue. The corrected code will generate the correct output.
+// It changes the type of mask from long to int and also replaces '>=' operator with '==' operator.
+
+
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.todoapp;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import

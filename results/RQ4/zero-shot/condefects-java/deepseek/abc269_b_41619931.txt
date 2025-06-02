@@ -1,0 +1,122 @@
+No.6 Patch
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int a = Integer.MAX_VALUE;
+    int b = Integer.MIN_VALUE;
+    int c = Integer.MAX_VALUE;
+    int d = Integer.MIN_VALUE;
+    for (int i = 0; i < 10; i++) {
+        String s = scanner.next();
+        for (int j = 0; j < 10; j++) {
+            if (s.charAt(j) == '#') {
+                a = Math.min(a, i + 1);
+                b = Math.max(b, i + 1);
+                c = Math.min(c, j + 1);
+                d = Math.max(d, j + 1);
+            }
+        }
+    }
+    System.out.println(a + " " + b);
+    System.out.println(c + " " + d);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/common/model/User.java
+package com.example.demo.common.model;
+
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+@TableName(value = "t_user")
+public class User {
+
+    @TableId(value = "user_id")
+    private Long userId;
+
+    @TableField(value = "user_name")
+    private String userName;
+
+    @TableField(value = "user_mobile")
+    private String userMobile;
+
+    @TableField(value = "user_email")
+    private String userEmail;
+
+    @TableField(value =
+No.7 Patch
+public static void main(String[] args) { 
+    Scanner scanner = new Scanner(System.in);
+    int a = Integer.MAX_VALUE;
+    int b = Integer.MIN_VALUE;
+    int c = Integer.MAX_VALUE;
+    int d = Integer.MIN_VALUE;
+    for (int i = 0; i < 10; i++) {
+        String s = scanner.next();
+        for (int j = 0; j < 10; j++) {
+            if (s.charAt(j) == '#') {
+                a = Math.min(a, i + 1);
+                b = Math.max(b, i + 1);
+                c = Math.min(c, j + 1);
+                d = Math.max(d, j + 1);
+            }
+        }
+    }
+    System.out.println(a + " " + b);
+    System.out.println(c + " " + d);
+}
+
+// The bug in the original function was in the line `if(s.charAt(i)=='#'){`. The outer loop `i` was being used to iterate over the string `s`, but the character at the index `i` was being checked. This is incorrect, because the loop `i` is used to iterate over the rows of the grid, but the character at the index `i` is being checked which will not work as expected. The character at the index `i` is not the same as the character at the index `j`.
+
+// The corrected code uses `j` to iterate over the string `s`, and `j` to check if the current character is `'#'`. The minimum and maximum row and column indices are updated based on the position of `'#'`. This will correctly calculate the minimum and maximum row and column indices.
+
+// Also note that I have changed the variable names to be more meaningful and self-explanatory. This makes the code easier
+No.9 Patch
+public static void main(String[] args) { 
+    Scanner scanner=new Scanner(System.in);
+    int a=Integer.MAX_VALUE;
+    int b=Integer.MIN_VALUE;
+    int c=Integer.MAX_VALUE;
+    int d=Integer.MIN_VALUE;
+    for(int i=0;i<10;i++){
+        String s=scanner.next();
+        for(int j=0;j<10;j++){
+            if(s.charAt(j)=='#'){
+                a=Math.min(a,i+1);
+                b=Math.max(b,i+1);
+                c=Math.min(c,j+1);
+                d=Math.max(d,j+1);
+            }
+        }
+    }
+    System.out.println(a+" "+b);
+    System.out.println(c+" "+d);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+You are given an array of integers. On each move you are allowed to increase exactly one of its element by one. 
+Find the minimal number of moves required to obtain a strictly increasing sequence from the input.
+
+Example
+
+For inputArray = [1, 1, 1], the output should be
+arrayChange(inputArray) = 3.
+
+Input/Output
+
+[execution time limit] 3 seconds (java)
+
+[input] array.integer inputArray
+
+Guaranteed constraints:
+3 ≤ inputArray.length ≤ 105,
+-105 ≤ inputArray[i] ≤ 105.
+
+[output] integer
+
+The minimal number of moves needed to obtain a strictly increasing sequence from inputArray.
+It's guaranteed that for the given test cases the answer always fits signed 32-bit integer type.
+
+*/
+
+int arrayChange(int[] inputArray) {
+    int res = 0

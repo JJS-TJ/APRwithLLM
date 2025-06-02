@@ -1,0 +1,72 @@
+No.0 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();
+int r = sc.nextInt();
+if(l>=1 && r<=s.length() && l<=r){
+    String ans = s.substring(l-1,r);
+    System.out.println(ans);
+}
+else{
+    System.out.println("Invalid Range");
+}
+
+}
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function
+
+// Buggy Function
+No.1 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();;
+int r = sc.nextInt();
+ String ans = s.substring(l-1,r);
+    System.out.println(ans);
+
+}
+```
+
+In the buggy function, the substring method was being used without adjusting the input values to fit the Java String substring method's indexing system, which is zero-based. Therefore, for a substring to be obtained from the 3rd to the 4th character, l should be 2 and r should be 4. However, the
+No.3 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();
+int r = sc.nextInt();
+String ans = s.substring(l - 1,r);
+System.out.println(ans);
+
+}
+
+// This problem occurs due to the fact that the indices in Java and many other languages start at 0, not 1. 
+// So, if we have a string "atcoder" and we want to get the substring from the 2nd index to the 4th index, we should use s.substring(1, 4) (in
+No.6 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();
+int r = sc.nextInt();
+String ans = s.substring(l-1,r); // Corrected the l value to l-1 as index in String starts from 0
+    System.out.println(ans);
+
+}
+
+// The original buggy function was taking l as an index of the string which was incorrect because index in string starts from 0, not 1.
+// So when we take l as the first input it was actually taking the first index after the lth index and hence it was missing
+No.8 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = "atcoder";
+    int l = sc.nextInt();
+    int r = sc.nextInt();
+    String ans = s.substring(l-1,r);
+    System.out.println(ans);
+}
+
+// In the buggy function, the substring method is called on the string "atcoder" with the parameters l and r. However, the indices in the substring method are 0-based, which means the first character is at index 0. The variables l and r are entered by the user, which are 1-based indices. This

@@ -1,0 +1,49 @@
+No.8 Patch
+public static void main(String[] args) {
+	MyScanner sc = new MyScanner();
+	
+	int H = sc.nextInt(), W = sc.nextInt();
+	int R = sc.nextInt(), C = sc.nextInt();
+	
+	int ans = 4;
+	if(R==H) ans--;
+	if(R==1) ans--;
+	if(C==W) ans--;
+	if(C==1) ans--;
+	
+	System.out.println(ans);
+}
+
+// 문제 자체를 봤을 때 입력의 범위가 1 이상 100 이하로 정해져 있기 때문에 R과 C가 1일 때 감소하�
+No.9 Patch
+public static void main(String[] args) {
+	MyScanner sc = new MyScanner();
+	
+	int H = sc.nextInt(), W = sc.nextInt();
+	int R = sc.nextInt(), C = sc.nextInt();
+	
+	int ans = 0;
+	if(R > 1) ans++;
+	if(R < H) ans++;
+	if(C > 1) ans++;
+	if(C < W) ans++;
+	
+	System.out.println(ans);
+}
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/spring_jpa_test/entity/User.java
+package com.example.spring_jpa_test.entity;
+
+import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "user")
+@Data
+public class User {
+
+    @Id
+    @GeneratedValue

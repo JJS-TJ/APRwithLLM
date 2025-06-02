@@ -1,0 +1,103 @@
+No.2 Patch
+private static void tc() {
+    long p=998244353;        
+    int n=io.nextInt(),m=io.nextInt(),k=io.nextInt();
+    long []f=new long[k+1];f[0]=1;
+    for(int i=0;i<n;i++) {
+        int up=Math.min(k,m*(i+1));
+        long s=0;for(int j=up-m+1;j<=up;j++)s+=f[j];
+        for(int j=up;j>=0;j--){
+            s+=j-m>=0?f[j-m]:0;
+            s-=f[j];f[j]=(s%p+p)%p;
+        }
+    }
+    io.println(Arrays.stream(f).sum()%p);
+}
+```<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.kotlin.user.ui.activity;
+
+import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.TextView;
+import com.flyco.tablayout.SlidingTabLayout;
+import com.kotlin.base.ui.activity.BaseMvpActivity;
+import com.kotlin.user.R;
+import com.kotlin.user.R2;
+import com.kotlin.user.presenter.OrderPresenter;
+import com.kotlin.user.presenter.view.OrderView;
+import butterknife.BindView;
+import java.util.ArrayList;
+
+public class OrderActivity extends BaseMvpActivity<OrderPresenter> implements OrderView {
+
+    @BindView(R2.id.title_tv)
+    TextView mTitleTv;
+No.3 Patch
+private static void tc() {
+    int p=998244353;        
+    int n=io.nextInt(),m=io.nextInt(),k=io.nextInt();
+    long []f=new long[k+1];f[0]=1;
+    for(int i=0;i<n;i++) {
+        int up=Math.min(k,m*(i+1));
+        long s=0;for(int j=up-m+1;j<=up;j++)s+=f[j];
+        for(int j=up;j>=0;j--){
+            s+=j-m>=0?f[j-m]:0;
+            s-=f[j];f[j]=s%p;
+            if(f[j]<0)f[j]+=p;
+        }
+    }
+    io.println(Arrays.stream(f).sum()%p);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package projet.Model;
+
+/**
+ *
+ * @author jacqu
+ */
+public class Etudiant extends Personne {
+
+    private int annee;
+    private int semestre;
+    private int id_groupe;
+    private int id_promotion;
+    private String numero;
+
+    public Etudiant(int id, String nom, String prenom, int annee, int semestre, int id_groupe, int id_promotion, String numero) {
+        super(id, nom, prenom);
+        this.annee = annee;
+        this.semestre = semestre;
+        this
+No.8 Patch
+private static void tc() {
+    int p=998244353;
+    int n=io.nextInt(),m=io.nextInt(),k=io.nextInt();
+    long []f=new long[k+1];f[0]=1;
+    for(int i=0;i<n;i++) {
+        int up=Math.min(k,m*(i+1));
+        long s=0;for(int j=up-m+1;j<=up;j++)s+=f[j];
+        for(int j=up;j>=0;j--){
+            s+=j-m>=0?f[j-m]:0;
+            s-=f[j];f[j]=s%p;
+        }
+    }
+    io.println(Arrays.stream(f).sum()%p);
+}
+
+// The function was originally just printing the sum of the array. But the sum could be very large, and 
+// this could cause an overflow in the print statement. By using the modulus operator on the sum when it is 
+// being added to the array, we can keep the numbers within a manageable range. 
+// It's important to remember that overflow errors can occur when dealing with large numbers in programming, 
+// so it's a good practice to use modulus whenever possible to prevent these errors.
+
+// Test the fixed function with the same inputs and see if it returns the correct result.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>import java.io.*;
+import java.util.*;
+
+class Solution {
+
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) return false;
+        int[] charCounts = new int[26];
+        for (int i = 0; i < s.length(); i

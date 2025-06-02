@@ -1,0 +1,59 @@
+No.4 Patch
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    int n = scan.nextInt();
+    String[] last = new String[n];
+    String[] first = new String[n];
+    Set<String> set = new HashSet<String>();
+    boolean judge =false,judge2=false;
+    for(int i=0;i<n;i++){
+        last[i] = scan.next();
+        first[i] = scan.next();
+        set.add((last[i]+" "+first[i]));
+    }
+    if(set.size() != n){
+        System.out.println("No");
+        System.exit(0);
+    }
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(last[i].equals(last[j]) || last[i].equals(first[j])) judge = true;
+            if(first[i].equals(first[j]) || first[i].equals(last[j])) judge2 = true;
+        }
+    }
+
+    if(judge && judge2) System.out.println("No");
+    else  System.out.println("Yes");
+
+}
+
+// The bug was in the if condition where we were checking if the judge or judge2 is false to print "Yes". It should be checking if both are true to print "Yes" else "No". 
+// Also, the second check in the nested loop was checking for last name in first[j] and first name in last[j], which should be first name in first[j] and first name in first[j] or last name in last[j] and last name in last[j]. 
+// Corrected the check and also initialized a new boolean variable to check for first names. 
+// Corrected the if condition to check if both checks are true to print "No" else "Yes".<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/epam/microservices/model/Product.java
+package com.epam.microservices.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("id")
+    private Long id;
+
+    @JsonProperty("name")
+    private String name;
+
+    @JsonProperty("price")
+    private Double

@@ -1,0 +1,52 @@
+No.7 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int x = 0;
+	int y = 0;
+	//方角
+	char direction = 'E';
+	for(int i =0; i<c.length; i++) {
+		if(c[i] == 'S') {
+			if(direction == 'N') {
+				y++;
+			}else if(direction == 'E') {
+				x++;
+			}else if(direction == 'S') {
+				y--;
+			}else if(direction == 'W') {
+				x--;
+			}
+		}else if(c[i] == 'R') {
+			if(direction == 'N') {
+				direction = 'E';
+			}else if(direction == 'E') {
+				direction = 'S';
+			}else if(direction == 'S') {
+				direction = 'W';
+			}else if(direction == 'W') {
+				direction = 'N';
+			}
+		}
+	}
+	System.out.println(x + " " + y);
+}
+```
+
+The buggy function had a few issues:
+
+1. The variable names `X` and `Y` should be `x` and `y` instead. Variable names should be in lower camel case in Java.
+
+2. The print statement was inside the for loop, which was printing the current coordinates after each movement. It should be outside the for loop, so it only prints the final coordinates.
+
+3. The variable `muki` was used to store the direction. It should be renamed to `direction` to be more descriptive.
+
+4. The movement code was incorrect. It should use `x` and `y` instead of `X` and `Y`.
+
+5. The direction changing code was incorrect. It should use `direction` instead of `muki`.
+
+After these fixes, the corrected function should correctly simulate the movements of a robot on a grid.
+<|EOT|>

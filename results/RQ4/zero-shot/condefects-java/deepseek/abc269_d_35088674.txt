@@ -1,0 +1,115 @@
+No.3 Patch
+private void dfs(int x, int y) {
+    if (x < 0 || x >= N || y < 0 || y >= N || !occ[x][y] || vis[x][y]) {
+        return;
+    }
+
+    vis[x][y] = true;
+    int[] dirX = new int[]{-1, -1, 0, 0, 1, 1};
+    int[] dirY = new int[]{-1, 0, -1, 1, 0, 1};
+    for (int i = 0; i < dirX.length; i++) {
+        dfs(x + dirX[i], y + dirY[i]);
+    }
+}
+
+// Provide a fix for the buggy function 
+
+// Buggy Function
+No.4 Patch
+private void dfs(int x, int y) {
+    if (x < 0 || x >= N || y < 0 || y >= N) {
+        return;
+    }
+    if(!occ[x][y] || vis[x][y]){
+        return;
+    }
+
+    vis[x][y] = true;
+    int[] dirX = new int[]{-1, -1, 0, 0, 1, 1};
+    int[] dirY = new int[]{-1, 0, -1, 1, 0, 1};
+    for (int i = 0; i < dirX.length; i++) {
+        dfs(x + dirX[i], y + dirY[i]);
+    }
+}
+
+// The bug was in the if condition inside the dfs function. The buggy condition was if(!occ[x][y] || !vis[x][y]), and the fixed condition is if(!occ[x][y] || vis[x][y]). 
+// The bug was that it was trying to access an already visited node again, causing an infinite loop, and by changing the condition to if(!occ[x][y] || vis[x][y]), the problem is resolved.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given an array A[] of size n, where A[i] represents the number of steps you can move from the position i to i+A[i] and i-A[i]. 
+// You are initially positioned at 0. Determine if you can reach the last index from position 0.
+No.7 Patch
+private void dfs(int x, int y) {
+    if (x < 0 || x >= N || y < 0 || y >= N) {
+        return;
+    }
+    if(!occ[x][y] || vis[x][y]){
+        return;
+    }
+
+    vis[x][y] = true;
+    int[] dirX = new int[]{-1, -1, 0, 0, 1, 1};
+    int[] dirY = new int[]{-1, 0, -1, 1, 0, 1};
+    for (int i = 0; i < dirX.length; i++) {
+        dfs(x + dirX[i], y + dirY[i]);
+    }
+}
+
+
+
+
+
+// Explain the buggy function
+
+// The buggy function is a depth-first search (DFS) implementation for a 2D grid. 
+// The function uses recursion to visit all the cells in the grid that are connected to the cell (x, y). 
+// The grid is represented by two boolean 2D arrays: 'occ' and 'vis'. 
+// The 'occ' array represents the occupation status of each cell in the grid, and 'vis' array represents the visited status of each cell. 
+// If a cell is occupied and not visited, the function marks it as visited and visits its neighboring cells recursively.
+
+// The bug in the function is that it checks if the cell is visited before checking if it is occupied. 
+// This means that the function will recursively visit
+No.8 Patch
+private void dfs(int x, int y) {
+    if (x < 0 || x >= N || y < 0 || y >= N || !occ[x][y] || vis[x][y]) {
+        return;
+    }
+
+    vis[x][y] = true;
+    int[] dirX = new int[]{-1, -1, 0, 0, 1, 1};
+    int[] dirY = new int[]{-1, 0, -1, 1, 0, 1};
+    for (int i = 0; i < dirX.length; i++) {
+        dfs(x + dirX[i], y + dirY[i]);
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function
+
+// Buggy Function
+No.9 Patch
+private void dfs(int x, int y) {
+    if (x < 0 || x >= N || y < 0 || y >= N) {
+        return;
+    }
+    if(!occ[x][y] || vis[x][y]){
+        return;
+    }
+
+    vis[x][y] = true;
+    int[] dirX = new int[]{-1, -1, 0, 0, 1, 1};
+    int[] dirY = new int[]{-1, 0, -1, 1, 0, 1};
+    for (int i = 0; i < dirX.length; i++) {
+        dfs(x + dirX[i], y + dirY[i]);
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.kafka.example;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.Producer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+
+import java.util.Properties;
+
+public class KafkaProducerExample {
+    public static void main(String[] args) throws IOException {
+        Properties props = new Properties();
+        props.put("bootstrap.servers", "localhost:9092");
+        props.put("key.serializer", "org.apache.kafka.

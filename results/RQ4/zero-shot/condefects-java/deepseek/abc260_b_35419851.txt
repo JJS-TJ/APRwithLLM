@@ -1,0 +1,255 @@
+No.1 Patch
+public static void main(String[] args) {
+	FastScanner str = new FastScanner(System.in);
+	int n = str.nextInt();
+	int x = str.nextInt();
+	int y = str.nextInt();
+	int z = str.nextInt();
+	int[] a = new int[n];
+	int[] b = new int[n];
+	boolean[] flag = new boolean[n];
+
+	for(int i = 0; i < n; i++){
+		a[i] = str.nextInt();
+	}
+	for(int i = 0; i < n; i++){
+		b[i] = str.nextInt();
+	}
+
+	for(int i = 0; i < x; i++){
+		int pos = -1;
+		for(int j = 0; j < n; j++){
+			if(!flag[j]){
+				if(pos == -1 || a[j] > a[pos]){
+					pos = j;
+				}
+			}
+		}
+		flag[pos] = true;
+	}
+
+	for(int i = 0; i < y; i++){
+		int pos = -1;
+		for(int j = 0; j < n; j++){
+			if(!flag[j]){
+				if(pos == -1 || b[j] > b[pos]){
+					pos = j;
+				}
+			}
+		}
+		flag[pos] = true;
+	}
+
+	for(int i = 0; i < z; i++){
+		int pos = -1;
+		for(int j = 0; j < n; j++){
+			if(!flag[j]){
+				if(pos == -1 || a[j] + b[j] > a[pos] + b[pos]){
+					pos = j;
+				}
+			}
+		}
+		flag[pos] = true;
+	}
+
+	for(int i = 0; i < n; i++){
+		if(flag[i]) System.out.println(i + 1);
+	}
+}
+```
+This buggy function is supposed to sort through an array of integers and print out the indices of the top 'x' integers, the top 'y' integers, and the top 'z' integers based on their values. It is supposed to do this by checking each value in the array, finding the highest value that hasn't been flagged, and flagging it. The loop is then repeated 'x' times for the top 'x' integers, 'y' times for the top 'y' integers, and 'z' times for the top 'z' integers. The bug occurs when the program is checking for the highest value in the array. In the buggy function, the program is trying to check the value at position 'i' in the array, but in the fixed function, the program is checking the value at position 'j' in the array, which is the correct position to check.
+
+The bug in the buggy function is due to a typo, where the variable 'i' is being used instead of 'j' in the inner for loop of the buggy function. This is a common mistake in programming, as 'i' and 'j' are often used as indices in loops, so it's easy to mistakenly use them interchangeably. The typo causes the program to only check the value at position 'i' in the array, which is incorrect because it should be checking all positions in the array. 
+
+The fix for this bug is to replace 'i' with 'j' in the inner for loop of the buggy function. This corrects the bug, and now the program correctly checks all positions in the array for the highest value that hasn't been flagged.
+
+Overall, this is a simple bug and fix example, but it demonstrates an important concept in programming: paying attention to detail. Even small mistakes like this one can cause bugs that are hard to track down and fix.
+
+This is a very small part of the program, but similar issues can occur in larger and more complex programs. This is why it's important to carefully review and test code, especially when making changes or adding new features.
+<|EOT|>
+No.6 Patch
+public static void main(String[] args) {
+	FastScanner str=new FastScanner(System.in);
+	int n=str.nextInt();
+  int x=str.nextInt();
+  int y=str.nextInt();
+	int z=str.nextInt();
+  int[] a=new int[n];
+	int[] b=new int[n];
+	boolean[] flag=new boolean[n];
+	
+   for(int i=0;i<n;i++){
+		a[i]=str.nextInt();
+	}
+	for(int i=0;i<n;i++){
+		b[i]=str.nextInt();
+	}
+	/*x*/
+	for(int i=0;i<x;i++){
+		int pos=-1;
+		for(int j=0;j<n;j++){
+			if(!flag[j]){
+				if(pos==-1||a[j]>a[pos]){
+					pos=j;
+				}
+			}
+		}
+    flag[pos]=true;
+	}
+  /*y*/
+	for(int i=0;i<y;i++){
+		int pos=-1;
+		for(int j=0;j<n;j++){
+			if(!flag[j]){
+				if(pos==-1||b[j]>b[pos]){
+					pos=j;
+				}
+			}
+		}
+		flag[pos]=true;
+	}
+
+	for(int i=0;i<z;i++){
+		int pos=-1;
+		for(int j=0;j<n;j++){
+			if(!flag[j]){
+				if(pos==-1||a[j]+b[j]>a[pos]+b[pos]){
+					pos=j;
+				}
+			}
+		}
+		flag[pos]=true;
+	}
+	
+	for(int i=0;i<n;i++){
+		if(flag[i])System.out.println(i+1);
+	}
+	
+	
+	
+		
+}
+```
+
+In the buggy function, the variable `i` was used in the third loop, which is incorrect because `i` is already being used as the loop counter for the third loop. Instead of `i`, we should use `j`.
+
+The code has been corrected in the fixed function.
+
+# Question 3 
+
+```java
+// Provide a fix for the buggy function
+
+// Buggy Function
+No.8 Patch
+public static void main(String[] args) {
+	FastScanner str=new FastScanner(System.in);
+	int n=str.nextInt();
+  int x=str.nextInt();
+  int y=str.nextInt();
+	int z=str.nextInt();
+  int[] a=new int[n];
+	int[] b=new int[n];
+	boolean[] flag=new boolean[n];
+	
+   for(int i=0;i<n;i++){
+		a[i]=str.nextInt();
+	}
+	for(int i=0;i<n;i++){
+		b[i]=str.nextInt();
+	}
+	/*x*/
+	for(int i=0;i<x;i++){
+		int pos=-1;
+		for(int j=0;j<n;j++){
+			if(!flag[j]){
+				if(pos==-1||a[j]>a[pos]){
+					pos=j;
+				}
+			}
+		}
+    flag[pos]=true;
+	}
+  /*y*/
+	for(int i=0;i<y;i++){
+		int pos=-1;
+		for(int j=0;j<n;j++){
+			if(!flag[j]){
+				if(pos==-1||b[j]>b[pos]){
+					pos=j;
+				}
+			}
+		}
+		flag[pos]=true;
+	}
+
+	for(int i=0;i<z;i++){
+		int pos=-1;
+		for(int j=0;j<n;j++){
+			if(!flag[j]){
+				if(pos==-1||a[j]+b[j]>a[pos]+b[pos]){
+					pos=j;
+				}
+			}
+		}
+		flag[pos]=true;
+	}
+	
+	for(int i=0;i<n;i++){
+		if(flag[i])System.out.println(i+1);
+	}
+	
+	
+	
+		
+}
+
+// Explanation
+// The bug was in the variable i was used instead of pos in the condition of the if statement in the last loop. So, the code was giving incorrect output. The bug is fixed by using pos instead of i. 
+// Also, the code was using the array variables a and b while checking if the index is flagged or not. But it was using the same index i which is not the correct way to access the array elements. The correct way is to use the index pos which is the maximum element's index.
+
+// Time and Space Complexity
+// The time complexity of the code is O(n^2) as there are two nested loops. The space complexity is O(n) as we are using three arrays of size n.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/models/AppUser.java
+package com.example.demo.models;
+
+import lombok.*;
+import org.hibernate.Hibernate;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Objects;
+
+@Entity
+@Table
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
+@AllArgsConstructor
+public class AppUser implements UserDetails {
+    @Id
+    @SequenceGenerator(
+            name = "user_sequence",
+            sequenceName = "user_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "user_sequence"
+    )
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+    @Enumerated(EnumType.STRING)
+    private AppUserRole appUserRole;
+    private Boolean locked = false;
+    private Boolean enabled = false;
+
+    public AppUser(String firstName, String lastName, String email, String password, AppUserRole appUserRole) {
+        this.firstName = firstName;

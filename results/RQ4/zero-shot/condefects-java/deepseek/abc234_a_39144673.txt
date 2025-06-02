@@ -1,0 +1,63 @@
+No.0 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+
+// Provide a fix for the buggy function 
+
+// Buggy Function
+No.1 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+
+// Testing the function
+
+public static void main(String[] args){
+    System.out.println
+No.2 Patch
+public static int F(int X) {
+    return (int) Math.pow(X, 2) + 2 * X + 3;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>public class Solution {
+    public boolean isPalindrome(String
+No.3 Patch
+public static int F(int X) {
+    return X * X + 2 * X + 3;
+}
+
+
+
+// Correctly solve the equation given
+// 3x + 10 = 2x - 1
+No.4 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// This function takes an integer X as input and returns the result of X^2+2*X+3.
+No.5 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Explaination
+// This function was using the bitwise XOR operator (^) instead of the arithmetic
+No.6 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// A program that calculates the sum of all positive even numbers less than 100
+
+public class Main
+No.7 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// This function returns the sum of every number from 1 to N. 
+// You don't have to
+No.9 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// You can use X*X to get the square of X, rather than using X^2.

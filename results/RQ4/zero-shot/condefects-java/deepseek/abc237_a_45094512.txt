@@ -1,0 +1,50 @@
+No.3 Patch
+public static void main(String args[]) {
+	
+	// 거듭제곱 연산자
+	
+	Scanner input = new Scanner(System.in);
+	
+	long N = input.nextLong();
+	
+	long result = (long) Math.pow(2, 31);
+
+	
+	if (N >= (result * -1) && N < result) {
+
+	System.out.println("Yes");
+	
+	}
+	else {
+		System.out.println("No");
+	}
+}
+
+
+// Solution
+// 범위를 지정하는 것이기 때문에 경계값을 넣을 필요는 없다.
+// 양끝의 값은 등호를 삭제해야 한다.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// You are given an array of integers of size N. You need to print the sum of the elements in the array, keeping in mind that some of those integers may be quite large.
+
+// Input Format
+// The first line of the input consists of an integer N. The next line contains N space-separated integers contained in the array.
+
+// Constraints 
+// 1≤N�
+No.5 Patch
+public static void main(String ars[]) {
+	
+	Scanner input = new Scanner(System.in);
+	
+	long N = input.nextLong();
+	
+	if (N >= -(Math.pow(2, 31)) && N <= (Math.pow(2, 31)-1)) {
+
+	System.out.println("Yes");
+	
+	}
+	else {
+		System.out.println("No");
+	}
+}
+// 범위가 문제였지만, 거듭제곱은 그대로 거듭제곱을 구하는 함수였고 범위를 벗어나는 값을 넣으면 값이 이상하게 나온다는 것을 알고 있었지만
+// 지정된 범위를 실수형으로 받아서 해결하려고 �

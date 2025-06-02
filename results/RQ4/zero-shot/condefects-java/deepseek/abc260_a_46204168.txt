@@ -1,0 +1,49 @@
+No.3 Patch
+public static void main(String[] args){
+    Scanner scan = new Scanner(System.in);
+    String text = scan.nextLine();
+    if(text.length() < 3){
+        System.out.println("Enter string of length 3 or more");
+        return;
+    }
+    char[] work = new char[text.length()];
+    for(int i = 0; i < text.length(); i++){
+        work[i] = text.charAt(i);
+    }
+    if(work[0] == work[1]){
+       if(work[1] == work[2]){
+         System.out.println(-1);
+       }else{
+        System.out.println(work[2]);
+       }
+    }else{
+      if(work[1] == work[2]){
+        System.out.println(work[0]);
+      }else{
+        if(work[0] == work[2]){
+          System.out.println(work[1]);
+        }else{
+          System.out.println(work[0]);
+        }
+      }
+    }
+}
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.app;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Bicycle b1 = new Bicycle();
+        System.out.println(b1.getSpeed());
+        b1.speedUp();
+        System.out.println(b1.getSpeed());
+
+        MountainBike m1 = new MountainBike();
+        System.out.println(m1.getSeatHeight());
+        m1.setSeatHeight(2);
+        System.out.println(m1.getSeatHeight());
+
+        RoadBike r1 = new RoadBike();
+        System.out.println(r1.getTireWidth());
+        r1.setTireWidth(2);
+        System.out.println(r1.getTireWidth());

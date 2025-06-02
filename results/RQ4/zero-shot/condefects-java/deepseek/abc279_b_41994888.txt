@@ -1,0 +1,134 @@
+No.0 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+       if(s.matches(".*" + t + ".*")){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem
+
+// My Answer
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a
+No.1 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+       if(s.matches(".*"+t+".*$")){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given a string, s, and two indices, start and end, print a substring consisting of all characters in the inclusive range from start to end-1.
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+No.2 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+
+       if(s.matches(".*"+t+".*$")){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }
+
+
+// The buggy function was not allowing the program to check if the string 't' is present at the end of string 's'
+// We have to use the '+' operator to concat the string 't' with the regular expression, so that it can check the pattern
+// In regular expressions, '.*' is used to check if there is a string with any character
+No.3 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+       if(s.contains(t)){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }
+
+
+// Provide a fix for the buggy function
+
+// Buggy Function
+No.5 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if(s.matches(".*" + t + ".*")){
+		System.out.println("Yes");
+	}else{
+		System.out.println("No");
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Given a string s containing only lowercase letters, return the number of distinct substrings in s.
+
+import java.util.*;
+public class Main {
+	static Set<String> set = new HashSet<>();
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+No.6 Patch
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    String s = scan.next();
+    String t = scan.next();
+    if(s.matches(".*"+t+".*$")){
+        System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+
+// The bug in the function was that the regular expression was only checking for a character 't', not the input string 't'.
+// Fixed function now checks if the string 't' is present in the string 's'.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// 1. Print the sum of the elements in the array.
+// 2. In the given array which is of length 5, 3
+No.8 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if(s.matches(".*" + t + ".*$")){
+		System.out.println("Yes");
+	}else{
+		System.out.println("No");
+	}
+}
+
+// Explanation:
+// The bug was in the regex used in the .matches() method. The original code only checks for the character 't' at the end of the string, but not any string 't'.
+// The fixed code concatenates the string 't' to the regex pattern, so it will check if 't' exists anywhere in the string 's'. This will fix the
+No.9 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if(s.matches(".*" + t + ".*$")){
+		System.out.println("Yes");
+	}else{
+		System.out.println("No");
+	}
+}
+```
+
+In the buggy function, the regular expression used is incorrect, and it doesn't include the user input string `t`. The `matches()` function checks if the entire string `s` matches the pattern, which is `".*t.*$"`. Here, `.*` matches any character (except newline) 0 or more times, `t` matches the character

@@ -1,0 +1,194 @@
+No.0 Patch
+public static void solve () {
+	
+	int n = nextInt();
+	int[] a = nextIntArray(n);
+	
+	//a[i]がそれぞれ何個あるかを数える
+	int[] count = new int[200009];
+	for (int i=0; i<n; i++) count[a[i]] += 1;
+	
+	long ans = 0;
+	
+	for (int i=0; i<n; i++) {
+		//a[i]を全列挙する
+		
+		List<Integer> divList = allDivisor(a[i]);
+		
+		for (int div : divList) {
+			
+			int jNum = count[div];
+			int kNum = count[a[i] / div];
+			
+			ans += 1L * jNum * kNum;
+			
+		}
+	}
+	
+	println(ans);
+	
+}
+```
+
+In the buggy function, the variable `i` is used instead of `a[i]` in the line `int kNum = count[i / div];`, which causes the function to not return the correct output. This is because `i` is the index of the array `a`, not the actual value at that index.
+
+In the fixed function, `a[i]` is used instead of `i` in the line `int kNum = count[a[i] / div];`, which correctly retrieves the count of `k` from the `count` array.
+
+## 問題
+
+以下のプログラムを修正しなさい。
+
+```java
+// バグっている関数
+public static void solve () {
+	
+	int n = nextInt();
+	int[] a = nextIntArray(n);
+	
+	//a[i]がそれぞれ
+No.4 Patch
+public static void solve () {
+	
+	int n = nextInt();
+	int[] a = nextIntArray(n);
+	
+	//a[i]がそれぞれ何個あるかを数える
+	int[] count = new int[200009];
+	for (int i=0; i<n; i++) count[a[i]] += 1;
+	
+	long ans = 0;
+	
+	for (int i=0; i<n; i++) {
+		//a[i]を全列挙する
+		
+		List<Integer> divList = allDivisor(a[i]);
+		
+		for (int div : divList) {
+			
+			int jNum = count[div];
+			int kNum = count[a[i] / div];
+			
+			ans += 1L * jNum * kNum;
+			
+		}
+	}
+	
+	println(ans);
+	
+}
+
+// This fixed function now works as expected.
+```
+
+## Task 3:
+
+---
+
+```java
+// Provide a fix for the buggy function 
+
+// Buggy Function
+No.5 Patch
+public static void solve () {
+	
+	int n = nextInt();
+	int[] a = nextIntArray(n);
+	
+	//a[i]がそれぞれ何個あるかを数える
+	int[] count = new int[200009];
+	for (int i=0; i<n; i++) count[a[i]] += 1;
+	
+	long ans = 0;
+	
+	for (int i=0; i<n; i++) {
+		//a[i]を全列挙する
+		
+		List<Integer> divList = allDivisor(a[i]);
+		
+		for (int div : divList) {
+			
+			int jNum = count[div];
+			int kNum = count[a[i] / div];
+			
+			ans += 1L * jNum * kNum;
+			
+		}
+	}
+	
+	println(ans);
+	
+}
+
+// リストアップした除数を用いて、各jとkを計算する
+// a[i]を除数で割った商がkになるので、kNum = count[a[i] / div];と修正した<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// バブルソート
+
+// バブルソートは、隣り合う要素の大小を比較し、それぞれの要素が並ぶ位置になるように交換を繰り返すソートアルゴリズム
+
+// ソートの途中結果
+// 5 3
+No.7 Patch
+public static void solve () {
+	
+	int n = nextInt();
+	int[] a = nextIntArray(n);
+	
+	//a[i]がそれぞれ何個あるかを数える
+	int[] count = new int[200009];
+	for (int i=0; i<n; i++) count[a[i]] += 1;
+	
+	long ans = 0;
+	
+	for (int i=0; i<n; i++) {
+		//a[i]を全列挙する
+		
+		List<Integer> divList = allDivisor(a[i]);
+		
+		for (int div : divList) {
+			
+			int jNum = count[div];
+			int kNum = count[a[i] / div];
+			
+			ans += 1L * jNum * kNum;
+			
+		}
+	}
+	
+	println(ans);
+	
+}
+
+// Buggy Function
+No.9 Patch
+public static void solve () {
+	
+	int n = nextInt();
+	int[] a = nextIntArray(n);
+	
+	//a[i]がそれぞれ何個あるかを数える
+	int[] count = new int[200009];
+	for (int i=0; i<n; i++) count[a[i]] += 1;
+	
+	long ans = 0;
+	
+	for (int i=0; i<n; i++) {
+		//a[i]を全列挙する
+		
+		List<Integer> divList = allDivisor(a[i]);
+		
+		for (int div : divList) {
+			
+			int jNum = count[div];
+			int kNum = count[a[i] / div];
+			
+			ans += 1L * jNum * kNum;
+			
+		}
+	}
+	
+	println(ans);
+	
+}
+```
+
+I hope this example will help you in understanding the issue and fix it. If you have any more questions, feel free to ask.
+<|EOT|>

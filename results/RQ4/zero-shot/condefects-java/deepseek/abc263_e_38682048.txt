@@ -1,0 +1,59 @@
+No.5 Patch
+void calc() throws Exception {
+	N = i(br.readLine());
+	String[] as = br.readLine().split(" ");
+	A = Arrays.stream(as).mapToInt(a -> i(a)).toArray();
+
+	es = new long[N+1];
+	for (int i = N-2; i >= 0; i--) {
+		long p = inv(A[i] + 1);
+		long e = inv( (1-p+MOD) %MOD );
+		e = e * p %MOD;
+		e = e * ((es[i+1] - es[i+A[i]+1] + MOD) %MOD + A[i] + 1) %MOD;
+		es[i] = (es[i+1] + e) %MOD;
+	}
+	System.out.println((es[0] - es[1] + MOD) % MOD); // add modulo operation to ensure output is within the range of modulo
+}
+
+// This is because the output of the function is the difference between two elements in the array, 
+// which could be negative if es[0] < es[1]. To ensure the output is positive, the modulo operation is used.
+// The modulo operation essentially reduces the number to a number within the range of the modulo.
+// In this case, es[0] and es[1] are within the range of the modulo, so the output is within the range of the modulo.
+
+// Also, the modulo operation is applied to the difference between the two elements, not just the elements themselves.
+// This is because the difference of two numbers could be negative, and we want to ensure the output is positive.
+// Without the modulo operation, the output could be negative, which is not what we want.
+
+// The modulo operation is also applied to the sum of
+No.8 Patch
+void calc() throws Exception {
+	N = i(br.readLine());
+	String[] as = br.readLine().split(" ");
+	A = Arrays.stream(as).mapToInt(a -> i(a)).toArray();
+
+	es = new long[N+1];
+	for (int i = N-2; i >= 0; i--) {
+		long p = inv(A[i] + 1);
+		long e = inv( (1-p+MOD) %MOD );
+		e = e * p %MOD;
+		e = e * ((es[i+1] - (i+A[i]+1 < N ? es[i+A[i]+1] : 0) + MOD) %MOD + A[i] + 1) %MOD;
+		es[i] = (es[i+1] + e) %MOD;
+	}
+	System.out.println((es[0] - es[1] + MOD) % MOD);
+}
+```
+
+# Solution
+
+The bug is in the calculation of `es[i]`. The calculation is incorrect because it uses `es[i+A[i]+1]` even when `i+A[i]+1` is greater than `N`. The index `i+A[i]+1` should not exceed `N`, but the calculation is using it as if it does not exceed `N`.
+
+The buggy calculation is:
+
+```java
+e = e * ((es[i+1] - es[i+A[i]+1] + MOD) %MOD + A[i] + 1) %MOD;
+```
+
+The correct calculation should check if `i+A[i]+1` is greater than `N` before using it:
+
+```java
+e = e * ((es[

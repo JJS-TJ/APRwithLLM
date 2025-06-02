@@ -1,0 +1,155 @@
+No.0 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * Copyright 2013 MovingBlocks
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF
+No.1 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function
+No.2 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/dto/ClientDTO.java
+package com.example.demo.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class ClientDTO {
+    private Long id;
+No.4 Patch
+public static void main(String[] args) throws Exception {
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/springbootexceptionhandling/dto/UserRequest.java
+package com.example.springbootexceptionhandling.dto;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgs
+No.6 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+
+    System.out.println(new String(arr));
+}
+
+// This fixed function works as expected, swapping the characters at the specified positions in the array and printing the modified string. The issue was with the line `arr[b - a] = tmp;`. It should be `arr[b - 1] = tmp;` to correctly swap the characters at positions `b` and `a`.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+No.7 Patch
+public static void main(String[] args) throws Exception {
+    // Your code here
+    Scanner in = new Scanner(System.in);
+    
+    char[] arr = in.next().toCharArray();
+    int a = in.nextInt();
+    int b = in.nextInt();
+    
+    char tmp = arr[a - 1];
+    arr[a - 1] = arr[b - 1];
+    arr[b - 1] = tmp;
+    
+    System.out.println(new String(arr));
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/chase/main/models/Order.java
+package com.chase.main.models;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;

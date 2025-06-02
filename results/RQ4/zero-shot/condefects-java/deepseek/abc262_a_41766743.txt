@@ -1,0 +1,46 @@
+No.1 Patch
+public static void solve() {
+    // int n = in.nextInt();
+    // String s = in.next();
+    // long m = in.nextLong();
+
+    int Y = in.nextInt();
+    while (Y % 4 != 2) {
+        Y++;
+    }
+    System.out.println(Y);
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/model/Category.java
+package com.example.demo.model;
+
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+@Table(name = "category")
+public class Category {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "name")
+    private String name;
+
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY
+No.6 Patch
+public static void solve() {
+    int Y = in.nextInt();
+    int x = Y;
+    while (true) {
+        if (x % 4 == 2) {
+            System.out.println(x);
+            return;
+        }
+        x++;
+    }
+}
+
+
+// The original function was not working properly due to an infinite loop. It was missing a break condition to stop the loop when a valid solution was found. The fixed function now includes a while loop that will continue to iterate until a solution is found, and then return from the function.
+
+// The fixed function also avoids the use of a for loop in this case, since a for loop would also need a break condition to stop the loop when a solution is found. A while loop is a better fit for this scenario, as it does not have a predetermined number of iterations and can break when a solution is found.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package net.juanxxiii.j2eeg

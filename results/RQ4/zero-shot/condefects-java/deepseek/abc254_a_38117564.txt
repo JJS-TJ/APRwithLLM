@@ -1,0 +1,162 @@
+No.0 Patch
+public static void main(String[] args) {
+
+    Scanner scanner = new Scanner(System.in);
+    int x;
+    x = scanner.nextInt();
+
+    int res = x % 100;
+    System.out.printf("%02d", res);
+    
+}
+
+// Explanation:
+// The buggy function is supposed to print the last two digits of an integer. 
+// However, if the last two digits are less than 10, it prints only one digit, 
+// which is not the expected behaviour. 
+
+// The fixed function uses the printf function with the format specifier "%02d", 
+// which pads the output with leading zeros if the number is less than 10. 
+// This way, the output always has at least two digits.
+
+// The error in the buggy function is the use of two separate if-else statements, 
+// which is not necessary
+No.1 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+    int x;
+    x = scanner.nextInt();
+
+    int res = x % 100;
+    if (res < 10) {
+        System.out.println("0" + res); // Add quotation marks around 0 to make it a string so it can be concatenated with res
+    } else {
+        System.out.println(res);
+    }
+}
+
+
+//Explanation:
+//The original buggy function was returning the last two digits of a number with only one leading zero if the last two digits were less than 10.
+//The fixed function returns the last two digits of a number with a leading zero if the last two digits are less than 10, which corrects the output to always have two digits.
+//This is done by converting the number 0 to a string
+No.4 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in); 
+    	int x;
+    	x=scanner.nextInt();
+     
+    	int res=x%100;
+    	if(res <10) {
+    		System.out.println("0"+res);
+    	}
+    	else {
+    		System.out.println(res);
+    	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// A program to illustrate the use of scanner class in java
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter your name");
+
+        String name = input.nextLine();
+
+        System.out.println("Enter your age");
+
+        int age = input.nextInt();
+
+        System.out.println
+No.5 Patch
+public static void main(String[] args) {
+
+    Scanner scanner = new Scanner(System.in); 
+    int x;
+    x=scanner.nextInt();
+    
+    int res=x%100;
+    if(res <10) {
+        System.out.println("0"+res);
+    }
+    else {
+        System.out.println(res);
+    }
+    
+}
+
+//Explanation
+
+// In the buggy function, the code is trying to print a value with a leading zero if it's single-digit. 
+// However, it's not providing the leading zero correctly. It's trying to print it directly using println() method.
+// However, the println() method does not know that it needs to print the value as a string. 
+// It just treats the value as a numeric value and removes any leading zeros.
+// To fix this, the
+No.6 Patch
+public static void main(String[] args) {
+	
+	Scanner scanner = new Scanner(System.in); 
+    	int x;
+    	x=scanner.nextInt();
+     
+    	int res=x%100;
+    	if(res <10) {
+    		System.out.println("0"+res);
+    	}
+    	else {
+    		System.out.println(res);
+    	}
+    	
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//app/src/main/java/com/example/myapplication/viewmodel/ItemViewModel.java
+package com.example.myapplication.viewmodel;
+
+import android.arch.lifecycle.MutableLiveData;
+import android.arch.lifecycle.ViewModel;
+
+public class ItemViewModel extends ViewModel {
+
+    public MutableLiveData<String> currentName;
+
+    public MutableLiveData<String> getCurrentName()
+No.7 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in); 
+    	int x;
+    	x=scanner.nextInt();
+     
+    	int res=x%100;
+    	if(res < 10) {
+    		System.out.println("0"+res);
+    	}
+    	else {
+    		System.out.println(res);
+    	}
+    	
+}
+
+// Explanation
+// The bug in the buggy function is that it was printing the final output without appending "0" when the result was less than 10.
+// In order to fix this bug we add the line "System.out.println("0"+res);" instead of "System.out.println(0+res);" 
+// This will print "0" when the result is less than 10 and the result when it is not less than 10.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>
+No.9 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in); 
+    	int x;
+    	x=scanner.nextInt();
+     
+    	int res=x%100;
+    	if(res <10) {
+    		System.out.println("0"+res);
+    	}
+    	else {
+    		System.out.println(res);
+    	}
+}
+
+// Outputs the last two digits of an input. If the input is less than 10, an extra 0 is added at the beginning of the output.
+// For example, if input is 1, the output will be 01. If input is 23, the output will be 23.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function

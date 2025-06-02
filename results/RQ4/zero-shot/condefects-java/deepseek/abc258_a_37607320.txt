@@ -1,0 +1,83 @@
+No.4 Patch
+public static void main(String[] args){
+	
+	//入力の読み込み
+	Scanner sc = new Scanner(System.in);
+	int K = sc.nextInt();
+	int H = 21+(K/60);
+	String M = String.format("%02d", K%60);
+	
+   	//計算
+	String ans = H + ":" + M;
+	
+	//回答出力
+		System.out.println(ans);
+
+}
+
+// Correction and Explanation
+The bug in the provided code was that it was not correctly handling the minutes of the time. The minute was supposed to be printed as two digits with a leading zero if it is less than 10. In the provided code, the minutes were printed as a string, but it was not correctly formatted. Also, the base time (22) was incorrect. It was supposed to be 21.
+
+The fixed code first calculates the hours and minutes separately. The hours are calculated by dividing the minutes by 60 and adding 21 (the base time). The minutes are calculated by finding the remainder of the minutes divided by 60. The String.format() method is used to format the minutes
+No.7 Patch
+public static void main(String[] args){
+	
+	//入力の読み込み
+	Scanner sc = new Scanner(System.in);
+	int K = sc.nextInt();
+	
+	// 時間を算出
+	int H = 21+(K/60);
+	
+	// 分を算出
+	String M = String.format("%02d", K%60);
+	
+	//回答出力
+	System.out.println(H + ":" + M);
+
+}
+
+// メモ
+// 時間が21時間から始まることを忘れていた
+// 分がゼロ埋めされていなかった<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.mycompany.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by andrew_greer on 6/2/16.
+ */
+public class User {
+    String name;
+    String password;
+    List<Message> messageList
+No.9 Patch
+public static void main(String[] args){
+	
+	//入力の読み込み
+	Scanner sc = new Scanner(System.in);
+	int K = sc.nextInt();
+	
+	//分に変換
+	int H = (K/60) + 21;
+	int M = K%60;
+	
+	//時刻を整形
+	String HH = (H<10) ? "0"+H : String.valueOf(H);
+	String MM = (M<10) ? "0"+M : String.valueOf(M);
+	
+   	//計算
+	String ans = HH + ":" + MM;
+	
+	//回答出力
+	System.out.println(ans);
+
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>import java.util.*;
+public class Main {
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		System.out.println(
+			(a+b>=c) ? "Yes" : "No"
