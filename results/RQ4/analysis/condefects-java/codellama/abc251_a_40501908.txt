@@ -1,0 +1,86 @@
+No.0 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}
+
+// Analysis
+
+
+
+
+
+
+
+
+
+// Fixed Function
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.
+No.4 Patch
+void solve() {
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6) {
+        if (res.length() + p.length() <= 6) {
+            res.append(p);
+        } else {
+            res.append(p.substring(0, 6 - res.length()));
+        }
+    }
+    out.println(res.toString());
+}
+
+// Analysis
+No.5 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}
+
+// Analysis
+No.8 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}
+
+// Analysis
+
+// Fixes
+// Add a toString() function to the StringBuilder class.
+// Make sure that the toString() function is working as expected
+// in the StringBuilder class.
+
+// What's wrong with the fixed function
+No.9 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}
+
+
+// Analysis
+
+// Conclusion
+// In this case, the solution was to correct a typo in the while-loop condition.
+// A similar issue occurred in the fixed code as well, but a quick glance at the condition did not show the error.

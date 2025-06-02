@@ -1,0 +1,199 @@
+No.0 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+This code is almost the same as the original code, except for the change in the line `System.out.print("　")`. The change was made from `"　"` to `" "`.
+
+Here, I replaced the ideographic space character with a regular space character. This will print the character followed by a regular space character instead of the ideographic space character.
+
+The fixed code is now able to display the string with spaces between each character.
+No.1 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+// The corrected code fixes the bug by replacing the ideographic space with a regular space character.
+
+```
+
+// Refactored Function
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+No.2 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+```
+
+Here, we fixed the bug by replacing the ideographic space character with a regular space character. The space character used to separate each character is now a regular space character.
+
+This bug can be reproduced using the following sample input:
+
+```
+I love you
+```
+
+Here is what the original code will print:
+
+```
+I loveyou
+```
+
+Here is what the fixed code will print:
+
+```
+I love
+No.3 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+The only change we made to the code is in line 7. In this line, we have replaced the code in the if statement by a regular space character (a space character with a value of 32).
+
+The analysis is that we have changed the ideographic space character used to separate the characters in the output string by a regular space character (a space character with a value of 32).
+
+The fix is that we have
+No.4 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+This new code uses the String method "charAt(i)" to return the character at index i. This is then printed and if the character is not the last in the string, a regular space is printed after it.
+
+
+// Analysis
+```
+
+// This function is used to swap two variables
+
+public static void main(String args[]){
+  int x = 1;
+  int y = 2;
+  
+  int
+No.7 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+
+<br>
+
+# 7. What is the purpose of a method?
+
+* A method is a block of code that performs a specific task.
+* Methods can be written to perform tasks such as taking user input, reading a file, displaying text to the user, or performing a mathematical computation.
+* Methods can be used in the same way as statements and can be used to make the code easier to read and modify.
+*
+No.8 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+### Example
+
+```java
+public class BuggyFunction{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    String S = sc.next();
+    
+    for(int i = 0; i < S.length(); i++){
+      System.out.print(S.charAt(i));
+      if(i < S.length()-1){
+No.9 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+### Problem 5: Fixing the Bug
+
+```java
+// Fixing the Bug
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  int p = sc.nextInt();
+  int k = sc.nextInt();
+  
+  double d = sc.nextDouble();
+  
+  String s = sc.next();

@@ -1,0 +1,49 @@
+No.0 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// Analysis:
+// The bug in this function is that it does not include 'A' in the
+No.1 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis:
+// The fixed function is the same as the buggy function except that 'z' has been added
+No.2 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// Analysis:
+// The bug in this function is that the final condition does not include 'z'
+No.3 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}</s>
+No.4 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis:
+// The bug in this function is that it does not include 'A' in the uppercase range
+No.5 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// The fixed function fixes the bug by adding a second condition.</s>
+No.6 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// Analysis:
+// This function is no longer considered buggy because it correctly includes 'z' in

@@ -1,0 +1,157 @@
+No.1 Patch
+public static void main(String[] args)throws Exception{
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  Scanner sc = new Scanner(System.in);
+  String S = sc.nextLine();
+  int len = S.length();
+  StringBuilder[] arr = new StringBuilder[len];
+  for(int i = 0; i < len; i++){
+    arr[i] = new StringBuilder(S.substring(i, len) + S.substring(0, i));
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+// Analysis
+The fixed function here is written in Java. The function firstly reads a string from the user using a BufferedReader and Scanner. The string is then split into an array of all its possible rotations. These are then sorted in lexicographically increasing order. The smallest and largest strings are then printed out.
+
+The bug in this code is in the line where a substring is created from the original string. The substring method in Java takes two arguments, the first one being the starting index and the second one being the ending index. But in the current code, the ending index is given as len-1, which is not correct because it will not include the character at index len-1. The correct ending index should be len
+No.3 Patch
+public static void main(String[] args)throws Exception{
+  Scanner sc = new Scanner(System.in);
+  String S = sc.nextLine();
+  int len = S.length();
+  StringBuilder[] arr = new StringBuilder[len];
+  for(int i = 0; i < len; i++){
+    arr[i] = new StringBuilder(S.substring(i) + S.substring(0, i));
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+// Analysis
+The bug in this code is fixed. All the unnecessary BufferedReader and Scanner are removed. Now the string is split into the array of all its possible rotations using the StringBuilder class.
+
+The final array is sorted in lexicographically increasing order using the sort method of the Arrays class. Then, the smallest and largest strings are printed out.
+
+The string concatenation using StringBuilder is efficient because the string in the StringBuilder is mutable.
+
+The code snippet below shows the difference between the String class and the StringBuilder class in Java:
+
+// String Class
+String s = "Hello World";
+s = s + " I am good";
+System.out.println(s);
+
+// StringBuilder Class
+StringBuilder sb = new StringBuilder();
+sb.append("Hello World");
+sb.append(" I
+No.5 Patch
+public static void main(String[] args)throws Exception{
+  Scanner sc = new Scanner(System.in);
+  String S = sc.nextLine();
+  int len = S.length();
+  StringBuilder sb = new StringBuilder();
+  String[] arr = new String[len];
+  for(int i = 0; i < len; i++){
+    sb.append(S.substring(i, len))
+    .append(S.substring(0, i));
+    arr[i] = sb.toString();
+    sb.setLength(0);
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+The corrected function uses the StringBuilder object to concatenate strings rather than using the + operator. This reduces the amount of String objects created.
+
+Also, the correct ending index is given to the substring method, and the Scanner and BufferedReader objects are also removed from the code.
+
+// Fixes
+// Fixes
+Here are the fixes made in the function:
+
+// Removing the BufferedReader
+Scanner sc = new Scanner(System.in);
+String S = sc.nextLine();
+
+// Adding the StringBuilder object
+StringBuilder sb = new StringBuilder();
+
+// Changing the ending index
+S.substring(i, len)
+
+// Changing the starting
+No.6 Patch
+// Fixed Function
+public static void main(String[] args)throws Exception{
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  Scanner sc = new Scanner(System.in);
+  String S = sc.nextLine();
+  int len = S.length();
+  StringBuilder[] arr = new StringBuilder[len];
+  for(int i = 0; i < len; i++){
+    arr[i] = new StringBuilder(S.substring(i, len)).append(S.substring(0, i));
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+// Analysis
+This fixed version of the buggy function is written in Java. The function firstly reads a string from the user using a Scanner. The string is then split into an array of all its possible rotations. These are then sorted in lexicographically increasing order. The smallest and largest strings are then printed out.
+
+The substring method used in this code is correct as it takes two arguments, the first one being the starting index and the second one being the ending index. The starting index is given by i, and the ending index by len, which is correct because it includes the character at index len-1.
+
+Also, the Scanner and BufferedReader are used interchangeably, but
+No.8 Patch
+public static void main(String[] args)throws Exception{
+  Scanner sc = new Scanner(System.in);
+  String S = sc.nextLine();
+  int len = S.length();
+  StringBuilder[] arr = new StringBuilder[len];
+  for(int i = 0; i < len; i++){
+    arr[i] = new StringBuilder(S.substring(i, len) + S.substring(0, i));
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+// Analysis
+The fixed code is written in Java. The function firstly reads a string from the user using a Scanner. The string is then split into an array of all its possible rotations. These are then sorted in lexicographically increasing order. The smallest and largest strings are then printed out.
+
+The bug in this code is in the line where a substring is created from the original string. The substring method in Java takes two arguments, the first one being the starting index and the second one being the ending index. But in the current code, the ending index is given as len, which is correct because it will include the character at index len.
+
+Also, only one of the Scanner and BufferedReader is used, that is the Scanner. It is better to use the Scanner as it serves the same purpose as the Buffered
+No.9 Patch
+public static void main(String[] args)throws Exception{
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  Scanner sc = new Scanner(System.in);
+  String S = sc.nextLine();
+  int len = S.length();
+  StringBuilder[] arr = new StringBuilder[len];
+  for(int i = 0; i < len; i++){
+    arr[i] = new StringBuilder(S.substring(i) + S.substring(0, i));
+  }
+  Arrays.sort(arr);
+  System.out.println(arr[0]);
+  System.out.println(arr[len-1]);
+}
+
+// Analysis
+// Analysis
+The fixed function is written in Java. The user input is read using the Scanner class. The string is then split into an array of all its possible rotations using the StringBuilder class. These are then sorted in lexicographically increasing order. The smallest and largest strings are then printed out.
+
+The bug in this code is in the line where a substring is created from the original string. The substring method in Java takes two arguments, the first one being the starting index and the second one being the ending index. But in the current code, the ending index is given as len-1, which is not correct because it will not include the character at index len-1. The correct ending index should be len.
+
+Also, the

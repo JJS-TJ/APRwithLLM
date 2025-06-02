@@ -1,0 +1,43 @@
+No.4 Patch
+static long solve(int[] arr, int x, int y) {
+
+    long ans = 0;
+    int xn = -1, yn = -1;
+    int j = 0;
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] > x || arr[i] < y) {
+            j = i + 1;
+            xn = yn = -1;
+        } else {
+            if (arr[i] == x) xn = i;
+            if (arr[i] == y) yn = i;
+
+            if (xn >= 0 && yn >= 0) {
+                int t = Math.min(xn, yn);
+                ans += (t - j + 1);
+            }
+        }
+    }
+
+    if (ans == 0 && x == y) {
+        int n = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                n++;
+            }
+        }
+        ans = (long) (n * (n - 1)) / 2;
+    }
+
+    return ans;
+
+}
+
+// Analysis
+// Analysis:
+
+1. Since ans can be a very large number, it should be declared as a long, instead of an integer.
+
+2. The code is supposed to return 0 when x or y is not in the array, but the function always returns 0 when x or y is not present in the array.
+
+3. The condition arr[i] == x && arr[i] == y will always be false, because arr[i] can't be both x and y at the same time. To fix this,

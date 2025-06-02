@@ -1,0 +1,31 @@
+No.2 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (cost1*1.0) / dist1 < (cost2*1.0) / dist2;
+}
+
+// Analysis
+Analysis:
+This function performs integer division. We need to cast the values to be floating point numbers so that the division is floating point. This is done by multiplying the values by
+No.4 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    // The trick is to use double division on the costs and then use integer division on the distances.
+    // This makes sure that the correct value is obtained.
+    return ((double)cost1 / dist1) < ((double)cost2 / dist2);
+}
+
+// Analysis
+Analysis:
+This function is supposed to
+No.6 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double)cost1/(double)dist1 < (double)cost2/(double)dist2;
+}
+
+// Analysis
+Analysis:
+This function is supposed to compare the cost per distance between two items. However, it has an issue with integer division.
+
+If `dist1` and `dist2` are

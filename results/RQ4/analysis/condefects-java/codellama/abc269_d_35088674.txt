@@ -1,0 +1,31 @@
+No.3 Patch
+private void dfs(int x, int y) {
+    if (x < 0 || x >= N || y < 0 || y >= N || !occ[x][y]) {
+        return;
+    }
+    if (vis[x][y]) {
+        return;
+    }
+
+    vis[x][y] = true;
+    int[] dirX = new int[]{-1, -1, 0, 0, 1, 1};
+    int[] dirY = new int[]{-1, 0, -1, 1, 0, 1};
+    for (int i = 0; i < dirX.length; i++) {
+        dfs(x + dirX[i], y + dirY[i]);
+    }
+}
+
+// Analysis
+The fixed version is now correct. The first two lines have been swapped, and the second two lines have been moved to the beginning of the function.
+
+The first line checks if the coordinates are valid and if there is an obstacle at the cell. If any of these conditions are not met, it will return immediately.
+
+Then, the function will check if the cell has been visited or not. If not, it will return immediately. Finally, it will continue with the DFS.
+
+
+// Buggy Function
+private int[] getStartPoint() {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (!vis[i][j] && occ[i][j]) {
+                return new int[] { i

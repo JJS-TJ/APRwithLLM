@@ -1,0 +1,30 @@
+No.8 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K;i >= x;i --) {
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+                dp[i] = dp[i] >= mod ? dp[i] - mod : dp[i];
+            }
+        } else {
+            for (int i = x;i <= K;i ++) {
+                dp[i] = (dp[i] - dp[i - x]) % mod;
+                dp[i] = dp[i] < 0 ? dp[i] + mod : dp[i];
+            }
+        }
+        System.out.println(dp[K]);
+    }
+
+}
+
+// Analysis
+</s>

@@ -1,0 +1,190 @@
+No.3 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	//StringBuilder sb = new StringBuilder();
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");
+		return;
+	}
+	for(int i = 1; i < s.length; i++) {
+		if(s[i] < 'a' || 'z' < s[i]) {
+			System.out.println("No");
+			return;
+		}
+	}
+	System.out.println("Yes");
+
+	//.append("\n");
+	//System.out.print(sb);
+
+}
+
+// Analysis
+The Fixed Function is the same as the Buggy Function but with the bugs fixed.
+
+The bugs in the Buggy Function are:
+
+1. The main method is declared as static which is not necessary in this case.
+2. The Scanner object is not closed after its use.
+3. The condition in the if statement inside the for loop is incorrect. It should check if each character in the string is a lower case character, not the first character.
+4. Unnecessary code for StringBuilder and its append operation.
+
+Here is the corrected version of the code:
+
+// Corrected Code
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");
+		return;
+No.5 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	//StringBuilder sb = new StringBuilder();
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");
+		return;
+	}
+	for(int i = 1; i < s.length; i++) {
+		if(s[i] < 'a' || 'z' < s[i]) {
+			System.out.println("No");
+			return;
+		}
+	}
+	System.out.println("Yes");
+	sc.close();
+}
+
+// Analysis
+// Analysis
+The fixed version of the code is a bit more concise than the corrected version, but both functions are equivalent.
+
+The fixed function checks that the first character of the string is an upper case character and the rest of the string is a lower case character. If the function finds a mismatch in this condition, it prints "No" and returns from the main method. If all the conditions are met, it prints "Yes" and returns from the method.
+
+It uses the same Scanner object to read the input from standard input and the Scanner object is closed after its use.
+
+The StringBuilder object is not used in this version of the code.
+<|EOT|>
+
+// Original Code
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	StringBuilder sb = new StringBuilder();
+	String s = sc.nextLine();
+	sb.append(s);
+	sb.append("\n");
+	System.out.print(sb);
+	sc
+No.6 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	//StringBuilder sb = new StringBuilder();
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");
+		return;
+	}
+	for(int i = 1; i < s.length; i++) {
+		if(s[i] < 'a' || 'z' < s[i]) {
+			System.out.println("No");
+			return;
+		}
+	}
+	System.out.println("Yes");
+	sc.close();
+
+	//.append("\n");
+	//System.out.print(sb);
+}
+
+// Analysis
+// Analysis
+The fixed version of the function is much simpler. All that is needed to be done is to check each character in the string to see if it is a lower case character or not.
+
+// Input/Output Table
+
+Input	Output
+aa	Yes
+aA	No
+abc	Yes
+aBc	No
+Aa	No
+ABc	No
+aAa	No
+aab	Yes
+Ab	No
+aAaA	No
+
+// Input/Output Table
+
+Input	Output
+aa	Yes
+aA	No
+abc	Yes
+aBc	No
+Aa	No
+ABc	No
+aAa	No
+aab	Yes
+Ab	No
+aAaA	No
+
+// Input/Output Table
+
+Input	Output
+aa	Yes
+aA	No
+abc	Yes
+aBc	No
+Aa	No
+ABc	No
+aAa	No
+aab	Yes
+Ab
+No.8 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");
+		return;
+	}
+	for(int i = 1; i < s.length; i++) {
+		if(s[i] < 'a' || 'z' < s[i]) {
+			System.out.println("No");
+			return;
+		}
+	}
+	System.out.println("Yes");
+	sc.close();
+}
+
+Please note that the fixed function assumes that the input string is non-empty. If the string can be empty, additional checks should be added to handle this case.
+
+
+
+
+
+// Analysis
+The Buggy Function is to check whether a string begins with an upper case character and the rest of the string is in lower case.
+
+However, there are a few bugs in this function.
+
+1. The main method is declared as static which is not necessary in this case.
+2. The Scanner object is not closed after its use.
+3. The condition in the if statement inside the for loop is incorrect. It should check if each character in the string is a lower case character, not the first character.
+4. Unnecessary code for StringBuilder and its append operation.
+
+Here is the corrected version of the code:
+
+// Corrected Code
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");

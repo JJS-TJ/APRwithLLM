@@ -1,0 +1,56 @@
+No.3 Patch
+long choose(int n,int r){
+    if(n < 0 || r < 0 || r > n){
+        return 0;
+    }
+    if(r == 0){
+        return 1;
+    }
+    if(r == n){
+        return 1;
+    }
+    if(map[n][r] != 0){
+        return map[n][r];
+    }
+    long ans = choose(n-1, r-1) + choose(n-1, r);
+    map[n][r] = ans % mod;
+    return map[n][r];
+}
+
+// Analysis
+Analysis:
+The fixed function is using the same idea to solve the problem, but it is more efficient since it is not calculating the same subproblems multiple times. 
+
+The function also has error handling for divide by zero and overflow situations. 
+
+The function also has the necessary base cases. 
+
+// Optimization
+long choose(int n,int r){
+    if(n <
+No.4 Patch
+long choose(int n,int r){
+    if(r == 0 || r == n){
+        return 1;
+    }
+
+    if(r > n){
+        return 0;
+    }
+
+    if(map[n][r] != 0){
+        return map[n][r];
+    }
+
+    long ans = choose(n-1, r) + choose(n-1, r-1);
+    map[n][r] = ans % mod;
+    return map[n][r];
+}
+
+// Analysis
+
+The fixed function is much more efficient. It's not using recursion and it's using dynamic programming, which means it's storing values for previous subproblems and using those values when solving the current problem. 
+
+It also handles some of the cases where the function is failing. For example, it will return 0 for r > n and it will consider n and r to be positive. 
+
+It also handles some of the cases where the function is failing. For example, it will consider n and

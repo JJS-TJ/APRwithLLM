@@ -1,0 +1,27 @@
+No.3 Patch
+// Solution Function
+private long solve(int N){
+  long ans = 0;
+  long maxY = (long)Math.sqrt(N);
+
+  for (long y = 1;y *y <= N;y++) {
+    long zNum = N /y -y;
+    ans += 3 *(y -1);
+    ans += 3 *zNum;
+    ans += 6 *(y -1) *zNum;
+  }
+  ans += maxY;
+
+  return ans %mod;
+
+}
+
+// Analysis
+
+The bug is now fixed by the fix function.
+
+The function starts by initializing a variable "ans" to 0. Then, a for loop starts with a variable "y" that ranges from 1 to the square root of N.
+
+Inside the loop, a variable "zNum" is calculated as N divided by y minus y. 
+
+In each iteration, the function updates "ans" by

@@ -1,0 +1,37 @@
+No.2 Patch
+public static void main(String args[]){
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int x=sc.nextInt();
+	ArrayList<Integer>ar=new ArrayList<Integer>();
+	for(int i=0;i<n;i++){
+		ar.add(sc.nextInt());
+	}
+	Collections.sort(ar);
+	int j=0;
+	int f=0;
+	for(int i=0;i<n;i++)
+	{
+		while((j+1)<n && ar.get(j+1)-ar.get(i)<=x)
+			j++;
+		if(ar.get(j)-ar.get(i)==x)	
+			f=1;
+	}		
+	if(f==1)
+		System.out.println("Yes");
+	else
+		System.out.println("No");
+}
+
+Analysis:
+The code still reads a number 'n' and 'x' from the user. It also reads 'n' integers from the user and stores them in an ArrayList. Then it sorts the ArrayList in ascending order.
+
+The code then uses a nested loop structure to iterate over the ArrayList. The outer loop variable 'i' iterates from 0 to n-1, and for each 'i', the inner loop variable 'j' is incremented as long as the difference between the elements at indices 'j+1' and 'i' is less than or equal to 'x'.
+
+If at any point, the difference between the elements at indices 'j' and 'i' is equal to 'x', 'f' is set to 1.
+
+Finally, if 'f' is 1, the code prints "Yes", otherwise it prints "No".
+
+The code is now much more simple and clear, and there are no exceptions that could be thrown.
+
+In the fixed function, the outer loop variable 'i' is initialized to 0. As

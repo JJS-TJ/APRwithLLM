@@ -1,0 +1,31 @@
+No.8 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in); // 標準入力受取内容を書く
+    int N = sc.nextInt();
+    int M = sc.nextInt();
+    int P = sc.nextInt();
+    int c = 0;
+    for(int i = 0; i <= N; i++){ // <= で書き換え
+        if(N >= M+P*i){
+            c += 1;
+        }else{
+            System.out.println(c);
+            break;
+        }
+    }
+    sc.close();
+    return; //「おわり」の呪文
+}
+
+// Analysis
+
+
+// 以下、誤解の解除
+
+// Error
+//
+// N次元空間の点の数を計算する。
+// その計算は以下の式で行う。
+// c = M + P*i + (P^2)*(i-1) + (P^3)*(i-2) + ... + (P^(N-1))*(i-N+1)
+// だが、計算の際に負数を含んだ値を計算することはない。
+// これは、i-N+

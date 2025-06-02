@@ -1,0 +1,54 @@
+No.5 Patch
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    String s=sc.next();
+    char a[]=s.toCharArray();
+    int q=sc.nextInt();
+    char change[]=new char[26];
+    for(int i=0;i<26;i++){
+        change[i]=(char)(i+'a');
+    }
+    while(q-->0){
+        char c=sc.next().charAt(0);
+        char d=sc.next().charAt(0);
+        for(int i=0;i<26;i++){
+            if(change[i]==c)change[i]=d;
+        }
+    }
+    for(int i=0;i<n;i++){
+        System.out.print(change[a[i]-'a']);
+    }
+}
+
+```
+
+In the corrected code, we first map each character of the input string to its replacement. This is done by replacing the character in the input string with its replacement character as we traverse through the input string. The replacement is done by using the 'change' array that contains the replacements. The replacement array is then traversed and the replacement character is obtained by checking whether the replacement character is equal to the given character. If it is equal, it is replaced with the new character. If it is not equal, the character remains the same.
+
+## 10.
+
+### Problem Statement
+
+You are given a string str of even length. Split it into two halves, and print the first half and the second half in different lines.
+
+### Sample Input
+
+4
+abcdef
+
+### Sample Output
+
+ab
+
+cd
+
+### Explanation
+
+The input string has an even length, so it can be split into two halves. The first half is ab and the second half is cd.
+
+### Solution
+
+```
+
+// Original Function
+public static void main(

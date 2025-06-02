@@ -1,0 +1,161 @@
+No.0 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        for(int i = 1; i > lowbit(x); i <<= 1){
+            tree[x] = Math.max(tree[x], tree[x - i]);
+        }
+        x+=lowbit(x);
+    }
+}
+
+// Analysis
+Analysis: 
+This fixed function will work properly. The inner loop is now executed as expected, and the update operation is corrected to be a max operation.
+
+4) The variable x is not actually used. The function could be simplified by removing the outer while loop since it is unnecessary.
+
+// Fixed Function
+public static void update(int x, int value
+No.1 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        for(int i = 1; i > lowbit(x); i <<= 1){
+            tree[x] = Math.max(tree[x], tree[x - i]);
+        }
+        x+=lowbit(x);
+    }
+}
+
+// Analysis
+Analysis: 
+The update operation has been updated to perform the max operation on the current tree value at x and the new value.
+
+The loop counter i is still necessary, since it is used to calculate the subtree value and the location of the tree.
+
+4) The function is updating the tree with the new value, rather than the max of the current value
+No.2 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x += lowbit(x);
+    }
+}
+
+// Analysis
+Analysis:
+
+1) The inner loop now executes until the value x equals N, since the x value is increased by the lowbit(x) value each iteration.
+
+2) The update operation is now a max operation, which updates the current value at x with the new value if the new value is larger.
+
+3) The loop counter i is no longer necessary and has been removed.
+
+After these changes, the function now works as intended.
+
+The corrected code could look like this:
+
+public static void update(int x, int value){
+    while(x
+No.3 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x+=lowbit(x);
+    }
+}
+
+The function has been corrected by correctly updating the tree value at index x and by incrementing the loop counter as x is incremented.
+
+// Analysis
+Analysis: 
+This update operation is now correct, but it is still not efficient.
+
+Every time the function is called with a new x value, it will do a lot of unnecessary work. For instance, if x is equal to 1, then tree[x] will be overwritten with the value, tree[x] = value, and then the for loop will be executed with i equal to 1, which is not correct because it should only
+No.4 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x+=lowbit(x);
+    }
+}
+
+// Analysis
+Analysis:
+The update operation now correctly updates the value at x with the new value. Note that this update operation may be slightly slower because of the use of Math.max.
+
+The loop counter i is now unnecessary and can be removed.
+
+The loop terminates when x becomes greater than N, which means it is safe to remove the while loop.
+
+4) The loop terminates when x becomes greater than N, which means it is safe to remove the while loop.
+
+// Removing the while loop
+public static void update(int x, int value){
+    tree[
+No.6 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x += lowbit(x);
+    }
+}
+
+// Analysis
+Analysis: 
+The corrected version of the update function will update the tree with the given value at the given index x. The loop iterates through the tree, updating each node along the way with the new value.
+
+The for loop is unnecessary in this context and can be removed, as it serves no purpose.
+
+In addition, the i variable is not required in this context. It is only used to increment the x variable, but since i is always 1, it would be more natural to just use x += 1 and eliminate the for loop.
+
+Since the loop is only modifying
+No.7 Patch
+public static void update(int x, int value){
+
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x += lowbit(x);
+    }
+}
+
+// Analysis
+Analysis:
+The code now updates a binary indexed tree with the given value at the index x.
+
+The function now correctly updates the value at the current index with the given value.
+
+In addition to fixing the problematic lines, the loop counter i is no longer needed and can be removed.
+
+After these changes, the function is now fixed.
+
+
+
+/*
+Time Complexity: O(logn)
+*/
+class Solution{
+
+    public static int[] tree;
+    public static int N;
+
+    public static void init(int N){
+No.9 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(value, tree[x]);
+        for(int i = 1; i < lowbit(x); i <<= 1){
+            tree[x] = Math.max(tree[x], tree[x - i]);
+        }
+        x+=lowbit(x);
+    }
+}
+
+// Analysis
+Analysis:
+The code is trying to update a binary indexed tree (also known as a Fenwick tree) with the given value at the index x.
+
+The function has a few issues:
+
+1) The inner loop will never execute because i > lowbit(x) is always false due to the way the loop is set up. This means that the loop is

@@ -1,0 +1,34 @@
+No.3 Patch
+void solve() {
+    int n = in.nextInt();
+    long[] a = in.nextLongArray(n);
+    if (Math.abs(a[n - 1] - a[n - 2]) == 1) {
+        if ((a[n - 1] - (n - 1)) % 2 == 0) {
+            out.println("Bob");
+        } else {
+            out.println("Alice");
+        }
+    } else {
+        out.println("Alice");
+    }
+}
+
+// Analysis
+Analysis: The fixed function is checking the difference between the last two elements of the array to determine the winner of the game. The first part of the condition is checking if the difference between the last two elements of the array is 1, if it is 1 then the condition checks if the last element of the array is even or odd. If it is even, then Bob is the winner of the game. If it is odd, then Alice is the winner of the game. If the difference between the last two elements of the array is not 1, then Alice is the winner of the
+No.9 Patch
+void solve() {
+    int n = in.nextInt();
+    long[] a = in.nextLongArray(n);
+    if (Math.abs(a[n - 1] - a[n - 2]) == 1) {
+        if ((a[n - 1] - (n - 1)) % 2 == 0) {
+            out.println("Bob");
+        } else {
+            out.println("Alice");
+        }
+    } else {
+        out.println("Alice");
+    }
+}
+
+// Analysis
+Analysis: The function is checking the difference between the last two elements of the array and the difference between the last element of the array and n-1, to determine the winner of a game. The buggy part of this function is that the modulus operation should be performed on the difference of the last two elements of the array, not on the last element and n-1. Also, the condition for the winner should be checked in a different way. In the buggy function, if the difference between the last two elements of the array is 2, then Bob is the winner. But

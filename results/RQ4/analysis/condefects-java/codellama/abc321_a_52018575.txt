@@ -1,0 +1,80 @@
+No.1 Patch
+public static void main(String[] args) {
+    try (Scanner sc = new Scanner(System.in)) {
+        int n = sc.nextInt();
+
+        int prev = n % 10;
+        n /= 10;
+        while (n > 0) {
+            int number = n % 10;
+            if (number <= prev) {
+                System.out.println("No");
+                return;
+            }
+            prev = number;
+            n /= 10;
+        }
+
+        System.out.println("Yes");
+    }
+}
+
+// Analysis
+The above code correctly handles multi-digit numbers. If the first digit is less than the second digit, the code will print "No" and stop, otherwise it will update the previous digit and continue processing.
+
+In the end, we will have processed all digits of the number (including the least significant digit), and if every digit is larger than the previous one, we can safely print "Yes".
+
+Note that this fixed code assumes that the input number is not zero.
+
+Now that we have fixed the bug, we can run
+No.3 Patch
+public static void main(String[] args) {
+    try (Scanner sc = new Scanner(System.in)) {
+        int n = sc.nextInt();
+
+        int prev = n % 10; // start with the least significant digit
+        n /= 10;
+        while (n > 0) {
+            int number = n % 10;
+            if (number <= prev) {
+                System.out.println("No");
+                return;
+            }
+            prev = number;
+            n /= 10;
+        }
+        System.out.println("Yes");
+    }
+}
+
+// Analysis
+The above code handles the multiple digit case correctly.
+
+The problem statement says that the input number may contain at most 10 digits. Because of this, we know that the number must be between 100,000,000 and 999,999,999 (inclusive).
+
+If we start with the least significant digit, we can get the most significant digit by dividing by 10. For example, suppose the input number is
+No.4 Patch
+public static void main(String[] args) {
+    try (Scanner sc = new Scanner(System.in)) {
+        int n = sc.nextInt();
+
+        int prev = n % 10; // start with the least significant digit
+        n /= 10;
+        while (n > 0) {
+            int number = n % 10;
+            if (number <= prev) {
+                System.out.println("No");
+                return;
+            }
+            prev = number;
+            n /= 10;
+        }
+
+        System.out.println("Yes");
+    }
+}
+
+// Analysis
+Now the code is handling the case where the input number contains multiple digits, and it will only print "No" if the digits are not in increasing order.
+
+One more thing to note is that when we are finished reading the entire input, the value of prev will be the most significant digit of the number. This means that we are comparing the most significant digit against itself, which is unnecessary (and in fact wrong if the number has more than one digit). So we can add an additional check to make sure

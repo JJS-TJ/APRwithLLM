@@ -1,0 +1,42 @@
+No.8 Patch
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+	int w = sc.nextInt();
+	int b = sc.nextInt();
+	String wb = "wbwbwwbwbwbw", s = "";
+	for(int i = 0; i < 20; i++) s += wb;
+	int sl = s.length();
+	for(int i = 0; i < sl; i++){
+	    int wnum = 0, bnum = 0;
+	    for(int j = i; j < sl; j++){
+	        if(s.charAt(j) == 'w') wnum++;
+	        else bnum++;
+	        if(wnum == w && bnum == b){
+	            System.out.println("Yes");
+	            return;
+	        }
+	    }
+	}
+	System.out.println("No");
+}
+
+// Analysis
+Solution
+The bug in the original function was the nested for loop. The function was doing O(n^3) iterations, which is the worst case for this problem, but it can be improved to O(n) by using a sliding window.
+
+In the sliding window approach, we have two pointers i and j. We increment i until wnum == w, then we increment j until bnum == b. Then we increment j until we see another 'w' or 'b', and then we update wnum and bnum.
+
+If we reach the end of the string without finding a 'w' or 'b' that can break the current streak, we increment i and repeat the above process.
+
+Here's the fixed version of the function:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int w = sc.nextInt();
+        int b = sc.nextInt();
+        String wb = "wbwbwwbwbwbw", s = "";
+        for(int i = 0; i < 20; i++) s += w

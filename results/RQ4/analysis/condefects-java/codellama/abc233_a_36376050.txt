@@ -1,0 +1,17 @@
+No.7 Patch
+public static void main(String[] args) throws Exception {
+    Scanner sc = new Scanner(System.in);
+    int x = sc.nextInt();
+    int y = sc.nextInt();
+    int cnt = 0;
+    while(x < y){
+        x += 10;
+        cnt ++;
+    }
+    System.out.println(cnt);
+}
+
+// Analysis
+Analysis:
+
+As in the buggy function, the fixed function reads two integers from the user input using a Scanner object. The function then enters a while loop, which continues until the value of x is less than y. Inside the loop, it increments x by 10 and increments a counter (cnt) each iteration. The loop then exits when x is greater than or equal to y.

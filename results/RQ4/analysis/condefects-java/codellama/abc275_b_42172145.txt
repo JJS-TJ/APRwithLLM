@@ -1,0 +1,87 @@
+No.2 Patch
+public static void main (String[] args) {
+  final long MOD = 998244353;
+  Scanner sc = new Scanner (System.in);
+  long[] a = new long[6];
+  long multi1 = 1;
+  long multi2 = 1;
+  long ans = 0;
+  for (int i = 0; i < 6; i++) {
+    a[i] = Long.parseLong(sc.next());
+    a[i] = a[i] % MOD;
+  }
+  sc.close();
+  for (int i = 0; i < 3; i++) {
+    multi1 = multi1 * a[i] % MOD;
+  }
+  for (int i = 3; i < 6; i++) {
+    multi2 = multi2 * a[i] % MOD;
+  }
+  ans = Math.floorMod(multi1 - multi2, MOD);
+  try (PrintWriter output = new PrintWriter(System.out)) {
+    output.println(ans);
+  }
+}
+```
+
+To submit your solution, create a new file called solution.java containing your solution.
+
+To compile and run your solution, use the following command:
+
+javac solution.java && java solution
+
+The following is the output produced by the above code:
+
+24454168
+```
+
+### 3.3.3.2. 4. Testing Your Solution
+
+4.1. Testing your solution can be done by running the tester.py script in the tester folder.
+
+To run the tester.py script, you must first install the Python 3.7 or later. If you don't already have Python 3 installed, you can download it from the following link:
+
+https://www.python.org/downloads/
+
+Once you have installed Python 3, you can run the tester.py script as follows:
+
+```
+python3 tester.py
+```
+
+You should see the following output:
+
+```
+Test 1:
+
+Test 2:
+
+Test 3:
+
+Test 4:
+
+Test 5:
+
+Test 6:
+
+Test 7:
+
+Test 8:
+
+Test 9:
+
+Test 10:
+
+Test 11:
+
+Test 12:
+
+Test 13:
+
+Test 14:
+
+Test 15:
+
+Test 16:
+
+Test 17:

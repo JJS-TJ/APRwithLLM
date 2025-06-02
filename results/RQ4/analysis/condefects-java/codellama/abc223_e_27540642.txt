@@ -1,0 +1,14 @@
+No.0 Patch
+boolean last2(long w, long h, long r1, long r2) {
+	if (w == 0) return false;
+	long h1 = (r1+w-1)/w;
+	if (r2+w-1 > h*w) {
+		return false;
+	}
+	return ((r2+w-1)/w <= h-h1);
+}
+
+// Fixed Analysis
+// The fixed function is very similar to the buggy function.
+// It calculates h1 in the same way as in the buggy function.
+// It then checks if

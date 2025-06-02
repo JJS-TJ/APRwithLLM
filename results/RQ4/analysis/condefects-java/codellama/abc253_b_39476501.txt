@@ -1,0 +1,322 @@
+No.1 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);
+}
+
+// Analysis
+// Analysis
+This code is supposed to find the Manhattan distance between two pieces on a chessboard (not necessarily adjacent). The coordinates of the pieces are read from standard input.
+
+The code works correctly for finding the distance, but the calculation seems incorrect. It subtracts 1 from the calculated distance, even though it's not entirely clear why that should be done.
+
+This could lead to incorrect results as it's not clear why a subtraction of 1 should be necessary. The distance between two points in a grid is calculated as the sum of the absolute differences of the coordinates, so the 1 would be subtracted from the total distance, which would make the result incorrect.
+
+Here is a corrected version of the function:
+
+```java
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -
+No.2 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);
+}
+
+// Analysis
+
+The corrected version of the function seems to be correct.
+
+Here is a summary of the bug and the correct version of the code:
+
+Bug
+
+The buggy function calculates the Manhattan distance between two chess pieces, and subtracts 1 from the result. The distance between two points in a grid is calculated as the sum of the absolute differences of the coordinates, so the 1 would be subtracted from the total distance, which would make the result incorrect.
+
+Corrected Function
+
+The corrected version of the function correctly calculates the Manhattan distance between the two chess pieces. It reads the size of the board and the positions of the pieces from standard input, and then calculates and prints the Manhattan distance between the two pieces.
+
+Summary
+
+The buggy function calculates the Manhattan distance between two chess pieces, and subtracts 1 from the result. The distance between two points in a grid is calculated as the sum of the absolute differences of the coordinates, so the 1 would be subtracted from the total distance, which would make the result incorrect.
+
+The corrected version of the function correctly calculates the Manhattan distance between the two chess pieces. It reads the size of the board and the positions of the pieces from standard input, and then calculates and prints the Manhattan distance between the two pieces.
+
+<|EOT|>
+
+//
+No.5 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);
+}
+
+// Analysis
+// Analysis
+The buggy function is supposed to calculate the Manhattan distance between two pieces on a chessboard. The coordinates of the pieces are read from standard input.
+
+The buggy function seems to work correctly for finding the distance, but the calculation seems incorrect. It subtracts 1 from the calculated distance, even though it's not entirely clear why that should be done.
+
+This could lead to incorrect results as it's not clear why a subtraction of 1 should be necessary. The distance between two points in a grid is calculated as the sum of the absolute differences of the coordinates, so the 1 would be subtracted from the total distance, which would make the result incorrect.
+
+Here is a corrected version of the function:
+
+```java
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1
+No.6 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);
+}
+
+// Analysis
+// Analysis
+This code is supposed to find the Manhattan distance between two pieces on a chessboard (not necessarily adjacent). The coordinates of the pieces are read from standard input.
+
+The buggy function seems to work correctly for finding the distance, but the calculation seems incorrect. It subtracts 1 from the calculated distance, even though it's not entirely clear why that should be done.
+
+This could lead to incorrect results as it's not clear why a subtraction of 1 should be necessary. The distance between two points in a grid is calculated as the sum of the absolute differences of the coordinates, so the 1 would be subtracted from the total distance, which would make the result incorrect.
+
+Here is a corrected version of the function:
+
+```java
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (
+No.7 Patch
+// Fixed Function
+
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);
+}
+
+// Analysis
+// Analysis
+
+This function fixes the bug in the previous function and thus fixes the problem.
+
+Here is the analysis of the function:
+
+The function is supposed to find the Manhattan distance between two pieces on a chessboard (not necessarily adjacent). The coordinates of the pieces are read from standard input.
+
+The function reads the size of the board and the positions of the pieces from standard input, and then calculates and prints the Manhattan distance between the two pieces.
+
+The function reads the size of the board and the positions of the pieces from standard input, and then calculates and prints the Manhattan distance between the two pieces.
+
+Here is an analysis of the function:
+
+The function is supposed to find the Manhattan distance between two pieces on a chessboard (not necessarily adjacent). The coordinates of the pieces are read from standard input.
+
+The function reads the size of the board and the positions of the pieces from standard input, and then calculates and prints the Manhattan distance between the two pieces.
+
+The function reads the size of the board and the positions of the pieces from standard input, and then calculates and prints the Manhattan distance between the two pieces.
+
+The code is supposed to find the Manhattan distance between two pieces on a chessboard (not necessarily adjacent). The coordinates of the pieces are read from standard input.
+
+The function
+No.8 Patch
+// Corrected Function
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);
+}
+
+// Analysis
+
+Analysis
+
+The code is supposed to find the Manhattan distance between two pieces on a chessboard (not necessarily adjacent). The coordinates of the pieces are read from standard input.
+
+The buggy function seems to work correctly for finding the distance, but the calculation seems incorrect. It subtracts 1 from the calculated distance, even though it's not entirely clear why that should be done.
+
+This could lead to incorrect results as it's not clear why a subtraction of 1 should be necessary. The distance between two points in a grid is calculated as the sum of the absolute differences of the coordinates, so the 1 would be subtracted from the total distance, which would make the result incorrect.
+
+Here is a corrected version of the function:
+
+```java
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == '
+No.9 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (int j = 0; j < w; j++) {
+            if (row.charAt(j) == 'o') {
+                if (x1 == -1) {
+                    x1 = i;
+                    y1 = j;
+                } else {
+                    x2 = i;
+                    y2 = j;
+                }
+            }
+        }
+    }
+    int distance = Math.abs(x1 - x2) + Math.abs(y1 - y2);
+    System.out.println(distance);  // 1回目の移動は駒同士が重なっているため、必要な回数から除外
+}
+
+// Analysis
+
+The function is supposed to find the Manhattan distance between two pieces on a chessboard (not necessarily adjacent). The coordinates of the pieces are read from standard input.
+
+The buggy function seems to work correctly for finding the distance, but the calculation seems incorrect. It subtracts 1 from the calculated distance, even though it's not entirely clear why that should be done.
+
+This could lead to incorrect results as it's not clear why a subtraction of 1 should be necessary. The distance between two points in a grid is calculated as the sum of the absolute differences of the coordinates, so the 1 would be subtracted from the total distance, which would make the result incorrect.
+
+Here is a corrected version of the function:
+
+```java
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int h = sc.nextInt();
+    int w = sc.nextInt();
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < h; i++) {
+        String row = sc.next();
+        for (

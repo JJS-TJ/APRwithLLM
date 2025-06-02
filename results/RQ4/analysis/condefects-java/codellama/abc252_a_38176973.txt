@@ -1,0 +1,25 @@
+No.0 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = Character.toChars(n)[0];
+  System.out.println(c);
+
+ 
+}
+
+// Analysis
+
+Analysis: The given code is attempting to read an integer input from the user, then convert it into a character and print it. 
+However, the conversion from int to char is not correct because it is treating the
+No.9 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = Character.toChars(n)[0];
+  System.out.println(c);
+}
+
+// Analysis
+Analysis: The given code is attempting to read an integer input from the user, then convert it into a character and print it. 
+However, the conversion from int to char is not correct because it is treating the integer as an ASCII

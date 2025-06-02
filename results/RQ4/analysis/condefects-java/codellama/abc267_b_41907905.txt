@@ -1,0 +1,38 @@
+No.2 Patch
+public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    HashMap<String, Integer> mp = new HashMap<>();
+    String line = br.readLine();
+    if(line.charAt(0)=='1'){
+        System.out.println("No");
+        return;
+    }
+    boolean[] a= new boolean[7];
+    a[0]=(line.charAt(6)=='1');
+    a[1]=(line.charAt(3)=='1');
+    a[2]=(line.charAt(1)=='1'||line.charAt(7)=='1');
+    a[3]=(line.charAt(0)=='1'||line.charAt(4)=='1');
+    a[4]=(line.charAt(2)=='1'||line.charAt(8)=='1');
+    a[5]=(line.charAt(5)=='1');
+    a[6]=(line.charAt(9)=='1');
+    int val=0;
+    for(int i=0;i<7;i++)
+        if((val%2==0&&a[i])||(val%2==1&&!a[i]))val++;
+    if(val>2){
+        System.out.println("Yes");
+    }
+    else {
+        System.out.println("No");
+    }
+    br.close();
+}
+
+// Analysis
+Analysis:
+The main change is that the for loop iterates from 0 to 6 instead of 0 to 5. This means the value of 'i' in the for loop will be 6 as well, allowing the if condition to check whether the boolean value is true or false. 
+
+This change also means that the counter is incremented after the if condition and not before. This means that the counter will not be incremented if the boolean value is not alternating between true and false.
+
+For example, if the input string is "1000111100", the boolean array looks like [true, false, false, true, false, false, true]. The if condition in the for loop will check if the character in the 6th index is alternating between true and false. Since there is a boolean value that is true, the condition is satisfied and the counter is incremented. Since the character in the 7th index is alternating between false and true, the counter is incremented again. The counter ends up being 2, which is greater than 2. Therefore, the function prints "Yes".
+
+However, if the input string is "1001111000", the boolean array looks like [true, false, false, true, false, true, true]. The if condition in the for loop will check if the character in the 6th index is alternating between true and false. Since there is a boolean value that is false, the condition is not satisfied and the counter is not incremented. Since the character in the 7th index is alternating between true and false, the counter is not increment

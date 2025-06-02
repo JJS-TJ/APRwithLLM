@@ -1,0 +1,63 @@
+No.4 Patch
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String S = input.next();
+    var frequency = new HashMap<Character, Integer>();
+    char maxChar = S.charAt(0);
+    int maxCount = frequency.getOrDefault(maxChar, 0);
+    for (char c : S.toCharArray()) {
+        frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+        if (frequency.get(c) > maxCount || (frequency.get(c) == maxCount && c < maxChar)){
+            maxCount = frequency.get(c);
+            maxChar = c;
+        }
+    }
+    System.out.printf("%c\n", maxChar);
+    input.close();
+}
+
+// Analysis
+1. This function does not have the bug mentioned in the comments in the previous code.
+2. The variable maxCount is initialized with the value of frequency.get(maxChar)
+3. The condition to find the max char is more readable.
+
+Here is the corrected code:
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String S = input.next();
+        var frequency = new HashMap<Character, Integer>();
+        char maxChar = S.charAt(0);
+        int maxCount = frequency.getOrDefault(maxChar, 0);
+        for (char c : S.toCharArray()) {
+No.7 Patch
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String S = input.next();
+    var frequency = new HashMap<Character, Integer>();
+    for (char c : S.toCharArray()) {
+        frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+    }
+    int maxCount = 0;
+    char maxChar = S.charAt(0);
+    for (Map.Entry<Character, Integer> entry : frequency.entrySet()) {
+        if (entry.getValue() > maxCount || (entry.getValue() == maxCount && entry.getKey() < maxChar)) {
+            maxChar = entry.getKey();
+            maxCount = entry.getValue();
+        }
+    }
+    System.out.printf("%c\n", maxChar);
+    input.close();
+}
+
+// Analysis
+1. The maxCount and maxChar variables are declared in the wrong order.
+2. You should use the enhanced for loop when you are just iterating over the elements in a collection.
+3. You should use map.entrySet() to get a set of entries in the map instead of getting the entries one by one.
+4. You should get the key and value from the Map.Entry object instead of getting the key and value from the map.
+5. The statement to calculate the max frequency should be more readable.
+
+Here is the fixed code:
+
+    public static void main(String[] args) {
+        Scanner input =

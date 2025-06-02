@@ -1,0 +1,91 @@
+No.0 Patch
+// Corrected Function
+private static void solve() {
+    long l = 1, r = (long) 1e18;
+    while (l <= r) {
+        long mid = l + (r - l) / 2;
+        if (check(mid)) r = mid - 1;
+        else l = mid + 1;
+    }
+    write(l);
+}
+
+// Analysis
+Fixed Function:
+Note that in the fixed function, the search space is validated. The search space is the range of values the binary search algorithm can search for.
+
+If the input is 1 ≤ n ≤ 100,000,000,000, the search space is 1 ≤ r ≤
+No.2 Patch
+private static void solve() {
+    long l = 1, r = (long) 1e18;
+    while (l <= r) {
+        long mid = (l + r) / 2;
+        if (check(mid)) r = mid - 1;
+        else l = mid + 1;
+    }
+    write(l);
+}
+
+// Analysis
+Fixed Function:
+The buggy function had two major issues.
+
+Firstly, it used integer division which lead to precision loss. The correction is as simple as using double division.
+
+Secondly, the condition r < l was not handled. The correct condition is l > r.
+
+Note that a simple fix is not always enough. One must always understand what the code is doing and not
+No.5 Patch
+private static void solve() {
+    long l = 1, r = (long) 1e18;
+    while (l <= r) {
+        long mid = l + (r - l) / 2;
+        if (check(mid)) r = mid - 1;
+        else l = mid + 1;
+    }
+    write(l);
+}
+
+Note:
+
+Here, the type of l and r is long and not int because l and r may be very large.
+
+Note that (r - l) / 2 is equivalent to l + (r - l) / 2 since r - l is an integer and l + (r - l) / 2 is an integer.
+
+When l = 1 and r =
+No.6 Patch
+private static void solve() {
+    long l = 1, r = (long) 1e18;
+    while (l <= r) {
+        long mid = l + (r - l) / 2;
+        if (check(mid)) r = mid - 1;
+        else l = mid + 1;
+    }
+    write(l);
+}
+
+// Analysis
+Fixed Function:
+If the function is correct, the l and r values may become too large and cause an integer overflow. The solution is to use Long.MAX_VALUE / 2 to avoid integer overflow.
+
+Here's a corrected version of the code:
+
+// Corrected Function
+private static void solve() {
+    long l = 1, r = (long)
+No.8 Patch
+private static void solve() {
+    long l = 1, r = (long) 1e18;
+    while (l <= r) {
+        long mid = (long) (l + r) / 2;
+        if (check(mid)) r = mid - 1;
+        else l = mid + 1;
+    }
+    write(l);
+}
+
+// Analysis
+Fixed Function:
+The fixed function still uses integer division, which leads to precision loss. However, this is much less than in the buggy function. The fixed function also doesn't handle the case when r < l (the search space is invalid). However, it is not a problem since the range is very large.
+
+In fact, the range can be safely extended by a factor

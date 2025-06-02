@@ -1,0 +1,30 @@
+No.8 Patch
+public static void main(String[] args){
+  
+  Scanner sc = new Scanner(System.in);
+  int N = sc.nextInt();
+  
+  String S = sc.next();
+  String judge = "ABC";
+  
+  int result = 0;
+  int len = S.length();
+  
+  if (len > N){
+    S = S.substring(0, N);
+    result = S.indexOf(judge);
+  } else {
+    result = S.indexOf(judge);
+  }
+  
+  if (result >= 0) {
+    result = result + 1;
+  }
+  System.out.println(result);
+} 
+
+// Analysis
+// Analysis
+The corrected function will work as expected. If the string S is longer than N characters, the function will first truncate the string S to be N characters long. The string S is then searched for the string "ABC". Once found, the result will be printed.
+
+If the string S is shorter than N characters, the string S will not be truncated. The string S will be searched for the string "ABC". If the string "ABC" is found, the index of it will be printed.

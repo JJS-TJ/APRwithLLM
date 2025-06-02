@@ -1,0 +1,28 @@
+No.6 Patch
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        int n = s.length();
+        boolean[][] dp = new boolean[n][n];
+        int maxLen = 0;
+        for (int gap = 0; gap < n; gap++) {
+            for (int i = 0; i + gap < n; i++) {
+                int j = i + gap;
+                dp[i][j] = (s.charAt(i) == s.charAt(j) && ((j - i < 3) || dp[i + 1][j - 1]));
+                maxLen = Math.max(maxLen, dp[i][j] ? j - i + 1 : 0);
+            }
+        }
+        System.out.println(maxLen);
+        sc.close();
+    }
+
+
+// Analysis
+Analysis:
+The new code uses dynamic programming to find the longest palindromic substring. It uses an n x n boolean 2D matrix to store the dynamic programming results.
+
+For each i and j, dp[i][j] is true if the substring s[i...j] is a palindrome.
+
+The code uses a gap variable to indicate how many characters to skip in each iteration. For example, for a string of 10 characters, when gap = 0, the code checks the first and the last character, and then it skips 1 character when it checks the second and the second to last characters, and so on.
+
+In each iteration, the code checks the substring s[i...j] and if it is a palindrome, it checks if s[i + 1...j - 1] is a

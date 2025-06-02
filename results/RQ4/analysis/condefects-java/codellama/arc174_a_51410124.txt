@@ -1,0 +1,58 @@
+No.3 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+
+    int n = sc.nextInt();
+    int c = sc.nextInt();
+
+    int a[] = new int[n];
+    long sum = 0;
+
+    for(int i = 0; i < n; i++) {
+        a[i] = sc.nextInt();
+        sum += a[i];
+    }
+
+    long dpMax[] = new long[n];
+    long dpMin[] = new long[n];
+
+    dpMax[0] = dpMin[0] = a[0];
+
+    for(int i = 1; i < n; i++) {
+        dpMax[i] = Math.max(dpMax[i - 1] + a[i], a[i]);
+        dpMin[i] = Math.min(dpMin[i - 1] + a[i], a[i]);
+    }
+
+    long result = sum;
+    if(c > 0) {
+        long max = Arrays.stream(dpMax).max().getAsLong();
+        if(max > 0) {
+            result = sum + (c - 1) * max;
+        }
+    }
+    else {
+        long min = Arrays.stream(dpMin).min().getAsLong();
+        if(min < 0) {
+            result = sum + (c - 1) * min;
+        }
+    }
+
+    System.out.println(result);
+}
+
+// Analysis
+Analysis:
+The provided code is supposed to solve a problem related to the Maximum Sum Array problem. This problem asks to find the maximum sum of a subarray in an array considering both positive and negative numbers.
+
+The buggy function seems to have a mistake in its logic and doesn't produce the correct output for certain test cases.
+
+Here are the issues:
+1. Incorrect array initialization: The line `int a[] = Arrays.stream(new int[n]).map(e -> sc.nextInt()).toArray();` is not necessary as it initializes an array of size 'n' with zeroes and then maps a function to each element which is unnecessary. It would be better to use `int a[] = new int[n];`.
+
+2. The condition for finding the maximum value in `dpMin` is incorrect. In the provided code, it checks if `min <= 0` which will always be true if `c > 0`. The correct condition should be `min < 0` as we want to find the minimum negative number to subtract from the sum.
+
+3. The loop for calculating `dpMax` and `dpMin` is incorrect. It should be `dpMax[i] = Math.max(dpMax[i - 1] + a[i], a[i - 1]);` and `dpMin[i] = Math.min(dpMin[i - 1] + a[i], a[i - 1]);`.
+
+4. The calculation of result is incorrect. In the provided code, it multiplies `c - 1` with `max` and `min` which is incorrect as `c` should be greater than or equal to 1. The correct calculation should be `result = sum + c * max` and `result = sum + c * min` respectively.
+
+5. The print statement `

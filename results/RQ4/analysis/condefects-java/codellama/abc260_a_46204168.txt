@@ -1,0 +1,28 @@
+No.3 Patch
+public static void main(String[] args){
+    Scanner scan = new Scanner(System.in);
+    String text = scan.nextLine();
+    char[] work = new char[text.length()];
+    for(int i = 0; i < text.length(); i++){
+        work[i] = text.charAt(i);
+    }
+    if(work[0] != work[1]){
+        if(work[0] == work[2]){
+            System.out.println(work[1]);
+        }else{
+            System.out.println(work[0]);
+        }
+    }else{
+        if(work[1] == work[2]){
+            System.out.println(-1);
+        }else{
+            System.out.println(work[2]);
+        }
+    }
+}
+
+Analysis:
+
+The code reads a line from the user input and stores it in a string. It then creates a char array to store the characters of the string. The code then checks the first two characters of the array, if they are not the same, it checks if the first and third characters are the same. If the first two characters are the same it checks if the third character is the same. If it is it outputs -1, if it is not it outputs the third character. This code is far simpler and far more efficient than the original, the checks are simpler and the flow is simplified and more efficient.
+<|EOT|>
+</s>

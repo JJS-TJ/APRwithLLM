@@ -1,0 +1,35 @@
+No.3 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    int s=c%100;
+    if(c<100){
+    System.out.println("No");
+    return;
+    }
+    if(s==0){
+    System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+
+// The function first checks if the number is less than 100. If the number is less than 100, the function terminates and prints "No" to the console. If the number is greater than or equal to 100,
+No.5 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    int s=c%100;
+    if(c<100){
+        System.out.println("No");
+    }else{
+        if(s==0){
+        System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+    }
+}
+
+// Analysis
+The corrected function checks for the number less than 100 before checking if the number is divisible by 100. This ensures that the function prints "No" for the case of numbers less than 100.

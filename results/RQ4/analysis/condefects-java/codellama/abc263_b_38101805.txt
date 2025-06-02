@@ -1,0 +1,171 @@
+No.1 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	dp[0] = 0;
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// Analysis
+
+// 初項は0
+// dp[i] = dp[parent] + 1
+// dp[0] = 0
+
+// dp[i]を求めるときは、
+// dp[parent]の値が既に知っているとする
+// よって、dp[i] = dp[parent] + 1
+// 従って、dp[1] = 1, dp[2] = dp[a[2]] + 1, dp[3] = dp[a[3]] + 1
+
+// dp[n-1] であるなら、dp[n-1] = dp[a[n-1]] + 1 となる
+// ここで、a[n-1] = 0
+// よって、dp[n-1] = dp[0] + 1 = 1
+
+// よって、dp[i] = dp
+No.3 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent];
+		
+		value++;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// Analysis
+
+
+
+// 今回の問題は、
+
+// 人i+1の親の親の親... といった、
+// 人i+1の人1の遠ざかり度を求める必要がある
+// これを、順に書いていくと次のようになる
+
+// 人i+1の親は？ 添え字で求めておく
+// 人i+1の親の親は？ 添え字で求めておく
+// 人i+1の親の親の親は？ 添え字で求めておく
+// …
+
+// このように、順に求めていくのである
+// それぞれの添え字は、
+// 1からnの値である
+
+// したがって、dp[i]の添え字を人i+1の添え字から求める必要
+No.5 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+
+// Analysis
+
+
+// 各辺について、その辺が、最大で何代の相手に相手を呼んでいるかを計算しておくと、
+
+// 各ノードに対して、そのノードの最大代数は、そのノードの隣接辺の中で最大となる値の1より大きい値であるとわかる
+// 各ノードに対して、そのノードの最大代数は、そのノードの隣接辺の中で最大となる値の1より大きい値であるとわかる
+// 各ノードに対して、そのノードの最大代数は、そのノードの隣接辺の中で最大となる値の1より大きい�
+No.6 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+
+// Analysis
+// 自分の親は、最初に確</s>

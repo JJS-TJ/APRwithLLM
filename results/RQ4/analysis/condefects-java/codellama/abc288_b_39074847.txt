@@ -1,0 +1,64 @@
+No.2 Patch
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    //Map<String, Integer> map = new TreeMap<String, Integer>();
+    TreeSet<String> set = new TreeSet<String>();
+    for(int i=0;i<k;i++) {
+        String temp = input.next();
+        set.add(temp);
+    }
+    Iterator<String> iterator = set.iterator();
+    while(iterator.hasNext()) {
+        System.out.println(iterator.next());
+    }
+}
+
+// Analysis
+The above code will now print out all of the elements in the TreeSet.
+
+A more efficient way to implement this would be to simply use the first three elements of the TreeSet and then stop. But since the code given by the problem is already implemented this way, the above code does not change the runtime complexity.
+
+The following code uses the next(int) method of the TreeSet to grab the first three elements of the TreeSet. Note that this method returns null if there are fewer than three elements in the TreeSet, so the while loop condition checks for null and the for loop checks for the end of the TreeSet.
+
+// Fixed Function
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    //Map<String, Integer> map
+No.9 Patch
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    //Map<String, Integer> map = new TreeMap<String, Integer>();
+    TreeSet<String> set = new TreeSet<String>();
+    for(int i=0;i<k;i++) {
+        String temp = input.next();
+        set.add(temp);
+    }
+    Iterator<String> iterator = set.iterator();
+    while(iterator.hasNext()) {
+        System.out.println(iterator.next());
+    }
+}
+
+// Analysis
+Analysis:
+The above code will now iterate over the TreeSet and print out all the elements it encounters, or as many as the number of elements in the TreeSet.
+
+To fix this, you should print only the first three elements it encounters, or all of them if there are fewer than three.
+
+To do this, you will have to keep track of the counter value using another variable.
+<|EOT|>
+
+// Fixed Function
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    //Map<String, Integer> map = new TreeMap<String, Integer>();
+    TreeSet<String> set = new TreeSet<String>();
+    for(int i=0;i<k;

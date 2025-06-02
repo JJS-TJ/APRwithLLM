@@ -1,0 +1,177 @@
+No.4 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+        continue;
+      }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+      continue;
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+
+
+// Analysis
+Analysis:
+
+The code given above is a solution to a problem where we are trying to find the maximum length of continuous substring in a given string that contains at most k number of 'X' characters.
+
+The problem is that the while loop condition is checking if the end is greater than the length of the string, which means that the loop will never get executed. This is because at the start of the loop, end is zero and s.length() is always greater than zero. So, the loop condition will never be true. 
+
+The correct condition should be while(end < s.length())
+
+Also, it's not necessary to continue to the next iteration after executing the first if or else if statement. The control flow can be moved outside the if-else-if blocks to make the code cleaner.
+
+Also, there is no need for continue keyword inside the first if statement. The continue statement is used to skip the rest of the current iteration and move to the next one, but in this case, the rest of the code is already outside the if statement, so
+No.5 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+        continue;
+      }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  
+  System.out.println(maxCnt);
+}
+
+// Analysis
+Analysis:
+
+The code given above is a solution to a problem where we are trying to find the maximum length of continuous substring in a given string that contains at most k number of 'X' characters.
+
+The problem is that the while loop condition is checking if the end is greater than the length of the string, which means that the loop will never get executed. This is because at the start of the loop, end is zero and s.length() is always greater than zero. So, the loop condition will never be true. 
+
+The correct condition should be while(end < s.length())
+
+Also, it's not necessary to continue to the next iteration after executing the first if or else if statement. The control flow can be moved outside the if-else-if blocks to make the code cleaner.
+
+Also, there is no need for continue keyword inside the first if statement. The continue statement is used to skip the rest of the current iteration and move to the next one, but in this case, the rest of the code is already outside the if statement, so continue would be
+No.6 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+        continue;
+      }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+      continue;
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+
+// Analysis
+The corrected function is a valid solution to the problem, but it can be improved upon.
+
+There is still a bug in the code, which is that the while loop won't end properly if there are more than k number of 'X' characters in the string. In this case, the while loop will keep going on, with end never being greater than the length of the string.
+
+The code can be fixed by adding an additional condition to the while loop that checks if cnt is zero. If cnt is zero, then there are more than k number of 'X' characters, and the while loop should terminate.
+
+After these corrections, the final code would look like this:
+
+// Final Function
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length() && cnt
+No.7 Patch
+public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String s = scan.nextLine(); int cnt = scan.nextInt();
+  int start = 0; int end = 0; int maxCnt = 0;
+  
+  while(end < s.length()){
+  	if(s.charAt(end) == 'X'){
+      	end++;
+        maxCnt = Math.max(maxCnt, end - start);
+        continue;
+      }
+    else if(cnt > 0){
+      end++;
+      cnt--;
+      maxCnt =  Math.max(maxCnt, end - start);
+      continue;
+    }
+    else{
+    if(s.charAt(start) == 'X'){
+    start++;
+    }
+      else{
+      cnt++;
+        start++;
+      }
+    }
+  }
+  System.out.println(maxCnt);
+}
+
+// Analysis
+Analysis:
+
+The code given above is a solution to a problem where we are trying to find the maximum length of continuous substring in a given string that contains at most k number of 'X' characters.
+
+The problem is that the while loop condition is checking if the end is greater than the length of the string, which means that the loop will never get executed. This is because at the start of the loop, end is zero and s.length() is always greater than zero. So, the loop condition will never be true. 
+
+The correct condition should be while(end < s.length())
+
+Also, it's not necessary to continue to the next iteration after executing the first if or else if statement. The control flow can be moved outside the if-else-if blocks to make the code cleaner.
+
+Also, there is no need for continue keyword inside the first if statement. The continue statement is used to skip the rest of the current iteration and move to the next one, but in this case, the rest of the code is already outside the if statement, so continue

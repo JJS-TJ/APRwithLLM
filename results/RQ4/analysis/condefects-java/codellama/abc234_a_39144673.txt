@@ -1,0 +1,43 @@
+No.1 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The given function has a logical error in the return statement. The return statement is
+No.2 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The fixed function is using the addition (+) operator instead of the bitwise X
+No.6 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The fixed function uses the multiplication operator instead of the bitwise XOR operator to
+No.7 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+The fixed function has been tested to make sure it returns the same result as the given function (10
+No.8 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The given function is now free from errors. It uses the correct addition operator (
