@@ -1,0 +1,107 @@
+No.2 Patch
+#include <stdio.h>
+
+int min(int a, int b) {
+	return a < b ? a : b;
+}
+
+int main(){
+	int n1, n2, n3, n4;
+	printf("Please enter 4 numbers seperated by spaces > ");
+	scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+	printf("%d is the smallest", min(min(min(n1, n2), n3), n4));
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.3 Patch
+int main(){
+
+	int n1, n2, n3, n4;
+	printf("Please enter 4 numbers seperated by spaces > ");
+	scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+	int n5 = n1;
+	if (n5 > n2)
+		n5 = n2;
+	if (n5 > n3)
+		n5 = n3;
+	if (n5 > n4)
+		n5 = n4;
+
+	printf("%d is the smallest", n5);
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.5 Patch
+int main(){
+
+	int n1, n2, n3, n4;
+	printf("Please enter 4 numbers seperated by spaces > ");
+	scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+	if (n1 <= n2 && n1 <= n3 && n1 <= n4)
+		printf("%d is the smallest", n1);
+
+	else if (n2 <= n1 && n2 <= n3 && n2 <= n4)
+                printf("%d is the smallest", n2);
+
+	else if (n3 <= n1 && n3 <= n2 && n3 <= n4)
+                printf("%d is the smallest", n3);
+
+	else
+		printf("%d is the smallest", n4);
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.10 Patch
+int main(){
+
+	int n1, n2, n3, n4;
+	printf("Please enter 4 numbers seperated by spaces > ");
+	scanf("%d %d %d %d", &n1, &n2, &n3, &n4);
+
+	if (n1 <= n2 && n1 <= n3 && n1 <= n4)
+		printf("%d is the smallest", n1);
+
+	else if (n2 <= n1 && n2 <= n3 && n2 <= n4)
+                printf("%d is the smallest", n2);
+
+	else if (n3 <= n1 && n3 <= n2 && n3 <= n4)
+                printf("%d is the smallest", n3);
+
+	else
+		printf("%d is the smallest", n4);
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.11 Patch
+int main()
+{
+	int n1, n2, n3, n4;
+	printf("Please enter 4 numbers seperated by spaces > ");
+	scanf("%d%d%d%d", &n1, &n2, &n3, &n4);
+
+	if (n1 <= n2 && n1 <= n3 && n1 <= n4)
+		printf("%d is the smallest", n1);
+
+	else if (n2 <= n1 && n2 <= n3 && n2 <= n4)
+		printf("%d is the smallest", n2);
+
+	else if (n3 <= n1 && n3 <= n2 && n3 <= n4)
+		printf("%d is the smallest", n3);
+
+	else
+		printf("%d is the smallest", n4);
+
+	return 0;
+}
+
+/* Fix the buggy function */

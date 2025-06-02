@@ -1,0 +1,188 @@
+No.0 Patch
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    if ((stuscore < thresha) && (stuscore >= threshb))
+       printf("Student has an B grade\n");
+    if ((stuscore < threshb) && (stuscore >= threshc))
+       printf("Student has an C grade\n");
+    if ((stuscore < threshc) && (stuscore >= threshd))
+       printf("Student has an D grade\n");
+    if (stuscore < threshd)
+       printf("Student has failed the course\n");
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.1 Patch
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    else if ((stuscore >= threshb) && (stuscore < thresha))
+       printf("Student has an B grade\n");
+    else if ((stuscore >= threshc) && (stuscore < threshb))
+       printf("Student has an C grade\n");
+    else if ((stuscore >= threshd) && (stuscore < threshc))
+       printf("Student has an D grade\n");
+    else
+       printf("Student has failed the course\n");
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.2 Patch
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    if ((stuscore < thresha) && (stuscore >= threshb))
+       printf("Student has an B grade\n");
+    if ((stuscore < threshb) && (stuscore >= threshc))
+       printf("Student has an C grade\n");
+    if ((stuscore < threshc) && (stuscore >= threshd))
+       printf("Student has an D grade\n");
+    if (stuscore < threshd)
+       printf("Student has failed the course\n");
+    return 0;
+}
+
+/* Fix the buggy function */
+No.7 Patch
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    if ((stuscore >= threshb) && (stuscore < thresha))
+       printf("Student has an B grade\n");
+    if ((stuscore >= threshc) && (stuscore < threshb))
+       printf("Student has an C grade\n");
+    if ((stuscore >= threshd) && (stuscore < threshc))
+       printf("Student has an D grade\n");
+    if (stuscore < threshd)
+       printf("Student has failed the course\n");
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.15 Patch
+#include <stdio.h>
+
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    if ((stuscore < thresha) && (stuscore >= threshb))
+       printf("Student has an B grade\n");
+    if ((stuscore < threshb) && (stuscore >= threshc))
+       printf("Student has an C grade\n");
+    if ((stuscore < threshc) && (stuscore >= threshd))
+       printf("Student has an D grade\n");
+    if (stuscore < threshd)
+       printf("Student has failed the course\n");
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.23 Patch
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    if (stuscore >= threshb && stuscore < thresha)
+       printf("Student has an B grade\n");
+    if (stuscore >= threshc && stuscore < threshb)
+       printf("Student has an C grade\n");
+    if (stuscore >= threshd && stuscore < threshc)
+       printf("Student has an D grade\n");
+    if (stuscore < threshd)
+       printf("Student has failed the course\n");
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.27 Patch
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    if (stuscore < thresha)
+    {
+        if (stuscore >= threshb)
+            printf("Student has an B grade\n");
+        if (stuscore < threshb)
+        {
+            if (stuscore >= threshc)
+                printf("Student has an C grade\n");
+            if (stuscore < threshc)
+            {
+                if (stuscore >= threshd)
+                    printf("Student has an D grade\n");
+                if (stuscore < threshd)
+                    printf("Student has failed the course\n");
+            }
+        }
+    }
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.28 Patch
+int main () {
+
+    float thresha, threshb, threshc, threshd, stuscore;
+    printf("Enter thresholds for A, B, C, D\nin that order, decreasing percentages > ");
+    scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &stuscore);
+    if (stuscore >= thresha)
+       printf("Student has an A grade\n");
+    if ((stuscore < thresha) && (stuscore >= threshb))
+       printf("Student has an B grade\n");
+    if ((stuscore < threshb) && (stuscore >= threshc))
+       printf("Student has an C grade\n");
+    if ((stuscore < threshc) && (stuscore >= threshd))
+       printf("Student has an D grade\n");
+    if (stuscore < threshd)
+       printf("Student has failed the course\n");
+    return 0;
+}
+
+
+/* Provide a fix for the buggy function */

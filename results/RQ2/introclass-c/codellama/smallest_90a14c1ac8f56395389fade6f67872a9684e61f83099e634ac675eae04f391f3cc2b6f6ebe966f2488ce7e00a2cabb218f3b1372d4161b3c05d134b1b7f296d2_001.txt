@@ -1,0 +1,276 @@
+No.5 Patch
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c, d;
+	printf("Enter 4 numbers > ");
+	scanf("%d %d %d %d", &a, &b, &c, &d);
+	if (a < b) {
+		if (a < c) {
+			if (a < d)
+				printf("%d is the smallest\n", a);
+			else
+				printf("%d is the smallest\n", d);
+		} else {
+			if (c < d)
+				printf("%d is the smallest\n", c);
+			else
+				printf("%d is the smallest\n", d);
+		}
+	} else {
+		if (b < c) {
+			if (b < d)
+				printf("%d is the smallest\n", b);
+			else
+				printf("%d is the smallest\n", d);
+		} else {
+			if (c < d)
+				printf("%d is the smallest\n", c);
+			else
+				printf("%d is the smallest\n", d);
+		}
+	}
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.8 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &one, &two, &three, &four);
+	if (one < two) {
+		if (one < three) {
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	} else {
+		if (two < three) {
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	return(0);
+}
+
+/* Provide a fix for the buggy function */
+No.11 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if ((one <= two)&&(one <= three)&&(one <= four))
+		printf("%d is the smallest\n", one);
+	if ((two <= one)&&(two <= three)&&(two <= four))
+		printf("%d is the smallest\n", two);
+	if ((three <= one)&&(three <= two)&&(three <= four))
+		printf("%d is the smallest\n", three);
+	if ((four <= one)&&(four <= two)&&(four <= three))
+		printf("%d is the smallest\n", four);
+	return(0);
+}	
+
+/* Provide a fix for the buggy function */
+No.17 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one < two) {
+		if (one < three) {
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	} else {
+		if (two < three) {
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.19 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one < two) {
+		if (one < three) {
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	} else {
+		if (two < three) {
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	return(0);
+}
+
+/* Provide a fix for the buggy function */
+No.23 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d %d %d %d", &one, &two, &three, &four);
+	if (one < two) {
+		if (one < three) {
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		} else if (three < four) {
+			printf("%d is the smallest\n", three);
+		} else {
+			printf("%d is the smallest\n", four);
+		}
+	} else if (two < three) {
+		if (two < four)
+			printf("%d is the smallest\n", two);
+		else
+			printf("%d is the smallest\n", four);
+	} else if (three < four)
+		printf("%d is the smallest\n", three);
+	else
+		printf("%d is the smallest\n", four);
+	return(0);
+}
+
+/* Provide a fix for the buggy function */
+No.27 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one < two)
+	{
+		if (one < three)
+		{
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		}
+		else
+		{
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	else
+	{
+		if (two < three)
+		{
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		}
+		else
+		{
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	return(0);
+}		
+
+/* Provide a fix for the buggy function */
+No.32 Patch
+int main()
+{
+
+	int one, two, three, four;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d", &one, &two, &three, &four);
+	if (one < two) {
+		if (one < three) {
+			if (one < four)
+				printf("%d is the smallest\n", one);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	} else {
+		if (two < three) {
+			if (two < four)
+				printf("%d is the smallest\n", two);
+			else
+				printf("%d is the smallest\n", four);
+		} else {
+			if (three < four)
+				printf("%d is the smallest\n", three);
+			else
+				printf("%d is the smallest\n", four);
+		}
+	}
+	return(0);
+}	
+
+/* Provide a fix for the buggy function */
