@@ -1,0 +1,347 @@
+No.0 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+	if ( throwEnd ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+
+/* Provide a fix for the buggy function */
+No.5 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd = 0;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+	if ( throwEnd ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.9 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd = 0;
+	if (pgdata->bChiSym) {
+		uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+		char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.14 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+
+	if ( throwEnd ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.16 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+
+	throwEnd = CountReleaseNum( pgdata );
+
+	if ( throwEnd ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		UserUpdatePhrase( pgdata, pgdata->phoneSeq, pgo->commitStr );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.19 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+
+	throwEnd = CountReleaseNum( pgdata );
+
+	if ( throwEnd ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		UserUpdatePhrase( pgdata, NULL, pgo->commitStr );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.22 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+    int throwEnd;
+    uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+    char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+    throwEnd = CountReleaseNum( pgdata );
+
+    if ( throwEnd > 0 ) {
+        /*
+         * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+         * And release from "chiSymbolBuf" && "phoneSeq"
+         */
+        WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+        /* Add to userphrase */
+        memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+        bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+        ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+        UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+        KillFromLeft( pgdata, throwEnd );
+    }
+    return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.23 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+
+	if ( throwEnd ) {
+		pgo->nCommitStr = throwEnd;
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.29 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+
+	throwEnd = CountReleaseNum( pgdata );
+
+	if ( throwEnd ) {
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+		UserUpdatePhrase( pgdata, pgdata->phoneSeq, pgdata->phrOut.chiBuf );
+		pgo->nCommitStr = throwEnd;
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.30 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+	if ( throwEnd ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.33 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd = 0;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+	if ( throwEnd ) {
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.42 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+
+	if ( throwEnd > 0 ) {
+		/*
+		 * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+		 * And release from "chiSymbolBuf" && "phoneSeq"
+		 */
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.50 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+	int throwEnd;
+	uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+	char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+	throwEnd = CountReleaseNum( pgdata );
+	if ( throwEnd ) {
+		WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+		/* Add to userphrase */
+		memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+		bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+		ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+		UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+		KillFromLeft( pgdata, throwEnd );
+	}
+	return throwEnd;
+}
+
+/* Provide a fix for the buggy function */
+No.51 Patch
+int ReleaseChiSymbolBuf( ChewingData *pgdata, ChewingOutput *pgo )
+{
+    int throwEnd = 0;
+    uint16_t bufPhoneSeq[ MAX_PHONE_SEQ_LEN + 1 ];
+    char bufWordSeq[ MAX_PHONE_SEQ_LEN * MAX_UTF8_SIZE + 1 ];
+
+    throwEnd = CountReleaseNum( pgdata );
+
+    if ( throwEnd ) {
+        /*
+         * count how many chinese words in "chiSymbolBuf[ 0 .. (throwEnd - 1)]"
+         * And release from "chiSymbolBuf" && "phoneSeq"
+         */
+        WriteChiSymbolToBuf( pgo->commitStr, throwEnd, pgdata );
+        /* Add to userphrase */
+        memcpy( bufPhoneSeq, pgdata->phoneSeq, sizeof( uint16_t ) * throwEnd );
+        bufPhoneSeq[ throwEnd ] = (uint16_t) 0;
+        ueStrNCpy( bufWordSeq, pgdata->phrOut.chiBuf, throwEnd, 1 );
+        UserUpdatePhrase( pgdata, bufPhoneSeq, bufWordSeq );
+        KillFromLeft( pgdata, throwEnd );
+    }
+    return throwEnd;
+}
+
+/* Provide a fix for the buggy function */

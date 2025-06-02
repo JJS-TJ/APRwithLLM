@@ -1,0 +1,93 @@
+No.8 Patch
+uint32_t TiffDirectory::writeDirEntry(IoWrapper&     ioWrapper,
+                                          ByteOrder      byteOrder,
+                                          int32_t        offset,
+                                          TiffComponent* pTiffComponent,
+                                          uint32_t       valueIdx,
+                                          uint32_t       dataIdx,
+                                          uint32_t&      imageIdx) const
+    {
+        assert(pTiffComponent);
+        TiffEntryBase* pDirEntry = dynamic_cast<TiffEntryBase*>(pTiffComponent);
+        assert(pDirEntry);
+        byte buf[12];
+        us2Data(buf,     pDirEntry->tag(),      byteOrder);
+        us2Data(buf + 2, pDirEntry->tiffType(), byteOrder);
+        ul2Data(buf + 4, pDirEntry->count(),    byteOrder);
+        pDirEntry->setOffset(offset + static_cast<int32_t>(valueIdx));
+        l2Data(buf + 8, pDirEntry->offset(), byteOrder);
+        ioWrapper.write(buf, 12);
+        return 12;
+    } // TiffDirectory::writeDirEntry
+
+/* Provide a fix for the buggy function */
+No.13 Patch
+uint32_t TiffDirectory::writeDirEntry(IoWrapper&     ioWrapper,
+                                          ByteOrder      byteOrder,
+                                          int32_t        offset,
+                                          TiffComponent* pTiffComponent,
+                                          uint32_t       valueIdx,
+                                          uint32_t       dataIdx,
+                                          uint32_t&      imageIdx) const
+    {
+        assert(pTiffComponent);
+        TiffEntryBase* pDirEntry = dynamic_cast<TiffEntryBase*>(pTiffComponent);
+        assert(pDirEntry);
+        uint8_t buf[12];
+        us2Data(buf,     pDirEntry->tag(),      byteOrder);
+        us2Data(buf + 2, pDirEntry->tiffType(), byteOrder);
+        ul2Data(buf + 4, pDirEntry->count(),    byteOrder);
+        pDirEntry->setOffset(offset + valueIdx);
+        l2Data(buf + 6, pDirEntry->offset(), byteOrder);
+        ioWrapper.write(buf, 12);
+        if (pDirEntry->size() > 4) {
+            pDirEntry->write(ioWrapper,
+                             byteOrder,
+                             offset,
+                             valueIdx,
+                             dataIdx,
+                             imageIdx);
+        }
+        return 12;
+    } // TiffDirectory::writeDirEntry
+
+/* Provide a fix for the buggy function */
+No.28 Patch
+uint32_t TiffDirectory::writeDirEntry(IoWrapper&     ioWrapper,
+                                          ByteOrder      byteOrder,
+                                          int32_t        offset,
+                                          TiffComponent* pTiffComponent,
+                                          uint32_t       valueIdx,
+                                          uint32_t       dataIdx,
+                                          uint32_t&      imageIdx) const
+    {
+        assert(pTiffComponent);
+        TiffEntryBase* pDirEntry = dynamic_cast<TiffEntryBase*>(pTiffComponent);
+        assert(pDirEntry);
+        byte buf[12];
+        us2Data(buf,     pDirEntry->tag(),      byteOrder);
+        us2Data(buf + 2, pDirEntry->tiffType(), byteOrder);
+        ul2Data(buf + 4, pDirEntry->count(),    byteOrder);
+        ioWrapper.write(buf, 12);
+        if (pDirEntry->size() > 4) {
+            pDirEntry->setOffset(offset + static_cast<int32_t>(valueIdx));
+            l2Data(buf, pDirEntry->offset(), byteOrder);
+            ioWrapper.write(buf, 4);
+        }
+        else {
+            const uint32_t len = pDirEntry->write(ioWrapper,
+                                                  byteOrder,
+                                                  offset,
+                                                  valueIdx,
+                                                  dataIdx,
+                                                  imageIdx);
+            assert(len <= 12);
+            if (len < 12) {
+                memset(buf, 0x0, 12 - len);
+                ioWrapper.write(buf, 12 - len);
+            }
+        }
+        return 12;
+    } // TiffDirectory::writeDirEntry
+
+/* Provide a fix for the buggy function */

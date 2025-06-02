@@ -1,0 +1,22 @@
+No.41 Patch
+DataBuf packIfdId(const ExifData& exifData,
+                            IfdId     ifdId,
+                            ByteOrder byteOrder)
+    {
+        const uint16_t size = 1024;
+        DataBuf buf(size);
+        std::memset(buf.pData_, 0x0, buf.size_);
+
+        uint16_t len = 0;
+        const ExifData::const_iterator b = exifData.begin();
+        const ExifData::const_iterator e = exifData.end();
+        for (ExifData::const_iterator i = b; i != e; ++i) {
+            if (i->ifdId() != ifdId) continue;
+            len += i->size();
+        }
+        // Round the size to make it even.
+        buf.size_ = len + len%2;
+        return buf;
+    }
+
+/* Provide a fix for the buggy function */

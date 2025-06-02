@@ -1,0 +1,44 @@
+No.1 Patch
+int func1(int x) {
+    int y = 100;
+    y = x;
+    if (x > 100) {
+        return -y;
+    }
+    return y;
+}
+
+/* Provide a fix for the buggy function */
+No.2 Patch
+int func1(int x) {
+    int y = 100;
+    y = x;
+    if (x < 100) {
+        return -y;
+    }
+    return y;
+}
+
+/* Provide a fix for the buggy function */
+No.4 Patch
+int func1(int x) {
+    int y = 100;
+    y = x;
+    if (x >= 100) {
+        return y;
+    }
+    return -y;
+}
+
+/* Provide a fix for the buggy function */
+No.7 Patch
+int func1(int x) {
+    int y = 100;
+    y = x;
+    if (x <= 100) {
+        return y;
+    }
+    return -y;
+}
+
+/* Provide a fix for the buggy function */

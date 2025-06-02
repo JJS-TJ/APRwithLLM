@@ -1,0 +1,13 @@
+No.3 Patch
+static int
+JPEGSetupEncode(TIFF* tif)
+{
+	JPEGState* sp = JState(tif);
+	static const char module[] = "JPEGSetupEncode";
+	TIFFDirectory *td = &tif->tif_dir;
+	TIFFErrorExt(tif->tif_clientdata, module,
+		      "JPEGSetupEncode - Not supported");
+	return (0);
+}
+
+/* Provide a fix for the buggy function */
