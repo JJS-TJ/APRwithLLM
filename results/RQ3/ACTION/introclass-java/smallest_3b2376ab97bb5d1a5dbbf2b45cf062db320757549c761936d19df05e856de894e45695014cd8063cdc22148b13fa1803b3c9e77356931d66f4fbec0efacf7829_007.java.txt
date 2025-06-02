@@ -1,0 +1,37 @@
+New cluster:
+UPDATE from n2.value to small.value
+------------
+===
+update-node
+---
+QualifiedName: n2.value [464,472]
+replace n2.value by small.value
+===
+update-node
+---
+QualifiedName: n1.value [403,411]
+replace n1.value by small.value
+===
+update-node
+---
+QualifiedName: n3.value [525,533]
+replace n3.value by small.value
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [574,632]
+    InfixExpression [578,597]
+        QualifiedName: n4.value [578,586]
+        INFIX_EXPRESSION_OPERATOR: < [587,588]
+        QualifiedName: n1.value [589,597]
+    Block [599,632]
+        ExpressionStatement [605,628]
+            Assignment [605,627]
+                QualifiedName: small.value [605,616]
+                ASSIGNMENT_OPERATOR: = [617,618]
+                QualifiedName: n4.value [619,627]
+

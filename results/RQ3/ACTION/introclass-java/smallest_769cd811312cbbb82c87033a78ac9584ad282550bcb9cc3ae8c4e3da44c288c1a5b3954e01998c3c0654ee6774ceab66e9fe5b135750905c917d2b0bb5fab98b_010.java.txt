@@ -1,0 +1,93 @@
+New cluster:
+MOVE from Block [36,638]
+------------
+===
+move-tree
+---
+ExpressionStatement [414,432]
+    Assignment [414,431]
+        QualifiedName: x.value [414,421]
+        ASSIGNMENT_OPERATOR: = [422,423]
+        QualifiedName: a.value [424,431]
+to
+Block [36,638]
+at 6
+
+New cluster:
+UPDATE from a.value to b.value
+------------
+===
+update-node
+---
+QualifiedName: a.value [354,361]
+replace a.value by b.value
+
+New cluster:
+UPDATE from >= to <
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [506,508]
+replace >= by <
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [451,453]
+replace >= by <
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [362,364]
+replace >= by <
+
+New cluster:
+UPDATE from c.value to x.value
+------------
+===
+update-node
+---
+QualifiedName: c.value [454,461]
+replace c.value by x.value
+===
+update-node
+---
+QualifiedName: b.value [365,372]
+replace b.value by x.value
+===
+update-node
+---
+QualifiedName: d.value [509,516]
+replace d.value by x.value
+
+New cluster:
+UPDATE from b.value to c.value
+------------
+===
+update-node
+---
+QualifiedName: b.value [443,450]
+replace b.value by c.value
+
+New cluster:
+UPDATE from c.value to d.value
+------------
+===
+update-node
+---
+QualifiedName: c.value [498,505]
+replace c.value by d.value
+
+New cluster:
+===
+delete-node
+---
+Block [408,436]
+===
+------------
+===
+delete-node
+---
+Block [408,436]
+===
+

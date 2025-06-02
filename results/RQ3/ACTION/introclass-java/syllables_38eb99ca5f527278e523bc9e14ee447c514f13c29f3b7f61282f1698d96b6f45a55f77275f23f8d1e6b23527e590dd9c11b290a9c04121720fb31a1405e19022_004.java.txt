@@ -1,0 +1,64 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [363,445]
+to
+InfixExpression [363,445]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [363,445]
+to
+InfixExpression [363,445]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [412,414]
+to
+InfixExpression [363,445]
+at 1
+
+New cluster:
+MOVE from InfixExpression [363,445]
+------------
+===
+move-tree
+---
+InfixExpression [363,411]
+    InfixExpression [363,385]
+        ArrayAccess [363,378]
+            SimpleName: string [363,369]
+            QualifiedName: i.value [370,377]
+        INFIX_EXPRESSION_OPERATOR: == [379,381]
+        CharacterLiteral: 'a' [382,385]
+    INFIX_EXPRESSION_OPERATOR: || [386,388]
+    InfixExpression [389,411]
+        ArrayAccess [389,404]
+            SimpleName: string [389,395]
+            QualifiedName: i.value [396,403]
+        INFIX_EXPRESSION_OPERATOR: == [405,407]
+        CharacterLiteral: 'e' [408,411]
+to
+InfixExpression [363,445]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [423,445]
+    ArrayAccess [423,438]
+        SimpleName: string [423,429]
+        QualifiedName: i.value [430,437]
+    INFIX_EXPRESSION_OPERATOR: == [439,441]
+    CharacterLiteral: 'i' [442,445]
+to
+InfixExpression [363,445]
+at 2
+

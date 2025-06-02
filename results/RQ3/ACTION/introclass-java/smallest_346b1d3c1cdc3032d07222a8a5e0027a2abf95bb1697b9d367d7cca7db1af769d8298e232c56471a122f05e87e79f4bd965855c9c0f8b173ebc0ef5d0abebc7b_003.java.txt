@@ -1,0 +1,73 @@
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [565,566]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [886,887]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [984,985]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [586,587]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [705,706]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [1005,1006]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [1026,1027]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [726,727]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [865,866]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [607,608]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [747,748]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [844,845]
+replace < by <=
+
+New cluster:
+UPDATE from "%d is the smalles\n" to "%d is the smallest\n"
+------------
+===
+update-node
+---
+StringLiteral: "%d is the smalles\n" [789,810]
+replace "%d is the smalles\n" by "%d is the smallest\n"
+

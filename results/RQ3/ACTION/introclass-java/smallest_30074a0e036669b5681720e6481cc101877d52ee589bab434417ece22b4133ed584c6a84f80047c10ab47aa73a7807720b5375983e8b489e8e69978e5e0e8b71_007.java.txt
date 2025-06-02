@@ -1,0 +1,87 @@
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [356,357]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [797,798]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [377,378]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [517,518]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [475,476]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [636,637]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [615,616]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [755,756]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [776,777]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [496,497]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [657,658]
+replace < by <=
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [335,336]
+replace < by <=
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [957,978]
+    BooleanLiteral: true [961,965]
+    ReturnStatement [971,978]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [981,982]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [981,982]
+===
+

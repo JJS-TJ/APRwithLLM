@@ -1,0 +1,106 @@
+New cluster:
+UPDATE from a.value to b.value
+------------
+===
+update-node
+---
+QualifiedName: a.value [389,396]
+replace a.value by b.value
+
+New cluster:
+UPDATE from >= to <
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [459,461]
+replace >= by <
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [397,399]
+replace >= by <
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [521,523]
+replace >= by <
+
+New cluster:
+UPDATE from b.value to smallest.value
+------------
+===
+update-node
+---
+QualifiedName: b.value [400,407]
+replace b.value by smallest.value
+===
+update-node
+---
+QualifiedName: c.value [462,469]
+replace c.value by smallest.value
+===
+update-node
+---
+QualifiedName: d.value [524,531]
+replace d.value by smallest.value
+
+New cluster:
+UPDATE from b.value to c.value
+------------
+===
+update-node
+---
+QualifiedName: b.value [451,458]
+replace b.value by c.value
+
+New cluster:
+UPDATE from c.value to d.value
+------------
+===
+update-node
+---
+QualifiedName: c.value [513,520]
+replace c.value by d.value
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [574,633]
+    InfixExpression [578,596]
+        QualifiedName: a.value [578,585]
+        INFIX_EXPRESSION_OPERATOR: >= [586,588]
+        QualifiedName: d.value [589,596]
+    Block [598,633]
+        ExpressionStatement [604,629]
+            Assignment [604,628]
+                QualifiedName: smallest.value [604,618]
+                ASSIGNMENT_OPERATOR: = [619,620]
+                QualifiedName: d.value [621,628]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [705,726]
+    BooleanLiteral: true [709,713]
+    ReturnStatement [719,726]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [729,730]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [729,730]
+===
+

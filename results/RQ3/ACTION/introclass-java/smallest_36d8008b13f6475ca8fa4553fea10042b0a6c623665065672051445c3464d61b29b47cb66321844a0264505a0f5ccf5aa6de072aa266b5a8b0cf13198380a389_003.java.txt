@@ -1,0 +1,358 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodDeclaration [624,883]
+    Modifier: public [624,630]
+    PrimitiveType: boolean [631,638]
+    SimpleName: isPrime [639,646]
+    SingleVariableDeclaration [647,652]
+        PrimitiveType: int [647,650]
+        SimpleName: n [651,652]
+    Block [654,883]
+        IfStatement [658,687]
+            InfixExpression [662,668]
+                SimpleName: n [662,663]
+                INFIX_EXPRESSION_OPERATOR: <= [664,666]
+                NumberLiteral: 1 [667,668]
+            ReturnStatement [674,687]
+                BooleanLiteral: false [681,686]
+        IfStatement [690,718]
+            InfixExpression [694,700]
+                SimpleName: n [694,695]
+                INFIX_EXPRESSION_OPERATOR: <= [696,698]
+                NumberLiteral: 3 [699,700]
+            ReturnStatement [706,718]
+                BooleanLiteral: true [713,717]
+        IfStatement [721,768]
+            InfixExpression [725,749]
+                InfixExpression [725,735]
+                    InfixExpression [725,730]
+                        SimpleName: n [725,726]
+                        INFIX_EXPRESSION_OPERATOR: % [727,728]
+                        NumberLiteral: 2 [729,730]
+                    INFIX_EXPRESSION_OPERATOR: == [731,733]
+                    NumberLiteral: 0 [734,735]
+                INFIX_EXPRESSION_OPERATOR: || [736,738]
+                InfixExpression [739,749]
+                    InfixExpression [739,744]
+                        SimpleName: n [739,740]
+                        INFIX_EXPRESSION_OPERATOR: % [741,742]
+                        NumberLiteral: 3 [743,744]
+                    INFIX_EXPRESSION_OPERATOR: == [745,747]
+                    NumberLiteral: 0 [748,749]
+            ReturnStatement [755,768]
+                BooleanLiteral: false [762,767]
+        ForStatement [771,866]
+            VariableDeclarationExpression [776,785]
+                PrimitiveType: int [776,779]
+                VariableDeclarationFragment [780,785]
+                    SimpleName: i [780,781]
+                    NumberLiteral: 5 [784,785]
+            InfixExpression [787,797]
+                InfixExpression [787,792]
+                    SimpleName: i [787,788]
+                    INFIX_EXPRESSION_OPERATOR: * [789,790]
+                    SimpleName: i [791,792]
+                INFIX_EXPRESSION_OPERATOR: <= [793,795]
+                SimpleName: n [796,797]
+            Assignment [799,805]
+                SimpleName: i [799,800]
+                ASSIGNMENT_OPERATOR: += [801,803]
+                NumberLiteral: 6 [804,805]
+            IfStatement [811,866]
+                InfixExpression [815,845]
+                    InfixExpression [815,825]
+                        InfixExpression [815,820]
+                            SimpleName: n [815,816]
+                            INFIX_EXPRESSION_OPERATOR: % [817,818]
+                            SimpleName: i [819,820]
+                        INFIX_EXPRESSION_OPERATOR: == [821,823]
+                        NumberLiteral: 0 [824,825]
+                    INFIX_EXPRESSION_OPERATOR: || [826,828]
+                    InfixExpression [829,845]
+                        InfixExpression [829,840]
+                            SimpleName: n [829,830]
+                            INFIX_EXPRESSION_OPERATOR: % [831,832]
+                            ParenthesizedExpression [833,840]
+                                InfixExpression [834,839]
+                                    SimpleName: i [834,835]
+                                    INFIX_EXPRESSION_OPERATOR: + [836,837]
+                                    NumberLiteral: 2 [838,839]
+                        INFIX_EXPRESSION_OPERATOR: == [841,843]
+                        NumberLiteral: 0 [844,845]
+                ReturnStatement [853,866]
+                    BooleanLiteral: false [860,865]
+        ReturnStatement [869,881]
+            BooleanLiteral: true [876,880]
+to
+ImplicitTypeDeclaration [0,768]
+at 1
+
+New cluster:
+MOVE from Block [36,767]
+------------
+===
+move-tree
+---
+ExpressionStatement [421,439]
+    Assignment [421,438]
+        QualifiedName: e.value [421,428]
+        ASSIGNMENT_OPERATOR: = [429,430]
+        QualifiedName: a.value [431,438]
+to
+Block [36,767]
+at 6
+
+New cluster:
+===
+insert-node
+---
+IfStatement [371,416]
+to
+Block [36,767]
+at 7
+------------
+===
+insert-node
+---
+IfStatement [371,416]
+to
+Block [36,767]
+at 7
+
+New cluster:
+===
+insert-node
+---
+IfStatement [419,464]
+to
+Block [36,767]
+at 8
+------------
+===
+insert-node
+---
+IfStatement [419,464]
+to
+Block [36,767]
+at 8
+
+New cluster:
+===
+insert-node
+---
+IfStatement [467,512]
+to
+Block [36,767]
+at 9
+------------
+===
+insert-node
+---
+IfStatement [467,512]
+to
+Block [36,767]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [375,392]
+    QualifiedName: b.value [375,382]
+    INFIX_EXPRESSION_OPERATOR: < [383,384]
+    QualifiedName: e.value [385,392]
+to
+IfStatement [371,416]
+at 0
+
+New cluster:
+MOVE from IfStatement [371,416]
+------------
+===
+move-tree
+---
+ExpressionStatement [520,538]
+    Assignment [520,537]
+        QualifiedName: e.value [520,527]
+        ASSIGNMENT_OPERATOR: = [528,529]
+        QualifiedName: b.value [530,537]
+to
+IfStatement [371,416]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [423,440]
+    QualifiedName: c.value [423,430]
+    INFIX_EXPRESSION_OPERATOR: < [431,432]
+    QualifiedName: e.value [433,440]
+to
+IfStatement [419,464]
+at 0
+
+New cluster:
+MOVE from IfStatement [419,464]
+------------
+===
+move-tree
+---
+ExpressionStatement [619,637]
+    Assignment [619,636]
+        QualifiedName: e.value [619,626]
+        ASSIGNMENT_OPERATOR: = [627,628]
+        QualifiedName: c.value [629,636]
+to
+IfStatement [419,464]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [471,488]
+    QualifiedName: d.value [471,478]
+    INFIX_EXPRESSION_OPERATOR: < [479,480]
+    QualifiedName: e.value [481,488]
+to
+IfStatement [467,512]
+at 0
+
+New cluster:
+MOVE from IfStatement [467,512]
+------------
+===
+move-tree
+---
+ExpressionStatement [653,671]
+    Assignment [653,670]
+        QualifiedName: e.value [653,660]
+        ASSIGNMENT_OPERATOR: = [661,662]
+        QualifiedName: d.value [663,670]
+to
+IfStatement [467,512]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [354,413]
+    InfixExpression [354,392]
+        InfixExpression [354,371]
+            QualifiedName: a.value [354,361]
+            INFIX_EXPRESSION_OPERATOR: < [362,363]
+            QualifiedName: b.value [364,371]
+        INFIX_EXPRESSION_OPERATOR: && [372,374]
+        InfixExpression [375,392]
+            QualifiedName: a.value [375,382]
+            INFIX_EXPRESSION_OPERATOR: < [383,384]
+            QualifiedName: c.value [385,392]
+    INFIX_EXPRESSION_OPERATOR: && [393,395]
+    InfixExpression [396,413]
+        QualifiedName: a.value [396,403]
+        INFIX_EXPRESSION_OPERATOR: < [404,405]
+        QualifiedName: d.value [406,413]
+
+New cluster:
+===
+delete-node
+---
+IfStatement [350,675]
+===
+------------
+===
+delete-node
+---
+IfStatement [350,675]
+===
+===
+delete-node
+---
+Block [514,542]
+===
+===
+delete-node
+---
+Block [647,675]
+===
+===
+delete-node
+---
+Block [415,443]
+===
+===
+delete-node
+---
+IfStatement [449,675]
+===
+===
+delete-node
+---
+Block [613,641]
+===
+===
+delete-node
+---
+IfStatement [548,675]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [453,512]
+    InfixExpression [453,491]
+        InfixExpression [453,470]
+            QualifiedName: b.value [453,460]
+            INFIX_EXPRESSION_OPERATOR: < [461,462]
+            QualifiedName: a.value [463,470]
+        INFIX_EXPRESSION_OPERATOR: && [471,473]
+        InfixExpression [474,491]
+            QualifiedName: b.value [474,481]
+            INFIX_EXPRESSION_OPERATOR: < [482,483]
+            QualifiedName: c.value [484,491]
+    INFIX_EXPRESSION_OPERATOR: && [492,494]
+    InfixExpression [495,512]
+        QualifiedName: b.value [495,502]
+        INFIX_EXPRESSION_OPERATOR: < [503,504]
+        QualifiedName: d.value [505,512]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [552,611]
+    InfixExpression [552,590]
+        InfixExpression [552,569]
+            QualifiedName: c.value [552,559]
+            INFIX_EXPRESSION_OPERATOR: < [560,561]
+            QualifiedName: a.value [562,569]
+        INFIX_EXPRESSION_OPERATOR: && [570,572]
+        InfixExpression [573,590]
+            QualifiedName: c.value [573,580]
+            INFIX_EXPRESSION_OPERATOR: < [581,582]
+            QualifiedName: b.value [583,590]
+    INFIX_EXPRESSION_OPERATOR: && [591,593]
+    InfixExpression [594,611]
+        QualifiedName: c.value [594,601]
+        INFIX_EXPRESSION_OPERATOR: < [602,603]
+        QualifiedName: d.value [604,611]
+

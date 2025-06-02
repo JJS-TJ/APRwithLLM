@@ -1,0 +1,127 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [279,427]
+to
+IfStatement [275,433]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [279,427]
+to
+IfStatement [275,433]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [404,406]
+to
+InfixExpression [279,427]
+at 1
+
+New cluster:
+MOVE from InfixExpression [279,427]
+------------
+===
+move-tree
+---
+InfixExpression [279,403]
+    InfixExpression [279,379]
+        InfixExpression [279,347]
+            InfixExpression [279,323]
+                InfixExpression [279,299]
+                    ArrayAccess [279,292]
+                        SimpleName: word [279,283]
+                        QualifiedName: i.value [284,291]
+                    INFIX_EXPRESSION_OPERATOR: == [293,295]
+                    CharacterLiteral: 'a' [296,299]
+                INFIX_EXPRESSION_OPERATOR: || [300,302]
+                InfixExpression [303,323]
+                    ArrayAccess [303,316]
+                        SimpleName: word [303,307]
+                        QualifiedName: i.value [308,315]
+                    INFIX_EXPRESSION_OPERATOR: == [317,319]
+                    CharacterLiteral: 'o' [320,323]
+            INFIX_EXPRESSION_OPERATOR: || [324,326]
+            InfixExpression [327,347]
+                ArrayAccess [327,340]
+                    SimpleName: word [327,331]
+                    QualifiedName: i.value [332,339]
+                INFIX_EXPRESSION_OPERATOR: == [341,343]
+                CharacterLiteral: 'e' [344,347]
+        INFIX_EXPRESSION_OPERATOR: || [348,350]
+        InfixExpression [359,379]
+            ArrayAccess [359,372]
+                SimpleName: word [359,363]
+                QualifiedName: i.value [364,371]
+            INFIX_EXPRESSION_OPERATOR: == [373,375]
+            CharacterLiteral: 'u' [376,379]
+    INFIX_EXPRESSION_OPERATOR: || [380,382]
+    InfixExpression [383,403]
+        ArrayAccess [383,396]
+            SimpleName: word [383,387]
+            QualifiedName: i.value [388,395]
+        INFIX_EXPRESSION_OPERATOR: == [397,399]
+        CharacterLiteral: 'y' [400,403]
+to
+InfixExpression [279,427]
+at 0
+
+New cluster:
+MOVE from InfixExpression [279,427]
+------------
+===
+move-tree
+---
+InfixExpression [383,403]
+    ArrayAccess [383,396]
+        SimpleName: word [383,387]
+        QualifiedName: i.value [388,395]
+    INFIX_EXPRESSION_OPERATOR: == [397,399]
+    CharacterLiteral: 'y' [400,403]
+to
+InfixExpression [279,427]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [383,403]
+    ArrayAccess [383,396]
+        SimpleName: word [383,387]
+        QualifiedName: i.value [388,395]
+    INFIX_EXPRESSION_OPERATOR: == [397,399]
+    CharacterLiteral: 'i' [400,403]
+to
+InfixExpression [279,403]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [533,554]
+    BooleanLiteral: true [537,541]
+    ReturnStatement [547,554]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [557,558]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [557,558]
+===
+

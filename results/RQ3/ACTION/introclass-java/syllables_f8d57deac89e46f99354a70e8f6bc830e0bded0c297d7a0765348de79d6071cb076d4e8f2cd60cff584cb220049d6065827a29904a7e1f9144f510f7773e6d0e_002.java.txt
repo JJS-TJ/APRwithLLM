@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 0 to 1
+------------
+===
+update-node
+---
+NumberLiteral: 0 [525,526]
+replace 0 by 1
+

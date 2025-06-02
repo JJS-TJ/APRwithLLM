@@ -1,0 +1,190 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+VariableDeclarationExpression [590,599]
+    PrimitiveType: int [590,593]
+    VariableDeclarationFragment [594,599]
+        SimpleName: j [594,595]
+        NumberLiteral: 0 [598,599]
+to
+ForStatement [642,800]
+at 0
+
+New cluster:
+===
+insert-node
+---
+SimpleName: j [610,611]
+to
+PostfixExpression [675,684]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: j [610,611]
+to
+PostfixExpression [675,684]
+at 0
+
+New cluster:
+===
+insert-node
+---
+SimpleName: j [602,603]
+to
+InfixExpression [661,672]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: j [602,603]
+to
+InfixExpression [661,672]
+at 0
+
+New cluster:
+UPDATE from 5 to 6
+------------
+===
+update-node
+---
+NumberLiteral: 5 [671,672]
+replace 5 by 6
+
+New cluster:
+===
+insert-node
+---
+BreakStatement [697,703]
+to
+Block [729,794]
+at 1
+------------
+===
+insert-node
+---
+BreakStatement [697,703]
+to
+Block [729,794]
+at 1
+
+New cluster:
+===
+insert-node
+---
+SimpleName: j [648,649]
+to
+ArrayAccess [712,727]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: j [648,649]
+to
+ArrayAccess [712,727]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+VariableDeclarationFragment [125,141]
+    SimpleName: j [125,126]
+    ClassInstanceCreation [129,141]
+        SimpleType [133,139]
+            SimpleName: IntObj [133,139]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [351,363]
+    Assignment [351,362]
+        QualifiedName: k.value [351,358]
+        ASSIGNMENT_OPERATOR: = [359,360]
+        NumberLiteral: 0 [361,362]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [366,378]
+    Assignment [366,377]
+        QualifiedName: j.value [366,373]
+        ASSIGNMENT_OPERATOR: = [374,375]
+        NumberLiteral: 0 [376,377]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+Assignment [647,658]
+    QualifiedName: j.value [647,654]
+    ASSIGNMENT_OPERATOR: = [655,656]
+    NumberLiteral: 0 [657,658]
+
+New cluster:
+===
+delete-node
+---
+QualifiedName: j.value [661,668]
+===
+------------
+===
+delete-node
+---
+QualifiedName: j.value [661,668]
+===
+
+New cluster:
+===
+delete-node
+---
+QualifiedName: j.value [675,682]
+===
+------------
+===
+delete-node
+---
+QualifiedName: j.value [675,682]
+===
+
+New cluster:
+===
+delete-node
+---
+QualifiedName: j.value [719,726]
+===
+------------
+===
+delete-node
+---
+QualifiedName: j.value [719,726]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [774,786]
+    Assignment [774,785]
+        QualifiedName: j.value [774,781]
+        ASSIGNMENT_OPERATOR: = [782,783]
+        NumberLiteral: 5 [784,785]
+

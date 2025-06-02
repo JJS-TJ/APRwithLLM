@@ -1,0 +1,223 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+VariableDeclarationStatement [368,482]
+    PrimitiveType: int [368,371]
+    VariableDeclarationFragment [372,481]
+        SimpleName: min [372,375]
+        MethodInvocation [378,481]
+            METHOD_INVOCATION_RECEIVER [378,382]
+                SimpleName: Math [378,382]
+            SimpleName: min [383,386]
+            METHOD_INVOCATION_ARGUMENTS [387,480]
+                MethodInvocation [387,422]
+                    METHOD_INVOCATION_RECEIVER [387,391]
+                        SimpleName: Math [387,391]
+                    SimpleName: min [392,395]
+                    METHOD_INVOCATION_ARGUMENTS [396,421]
+                        QualifiedName: first.value [396,407]
+                        QualifiedName: second.value [409,421]
+                MethodInvocation [445,480]
+                    METHOD_INVOCATION_RECEIVER [445,449]
+                        SimpleName: Math [445,449]
+                    SimpleName: min [450,453]
+                    METHOD_INVOCATION_ARGUMENTS [454,479]
+                        QualifiedName: third.value [454,465]
+                        QualifiedName: fourth.value [467,479]
+to
+Block [36,1131]
+at 6
+
+New cluster:
+MOVE from Block [36,1131]
+------------
+===
+move-tree
+---
+ExpressionStatement [471,536]
+    Assignment [471,535]
+        SimpleName: output [471,477]
+        ASSIGNMENT_OPERATOR: += [478,480]
+        ParenthesizedExpression [481,535]
+            MethodInvocation [482,534]
+                METHOD_INVOCATION_RECEIVER [482,488]
+                    SimpleName: String [482,488]
+                SimpleName: format [489,495]
+                METHOD_INVOCATION_ARGUMENTS [496,533]
+                    StringLiteral: "%d is the smallest \n " [496,520]
+                    QualifiedName: first.value [522,533]
+to
+Block [36,1131]
+at 7
+
+New cluster:
+===
+insert-node
+---
+SimpleName: min [536,539]
+to
+METHOD_INVOCATION_ARGUMENTS [496,533]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: min [536,539]
+to
+METHOD_INVOCATION_ARGUMENTS [496,533]
+at 1
+
+New cluster:
+===
+delete-node
+---
+QualifiedName: first.value [522,533]
+===
+------------
+===
+delete-node
+---
+QualifiedName: first.value [522,533]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [372,463]
+    InfixExpression [372,427]
+        InfixExpression [372,398]
+            QualifiedName: first.value [372,383]
+            INFIX_EXPRESSION_OPERATOR: < [384,385]
+            QualifiedName: second.value [386,398]
+        INFIX_EXPRESSION_OPERATOR: && [399,401]
+        InfixExpression [402,427]
+            QualifiedName: first.value [402,413]
+            INFIX_EXPRESSION_OPERATOR: < [414,415]
+            QualifiedName: third.value [416,427]
+    INFIX_EXPRESSION_OPERATOR: && [428,430]
+    InfixExpression [437,463]
+        QualifiedName: first.value [437,448]
+        INFIX_EXPRESSION_OPERATOR: < [449,450]
+        QualifiedName: fourth.value [451,463]
+
+New cluster:
+===
+delete-node
+---
+IfStatement [368,1101]
+===
+------------
+===
+delete-node
+---
+IfStatement [368,1101]
+===
+===
+delete-node
+---
+Block [465,540]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [546,1101]
+    InfixExpression [550,650]
+        InfixExpression [550,606]
+            InfixExpression [550,576]
+                QualifiedName: second.value [550,562]
+                INFIX_EXPRESSION_OPERATOR: < [563,564]
+                QualifiedName: first.value [565,576]
+            INFIX_EXPRESSION_OPERATOR: && [577,579]
+            InfixExpression [580,606]
+                QualifiedName: second.value [580,592]
+                INFIX_EXPRESSION_OPERATOR: < [593,594]
+                QualifiedName: third.value [595,606]
+        INFIX_EXPRESSION_OPERATOR: && [607,609]
+        InfixExpression [623,650]
+            QualifiedName: second.value [623,635]
+            INFIX_EXPRESSION_OPERATOR: < [636,637]
+            QualifiedName: fourth.value [638,650]
+    Block [652,728]
+        ExpressionStatement [658,724]
+            Assignment [658,723]
+                SimpleName: output [658,664]
+                ASSIGNMENT_OPERATOR: += [665,667]
+                ParenthesizedExpression [668,723]
+                    MethodInvocation [669,722]
+                        METHOD_INVOCATION_RECEIVER [669,675]
+                            SimpleName: String [669,675]
+                        SimpleName: format [676,682]
+                        METHOD_INVOCATION_ARGUMENTS [683,721]
+                            StringLiteral: "%d is the smallest \n " [683,707]
+                            QualifiedName: second.value [709,721]
+    IfStatement [734,1101]
+        InfixExpression [738,836]
+            InfixExpression [738,793]
+                InfixExpression [738,763]
+                    QualifiedName: third.value [738,749]
+                    INFIX_EXPRESSION_OPERATOR: < [750,751]
+                    QualifiedName: first.value [752,763]
+                INFIX_EXPRESSION_OPERATOR: && [764,766]
+                InfixExpression [767,793]
+                    QualifiedName: third.value [767,778]
+                    INFIX_EXPRESSION_OPERATOR: < [779,780]
+                    QualifiedName: second.value [781,793]
+            INFIX_EXPRESSION_OPERATOR: && [794,796]
+            InfixExpression [810,836]
+                QualifiedName: third.value [810,821]
+                INFIX_EXPRESSION_OPERATOR: < [822,823]
+                QualifiedName: fourth.value [824,836]
+        Block [838,913]
+            ExpressionStatement [844,909]
+                Assignment [844,908]
+                    SimpleName: output [844,850]
+                    ASSIGNMENT_OPERATOR: += [851,853]
+                    ParenthesizedExpression [854,908]
+                        MethodInvocation [855,907]
+                            METHOD_INVOCATION_RECEIVER [855,861]
+                                SimpleName: String [855,861]
+                            SimpleName: format [862,868]
+                            METHOD_INVOCATION_ARGUMENTS [869,906]
+                                StringLiteral: "%d is the smallest \n " [869,893]
+                                QualifiedName: third.value [895,906]
+        IfStatement [919,1101]
+            InfixExpression [923,1023]
+                InfixExpression [923,980]
+                    InfixExpression [923,949]
+                        QualifiedName: fourth.value [923,935]
+                        INFIX_EXPRESSION_OPERATOR: < [936,937]
+                        QualifiedName: first.value [938,949]
+                    INFIX_EXPRESSION_OPERATOR: && [950,952]
+                    InfixExpression [953,980]
+                        QualifiedName: fourth.value [953,965]
+                        INFIX_EXPRESSION_OPERATOR: < [966,967]
+                        QualifiedName: second.value [968,980]
+                INFIX_EXPRESSION_OPERATOR: && [981,983]
+                InfixExpression [997,1023]
+                    QualifiedName: fourth.value [997,1009]
+                    INFIX_EXPRESSION_OPERATOR: < [1010,1011]
+                    QualifiedName: third.value [1012,1023]
+            Block [1025,1101]
+                ExpressionStatement [1031,1097]
+                    Assignment [1031,1096]
+                        SimpleName: output [1031,1037]
+                        ASSIGNMENT_OPERATOR: += [1038,1040]
+                        ParenthesizedExpression [1041,1096]
+                            MethodInvocation [1042,1095]
+                                METHOD_INVOCATION_RECEIVER [1042,1048]
+                                    SimpleName: String [1042,1048]
+                                SimpleName: format [1049,1055]
+                                METHOD_INVOCATION_ARGUMENTS [1056,1094]
+                                    StringLiteral: "%d is the smallest \n " [1056,1080]
+                                    QualifiedName: fourth.value [1082,1094]
+
