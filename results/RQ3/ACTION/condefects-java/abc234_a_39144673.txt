@@ -1,0 +1,70 @@
+New cluster:
+MOVE from ReturnStatement [87,104]
+------------
+===
+move-tree
+---
+InfixExpression [96,103]
+    InfixExpression [96,101]
+        NumberLiteral: 2 [96,97]
+        INFIX_EXPRESSION_OPERATOR: + [97,98]
+        InfixExpression [98,101]
+            NumberLiteral: 2 [98,99]
+            INFIX_EXPRESSION_OPERATOR: * [99,100]
+            SimpleName: X [100,101]
+    INFIX_EXPRESSION_OPERATOR: + [101,102]
+    NumberLiteral: 3 [102,103]
+to
+ReturnStatement [87,104]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [94,97]
+    SimpleName: X [94,95]
+    INFIX_EXPRESSION_OPERATOR: * [95,96]
+    SimpleName: X [96,97]
+to
+InfixExpression [96,101]
+at 0
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 2 [96,97]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 2 [96,97]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [94,103]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: ^ [95,96]
+===
+===
+delete-node
+---
+SimpleName: X [94,95]
+===
+===
+delete-node
+---
+InfixExpression [94,103]
+===
+

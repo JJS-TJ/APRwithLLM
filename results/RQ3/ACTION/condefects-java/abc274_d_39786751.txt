@@ -1,0 +1,18 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [1213,1245]
+    MethodInvocation [1213,1244]
+        METHOD_INVOCATION_RECEIVER [1213,1223]
+            QualifiedName: System.out [1213,1223]
+        SimpleName: print [1224,1229]
+        METHOD_INVOCATION_ARGUMENTS [1230,1243]
+            ArrayAccess [1230,1243]
+                ArrayAccess [1230,1240]
+                    SimpleName: dpX [1230,1233]
+                    NumberLiteral: 10006 [1234,1239]
+                NumberLiteral: 3 [1241,1242]
+

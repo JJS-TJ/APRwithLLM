@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 6 to 7
+------------
+===
+update-node
+---
+NumberLiteral: 6 [872,873]
+replace 6 by 7
+

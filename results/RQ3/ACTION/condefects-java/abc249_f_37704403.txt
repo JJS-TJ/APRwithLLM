@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from Integer.MIN_VALUE to Long.MIN_VALUE
+------------
+===
+update-node
+---
+QualifiedName: Integer.MIN_VALUE [698,715]
+replace Integer.MIN_VALUE by Long.MIN_VALUE
+

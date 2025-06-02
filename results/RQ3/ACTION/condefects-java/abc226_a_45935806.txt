@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from double to int
+------------
+===
+update-node
+---
+PrimitiveType: double [257,263]
+replace double by int
+
+New cluster:
+UPDATE from doubleValue to intValue
+------------
+===
+update-node
+---
+SimpleName: doubleValue [312,323]
+replace doubleValue by intValue
+

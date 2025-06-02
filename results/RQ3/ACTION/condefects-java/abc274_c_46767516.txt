@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: N_max [811,816]
+to
+InfixExpression [807,820]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: N_max [811,816]
+to
+InfixExpression [807,820]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [811,820]
+    SimpleName: N_max [811,816]
+    INFIX_EXPRESSION_OPERATOR: - [817,818]
+    NumberLiteral: 1 [819,820]
+

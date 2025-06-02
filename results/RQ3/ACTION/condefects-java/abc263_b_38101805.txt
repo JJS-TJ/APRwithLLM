@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [584,594]
+    SimpleName: dp [584,586]
+    SimpleName: parent [587,593]
+to
+InfixExpression [584,594]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: parent [584,590]
+===
+------------
+===
+delete-node
+---
+SimpleName: parent [584,590]
+===
+

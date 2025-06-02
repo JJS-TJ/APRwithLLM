@@ -1,0 +1,33 @@
+New cluster:
+MOVE from InfixExpression [1133,1157]
+------------
+===
+move-tree
+---
+ArrayAccess [1148,1157]
+    ArrayAccess [1148,1154]
+        SimpleName: vis [1148,1151]
+        SimpleName: x [1152,1153]
+    SimpleName: y [1155,1156]
+to
+InfixExpression [1133,1157]
+at 2
+
+New cluster:
+===
+delete-node
+---
+PrefixExpression [1147,1157]
+===
+------------
+===
+delete-node
+---
+PrefixExpression [1147,1157]
+===
+===
+delete-node
+---
+PREFIX_EXPRESSION_OPERATOR: ! [1147,1148]
+===
+

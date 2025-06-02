@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: distance [751,759]
+to
+METHOD_INVOCATION_ARGUMENTS [751,763]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: distance [751,759]
+to
+METHOD_INVOCATION_ARGUMENTS [751,763]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [751,763]
+    SimpleName: distance [751,759]
+    INFIX_EXPRESSION_OPERATOR: - [760,761]
+    NumberLiteral: 1 [762,763]
+

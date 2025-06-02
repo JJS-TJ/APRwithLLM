@@ -1,0 +1,77 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [692,718]
+to
+METHOD_INVOCATION_ARGUMENTS [691,704]
+at 0
+------------
+===
+insert-node
+---
+ParenthesizedExpression [692,713]
+to
+InfixExpression [692,718]
+at 0
+===
+insert-node
+---
+SimpleName: MOD [715,718]
+to
+InfixExpression [692,718]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [707,708]
+to
+InfixExpression [693,712]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [714,715]
+to
+InfixExpression [692,718]
+at 1
+===
+insert-node
+---
+SimpleName: MOD [709,712]
+to
+InfixExpression [693,712]
+at 2
+===
+insert-node
+---
+InfixExpression [693,712]
+to
+ParenthesizedExpression [692,713]
+at 0
+===
+insert-node
+---
+InfixExpression [692,718]
+to
+METHOD_INVOCATION_ARGUMENTS [691,704]
+at 0
+
+New cluster:
+MOVE from InfixExpression [693,712]
+------------
+===
+move-tree
+---
+InfixExpression [691,704]
+    ArrayAccess [691,696]
+        SimpleName: es [691,693]
+        NumberLiteral: 0 [694,695]
+    INFIX_EXPRESSION_OPERATOR: - [697,698]
+    ArrayAccess [699,704]
+        SimpleName: es [699,701]
+        NumberLiteral: 1 [702,703]
+to
+InfixExpression [693,712]
+at 0
+

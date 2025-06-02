@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [675,679]
+    SimpleName: a [675,676]
+    SimpleName: i [677,678]
+to
+InfixExpression [675,682]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: i [675,676]
+===
+------------
+===
+delete-node
+---
+SimpleName: i [675,676]
+===
+

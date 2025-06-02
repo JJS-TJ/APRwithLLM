@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from judge to judge2
+------------
+===
+update-node
+---
+SimpleName: judge [813,818]
+replace judge by judge2
+

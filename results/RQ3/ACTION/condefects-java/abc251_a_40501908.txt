@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from p to res
+------------
+===
+update-node
+---
+SimpleName: p [319,320]
+replace p by res
+

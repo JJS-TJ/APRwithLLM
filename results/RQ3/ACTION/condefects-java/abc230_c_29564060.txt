@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from lowerbound1 to lowerbound2
+------------
+===
+update-node
+---
+SimpleName: lowerbound1 [1008,1019]
+replace lowerbound1 by lowerbound2
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 'T' to 'U'
+------------
+===
+update-node
+---
+CharacterLiteral: 'T' [1980,1983]
+replace 'T' by 'U'
+

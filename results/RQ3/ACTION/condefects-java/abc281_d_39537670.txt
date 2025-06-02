@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from d to k
+------------
+===
+update-node
+---
+SimpleName: d [1305,1306]
+replace d by k
+

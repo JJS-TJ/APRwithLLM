@@ -1,0 +1,14 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [380,404]
+    MethodInvocation [380,403]
+        METHOD_INVOCATION_RECEIVER [380,390]
+            QualifiedName: System.out [380,390]
+        SimpleName: println [391,398]
+        METHOD_INVOCATION_ARGUMENTS [399,402]
+            SimpleName: cnt [399,402]
+

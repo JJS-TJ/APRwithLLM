@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from i to j
+------------
+===
+update-node
+---
+SimpleName: i [339,340]
+replace i by j
+

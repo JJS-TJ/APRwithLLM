@@ -1,0 +1,90 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [771,779]
+    ArrayAccess [771,776]
+        SimpleName: dp [771,773]
+        SimpleName: i [774,775]
+    NumberLiteral: 0 [777,778]
+to
+Assignment [771,794]
+at 0
+
+New cluster:
+===
+insert-node
+---
+MethodInvocation [782,814]
+to
+Assignment [771,794]
+at 3
+------------
+===
+insert-node
+---
+SimpleName: max [787,790]
+to
+MethodInvocation [782,814]
+at 1
+===
+insert-node
+---
+MethodInvocation [782,814]
+to
+Assignment [771,794]
+at 3
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [791,813]
+to
+MethodInvocation [782,814]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [782,786]
+    SimpleName: Math [782,786]
+to
+MethodInvocation [782,814]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [791,813]
+------------
+===
+move-tree
+---
+ArrayAccess [771,779]
+    ArrayAccess [771,776]
+        SimpleName: dp [771,773]
+        SimpleName: i [774,775]
+    NumberLiteral: 0 [777,778]
+to
+METHOD_INVOCATION_ARGUMENTS [791,813]
+at 0
+===
+move-tree
+---
+ArrayAccess [782,794]
+    ArrayAccess [782,789]
+        SimpleName: dp [782,784]
+        InfixExpression [785,788]
+            SimpleName: i [785,786]
+            INFIX_EXPRESSION_OPERATOR: - [786,787]
+            NumberLiteral: 1 [787,788]
+    InfixExpression [790,793]
+        SimpleName: j [790,791]
+        INFIX_EXPRESSION_OPERATOR: - [791,792]
+        NumberLiteral: 1 [792,793]
+to
+METHOD_INVOCATION_ARGUMENTS [791,813]
+at 1
+

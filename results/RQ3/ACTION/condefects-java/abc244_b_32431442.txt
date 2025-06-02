@@ -1,0 +1,21 @@
+New cluster:
+MOVE from Block [89,798]
+------------
+===
+move-tree
+---
+ExpressionStatement [763,791]
+    MethodInvocation [763,790]
+        METHOD_INVOCATION_RECEIVER [763,773]
+            QualifiedName: System.out [763,773]
+        SimpleName: println [774,781]
+        METHOD_INVOCATION_ARGUMENTS [782,789]
+            InfixExpression [782,789]
+                SimpleName: X [782,783]
+                INFIX_EXPRESSION_OPERATOR: + [783,784]
+                StringLiteral: " " [784,787]
+                SimpleName: Y [788,789]
+to
+Block [89,798]
+at 8
+

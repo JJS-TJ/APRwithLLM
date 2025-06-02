@@ -1,0 +1,143 @@
+New cluster:
+MOVE from IfStatement [250,376]
+------------
+===
+move-tree
+---
+InfixExpression [254,275]
+    SimpleName: N [254,255]
+    INFIX_EXPRESSION_OPERATOR: >= [256,258]
+    InfixExpression [259,275]
+        ParenthesizedExpression [259,272]
+            InfixExpression [260,271]
+                SimpleName: result [260,266]
+                INFIX_EXPRESSION_OPERATOR: * [267,268]
+                PrefixExpression [269,271]
+                    PREFIX_EXPRESSION_OPERATOR: - [269,270]
+                    NumberLiteral: 1 [270,271]
+        INFIX_EXPRESSION_OPERATOR: - [273,274]
+        NumberLiteral: 1 [274,275]
+to
+IfStatement [250,376]
+at 0
+===
+move-tree
+---
+InfixExpression [279,292]
+    SimpleName: N [279,280]
+    INFIX_EXPRESSION_OPERATOR: <= [281,283]
+    InfixExpression [284,292]
+        SimpleName: result [284,290]
+        INFIX_EXPRESSION_OPERATOR: - [290,291]
+        NumberLiteral: 1 [291,292]
+to
+InfixExpression [254,275]
+at 3
+
+New cluster:
+MOVE from InfixExpression [254,275]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: >= [256,258]
+to
+InfixExpression [254,275]
+at 2
+
+New cluster:
+MOVE from InfixExpression [259,275]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [259,272]
+    InfixExpression [260,271]
+        SimpleName: result [260,266]
+        INFIX_EXPRESSION_OPERATOR: * [267,268]
+        PrefixExpression [269,271]
+            PREFIX_EXPRESSION_OPERATOR: - [269,270]
+            NumberLiteral: 1 [270,271]
+to
+InfixExpression [259,275]
+at 1
+
+New cluster:
+UPDATE from >= to &&
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [256,258]
+replace >= by &&
+
+New cluster:
+===
+insert-node
+---
+SimpleName: N [254,255]
+to
+InfixExpression [259,275]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: N [254,255]
+to
+InfixExpression [259,275]
+at 0
+
+New cluster:
+UPDATE from - to >=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: - [273,274]
+replace - by >=
+
+New cluster:
+===
+delete-node
+---
+SimpleName: N [254,255]
+===
+------------
+===
+delete-node
+---
+SimpleName: N [254,255]
+===
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [274,275]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [274,275]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [254,292]
+===
+------------
+===
+delete-node
+---
+InfixExpression [254,292]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: && [276,278]
+===
+

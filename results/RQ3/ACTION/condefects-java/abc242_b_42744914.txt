@@ -1,0 +1,12 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [356,358]
+    SimpleName: ss [356,358]
+to
+MethodInvocation [344,357]
+at 2
+

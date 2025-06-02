@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from skill to next_skill
+------------
+===
+update-node
+---
+SimpleName: skill [1227,1232]
+replace skill by next_skill
+

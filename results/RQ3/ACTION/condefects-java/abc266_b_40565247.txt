@@ -1,0 +1,111 @@
+New cluster:
+MOVE from Assignment [360,384]
+------------
+===
+move-tree
+---
+InfixExpression [366,377]
+    InfixExpression [366,373]
+        SimpleName: sub [366,369]
+        INFIX_EXPRESSION_OPERATOR: / [369,370]
+        SimpleName: big [370,373]
+    INFIX_EXPRESSION_OPERATOR: - [374,375]
+    NumberLiteral: 1 [376,377]
+to
+Assignment [360,384]
+at 2
+
+New cluster:
+MOVE from InfixExpression [366,377]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [365,378]
+    InfixExpression [366,377]
+        InfixExpression [366,373]
+            SimpleName: sub [366,369]
+            INFIX_EXPRESSION_OPERATOR: / [369,370]
+            SimpleName: big [370,373]
+        INFIX_EXPRESSION_OPERATOR: - [374,375]
+        NumberLiteral: 1 [376,377]
+to
+InfixExpression [366,377]
+at 0
+
+New cluster:
+UPDATE from - to *
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: - [374,375]
+replace - by *
+
+New cluster:
+===
+insert-node
+---
+SimpleName: big [377,380]
+to
+InfixExpression [366,377]
+at 3
+------------
+===
+insert-node
+---
+SimpleName: big [377,380]
+to
+InfixExpression [366,377]
+at 3
+
+New cluster:
+MOVE from ParenthesizedExpression [365,378]
+------------
+===
+move-tree
+---
+InfixExpression [366,373]
+    SimpleName: sub [366,369]
+    INFIX_EXPRESSION_OPERATOR: / [369,370]
+    SimpleName: big [370,373]
+to
+ParenthesizedExpression [365,378]
+at 0
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [376,377]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [376,377]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [365,384]
+===
+------------
+===
+delete-node
+---
+InfixExpression [365,384]
+===
+===
+delete-node
+---
+SimpleName: big [381,384]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: * [379,380]
+===
+

@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+ReturnStatement [1060,1067]
+to
+Block [1008,1080]
+at 1
+------------
+===
+insert-node
+---
+ReturnStatement [1060,1067]
+to
+Block [1008,1080]
+at 1
+
+New cluster:
+===
+delete-node
+---
+BreakStatement [1060,1066]
+===
+------------
+===
+delete-node
+---
+BreakStatement [1060,1066]
+===
+

@@ -1,0 +1,14 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [495,518]
+    MethodInvocation [495,517]
+        METHOD_INVOCATION_RECEIVER [495,505]
+            QualifiedName: System.out [495,505]
+        SimpleName: print [506,511]
+        METHOD_INVOCATION_ARGUMENTS [512,516]
+            SimpleName: koma [512,516]
+

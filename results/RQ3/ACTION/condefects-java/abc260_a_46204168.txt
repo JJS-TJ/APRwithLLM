@@ -1,0 +1,23 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [739,746]
+    SimpleName: work [739,743]
+    NumberLiteral: 0 [744,745]
+to
+METHOD_INVOCATION_ARGUMENTS [739,741]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+PrefixExpression [739,741]
+    PREFIX_EXPRESSION_OPERATOR: - [739,740]
+    NumberLiteral: 1 [740,741]
+

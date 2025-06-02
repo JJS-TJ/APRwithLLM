@@ -1,0 +1,80 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [215,261]
+to
+IfStatement [212,302]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [237,239]
+to
+InfixExpression [215,261]
+at 1
+===
+insert-node
+---
+InfixExpression [215,261]
+to
+IfStatement [212,302]
+at 0
+
+New cluster:
+MOVE from InfixExpression [215,261]
+------------
+===
+move-tree
+---
+InfixExpression [215,237]
+    MethodInvocation [215,234]
+        METHOD_INVOCATION_RECEIVER [215,219]
+            SimpleName: Math [215,219]
+        SimpleName: abs [220,223]
+        METHOD_INVOCATION_ARGUMENTS [224,233]
+            InfixExpression [224,233]
+                InfixExpression [224,228]
+                    SimpleName: a [224,225]
+                    INFIX_EXPRESSION_OPERATOR: % [225,226]
+                    NumberLiteral: 10 [226,228]
+                INFIX_EXPRESSION_OPERATOR: - [228,229]
+                InfixExpression [229,233]
+                    SimpleName: b [229,230]
+                    INFIX_EXPRESSION_OPERATOR: % [230,231]
+                    NumberLiteral: 10 [231,233]
+    INFIX_EXPRESSION_OPERATOR: == [234,236]
+    NumberLiteral: 1 [236,237]
+to
+InfixExpression [215,261]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [239,261]
+    MethodInvocation [239,258]
+        METHOD_INVOCATION_RECEIVER [239,243]
+            SimpleName: Math [239,243]
+        SimpleName: abs [244,247]
+        METHOD_INVOCATION_ARGUMENTS [248,257]
+            InfixExpression [248,257]
+                InfixExpression [248,252]
+                    SimpleName: a [248,249]
+                    INFIX_EXPRESSION_OPERATOR: % [249,250]
+                    NumberLiteral: 10 [250,252]
+                INFIX_EXPRESSION_OPERATOR: - [252,253]
+                InfixExpression [253,257]
+                    SimpleName: b [253,254]
+                    INFIX_EXPRESSION_OPERATOR: % [254,255]
+                    NumberLiteral: 10 [255,257]
+    INFIX_EXPRESSION_OPERATOR: == [258,260]
+    NumberLiteral: 9 [260,261]
+to
+InfixExpression [215,261]
+at 2
+

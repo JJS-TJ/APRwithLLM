@@ -1,0 +1,106 @@
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [446,470]
+------------
+===
+move-tree
+---
+InfixExpression [455,464]
+    InfixExpression [455,460]
+        SimpleName: n [455,456]
+        INFIX_EXPRESSION_OPERATOR: / [457,458]
+        SimpleName: c [459,460]
+    INFIX_EXPRESSION_OPERATOR: + [461,462]
+    NumberLiteral: 2 [463,464]
+to
+METHOD_INVOCATION_ARGUMENTS [446,470]
+at 0
+
+New cluster:
+MOVE from InfixExpression [455,464]
+------------
+===
+move-tree
+---
+MethodInvocation [446,465]
+    METHOD_INVOCATION_RECEIVER [446,447]
+        SimpleName: a [446,447]
+    SimpleName: charAt [448,454]
+    METHOD_INVOCATION_ARGUMENTS [455,464]
+        InfixExpression [455,464]
+            InfixExpression [455,460]
+                SimpleName: n [455,456]
+                INFIX_EXPRESSION_OPERATOR: / [457,458]
+                SimpleName: c [459,460]
+            INFIX_EXPRESSION_OPERATOR: + [461,462]
+            NumberLiteral: 2 [463,464]
+to
+InfixExpression [455,464]
+at 0
+
+New cluster:
+===
+insert-node
+---
+StringLiteral: "" [464,466]
+to
+InfixExpression [455,464]
+at 3
+------------
+===
+insert-node
+---
+StringLiteral: "" [464,466]
+to
+InfixExpression [455,464]
+at 3
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [455,464]
+------------
+===
+move-tree
+---
+InfixExpression [455,460]
+    SimpleName: n [455,456]
+    INFIX_EXPRESSION_OPERATOR: / [457,458]
+    SimpleName: c [459,460]
+to
+METHOD_INVOCATION_ARGUMENTS [455,464]
+at 0
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 2 [463,464]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 2 [463,464]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [446,470]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: + [466,467]
+===
+===
+delete-node
+---
+StringLiteral: "" [468,470]
+===
+===
+delete-node
+---
+InfixExpression [446,470]
+===
+

@@ -1,0 +1,39 @@
+New cluster:
+UPDATE from matches to contains
+------------
+===
+update-node
+---
+SimpleName: matches [195,202]
+replace matches by contains
+
+New cluster:
+===
+insert-node
+---
+SimpleName: t [204,205]
+to
+METHOD_INVOCATION_ARGUMENTS [203,211]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: t [204,205]
+to
+METHOD_INVOCATION_ARGUMENTS [203,211]
+at 0
+
+New cluster:
+===
+delete-node
+---
+StringLiteral: ".*t.*$" [203,211]
+===
+------------
+===
+delete-node
+---
+StringLiteral: ".*t.*$" [203,211]
+===
+

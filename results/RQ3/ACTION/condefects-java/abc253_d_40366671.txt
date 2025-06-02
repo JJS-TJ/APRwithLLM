@@ -1,0 +1,54 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [4714,4729]
+to
+VariableDeclarationFragment [4711,4716]
+at 1
+------------
+===
+insert-node
+---
+InfixExpression [4714,4729]
+to
+VariableDeclarationFragment [4711,4716]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: / [4718,4719]
+to
+InfixExpression [4714,4729]
+at 1
+
+New cluster:
+MOVE from InfixExpression [4714,4729]
+------------
+===
+move-tree
+---
+InfixExpression [4713,4716]
+    SimpleName: a [4713,4714]
+    INFIX_EXPRESSION_OPERATOR: * [4714,4715]
+    SimpleName: b [4715,4716]
+to
+InfixExpression [4714,4729]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [4719,4729]
+    MethodInvocation [4720,4728]
+        SimpleName: gcd [4720,4723]
+        METHOD_INVOCATION_ARGUMENTS [4724,4727]
+            SimpleName: a [4724,4725]
+            SimpleName: b [4726,4727]
+to
+InfixExpression [4714,4729]
+at 2
+

@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1515,1518]
+    SimpleName: N [1515,1516]
+    INFIX_EXPRESSION_OPERATOR: + [1516,1517]
+    NumberLiteral: 1 [1517,1518]
+to
+InfixExpression [1510,1516]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: N [1515,1516]
+===
+------------
+===
+delete-node
+---
+SimpleName: N [1515,1516]
+===
+

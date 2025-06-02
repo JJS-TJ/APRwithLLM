@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from a to b
+------------
+===
+update-node
+---
+SimpleName: a [378,379]
+replace a by b
+

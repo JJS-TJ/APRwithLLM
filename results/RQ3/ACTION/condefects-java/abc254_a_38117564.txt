@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+StringLiteral: "0" [252,255]
+to
+InfixExpression [252,257]
+at 0
+------------
+===
+insert-node
+---
+StringLiteral: "0" [252,255]
+to
+InfixExpression [252,257]
+at 0
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [252,253]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [252,253]
+===
+

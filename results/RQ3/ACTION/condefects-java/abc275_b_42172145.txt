@@ -1,0 +1,87 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [660,689]
+to
+Assignment [654,683]
+at 2
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [684,685]
+to
+InfixExpression [660,689]
+at 1
+===
+insert-node
+---
+SimpleName: MOD [686,689]
+to
+InfixExpression [660,689]
+at 2
+===
+insert-node
+---
+InfixExpression [660,689]
+to
+Assignment [654,683]
+at 2
+
+New cluster:
+MOVE from InfixExpression [660,689]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [660,677]
+    InfixExpression [661,676]
+        SimpleName: multi1 [661,667]
+        INFIX_EXPRESSION_OPERATOR: - [668,669]
+        SimpleName: multi2 [670,676]
+to
+InfixExpression [660,689]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [660,677]
+------------
+===
+move-tree
+---
+InfixExpression [660,683]
+    ParenthesizedExpression [660,677]
+        InfixExpression [661,676]
+            SimpleName: multi1 [661,667]
+            INFIX_EXPRESSION_OPERATOR: - [668,669]
+            SimpleName: multi2 [670,676]
+    INFIX_EXPRESSION_OPERATOR: % [678,679]
+    SimpleName: MOD [680,683]
+to
+ParenthesizedExpression [660,677]
+at 0
+
+New cluster:
+MOVE from InfixExpression [660,683]
+------------
+===
+move-tree
+---
+InfixExpression [661,676]
+    SimpleName: multi1 [661,667]
+    INFIX_EXPRESSION_OPERATOR: - [668,669]
+    SimpleName: multi2 [670,676]
+to
+InfixExpression [660,683]
+at 0
+
+New cluster:
+UPDATE from % to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: % [678,679]
+replace % by +
+

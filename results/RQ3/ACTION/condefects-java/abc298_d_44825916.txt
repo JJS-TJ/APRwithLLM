@@ -1,0 +1,219 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1950,2013]
+to
+Assignment [1944,2007]
+at 2
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [2008,2009]
+to
+InfixExpression [1950,2013]
+at 1
+===
+insert-node
+---
+SimpleName: mod [2010,2013]
+to
+InfixExpression [1950,2013]
+at 2
+===
+insert-node
+---
+InfixExpression [1950,2013]
+to
+Assignment [1944,2007]
+at 2
+
+New cluster:
+MOVE from InfixExpression [1950,2013]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [1950,2001]
+    InfixExpression [1951,2000]
+        InfixExpression [1951,1994]
+            SimpleName: cur [1951,1954]
+            INFIX_EXPRESSION_OPERATOR: - [1955,1956]
+            ParenthesizedExpression [1957,1994]
+                InfixExpression [1958,1993]
+                    SimpleName: fv [1958,1960]
+                    INFIX_EXPRESSION_OPERATOR: * [1961,1962]
+                    MethodInvocation [1963,1993]
+                        SimpleName: powWithMod [1963,1973]
+                        METHOD_INVOCATION_ARGUMENTS [1974,1992]
+                            NumberLiteral: 10 [1974,1976]
+                            MethodInvocation [1978,1987]
+                                METHOD_INVOCATION_RECEIVER [1978,1980]
+                                    SimpleName: dq [1978,1980]
+                                SimpleName: size [1981,1985]
+                            SimpleName: mod [1989,1992]
+        INFIX_EXPRESSION_OPERATOR: + [1995,1996]
+        SimpleName: mod [1997,2000]
+to
+InfixExpression [1950,2013]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [1950,2001]
+------------
+===
+move-tree
+---
+InfixExpression [1950,2007]
+    ParenthesizedExpression [1950,2001]
+        InfixExpression [1951,2000]
+            InfixExpression [1951,1994]
+                SimpleName: cur [1951,1954]
+                INFIX_EXPRESSION_OPERATOR: - [1955,1956]
+                ParenthesizedExpression [1957,1994]
+                    InfixExpression [1958,1993]
+                        SimpleName: fv [1958,1960]
+                        INFIX_EXPRESSION_OPERATOR: * [1961,1962]
+                        MethodInvocation [1963,1993]
+                            SimpleName: powWithMod [1963,1973]
+                            METHOD_INVOCATION_ARGUMENTS [1974,1992]
+                                NumberLiteral: 10 [1974,1976]
+                                MethodInvocation [1978,1987]
+                                    METHOD_INVOCATION_RECEIVER [1978,1980]
+                                        SimpleName: dq [1978,1980]
+                                    SimpleName: size [1981,1985]
+                                SimpleName: mod [1989,1992]
+            INFIX_EXPRESSION_OPERATOR: + [1995,1996]
+            SimpleName: mod [1997,2000]
+    INFIX_EXPRESSION_OPERATOR: % [2002,2003]
+    SimpleName: mod [2004,2007]
+to
+ParenthesizedExpression [1950,2001]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1950,2007]
+------------
+===
+move-tree
+---
+InfixExpression [1951,2000]
+    InfixExpression [1951,1994]
+        SimpleName: cur [1951,1954]
+        INFIX_EXPRESSION_OPERATOR: - [1955,1956]
+        ParenthesizedExpression [1957,1994]
+            InfixExpression [1958,1993]
+                SimpleName: fv [1958,1960]
+                INFIX_EXPRESSION_OPERATOR: * [1961,1962]
+                MethodInvocation [1963,1993]
+                    SimpleName: powWithMod [1963,1973]
+                    METHOD_INVOCATION_ARGUMENTS [1974,1992]
+                        NumberLiteral: 10 [1974,1976]
+                        MethodInvocation [1978,1987]
+                            METHOD_INVOCATION_RECEIVER [1978,1980]
+                                SimpleName: dq [1978,1980]
+                            SimpleName: size [1981,1985]
+                        SimpleName: mod [1989,1992]
+    INFIX_EXPRESSION_OPERATOR: + [1995,1996]
+    SimpleName: mod [1997,2000]
+to
+InfixExpression [1950,2007]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1951,2000]
+------------
+===
+move-tree
+---
+InfixExpression [1951,1994]
+    SimpleName: cur [1951,1954]
+    INFIX_EXPRESSION_OPERATOR: - [1955,1956]
+    ParenthesizedExpression [1957,1994]
+        InfixExpression [1958,1993]
+            SimpleName: fv [1958,1960]
+            INFIX_EXPRESSION_OPERATOR: * [1961,1962]
+            MethodInvocation [1963,1993]
+                SimpleName: powWithMod [1963,1973]
+                METHOD_INVOCATION_ARGUMENTS [1974,1992]
+                    NumberLiteral: 10 [1974,1976]
+                    MethodInvocation [1978,1987]
+                        METHOD_INVOCATION_RECEIVER [1978,1980]
+                            SimpleName: dq [1978,1980]
+                        SimpleName: size [1981,1985]
+                    SimpleName: mod [1989,1992]
+to
+InfixExpression [1951,2000]
+at 2
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: + [1995,1996]
+to
+InfixExpression [1951,2000]
+at 2
+
+New cluster:
+UPDATE from % to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: % [2002,2003]
+replace % by +
+
+New cluster:
+UPDATE from mod to cur
+------------
+===
+update-node
+---
+SimpleName: mod [1997,2000]
+replace mod by cur
+
+New cluster:
+UPDATE from + to -
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1995,1996]
+replace + by -
+
+New cluster:
+MOVE from InfixExpression [1951,1994]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: - [1955,1956]
+to
+InfixExpression [1951,1994]
+at 2
+===
+move-tree
+---
+SimpleName: cur [1951,1954]
+to
+InfixExpression [1951,1994]
+at 2
+
+New cluster:
+UPDATE from - to %
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: - [1955,1956]
+replace - by %
+
+New cluster:
+UPDATE from cur to mod
+------------
+===
+update-node
+---
+SimpleName: cur [1951,1954]
+replace cur by mod
+

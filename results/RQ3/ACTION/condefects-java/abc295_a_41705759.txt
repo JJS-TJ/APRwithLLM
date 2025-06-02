@@ -1,0 +1,29 @@
+New cluster:
+UPDATE from contains to equals
+------------
+===
+update-node
+---
+SimpleName: contains [342,350]
+replace contains by equals
+===
+update-node
+---
+SimpleName: contains [384,392]
+replace contains by equals
+===
+update-node
+---
+SimpleName: contains [363,371]
+replace contains by equals
+===
+update-node
+---
+SimpleName: contains [406,414]
+replace contains by equals
+===
+update-node
+---
+SimpleName: contains [427,435]
+replace contains by equals
+

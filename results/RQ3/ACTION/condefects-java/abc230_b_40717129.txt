@@ -1,0 +1,79 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [445,468]
+to
+IfStatement [441,552]
+at 0
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [445,456]
+to
+MethodInvocation [445,468]
+at 0
+===
+insert-node
+---
+SimpleName: equals [457,463]
+to
+MethodInvocation [445,468]
+at 1
+===
+insert-node
+---
+MethodInvocation [445,468]
+to
+IfStatement [441,552]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [464,467]
+    StringLiteral: "o" [464,467]
+to
+MethodInvocation [445,468]
+at 2
+
+New cluster:
+MOVE from METHOD_INVOCATION_RECEIVER [445,456]
+------------
+===
+move-tree
+---
+ArrayAccess [445,456]
+    SimpleName: strArray [445,453]
+    NumberLiteral: 0 [454,455]
+to
+METHOD_INVOCATION_RECEIVER [445,456]
+at 0
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [445,463]
+===
+------------
+===
+delete-node
+---
+StringLiteral: "o" [460,463]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: == [457,459]
+===
+===
+delete-node
+---
+InfixExpression [445,463]
+===
+

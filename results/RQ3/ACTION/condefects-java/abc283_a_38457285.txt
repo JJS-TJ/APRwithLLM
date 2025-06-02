@@ -1,0 +1,54 @@
+New cluster:
+===
+insert-node
+---
+CastExpression [197,217]
+to
+METHOD_INVOCATION_ARGUMENTS [197,214]
+at 0
+------------
+===
+insert-node
+---
+CastExpression [197,217]
+to
+METHOD_INVOCATION_ARGUMENTS [197,214]
+at 0
+===
+insert-node
+---
+PrimitiveType: long [198,202]
+to
+CastExpression [197,217]
+at 0
+
+New cluster:
+MOVE from CastExpression [197,217]
+------------
+===
+move-tree
+---
+MethodInvocation [197,211]
+    METHOD_INVOCATION_RECEIVER [197,201]
+        SimpleName: Math [197,201]
+    SimpleName: pow [202,205]
+    METHOD_INVOCATION_ARGUMENTS [206,210]
+        SimpleName: a [206,207]
+        SimpleName: b [209,210]
+to
+CastExpression [197,217]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [213,214]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [213,214]
+===
+

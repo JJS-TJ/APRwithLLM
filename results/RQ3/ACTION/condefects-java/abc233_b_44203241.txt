@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [346,368]
+    MethodInvocation [346,367]
+        METHOD_INVOCATION_RECEIVER [346,356]
+            QualifiedName: System.out [346,356]
+        SimpleName: println [357,364]
+        METHOD_INVOCATION_ARGUMENTS [365,366]
+            SimpleName: L [365,366]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [377,399]
+    MethodInvocation [377,398]
+        METHOD_INVOCATION_RECEIVER [377,387]
+            QualifiedName: System.out [377,387]
+        SimpleName: println [388,395]
+        METHOD_INVOCATION_ARGUMENTS [396,397]
+            SimpleName: R [396,397]
+

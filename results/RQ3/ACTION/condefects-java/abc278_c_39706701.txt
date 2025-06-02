@@ -1,0 +1,11 @@
+New cluster:
+MOVE from ClassInstanceCreation [567,580]
+------------
+===
+move-tree
+---
+SimpleName: b [576,577]
+to
+ClassInstanceCreation [567,580]
+at 2
+

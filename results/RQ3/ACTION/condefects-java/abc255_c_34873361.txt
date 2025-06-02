@@ -1,0 +1,121 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [821,842]
+to
+METHOD_INVOCATION_ARGUMENTS [821,849]
+at 0
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [830,841]
+to
+MethodInvocation [821,842]
+at 2
+===
+insert-node
+---
+MethodInvocation [821,842]
+to
+METHOD_INVOCATION_ARGUMENTS [821,849]
+at 0
+===
+insert-node
+---
+SimpleName: abs [826,829]
+to
+MethodInvocation [821,842]
+at 1
+
+New cluster:
+===
+insert-node
+---
+MethodInvocation [844,869]
+to
+METHOD_INVOCATION_ARGUMENTS [821,849]
+at 1
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [853,868]
+to
+MethodInvocation [844,869]
+at 2
+===
+insert-node
+---
+MethodInvocation [844,869]
+to
+METHOD_INVOCATION_ARGUMENTS [821,849]
+at 1
+===
+insert-node
+---
+SimpleName: abs [849,852]
+to
+MethodInvocation [844,869]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [821,825]
+    SimpleName: Math [821,825]
+to
+MethodInvocation [821,842]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [844,848]
+    SimpleName: Math [844,848]
+to
+MethodInvocation [844,869]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [830,841]
+------------
+===
+move-tree
+---
+InfixExpression [821,832]
+    ParenthesizedExpression [821,828]
+        InfixExpression [822,827]
+            SimpleName: X [822,823]
+            INFIX_EXPRESSION_OPERATOR: - [824,825]
+            SimpleName: A [826,827]
+    INFIX_EXPRESSION_OPERATOR: % [829,830]
+    SimpleName: D [831,832]
+to
+METHOD_INVOCATION_ARGUMENTS [830,841]
+at 0
+===
+move-tree
+---
+InfixExpression [834,849]
+    SimpleName: D [834,835]
+    INFIX_EXPRESSION_OPERATOR: - [836,837]
+    InfixExpression [838,849]
+        ParenthesizedExpression [838,845]
+            InfixExpression [839,844]
+                SimpleName: X [839,840]
+                INFIX_EXPRESSION_OPERATOR: - [841,842]
+                SimpleName: A [843,844]
+        INFIX_EXPRESSION_OPERATOR: % [846,847]
+        SimpleName: D [848,849]
+to
+METHOD_INVOCATION_ARGUMENTS [853,868]
+at 0
+

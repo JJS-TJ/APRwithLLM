@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+PrefixExpression [1189,1191]
+    PREFIX_EXPRESSION_OPERATOR: - [1189,1190]
+    NumberLiteral: 1 [1190,1191]
+to
+VariableDeclarationFragment [1182,1190]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [1189,1190]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [1189,1190]
+===
+
