@@ -1,0 +1,291 @@
+No.4 Patch
+int main(void)
+{
+	int num1, num2, num3, num4, num_smallest;
+        printf("Please enter 4 numbers separated by spaces > "); 
+	scanf("%d%d%d%d",&num1,&num2,&num3,&num4);
+	
+	num_smallest = num1;
+	
+	if (num2 < num_smallest)
+		num_smallest = num2;
+	
+	if (num3 < num_smallest)
+		num_smallest = num3;
+	
+	if (num4 < num_smallest)
+		num_smallest = num4;
+		
+	printf("%d is the smallest\n",num_smallest);
+	
+	return 0;
+}
+No.12 Patch
+int main(void)
+{
+	int num1, num2, num3, num4, num_smallest;
+        printf("Please enter 4 numbers separated by spaces > "); 
+	scanf("%d%d%d%d",&num1,&num2,&num3,&num4);
+	
+
+	if (num1 < num2)
+		{
+		if (num1 < num3)
+			{
+			if (num1 < num4)
+				{
+				num_smallest = num1;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else 
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		else
+			{
+			if (num3 < num4)
+				{
+				num_smallest = num3;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else 
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		}
+	else
+		{
+		if (num2 < num3)
+			{
+			if (num2 < num4)
+				{
+				num_smallest = num2;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else 
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		else
+			{
+			if (num3 < num4)
+				{
+				num_smallest = num3;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else 
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		}
+
+	return 0;
+}
+No.22 Patch
+int main(void)
+{
+        int num1, num2, num3, num4, num_smallest;
+        printf("Please enter 4 numbers separated by spaces > ");
+        scanf("%d%d%d%d",&num1,&num2,&num3,&num4);
+
+        if (num1 < num2)
+                {
+                if (num1 < num3)
+                        {
+                        if (num1 < num4)
+                                {
+                                num_smallest = num1;
+                                printf("%d is the smallest\n",num_smallest);
+                                }
+                        else
+                                {
+                                num_smallest = num4;
+                                printf("%d is the smallest\n",num_smallest);
+                                }
+                        }
+                else if (num3 < num4)
+                        {
+                        num_smallest = num3;
+                        printf("%d is the smallest\n",num_smallest);
+                        }
+                else
+                        {
+                        num_smallest = num4;
+                        printf("%d is the smallest\n",num_smallest);
+                        }
+                }
+        else if (num2 < num3)
+                {
+                if (num2 < num4)
+                        {
+                        num_smallest = num2;
+                        printf("%d is the smallest\n",num_smallest);
+                        }
+                else
+                        {
+                        num_smallest = num4;
+                        printf("%d is the smallest\n",num_smallest);
+                        }
+                }
+        else if (num3 < num4)
+                {
+                num_smallest = num3;
+                printf("%d is the smallest\n",num_smallest);
+                }
+        else
+                {
+                num_smallest = num4;
+                printf("%d is the smallest\n",num_smallest);
+                }
+
+        return 0;
+}
+No.26 Patch
+int main(void)
+{
+	int num1, num2, num3, num4, num_smallest;
+	printf("Please enter 4 numbers separated by spaces > "); 
+	scanf("%d%d%d%d",&num1,&num2,&num3,&num4);
+	num_smallest = num1;
+
+        if (num2 < num_smallest)
+                num_smallest = num2;
+        if (num3 < num_smallest)
+                num_smallest = num3;
+        if (num4 < num_smallest)
+                num_smallest = num4;
+
+	printf("%d is the smallest\n",num_smallest);
+	
+	return 0;
+}
+No.53 Patch
+int main(void)
+{
+	int num1, num2, num3, num4, num_smallest;
+        printf("Please enter 4 numbers separated by spaces > "); 
+	scanf("%d%d%d%d",&num1,&num2,&num3,&num4);
+	
+
+	if (num1 < num2)
+		{
+		if (num1 < num3)
+			{
+			if (num1 < num4)
+				{
+				num_smallest = num1;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		else
+			{
+			if (num3 < num4)
+				{
+				num_smallest = num3;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		}
+	else
+		{
+		if (num2 < num3)
+			{
+			if (num2 < num4)
+				{
+				num_smallest = num2;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		else
+			{
+			if (num3 < num4)
+				{
+				num_smallest = num3;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			else
+				{
+				num_smallest = num4;
+				printf("%d is the smallest\n",num_smallest);
+				}
+			}
+		}
+	return 0;
+}
+
+
+
+
+/* Provide a fix for the buggy function */
+No.62 Patch
+int main(void)
+{
+	int num1, num2, num3, num4, num_smallest;
+	printf("Please enter 4 numbers separated by spaces > "); 
+	scanf("%d%d%d%d",&num1,&num2,&num3,&num4);
+
+	if (num1 < num2)
+		if (num1 < num3)
+			if (num1 < num4)
+				num_smallest = num1;
+			else
+				num_smallest = num4;
+		else if (num3 < num4)
+			num_smallest = num3;
+		else
+			num_smallest = num4;
+	else if (num2 < num3)
+		if (num2 < num4)
+			num_smallest = num2;
+		else
+			num_smallest = num4;
+	else if (num3 < num4)
+		num_smallest = num3;
+	else
+		num_smallest = num4;
+
+	printf("%d is the smallest\n",num_smallest);
+
+	return 0;
+}
+
+
+
+
+/* Provide a fix for the buggy function */
+No.73 Patch
+int main(void)
+{
+	int num1, num2, num3, num4, num_smallest;
+	printf("Please enter 4 numbers separated by spaces > "); 
+	scanf("%d%d%d%d",&num1,&num2,&num3,&num4);
+	
+	num_smallest = (num1 < num2)? ((num1 < num3)? ((num1 < num4)? num1 : num4) : ((num3 < num4)? num3 : num4)) : ((num2 < num3)? ((num2 < num4)? num2 : num4) : ((num3 < num4)? num3 : num4));
+
+	printf("%d is the smallest\n",num_smallest);
+
+	return 0;
+}

@@ -1,0 +1,323 @@
+No.1 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	if(a<b) {
+		if(a<c) {
+			if(a<d) {
+				printf("%d is the smallest\n", a);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		} else {
+			if(c<d) {
+				printf("%d is the smallest\n", c);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		}
+	} else {
+		if(b<c) {
+			if(b<d) {
+				printf("%d is the smallest\n", b);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		} else {
+			if(c<d) {
+				printf("%d is the smallest\n", c);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		}
+	}
+
+	return 0;
+	}
+No.16 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	int min = a;
+	if(b < min) min = b;
+	if(c < min) min = c;
+	if(d < min) min = d;
+
+	printf("%d is the smallest\n", min);
+
+	return 0;
+	} 
+
+/* Provide a fix for the buggy function */
+No.20 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	if(a<b) {
+		if(a<c) {
+			if(a<d) {
+				printf("%d is the smallest\n", a);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		} else {
+			if(c<d) {
+				printf("%d is the smallest\n", c);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		}
+	} else {
+		if(b<c) {
+			if(b<d) {
+				printf("%d is the smallest\n", b);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		} else {
+			if(c<d) {
+				printf("%d is the smallest\n", c);
+			} else {
+				printf("%d is the smallest\n", d);
+			}
+		}
+	}
+
+	return 0;
+	} 
+
+/* Provide a fix for the buggy function */
+No.30 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	int smallest = 0;
+
+	smallest = (a<b)?(a):(b);
+	smallest = (smallest<c)?(smallest):(c);
+	smallest = (smallest<d)?(smallest):(d);
+
+	printf("%d is the smallest\n", smallest);
+
+	return 0;
+	}
+No.36 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	if(a<b)
+		{
+		if(a<c)
+			{
+			if(a<d)
+				printf("%d is the smallest\n", a);
+			else
+				printf("%d is the smallest\n", d);
+			}
+			else
+			{
+			if(c<d)
+				printf("%d is the smallest\n", c);
+			else
+				printf("%d is the smallest\n", d);
+			}
+		}
+	else
+		{
+		if(b<c)
+			{
+			if(b<d)
+				printf("%d is the smallest\n", b);
+			else
+				printf("%d is the smallest\n", d);
+			}
+			else
+			{
+			if(c<d)
+				printf("%d is the smallest\n", c);
+			else
+				printf("%d is the smallest\n", d);
+			}
+		}
+
+	return 0;
+	}
+No.37 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	int minimum = a;
+	if (b < minimum)
+		minimum = b;
+	if (c < minimum)
+		minimum = c;
+	if (d < minimum)
+		minimum = d;
+	printf("%d is the smallest\n", minimum);
+
+	return 0;
+	} 
+
+/* Provide a fix for the buggy function */
+No.42 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	if(a>b) {
+		int temp = b;
+		b = a;
+		a = temp;
+	}
+	if(c>d) {
+		int temp = d;
+		d = c;
+		c = temp;
+	}
+	if(b>c) {
+		int temp = c;
+		c = b;
+		b = temp;
+	}
+	if(a>b) {
+		int temp = b;
+		b = a;
+		a = temp;
+	}
+
+	printf("%d is the smallest\n", a);
+	return 0;
+	} 
+
+/* Provide a fix for the buggy function */
+No.45 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	if(a<b)
+	  if(a<c)
+	    if(a<d)
+		  printf("%d is the smallest\n", a);
+		else
+		  printf("%d is the smallest\n", d);
+	  else
+	    if(c<d)
+		  printf("%d is the smallest\n", c);
+		else
+		  printf("%d is the smallest\n", d);
+	else
+	  if(b<c)
+	    if(b<d)
+		  printf("%d is the smallest\n", b);
+		else
+		  printf("%d is the smallest\n", d);
+	  else
+	    if(c<d)
+		  printf("%d is the smallest\n", c);
+		else
+		  printf("%d is the smallest\n", d);
+
+	return 0;
+	} 
+
+/* Provide a fix for the buggy function */
+No.47 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	int min = a;
+
+	if(b < min)
+		min = b;
+	if(c < min)
+		min = c;
+	if(d < min)
+		min = d;
+	printf("%d is the smallest\n", min);
+
+	return 0;
+	}
+No.50 Patch
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	if(a<b){
+		if(a<c){
+			if(a<d)
+				printf("%d is the smallest\n", a);
+			else
+				printf("%d is the smallest\n", d);
+		}else{
+			if(c<d)
+				printf("%d is the smallest\n", c);
+			else
+				printf("%d is the smallest\n", d);
+		}
+	}else{
+		if(b<c){
+			if(b<d)
+				printf("%d is the smallest\n", b);
+			else
+				printf("%d is the smallest\n", d);
+		}else{
+			if(c<d)
+				printf("%d is the smallest\n", c);
+			else
+				printf("%d is the smallest\n", d);
+		}
+	}
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.53 Patch
+#include <stdio.h>
+int main () {
+	int a, b, c, d;
+
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%d%d%d%d",&a,&b,&c,&d);
+
+	int arr[4] = {a,b,c,d};
+
+	int min = arr[0];
+
+	for (int i = 1; i < 4; i++)
+	{
+		if (arr[i] < min)
+			min = arr[i];
+	}
+
+	printf("%d is the smallest\n", min);
+
+	return 0;
+	}

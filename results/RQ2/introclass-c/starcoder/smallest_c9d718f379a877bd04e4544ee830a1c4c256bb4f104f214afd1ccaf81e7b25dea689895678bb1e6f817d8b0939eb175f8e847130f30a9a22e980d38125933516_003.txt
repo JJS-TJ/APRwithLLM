@@ -1,0 +1,161 @@
+No.1 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	if (num1<num2 && num1<num3 && num1<num4)
+	printf("%.0lf is the smallest\n",num1);
+	else if (num2<num3 && num2<num4)
+	printf("%.0lf is the smallest\n",num2);
+	else if (num3<num4)
+	printf("%.0lf is the smallest\n",num3);
+	else
+	printf("%.0lf is the smallest\n",num4);
+	return 0; 
+}
+No.10 Patch
+int main()
+{
+    double num1, num2, num3, num4;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf%lf%lf%lf", &num1, &num2, &num3, &num4);
+    double min = num1 < num2? num1 : num2;
+    min = min < num3? min : num3;
+    min = min < num4? min : num4;
+    printf("%.0lf is the smallest\n", min);
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.18 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	if (num1<num2 && num1<num3 && num1<num4)
+	printf("%.0lf is the smallest\n",num1);
+	else if (num2<num3 && num2<num4)
+	printf("%.0lf is the smallest\n",num2);
+	else if (num3<num4)
+	printf("%.0lf is the smallest\n",num3);
+	else
+	printf("%.0lf is the smallest\n",num4);
+	return 0;
+}
+No.20 Patch
+int main()
+{
+    double num1, num2, num3, num4;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf%lf%lf%lf", &num1, &num2, &num3, &num4);
+    double min = num1;
+    if (min > num2)
+        min = num2;
+    if (min > num3)
+        min = num3;
+    if (min > num4)
+        min = num4;
+    printf("%.0lf is the smallest\n", min);
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.22 Patch
+int main()
+{
+    double num1, num2, num3, num4;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf%lf%lf%lf", &num1, &num2, &num3, &num4);
+    double min_num = num1;
+    if (num2 < min_num)
+        min_num = num2;
+    if (num3 < min_num)
+        min_num = num3;
+    if (num4 < min_num)
+        min_num = num4;
+    printf("%.0lf is the smallest\n", min_num);
+    return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.40 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	if (num1<num2 && num1<num3 && num1<num4)
+	printf("%.0lf is the smallest\n",num1);
+	else if (num2<num3 && num2<num4)
+	printf("%.0lf is the smallest\n",num2);
+	else if (num3<num4)
+	printf("%.0lf is the smallest\n",num3);
+	else 
+	printf("%.0lf is the smallest\n",num4);
+	return 0; 
+}
+
+/* Provide a fix for the buggy function */
+No.41 Patch
+int main(){
+	double num1, num2, num3, num4;
+	printf("Please enter 4 numbers separated by spaces > ");
+	scanf("%lf%lf%lf%lf",&num1,&num2,&num3,&num4);
+	if (num1<num2 && num1<num3 && num1<num4)
+	printf("%.0lf is the smallest\n",num1);
+	else if (num2<num3 && num2<num4)
+	printf("%.0lf is the smallest\n",num2);
+	else if (num3<num4)
+	printf("%.0lf is the smallest\n",num3);
+	else
+	printf("%.0lf is the smallest\n",num4);
+	return 0; 
+}
+
+/* Provide a fix for the buggy function */
+No.42 Patch
+int main()
+{
+    double num1, num2, num3, num4;
+    printf("Please enter 4 numbers separated by spaces > ");
+    scanf("%lf%lf%lf%lf", &num1, &num2, &num3, &num4);
+
+    /* check if first number is smaller than second number */
+    if (num1 < num2) {
+        /* check if first number is smaller than third number */
+        if (num1 < num3) {
+            /* check if first number is smaller than fourth number */
+            if (num1 < num4) {
+                printf("%.0lf is the smallest", num1);
+            } else {
+                printf("%.0lf is the smallest", num4);
+            }
+        } else {
+            /* check if third number is smaller than fourth number */
+            if (num3 < num4) {
+                printf("%.0lf is the smallest", num3);
+            } else {
+                printf("%.0lf is the smallest", num4);
+            }
+        }
+    } else {
+        /* check if second number is smaller than third number */
+        if (num2 < num3) {
+            /* check if second number is smaller than fourth number */
+            if (num2 < num4) {
+                printf("%.0lf is the smallest", num2);
+            } else {
+                printf("%.0lf is the smallest", num4);
+            }
+        } else {
+            /* check if third number is smaller than fourth number */
+            if (num3 < num4) {
+                printf("%.0lf is the smallest", num3);
+            } else {
+                printf("%.0lf is the smallest", num4);
+            }
+        }
+    }
+    return 0;
+}
+
+/* Provide a fix for the buggy function */

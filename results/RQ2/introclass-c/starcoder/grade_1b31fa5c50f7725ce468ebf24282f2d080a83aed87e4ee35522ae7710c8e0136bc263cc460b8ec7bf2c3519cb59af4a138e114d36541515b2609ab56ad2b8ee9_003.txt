@@ -1,0 +1,1253 @@
+No.1 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.3 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.5 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if (grade >= A)
+		printf("Student has an A grade\n");
+
+	else if (grade < A && grade >= B)
+		printf("Student has an B grade\n");
+
+	else if (grade < B && grade >= C)
+		printf("Student has an C grade\n");
+
+	else if (grade < C && grade >= D)
+		printf("Student has an D grade\n");
+
+	else
+		printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.7 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if(grade < A && grade >= B)
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+
+	else if(grade < B && grade >= C)
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+
+	else if(grade < C && grade >= D)
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.8 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if (grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+	if ((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+	if ((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+	if ((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.9 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+	else if(grade < A && grade >= B)
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if(grade < B && grade >= C)
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if(grade < C && grade >= D)
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.11 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+	else if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.18 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if(grade < A && grade >= B)
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if(grade < B && grade >= C)
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if(grade < C && grade >= D)
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.20 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+	else if((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+	else if((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+	else if((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.21 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+
+	else if((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+
+	else if((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.22 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+
+	if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+
+	if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+
+	printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.24 Patch
+#include <stdio.h>
+
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if(grade < A)
+	{
+                if(grade >= B)
+                {
+                        printf("Student has an B grade\n");
+                        return 0;
+                }
+                else if(grade < B)
+                {
+                        if(grade >= C)
+                        {
+                                printf("Student has an C grade\n");
+                                return 0;
+                        }
+                        else if(grade < C)
+                        {
+                                if(grade >= D)
+                                {
+                                        printf("Student has an D grade\n");
+                                        return 0;
+                                }
+                                else printf("Student has failed the course\n");
+                        }
+                }
+	}
+	return 0;
+}
+No.27 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+	else if((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+	else if((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.28 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	if(grade < B)
+	{
+                if(grade < C)
+                {
+                        if(grade < D)
+                                printf("Student has failed the course\n");
+                        else
+                                printf("Student has an D grade\n");
+                }
+                else
+                        printf("Student has an C grade\n");
+        }
+	else
+                printf("Student has an B grade\n");
+
+	return 0;
+}
+No.30 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if(grade >= B)
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if(grade >= C)
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if(grade >= D)
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.32 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+        if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+        if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+        printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.33 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if (grade >= A)
+		printf("Student has an A grade\n");
+	else if ((grade < A) && (grade >= B))
+		printf("Student has an B grade\n");
+	else if ((grade < B) && (grade >= C))
+		printf("Student has an C grade\n");
+	else if ((grade < C) && (grade >= D))
+		printf("Student has an D grade\n");
+	else
+		printf("Student has failed the course\n");
+
+	return 0;
+}
+No.34 Patch
+/* This function accepts four floating point parameters: 
+A, B, C, and D. It then prints a letter grade based on 
+student score (percent). 
+
+If the student's score is greater than or equal to A, the
+letter grade is A.
+
+If the student's score is less than A and greater than or 
+equal to B, the letter grade is B.
+
+If the student's score is less than B and greater than or 
+equal to C, the letter grade is C.
+
+If the student's score is less than C and greater than or 
+equal to D, the letter grade is D.
+
+If the student's score is less than D, the letter grade is
+F.
+*/
+
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.36 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+	else if(grade < A && grade >= B)
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+	else if(grade < B && grade >= C)
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+	else if(grade < C && grade >= D)
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.38 Patch
+/* This program determines the letter grade of a student */
+
+#include <stdio.h>
+int main()
+{
+    float A, B, C, D, grade;
+
+    printf("Enter thresholds for A, B, C, D\n");
+    printf("in that order, decreasing percentages > ");
+    scanf("%f %f %f %f", &A, &B, &C, &D);
+    printf("Thank you. Now enter student score (percent) >");
+    scanf("%f", &grade);
+
+    if(grade >= A)
+    {
+        printf("Student has an A grade\n");
+        return 0;
+    }
+    else if((grade < A) && (grade >= B))
+    {
+        printf("Student has an B grade\n");
+        return 0;
+    }
+    else if((grade < B) && (grade >= C))
+    {
+        printf("Student has an C grade\n");
+        return 0;
+    }
+    else if((grade < C) && (grade >= D))
+    {
+        printf("Student has an D grade\n");
+        return 0;
+    }
+    else printf("Student has failed the course\n");
+
+    return 0;
+}
+
+/* Write a function that takes an integer array and an integer x,
+ * and returns the index of the first occurrence of x in the array.
+ * If x does not occur in the array, return -1.
+ * The function should be recursive, so that it uses the result
+ * of the call to binarySearch in order to determine the correct
+ * return value */
+
+/* This function is buggy */
+No.40 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if (grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if ((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+	else if ((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+	else if ((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.41 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if(grade < A && grade >= B)
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if(grade < B && grade >= C)
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if(grade < C && grade >= D)
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.42 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	if(grade < A)
+	{
+		if(grade >= B)
+		{
+			printf("Student has an B grade\n");
+			return 0;
+		}
+
+		if(grade < B)
+		{
+			if(grade >= C)
+			{
+				printf("Student has an C grade\n");
+				return 0;
+			}
+
+			if(grade < C)
+			{
+				if(grade >= D)
+				{
+					printf("Student has an D grade\n");
+					return 0;
+				}
+
+				if(grade < D)
+				{
+					printf("Student has failed the course\n");
+					return 0;
+				}
+			}
+		}
+	}
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.43 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+	else if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.44 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if (grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	if ((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+
+	if ((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+
+	if ((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+
+	printf("Student has failed the course\n");
+
+	return 0;
+}
+No.45 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if (grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+	else if ((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+	else if ((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+	else if ((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.49 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.51 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if((grade < A) && (grade >= B))
+	{
+		printf("Student has an B grade\n");
+		return 0;
+	}
+	else if((grade < B) && (grade >= C))
+	{
+		printf("Student has an C grade\n");
+		return 0;
+	}
+	else if((grade < C) && (grade >= D))
+	{
+		printf("Student has an D grade\n");
+		return 0;
+	}
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.53 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	else if((grade < A) && (grade >= B))
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	else if((grade < B) && (grade >= C))
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	else if((grade < C) && (grade >= D))
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+
+
+/* Provide a fix for the buggy function */
+No.55 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if (grade >= A)
+		printf("Student has an A grade\n");
+	else if (grade < A && grade >= B)
+		printf("Student has an B grade\n");
+	else if (grade < B && grade >= C)
+		printf("Student has an C grade\n");
+	else if (grade < C && grade >= D)
+		printf("Student has an D grade\n");
+	else printf("Student has failed the course\n");
+
+	return 0;
+}
+No.58 Patch
+int main()
+{
+        float A, B, C, D, grade;
+
+        printf("Enter thresholds for A, B, C, D\n");
+        printf("in that order, decreasing percentages > ");
+        scanf("%f %f %f %f", &A, &B, &C, &D);
+        printf("Thank you. Now enter student score (percent) >");
+        scanf("%f", &grade);
+
+        if(grade >= A)
+        {
+                printf("Student has an A grade\n");
+                return 0;
+        }
+
+        else if((grade < A) && (grade >= B))
+        {
+                printf("Student has an B grade\n");
+                return 0;
+        }
+        else if((grade < B) && (grade >= C))
+        {
+                printf("Student has an C grade\n");
+                return 0;
+        }
+        else if((grade < C) && (grade >= D))
+        {
+                printf("Student has an D grade\n");
+                return 0;
+        }
+        else printf("Student has failed the course\n");
+
+        return 0;
+}
+
+/* Provide a fix for the buggy function */
+No.59 Patch
+int main()
+{
+	float A, B, C, D, grade;
+
+	printf("Enter thresholds for A, B, C, D\n");
+	printf("in that order, decreasing percentages > ");
+	scanf("%f %f %f %f", &A, &B, &C, &D);
+	printf("Thank you. Now enter student score (percent) >");
+	scanf("%f", &grade);
+
+	if(grade >= A)
+	{
+		printf("Student has an A grade\n");
+		return 0;
+	}
+
+	if(grade >= B)
+	{
+                printf("Student has an B grade\n");
+                return 0;
+        }
+	if(grade >= C)
+	{
+                printf("Student has an C grade\n");
+                return 0;
+        }
+	if(grade >= D)
+	{
+                printf("Student has an D grade\n");
+                return 0;
+        }
+	printf("Student has failed the course\n");
+
+	return 0;
+}
+No.61 Patch
+int main()
+{
+        float A, B, C, D, grade;
+
+        printf("Enter thresholds for A, B, C, D\n");
+        printf("in that order, decreasing percentages > ");
+        scanf("%f %f %f %f", &A, &B, &C, &D);
+        printf("Thank you. Now enter student score (percent) >");
+        scanf("%f", &grade);
+
+        if (grade >= A)
+        {
+                printf("Student has an A grade\n");
+                return 0;
+        }
+
+        if ((grade < A) && (grade >= B))
+        {
+                printf("Student has an B grade\n");
+                return 0;
+        }
+
+        if ((grade < B) && (grade >= C))
+        {
+                printf("Student has an C grade\n");
+                return 0;
+        }
+
+        if ((grade < C) && (grade >= D))
+        {
+                printf("Student has an D grade\n");
+                return 0;
+        }
+
+        printf("Student has failed the course\n");
+
+        return 0;
+}

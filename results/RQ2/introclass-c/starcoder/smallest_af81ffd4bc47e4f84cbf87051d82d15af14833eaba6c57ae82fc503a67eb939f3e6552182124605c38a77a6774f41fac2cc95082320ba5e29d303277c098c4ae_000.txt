@@ -1,0 +1,151 @@
+No.1 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+if (a > b)
+m = b;
+else
+m = a;
+
+if (m > c)
+n = c;
+else
+n = m;
+
+if (n > d)
+p = d;
+else
+p = n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+
+/* Provide a fix for the buggy function */
+No.11 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+m = (a > b)? b : a;
+n = (m > c)? c : m;
+p = (n > d)? d : n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+
+/* Provide a fix for the buggy function */
+No.16 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+if (a > b)
+m = b;
+else
+m = a;
+
+if (m > c)
+n = c;
+else
+n = m;
+
+if (n > d)
+p = d;
+else
+p = n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.17 Patch
+#include <stdio.h>
+
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+m = (a > b)? b : a;
+n = (m > c)? c : m;
+p = (n > d)? d : n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+
+/* Provide a fix for the buggy function */
+No.21 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+m=((a<b)?a:b);
+n=((m<c)?m:c);
+p=((n<d)?n:d);
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.23 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+m = a<b? a : b;
+n = c<d? c : d;
+p = m<n? m : n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+No.26 Patch
+int main() {
+
+double a, b, c, d, m, n, p;
+
+printf("Please enter 4 numbers separated by spaces > ");
+scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+
+m = (a < b)? a : b;
+n = (c < d)? c : d;
+p = (m < n)? m : n;
+
+printf("%.0f is the smallest\n", p);
+
+return(0);
+
+}
+
+/* Provide a fix for the buggy function */
