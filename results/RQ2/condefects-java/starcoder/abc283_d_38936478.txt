@@ -1,0 +1,32 @@
+No.6 Patch
+public static void main(String[] args) {
+	FastScanner str=new FastScanner(System.in);
+	PrintWriter out=new PrintWriter(System.out);
+	String s=str.next();
+	Stack<Character>stack=new Stack<>();
+	for(int i=0;i<s.length();i++){
+		if(s.charAt(i)=='('){
+			stack.push('(');
+		}else if(s.charAt(i)==')'){
+       while(!stack.isEmpty()){
+				if(stack.peek()!='('){
+					stack.pop();
+				}else {
+					stack.pop();
+					break;
+				}
+			}
+		}else{
+			if(stack.contains(s.charAt(i))){
+				out.print("No");
+				out.flush();
+				return;
+			}else{
+				stack.push(s.charAt(i));
+			}
+		}
+	}
+	out.print("Yes");
+	out.flush();
+	
+ }

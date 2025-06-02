@@ -1,0 +1,19 @@
+No.0 Patch
+static boolean placeTile(boolean[][] g, int r, int c, int x, int y) {
+    if(r + x > g.length || c + y > g[0].length) {
+        return false;
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            if(g[i][j]) {
+                return false;
+            }
+        }
+    }
+    for(int i = r; i < r + x; i++) {
+        for(int j = c; j < c + y; j++) {
+            g[i][j] = true;
+        }
+    }
+    return true;
+}

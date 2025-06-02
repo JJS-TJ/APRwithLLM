@@ -1,0 +1,19 @@
+No.3 Patch
+public void solve() {
+    init(400010);
+    int n = sc.nextInt();
+    int k = sc.nextInt();
+    boolean[] b = new boolean[400010];
+    for(int i=0; i<n; i++) {
+        b[sc.nextInt()]=true;
+    }
+    long res = 0;
+    for(int i=0; i<400010 && k>=0; i++) {
+        if(!b[i]) {
+            res += conv(k+i-1, i-1);
+            res %= mod;
+            k--;
+        }
+    }
+    out.println(res);
+}

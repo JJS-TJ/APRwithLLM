@@ -1,0 +1,31 @@
+No.2 Patch
+long choose(int n,int r){
+    if(map[n][r]!= 0){
+        return map[n][r];
+    }
+    if(n == r) {
+        return 1;
+    }
+    if(r == 0){
+        return 1;
+    }
+    long ans = (choose(n-1, r-1) + choose(n-1, r)) % mod;
+    map[n][r] = ans;
+    return map[n][r];
+}
+No.4 Patch
+long choose(int n,int r){
+    if(map[n][r]!= 0){
+        return map[n][r];
+    }
+    if(n == r) {
+        return 1;
+    }
+    if(r == 0){
+        return 1;
+    }
+
+    long ans = choose(n-1, r-1) + choose(n-1, r);
+    map[n][r] = ans % mod;
+    return map[n][r];
+}

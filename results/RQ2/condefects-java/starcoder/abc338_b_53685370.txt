@@ -1,0 +1,21 @@
+No.3 Patch
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String S = input.next();
+    int[] frequency = new int[26];
+    int maxFreq = 0;
+    int index = 0;
+    for (char c : S.toCharArray()) {
+        frequency[c - 'a']++;
+        if (frequency[c - 'a'] > maxFreq) {
+            maxFreq = frequency[c - 'a'];
+            index = c - 'a';
+        } else if (frequency[c - 'a'] == maxFreq) {
+            if (c - 'a' < index) {
+                index = c - 'a';
+            }
+        }
+    }
+    System.out.printf("%c\n", (char)('a' + index));
+    input.close();
+}

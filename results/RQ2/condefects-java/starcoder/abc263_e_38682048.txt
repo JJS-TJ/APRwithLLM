@@ -1,0 +1,16 @@
+No.5 Patch
+void calc() throws Exception {
+	N = i(br.readLine());
+	String[] as = br.readLine().split(" ");
+	A = Arrays.stream(as).mapToInt(a -> i(a)).toArray();
+
+	es = new long[N+1];
+	for (int i = N-2; i >= 0; i--) {
+		long p = inv(A[i] + 1);
+		long e = inv( (1-p+MOD) %MOD );
+		e = e * p %MOD;
+		e = e * ((es[i+1] - es[i+A[i]+1] + MOD) %MOD + A[i] + 1) %MOD;
+		es[i] = (es[i+1] + e) %MOD;
+	}
+	System.out.println((es[0] - es[1]+MOD)%MOD);
+}

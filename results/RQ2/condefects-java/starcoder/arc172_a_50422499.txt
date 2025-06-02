@@ -1,0 +1,52 @@
+No.5 Patch
+public static void solve() {
+    long H = sc.nextLong();
+    long W = sc.nextLong();
+    if(H < W){
+        long tmp = W;
+        W = H;
+        H = tmp;
+    }
+    int N = sc.nextInt();
+    ArrayList<Integer> arr = new ArrayList<>();
+    for(int i = 0; i < N; i++){
+        arr.add(sc.nextInt());
+    }
+    Collections.sort(arr,Comparator.reverseOrder());
+    PriorityQueue<long[]> second = new PriorityQueue<>(new ArrayComparator());
+    Deque<long[]> keep = new ArrayDeque<long[]>();
+    second.add(new long[]{H,W});
+    for(int i = 0; i < N; i++){
+        int v = arr.get(i);
+        long w = 1L << v;
+        long remW = w;
+        while(second.size() > 0 && remW > 0){
+            long[] now = second.poll();
+            if(now[0] < w){
+                keep.add(now);
+            }else{
+                if(remW > now[1]){
+                    remW -= now[1];
+                    now[0] -= w;
+                    keep.add(now);
+                }else{
+                    long[] now1 = new long[]{now[0]-w,remW};
+                    long[] now2 = new long[]{now[0],now[1]-remW};
+                    remW = 0;
+                    second.add(now1);
+                    if(now2[1]!= 0){
+                        second.add(now2);
+                    }
+                    while(keep.size() > 0){
+                        second.add(keep.pollLast());
+                    }
+                }
+            }
+        }
+        if(remW!= 0){
+            pw.println("No");
+            return;
+        }
+    }
+    pw.println("Yes");
+}

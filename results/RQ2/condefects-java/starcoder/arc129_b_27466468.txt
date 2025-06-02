@@ -1,0 +1,13 @@
+No.3 Patch
+private static void solve(InputReader in, PrintWriter out,int caseID) {
+    long N = in.nextLong();
+    long ak = -1;
+    long bk = (int)1e9 + 7;
+    for (int i = 0; i < N; i++) {
+        ak = Math.max(ak,in.nextInt());
+        bk = Math.min(bk,in.nextInt());            
+        if(ak<=bk) out.println(0);
+        else out.println((ak-bk+1)/2);
+    }
+    
+}

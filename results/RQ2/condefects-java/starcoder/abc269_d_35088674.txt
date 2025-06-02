@@ -1,0 +1,16 @@
+No.3 Patch
+private void dfs(int x, int y) {
+    if (x < 0 || x >= N || y < 0 || y >= N) {
+        return;
+    }
+    if(!occ[x][y] || vis[x][y]){
+        return;
+    }
+
+    vis[x][y] = true;
+    int[] dirX = new int[]{-1, -1, 0, 0, 1, 1};
+    int[] dirY = new int[]{-1, 0, -1, 1, 0, 1};
+    for (int i = 0; i < dirX.length; i++) {
+        dfs(x + dirX[i], y + dirY[i]);
+    }
+}

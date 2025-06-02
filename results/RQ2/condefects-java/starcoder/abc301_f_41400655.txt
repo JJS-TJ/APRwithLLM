@@ -1,0 +1,8 @@
+No.0 Patch
+boolean isLower(char c) {
+	return c >= 'a' && c <= 'z';
+}
+No.2 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}

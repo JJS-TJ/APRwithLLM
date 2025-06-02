@@ -1,0 +1,44 @@
+No.3 Patch
+void solve() {
+
+	FastScanner sc=new FastScanner();
+	PrintWriter pw=new PrintWriter(System.out);
+	int N=sc.nextInt();
+	int K=sc.nextInt();
+	int[][] x=new int[N][2];
+	for (int i=0;i<N;++i) {
+		x[i][0]=sc.nextInt();
+	}
+	for (int i=0;i<N;++i) {
+		x[i][1]=sc.nextInt();
+	}
+	Arrays.sort(x, new Comparator<int[]>() {
+		@Override
+		public int compare(int[] o1, int[] o2) {
+			return Integer.compare(o1[1], o2[1]);
+		}
+	});		
+	long[][] dp=new long[K+2][N+2];
+	dp[0][N+1]=1;
+	for (int i=0;i<N;++i) {
+		long[][] ndp=new long[K+2][N+2];
+		for (int k=0;k<=K;++k) {
+			for (int min=1;min<=N+1;++min) {
+				ndp[k][Math.min(x[i][0], min)]+=dp[k][min];
+				ndp[k][Math.min(x[i][0], min)]%=mod;
+				if (min > x[i][0]) {
+					ndp[k+1][min]+=dp[k][min];
+					ndp[k+1][min]%=mod;
+				}
+			}
+		}
+		dp=ndp;
+		
+	}
+	long ans=0;
+	for (int min=1;min<=N+1;++min) {
+		ans=(ans+dp[K][min])%mod;
+	}
+	pw.println(ans);
+	pw.close();
+}
