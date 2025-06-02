@@ -1,0 +1,73 @@
+No.1 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.substring(0,6));
+}
+No.2 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+        res.append(p);
+    }
+    out.println(res.toString().substring(0,6));
+}
+No.3 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+        if (res.length() == 6){
+            break;
+        }
+    }
+    out.println(res.substring(0,6));
+}
+No.4 Patch
+void solve()
+{
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6) {
+        res.append(p);
+    }
+    out.println(res);
+}
+No.5 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}
+No.6 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+        if(res.length() >= 6)
+            break;
+    }
+    out.println(res);
+}
+No.7 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+        if (res.length() == 6){
+            break;
+        }
+    }
+    out.println(res);
+}

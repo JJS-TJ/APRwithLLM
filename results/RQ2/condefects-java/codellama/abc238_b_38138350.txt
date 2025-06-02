@@ -1,0 +1,32 @@
+No.8 Patch
+static void solve () {
+	
+	int n = nextInt();
+	boolean[] b = new boolean[361];
+	b[0] = true;
+	b[360] = true;
+	int pos = 0;
+	
+	for (int i=0; i<n; i++) {
+		int temp = nextInt();
+		pos += temp;
+		pos %= 360;
+		b[pos] = true;
+	}
+	
+	int max = -1;
+	int count = -1;
+	boolean flag = true;
+	for (int i=0; i<=360; i++) {
+		if (b[i] == true) {
+			count = 1;
+		}
+		else {
+			count++;
+		}
+		max = Math.max(max, count);
+	}
+	
+	println(max);
+	
+}

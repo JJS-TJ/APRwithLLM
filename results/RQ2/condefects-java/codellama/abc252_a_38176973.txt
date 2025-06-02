@@ -1,0 +1,24 @@
+No.1 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}
+No.5 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+  char c = (char)n;
+  System.out.println(c);
+ 
+}
+No.6 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println((char)n);
+ 
+}

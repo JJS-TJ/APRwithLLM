@@ -1,0 +1,10 @@
+No.3 Patch
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int A = sc.nextInt();
+int B = sc.nextInt();
+double d = (double)B / A;
+d = Math.round(d * 1000) / 1000.0; // 小数点第3位で四捨五入
+System.out.printf("%.3f", d);
+System.out.println();
+}

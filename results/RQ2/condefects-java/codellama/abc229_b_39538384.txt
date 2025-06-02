@@ -1,0 +1,16 @@
+No.2 Patch
+private static void solve() throws IOException {
+    long A = IO.nextLong();
+    long B = IO.nextLong();
+
+    while (A > 0 && B > 0) {
+        if (A % 10 + B % 10 > 9) {
+            out.println("Hard");
+            return;
+        }
+        A = A / 10;
+        B = B / 10;
+    }
+
+    out.println("Easy");
+}

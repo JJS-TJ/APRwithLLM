@@ -1,0 +1,55 @@
+No.1 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if (s.contains(t)) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+}
+No.2 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+       if(s.contains(t)){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }
+No.4 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if(s.contains(t)){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }
+No.5 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+       if(s.matches(".*"+t+".*$")){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }
+No.6 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+       if(s.matches(".*" + t + ".*$")){
+           System.out.println("Yes");
+       }else{
+           System.out.println("No");
+       }
+   }

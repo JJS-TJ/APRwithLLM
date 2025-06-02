@@ -1,0 +1,33 @@
+No.1 Patch
+public static void main(String[] args){
+
+    PrintWriter out = new PrintWriter(System.out);
+    ArrayList<String> list = new ArrayList<>();
+    list = lib.inputProcess();
+    int N = Integer.parseInt(lib.arrayString(list.get(0), " ")[0]);
+    int M = Integer.parseInt(lib.arrayString(list.get(0), " ")[1]);
+    boolean[][] a = new boolean[N+1][N+1];
+
+    for( int i = 1 ; i <= M ; i++){
+        int[] t = lib.StringToIntArray(lib.arrayString(list.get(i), " "));
+        int k = t[0];
+        for( int j = 1 ; j <= k ; j++){
+            for( int l = 1 ; l <= k; l++){
+                a[t[j]][t[l]] = true;
+                a[t[l]][t[j]] = true;
+            }
+        }
+    }
+
+    String ans = "Yes";
+    r:for( int i = 1 ; i <= N ;i++){
+        for( int j = 1 ; j <= i ;j++){
+            if( !a[i][j]){
+                ans = "No";
+                break r;
+            }
+        }
+    }
+    out.println(ans);
+    out.flush();
+}

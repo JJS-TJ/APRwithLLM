@@ -1,0 +1,35 @@
+No.0 Patch
+public static int getLower(int[] A, int X){
+	int res = 0;
+	int L = A.length;
+	if(X < A[0]){
+		res = 0;
+	}
+	else if(A[L-1] <= X){
+		res = L;
+	}
+	else{
+		int left = 0;
+		int right = L-1;
+		while(right - left > 1){
+			int center = (left + right) / 2;
+			if(A[center] <= X){
+				left = center;
+			}
+			else{
+				right = center;
+			}
+		}
+		if(X < A[left]){
+			res = left;
+		}
+		else if(X < A[right]){
+			res = right;
+		}
+		else{
+			res = right+1;
+		}
+	}
+	
+	return res;
+}

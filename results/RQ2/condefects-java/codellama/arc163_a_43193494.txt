@@ -1,0 +1,9 @@
+No.3 Patch
+static boolean isGreater(String s, String t) {
+    int x = Math.min(s.length(), t.length());
+    for (int i = 0; i < x; i++) {
+        if (s.charAt(i) < t.charAt(i)) return true;
+        else if (s.charAt(i) > t.charAt(i)) return false;
+    }
+    return t.length() > s.length();
+}

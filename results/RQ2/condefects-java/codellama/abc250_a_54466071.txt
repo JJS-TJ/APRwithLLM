@@ -1,0 +1,15 @@
+No.1 Patch
+public static void main(String[] args) {
+	MyScanner sc = new MyScanner();
+	
+	int H = sc.nextInt(), W = sc.nextInt();
+	int R = sc.nextInt(), C = sc.nextInt();
+	
+	int ans = 4;
+	if(R==H) ans--;
+	if(R==1) ans--;
+	if(C==W) ans--;
+	if(C==1) ans--;
+	
+	System.out.println(ans);
+}
