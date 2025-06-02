@@ -1,0 +1,4 @@
+No.1 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}

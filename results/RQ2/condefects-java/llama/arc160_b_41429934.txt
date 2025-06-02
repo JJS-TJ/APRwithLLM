@@ -1,0 +1,30 @@
+No.3 Patch
+private long solve(int N){
+  long ans = 0;
+
+  for (long y = 1;y *y <= N;y++) {
+    long zNum = N /y -y;
+    ans += 3 *(y -1);
+    ans += 3 *zNum;
+    ans += 6 *(y -1) *zNum;
+  }
+  ans += (int) Math.sqrt(N);
+
+  return ans %mod;
+
+}
+No.4 Patch
+private long solve(int N){
+  long ans = 0;
+
+  for (long y = 1;y *y <= N;y++) {
+    long zNum = N /y -y;
+    ans += 3 *(y -1);
+    ans += 3 *zNum;
+    ans += 6 *(y -1) *zNum;
+  }
+  ans += (int)(Math.sqrt(N));
+
+  return ans %mod;
+
+}
