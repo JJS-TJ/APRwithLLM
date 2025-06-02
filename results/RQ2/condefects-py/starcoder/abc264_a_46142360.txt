@@ -1,0 +1,14 @@
+No.1 Patch
+c = "atcoder"
+
+x, y = map(int, input().split())
+
+print(c[x-1:y])
+No.5 Patch
+c = "atcoder"
+
+x, y = map(int, input().split())
+
+print(c[x-1:y])
+
+# Find a Bug

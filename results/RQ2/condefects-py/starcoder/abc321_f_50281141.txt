@@ -1,0 +1,104 @@
+No.0 Patch
+q, k = map(int, input().split())
+mod = 998244353
+dp = [0] * (k + 1)
+dp[0] = 1
+for i in range(q):
+  t, x = map(str, input().split())
+  x = int(x)
+  if t == "+":
+    for j in reversed(range(k+1-x)):
+      dp[j+x] += dp[j]
+      dp[j+x] %= mod
+  else:
+    for j in range(k+1-x):
+      dp[j+x] -= dp[j]
+      dp[j+x] %= mod
+  print(dp[k])
+No.2 Patch
+q, k = map(int, input().split())
+mod = 998244353
+dp = [0] * (k+1)
+dp[0] = 1
+for i in range(q):
+    t, x = map(str, input().split())
+    x = int(x)
+    if t == "+":
+        for j in reversed(range(k+1-x)):
+            dp[j+x] = (dp[j+x] + dp[j]) % mod
+    else:
+        for j in range(k+1-x):
+            dp[j+x] = (dp[j+x] - dp[j]) % mod
+    print(dp[k])
+No.4 Patch
+q, k = map(int, input().split())
+mod = 998244353
+dp = [0] * (k + 1)
+dp[0] = 1
+for i in range(q):
+  t, x = map(str, input().split())
+  x = int(x)
+  if t == "+":
+    for j in reversed(range(k+1-x)):
+      dp[j+x] += dp[j] % mod
+  else:
+    for j in range(k+1-x):
+      dp[j+x] -= dp[j] % mod
+  print(dp[k] % mod)
+No.5 Patch
+q, k = map(int, input().split())
+mod = 998244353
+dp = [0] * (k + 1)
+dp[0] = 1
+for i in range(q):
+  t, x = map(str, input().split())
+  x = int(x)
+  if t == "+":
+    for j in reversed(range(k+1-x)):
+      dp[j+x] = (dp[j+x] + dp[j]) % mod
+  else:
+    for j in range(k+1-x):
+      dp[j+x] = (dp[j+x] - dp[j]) % mod
+  print(dp[k])
+  # print(dp)
+No.6 Patch
+def count(n):
+  dp = [0] * (n + 1)
+  dp[0] = 1
+  for i in range(1, n+1):
+    dp[i] = ((i - 1) * dp[i-1]) % mod
+  return dp[n]
+
+q, k = map(int, input().split())
+mod = 998244353
+dp = [0] * (k + 1)
+dp[0] = 1
+for i in range(q):
+  t, x = map(str, input().split())
+  x = int(x)
+  if t == "+":
+    for j in reversed(range(k+1-x)):
+      dp[j+x] += dp[j]
+  else:
+    for j in range(k+1-x):
+      dp[j+x] -= dp[j]
+  print(dp[k] % mod)
+  # print(dp)
+No.7 Patch
+q, k = map(int, input().split())
+mod = 998244353
+dp = [0] * (k + 1)
+dp[0] = 1
+for i in range(q):
+  t, x = map(str, input().split())
+  x = int(x)
+  if t == "+":
+    for j in reversed(range(k+1-x)):
+      dp[j+x] += dp[j]
+      dp[j+x] %= mod
+  else:
+    for j in range(k+1-x):
+      dp[j+x] -= dp[j]
+      dp[j+x] %= mod
+  print(dp[k])
+  # print(dp)

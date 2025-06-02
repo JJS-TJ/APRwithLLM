@@ -1,0 +1,4 @@
+No.1 Patch
+import re
+
+print(re.sub("[aeiou]", "", input()))

@@ -1,0 +1,13 @@
+No.3 Patch
+A,B,D=map(int,input().split())
+ans=[]
+for x in range(A,B+1,D):
+  ans.append(x)
+print(*ans)
+No.5 Patch
+A,B,D=map(int,input().split())
+ans=[A]
+while A<B:
+  ans.append(A+D)
+  A+=D
+print(*ans)

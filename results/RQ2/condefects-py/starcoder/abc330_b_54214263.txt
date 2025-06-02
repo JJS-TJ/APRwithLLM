@@ -1,0 +1,22 @@
+No.2 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [L if i < L else (R if i > R else i) for i in a]
+print(*ans)
+No.4 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [L if i < L else i if i < R else R for i in a]
+print(*ans)
+No.5 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)

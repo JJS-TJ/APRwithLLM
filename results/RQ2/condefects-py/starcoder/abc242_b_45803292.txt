@@ -1,0 +1,9 @@
+No.3 Patch
+def func():
+    # 入力を取得
+    S = input()
+    
+    print(''.join(sorted(S)))
+
+if __name__ == '__main__':
+    func()

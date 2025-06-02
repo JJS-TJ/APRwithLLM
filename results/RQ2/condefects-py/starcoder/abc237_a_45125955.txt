@@ -1,0 +1,6 @@
+No.2 Patch
+n=int(input())
+print('YNeos'[n<-2147483648 or n>2147483647::2])
+No.3 Patch
+n=int(input())
+print('YNeos'[n<-2**31 or n>2**31-1::2])

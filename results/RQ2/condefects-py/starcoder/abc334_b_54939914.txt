@@ -1,0 +1,6 @@
+No.0 Patch
+A,M,L,R = map(int,input().split())
+if (L-A)%M == 0:
+    print(abs((L-A)//M-(R-A)//M)+1)
+else:
+    print(abs((L-A)//M-(R-A)//M))

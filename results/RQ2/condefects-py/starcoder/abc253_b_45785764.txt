@@ -1,0 +1,28 @@
+No.0 Patch
+h, w = map(int, input().split())
+s = []
+o = []
+for _ in range(h):
+    s.append(input())
+for row in range(h):
+    for col in range(w):
+        if s[row][col] == "o":
+            o.append([row,col])
+
+def distance(a, b):
+    return abs(a[0]-b[0]) + abs(a[1]-b[1])
+
+hirai = distance(o[0], o[1])
+print(hirai)
+No.2 Patch
+h, w = map(int, input().split())
+s = []
+o = []
+for _ in range(h):
+    s.append(input())
+for row in range(h):
+    for col in range(w):
+        if s[row][col] == "o":
+            o.append([row,col])
+hirai = abs(o[0][0]- o[1][0]) + abs(o[0][1]-o[1][1])
+print(hirai)

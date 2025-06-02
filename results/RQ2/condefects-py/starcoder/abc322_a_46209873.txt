@@ -1,0 +1,16 @@
+No.2 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else -1)
+No.3 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else idx)
+No.4 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx != -1 else idx)
+No.6 Patch
+input()
+idx = input().find('ABC')
+print(1 + idx if idx > -1 else idx)

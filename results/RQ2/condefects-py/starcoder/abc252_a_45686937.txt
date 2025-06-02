@@ -1,0 +1,3 @@
+No.0 Patch
+abc="abcdefghijklmnopqrstuvwxyz"
+print(abc[int(input())-97])

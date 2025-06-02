@@ -1,0 +1,24 @@
+No.3 Patch
+a,b=map(int,input().split())
+if abs(a-b)== 1 or abs(a-b)==9:
+    print("Yes")
+else:
+    print("No")
+No.5 Patch
+a,b=map(int,input().split())
+if abs(a-b)<=1 or abs(a-b)>=9:
+    print("Yes")
+else:
+    print("No")
+No.7 Patch
+a,b=map(int,input().split())
+if abs(a-b)== 1 or abs(a-b)== 9:
+    print("Yes")
+else:
+    print("No")
+No.9 Patch
+a,b=map(int,input().split())
+if abs(a-b)== 1 or abs(a-b) == 9:
+    print("Yes")
+else:
+    print("No")
