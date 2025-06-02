@@ -1,0 +1,278 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_include [0,20]
+    #include: #include [0,8]
+    system_lib_string: <ctype.h> [9,18]
+to
+translation_unit [0,578]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_include [20,41]
+    #include: #include [20,28]
+    system_lib_string: <string.h> [29,39]
+to
+translation_unit [0,578]
+at 1
+
+New cluster:
+UPDATE from scanf to fgets
+------------
+===
+update-node
+---
+identifier: scanf [97,102]
+replace scanf by fgets
+
+New cluster:
+MOVE from argument_list [102,115]
+------------
+===
+move-tree
+---
+,: , [107,108]
+to
+argument_list [102,115]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: MAX [153,156]
+to
+argument_list [102,115]
+at 4
+------------
+===
+insert-node
+---
+identifier: MAX [153,156]
+to
+argument_list [102,115]
+at 4
+
+New cluster:
+===
+insert-node
+---
+,: , [156,157]
+to
+argument_list [102,115]
+at 5
+------------
+===
+insert-node
+---
+,: , [156,157]
+to
+argument_list [102,115]
+at 5
+
+New cluster:
+===
+insert-node
+---
+identifier: stdin [158,163]
+to
+argument_list [102,115]
+at 6
+------------
+===
+insert-node
+---
+identifier: stdin [158,163]
+to
+argument_list [102,115]
+at 6
+
+New cluster:
+===
+insert-node
+---
+call_expression [250,267]
+to
+parenthesized_expression [200,210]
+at 1
+------------
+===
+insert-node
+---
+identifier: tolower [250,257]
+to
+call_expression [250,267]
+at 0
+===
+insert-node
+---
+call_expression [250,267]
+to
+parenthesized_expression [200,210]
+at 1
+===
+insert-node
+---
+argument_list [257,267]
+to
+call_expression [250,267]
+at 1
+===
+insert-node
+---
+): ) [266,267]
+to
+argument_list [257,267]
+at 2
+===
+insert-node
+---
+(: ( [257,258]
+to
+argument_list [257,267]
+at 0
+
+New cluster:
+MOVE from argument_list [257,267]
+------------
+===
+move-tree
+---
+subscript_expression [201,209]
+    identifier: input [201,206]
+    [: [ [206,207]
+    identifier: i [207,208]
+    ]: ] [208,209]
+to
+argument_list [257,267]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [103,107]
+    ": " [103,104]
+    string_content: %s [104,106]
+    ": " [106,107]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [237,241]
+    update_expression [237,240]
+        identifier: s [237,238]
+        ++: ++ [238,240]
+    ;: ; [240,241]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [249,255]
+    break: break [249,254]
+    ;: ; [254,255]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [278,282]
+    update_expression [278,281]
+        identifier: s [278,279]
+        ++: ++ [279,281]
+    ;: ; [281,282]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [290,296]
+    break: break [290,295]
+    ;: ; [295,296]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [319,323]
+    update_expression [319,322]
+        identifier: s [319,320]
+        ++: ++ [320,322]
+    ;: ; [322,323]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [331,337]
+    break: break [331,336]
+    ;: ; [336,337]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [362,366]
+    update_expression [362,365]
+        identifier: s [362,363]
+        ++: ++ [363,365]
+    ;: ; [365,366]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [374,380]
+    break: break [374,379]
+    ;: ; [379,380]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [405,409]
+    update_expression [405,408]
+        identifier: s [405,406]
+        ++: ++ [406,408]
+    ;: ; [408,409]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [417,423]
+    break: break [417,422]
+    ;: ; [422,423]
+

@@ -1,0 +1,53 @@
+New cluster:
+UPDATE from %d is the smalles to %d is the smallest
+------------
+===
+update-node
+---
+string_content: %d is the smalles [391,408]
+replace %d is the smalles by %d is the smallest
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [324,333]
+    return: return [324,330]
+    number_literal: 1 [331,332]
+    ;: ; [332,333]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [422,431]
+    return: return [422,428]
+    identifier: c [429,430]
+    ;: ; [430,431]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [521,530]
+    return: return [521,527]
+    number_literal: 3 [528,529]
+    ;: ; [529,530]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+return_statement [620,630]
+    return: return [620,626]
+    number_literal: 43 [627,629]
+    ;: ; [629,630]
+

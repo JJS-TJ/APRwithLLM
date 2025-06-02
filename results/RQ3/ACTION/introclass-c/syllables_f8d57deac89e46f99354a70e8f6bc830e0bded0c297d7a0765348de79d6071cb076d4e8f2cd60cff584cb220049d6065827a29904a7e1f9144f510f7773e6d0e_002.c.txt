@@ -1,0 +1,35 @@
+New cluster:
+UPDATE from 0 to 1
+------------
+===
+update-node
+---
+number_literal: 0 [379,380]
+replace 0 by 1
+
+New cluster:
+===
+delete-node
+---
+comment:   //**/ [42,48]
+===
+------------
+===
+delete-node
+---
+comment:   //**/ [42,48]
+===
+
+New cluster:
+===
+delete-node
+---
+comment:   //**/ [161,167]
+===
+------------
+===
+delete-node
+---
+comment:   //**/ [161,167]
+===
+

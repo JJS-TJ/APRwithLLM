@@ -1,0 +1,166 @@
+New cluster:
+MOVE from binary_expression [183,189]
+------------
+===
+move-tree
+---
+identifier: a [183,184]
+to
+binary_expression [183,189]
+at 2
+
+New cluster:
+MOVE from binary_expression [217,223]
+------------
+===
+move-tree
+---
+identifier: b [217,218]
+to
+binary_expression [217,223]
+at 2
+
+New cluster:
+MOVE from binary_expression [251,257]
+------------
+===
+move-tree
+---
+identifier: c [251,252]
+to
+binary_expression [251,257]
+at 2
+
+New cluster:
+===
+insert-node
+---
+<: < [183,184]
+to
+binary_expression [183,189]
+at 2
+------------
+===
+insert-node
+---
+<: < [183,184]
+to
+binary_expression [183,189]
+at 2
+
+New cluster:
+UPDATE from b to smallest
+------------
+===
+update-node
+---
+identifier: b [217,218]
+replace b by smallest
+===
+update-node
+---
+identifier: c [251,252]
+replace c by smallest
+===
+update-node
+---
+identifier: a [183,184]
+replace a by smallest
+
+New cluster:
+===
+insert-node
+---
+<: < [223,224]
+to
+binary_expression [217,223]
+at 2
+------------
+===
+insert-node
+---
+<: < [223,224]
+to
+binary_expression [217,223]
+at 2
+
+New cluster:
+===
+insert-node
+---
+<: < [263,264]
+to
+binary_expression [251,257]
+at 2
+------------
+===
+insert-node
+---
+<: < [263,264]
+to
+binary_expression [251,257]
+at 2
+
+New cluster:
+===
+delete-node
+---
+>=: >= [185,187]
+===
+------------
+===
+delete-node
+---
+>=: >= [185,187]
+===
+
+New cluster:
+===
+delete-node
+---
+>=: >= [219,221]
+===
+------------
+===
+delete-node
+---
+>=: >= [219,221]
+===
+
+New cluster:
+===
+delete-node
+---
+>=: >= [253,255]
+===
+------------
+===
+delete-node
+---
+>=: >= [253,255]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+else_clause [283,318]
+    else: else [283,287]
+    if_statement [288,318]
+        if: if [288,290]
+        parenthesized_expression [291,299]
+            (: ( [291,292]
+            binary_expression [292,298]
+                identifier: a [292,293]
+                >=: >= [294,296]
+                identifier: d [297,298]
+            ): ) [298,299]
+        expression_statement [305,318]
+            assignment_expression [305,317]
+                identifier: smallest [305,313]
+                =: = [314,315]
+                identifier: d [316,317]
+            ;: ; [317,318]
+

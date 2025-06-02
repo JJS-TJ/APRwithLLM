@@ -1,0 +1,364 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [222,234]
+    assignment_expression [222,233]
+        identifier: min [222,225]
+        =: = [226,227]
+        identifier: first [228,233]
+    ;: ; [233,234]
+to
+compound_statement [15,671]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [238,274]
+    if: if [238,240]
+    parenthesized_expression [241,255]
+        (: ( [241,242]
+        binary_expression [242,254]
+            identifier: second [242,248]
+            <: < [249,250]
+            identifier: min [251,254]
+        ): ) [254,255]
+    expression_statement [261,274]
+        assignment_expression [261,273]
+            identifier: min [261,264]
+            =: = [265,266]
+            identifier: second [267,273]
+        ;: ; [273,274]
+to
+compound_statement [15,671]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [278,312]
+    if: if [278,280]
+    parenthesized_expression [281,294]
+        (: ( [281,282]
+        binary_expression [282,293]
+            identifier: third [282,287]
+            <: < [288,289]
+            identifier: min [290,293]
+        ): ) [293,294]
+    expression_statement [300,312]
+        assignment_expression [300,311]
+            identifier: min [300,303]
+            =: = [304,305]
+            identifier: third [306,311]
+        ;: ; [311,312]
+to
+compound_statement [15,671]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [316,352]
+    if: if [316,318]
+    parenthesized_expression [319,333]
+        (: ( [319,320]
+        binary_expression [320,332]
+            identifier: fourth [320,326]
+            <: < [327,328]
+            identifier: min [329,332]
+        ): ) [332,333]
+    expression_statement [339,352]
+        assignment_expression [339,351]
+            identifier: min [339,342]
+            =: = [343,344]
+            identifier: fourth [345,351]
+        ;: ; [351,352]
+to
+compound_statement [15,671]
+at 10
+
+New cluster:
+MOVE from compound_statement [15,671]
+------------
+===
+move-tree
+---
+expression_statement [283,321]
+    call_expression [283,320]
+        identifier: printf [283,289]
+        argument_list [289,320]
+            (: ( [289,290]
+            string_literal [290,312]
+                ": " [290,291]
+                string_content: %i is the smallest [291,309]
+                escape_sequence: \n [309,311]
+                ": " [311,312]
+            ,: , [312,313]
+            identifier: first [314,319]
+            ): ) [319,320]
+    ;: ; [320,321]
+to
+compound_statement [15,671]
+at 11
+
+New cluster:
+===
+insert-node
+---
+,: , [52,53]
+to
+declaration [20,53]
+at 8
+------------
+===
+insert-node
+---
+,: , [52,53]
+to
+declaration [20,53]
+at 8
+
+New cluster:
+===
+insert-node
+---
+identifier: min [54,57]
+to
+declaration [20,53]
+at 9
+------------
+===
+insert-node
+---
+identifier: min [54,57]
+to
+declaration [20,53]
+at 9
+
+New cluster:
+UPDATE from first to min
+------------
+===
+update-node
+---
+identifier: first [314,319]
+replace first by min
+
+New cluster:
+===
+delete-node
+---
+if_statement [217,321]
+===
+------------
+===
+delete-node
+---
+if_statement [217,321]
+===
+===
+delete-node
+---
+if: if [217,219]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [220,277]
+    (: ( [220,221]
+    binary_expression [221,276]
+        binary_expression [221,256]
+            parenthesized_expression [221,237]
+                (: ( [221,222]
+                binary_expression [222,236]
+                    identifier: first [222,227]
+                    <: < [228,229]
+                    identifier: second [230,236]
+                ): ) [236,237]
+            &&: && [238,240]
+            parenthesized_expression [241,256]
+                (: ( [241,242]
+                binary_expression [242,255]
+                    identifier: first [242,247]
+                    <: < [248,249]
+                    identifier: third [250,255]
+                ): ) [255,256]
+        &&: && [257,259]
+        parenthesized_expression [260,276]
+            (: ( [260,261]
+            binary_expression [261,275]
+                identifier: first [261,266]
+                <: < [267,268]
+                identifier: fourth [269,275]
+            ): ) [275,276]
+    ): ) [276,277]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [325,432]
+    if: if [325,327]
+    parenthesized_expression [328,387]
+        (: ( [328,329]
+        binary_expression [329,386]
+            binary_expression [329,365]
+                parenthesized_expression [329,345]
+                    (: ( [329,330]
+                    binary_expression [330,344]
+                        identifier: second [330,336]
+                        <: < [337,338]
+                        identifier: first [339,344]
+                    ): ) [344,345]
+                &&: && [346,348]
+                parenthesized_expression [349,365]
+                    (: ( [349,350]
+                    binary_expression [350,364]
+                        identifier: second [350,356]
+                        <: < [357,358]
+                        identifier: third [359,364]
+                    ): ) [364,365]
+            &&: && [366,368]
+            parenthesized_expression [369,386]
+                (: ( [369,370]
+                binary_expression [370,385]
+                    identifier: second [370,376]
+                    <: < [377,378]
+                    identifier: fourth [379,385]
+                ): ) [385,386]
+        ): ) [386,387]
+    expression_statement [393,432]
+        call_expression [393,431]
+            identifier: printf [393,399]
+            argument_list [399,431]
+                (: ( [399,400]
+                string_literal [400,422]
+                    ": " [400,401]
+                    string_content: %i is the smallest [401,419]
+                    escape_sequence: \n [419,421]
+                    ": " [421,422]
+                ,: , [422,423]
+                identifier: second [424,430]
+                ): ) [430,431]
+        ;: ; [431,432]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [436,540]
+    if: if [436,438]
+    parenthesized_expression [439,496]
+        (: ( [439,440]
+        binary_expression [440,495]
+            binary_expression [440,475]
+                parenthesized_expression [440,455]
+                    (: ( [440,441]
+                    binary_expression [441,454]
+                        identifier: third [441,446]
+                        <: < [447,448]
+                        identifier: first [449,454]
+                    ): ) [454,455]
+                &&: && [456,458]
+                parenthesized_expression [459,475]
+                    (: ( [459,460]
+                    binary_expression [460,474]
+                        identifier: third [460,465]
+                        <: < [466,467]
+                        identifier: second [468,474]
+                    ): ) [474,475]
+            &&: && [476,478]
+            parenthesized_expression [479,495]
+                (: ( [479,480]
+                binary_expression [480,494]
+                    identifier: third [480,485]
+                    <: < [486,487]
+                    identifier: fourth [488,494]
+                ): ) [494,495]
+        ): ) [495,496]
+    expression_statement [502,540]
+        call_expression [502,539]
+            identifier: printf [502,508]
+            argument_list [508,539]
+                (: ( [508,509]
+                string_literal [509,531]
+                    ": " [509,510]
+                    string_content: %i is the smallest [510,528]
+                    escape_sequence: \n [528,530]
+                    ": " [530,531]
+                ,: , [531,532]
+                identifier: third [533,538]
+                ): ) [538,539]
+        ;: ; [539,540]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [544,651]
+    if: if [544,546]
+    parenthesized_expression [547,606]
+        (: ( [547,548]
+        binary_expression [548,605]
+            binary_expression [548,585]
+                parenthesized_expression [548,564]
+                    (: ( [548,549]
+                    binary_expression [549,563]
+                        identifier: fourth [549,555]
+                        <: < [556,557]
+                        identifier: third [558,563]
+                    ): ) [563,564]
+                &&: && [565,567]
+                parenthesized_expression [568,585]
+                    (: ( [568,569]
+                    binary_expression [569,584]
+                        identifier: fourth [569,575]
+                        <: < [576,577]
+                        identifier: second [578,584]
+                    ): ) [584,585]
+            &&: && [586,588]
+            parenthesized_expression [589,605]
+                (: ( [589,590]
+                binary_expression [590,604]
+                    identifier: fourth [590,596]
+                    <: < [597,598]
+                    identifier: first [599,604]
+                ): ) [604,605]
+        ): ) [605,606]
+    expression_statement [612,651]
+        call_expression [612,650]
+            identifier: printf [612,618]
+            argument_list [618,650]
+                (: ( [618,619]
+                string_literal [619,641]
+                    ": " [619,620]
+                    string_content: %i is the smallest [620,638]
+                    escape_sequence: \n [638,640]
+                    ": " [640,641]
+                ,: , [641,642]
+                identifier: fourth [643,649]
+                ): ) [649,650]
+        ;: ; [650,651]
+

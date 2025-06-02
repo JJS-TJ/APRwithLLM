@@ -1,0 +1,43 @@
+New cluster:
+UPDATE from n3 to small
+------------
+===
+update-node
+---
+identifier: n3 [248,250]
+replace n3 by small
+===
+update-node
+---
+identifier: n2 [213,215]
+replace n2 by small
+===
+update-node
+---
+identifier: n1 [178,180]
+replace n1 by small
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+else_clause [274,308]
+    else: else [274,278]
+    if_statement [279,308]
+        if: if [279,281]
+        parenthesized_expression [282,291]
+            (: ( [282,283]
+            binary_expression [283,290]
+                identifier: n4 [283,285]
+                <: < [286,287]
+                identifier: n1 [288,290]
+            ): ) [290,291]
+        expression_statement [297,308]
+            assignment_expression [297,307]
+                identifier: small [297,302]
+                =: = [303,304]
+                identifier: n4 [305,307]
+            ;: ; [307,308]
+

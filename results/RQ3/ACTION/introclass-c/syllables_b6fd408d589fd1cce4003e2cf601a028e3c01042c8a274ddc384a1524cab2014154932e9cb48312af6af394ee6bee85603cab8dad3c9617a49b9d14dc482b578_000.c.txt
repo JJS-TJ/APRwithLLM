@@ -1,0 +1,140 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_include [0,20]
+    #include: #include [0,8]
+    system_lib_string: <stdio.h> [9,18]
+to
+translation_unit [0,365]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_include [20,41]
+    #include: #include [20,28]
+    system_lib_string: <string.h> [29,39]
+to
+translation_unit [0,365]
+at 1
+
+New cluster:
+UPDATE from 19 to 40
+------------
+===
+update-node
+---
+number_literal: 19 [117,119]
+replace 19 by 40
+
+New cluster:
+===
+insert-node
+---
+binary_expression [211,306]
+to
+binary_expression [168,263]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [211,306]
+to
+binary_expression [168,263]
+at 0
+===
+insert-node
+---
+||: || [280,282]
+to
+binary_expression [211,306]
+at 1
+
+New cluster:
+MOVE from binary_expression [211,306]
+------------
+===
+move-tree
+---
+binary_expression [168,236]
+    binary_expression [168,218]
+        binary_expression [168,200]
+            binary_expression [168,182]
+                subscript_expression [168,175]
+                    identifier: word [168,172]
+                    [: [ [172,173]
+                    identifier: i [173,174]
+                    ]: ] [174,175]
+                ==: == [176,178]
+                char_literal [179,182]
+                    ': ' [179,180]
+                    character: a [180,181]
+                    ': ' [181,182]
+            ||: || [183,185]
+            binary_expression [186,200]
+                subscript_expression [186,193]
+                    identifier: word [186,190]
+                    [: [ [190,191]
+                    identifier: i [191,192]
+                    ]: ] [192,193]
+                ==: == [194,196]
+                char_literal [197,200]
+                    ': ' [197,198]
+                    character: o [198,199]
+                    ': ' [199,200]
+        ||: || [201,203]
+        binary_expression [204,218]
+            subscript_expression [204,211]
+                identifier: word [204,208]
+                [: [ [208,209]
+                identifier: i [209,210]
+                ]: ] [210,211]
+            ==: == [212,214]
+            char_literal [215,218]
+                ': ' [215,216]
+                character: e [216,217]
+                ': ' [217,218]
+    ||: || [219,221]
+    binary_expression [222,236]
+        subscript_expression [222,229]
+            identifier: word [222,226]
+            [: [ [226,227]
+            identifier: i [227,228]
+            ]: ] [228,229]
+        ==: == [230,232]
+        char_literal [233,236]
+            ': ' [233,234]
+            character: u [234,235]
+            ': ' [235,236]
+to
+binary_expression [211,306]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [292,306]
+    subscript_expression [292,299]
+        identifier: word [292,296]
+        [: [ [296,297]
+        identifier: i [297,298]
+        ]: ] [298,299]
+    ==: == [300,302]
+    char_literal [303,306]
+        ': ' [303,304]
+        character: i [304,305]
+        ': ' [305,306]
+to
+binary_expression [211,306]
+at 2
+

@@ -1,0 +1,119 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_include [0,20]
+    #include: #include [0,8]
+    system_lib_string: <stdio.h> [9,18]
+to
+translation_unit [0,406]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_include [20,41]
+    #include: #include [20,28]
+    system_lib_string: <string.h> [29,39]
+to
+translation_unit [0,406]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_def [41,60]
+    #define: #define [41,48]
+    identifier: sizeA [49,54]
+    preproc_arg: #define sizeA 100 [55,59]
+to
+translation_unit [0,406]
+at 2
+
+New cluster:
+===
+insert-node
+---
+binary_expression [258,314]
+to
+binary_expression [196,252]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [258,314]
+to
+binary_expression [196,252]
+at 0
+===
+insert-node
+---
+||: || [295,297]
+to
+binary_expression [258,314]
+at 1
+
+New cluster:
+MOVE from binary_expression [258,314]
+------------
+===
+move-tree
+---
+binary_expression [196,232]
+    binary_expression [196,212]
+        subscript_expression [196,205]
+            identifier: string [196,202]
+            [: [ [202,203]
+            identifier: i [203,204]
+            ]: ] [204,205]
+        ==: == [206,208]
+        char_literal [209,212]
+            ': ' [209,210]
+            character: a [210,211]
+            ': ' [211,212]
+    ||: || [213,215]
+    binary_expression [216,232]
+        subscript_expression [216,225]
+            identifier: string [216,222]
+            [: [ [222,223]
+            identifier: i [223,224]
+            ]: ] [224,225]
+        ==: == [226,228]
+        char_literal [229,232]
+            ': ' [229,230]
+            character: e [230,231]
+            ': ' [231,232]
+to
+binary_expression [258,314]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [298,314]
+    subscript_expression [298,307]
+        identifier: string [298,304]
+        [: [ [304,305]
+        identifier: i [305,306]
+        ]: ] [306,307]
+    ==: == [308,310]
+    char_literal [311,314]
+        ': ' [311,312]
+        character: i [312,313]
+        ': ' [313,314]
+to
+binary_expression [258,314]
+at 2
+

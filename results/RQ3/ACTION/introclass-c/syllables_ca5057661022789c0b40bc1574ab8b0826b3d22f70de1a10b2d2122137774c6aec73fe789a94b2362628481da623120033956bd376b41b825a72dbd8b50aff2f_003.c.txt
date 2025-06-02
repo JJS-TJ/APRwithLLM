@@ -1,0 +1,74 @@
+New cluster:
+===
+insert-node
+---
+call_expression [399,422]
+to
+assignment_expression [392,413]
+at 2
+------------
+===
+insert-node
+---
+identifier: tolower [399,406]
+to
+call_expression [399,422]
+at 0
+===
+insert-node
+---
+argument_list [406,422]
+to
+call_expression [399,422]
+at 1
+===
+insert-node
+---
+call_expression [399,422]
+to
+assignment_expression [392,413]
+at 2
+===
+insert-node
+---
+(: ( [406,407]
+to
+argument_list [406,422]
+at 0
+===
+insert-node
+---
+): ) [421,422]
+to
+argument_list [406,422]
+at 2
+
+New cluster:
+UPDATE from 5 to 6
+------------
+===
+update-node
+---
+number_literal: 5 [437,438]
+replace 5 by 6
+===
+update-node
+---
+number_literal: 5 [517,518]
+replace 5 by 6
+
+New cluster:
+MOVE from argument_list [406,422]
+------------
+===
+move-tree
+---
+subscript_expression [399,413]
+    identifier: inputString [399,410]
+    [: [ [410,411]
+    identifier: k [411,412]
+    ]: ] [412,413]
+to
+argument_list [406,422]
+at 1
+

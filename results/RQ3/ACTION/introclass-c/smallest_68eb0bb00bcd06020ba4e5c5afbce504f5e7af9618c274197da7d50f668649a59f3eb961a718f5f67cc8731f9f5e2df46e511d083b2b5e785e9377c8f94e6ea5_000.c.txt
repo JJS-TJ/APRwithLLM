@@ -1,0 +1,152 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [147,163]
+    binary_expression [147,153]
+        identifier: a [147,148]
+        <=: <= [149,151]
+        identifier: b [152,153]
+    &&: && [154,156]
+    binary_expression [157,163]
+        identifier: a [157,158]
+        <=: <= [159,161]
+        identifier: c [162,163]
+to
+binary_expression [147,170]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [167,173]
+    identifier: a [167,168]
+    <=: <= [169,171]
+    identifier: d [172,173]
+to
+binary_expression [147,170]
+at 3
+
+New cluster:
+===
+insert-node
+---
+<=: <= [250,252]
+to
+binary_expression [244,249]
+at 1
+------------
+===
+insert-node
+---
+<=: <= [250,252]
+to
+binary_expression [244,249]
+at 1
+
+New cluster:
+===
+insert-node
+---
+<=: <= [240,242]
+to
+binary_expression [235,240]
+at 1
+------------
+===
+insert-node
+---
+<=: <= [240,242]
+to
+binary_expression [235,240]
+at 1
+
+New cluster:
+===
+insert-node
+---
+<=: <= [330,332]
+to
+binary_expression [323,328]
+at 1
+------------
+===
+insert-node
+---
+<=: <= [330,332]
+to
+binary_expression [323,328]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [147,161]
+    binary_expression [147,152]
+        identifier: a [147,148]
+        <: < [149,150]
+        identifier: b [151,152]
+    &&: && [153,155]
+    binary_expression [156,161]
+        identifier: a [156,157]
+        <: < [158,159]
+        identifier: c [160,161]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [165,170]
+    identifier: a [165,166]
+    <: < [167,168]
+    identifier: d [169,170]
+
+New cluster:
+===
+delete-node
+---
+<: < [237,238]
+===
+------------
+===
+delete-node
+---
+<: < [237,238]
+===
+
+New cluster:
+===
+delete-node
+---
+<: < [246,247]
+===
+------------
+===
+delete-node
+---
+<: < [246,247]
+===
+
+New cluster:
+===
+delete-node
+---
+<: < [325,326]
+===
+------------
+===
+delete-node
+---
+<: < [325,326]
+===
+

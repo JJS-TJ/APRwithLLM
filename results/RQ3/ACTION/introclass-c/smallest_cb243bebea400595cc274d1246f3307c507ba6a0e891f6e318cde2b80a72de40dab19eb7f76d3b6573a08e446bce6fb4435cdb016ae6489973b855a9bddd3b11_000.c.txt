@@ -1,0 +1,224 @@
+New cluster:
+MOVE from compound_statement [11,329]
+------------
+===
+move-tree
+---
+expression_statement [165,174]
+    assignment_expression [165,173]
+        identifier: min [165,168]
+        =: = [169,170]
+        identifier: n1 [171,173]
+    ;: ; [173,174]
+to
+compound_statement [11,329]
+at 4
+
+New cluster:
+MOVE from compound_statement [11,329]
+------------
+===
+move-tree
+---
+expression_statement [277,313]
+    call_expression [277,312]
+        identifier: printf [277,283]
+        argument_list [283,312]
+            (: ( [283,284]
+            string_literal [284,306]
+                ": " [284,285]
+                string_content: %d is the smallest [285,303]
+                escape_sequence: \n [303,305]
+                ": " [305,306]
+            ,: , [306,307]
+            identifier: min [308,311]
+            ): ) [311,312]
+    ;: ; [312,313]
+to
+compound_statement [11,329]
+at 8
+
+New cluster:
+MOVE from if_statement [146,197]
+------------
+===
+move-tree
+---
+expression_statement [188,197]
+    assignment_expression [188,196]
+        identifier: min [188,191]
+        =: = [192,193]
+        identifier: n2 [194,196]
+    ;: ; [196,197]
+to
+if_statement [146,197]
+at 2
+
+New cluster:
+MOVE from binary_expression [150,158]
+------------
+===
+move-tree
+---
+identifier: n1 [150,152]
+to
+binary_expression [150,158]
+at 2
+
+New cluster:
+MOVE from binary_expression [205,214]
+------------
+===
+move-tree
+---
+identifier: min [205,208]
+to
+binary_expression [205,214]
+at 2
+
+New cluster:
+MOVE from binary_expression [238,247]
+------------
+===
+move-tree
+---
+identifier: min [238,241]
+to
+binary_expression [238,247]
+at 2
+
+New cluster:
+===
+insert-node
+---
+<: < [166,167]
+to
+binary_expression [150,158]
+at 2
+------------
+===
+insert-node
+---
+<: < [166,167]
+to
+binary_expression [150,158]
+at 2
+
+New cluster:
+UPDATE from n1 to min
+------------
+===
+update-node
+---
+identifier: n1 [150,152]
+replace n1 by min
+
+New cluster:
+===
+insert-node
+---
+<: < [198,199]
+to
+binary_expression [205,214]
+at 2
+------------
+===
+insert-node
+---
+<: < [198,199]
+to
+binary_expression [205,214]
+at 2
+
+New cluster:
+===
+insert-node
+---
+<: < [230,231]
+to
+binary_expression [238,247]
+at 2
+------------
+===
+insert-node
+---
+<: < [230,231]
+to
+binary_expression [238,247]
+at 2
+
+New cluster:
+===
+delete-node
+---
+<=: <= [153,155]
+===
+------------
+===
+delete-node
+---
+<=: <= [153,155]
+===
+
+New cluster:
+===
+delete-node
+---
+else_clause [178,197]
+===
+------------
+===
+delete-node
+---
+else_clause [178,197]
+===
+===
+delete-node
+---
+else: else [178,182]
+===
+
+New cluster:
+===
+delete-node
+---
+>=: >= [209,211]
+===
+------------
+===
+delete-node
+---
+>=: >= [209,211]
+===
+
+New cluster:
+===
+delete-node
+---
+>=: >= [242,244]
+===
+------------
+===
+delete-node
+---
+>=: >= [242,244]
+===
+
+New cluster:
+===
+delete-node
+---
+else_clause [267,313]
+===
+------------
+===
+delete-node
+---
+else_clause [267,313]
+===
+===
+delete-node
+---
+else: else [267,271]
+===
+

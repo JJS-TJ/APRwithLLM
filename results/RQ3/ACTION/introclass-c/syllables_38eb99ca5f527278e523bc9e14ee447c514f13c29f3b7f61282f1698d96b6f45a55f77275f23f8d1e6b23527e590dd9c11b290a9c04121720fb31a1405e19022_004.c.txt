@@ -1,0 +1,79 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [226,282]
+to
+binary_expression [226,282]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [226,282]
+to
+binary_expression [226,282]
+at 0
+===
+insert-node
+---
+||: || [263,265]
+to
+binary_expression [226,282]
+at 1
+
+New cluster:
+MOVE from binary_expression [226,282]
+------------
+===
+move-tree
+---
+binary_expression [226,262]
+    binary_expression [226,242]
+        subscript_expression [226,235]
+            identifier: string [226,232]
+            [: [ [232,233]
+            identifier: i [233,234]
+            ]: ] [234,235]
+        ==: == [236,238]
+        char_literal [239,242]
+            ': ' [239,240]
+            character: a [240,241]
+            ': ' [241,242]
+    ||: || [243,245]
+    binary_expression [246,262]
+        subscript_expression [246,255]
+            identifier: string [246,252]
+            [: [ [252,253]
+            identifier: i [253,254]
+            ]: ] [254,255]
+        ==: == [256,258]
+        char_literal [259,262]
+            ': ' [259,260]
+            character: e [260,261]
+            ': ' [261,262]
+to
+binary_expression [226,282]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [266,282]
+    subscript_expression [266,275]
+        identifier: string [266,272]
+        [: [ [272,273]
+        identifier: i [273,274]
+        ]: ] [274,275]
+    ==: == [276,278]
+    char_literal [279,282]
+        ': ' [279,280]
+        character: i [280,281]
+        ': ' [281,282]
+to
+binary_expression [226,282]
+at 2
+

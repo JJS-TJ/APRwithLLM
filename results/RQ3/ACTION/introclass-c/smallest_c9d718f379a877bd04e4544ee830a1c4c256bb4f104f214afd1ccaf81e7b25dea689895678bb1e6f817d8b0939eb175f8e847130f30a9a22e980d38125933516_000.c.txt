@@ -1,0 +1,308 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+declaration [50,61]
+    primitive_type: double [50,56]
+    identifier: min [57,60]
+    ;: ; [60,61]
+to
+compound_statement [11,560]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [181,192]
+    assignment_expression [181,191]
+        identifier: min [181,184]
+        =: = [185,186]
+        identifier: num1 [187,191]
+    ;: ; [191,192]
+to
+compound_statement [11,560]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [196,228]
+    if: if [196,198]
+    parenthesized_expression [199,211]
+        (: ( [199,200]
+        binary_expression [200,210]
+            identifier: num2 [200,204]
+            <: < [205,206]
+            identifier: min [207,210]
+        ): ) [210,211]
+    expression_statement [217,228]
+        assignment_expression [217,227]
+            identifier: min [217,220]
+            =: = [221,222]
+            identifier: num2 [223,227]
+        ;: ; [227,228]
+to
+compound_statement [11,560]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [232,264]
+    if: if [232,234]
+    parenthesized_expression [235,247]
+        (: ( [235,236]
+        binary_expression [236,246]
+            identifier: num3 [236,240]
+            <: < [241,242]
+            identifier: min [243,246]
+        ): ) [246,247]
+    expression_statement [253,264]
+        assignment_expression [253,263]
+            identifier: min [253,256]
+            =: = [257,258]
+            identifier: num3 [259,263]
+        ;: ; [263,264]
+to
+compound_statement [11,560]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [268,300]
+    if: if [268,270]
+    parenthesized_expression [271,283]
+        (: ( [271,272]
+        binary_expression [272,282]
+            identifier: num4 [272,276]
+            <: < [277,278]
+            identifier: min [279,282]
+        ): ) [282,283]
+    expression_statement [289,300]
+        assignment_expression [289,299]
+            identifier: min [289,292]
+            =: = [293,294]
+            identifier: num4 [295,299]
+        ;: ; [299,300]
+to
+compound_statement [11,560]
+at 8
+
+New cluster:
+MOVE from compound_statement [11,560]
+------------
+===
+move-tree
+---
+expression_statement [216,256]
+    call_expression [216,255]
+        identifier: printf [216,222]
+        argument_list [222,255]
+            (: ( [222,223]
+            string_literal [223,248]
+                ": " [223,224]
+                string_content: %.0lf is the smallest [224,245]
+                escape_sequence: \n [245,247]
+                ": " [247,248]
+            ,: , [248,249]
+            identifier: num1 [250,254]
+            ): ) [254,255]
+    ;: ; [255,256]
+to
+compound_statement [11,560]
+at 9
+
+New cluster:
+UPDATE from num1 to min
+------------
+===
+update-node
+---
+identifier: num1 [250,254]
+replace num1 by min
+
+New cluster:
+===
+delete-node
+---
+if_statement [164,256]
+===
+------------
+===
+delete-node
+---
+if: if [164,166]
+===
+===
+delete-node
+---
+if_statement [164,256]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [167,210]
+    (: ( [167,168]
+    binary_expression [168,209]
+        binary_expression [168,194]
+            binary_expression [168,179]
+                identifier: num1 [168,172]
+                <: < [173,174]
+                identifier: num2 [175,179]
+            &&: && [180,182]
+            binary_expression [183,194]
+                identifier: num1 [183,187]
+                <: < [188,189]
+                identifier: num3 [190,194]
+        &&: && [195,197]
+        binary_expression [198,209]
+            identifier: num1 [198,202]
+            <: < [203,204]
+            identifier: num4 [205,209]
+    ): ) [209,210]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [260,352]
+    if: if [260,262]
+    parenthesized_expression [263,306]
+        (: ( [263,264]
+        binary_expression [264,305]
+            binary_expression [264,290]
+                binary_expression [264,275]
+                    identifier: num2 [264,268]
+                    <: < [269,270]
+                    identifier: num1 [271,275]
+                &&: && [276,278]
+                binary_expression [279,290]
+                    identifier: num2 [279,283]
+                    <: < [284,285]
+                    identifier: num3 [286,290]
+            &&: && [291,293]
+            binary_expression [294,305]
+                identifier: num2 [294,298]
+                <: < [299,300]
+                identifier: num4 [301,305]
+        ): ) [305,306]
+    expression_statement [312,352]
+        call_expression [312,351]
+            identifier: printf [312,318]
+            argument_list [318,351]
+                (: ( [318,319]
+                string_literal [319,344]
+                    ": " [319,320]
+                    string_content: %.0lf is the smallest [320,341]
+                    escape_sequence: \n [341,343]
+                    ": " [343,344]
+                ,: , [344,345]
+                identifier: num2 [346,350]
+                ): ) [350,351]
+        ;: ; [351,352]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [356,448]
+    if: if [356,358]
+    parenthesized_expression [359,402]
+        (: ( [359,360]
+        binary_expression [360,401]
+            binary_expression [360,386]
+                binary_expression [360,371]
+                    identifier: num3 [360,364]
+                    <: < [365,366]
+                    identifier: num1 [367,371]
+                &&: && [372,374]
+                binary_expression [375,386]
+                    identifier: num3 [375,379]
+                    <: < [380,381]
+                    identifier: num2 [382,386]
+            &&: && [387,389]
+            binary_expression [390,401]
+                identifier: num3 [390,394]
+                <: < [395,396]
+                identifier: num4 [397,401]
+        ): ) [401,402]
+    expression_statement [408,448]
+        call_expression [408,447]
+            identifier: printf [408,414]
+            argument_list [414,447]
+                (: ( [414,415]
+                string_literal [415,440]
+                    ": " [415,416]
+                    string_content: %.0lf is the smallest [416,437]
+                    escape_sequence: \n [437,439]
+                    ": " [439,440]
+                ,: , [440,441]
+                identifier: num3 [442,446]
+                ): ) [446,447]
+        ;: ; [447,448]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [452,544]
+    if: if [452,454]
+    parenthesized_expression [455,498]
+        (: ( [455,456]
+        binary_expression [456,497]
+            binary_expression [456,482]
+                binary_expression [456,467]
+                    identifier: num4 [456,460]
+                    <: < [461,462]
+                    identifier: num1 [463,467]
+                &&: && [468,470]
+                binary_expression [471,482]
+                    identifier: num4 [471,475]
+                    <: < [476,477]
+                    identifier: num2 [478,482]
+            &&: && [483,485]
+            binary_expression [486,497]
+                identifier: num4 [486,490]
+                <: < [491,492]
+                identifier: num4 [493,497]
+        ): ) [497,498]
+    expression_statement [504,544]
+        call_expression [504,543]
+            identifier: printf [504,510]
+            argument_list [510,543]
+                (: ( [510,511]
+                string_literal [511,536]
+                    ": " [511,512]
+                    string_content: %.0lf is the smallest [512,533]
+                    escape_sequence: \n [533,535]
+                    ": " [535,536]
+                ,: , [536,537]
+                identifier: num4 [538,542]
+                ): ) [542,543]
+        ;: ; [543,544]
+
