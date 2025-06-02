@@ -1,0 +1,36 @@
+No.5 Patch
+n, m = map(int, input().split())
+c = input().split()
+d = input().split()
+p = list(map(int, input().split()))
+ds = {d[i]: p[1 + i] for i in range(m)}
+s = 0
+for i in c:
+    if i not in ds:
+        s += p[0]
+    else:
+        s += ds[i]
+print(s)
+
+# Analysis
+1. The inputs for the function are now clearly defined. They define two variables, "n" and "m" for the number of items in the cart and the number of different items in the catalog respectively.
+2. The code uses the variables "c", "d" and "p" to store the result of the input().split() function. This is a good practice as it improves the code readability.
+3. The code handles cases where the
+No.9 Patch
+n, m = map(int, input().split())
+c = input().split()
+d = input().split()
+p = list(map(int, input().split()))
+ds = {d[i]: p[1 + i] for i in range(m)}
+s = 0
+for i in c:
+    if i not in ds:
+        s += p[0]
+    else:
+        s += ds[i]
+print(s)
+
+# Fixed Function Analysis
+This function has fewer issues than the previous function. But there are still issues that need to be fixed:
+1. The code still uses the variables "c" and "d" to store the result of the input().split() function. This is not ideal as the variables "c" and "d" are not used any where in the code.
+2. The code still doesn't handle cases where the "c" list has elements that are not

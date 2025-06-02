@@ -1,0 +1,6 @@
+No.6 Patch
+N = int(input())
+for i in range(N):
+    print(N, end='')
+
+# Analysis

@@ -1,0 +1,16 @@
+No.0 Patch
+a, b = map(int, input().split())
+
+while a > 0 and b > 0:
+    digit_sum = (a % 10) + (b % 10)
+    if digit_sum >= 10:
+        print("Hard")
+        break
+    a //= 10
+    b //= 10
+else:
+    print("Easy")
+
+# Analysis
+Analysis: The function now checks if either a or b is a single digit number and handles it properly.
+<|endoftext|>

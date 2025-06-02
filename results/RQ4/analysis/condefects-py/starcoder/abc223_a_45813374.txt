@@ -1,0 +1,10 @@
+No.9 Patch
+n=int(input())
+if n<100:
+    print("No")
+elif n%100==0:
+    print("Yes")
+else:
+    print("No")
+
+# Analysis<|endoftext|>

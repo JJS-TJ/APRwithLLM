@@ -1,0 +1,25 @@
+No.0 Patch
+n,m=map(int,input().split())
+s=input()
+t=input()
+k=3
+if s==t[:n]:
+  k-=2
+if s==t[-n:]:
+  k-=1
+print(k)
+
+# Analysis
+The code is trying to find a substring 's' in 't'. If 's' is at the beginning of 't', it decrements 'k' by 2. If 's' is at the end of 't', it decrements 'k'
+No.6 Patch
+n,m=map(int,input().split())
+s=input()
+t=input()
+k=3
+if t[0:n]==s:
+  k-=2
+elif t[-n::]==s:
+  k-=1
+if t[0:n]==s and t[-n::]==s:
+  k-=1
+print(k)<|endoftext|>

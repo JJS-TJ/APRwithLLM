@@ -1,0 +1,16 @@
+No.2 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else idx)
+
+# Analysis
+// Analysis
+The function is supposed to take in a string from the user, then find the index of
+No.3 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else -1)
+
+# Analysis
+// Analysis
+The function is supposed to take in a string from the user, then find the index

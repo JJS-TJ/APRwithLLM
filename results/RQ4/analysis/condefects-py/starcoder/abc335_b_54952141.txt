@@ -1,0 +1,38 @@
+No.2 Patch
+n = int(input())
+for i in range(n+1):
+  for j in range(n+1):
+    for k in range(n+1):
+      if i + j + k <= n:
+        print(i,j,k)
+<|endoftext|>
+No.3 Patch
+n = int(input())
+for i in range(n+1):
+  for j in range(n+1):
+    for k in range(n+1):
+      if i + j + k <= n:
+        print(i,j,k)
+
+# Analysis
+Analysis:
+
+Now that we have fixed this bug, we should now be able to get the intended output.
+
+# Fixed Function
+n = int(input())
+for i in range(n+1):
+  for j in range(n
+No.4 Patch
+n = int(input())
+for i in range(n+1):
+  for j in range(n+1):
+    for k in range(n+1):
+      if i + j + k <= n:
+        print(i,j,k)
+
+Analysis
+This is the same as the code above but with a fixed loop range of n+1 instead of n.
+
+# Challenge
+The challenge is to write a function that prints all combinations of n numbers where the sum of the n numbers is less than or equal

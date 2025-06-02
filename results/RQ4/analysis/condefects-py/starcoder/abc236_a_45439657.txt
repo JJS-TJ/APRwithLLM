@@ -1,0 +1,19 @@
+No.0 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])<|endoftext|>
+No.3 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Analysis
+This fixed function solves this problem. The function now uses the correct indexes to access the characters. This can be verified by observing the fixed function.
+
+# Conclusion
+We have seen that functions can be defined in
+No.7 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+<|endoftext|>

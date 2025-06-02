@@ -1,0 +1,28 @@
+No.6 Patch
+s1 = input()
+s2 = input()
+
+if [s1, s2]==["#.",".#"] or [s2, s1]==["#.",".#"]:
+    print('No')
+    exit()
+else:
+    print('Yes')
+    
+# Output
+
+# 1. #.
+# 2. #.
+# Yes
+
+# Explanation
+
+# In the first case, the first string is "#." and the second
+No.8 Patch
+s1 = input()
+s2 = input()
+
+if [s1, s2]==["#.",".#"] or [s2, s1]==["#.",".#"]:
+    print('No')
+else:
+    print('Yes')
+<|endoftext|>

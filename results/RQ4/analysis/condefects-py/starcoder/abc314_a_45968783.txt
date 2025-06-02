@@ -1,0 +1,17 @@
+No.2 Patch
+s = '3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'
+
+n = int(input())
+
+if n == 0:
+  print('0.')
+else:
+  print(s[:n+2])
+
+# Explanation
+
+To fix the issue of the code not handling 'n' being 0, we added an if statement that prints '0.' if 'n' is 0. 
+
+To fix the issue of the code trying to slice the string 's' to calculate the decimal number, we simply print the string 's' up to index 'n+2'. This will print 'n+2' digits of the decimal number starting from the first digit.
+
+To fix the issue of the code failing to handle negative

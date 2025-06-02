@@ -1,0 +1,49 @@
+No.4 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = []
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)
+
+# Analysis
+
+The function is fixed, but you still have to make sure that the range of values for i is between L and R. 
+
+# Fixed Function
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = []
+for i in a:
+    if i < L:
+        ans.append(L)
+No.6 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)
+<|endoftext|>
+No.8 Patch
+N, L, R = map(int, input().split())
+a = list(map(int, input().split()))
+ans = [] 
+for i in a:
+    if i < L:
+        ans.append(L)
+    elif i > R:
+        ans.append(R)
+    else:
+        ans.append(i)
+print(*ans)<|endoftext|>

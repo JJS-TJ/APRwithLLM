@@ -1,0 +1,85 @@
+No.2 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+<|endoftext|>
+No.4 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+else:
+    print("invalid day")
+
+Analysis:
+After fixing the bug, the else statement prints the string "invalid day" when the input is not "Monday", "Tuesday", "Wednesday", "Thursday" or "Friday". 
+
+# Functions
+def welcome():
+    print("
+No.5 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+
+# The correct syntax is elif.
+# The syntax for elif is as follows:
+#
+# elif condition1:
+#     statement1
+# elif condition2:
+#     statement2
+# elif condition3:
+#     statement3
+# and so on..
+No.6 Patch
+s=input()
+if s=="Monday":
+    print(5)
+elif s=="Tuesday":
+    print(4)
+elif s=="Wednesday":
+    print(3)
+elif s=="Thursday":
+    print(2)
+elif s=="Friday":
+    print(1)
+else:
+    print("Invalid input")
+
+# Output
+# Monday
+# 5
+# Tuesday
+# 4
+# Wednesday
+# 3
+# Thursday
+# 2
+# Friday
+# 1
+# Saturday
+# Invalid input

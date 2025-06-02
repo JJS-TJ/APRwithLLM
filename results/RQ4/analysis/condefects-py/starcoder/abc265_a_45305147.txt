@@ -1,0 +1,10 @@
+No.4 Patch
+x,y,n = map(int,input().split())
+yn = n//3
+xn = n - yn*3
+print(min(xn*x +  yn*y,n*x))
+
+# Analysis
+Analysis:
+
+This code is trying to find the minimum cost to purchase 'n' items. The cost of each item depends on whether it is purch

@@ -1,0 +1,29 @@
+No.1 Patch
+def isPalindrome(n):
+  strn = str(n)
+  #print(strn)
+  if(len(strn)==1):
+    return True
+  for i in range(len(strn)//2):
+    if(strn[i] != strn[len(strn)-1-i]):
+      return False
+  return True
+
+N=int(input())
+index=1
+s = set()
+l=[]
+while (True):
+  flg=0
+  three=index*index*index
+  if(three>N):
+    break
+  l.append(three)
+  index+=1
+
+for i in reversed(l):
+  if(isPalindrome(i)):
+    print(i)
+    break
+<|EOT|>
+<|endoftext|>

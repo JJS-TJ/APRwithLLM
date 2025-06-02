@@ -1,0 +1,30 @@
+No.5 Patch
+n = int(input())
+s = input()
+t = input()
+
+p = 0
+
+for i in range(n):
+    if s[i] == "1" or s[i] == "l":
+        if t[i] == "1" or t[i] == "l":
+            p += 1
+
+    elif s[i] == "0" or s[i] == "o":
+        if t[i] == "0" or t[i] == "o":
+            p += 1
+
+    elif s[i] == t[i]:
+        if s[i] != "1" and s[i] != "l" and s[i] != "0" and s[i] != "o":
+            p += 1
+            
+if p == n:
+    print("Yes")
+    
+else:
+    print("No")
+
+# Analysis
+The Buggy function is not working as expected. The function is supposed to check if the string "s" matches the string "t" in terms of character substitution. The characters 1, l, 0, o can be interchanged with each other, but other characters cannot be interchanged. For example, if "s" is "h3ll0" and "t" is "h3llo", the function should return "Yes" because the characters 3 and o are interchanged.
+
+The Correct function is not working as expected

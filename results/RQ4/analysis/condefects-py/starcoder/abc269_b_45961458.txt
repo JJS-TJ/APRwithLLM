@@ -1,0 +1,17 @@
+No.8 Patch
+n = 10
+s = [input()for i in range(n)]
+
+def get_index(s):
+    a = []
+    b = []
+    for i in range(len(s)):
+        for j in range(len(s)):
+            if s[i][j] == '#':
+                a.append(i)
+                b.append(j)
+    return a,b
+
+a, b = get_index(s)
+print(min(a)+1, max(a)+1)
+print(min(b)+1, max(b)+1)<|endoftext|>

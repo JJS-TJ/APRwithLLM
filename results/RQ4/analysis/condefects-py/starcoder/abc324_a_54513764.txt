@@ -1,0 +1,65 @@
+No.0 Patch
+result="Yes"
+N=int(input())
+lis=list(map(int,input().split(' ')))
+
+for i in range(len(lis)-1):
+    if lis[i]!=lis[i+1]:
+        result="No"
+
+print(result)
+
+# Analysis
+Analysis:
+
+The fixed function can be used to solve this problem.
+
+# Output
+The output of the fixed function will be:
+
+Yes
+
+# Explanation
+Explanation:
+
+Both the input of the numbers and the space has been taken care of.
+
+# Resources
+No.1 Patch
+result="Yes"
+
+# Get the list from the user
+N=int(input())
+lis=list(map(int,input().split(' ')))
+
+# Check all the numbers but the last one
+for i in range(len(lis)-1):
+
+    # Check if the current number is not equal to the next number
+    if lis[i]!=lis[i+1]:
+        result="No"
+
+print(result)
+
+# Analysis
+
+This is a simple fix for the previous program. The only thing we have to do is remove the space at the end of the
+No.4 Patch
+result="Yes"
+N=int(input())
+lis=list(map(int,input().split()))
+
+for i in range(len(lis)-1):
+    if lis[i]!=lis[i+1]:
+        result="No"
+
+print(result)
+
+# Analysis
+Analysis:
+
+In order to make it work correctly, we need to add a parameter to split() function so that it will not use the spaces as the seperators.
+
+That is what this code does:
+
+lis=list(map(int,input().split(' ')))

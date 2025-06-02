@@ -1,0 +1,6 @@
+No.9 Patch
+print(input().translate({ord("0"): ord("1"), ord("1"): ord("0")}))
+
+# Explanation
+// Explanation:
+The code

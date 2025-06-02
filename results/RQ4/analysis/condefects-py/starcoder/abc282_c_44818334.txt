@@ -1,0 +1,21 @@
+No.7 Patch
+n=int(input())
+s=input()
+s=list(s)
+cnt=0
+for i in range(n):
+    if s[i]=='"':
+        cnt+=1
+    if s[i]==",":
+        if cnt%2==0:
+            s[i]="."
+ans=""
+for i in range(n):
+    ans+=s[i]
+print(ans)
+
+# Analysis
+Analysis:
+The code you provided is a Python script to process a string input. It is intended to replace all commas in the string with periods, but only if the comma is not enclosed in quotation marks.
+
+The bug in your code is the usage of the replace() method in the if-statement, which is incorrect. The replace() method is a string method in Python, it does

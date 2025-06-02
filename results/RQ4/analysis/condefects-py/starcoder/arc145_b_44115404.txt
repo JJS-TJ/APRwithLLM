@@ -1,0 +1,11 @@
+No.2 Patch
+n, a, b = map(int, input().split())
+
+def f(x):
+    return (x // a) * min(a, b) + min(x % a, b - 1)
+
+print(max(f(n) - f(a - 1), 0))
+
+# Analysis
+// Analysis
+Now let's take a closer look at this function. First, we calculate the quotient of x and a. Then we multiply the quotient by the minimum of a and b. Finally, we add the minimum of the remainder of x and a and b - 1.

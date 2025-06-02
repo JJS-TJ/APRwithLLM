@@ -1,0 +1,4 @@
+No.7 Patch
+S = input()
+
+print(S[:-1] + chr(ord(S[-1]) + 1))<|endoftext|>

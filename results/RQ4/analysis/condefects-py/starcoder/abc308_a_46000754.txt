@@ -1,0 +1,49 @@
+No.0 Patch
+S = list(map(int, input().split()))
+
+N = len(S)
+sorted_S = sorted(S)
+for i in range(N):
+    if S[i] != sorted_S[i] or not(100 <= S[i] <= 675) or S[i]%25 != 0:
+        print('No')
+        break
+else:
+    print('Yes')
+
+Analysis:
+After fixing the bugs, the time complexity has reduced from O(NlogN) to O(N).
+"""
+<|endoftext|>
+No.2 Patch
+S = list(map(int, input().split()))
+
+N = len(S)
+if not(100 <= S[0] <= 675) or S[0]%25 != 0 or sorted(S) != S:
+    print('No')
+    exit()
+for i in range(1, N):
+    if not(100 <= S[i] <= 675) or S[i]%25 != 0:
+        print('No')
+        exit()
+else:
+    print('Yes')
+
+<|endoftext|>
+No.3 Patch
+S = list(map(int, input().split()))
+
+N = len(S)
+for i in range(N):
+    if not(100 <= S[i] <= 675) or S[i]%25 != 0:
+        print('No')
+        exit()
+else:
+    if sorted(S) == S:
+        print('Yes')
+    else:
+        print('No')
+
+# Analysis
+Analysis:
+This function is almost the same as the previous function with one exception. The condition to check if the list is sorted or not is done in the first iteration itself.
+<|endoftext|>

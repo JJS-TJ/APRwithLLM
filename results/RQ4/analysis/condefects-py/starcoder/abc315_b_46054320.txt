@@ -1,0 +1,12 @@
+No.5 Patch
+M = int(input())
+D = list(map(int, input().split()))
+
+middleD = sum(D)//2 + 1
+sumD = 0
+for i in range(M):
+  sumD += D[i]
+  if sumD >= middleD:
+    print(i+1, D[i] - (sumD - middleD))
+    break
+<|endoftext|>

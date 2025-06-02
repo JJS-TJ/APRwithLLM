@@ -1,0 +1,23 @@
+No.2 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+Analysis:
+
+The fixed function is a simple comparison of two strings. The function reads two strings from the input, and then checks if the first string is equal
+No.8 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Explanation
+
+The fixed version of the function is the same as the buggy version, except that we have substituted the string "AtCorder" with the string

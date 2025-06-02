@@ -1,0 +1,47 @@
+No.1 Patch
+n = int(input())
+s = input()
+result = set()
+ch = s[0]
+length = 1
+result.add((ch, length))
+for i in range(1, n):
+    if s[i-1] == s[i]:
+        length += 1
+        result.add((ch, length))
+    else:
+        ch = s[i]
+        length = 1
+        result.add((ch, length))
+result = len(result)
+print(result)
+
+# Explanation
+To fix this buggy code, first, we will change the variable `result` to a list.
+
+result = []
+
+Next, we will make sure that only unique tuples are added to the list.
+
+if (ch, length) not in result:
+    result.append((ch, length))
+
+Next, we will change the `set` to a `dict` because the `dict` datatype in python is ordered and we can
+No.3 Patch
+n = int(input())
+s = input()
+result = set()
+ch = s[0]
+length = 1
+result.add((ch, length))
+for i in range(1, n):
+    if s[i-1] == s[i]:
+        length += 1
+        result.add((ch, length))
+    else:
+        ch = s[i]
+        length = 1
+        result.add((ch, length))
+result = len(result)
+print(result)
+<|endoftext|>

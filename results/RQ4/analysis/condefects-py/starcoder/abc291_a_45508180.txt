@@ -1,0 +1,81 @@
+No.0 Patch
+S = input()
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+
+# Explanation
+
+In Python, the range is always exclusive of the upper bound. That means the range(0, 5) will generate values from 0 to
+No.1 Patch
+S = input()
+
+for i in range(len(S)):
+  if ord('A') <= ord(S[i]) <= ord('Z'):
+    print(i + 1)
+
+# Output
+# The number of fixed elements
+
+# Test Case 1
+# input
+# 
+# 3
+# 
+#
+No.2 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Analysis
+# Analysis:
+The given code snippet seems to be written in Python. The code is designed to print the index of all the capital letters present in the input string.
+
+The
+No.3 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+
+
+# Analysis
+# Analysis:
+The for loop can be rewritten as
+
+for i in range(len(S)):
+  if S[i].isupper():
+No.4 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i] in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+    print(i + 1)
+<|endoftext|>
+No.5 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+<|endoftext|>
+No.7 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+
+# Explanation
+Python has a built-in function range() to return a sequence of numbers. The range function takes two parameters. The first parameter is the start and the
+No.8 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i] >= 'A' and S[i] <= 'Z':
+    print(i + 1)
+<|endoftext|>

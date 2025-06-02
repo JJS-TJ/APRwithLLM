@@ -1,0 +1,8 @@
+No.6 Patch
+n=int(input())
+print('YNeos'[n<-2**31 or n>2**31-1::2])
+
+# Analysis
+Analysis:
+
+The fixed function is trying to print 'Yes' or 'No' based on whether the

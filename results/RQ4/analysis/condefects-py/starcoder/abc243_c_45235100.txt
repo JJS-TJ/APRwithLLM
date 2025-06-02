@@ -1,0 +1,29 @@
+No.7 Patch
+from collections import defaultdict
+
+def solve(n, xy, s):
+    r_ok = defaultdict(lambda: float("inf"))
+    l_ok = defaultdict(lambda: float("-inf"))
+
+    for i in range(n):
+        x, y = xy[i]
+        if s[i] == "R":
+            r_ok[y] = min(r_ok[y], x)
+        else:
+            l_ok[y] = max(l_ok[y], x)
+
+    for x, y in xy:
+        if r_ok[y] < l_ok[y]:
+            return "Yes"
+
+    return "No"
+
+
+n = int(input())
+xy = []
+for i in range(n):
+    i, j = map(int, input().split())
+    xy.append((i, j))
+s = input()
+
+print(solve(n, xy, s))<|endoftext|>

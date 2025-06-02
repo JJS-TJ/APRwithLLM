@@ -1,0 +1,36 @@
+No.0 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n%998244353)<|endoftext|>
+No.1 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n%998244353)
+<|endoftext|>
+No.2 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n%998244353)
+
+# Analysis
+# Solution
+The fixed version of the function adds a modulo operation. The modulo operation is done to find the remainder after the division of
+No.3 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n%998244353)
+
+# Analysis
+# Solution
+The modulo operation is replaced by a simple remainder operation.
+<|endoftext|>
+No.4 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n%998244353)
+
+# Analysis
+# Solution
+This time, we were trying to find the modulo of the number given by the user.
+
+The reason why it

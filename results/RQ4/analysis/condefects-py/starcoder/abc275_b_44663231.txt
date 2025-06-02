@@ -1,0 +1,91 @@
+No.0 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=(a%mod)*(b%mod)*(c%mod)
+a2=(d%mod)*(e%mod)*(f%mod)
+print((a1-a2)%mod)
+
+# Analysis
+Analysis
+The fix is to wrap the entire product operation in a modulo operation. This way, even if the result is bigger than the modulo, the modulo operation will always yield a result within the range of the modulo.
+
+# In-built Modulo
+
+a,b,c,d,e
+No.1 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=a%mod*b%mod*c%mod
+a2=d%mod*e%mod*f%mod
+a1-=a2
+a1+=mod
+print(a1%mod)
+
+# Analysis
+
+The fixed function is essentially the same as the buggy function, except for one line where a1 is incremented by the modulo in order to bring it back within the range. This is the reason why the results are correct.
+
+# Further Reading
+
+<NAME>,
+No.2 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=a%mod*b%mod*c%mod
+a2=d%mod*e%mod*f%mod
+print((a1-a2)%mod)
+
+# Analysis
+This time the buggy function has been fixed, meaning that the product now takes into account the modulo operation.
+
+# Explanation
+Now let’s take a look at the result of the correct calculation. The product of (10^9)%998244353*10^
+No.3 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=a*b*c%mod
+a2=d*e*f%mod
+print((a1-a2)%mod)
+
+# Analysis
+The product is calculated and then modulo operation is performed. This way, we get the correct answer.
+
+This technique is not unique, but is very useful for problems that involve taking products and then subtracting.
+
+Problem 5
+
+The problem is very straightforward, but there is a subtle bug. Your job is to find the bug and fix
+No.4 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=(a%mod*b%mod*c%mod)%mod
+a2=(d%mod*e%mod*f%mod)%mod
+print((a1-a2)%mod)
+
+# Analysis
+
+The fix is simply to apply the modulo operation to the product calculation.
+<|endoftext|>
+No.7 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=a%mod*b%mod*c%mod
+a2=d%mod*e%mod*f%mod
+print((a1-a2+mod)%mod)
+
+# Analysis
+Analysis
+The fixed function is identical to the buggy function, but the difference is that the product is added to the modulo after the subtraction. The additional code (the line print((a1-a2+mod)%mod)) means that the modulo operation will be applied to the final result.
+No.8 Patch
+a,b,c,d,e,f=map(int,input().split())
+mod=998244353
+a1=(a*b%mod*c%mod)%mod
+a2=(d*e%mod*f%mod)%mod
+print((a1-a2)%mod)
+
+# Analysis
+
+Analysis
+The solution is to change the calculation for the first part of the equation from multiplication to a %mod *b %mod * c %mod, which ensures that the product will always be within the modulo range. Note that the modulo operation is applied to all parts of the equation.
+
+# Fixed Function
