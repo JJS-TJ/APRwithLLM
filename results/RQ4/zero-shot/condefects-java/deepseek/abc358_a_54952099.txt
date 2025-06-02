@@ -1,0 +1,30 @@
+No.9 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/godaddy/babylon/domain/Address.java
+package com.godaddy.babylon.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+/**
+ * Created by pankajpardasani on 11/07/2017.
+ */
+@Entity
+public class Address {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String street;
+    private String city;

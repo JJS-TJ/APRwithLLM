@@ -1,0 +1,86 @@
+No.1 Patch
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    TreeSet<String> set = new TreeSet<String>();
+    for(int i=0;i<k;i++) {
+        String temp = input.next();
+        set.add(temp);
+    }
+    Iterator<String> iterator = set.iterator();
+    while(iterator.hasNext() && n > 0) {
+        System.out.println(iterator.next());
+        n--;
+    }
+}
+
+//Explanation
+//The bug was in the while loop where it was checking the condition with cnt<3 but we need to check with n>0 as we have to print the names only up to n. 
+//Also, we can use TreeSet to maintain the names in sorted order as we need to print the names in lexicographical order.
+
+//Time Complexity: O(k log k)
+//Space Complexity: O(k)
+
+//Test cases:
+//3 4
+//david
+//bob
+//adam
+//clark
+
+//Output:
+//adam
+//bob
+//clark<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/lld/parkinglot/models/ParkingFloor.java
+package com.lld.parkinglot.models;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import
+No.4 Patch
+public static void main(String args[]) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int k = input.nextInt();
+    TreeSet<String> set = new TreeSet<String>();
+    for(int i=0;i<k;i++) {
+        String temp = input.next();
+        set.add(temp);
+    }
+    int cnt = 0;
+    Iterator<String> iterator = set.iterator();
+    while(iterator.hasNext() && cnt < n) {
+        System.out.println(iterator.next());
+        cnt++;
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/tianling/entities/Blog.java
+package com.tianling.entities;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "t_blog")
+public class Blog {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String title;
+
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
+    private String content;
+    private String firstPicture;
+    private String flag;
+    private Integer views;
+    private boolean appreciation;
+    private boolean shareStatement;
+    private boolean commentabled;
+    private boolean published;
+    private boolean recommend;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createTime;
+    @Temporal(

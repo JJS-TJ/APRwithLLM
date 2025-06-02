@@ -1,0 +1,91 @@
+No.2 Patch
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	int N = Utility.readInt();
+	int[] month = new int[N];
+	int sum = 0;
+	for(int i = 0; i < N; i++) {
+		month[i] = Utility.readInt();
+		sum += month[i];
+	}
+	
+	int remain = (sum + 1) / 2;
+	for(int i = 0; i < N; i++) {
+		if(remain <= month[i]) {
+			System.out.println((i+1) + " " + remain);
+			break;
+		}
+		remain -= month[i];
+	}
+	
+	
+
+}
+
+
+// Explanation 
+// In the buggy function, it didn't consider the case where the remaining amount is equal to the amount in the month. 
+// Therefore, the program was not returning the correct output. 
+// In the fixed function, it is fixed by adding "=" in the if condition. Now, the program will consider the case where the remaining amount is equal to the amount in the month.
+// Therefore, the output will be correct.
+
+
+// Test the function with the following input
+// Input: 12
+//        1 2 3 4 5 6 7 8 9 10 11 12
+// Output: 7 3<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// B
+No.4 Patch
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	int N = Utility.readInt();
+	int[] month = new int[N];
+	int sum = 0;
+	for(int i = 0; i < N; i++) {
+		month[i] = Utility.readInt();
+		sum += month[i];
+	}
+	
+	int remain = sum / 2 + 1;
+	for(int i = 0; i < N; i++) {
+		if(remain <= month[i]) {
+			System.out.println((i+1) + " " + remain);
+			break;
+		}
+		remain -= month[i];
+	}
+}
+
+// Explanation:
+// The bug in the original function is in the calculation of 'remain'. In the original function, remain is calculated as (sum + 1) / 2, which means the bug is in the if-condition statement. It should be (sum / 2 + 1) instead of (sum + 1) / 2. 
+// The reason for this bug is that it is not clear if the number of days remaining should be the ceiling or the floor of sum / 2 + 1. The correct calculation should be (sum / 2 + 1), because the number of days remaining should be the number of days that are halfway through the season, which should be rounded up, hence the sum / 2 + 1.
+// Finally, it is also important to fix the if-condition to be (remain <= month[
+No.6 Patch
+public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    int N = Utility.readInt();
+    int[] month = new int[N];
+    int sum = 0;
+    for(int i = 0; i < N; i++) {
+        month[i] = Utility.readInt();
+        sum += month[i];
+    }
+
+    int remain = (sum + 1) / 2;
+    for(int i = 0; i < N; i++) {
+        if(remain <= month[i]) {
+            System.out.println((i+1) + " " + remain);
+            break;
+        }
+        remain -= month[i];
+    }
+}
+
+// Explanation: 
+// In the buggy function, the if condition in the for loop checks if the remaining amount is less than the amount of money saved in the current month. If it is, the code prints the month number and the remaining amount. This is incorrect because the remaining amount can be equal to the amount saved in the current month.
+// To fix this bug, the if condition should be changed to check if the remaining amount is less than or equal to the amount saved in the current month. This ensures that if the remaining amount is equal to the amount saved in the current month, the code prints the month number and the remaining amount.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>public class Main {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] array1 = {1,

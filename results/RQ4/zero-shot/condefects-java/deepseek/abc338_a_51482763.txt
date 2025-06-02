@@ -1,0 +1,150 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    char [] s = sc.next().toCharArray();
+    if(s[0] < 'A' || 'Z' < s[0]) {
+        System.out.println("No");
+        return;
+    }
+    for(int i = 1; i < s.length; i++) {
+        if(s[i] < 'a' || 'z' < s[i]) {
+            System.out.println("No");
+            return;
+        }
+    }
+    System.out.println("Yes");
+}
+
+// The function was not correctly checking the characters in the input string after the first character, which is why it was always returning "No". The corrected function now correctly checks each character after the first one to ensure it is a lowercase letter, or else it will return "No".
+
+// Testing
+// Input: Abc
+// Output: Yes
+
+// Input: ABC
+// Output: No
+
+// Input: abc
+// Output: No
+
+// Input: aBc
+// Output: No
+
+// Input: AbC
+// Output: No
+
+// Input: ABc
+// Output: No
+
+// Input: AbC
+// Output: No
+
+// Input: ABC
+// Output: No
+
+// Input: aBC
+// Output: No
+
+// Input: AbC
+// Output: No
+
+// Input: ABc
+// Output: No
+
+// Input: AbC
+// Output: No
+
+// Input: AbC
+// Output: No<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//BankProject/src/main/java/com/bank/BankProject/Model/Account.java
+package com.bank.BankProject.Model;
+
+import javax.persistence.*;
+
+@Entity
+No.1 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	String s = sc.next();
+	if(Character.isLowerCase(s.charAt(0))) {
+		System.out.println("No");
+		return;
+	}
+	for(int i = 1; i < s.length(); i++) {
+		if(Character.isUpperCase(s.charAt(i))) {
+			System.out.println("No");
+			return;
+		}
+	}
+	System.out.println("Yes");
+}
+
+// The buggy function was using a char array to store the input string, then checking if the first character was a lowercase letter or not, and if the rest of the characters were uppercase or not. The buggy function had a bug because it was checking if the first character was a lowercase letter, but then it was checking if the rest of the characters were uppercase, not lowercase. 
+
+// The fixed function uses the String class's charAt() method to get the character at a specific index, and the Character class's isLowerCase() and isUpperCase() methods to check if a character is a lowercase or uppercase letter. This fixed function will return "Yes" if the first character is an uppercase letter and all other characters are lowercase, and "No" otherwise.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>public class Main {
+    public static void main(String[] args) {
+        BmiService service = new BmiService();
+        double weight = 70;
+        double height = 180;
+        double BMI = service.calculate(weight, height);
+        System.out.println("Your BMI is " + BMI);
+No.3 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");
+		return;
+	}
+	for(int i = 1; i < s.length; i++) {
+		if(s[i] < 'a' || 'z' < s[i]) {
+			System.out.println("No");
+			return;
+		}
+	}
+	System.out.println("Yes");
+}
+```
+
+In the buggy function, the code is checking only the first character of the string to see if it falls within the range of valid uppercase letters. However, the code should also check all the other characters in the string to ensure they fall within the valid lowercase letter range. In the fixed function, the code correctly checks all characters in the string to ensure they are valid.
+<|EOT|>
+No.6 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    char[] s = sc.next().toCharArray();
+    if (s[0] < 'A' || 'Z' < s[0]) {
+        System.out.println("No");
+        return;
+    }
+    for (int i = 1; i < s.length; i++) {
+        if (s[i] < 'a' || 'z' < s[i]) {
+            System.out.println("No");
+            return;
+        }
+    }
+    System.out.println("Yes");
+}
+
+// The bug was in the second for loop where it was checking the first character of the array instead of checking each character in the array.
+// Also, the code is now more readable and understandable.
+// The code now checks the first character for a capital letter and all other characters for being a lowercase letter.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Buggy Function
+No.8 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	char [] s = sc.next().toCharArray();
+	if(s[0] < 'A' || 'Z' < s[0]) {
+		System.out.println("No");
+		return;
+	}
+	for(int i = 1; i < s.length; i++) {
+		if(s[i] < 'a' || 'z' < s[i]) {
+			System.out.println("No");
+			return;
+		}
+	}
+	System.out.println("Yes");
+}
+
+// Provide a fix for the buggy function 
+
+// Buggy Function

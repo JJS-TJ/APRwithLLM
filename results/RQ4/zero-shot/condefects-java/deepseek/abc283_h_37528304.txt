@@ -1,0 +1,31 @@
+No.4 Patch
+private void solve(final FastIO io, final String[] args) {
+	io.setAutoFlush(false);
+	io.setAutoOutFlush(false);
+	/*
+	 * author: 31536000
+	 * AtCoder Beginner Contest 283 H問題
+	 * 考察メモ
+	 * popcountの総和、は桁ごとにばらして寄与は典型
+	 * で、そうするとmod 2^Nだし等差数列だし01加算だしでどう見てもfloorsum
+	 */
+	int T = io.nextInt();
+	while (T --> 0) {
+		int N = io.nextInt(), M = io.nextInt(), R = io.nextInt();
+		long ans = 0;
+		for (int i = 1; i <= N; i <<= 1) {
+			ans += ACL.MathLib.floor_sum((N - R) / M + 1, i << 1, M, R + i) - ACL.MathLib.floor_sum((N - R) / M + 1, i << 1, M, R);
+		}
+		io.println(ans);
+	}
+}
+
+// この修正により、iを定義するためのint型がlong型に変更されました。これは、バグを修正するための最善の解決策です。
+
+// また、ansの型もintからlongに変更されました。これは、オーバーフローを防ぐために重要です。
+
+// この変更により、バグが修正され、iとansのオーバーフローを防ぐことができます。
+
+// これは、バグを修正するために必要な最善の解決策です。
+
+// この変更により、バグが修正され、iとansのオーバ�

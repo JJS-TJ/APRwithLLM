@@ -1,0 +1,168 @@
+No.2 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K; i >= x; i--)
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+        } else {
+            for (int i = x; i <= K; i++)
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod;
+        }
+        System.out.println(dp[K]);
+    }
+
+}
+
+
+
+// Explanation
+// The bug in the original function is in the subtraction operation. In the buggy code, when a negative number is obtained from subtraction, it is simply converted to a positive number using the modulus operation. But it should be converted to a positive number plus the modulus. This is done in the fixed function by adding the modulus in subtraction operation. This ensures the result is always a positive number.
+
+// It's important to note that the modulus operation is used to prevent overflow when adding very large numbers together. If the sum exceeds the maximum value that can be stored in the data type, the modulus operation allows it to "wrap around" to a smaller value.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// The original function is buggy and will not work correctly for large inputs
+// Here is a corrected version of the function:
+
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    int n = scan.nextInt();
+    int m = scan.nextInt();
+    int[]
+No.3 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K;i >= x;i --)
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+        } else {
+            for (int i = x;i <= K;i ++)
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod;
+        }
+        System.out.println(dp[K]);
+    }
+
+}
+
+// The bug in the original code was that the code was not handling negative numbers properly when the "-" operation was performed. The mod operation does not behave as expected for negative numbers in some languages (like Java), so we had to add "mod" to prevent negative numbers.
+
+// The line "dp[i] = (dp[i] - dp[i - x]) % mod;" was changed to "dp[i] = (dp[i] - dp[i - x] + mod) % mod;" to handle the negative numbers when "-" operation is performed. This change ensures that the result of the subtraction operation will always be a non-negative number. 
+
+// After the change, the code now correctly handles the "-" operation and correctly prints the expected result for all operations.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Buggy function
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    int N = scan.nextInt();
+    int[] A = new int[N];
+    for(int
+No.6 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K; i >= x; i--)
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+        } else {
+            for (int i = x; i <= K; i++)
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod; // Fixed this line
+        }
+        System.out.println(dp[K]);
+    }
+}
+
+// The bug was in the subtraction operation where the value of dp[i - x] was being subtracted from dp[i]. But since it can be negative, it needs to be added with mod to prevent negative results.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Problem Description
+
+// Given an integer array A of size N. You can pick B elements from either left or right end of the array A to get maximum sum.
+
+// Find and return this maximum possible sum.
+
+// NOTE: Suppose B = 4 and array A contains 10 elements then:
+
+// You can pick first four elements or can pick last four elements or can pick 1 from front and 3 from back etc . you need to return the maximum possible sum of elements you can pick.
+
+
+
+// Problem Constraints
+// 1 <= N <= 105
+
+// 1 <= B <= N
+
+// -103 <= A[i] <= 103
+
+
+
+// Input Format
+// First argument is an integer array A.
+
+// Second
+No.9 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K;i >= x;i --)
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+        } else {
+            for (int i = x;i <= K;i ++)
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod;
+        }
+        System.out.println(dp[K]);
+    }
+}
+
+// Explanation
+/*
+The buggy code doesn't handle negative modulo operations correctly.
+Specifically, the line dp[i] = (dp[i] - dp[i - x]) % mod; can result in negative values, which are not allowed in modulo operations.
+To fix this, we can add mod to the subtraction result before taking the modulo, like so: dp[i] = (dp[i] - dp[i - x] + mod) % mod;.
+This guarantees that the result will always be a positive number, allowing us to perform the modulo operation without any unexpected results.
+*/
+
+// Test Cases
+/*
+5 5
++ 1
++ 2
+- 1
+- 2
++ 3
+
+Expected Output:
+1
+3
+2
+0
+1
+*/<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function
+
+// Buggy Function

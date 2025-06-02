@@ -1,0 +1,52 @@
+No.4 Patch
+public static void main(String[] args) {
+	FastScanner str = new FastScanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	String s = str.next();
+	Stack<Character> stack = new Stack<>();
+	Set<Character> set = new HashSet<>();
+	for (int i = 0; i < s.length(); i++) {
+		char c = s.charAt(i);
+		if (c == '(') {
+			stack.push(c);
+		} else if (c == ')') {
+			while (!stack.isEmpty() && stack.peek() != '(') {
+				set.remove(stack.pop());
+			}
+			if (!stack.isEmpty()) {
+				stack.pop();
+			}
+		} else {
+			if (set.contains(c)) {
+				out.print("No");
+				out.flush();
+				return;
+			} else {
+				stack.push(c);
+				set.add(c);
+			}
+		}
+	}
+	out.print("Yes");
+	out.flush();
+}
+
+
+// Explanation
+// The buggy code was removing the top element from the stack without checking whether it is an opening bracket or not. 
+// This is why it was failing for some test cases where the input string had brackets inside the brackets. 
+// The fixed code only removes the elements from the stack and set until it encounters an opening bracket and then pops the opening bracket also.
+// This ensures that all characters inside the outermost brackets are also removed from the stack and set. 
+// This is the desired behaviour for the problem as per the problem statement.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//Given an array A of size N, and a number K, print the smallest and largest element in the array every time you are replacing K elements by the average of all the numbers present in the array.
+
+//Input:
+//The first line of input contains an integer T denoting the number of test cases.
+//Then T test cases follow. Each test case contains two lines. 
+//The first line of each test case consists of two integers N and K.
+//The second line of each test case contains N space separated integers denoting elements of the array A.
+
+//Output:
+//For each test case, print the smallest and largest element in the array after each replacement.
+
+//Constraints:
+//1<=T<=100

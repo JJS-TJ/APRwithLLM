@@ -1,0 +1,24 @@
+No.6 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in); // 標準入力受取内容を書く
+    int N = sc.nextInt();
+    int M = sc.nextInt();
+    int P = sc.nextInt();
+    int c = 0;
+    for(int i = 0; i < N; i++){
+        if(N >= M+P*i){
+            c += 1;
+        }else{
+            break;
+        }
+    }
+    System.out.println(c);
+    sc.close();
+    return; //「おわり」の呪文
+}
+
+
+/*
+ * 解説
+ * 
+ * 元々のプログラムでは、NがM+P*i以下である場合に、cをインクリメントしていましたが、これは、NがM+P*iより小さい場合に、cをインクリメントするという誤った動作をしていま

@@ -1,0 +1,15 @@
+No.8 Patch
+public static void main(String args[]){
+	Scanner sc = new Scanner(System.in);
+	long N = sc.nextLong();
+	long A = sc.nextLong();
+	long B = sc.nextLong();
+
+	if(A > B){
+		System.out.println(Math.max((N/A - 1)*B + Math.min(N % A + 1, B), 0));
+	}else{
+		System.out.println(Math.max(N - A + 1, 0));
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Provide a fix for the buggy function 
+
+// Buggy Function

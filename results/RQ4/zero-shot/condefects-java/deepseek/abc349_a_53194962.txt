@@ -1,0 +1,17 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int sum = 0;
+    for (int i = 0; i < n - 1; i++) {
+        int a = sc.nextInt();
+        sum += a;
+    }
+    System.out.println(0 - sum);
+    sc.close();
+}
+
+// The bug was with the for loop. The loop was iterating from 1 to n - 1. This should be changed to 0 to n - 1.
+// The starting point of the loop should be 0, not 1. This is because we want to include all numbers from 1 to n - 1.
+// Starting from 1 means that the first number will not be included in the sum.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * Write a Java program to

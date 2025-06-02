@@ -1,0 +1,119 @@
+No.1 Patch
+public static void main(String[] args) {
+	try(Scanner sc = new Scanner(System.in)) {
+		int n = Integer.parseInt(sc.next());
+		int k = Integer.parseInt(sc.next());
+		int p = Integer.parseInt(sc.next());
+
+		Map<List<Integer>, Long> dp = new HashMap<List<Integer>, Long>();
+		List<Integer> s = new ArrayList<Integer>();
+		for(int i = 0; i < k; i++) s.add(0);
+		dp.put(s, 0L);
+
+		for(int i = 0; i < n; i++) {
+			int c = Integer.parseInt(sc.next());
+			int[] a = new int[k];
+			for(int j = 0; j < k; j++) a[j] = Integer.parseInt(sc.next());
+
+			Map<List<Integer>, Long> old = new HashMap<List<Integer>, Long>(dp);
+			for(Entry<List<Integer>, Long> entry : old.entrySet()) {
+				List<Integer> d = new ArrayList<Integer>(entry.getKey());
+				long val = entry.getValue();
+
+				for(int j = 0; j < k; j++) d.set(j, Math.min(d.get(j) + a[j], p));
+
+				if(dp.containsKey(d)) dp.put(d, Math.min(dp.get(d), val + c));
+				else dp.put(d, val + c);
+			}
+		}
+
+		List<Integer> t = new ArrayList<Integer>();
+		for(int i = 0; i < k; i++) t.add(p);
+
+		if(dp.containsKey(t)) System.out.println(dp.get(t));
+		else System.out.println(-1);
+	}
+}
+```
+Explanation:
+The bug was in the initialisation of the `t` list. It was initialised to `[5, 5, 5]` instead of `[p, p, p]` based on the value of `p`. This bug caused the code to always print `-1` as `t` will never be in the `dp` map. The correct initialisation should be `for(int i = 0; i < k; i++) t.add(p)`.
+<|EOT|>
+No.9 Patch
+public static void main(String[] args) {
+	try(Scanner sc = new Scanner(System.in)) {
+		int n = Integer.parseInt(sc.next());
+		int k = Integer.parseInt(sc.next());
+		int p = Integer.parseInt(sc.next());
+		
+		Map<List<Integer>, Long> dp = new HashMap<List<Integer>, Long>();
+		List<Integer> s = new ArrayList<Integer>();
+		for(int i = 0; i < k; i++) s.add(0);
+		dp.put(s, 0L);
+		
+		for(int i = 0; i < n; i++) {
+			int c = Integer.parseInt(sc.next());
+			int[] a = new int[k];
+			for(int j = 0; j < k; j++) a[j] = Integer.parseInt(sc.next());
+			
+			Map<List<Integer>, Long> old = new HashMap<List<Integer>, Long>(dp);
+			for(Entry<List<Integer>, Long> entry : old.entrySet()) {
+				List<Integer> d = new ArrayList<Integer>(entry.getKey());
+				long val = entry.getValue();
+				
+				for(int j = 0; j < k; j++) d.set(j, Math.min(d.get(j) + a[j], p));
+				
+				if(dp.containsKey(d)) dp.put(d, Math.min(dp.get(d), val + c));
+				else dp.put(d, val + c);
+			}
+		}
+		
+		List<Integer> t = new ArrayList<Integer>();
+		for(int i = 0; i < k; i++) t.add(p);
+		
+		if(dp.containsKey(t)) System.out.println(dp.get(t));
+		else System.out.println(-1);
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.github.shmvanhouten;
+
+import com.google.cloud.tools.jib.api.AbsoluteUnixPath;
+import com.google.cloud.tools.jib.api.FilePermissions;
+import com.google.cloud.tools.jib.api.buildplan.FileEntriesLayer;
+import com.google.cloud.tools.jib.api.buildplan.FileEntry;
+import com.google.cloud.tools.jib.api.buildplan.FilePermissionsLayer;
+import com.google.cloud.tools.jib.api.buildplan.Platform;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
+public class HelloJib {
+
+    public static void main(String[] args) {
+        Path path = Paths.get("src/main/resources/hello.txt");
+        List<Path> paths = Collections.singletonList(path);
+
+        // Add a FileEntry for the file.
+        FileEntriesLayer fileEntriesLayer =
+                FileEntriesLayer.builder().addEntry(path, "hello.txt").build();
+
+        // Add a FilePermission for the file.
+        FilePermissionsLayer filePermissionsLayer =
+                FilePermissionsLayer.builder()
+                        .add(
+                                AbsoluteUnixPath.get("/app/hello.txt"),
+                                FilePermissions.of(0, 0))
+                        .build();
+
+        // Create a Docker context.
+        DockerContext dockerContext =
+                DockerContext.builder()
+                        .addEntry(path, "hello.txt")
+                        .setPlatform(Platform.LINUX_AMD64)
+                        .addLayer(fileEntriesLayer)
+                        .addLayer(filePermissionsLayer)
+                        .build();
+
+        // Set the Docker context to Jib.
+        Jib jib = Jib.from("openjdk:8-jdk-alpine

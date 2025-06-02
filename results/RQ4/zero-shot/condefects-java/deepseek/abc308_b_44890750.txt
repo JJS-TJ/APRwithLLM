@@ -1,0 +1,61 @@
+No.6 Patch
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	Scanner scanner = new Scanner(System.in);
+	int N = scanner.nextInt();
+	int M = scanner.nextInt();
+	
+	ArrayList<String> list = new ArrayList<>();
+	int[] price = new int[M];
+	String[] strs = new String[N];
+	for(int i = 0; i < N; i++) {
+		strs[i] = scanner.next();
+	}
+	
+	for(int i = 0; i < M; i++) {
+		String str = scanner.next();
+		list.add(str);
+	}
+	
+	int default_price = scanner.nextInt();
+	for(int i = 0; i < M; i++) {
+		price[i] = scanner.nextInt();
+	}
+	
+	int result = 0;
+	for(String key : strs) {
+		int money = list.contains(key) ? price[list.indexOf(key)] : default_price;
+		result += money;
+	}
+	System.out.println(result);
+
+}
+
+// Explaination
+// Bug: in line 34, the price[i] = scanner.nextInt(); loop was setting the price for only the first M elements in the array. 
+// Fix: price[i] = scanner.nextInt(); loop should be set for all M elements in the array. It should start from i = 0 to i < M.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/company/hrm/model/Department.java
+package com.company.hrm.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Department {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    @OneToMany(mappedBy = "department", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Employee> employees;
