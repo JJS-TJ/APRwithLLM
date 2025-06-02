@@ -1,0 +1,37 @@
+No.0 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res);
+}
+</s>
+No.5 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    while (res.length() < 6){
+        p = scanner.next();
+        res.append(p);
+    }
+    out.println(res);
+}
+
+// Analysis
+
+</s>
+No.6 Patch
+void solve(){
+    StringBuilder res = new StringBuilder();
+    String p = scanner.next();
+    while (res.length() < 6){
+        res.append(p);
+    }
+    out.println(res.toString());
+}
+</s>

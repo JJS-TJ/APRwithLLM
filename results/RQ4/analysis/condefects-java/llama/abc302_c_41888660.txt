@@ -1,0 +1,19 @@
+No.8 Patch
+public static void check(){
+    for(int i=0;i<n-1;i++){
+        int count=0;
+        for(int j=0;j<m;j++){
+            char a=s[list.get(i+1)].charAt(j);
+            char b=s[list.get(i)].charAt(j);
+            if(a!=b){
+                count++;
+            }
+        }
+        if(count>1){
+            return;
+        }
+    }
+    ans=true;  
+}
+
+</s>

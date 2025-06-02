@@ -1,0 +1,17 @@
+No.4 Patch
+void solve() {
+    int n = in.nextInt();
+    long[] a = in.nextLongArray(n);
+    if (Math.abs(a[n - 1] - a[n - 2]) == 1) {
+        if ((a[n - 1] - (n - 1)) % 2 == 0) {
+            out.println("Bob");
+        } else {
+            out.println("Alice");
+        }
+    } else {
+        out.println("Alice");
+    }
+}
+
+// Analysis
+Analysis: The fixed function is correct because it is checking the difference between the last two elements of the array and the difference between the last element of the array and n-1, to determine the winner of a game. The fixed function is also correct because it is checking the difference between the last two elements of the array and the difference between the last element of the array and n-1, to determine the winner of a game. The correct condition for the winner is that the difference between the last two elements of the array should be 1 to win the game. The fixed function is also correct

@@ -1,0 +1,103 @@
+No.1 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	out.println(ss);
+	
+	
+	out.flush();
+}
+
+// Analysis
+Analysis:
+
+This code is supposed to read a string, sort it and output the sorted string. However, there are two issues:
+
+1. The sorting is done only by the first character of the string and not the whole string. Hence, the output string doesn't contain the sorted version of the input string.
+
+2. The output string doesn't contain the sorted version of the input string.
+
+To fix these issues
+No.2 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	out.println(ss);
+	
+	
+	out.flush();
+}
+
+// Analysis
+Analysis:
+
+This code is supposed to read a string, sort it and output the sorted string. However, there are two issues:
+
+1. The sorting is done only by the first character of the string and not the whole string. Hence, the output string doesn't contain the sorted version of the input string.
+
+2. The output string doesn't contain the sorted version of the input string.
+
+To fix these
+No.3 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	out.println(ss);
+	
+	out.flush();
+}
+
+// Analysis
+Analysis:
+
+This code is supposed to read a string, sort it and output the sorted string. However, there are two issues:
+
+1. The sorting is done only by the first character of the string and not the whole string. Hence, the output string doesn't contain the sorted version of the input string.
+
+2. The output string doesn't contain the sorted version of the input string.
+
+To fix these issues, you
+No.4 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	out.println(ss);
+	
+	
+	out.flush();
+}</s>
+No.6 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	PrintWriter out = new PrintWriter(System.out);
+	
+	String s =  sc.next();
+	char[] seq = s.toCharArray();
+	Arrays.sort(seq);
+	String ss = new String(seq);
+	out.println(ss);
+	
+	
+	out.flush();
+}
+</s>

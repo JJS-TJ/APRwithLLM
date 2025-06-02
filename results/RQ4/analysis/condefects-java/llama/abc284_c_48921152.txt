@@ -1,0 +1,131 @@
+No.1 Patch
+public static void main(String[] args) throws IOException {
+    BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st;
+
+    int N;
+    int M;
+
+    st = new StringTokenizer(input.readLine());
+
+    N = Integer.parseInt(st.nextToken());
+    M = Integer.parseInt(st.nextToken());
+
+    graph = new List[N+1];
+    for (int i = 1; i <= N; i++)
+        graph[i] = new ArrayList<>();
+
+    for (int i = 1; i <= M; i++) {
+        st = new StringTokenizer(input.readLine());
+
+        int from = Integer.parseInt(st.nextToken());
+        int to = Integer.parseInt(st.nextToken());
+        graph[from].add(to);
+        graph[to].add(from);
+    }
+
+    // 1부터 시작
+    boolean[] isVisit = new boolean[N+1];
+
+    Queue<Integer> queue = new LinkedList<>();
+    int cnt = 0;
+
+    for (int i = 1; i <= N; i++) {
+        if (isVisit[i])
+            continue;
+        queue.add(i);
+        cnt++;
+        isVisit[i] = true;
+
+        while (!queue.isEmpty()) {
+            int v = queue.poll();
+            for (Integer nextV : graph[v]) {
+                if (isVisit[nextV])
+                    continue;
+                queue.add(nextV);
+                isVisit[nextV] = true;
+            }
+        }
+    }
+    System.out.println(cnt);
+}
+
+// Analysis
+Bug:
+1. The BFS algorithm starts from every vertex because the start vertex is not specified in the problem description. This is a common mistake. It's better to start BFS from a single source vertex if the problem statement allows.
+
+2. There is no need to convert the graph to an adjacency list. A simple adjacency matrix could be used instead.
+
+3. The graph is undirected, but the edges are inserted twice into the adjacency list, once for each vertex. This is unnecessary and may cause confusion.
+
+4. If the graph is undirected, edges are added to both vertices in the adjacency list, but it's not guaranteed that the input will always contain the smallest vertex first. Therefore, it's better to sort the edges before adding them to the adjacency list.
+
+5. The isVisit array is not reset after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+6. The queue is not cleared after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+7. The queue is not reset after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+8. The visited array is not reset after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+9. The visited array is not reset after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+10. The visited array is not reset after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+11. The visited array is not reset after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+12. The visited array is not reset after each BFS traversal. This means that some vertices might be revisited during later traversals, leading to incorrect results.
+
+13. The visited array is not reset
+No.7 Patch
+public static void main(String[] args) throws IOException {
+    BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st;
+
+    int N, M;
+
+    st = new StringTokenizer(input.readLine());
+
+    N = Integer.parseInt(st.nextToken());
+    M = Integer.parseInt(st.nextToken());
+
+    // 1부터 시작
+    graph = new ArrayList[N+1];
+    for (int i = 1; i <= N; i++)
+        graph[i] = new ArrayList<>();
+
+    for (int i = 1; i <= M; i++) {
+        st = new StringTokenizer(input.readLine());
+
+        int from = Integer.parseInt(st.nextToken());
+        int to = Integer.parseInt(st.nextToken());
+        graph[from].add(to);
+        graph[to].add(from);
+    }
+
+    // 1부터 시작
+    boolean[] isVisit = new boolean[N+1];
+
+    Queue<Integer> queue = new LinkedList<>();
+    int cnt = 0;
+
+    for (int i = 1; i <= N; i++) {
+        if (isVisit[i])
+            continue;
+        queue.add(i);
+        cnt++;
+        isVisit[i] = true;
+
+        while (!queue.isEmpty()) {
+            int v = queue.poll();
+            for (Integer nextV : graph[v]) {
+                if (isVisit[nextV])
+                    continue;
+                queue.add(nextV);
+                isVisit[nextV] = true;
+            }
+        }
+    }
+    System.out.println(cnt);
+}
+</s>

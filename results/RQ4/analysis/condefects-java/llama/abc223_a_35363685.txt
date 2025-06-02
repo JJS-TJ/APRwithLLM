@@ -1,0 +1,75 @@
+No.2 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    if(c<=100){
+        System.out.println("No");
+    }else{
+        int s=c%100;
+        if(s==0){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+    }
+}
+
+// Analysis
+The corrected function fixes the bug by adding a check at the beginning of the function to see if the number is less than 100. If the number is less than 100, the function should print "No" and terminate.
+No.4 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    if(c<100){
+        System.out.println("No");
+        System.exit(0);
+    }
+    int s=c%100;
+    if(s==0){
+    System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+
+// Analysis
+The bug in the function lies in the fact that it isn't checking if the input is a two-digit number but rather if the input is divisible by 100. If a user were to input a number less
+No.5 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+
+    // Check if the number is less than 100
+    if(c<100){
+        System.out.println("No");
+        return;
+    }
+
+    int s=c%100;
+    if(s==0){
+        System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+
+// Analysis
+The bug in the function lies in the fact that it isn't checking if the input is a two-digit number but rather if the input is divisible by 1
+No.9 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    if (c < 100) {
+        System.out.println("No");
+        return;
+    }
+    int s=c%100;
+    if(s==0){
+        System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+
+// Analysis
+The bug in the function lies in the fact that it isn't checking if the input is a two-digit number but rather if the input is divisible by 100. If a user were to input a number less than

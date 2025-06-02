@@ -1,0 +1,16 @@
+No.5 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    double result = x.setScale(0,BigDecimal.ROUND_HALF_UP).doubleValue();
+    System.out.println(Math.round(result));
+}
+
+// Analysis
+Analysis:
+The fixed function contains a modification to the buggy function.
+In the fixed function, we have used the "Math.round" method to round off the BigDecimal number 'x' to the nearest integer.
+The "Math.round" method is used to round a double value to the nearest integer.
+The

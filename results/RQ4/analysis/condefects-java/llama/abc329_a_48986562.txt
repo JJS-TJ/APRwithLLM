@@ -1,0 +1,94 @@
+No.0 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+```
+// Analysis
+This is a java code. The main method is the entry point of the program. The code takes a string input from the user and then prints each character in the string with a space following it. If the character is not the last character in the string, it will also print a space after it.
+
+The bug in the code is that the space character used to separate the characters in the output string is not a regular space, but rather
+No.3 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+This is a java code. The main method is the entry point of the program. The code takes a string input from the user and then prints each character in the string with a space following it. If the character is not the last character in the string, it will also print a space after it.
+
+The bug in the code is that the space character used to separate the characters in the output string is not a regular space, but rather an IDE
+No.4 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+```
+This is a java code. The main method is the entry point of the program. The code takes a string input from the user and then prints each character in the string with a space following it. If the character is not the last character in the string, it will also print a space after it.
+
+The corrected code uses a regular space character to separate the characters in the output string, which is a more appropriate solution to the bug.
+
+The bug
+No.5 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+```
+
+The corrected code simply replaces the ideographic space with a regular space character in the output. This ensures that the output is properly displayed and printed, and also eliminates the bug in the code.
+
+By using a regular space character, we can ensure that the output is properly displayed and printed, and also eliminate the bug in the code.
+
+```
+```
+</s>
+No.6 Patch
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  String S = sc.next();
+  
+  for(int i = 0; i < S.length(); i++){
+    System.out.print(S.charAt(i));
+    if(i < S.length()-1){
+      System.out.print(" ");
+    }
+  }
+}
+
+// Analysis
+This is a java code. The main method is the entry point of the program. The code takes a string input from the user and then prints each character in the string with a space following it. If the character is not the last character in the string, it will also print a space after it.
+
+The bug in the code is that the space character used to separate the characters in the output string is not a regular space, but rather an IDEOGR

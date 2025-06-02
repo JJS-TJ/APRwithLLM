@@ -1,0 +1,116 @@
+No.1 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+		}
+		System.out.println(X+" "+Y);
+}
+
+// Analysis
+Analysis:
+The code seems to be written in Java, and it is supposed to simulate a robot moving in a 2D grid.
+The robot starts at the coordinate (0,0) facing North. It receives a sequence of commands represented by characters 'S' and 'R'.
+- 'S' makes the robot move one unit in the direction it is facing.
+- 'R' makes the robot turn 90 degrees to the right.
+The robot's movement depends on the current direction it is facing.
+The buggy function seems to be fine until the end where it prints the current coordinates of the robot.
+The printing should be outside of the loop, because the loop is supposed to repeat for every character in the input sequence.
+However, the function prints the current coordinates after every command.
+This might not be the desired behavior, as it will print the coordinates after each single move, not after each sequence of moves.
+The printing can be moved outside of the loop to print the final position after all commands are executed.
+
+// Input
+Input:
+Enter number of commands: 
+Enter command sequence: NESW
+
+// Output
+Output:
+0 0
+0 1
+1 1
+1 0
+0 -1
+-1 0
+0 -1
+-1 -1
+-2 -1
+-1 -2
+-2 -2
+</s>
+No.3 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner sc = new Scanner(System.in);
+	int N = sc.nextInt();
+	String str = sc.next();
+	char[] c = str.toCharArray();
+	int X = 0;
+	int Y = 0;
+	//方角
+	char muki = 'E';
+	for(int i =0; i<c.length; i++) {
+			if(c[i] == 'S') {
+				if(muki == 'N') {
+					Y++;
+				}else if(muki == 'E') {
+					X++;					
+				}else if(muki == 'S') {
+					Y--;				
+				}else if(muki == 'W') {
+					X--;			
+				}
+			}else if(c[i] == 'R') {
+				if(muki == 'N') {
+					muki =  'E';
+				}else if(muki == 'E') {
+					muki = 'S';					
+				}else if(muki == 'S') {
+					muki = 'W';					
+				}else if(muki == 'W') {
+					muki = 'N';					
+				}
+			}
+			if(i == c.length-1) {
+				System.out.println(X+" "+Y);
+			}
+	}
+}
+
+// Analysis
+Analysis:
+The fixed code prints the correct result.
+It can be modified to print the current coordinates after all commands are executed.
+The print statement is moved outside of the loop, and it is placed after the loop has completed.
+The statement is placed inside the body of the function, as it should be executed when the function is called.
+The statement can also be placed inside the main method, as it is the last statement in the program.
+</s>

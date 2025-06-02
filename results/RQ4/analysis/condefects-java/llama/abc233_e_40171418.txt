@@ -1,0 +1,26 @@
+No.8 Patch
+static void solve(int testCnt) {
+  for (int testNumber = 0; testNumber < testCnt; testNumber++) {
+      char[] x = in.next().toCharArray();
+      int[] ps = new int[x.length];
+      ps[0] = x[0] - '0';
+      for(int i = 1; i < ps.length; i++) {
+          ps[i] = ps[i - 1] + (x[i] - '0');
+      }
+      List<Integer> ans = new ArrayList<>();
+      int len = x.length, carry = 0;
+      for(int i = x.length - 1; i >= 0; i--) {
+          int sum = ps[i] - (i >= len ? ps[i - len] : 0) + carry;
+          carry = sum / 10;
+          ans.add(sum % 10);
+      }
+      if(carry > 0) {
+          ans.add(carry);
+      }
+      for(int i = ans.size() - 1; i >= 0; i--) {
+          out.print(ans.get(i));
+      }
+      out.println();
+  }
+  out.close();
+}</s>

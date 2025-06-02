@@ -1,0 +1,52 @@
+No.2 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x+=lowbit(x);
+    }
+}
+
+// Analysis
+Analysis: 
+The code is trying to update a binary indexed tree (also known as a Fenwick tree) with the given value at the index x.
+
+The function has a few issues:
+
+1) The inner loop will never execute because i > lowbit(x) is always false due to the way the loop is set up. This means that the loop is effectively skipped, which is not the expected behavior.
+
+2) The update operation is incorrect. The line tree[x] = value is rewriting the value at x, but this should be a max operation updating the
+No.3 Patch
+public static void update(int x, int value){
+
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x+=lowbit(x);
+    }
+}
+
+// Analysis
+Analysis: 
+The code is trying to update a binary indexed tree (also known as a Fenwick tree) with the given value at the index x.
+
+The function has a few issues:
+
+1) The inner loop will never execute because i > lowbit(x) is always false due to the way the loop is set up. This means that the loop is effectively skipped, which is not the expected behavior.
+
+2) The update operation is incorrect. The line tree[x] = value is rewriting the value at x, but this should be a max operation updating
+No.6 Patch
+public static void update(int x, int value){
+    while(x <= N){
+        tree[x] = Math.max(tree[x], value);
+        x+=lowbit(x);
+    }
+}
+
+// Analysis
+Analysis: The function has been fixed by:
+
+1) Correctly executing the inner loop.
+
+2) Performing the correct update operation.
+
+3) Removing the unnecessary variable i.
+</s>

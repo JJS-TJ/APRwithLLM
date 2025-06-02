@@ -1,0 +1,52 @@
+No.0 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	int n = scanner.nextInt();
+	
+	int k = scanner.nextInt();
+	
+	String s = scanner.next();
+	
+	int number = 0;
+	
+	for(int i = 0; i < n; i ++) {
+		if(s.charAt(i) == 'o' && number < k) {
+			System.out.print("o");
+			number ++;
+		}else {
+			System.out.print("x");
+		}
+	}
+}
+
+// Analysis
+// Analysis
+This function is supposed to print 'o' for 'o' in the string 's', but it does not print 'o' if the number of 'o' is more than 'k'. Also, it should print 'x' for the rest of the string 's'. However, it does not print 'x' for the rest of the string 's', which means the number of 'x' is more than the number of 'o'.
+
+The bug is caused by the condition of the if statement. The condition should be 'number < k', not 'number < 3'. The value of 'k' is not used in the code. If the value of 'k' is different from 3, the function will not print the correct result
+No.2 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+	int n = scanner.nextInt();
+	
+	int k = scanner.nextInt();
+	
+	String s = scanner.next();
+	
+	int number = 0;
+	
+	for(int i = 0; i < n; i ++) {
+		if(s.charAt(i) == 'o' && number < k) {
+			System.out.print("o");
+			number ++;
+		}else {
+			System.out.print("x");
+		}
+	}
+}
+
+// Analysis
+// Analysis
+The bug in the code has been fixed. The condition of the if statement has been modified to 'number < k'. The value of 'k' is now used in the code. If the value of 'k' is different from 3, the function will print the correct result.</s>

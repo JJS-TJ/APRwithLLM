@@ -1,0 +1,89 @@
+No.2 Patch
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    n=sc.nextInt();
+    s=sc.next();
+    char a[]=s.toCharArray();
+    int q=sc.nextInt();
+    char change[]=new char[26];
+    for(int i=0;i<26;i++){
+        change[i]=(char)(i+'a');
+    }
+    while(q-->0){
+        String t=sc.next();
+        String t1=sc.next();
+        char c=t.charAt(0);
+        char d=t1.charAt(0);
+       for(int i=0;i<n;i++){
+           if(a[i]==c)a[i]=d;
+       }
+    }
+    for(int i=0;i<n;i++){
+        System.out.print(change[a[i]-'a']);
+    }
+}
+```
+</s>
+No.3 Patch
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    String s=sc.next();
+    char a[]=s.toCharArray();
+    int q=sc.nextInt();
+    char change[]=new char[26];
+    for(int i=0;i<26;i++){
+        change[i]=(char)(i+'a');
+    }
+    while(q-->0){
+        String t=sc.next();
+        String t1=sc.next();
+        char c=t.charAt(0);
+        char d=t1.charAt(0);
+       for(int i=0;i<n;i++){
+           if(a[i]==c)a[i]=d;
+       }
+    }
+    for(int i=0;i<n;i++){
+        System.out.print(change[a[i]-'a']);
+    }
+}
+```
+</s>
+No.9 Patch
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    String s=sc.next();
+    char a[]=s.toCharArray();
+    int q=sc.nextInt();
+    char change[]=new char[26];
+    for(int i=0;i<26;i++){
+        change[i]=(char)(i+'a');
+    }
+    while(q-->0){
+        String t=sc.next();
+        String t1=sc.next();
+        char c=t.charAt(0);
+        char d=t1.charAt(0);
+       for(int i=0;i<n;i++){
+           if(a[i]==c)a[i]=d;
+       }
+    }
+    for(int i=0;i<n;i++){
+        System.out.print(change[a[i]-'a']);
+    }
+}
+```
+
+Notes:
+
+* The code now takes care of the order of the replacements and prints the final result correctly.
+* The 'n' variable is used to keep track of the number of characters in the input string.
+* The 'change' array is used to store the replacement characters.
+* The 'a' array is used to store the input characters before the replacements are applied.
+* The 't' and 't1' variables are used to store the replacements given by the user.
+* The 'c' and 'd' variables are used to store the characters to be replaced in the input string.
+* The 'q' variable is used to keep track of the number of replacements given by the user.
+* The 'i' variable is used as the index for the 'a' and 'change' arrays.
+* The 'if' statement is used to check if the character at index 'i' in the 'a' array is equal to the character 'c' in the replacement 't'. If it is

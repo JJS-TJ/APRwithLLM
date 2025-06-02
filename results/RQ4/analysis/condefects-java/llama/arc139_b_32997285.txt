@@ -1,0 +1,11 @@
+No.6 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (float) cost1 * dist2 < (float) cost2 * dist1;
+}
+
+// Analysis
+Analysis:
+This function works as intended. It makes sure that the cost per distance is calculated correctly.
+
+For example, if `cost1=100` and `dist1=5`, then the

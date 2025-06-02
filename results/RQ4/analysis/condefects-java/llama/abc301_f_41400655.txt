@@ -1,0 +1,41 @@
+No.0 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+</s>
+No.1 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Solution
+// Solution:
+// The function isLower() is broken because it doesn't check for 'z
+No.2 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Output
+// a
+// A
+// a
+// A
+// a
+// A
+// a
+No.3 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis:
+// The bug in this function is that it does not include 'z' in the lowercase range
+No.4 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// Analysis:
+// The bug in this function is that it does not include 'z' in the
