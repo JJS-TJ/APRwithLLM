@@ -1,0 +1,22 @@
+No.4 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+print(ascii_uppercase[(X - 1) // N])
+
+# Analysis
+
+In the fixed function, the indexing is correct. It calculates (X - 1) // N. This is because Python's indexing starts from 0
+No.7 Patch
+from string import ascii_uppercase
+
+N, X = map(int, input().split())
+
+print(ascii_uppercase[(X - 1) // N])
+
+# Analysis
+"""
+Fix Analysis:
+
+The bug was in the line where it calculates the index to access the alphabet character. It calculates (X - 1) // N

@@ -1,0 +1,16 @@
+No.2 Patch
+import sys
+input = lambda: sys.stdin.readline().strip()
+
+a = list(map(int, input().split()))
+
+ans = 0
+for i in range(len(a)):
+    if a[i] == 1:
+        ans += (2 ** i)
+print(ans)
+
+# Explanation
+The fixed function now correctly reads the input as a list of binary digits. It then goes through each binary digit and if it's 1, it adds the corresponding power of 2 to the answer. Finally, it prints the answer, which is the decimal equivalent of the input list of binary digits.
+
+The fixed function works as expected and correctly converts a binary

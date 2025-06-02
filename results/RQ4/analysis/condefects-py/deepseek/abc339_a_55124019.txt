@@ -1,0 +1,8 @@
+No.3 Patch
+S = input()
+for i in range(len(S)):
+  if S[::-1][i] == ".":
+    print(S[-i:])
+    break
+
+ # 1. 문제는 마지막 점을 기준�

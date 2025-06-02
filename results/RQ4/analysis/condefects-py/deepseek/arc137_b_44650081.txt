@@ -1,0 +1,46 @@
+No.1 Patch
+n = int(input())
+a = list(map(int,input().split()))
+t = []
+for i in a:
+    if len(t)==0 or t[-1][0] != i:
+        t.append([i, 1])
+    else:
+        t[-1][1] += 1
+mx0 = 0
+mx1 = 0
+c0 = 0
+c1 = 0
+for i in range(n):
+    c0 = max(c0,0)
+    c1 = max(c1,0)
+    if a[i] == 0:
+        c0 += 1
+        c1 -= 1
+    else:
+        c1 += 1
+        c0 -= 1
+    mx0 = max(mx0,c0)
+    mx1 = max(mx1,c1)
+print(mx0+mx1+1)
+
+# Explanation
+# The bug in the original code is that the variable 'c1' was not initialized to 0 before its usage. This results in an error when the 'c1' value is compared with '0' in the 'max' function.
+# This problem is fixed by initializing 'c1' to 0 before its usage. This makes the code correct and ensures that the maximum length of consecutive elements that are the opposite of each other is correctly calculated.
+
+# Test the fixed function
+n = int(input())
+a = list(map(int,input().split()))
+t = []
+for i in a:
+    if len(t)==0 or t[-1][0] != i:
+        t.append([i, 1])
+    else:
+        t[-1][1] += 1
+mx0 = 0
+mx1 = 0
+c0 = 0
+c1 = 0
+for i in range(n):
+    c0 = max(c0,0)
+    c1 = max(

@@ -1,0 +1,20 @@
+No.5 Patch
+N, M, X, T, D = map(int, input().split())
+
+if M >= X:
+    print(T)
+else:
+    print(T - (X - M) * D)
+
+# Analysis
+The bug in the original code is that it subtracts the difference in age from the birth year from the height at birth, which is incorrect. Instead, it should add the difference in age times the growth rate to the height at birth. Hence, the line
+No.7 Patch
+N, M, X, T, D = map(int, input().split())
+
+if M >= X:
+    print(T)
+else:
+    print(T - (X - M) * D)
+
+# Analysis
+This fixed function now correctly calculates the height of the person's body at a specific age. The bug was that the function was incorrectly subtracting the growth rate of the parents' height instead of adding it. By changing the sign in the print statement,

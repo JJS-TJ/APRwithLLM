@@ -1,0 +1,42 @@
+No.0 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
+
+# Analysis of Fixed Function
+The code above is fixed by adding an "elif" statement to handle the case where the hours are the same. If the hours are the same, the code checks if Takahashi's minute is less than or equal to Aoki's minute. If it is, "Takahashi" is printed, otherwise "
+No.4 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a>c:
+    print("Aoki")
+else:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+
+# Analysis
+In this fixed code, the first if statement checks if Takahashi's time is earlier than Aoki's. If it is, then "Takahashi" is printed. If not, the first else statement checks if Aoki's time is earlier than Takahashi's. If it is, then "A
+No.9 Patch
+a,b,c,d=map(int,input().split())
+if a<c:
+    print("Takahashi")
+elif a==c:
+    if b<=d:
+        print("Takahashi")
+    else:
+        print("Aoki")
+else:
+    print("Aoki")
+
+# Analysis
+The fixed function now handles the case where Takahashi's time and Aoki's time are the same. It first checks if Takahashi's hour is less than Aoki's hour, then if they are the same, it checks if Takahashi's minute is less than or equal to Aoki

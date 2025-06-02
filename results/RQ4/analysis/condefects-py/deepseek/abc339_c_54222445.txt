@@ -1,0 +1,21 @@
+No.4 Patch
+n = int(input())
+alist = list(map(int, input().split()))
+acc = 0
+imin = 0
+amin = float('inf')
+for i in range(n):
+    acc += alist[i]
+    if acc < amin:
+        amin = acc
+        imin = i
+if amin < 0:
+    print(sum(alist[imin+1:]))
+else:
+    print(sum(alist))
+
+# Analysis
+The fixed function works by initializing amin with float('inf'), which is a very large number. 
+This ensures that the first sum encountered in the loop will be smaller than amin, so amin will be updated.
+
+After the loop, the function checks

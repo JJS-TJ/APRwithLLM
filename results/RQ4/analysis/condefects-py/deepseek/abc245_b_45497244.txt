@@ -1,0 +1,28 @@
+No.3 Patch
+n = int(input())
+
+A = set(map(int, input().split()))
+
+for i in range(2001):
+    if i not in A:
+        print(i)
+        break
+
+# Analysis
+
+The bug has been fixed. Now, we are creating a set from the list A. A set in Python is an unordered collection of unique elements. So, the set will only contain unique elements from the list A
+No.4 Patch
+n = int(input())
+
+A = list(map(int, input().split()))
+A_set = set(A)
+
+for i in range(2001):
+    if i not in A_set:
+        print(i)
+        break
+
+# Analysis
+Analysis:
+
+The fix was to replace the list with a set. Sets in Python are an unordered collection of unique elements, so by changing A to a set,

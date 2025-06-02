@@ -1,0 +1,13 @@
+No.1 Patch
+n, d, p = map(int, input().split())
+f = list(map(int, input().split()))
+f.sort(reverse=True)
+prefix_sums = [0] * (n + 1)
+for i in range(n):
+    prefix_sums[i+1] = prefix_sums[i] + f[i]
+ans = 0
+for i in range(0, n, d):
+    ans += min(p, prefix_sums[min(i+d, n)] - prefix_sums[i])
+print(ans)
+
+# This function first calculates the prefix sums of the list f and then uses them to calculate the minimum total cost. The prefix sums allow us to calculate the sum of a subarray in constant time, which improves the overall efficiency of

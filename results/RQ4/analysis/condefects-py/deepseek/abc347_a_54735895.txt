@@ -1,0 +1,81 @@
+No.0 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+      b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+# The bug in the original code is that it uses division operator "/" instead of the floor division operator "//". The division operator returns a float while floor division operator returns an integer. For this problem, we need integers since the question only wants the number of multiples. The floor division operator will return the correct integer by discarding the decimal part
+No.3 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+      b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+# In Python 2, the '/' operator performs integer division if both operands are integers.
+# In Python 3, the '/' operator performs true division.
+# To maintain the code's functionality across both versions of Python, it's best to use the '//' operator for integer division.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># ---------------------------------------------------
+No.4 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+    b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+# The bug was in the line b.append(a[i] / k), the division was returning a float value which was giving incorrect results.
+# In python, division operator '/' performs float division and '//' performs integer division. So, to fix the bug we should use '//' instead of '/'<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># Python
+No.5 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+      b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+# The issue with the initial code was the incorrect usage of division operator.
+# The floor division operator should be used instead of the regular division operator when dealing with integers.
+# The floor division operator // returns the largest possible integer.
+# Replacing the / operator with // in the if condition fixes the issue.
+# The fixed code
+No.6 Patch
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+
+for i in range(n):
+  if a[i] % k == 0:
+      b.append(a[i] // k)
+
+b.sort()
+print(*b)
+
+# Analysis
+# The bug in this function is the division operator.
+# The '/' operator performs 'floor' division which gives a 'float' value.
+# But the problem statement asked for an integer list.
+# The '//' operator performs 'true' division which gives an 'integer' value.
+# So, replacing '/' with '

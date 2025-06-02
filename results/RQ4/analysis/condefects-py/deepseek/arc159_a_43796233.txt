@@ -1,0 +1,172 @@
+No.4 Patch
+from collections import deque
+
+n, k = map(int, input().split())
+
+a = [list(map(int, input().split())) for _ in range(n)]
+
+q = int(input())
+
+def root(s, t):
+    d = deque([(s, 0)])
+    check = [0] * n
+    if s == t:
+        while d:
+            v, w = d.popleft()
+            for i in range(n):
+                if a[v][i] == 1:
+                    if i == t:
+                        return w + 1
+                    if check[i] == 0:
+                        check[i] = 1
+                        d.append((i, w + 1))
+        return -1
+    else:
+        while d:
+            v, w = d.popleft()
+            check[v] = 1
+            for i in range(n):
+                if a[v][i] == 1:
+                    if i == t:
+                        return w + 1
+                    if check[i] == 0:
+                        check[i] = 1
+                        d.append((i, w + 1))
+        return -1
+
+for i in range(q):
+    s, t = map(int, input().split())
+    s -= 1
+    t -= 1
+    s %= n
+    t %= n
+    print(root(s, t))
+
+
+// Analysis
+// The buggy function was missing a condition to check if the starting node s is the same as the ending node t. If they were the same, it would return -1 without checking the other conditions. This was fixed by adding a condition to check if s == t and returning the weight w + 1 if a[v][i] == 1 and i == t.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># Provide a fix for the buggy function
+
+# Buggy Function
+from collections import deque
+
+n,k=map(int,input().split())
+
+a=[list(map(int,input().split())) for _ in range(n)]
+
+q=int(input())
+
+def root(s,t):
+  d=deque([(s,0)])
+  check=[0]*n
+  while d:
+    v,w=d.popleft()
+    check[v]=1
+    for i in range(n):
+      if a[v][i]==1:
+        if i==t:
+          return(w+1)
+        if check[i]==0:
+          check[i]=1
+          d.append((i,w+1))
+  return -1
+
+for i in range(q):
+  s,t=map(int,input().split())
+  s-=1
+  t-=1
+  s%=n
+  t%=n
+  print(root(s,t))
+
+
+// Analysis
+// The buggy function does not check if the starting node is the same as the ending node. This causes the function to return -1 for any queries where the starting node is the same as the ending node, even if there is a path from the starting node to itself. This can be fixed by adding a
+No.9 Patch
+from collections import deque
+
+n,k=map(int,input().split())
+
+a=[list(map(int,input().split())) for _ in range(n)]
+
+q=int(input())
+
+def root(s,t):
+  d=deque([(s,0)])
+  check=[0]*n
+  check[s]=1
+  while d:
+    v,w=d.popleft()
+    for i in range(n):
+      if a[v][i]==1:
+        if i==t:
+          return(w+1)
+        if check[i]==0:
+          check[i]=1
+          d.append((i,w+1))
+  return -1
+
+for i in range(q):
+  s,t=map(int,input().split())
+  s-=1
+  t-=1
+  s%=n
+  t%=n
+  print(root(s,t))
+
+# Analysis
+// The buggy function has an issue with the check variable. The check variable is initialized only once and used across all iterations.
+// This results in the same node being checked multiple times, which is unnecessary and leads to incorrect results.
+// To correct this bug, the check variable should be initialized and used inside the loop.
+// This way, each node will only be checked once and the function will correctly calculate the shortest path.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    
+    int n, m;
+    cin >> n >> m;
+    
+    vector<vector<int>> v(n, vector<int>(m));
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> v[i][j];
+        }
+    }
+    
+    int max_val = -1;
+    for (int i = 0; i < n; i++) {
+        max_val = max(max_val, *max_element(v[i].begin(), v[i].end()));
+    }
+    
+    cout << max_val << "\n";
+    
+    return 0;
+}
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    
+    int n, m;
+    cin >> n >> m;
+    
+    vector<vector<int>> v(n, vector<int>(m));
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> v[i][j];
+        }
+    }
+    
+    int max_val = -1;
+    for (int i = 0; i < n; i++) {
+        max_val

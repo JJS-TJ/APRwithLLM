@@ -1,0 +1,37 @@
+No.3 Patch
+N, M = map(int, input().split())
+
+P = 1
+ans = 0
+
+for y in range(2, N + 1):
+    P = P * (N + 1 - y) % M
+    f = P * pow(N, N - y, M)
+
+    ans += f * (y - 1) * y // 2
+    ans %= M
+print(ans * N % M)
+
+# Analysis
+The fixed function now calculates the permutation of N elements taken y at a time, modulo M, by multiplying the previous permutation P with (N + 1 - y) % M and then taking the power of (N - y) modulo M. This is then multiplied with the number of ways to choose y elements from N, which is calculated as (y - 1) * y // 2. The final result is calculated as ans * N % M. This should now give
+No.8 Patch
+N, M = map(int, input().split())
+ 
+P = 1
+ans = 0
+ 
+for y in range(2, N + 1):
+  P = P * (N + 1 - y) % M
+  f = P * pow(N, N - y, M) % M
+ 
+  ans += f * (y - 1) * y // 2
+  ans %= M
+ 
+print(ans * N % M)
+
+# Analysis
+
+The fixed code calculates f as P * (N ** (N - y)) % M, so it ensures that the result of the calculation is always modulo M.
+This ensures that the intermediate results of the calculations do not grow too large, which can cause overflow errors.
+Also, the calculation for ans is corrected to ensure that the result of the calculation is also modulo M.
+This should fix the bug in the original code and give the correct result.

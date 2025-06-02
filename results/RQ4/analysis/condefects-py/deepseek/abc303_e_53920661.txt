@@ -1,0 +1,152 @@
+No.3 Patch
+from collections import deque
+N = int(input())
+G = [[] for _ in range(N)]
+for _ in range(N-1):
+    a, b = map(int, input().split())
+    a -= 1
+    b -= 1
+    G[a].append(b)
+    G[b].append(a)
+
+dist = [-1 for i in range(N)]
+que = deque()
+for i in range(N):
+    if len(G[i]) == 1:
+        dist[i] = 0
+        que.append(i)
+        break
+
+
+while que:
+    v = que.popleft()
+    for v2 in G[v]:
+        if dist[v2] != -1:
+            continue
+        dist[v2] = dist[v] + 1
+        que.append(v2)
+
+center = [i for i in range(N) if dist[i]%3==1]
+ans = [len(G[i]) for i in center]
+ans.sort()
+print(*ans)
+
+# Analysis
+# The bug was in the condition where it checked for the length of G[i]==1. Here, it should check for the length of G[i].
+# This bug was causing the code to crash and giving incorrect results.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># Given an array of integers, determine if it can be rearranged to form an arithmetic progression.
+# A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
+# Example
+# For sequence = [1, 7, 3, 5], the output should be
+# arithmeticProgression(sequence) = true.
+# It can be rearranged to form [1, 3, 5, 7], which is an arithmetic progression.
+
+# Python Solution
+def arithmeticProgression(sequence):
+    sequence.sort()
+    diff = sequence[1] - sequence[0]
+    for i in range(2, len(sequence)):
+        if sequence[i] - sequence[i - 1] != diff:
+            return False
+    return True
+
+# Test
+No.4 Patch
+from collections import deque
+N = int(input())
+G = [[] for _ in range(N)]
+for _ in range(N-1):
+    a, b = map(int, input().split())
+    a -= 1
+    b -= 1
+    G[a].append(b)
+    G[b].append(a)
+
+dist = [-1 for i in range(N)]
+que = deque()
+for i in range(N):
+    if len(G[i]) == 1:
+        dist[i] = 0
+        que.append(i)
+        break
+
+
+while que:
+    v = que.popleft()
+    for v2 in G[v]:
+        if dist[v2] != -1:
+            continue
+        dist[v2] = dist[v] + 1
+        que.append(v2)
+
+center = [i for i in range(N) if dist[i]%3==1]
+ans = [len(G[i]) for i in center]
+ans.sort()
+print(*ans)
+
+# Analysis
+# The bug was in the line `if G[i] == 1:`. This line was checking if the list of connected nodes to node i is equal to 1, which is not what we want. We want to check if the length of the list of connected nodes to node i is equal to 1, which is what the fixed line `if len(G[i]) == 1:` does.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># Given a string S of length N, find the shortest balanced substring.
+
+# Here, a balanced substring is a substring that has an equal number of occurrences of 'a' and 'b'.
+
+# Example:
+# S = "abab"
+# The substring "abab" is a balanced substring.
+
+def shortestBalancedSubstring(S):
+    n = len(S)
+    min_len = n + 1
+    for i in range(n):
+        for j in range(i, n):
+            substring = S[i:j+1]
+            if substring.count('a') == substring.count('b'):
+No.9 Patch
+from collections import deque
+N = int(input())
+G = [[] for _ in range(N)]
+for _ in range(N-1):
+    a, b = map(int, input().split())
+    a -= 1
+    b -= 1
+    G[a].append(b)
+    G[b].append(a)
+
+dist = [-1 for i in range(N)]
+que = deque()
+for i in range(N):
+    if len(G[i]) == 1:
+        dist[i] = 0
+        que.append(i)
+
+while que:
+    v = que.popleft()
+    for v2 in G[v]:
+        if dist[v2] != -1:
+            continue
+        dist[v2] = dist[v] + 1
+        que.append(v2)
+
+center = [i for i in range(N) if dist[i]%3==1]
+ans = [len(G[i]) for i in center]
+ans.sort()
+print(*ans)
+
+# Analysis
+# The bug was in the line if G[i] == 1: which was checking if the value at G[i] is equal to 1, but we should have been checking the length of G[i]. The fixed code corrects this by changing the condition to if len(G[i]) == 1:. This ensures that the condition only applies to leaves of the tree.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>from heapq import heappush, heappop
+n = int(input())
+l = list(map(int, input().split()))
+ans = []
+for i in range(n):
+    if l[i] == -1:
+        ans.append(i+1)
+        continue
+    h = []
+    s = []
+    for j in range(i-1, -1, -1):
+        if l[j] == -1:
+            break
+        heappush(h, -l[j])
+    for j in range(i+1, n):
+        if l[j] == -1:
+            break
+        heappush(h, -l[j])
+    while h:

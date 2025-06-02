@@ -1,0 +1,135 @@
+No.0 Patch
+# Fixed Function
+n = 10
+s = [input() for i in range(n)]
+
+a, b, c, d = 100, 0, 100, 0
+
+for i in range(n):
+    for j in range(n):
+        if s[i][j] == '#':
+            a, b, c, d = min(a, i), max(b, i), min(c, j), max(d, j)
+
+print(a + 1, b + 1)
+print(c + 1, d + 1)
+
+# Analysis
+
+# The buggy function was not working as expected, it was due to the wrong usage of variables in the function. 
+# The corrected function works by keeping track of the minimum and maximum row and column indexes for the '#' characters.
+# This way, it correctly identifies the range of '#' characters in the grid.
+
+# The fixed function is more efficient and cleaner than the buggy function as it uses only one loop and one if statement.
+# This makes it more efficient and easier to understand and maintain.
+# The buggy function was also prone to errors, it did not follow the correct naming convention for variables
+No.1 Patch
+n = 10
+s = [input()for i in range(n)]
+
+
+
+a,b,c,d = 100, 0, 100, 0
+for i in range(n):
+    for j in range(n):
+      if s[i][j]=='#':
+        if a>i : a=i
+        if b<i : b=i
+        if c>j : c=j
+        if d<j : d=j
+print(a+1,b+1)
+print(c+1,d+1)
+
+# Analysis
+
+# In the above code, the letter 'B' is used instead of 'b' in the if condition of line 15. Also, the range in for loop is not specified. The correct code is corrected in the fixed function.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># Buggy Function
+def sum_of_numbers(a, b, c):
+    if (a==b==c):
+        return 3*(a+b+c)
+    else:
+        return a+b+c
+
+# Fixed Function
+def sum_of_numbers(a, b, c):
+    if (a==
+No.2 Patch
+n = 10
+s = [input() for i in range(n)]
+
+
+# The above function is buggy because it is trying to find the # in the string and if it is present then it is trying to find the maximum and minimum position of # in the string. But the function is not correctly written.
+
+a,b,c,d = n, 0, n, 0
+for i in range(n):
+    for j in range(n):
+        if s[i][j] == '#':
+            a, b, c, d = min(a, i), max(b, i), min(c, j), max(d, j)
+print(a+1,b+1)
+print(c+1,d+1)
+
+
+# This function works by keeping track of the minimum and maximum row (a, b) and column (c, d) indices at which # is found in the given input string.
+# At the end, it prints the positions of the top left and bottom right #'s.
+
+# This function should work fine for any input as long as it is a 10x10 grid with '#'s and '.'s, as specified in the problem
+No.7 Patch
+# Fixed Function
+def check_grid(grid):
+    rows = len(grid)
+    cols = len(grid[0])
+    min_row = rows
+    max_row = 0
+    min_col = cols
+    max_col = 0
+    for i in range(rows):
+        for j in range(cols):
+            if grid[i][j] == "#":
+                min_row = min(min_row, i)
+                max_row = max(max_row, i)
+                min_col = min(min_col, j)
+                max_col = max(max_col, j)
+    return min_row, max_row, min_col, max_col
+
+
+n = 10
+s = [input() for i in range(n)]
+
+min_row, max_row, min_col, max_col = check_grid(s)
+print(min_row+1, max_row+1)
+print(min_col+1, max_col+1)
+
+# Analysis
+
+# The function 'check_grid' takes a grid as input and checks each cell of the grid. If a cell contains '#',
+No.9 Patch
+n = 10
+s = [input()for i in range(n)]
+
+a,b,c,d = 100, 0, 100, 0
+for i in range(n):
+    for j in range(n):
+        if s[i][j]=='#':
+            if a>i: a=i
+            if b<i: b=i
+            if c>j: c=j
+            if d<j: d=j
+print(a+1,b+1)
+print(c+1,d+1)
+
+# Analysis
+# In the buggy function we are printing wrong values because of the variable name 'B' instead of 'b' in line 16. It's also case sensitive. We have to change 'B' to 'b' in line 16. So, the fixed function works correctly.
+
+
+# Test Case
+# Test Case 1
+# .........
+# ..##..#...
+# .........
+# .#....#...
+# .........
+# .........
+# ....#....
+# .........
+# .........
+# .........
+# Expected Output : 
+# 2 5

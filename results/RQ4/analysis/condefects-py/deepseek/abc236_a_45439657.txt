@@ -1,0 +1,69 @@
+No.0 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Explanation
+The corrected code now works as expected. The string `s[a-1]` gives the character at the (a-1)th index, and `s[b-1]` gives the character at the (b-1)
+No.1 Patch
+# Buggy Function
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Analysis
+In the fixed function, the string indexing is corrected. Instead of `s[a:b-2]`, we now have `s[a:b-1]`. This is because the ending index
+No.2 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Analysis
+The fixed function now correctly accesses the characters at the (a-1)th and (b-1)th positions of the string. The `s[a-1]` and `s[b-1]` correctly specify the characters to
+No.3 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Analysis
+The fixed function has corrected the problem by adjusting the indexing to start from 0. So, when we say `s[a-1]`, we are now accessing the character at the (a-1)th position of the string,
+No.4 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# This function should work as expected. In the line `print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])`, the character at the
+No.5 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Analysis
+This function works by first slicing the string at the position (a-1) and printing the characters from the start to (a-1)th position. Then, it prints the character at the (b-1)th position. It then slices
+No.6 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# In the above code, `s[b-1]` correctly accesses the character at the (b-1)th position of the string, and `s[a:b-1]` correctly accesses the characters from the a-th position up
+No.7 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Explanation
+In the fixed function, I have corrected the indexing of the string by subtracting 1 from the a and b values. This is because in Python, string indexing starts from 0, not 1. So, to access the a
+No.8 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Analysis
+The fixed function now correctly swaps the characters at the a-th and b-th positions in the string. In the print statement, `s[a:b-1]` is used instead of `s[a:b-2]`
+No.9 Patch
+s=input()
+a,b=map(int,input().split())
+print(s[:a-1]+s[b-1]+s[a:b-1]+s[a-1]+s[b:])
+
+# Analysis
+This function now correctly swaps the characters at the positions specified by a and b. It does this by first slicing the string up to the position before a, then adding the character at the position b, then slicing the string from the position a to

@@ -1,0 +1,80 @@
+No.1 Patch
+import sys
+sys.setrecursionlimit(10**6)
+from collections import defaultdict
+
+def main():
+    n, m, hit_point, k = map(int, input().split(" "))
+    s = list(input())
+    item = defaultdict(int)
+    for _ in range(m):
+        x, y = map(int, input().split(" "))
+        item[(x, y)] += 1
+    
+    flag = True
+    x = 0
+    y = 0
+    for i in range(n):
+        char = s[i]
+        if char == "R":
+            x += 1
+        elif char == "L":
+            x -= 1
+        elif char == "U":
+            y += 1
+        elif char == "D":
+            y -= 1
+        
+        hit_point -= 1
+        if hit_point < 0:
+            print("No")
+            return 1
+        if hit_point < k and (x, y) in item and item[(x, y)] > 0:
+            hit_point = k
+            item[(x, y)] -= 1
+    
+    print("Yes")
+    return 1
+
+if __name__ == "__main__":
+    main()
+<|EOT|>
+No.2 Patch
+import sys
+sys.setrecursionlimit(10**6)
+from collections import defaultdict
+
+def main():
+    n,m,hit_point,k = map(int,input().split(" "))
+    s = list(input())
+    item = defaultdict(int)
+    for i in range(m):
+        x,y = map(int,input().split(" "))
+        item[(x,y)] += 1
+    
+    x = 0
+    y = 0
+    for i in range(n):
+        char = s[i]
+        if char == "R":
+            x += 1
+        elif char == "L":
+            x -= 1
+        elif char == "U":
+            y += 1
+        elif char == "D":
+            y -= 1
+        
+        hit_point -= 1
+        if hit_point < 0:
+            print("No")
+            return
+        if hit_point < k and item[(x,y)] > 0:
+            hit_point = k
+            item[(x,y)] -= 1
+            
+    print("Yes")
+
+if __name__ == "__main__":
+    main()
+<|EOT|>

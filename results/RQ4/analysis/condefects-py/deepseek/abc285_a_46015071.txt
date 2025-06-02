@@ -1,0 +1,36 @@
+No.6 Patch
+data = input()
+data_list = data.split()
+data_list = [int(i) for i in data_list]
+
+if data_list[0]*2 == data_list[1] or data_list[0]*2+1 == data_list[1]:
+    print("Yes")
+else:
+    print("No")
+<jupyter_output>
+<empty_output>
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜><jupyter_text>
+![image.png](attachment:image.png)
+<jupyter_code>
+# The buggy function
+Dat
+No.9 Patch
+def check_double(Data):
+    if Data[0]*2==Data[1] or Data[0]*2+1==Data[1]:
+        return "Yes"
+    else:
+        return "No"
+
+Datos = input()
+Data = [int (num) for num in Datos.split()]
+print(check_double(Data))
+<jupyter_output>
+<empty_output>
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜><jupyter_text>
+
+<jupyter_code>
+# Program
+
+# Provide a fix for the buggy function
+
+#

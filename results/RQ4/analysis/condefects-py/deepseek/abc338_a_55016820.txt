@@ -1,0 +1,33 @@
+No.6 Patch
+S = input()
+
+if S[0].isupper() and (len(S) == 1 or S[1:].islower()):
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+The fixed function checks whether the first character of the string is an uppercase letter and if the rest of the string (excluding the first character) is either empty or is in lowercase. This way, it doesn't raise an IndexError even for empty strings.
+
+However, it's
+No.8 Patch
+S = input()
+
+if (len(S) == 1 or S[1:].islower()) and S[0].isupper():
+  print("Yes")
+else:
+  print("No")
+
+# Test Cases:
+
+# Input: 'Computer'
+# Output: "Yes"
+
+# Input: 'computer'
+# Output: "Yes"
+
+# Input: 'Computer Science'
+# Output: "No"
+
+# Input: 'c'
+# Output:

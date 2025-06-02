@@ -1,0 +1,31 @@
+No.6 Patch
+N = int(input())
+S = input()
+ok = ["a", "b"]
+for i in range(N-1):
+    if S[i] in ok and S[i+1] in ok and S[i] != S[i+1]:
+        print("Yes")
+        exit()
+print("No")
+
+# Analysis
+Analysis:
+
+1. The code starts by taking two inputs, an integer N and a string S. Then, it creates a list named "ok" containing the characters "a" and "b".
+
+2. The code then
+No.9 Patch
+N = int(input())
+S = input()
+ok = ["a", "b"]
+for i in range(N-1):
+    if S[i] in ok and S[i+1] in ok and S[i] != S[i+1]:
+        print("Yes")
+        exit()
+print("No")
+
+# Explanation
+
+1. The above code introduces a new condition in the if statement. This condition checks if the character at position i in the string S is not equal to the character at position i+1 in the string S.
+
+2

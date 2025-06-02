@@ -1,0 +1,21 @@
+No.0 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx != -1 else idx)
+
+# Analysis
+In this fixed function, -1 is used instead of 0 to check if 'ABC'
+No.1 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else idx)
+
+# Analysis
+The fixed function addresses the issue by changing the comparison operator in the if condition. The previous operator was '>
+No.5 Patch
+input()
+idx = input().find('ABC')
+print(idx + 1 if idx >= 0 else idx)
+
+// Analysis
+The bug in the original function was that the find() function returns -1 when it does not find the sub

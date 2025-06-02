@@ -1,0 +1,25 @@
+No.0 Patch
+# ABC266 B - Modulo Number
+n = int(input())
+print(n % 998244353)
+
+# This is a simple fix to the code, changing "-" to "%" in the print statement. This will now output the correct modulo of the
+No.4 Patch
+def fix_modulo(n):
+    return n % 998244353
+
+n = int(input())
+print(fix_modulo(n))
+
+# Analysis
+# Function fix_modulo calculates the modulo of a given number.
+# It does
+No.6 Patch
+def fix_function(n):
+    return n % 998244353
+
+n = int(input())
+print(fix_function(n))
+
+# Analysis
+The function now correctly finds the modulo of the given number, by using the modulo operator (%),

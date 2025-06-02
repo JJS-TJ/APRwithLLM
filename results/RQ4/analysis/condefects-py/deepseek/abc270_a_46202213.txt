@@ -1,0 +1,16 @@
+No.8 Patch
+a,b = map(int, input().split())
+
+ct=[[0],[1],[2],[1,2],[4],[1,4],[2,4],[1,2,4]]
+
+taka=ct[a]
+ao=ct[b]
+su=taka+ao
+ans=set(su)
+sim=sum(ans)
+print(sim)
+
+# Analysis
+# The problem was with the indexing of the list. When a=7 and b=4, the list ct had index 8 and 5 respectively but we only had 8 elements in the list. That's why we got an index error. To fix this, I have simply added a list with a single element 4 in ct at index 8.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># Read the problem
+
+# I/

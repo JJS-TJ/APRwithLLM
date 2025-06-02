@@ -1,0 +1,30 @@
+No.8 Patch
+n,m=map(int,input().split())
+s=input()
+t=input()
+k=3
+if t[0:n]==s and t[-n::]==s:
+  k-=3
+elif t[0:n]==s:
+  k-=2
+elif t[-n::]==s:
+  k-=1
+print(k)
+
+# Analysis
+The fixed function first checks if 's' is at both ends of 't'. If it is, it decrements 'k' by 3. If 's' is
+No.9 Patch
+n,m=map(int,input().split())
+s=input()
+t=input()
+k=3
+if t[0:n]==s:
+  k-=2
+if t[-n::]==s:
+  k-=1
+print(k)
+
+# Analysis
+Analysis:
+The fixed code now correctly checks if 's' is at the beginning and/or the end of 't' and decrements 'k' accordingly.
+However, this code will still decrease 'k' by 2 if 's' is at both the beginning and the end of 't

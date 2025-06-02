@@ -1,0 +1,111 @@
+No.2 Patch
+A, B, C, D, E, F = map(int, input().split())
+N = int(input())
+X = list(map(int, input().split()))
+
+out = "Yes"
+
+for i in range(N):
+  while(X[i] >= 500 and F > 0):
+    X[i] -= 500
+    F -= 1
+  while(X[i] >= 100 and E > 0):
+    X[i] -= 100
+    E -= 1
+  while(X[i] >= 50 and D > 0):
+    X[i] -= 50
+    D -= 1
+  while(X[i] >= 10 and C > 0):
+    X[i] -= 10
+    C -= 1
+  while(X[i] >= 5 and B > 0):
+    X[i] -= 5
+    B -= 1
+  while(X[i] >= 1 and A > 0):
+    X[i] -= 1
+    A -= 1
+  if(X[i] != 0):
+    out = "No"
+    break
+  
+print(out)
+
+# This is the correct version of the code.
+<|EOT|>
+No.5 Patch
+A, B, C, D, E, F = map(int, input().split())
+N = int(input())
+X = list(map(int, input().split()))
+
+out = "Yes"
+
+for i in range(N):
+  while(X[i] >= 500 and F > 0):
+    X[i] -= 500
+    F -= 1
+  while(X[i] >= 100 and E > 0):
+    X[i] -= 100
+    E -= 1
+  while(X[i] >= 50 and D > 0):
+    X[i] -= 50
+    D -= 1
+  while(X[i] >= 10 and C > 0):
+    X[i] -= 10
+    C -= 1
+  while(X[i] >= 5 and B > 0):
+    X[i] -= 5
+    B -= 1
+  while(X[i] >= 1 and A > 0):
+    X[i] -= 1
+    A -= 1
+  if(X[i] != 0):
+    out = "No"
+    break
+  
+print(out)
+
+# Test Cases:
+# Input:
+# 3 2 1 3 4 5
+# 3
+# 1000 500 10
+# Output: "Yes"
+
+# Input:
+# 1 1 1 1 1 1
+# 3
+# 1000 500 10
+# Output: "No"
+<|EOT|>
+No.6 Patch
+A, B, C, D, E, F = map(int, input().split())
+N = int(input())
+X = list(map(int, input().split()))
+
+out = "Yes"
+
+for i in range(N):
+  while(X[i] >= 500 and F > 0):
+    X[i] -= 500
+    F -= 1
+  while(X[i] >= 100 and E > 0):
+    X[i] -= 100
+    E -= 1
+  while(X[i] >= 50 and D > 0):
+    X[i] -= 50
+    D -= 1
+  while(X[i] >= 10 and C > 0):
+    X[i] -= 10
+    C -= 1
+  while(X[i] >= 5 and B > 0):
+    X[i] -= 5
+    B -= 1
+  while(X[i] >= 1 and A > 0):
+    X[i] -= 1
+    A -= 1
+  if(X[i] != 0):
+    out = "No"
+    break
+  
+print(out)
+<|EOT|>

@@ -1,0 +1,14 @@
+No.0 Patch
+n, k = map(int, input().split())
+li = list(map(int, input().split()))
+
+for i in range(k):
+    li.pop(0)
+    li.append(0)
+print(*li)
+<jupyter_output>
+5 2
+1 2 3 4 5
+0 0 3 4 5
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜><jupyter_text>
+![Screenshot 2023-05-01 002005.png](attachment

@@ -1,0 +1,22 @@
+No.1 Patch
+string = input()
+print(string.replace("0", "x").replace("1", "0").replace("x", "1"))
+
+# Analysis
+// Analysis:
+No.4 Patch
+print(input().translate(str.maketrans("01", "10")))
+
+# Analysis
+This code uses the translate() and maketrans()
+No.6 Patch
+print(input().translate(str.maketrans('01', '10')))
+
+# Explanation
+This code is using the `maketrans
+No.9 Patch
+print(input().replace("0", "X").replace("1", "0").replace("X", "1"))
+
+# Analysis
+// Analysis:
+This code will solve

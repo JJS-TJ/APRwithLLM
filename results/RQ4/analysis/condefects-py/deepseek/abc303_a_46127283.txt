@@ -1,0 +1,27 @@
+No.1 Patch
+n = int(input())
+s = input()
+t = input()
+
+p = 0
+
+for i in range(n):
+    if s[i] == t[i]:
+        p += 1
+        
+    elif (s[i] == "1" or s[i] == "l") and (t[i] == "1" or t[i] == "l"):
+        p += 1
+        
+    elif (s[i] == "0" or s[i] == "o") and (t[i] == "0" or t[i] == "o"):
+        p += 1
+    
+if p == n:
+    print("Yes")
+    
+else:
+    print("No")
+    
+
+# Analysis
+This function now correctly checks if the string "s" matches the string "t" in terms of character substitution. It counts the characters "1" and "l" as the same, the characters "0" and "o" as the same, and the same characters in "s" and "t" as the same if they are interchangeable characters. If the number of matched characters is equal to the length of the strings "s" and "t", it prints "Yes". Otherwise, it prints "No". This function now works as expected.
+<|EOT|>

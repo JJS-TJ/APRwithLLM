@@ -1,0 +1,29 @@
+No.0 Patch
+s = input()
+if 'B' in s and 'R' in s and 'K' in s:
+    r = s[::-1]
+    if s.find('B') % 2 == r.find('B') % 2:
+        if s.find('R') < s.find('K') < len(s) - s[::-1].find('R'):
+            print('Yes')
+            exit()
+print('No')
+
+# Analysis
+This fixed function will now check if 'B', 'R' and 'K' are in the string before trying to find their positions. It also checks if 'R' and 'K' are in the correct order, and then checks
+No.6 Patch
+s = input()
+r = s[::-1]
+if 'B' not in s:
+    print('No')
+    exit()
+if 'R' not in s or 'K' not in s:
+    print('No')
+    exit()
+if s.find('B') % 2 == r.find('B') % 2:
+    if s.find('R') < s.find('K') < len(s) - s[::-1].find('R'):
+        print('Yes')
+        exit()
+print('No')
+
+# Explanation
+This fixed function first checks if 'B' is in the string. If it's not, it prints '

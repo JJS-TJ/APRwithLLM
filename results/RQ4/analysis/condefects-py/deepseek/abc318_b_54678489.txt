@@ -1,0 +1,26 @@
+No.5 Patch
+n=int(input())
+
+# Define a size for the grid and initialize all elements to 0
+grid_size=101
+f=[[0]*grid_size for i in range(grid_size)]
+
+for i in range(n):
+	a,b,c,d=map(int,input().split())
+	if a<0 or b<0 or c<0 or d<0:
+		print("Invalid rectangle coordinates. Please input non-negative integers.")
+		continue
+	if a>=grid_size or b>=grid_size or c>=grid_size or d>=grid_size:
+		print("Rectangle coordinates exceed grid size. Please input coordinates within the grid size.")
+		continue
+	for x in range(a,b):
+		for y in range(c,d):
+			f[x][y]=1
+
+ans=0
+for i in range(grid_size):
+	ans+=sum(f[i])
+print(ans)
+
+# Analysis
+Analysis: The above function fixes the bugs in the buggy function

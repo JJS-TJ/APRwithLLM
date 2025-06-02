@@ -1,0 +1,50 @@
+No.1 Patch
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# Analysis
+The fixed function now correctly prints the first K uppercase letters of the alphabet. The ASCII value of 'A' is 6
+No.2 Patch
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# Analysis
+// Analysis
+In the fixed function, we use the ASCII value of 'A' which is 65 instead of the ASCII
+No.3 Patch
+# Fixed Function
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# Explanation
+The fixed function corrects the bug by using the correct ASCII values for the uppercase alphabet (6
+No.4 Patch
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# Analysis
+The fixed function correctly prints the first K uppercase letters of the alphabet. This is achieved by printing the characters corresponding to ASCII values
+No.6 Patch
+K = int(input())
+
+for i in range(K):
+  print(chr(65 + i), end='')
+
+# Analysis
+The corrected function now correctly prints the first K uppercase letters of the alphabet by using the correct ASCII values for uppercase letters.
+No.8 Patch
+K = int(input())
+
+for i in range(65, 65+K):
+  print(chr(i), end='')
+
+# Analysis
+The fixed function correctly prints the first K uppercase letters of the alphabet. It achieves this by iterating

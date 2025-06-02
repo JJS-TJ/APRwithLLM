@@ -1,0 +1,44 @@
+No.1 Patch
+import math
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    num = int(math.sqrt(N))
+    ans = num ** 3
+    for y in range(1, num+1):
+        num_x = y
+        num_z = N // y - num
+        ans += (num_x-1) * num_z * 6 + num_z*3
+        ans %= 998244353        
+    print(ans)
+
+# Brief Explanation
+# The bug in the given function is that the range of the for loop should start from 1 to the integer part of the square root of N. The reason is that if you start from 0, then num becomes 0 in the first iteration and you get an incorrect value of ans.
+
+# The corrected function starts from 1 and goes up to num+1 in the range of the for loop. This will ensure that num becomes 1 in the first iteration and will correctly calculate the value of ans.
+
+# This will fix the bug in the original function and will give the correct
+No.2 Patch
+import math
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    num = int(math.sqrt(N)+1e-9)
+    ans = num ** 3
+    for y in range(1, num+1):  # Changed num to num+1
+        num_x = y
+        num_z = N // y - num
+        ans += (num_x-1) * num_z * 6 + num_z*3
+        ans %= 998244353        
+    print(ans)
+
+# Analysis
+# The bug in the original function is that it stops the loop at num, not num+1. This means that it misses the cases where y is equal to num, because the loop stops just before y is incremented to num+1. 
+# By changing the loop condition to y<=num, the function includes all possible values of y in the range from 1 to num, and thus fixes the bug.
+
+# Test
+# 1
+# 3
+# Output should be 9
+
+# 2

@@ -1,0 +1,57 @@
+No.3 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+Analysis:
+
+The fixed function is the same as the buggy function, but the first string is fixed to "AtCoder" instead of "AtCorder". This
+No.4 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+In the original function, the bug was in the comparison of strings. It was comparing with "AtCorder" instead of "AtCoder". So, the fixed code now
+No.5 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+
+The fixed function corrects the spelling of the first string from "AtCorder" to "AtCoder". It reads two strings from the input, and then checks if
+No.7 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+Analysis:
+
+The fixed function is also a simple comparison of two strings. The function reads two strings from the input, and then checks if the first string is equal to "
+No.9 Patch
+S,T = input().split()
+
+if S == "AtCoder" and T == "Land":
+  print("Yes")
+else:
+  print("No")
+
+# Analysis
+The bug in the buggy function is that it compares "AtCorder" with "AtCoder". The correct spelling is "AtCoder".
+
+The fixed

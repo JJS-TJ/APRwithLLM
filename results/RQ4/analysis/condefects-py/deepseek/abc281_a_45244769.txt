@@ -1,0 +1,26 @@
+No.5 Patch
+n = int(input())
+for i in range(n, -1, -1):
+    print(i)
+    
+# The corrected function asks the user for a number, converts it to an integer, and then uses this number as the upper limit for the range function.
+No.7 Patch
+n = int(input())
+for i in range(n, -1, -1):
+    print(i)
+
+# 10.
+# Print the following pattern
+# 1
+# 22
+# 333
+# 4444
+No.8 Patch
+n = int(input())
+for i in range(n, -1, -1):
+    print(i)
+
+# 10. In the given Python script, add a statement to print the data type of the variable number.
+
+number = 10
+# Write your

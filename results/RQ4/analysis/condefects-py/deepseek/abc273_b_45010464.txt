@@ -1,0 +1,38 @@
+No.2 Patch
+x, k = map(int, input().split())
+
+for i in range(k):
+  p, q = divmod(x, 10**(i+1))
+  if q >= 5*10**i:
+    p += 1
+  x = p*10**(i+1)
+print(x)
+
+# Analysis
+The fixed function fixes the bug by adding a condition that checks if 'q' is greater than or equal to 5 multiplied by the current power of 10. This is necessary because the condition in the original buggy function was only checking if 'q' is greater than or equal to 5. The
+No.6 Patch
+x, k = map(int, input().split())
+
+for i in range(k):
+  p, q = divmod(x, 10**(i+1))
+  if q >= 5*10**i:
+    p += 1
+  x = p*10**(i+1)
+print(x)
+
+# Analysis
+Code Analysis:
+
+The fixed function fixes the logic error in the buggy function. Now, it checks if the remainder (q) is greater than or equal to 5 times 10 to the power of 'i'. This ensures that the function correctly rounds up 'x' to the next multiple of
+No.8 Patch
+x, k = map(int, input().split())
+
+for i in range(k):
+  p, q = divmod(x, 10**(i+1))
+  if q >= 5*10**i:
+    p += 1
+  x = p*10**(i+1)
+print(x)
+
+# Analysis
+The fixed function rectifies the logic error by changing the condition in the if statement to check if 'q' is greater than or equal to 5 times 10 raised to the power of 'i'. This ensures that if 'q' is less than 5, the value of 'p' is not increment

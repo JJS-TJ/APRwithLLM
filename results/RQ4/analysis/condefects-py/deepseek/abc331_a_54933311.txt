@@ -1,0 +1,38 @@
+No.2 Patch
+M,D = map(int,input().split())
+y,m,d = map(int,input().split())
+
+if d == D:  # 最後の日
+    d = 1
+    if m == M:
+        m = 1
+        y += 1
+    else:
+        m += 1
+else:
+    d += 1
+
+print(y,m,d)
+
+# Analysis
+The fixed function now correctly increments the day and checks if the month or the year has reached its maximum value. It will increment the month and reset the day to 1 when the day of the month is the maximum days in that month. When the month reaches the maximum months in that year, it will increment the year and reset the month and
+No.7 Patch
+M,D = map(int,input().split())
+y,m,d = map(int,input().split())
+
+if d == D:  # 最後の日
+    d = 1
+    if m == M:
+        m = 1
+        y += 1
+    else:
+        m += 1
+else:
+    d += 1
+
+if m > M or m < 1 or d > D or d < 1:  # 日付が無効な値になっているか確認
+    print("Invalid date")
+else:
+    print(y,m,d)
+
+# このコード

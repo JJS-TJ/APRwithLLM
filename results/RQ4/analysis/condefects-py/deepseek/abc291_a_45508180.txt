@@ -1,0 +1,51 @@
+No.0 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Analysis
+# Analysis:
+The given code snippet now uses the isupper() method to check if the character is an uppercase letter before printing its index. This will correctly identify and print the indices of
+No.5 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Analysis
+# The problem in the provided code snippet was not related to the looping through the characters of the string. It was caused by the wrong use of comparison operators. 
+
+# Python'
+No.6 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Analysis
+# Analysis:
+
+The fixed code snippet now uses the isupper() function to check if a character in the string is uppercase. It then prints the index of the uppercase characters.
+No.7 Patch
+S = input()
+
+for i in range(len(S)):
+  if 'A' <= S[i] <= 'Z':
+    print(i + 1)
+
+# Analysis
+# Analysis:
+The fixed code snippet now correctly iterates through the characters of the string, rather than the indices of the string. This is achieved by replacing the incorrect
+No.8 Patch
+S = input()
+
+for i in range(len(S)):
+  if S[i].isupper():
+    print(i + 1)
+
+# Explanation:
+In the fixed code, we are using the isupper() function to check if the character at position i in the string S is an uppercase letter. This function returns True if the character
