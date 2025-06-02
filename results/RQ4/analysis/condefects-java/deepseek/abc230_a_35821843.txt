@@ -1,0 +1,56 @@
+No.2 Patch
+public static void main(String[] args) {
+	
+	Scanner scan = new Scanner(System.in);
+	
+	int num = scan.nextInt();
+	
+	if(num >= 42) num += 1;
+	
+	System.out.printf("AGC%03d", num);
+	
+}
+
+// Explanation
+In the corrected code, the inequality sign is changed from ">" to ">=". This makes sure that if the input number is 42, the program increments the number by 1, but if the input number is greater than 42, the program does not increment the number.
+
+Also, the format specifier
+No.6 Patch
+public static void main(String[] args) {
+	
+	Scanner scan = new Scanner(System.in);
+	
+	int num = scan.nextInt();
+	
+	if(num >= 42 && num < 999) num += 1;
+	
+	System.out.printf("AGC%03d", num);
+	
+}
+
+In this code, the if condition has been changed to check if the number is greater than or equal to 42 and less than 999. This will ensure that the number does not exceed 999.
+
+Please note that the corrected code assumes that the input number is between 1 and 999
+No.9 Patch
+public static void main(String[] args) {
+	
+	Scanner scan = new Scanner(System.in);
+	
+	int num = scan.nextInt();
+	
+	if(num >= 42) num += 1;
+	
+	System.out.printf("AGC%03d", num);
+	
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//include/misc/print.h
+#ifndef PRINT_H
+#define PRINT_H
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+ *  This function prints out a matrix.
+ *
+ *  Arguments:
+ *  mat - the matrix to print.

@@ -1,0 +1,15 @@
+No.2 Patch
+public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  int A = sc.nextInt();
+  int B = sc.nextInt();
+
+  if (B - A == 1 && A % 3 != 0) {
+    System.out.println("Yes");
+  } else {
+    System.out.println("No");
+  }
+}
+```
+With the corrected code, if the difference between A and B is 1 and A is not divisible by 3, it will print "Yes". Otherwise, it will print "No".
+<|EOT|>

@@ -1,0 +1,35 @@
+No.4 Patch
+// Fixed Function
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	int n = scan.nextInt();
+	int q = scan.nextInt();
+	int[] circumstance = new int[n];
+	for (int i = 0; i < n; i++) {
+		circumstance[i] = 0;
+	}
+	for (int k = 0; k < q; k++) {
+		int query1 = scan.nextInt();
+		int query2 = scan.nextInt();
+		if (query1 == 1 || query1 == 2) {
+			circumstance[query2-1] = circumstance[query2-1] + query1;
+		} else {
+			if (circumstance[query2-1] >= 2) {
+				System.out.println("Yes");
+			} else {
+				System.out.println("No");
+			}
+		}
+	}
+	scan.close();
+}
+
+// Analysis
+The Fixed Function corrects the Buggy Function by properly handling all possible values of query1.
+
+If query1 is 1 or 2, the status of the item in the array at the index of query2 is updated accordingly.
+
+If query1 is not 1 or 2, it is treated as an instruction to print the status of the item in the array at the index of query2. Here, the condition is changed to `circumstance[query2-1] >= 2`, which ensures that the status of the item in the array at the index of query2 is at least 2 to print "Yes".
+
+This modification ensures the correct and expected output of the function.
+<|EOT|>

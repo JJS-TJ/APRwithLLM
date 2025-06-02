@@ -1,0 +1,90 @@
+No.1 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    BigDecimal result = x.setScale(0, BigDecimal.ROUND_HALF_UP);
+    System.out.println(result.intValue());
+}
+
+// Explanation
+The bug was due to the fact that the rounding was happening after converting it to a double.
+We should have directly rounded the BigDecimal to an int using the intValue() method after using the setScale() method.
+This will ensure the number is correctly rounded to the nearest integer.
+No.3 Patch
+// Fixed Function
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    BigDecimal result = x.setScale(0,BigDecimal.ROUND_HALF_UP);
+    System.out.println(result);
+}
+
+// Analysis
+Analysis:
+The buggy function was fixed by simply storing the rounded BigDecimal number directly into the variable 'result', instead of converting it to a double value and then printing it.
+Since BigDecimal is a class, it can store and manipulate decimal numbers with greater precision than a double. 
+Therefore, it's more suitable to store the
+No.4 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    BigDecimal result = x.setScale(0, BigDecimal.ROUND_HALF_UP);
+    System.out.println(result);
+}
+
+// Analysis
+In the corrected function, the BigDecimal object 'result' is created by rounding the BigDecimal number 'x' to 0 decimal places using the ROUND_HALF_UP method.
+Then, the 'result' is printed directly, without converting it to a double value using the doubleValue() method.
+This will display the rounded BigDecimal value
+No.7 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    long result = x.setScale(0,BigDecimal.ROUND_HALF_UP).longValue();
+    System.out.println(result);
+}
+
+// Analysis
+In the fixed function, the BigDecimal number 'x' is being converted to a long data type instead of a double.
+This is because the setScale method returns a BigDecimal object, and the longValue method returns a long value.
+The long data type can store larger numbers compared to the double data type, and it is more suitable for representing integers.
+No.8 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    BigDecimal result = x.setScale(0,BigDecimal.ROUND_HALF_UP);
+    System.out.println(result);
+}
+
+// Explanation
+Explanation:
+The fixed function contains the correct logic to round a BigDecimal number to an integer.
+It uses the "setScale" method to round the BigDecimal number 'x' to 0 decimal places using the ROUND_HALF_UP method.
+This method will correctly round the decimal part of the number. 
+If the
+No.9 Patch
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    BigDecimal x = sc.nextBigDecimal();
+    
+    BigDecimal result = x.setScale(0,BigDecimal.ROUND_HALF_UP);
+    System.out.println(result);
+}
+
+// Analysis
+Fixed function:
+In the fixed function, the BigDecimal number 'x' is still being rounded to 0 decimal places using the ROUND_HALF_UP method.
+But the return type of the setScale method is changed to BigDecimal.
+This way, the result will be a BigDecimal number and not a double.
+This is because Big

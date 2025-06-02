@@ -1,0 +1,27 @@
+No.6 Patch
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String S = input.next();
+    var frequency = new HashMap<Character, Integer>();
+    for (char c : S.toCharArray()) {
+        frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+    }
+    char maxChar = ' ';
+    int maxCount = -1;
+    for (Map.Entry<Character, Integer> entry : frequency.entrySet()) {
+        if (entry.getValue() > maxCount || (entry.getValue() == maxCount && entry.getKey() < maxChar)) {
+            maxChar = entry.getKey();
+            maxCount = entry.getValue();
+        }
+    }
+    System.out.printf("%c\n", maxChar);
+    input.close();
+}
+
+Analysis:
+
+The previous code is buggy because it doesn't handle the condition when frequency of two characters are same. It just checks if the character is lexicographically smaller.
+The new code calculates the frequency of all characters first, then iterates over the entries of the HashMap to find the character with the highest frequency. If there are multiple characters with the same highest frequency, it picks the lexicographically smallest one.
+
+The corrected function does not check for two conditions in if statement and has more readable statements for calculating max frequency. It also handles the case where the frequency of two characters are the same.
+In the end, the character with the highest frequency

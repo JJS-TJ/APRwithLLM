@@ -1,0 +1,69 @@
+No.1 Patch
+static void solve () {
+	
+	char[] s = nextCharArray();
+	String t = next();
+	
+	for (int i=0; i<=25; i++) {
+		if (t.equals(slide(s, i))) {
+			println("Yes");
+			return;
+		}
+	}
+	
+	println("No");
+	
+}
+
+// Analysis
+// The fixed function solves the problem by correctly implementing the string rotation logic. It checks if each possible rotation of the string matches the target string, and if so, outputs "Yes". If no rotation matches, it outputs "No".
+// Time Complexity: O(n), where n is the length of the string, as we need to loop through the string once to rotate it and again
+No.6 Patch
+static void solve () {
+	
+	char[] s = nextCharArray();
+	String t = next();
+	
+	for (int i=0; i<26; i++) {
+		StringBuilder rotated = new StringBuilder();
+		for (char c : s) {
+			rotated.append((char) ((c - 'a' + i) % 26 + 'a'));
+		}
+		if (t.equals(rotated.toString())) {
+			println("Yes");
+			return;
+		}
+	}
+	
+	println("No");
+	
+}
+
+// Notes
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// The bug was in the line where it was
+No.8 Patch
+static void solve () {
+	
+	char[] s = nextCharArray();
+	String t = next();
+	
+	for (int i=0; i<26; i++) {
+		StringBuilder rotated = new StringBuilder();
+		for (char c : s) {
+			rotated.append((char) ((c - 'a' + i) % 26 + 'a'));
+		}
+		if (t.equals(rotated.toString())) {
+			println("Yes");
+			return;
+		}
+	}
+	
+	println("No");
+	
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.kodilla.stream.world;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.

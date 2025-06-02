@@ -1,0 +1,10 @@
+No.9 Patch
+public static boolean check(int x1, int y1, int x2, int y2, int x3, int y3) {
+    return (long) (y1 - y2) * (x1 - x3) == (long) (x1 - x2) * (y1 - y3);
+}
+
+// Analysis
+This code checks if three points (x1, y1), (x2, y2) and (x3, y3) are collinear. The function uses the slope formula to determine if the points are collinear. If the area of the parallelogram formed by the three points is zero, then the points are collinear. The area of the parallelogram is given by the absolute value of the determinant of the following 2x2 matrix:
+
+|x1-x2, x1-x3|
+|

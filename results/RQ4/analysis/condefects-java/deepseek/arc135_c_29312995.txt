@@ -1,0 +1,65 @@
+No.9 Patch
+public static void main(String[] args) {
+	FastScanner sc = new FastScanner(System.in);
+	int n = sc.nextInt();
+	int[] s = new int[n];
+	for(int i = 0; i < n; i++) {
+		s[i] = sc.nextInt();
+	}
+	
+	
+	while(true) {
+		int[] bc = new int[31];
+		for(int i = 0; i < n; i++) {
+			int tmp = s[i];
+			for(int j = 0; j < 31; j++) {
+				if((tmp & 1) == 1) {
+					bc[j]++;
+				}
+				
+				tmp >>= 1;
+			}
+		}
+		
+		long max = 0;
+		int maxv = -1;
+		for(int i = 0; i < n; i++) {
+			int tmp = s[i];
+			long sum = 0;
+			for(int j = 0; j < 31; j++) {
+				if((tmp & 1) == 1) {
+					sum += (n-bc[j]*2)*(1L<<(j));
+				}
+				tmp >>= 1;
+			}
+			
+			if(sum > max) {
+				max = sum;
+				maxv = s[i];
+			}
+		}
+		
+		if(maxv == -1)
+			break;
+		
+		for(int i = 0; i < n; i++)
+			s[i] ^= maxv;
+	}
+	
+	long ans = 0;
+	for(int i = 0; i < n; i++) {
+		ans += s[i];
+	}
+	
+	System.out.println(ans);
+}
+
+// Analysis
+The fixed function is the same as the buggy function, but with the following changes:
+
+1. The multiplication by 2 in the expression has been removed because it is not necessary.
+2. The shift operator is now multiplying by 1 (1L<<j), not 2 (1L<<(j*2)).
+3. The out variable has been removed, and the print statement is now simply System.out.println(ans);.
+
+These changes should prevent the function from running indefinitely and ensure that it produces the correct result.
+<|EOT|>

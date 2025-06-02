@@ -1,0 +1,103 @@
+No.1 Patch
+public static void solve() {
+	int n = nextInt(), s = nextInt();
+	int[] a = new int[n+1], b = new int[n+1];
+	for (int i=1; i<=n; i++) {
+		a[i] = nextInt(); b[i] = nextInt();
+	}
+	
+	boolean[][] dp = new boolean[n+1][s+1];
+	dp[0][0] = true;
+	
+	for (int i=1; i<=n; i++) {
+		for (int j=0; j<=s; j++) {
+			if (j >= a[i]) dp[i][j] |= dp[i-1][j - a[i]];
+			if (j >= b[i]) dp[i][j] |= dp[i-1][j - b[i]];
+		}
+	}
+	
+	println(dp[n][s]? "Yes" : "No");
+	if (!dp[n][s]) return;
+	
+	int now = s;
+	StringBuilder ans = new StringBuilder();
+	for (int i=n; i>=1; i--) {
+		if (now >= a[i] && dp[i-1][now - a[i]]) {
+			now -= a[i];
+			ans.append('H');
+		}
+		else {
+			now -= b[i];
+			ans.append('T');
+		}
+	}
+	
+	println(ans.reverse());
+	
+}
+
+// Analysis
+The bug in the function is that it only iterates over `j` from `s` to `a[i]` and `s` to `b[i]` respectively in the inner loops. This means that the dp array is not correctly filled for all values of `j` from `0` to `s`. The corrected function iterates over all values of `j` from `0` to `s`, and checks if the current value of `j` is greater than or equal to `a[i]` or `b[i]` before updating `dp[i][j]`. 
+
+After the dp array is correctly filled, the function checks if `dp[n][s]` is `true` and prints "Yes" if it is. If it is not, the function returns. 
+
+If `dp[n][s]` is `true`, the function creates a `StringBuilder` and a variable `now` set to `s`. 
+
+The function then enters a loop that iterates over `i` from `n` to `1` and checks if `dp[i-1][now - a[i]]` is `true` and if `now` is greater than or equal to `a[i]`. If both conditions are true, `now` is decremented by `a[i]` and "H" is appended to the `StringBuilder`. Otherwise, `now` is decremented by `b[i]` and "T" is appended to the `StringBuilder`.
+
+Finally, the function prints the reversed contents of the `StringBuilder`.
+
+The function uses `nextInt()` and `println()`, which are presumably defined elsewhere in the code and are not shown here. Also, this function seems to be part of a larger program, possibly dealing with playing cards or similar.
+<|EOT|>
+No.4 Patch
+public static void solve () {
+	
+	int n = nextInt(), s = nextInt();
+	int[] a = new int[n+1], b = new int[n+1];
+	for (int i=1; i<=n; i++) {
+		a[i] = nextInt(); b[i] = nextInt();
+	}
+	
+	boolean[][] dp = new boolean[n+1][s+1];
+	dp[0][0] = true;
+	
+	for (int i=1; i<=n; i++) {
+		
+		for (int j=0; j<=s; j++) {
+			if (j >= a[i]) {
+				dp[i][j] |= dp[i-1][j - a[i]];
+			}
+			if (j >= b[i]) {
+				dp[i][j] |= dp[i-1][j - b[i]];
+			}
+		}
+		
+	}
+	
+	println(dp[n][s]? "Yes" : "No");
+	if (!dp[n][s]) return;
+	
+	int now = s;
+	StringBuilder ans = new StringBuilder();
+	for (int i=n; i>=1; i--) {
+		if (now >= a[i] && dp[i-1][now - a[i]]) {
+			now -= a[i];
+			ans.append('H');
+		}
+		else {
+			now -= b[i];
+			ans.append('T');
+		}
+	}
+	
+	println(ans.reverse());
+	
+}
+
+// Analysis
+1. This function is exactly the same as the original, with the exception of the loop bounds. In the original function, the inner loop was from `s` to `a[i]` (or `b[i]`), but this would lead to an array index out of bounds exception if `a[i]` (or `b[i]`) was larger than `s`. This is fixed by changing the loop bounds to `0` to `s`. 
+
+2. The rest of the function remains unchanged, as it correctly checks whether `dp[i-1][now - a[i]]` or `dp[i-1][now - b[i]]` is `true`, and then decrements `now` and appends 'H' or 'T' to the answer string accordingly. 
+
+3. If `dp[n][s]` is `false`, the function returns without printing anything. If `dp[n][s]` is `true`, the function prints "Yes" and then builds the answer string and prints it.
+<|EOT|>

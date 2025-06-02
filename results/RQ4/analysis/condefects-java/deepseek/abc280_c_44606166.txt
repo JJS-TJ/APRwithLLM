@@ -1,0 +1,22 @@
+No.4 Patch
+public static void main(String...args){
+    Scanner sc=new Scanner(System.in);
+    final char[] S=sc.next().toCharArray();
+    final char[] T=sc.next().toCharArray();
+
+    int i;
+    for(i=0;i<S.length && i<T.length;i++){
+        if(S[i] != T[i]){
+            System.out.println(i+1);
+            return;
+        }
+    }
+
+    if(S.length != T.length){
+        System.out.println(Math.min(S.length, T.length) + 1);
+    }else{
+        System.out.println(-1);
+    }
+}
+
+In this corrected function, the loop iterates over the lengths of both strings, checking for mismatches. If a mismatch is found, it prints out the position of the mismatch and terminates the function. If the lengths of S and T are not equal and none of the characters match, it prints out the length of the shorter string

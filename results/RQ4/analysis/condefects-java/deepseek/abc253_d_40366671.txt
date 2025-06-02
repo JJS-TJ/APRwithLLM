@@ -1,0 +1,60 @@
+No.1 Patch
+static void solve() throws IOException{
+    long n=in.nextLong(),a=in.nextLong(),b=in.nextLong();
+    long sum=(n*(n+1))/2;
+    long sum1=a*((n/a)*((n/a) +1))/2;
+    long sum2=b*((n/b)*((n/b) +1))/2;
+    long p=(a*b)/gcd(a,b);
+    long sum3=p*((n/p)*((n/p) +1))/2;
+    out.println(sum-(sum1+sum2-sum3));
+
+}
+
+// gcd is a function to find the greatest common divisor of two numbers
+
+// Explanation
+// The bug was in the calculation of p, which was the product of a and b, and should be the product of a and b divided by their greatest common divisor.
+// This is because the numbers that are multiples of both a and b (i.e., those that are multiples of a*b) are counted twice in sum1 and sum2, and should be subtracted once when we subtract sum3.
+
+// The function gcd is used to find the greatest common divisor of a and b. This is the number that divides
+No.2 Patch
+static void solve() throws IOException{
+    long n=in.nextLong(),a=in.nextLong(),b=in.nextLong();
+    long sum=(n*(n+1))/2;
+    long sum1=(a*(n/a)*(n/a+1))/2;
+    long sum2=(b*(n/b)*(n/b+1))/2;
+    long lcm=(a*b)/gcd(a,b);
+    long sum3=(lcm*(n/lcm)*(n/lcm+1))/2;
+    out.println(sum-sum1-sum2+sum3);
+}
+
+
+// Analysis
+
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under
+No.8 Patch
+static void solve() throws IOException{
+    long n=in.nextLong(),a=in.nextLong(),b=in.nextLong();
+    long sum=(n*(n+1))/2;
+    long sum1=a*((n/a)*((n/a) +1))/2;
+    long sum2=b*((n/b)*((n/b) +1))/2;
+    long p=a*b/gcd(a,b);
+    long sum3=p*((n/p)*((n/p) +1))/2;
+    out.println(sum-(sum1+sum2-sum3));
+
+}
+
+// Explanation
+// The original function was not correctly calculating the sum of multiples of 'a' and 'b' less than 'n' when 'a' and 'b' are not coprime. This was because it was not taking the least common multiple (LCM) of 'a' and 'b' to calculate the sum of multiples of 'a*b'.
+// The function was fixed by using the formula for sum of multiples 'p' less than 'n' which is (p*((n/p)*((n/p) +1))/2) for non coprime 'a' and 'b' we use (a*

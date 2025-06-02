@@ -1,0 +1,100 @@
+No.0 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		switch (sc.next()) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		}
+	}
+}
+<|EOT|>
+No.1 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		switch (sc.next()) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		}
+	}
+}
+
+// Testing
+The function can be tested by calling it with different inputs. For example, calling the function with "Monday" should print "5", and calling it with "Friday" should print "1".
+<|EOT|>
+No.2 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		switch (sc.next()) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		}
+	}
+}
+
+Now, the function should correctly print the number of days until Friday for any input.
+<|EOT|>
+No.3 Patch
+public static void main(final String[] args) {
+	try (final Scanner sc = new Scanner(System.in)) {
+		switch (sc.next()) {
+		case "Monday":
+			System.out.println("5");
+			break;
+		case "Tuesday":
+			System.out.println("4");
+			break;
+		case "Wednesday":
+			System.out.println("3");
+			break;
+		case "Thursday":
+			System.out.println("2");
+			break;
+		case "Friday":
+			System.out.println("1");
+			break;
+		}
+	}
+}
+
+// Analysis
+Now, the program correctly prints the corresponding number for days of the week, regardless of whether the user input includes a space. The user input is compared to the days of the week using a switch statement, which is a more efficient way to compare a variable against multiple values than a series of if-else statements.
+<|EOT|>

@@ -1,0 +1,49 @@
+No.8 Patch
+public static void main(String[] args) {
+
+    IOHandler io = new IOHandler();
+    long n = io.nextLong();
+
+    if (n < 25) {
+        io.output(0);
+        io.close();
+        return;
+    }
+
+    final int z = (int) Math.sqrt(n);
+    boolean[] isPrime = new boolean[z + 1];
+    List<Long> primes = new ArrayList<>();
+
+    for (int p = 2; p <= z; p++) isPrime[p] = true;
+    for (int p = 2; p*p <= z; p++) {
+        if (isPrime[p]) {
+            for (int q = p*p; q <= z; q += p) isPrime[q] = false;
+        }
+    }
+
+    for (int p = 2; p <= z; p++) {
+        if (isPrime[p]) primes.add((long) p);
+    }
+
+    long result = 0;
+    for (long a : primes) {
+        for (long c : primes) {
+            if (c <= a) continue;
+
+            long br = Math.min(c - 1, n / (a*a*c*c));
+            long bl = a;
+            if (bl < br) {
+                int bIndex = Collections.binarySearch(primes, br);
+                if (bIndex < 0) bIndex = -bIndex - 2;
+                int blIndex = Collections.binarySearch(primes, bl);
+                if (blIndex < 0) blIndex = -blIndex - 2;
+                result += bIndex - blIndex;
+            }
+        }
+    }
+    io.output(result);
+    io.close();
+}
+
+This code is the fixed version of the provided buggy function. It corrects the issues discussed above and optimizes the function for performance. The function now correctly determines the count of prime numbers that satisfy the given conditions. It also uses a more memory-efficient approach to store the prime numbers and find the count using binary search. Additionally, the code now properly handles the case when n is less than 25.
+<|EOT|>

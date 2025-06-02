@@ -1,0 +1,32 @@
+No.5 Patch
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	
+	int H = sc.nextInt(), W = sc.nextInt();
+	int R = sc.nextInt(), C = sc.nextInt();
+	
+	int ans = 4;
+	if(R==H) ans--;
+	if(R==1) ans--;
+	if(C==W) ans--;
+	if(C==1) ans--;
+	
+	System.out.println(ans);
+	
+	sc.close();
+}
+
+// Analysis
+The corrected code now reads input from the user using Scanner class. The conditions in the if statements were also corrected to check if the cell is on the top or left edge of the grid.
+
+In general, it's important to ensure that your code can handle different inputs and that it behaves as expected in all possible scenarios. This includes checking for edge cases and boundary conditions.
+
+// Testing
+
+// Test 1:
+Input:
+3 4
+2 2
+
+Output:
+4

@@ -1,0 +1,91 @@
+No.3 Patch
+private static void tc() {
+    int p=998244353;        
+    int n=io.nextInt(),m=io.nextInt(),k=io.nextInt();
+    long []f=new long[k+1];f[0]=1;
+    for(int i=0;i<n;i++) {
+        int up=Math.min(k,m*(i+1));
+        long s=0;for(int j=up-m+1;j<=up;j++)s+=f[j];
+        for(int j=up;j>=0;j--){
+            s+=j-m>=0?f[j-m]:0;
+            s-=f[j];f[j]=s;
+            f[j]%=p;
+        }
+    }
+    long sum=0;
+    for(int i=0;i<=k;i++){
+        sum+=f[i];
+        sum%=p;
+    }
+    io.println(sum);
+}
+
+// This code mods each individual value in the f array after each iteration, preventing overflow. 
+// The modulo operation is performed before adding the value to the sum, to prevent overflow when calculating the sum. 
+// The final sum is modded once again to get the final result.
+
+// Note: This is the best solution to prevent the integer overflow. If we mod the sum in every iteration, the intermediate results may exceed the limit of an integer.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//Buggy function
+private static void tc() {
+    int n=io.nextInt();
+    int []a=new int[n];for(int i=0;i<n;i++)a[i]=io.nextInt();
+    int []b=new int[n];for(
+No.5 Patch
+private static void tc() {
+    int p=998244353;        
+    int n=io.nextInt(),m=io.nextInt(),k=io.nextInt();
+    long []f=new long[k+1];f[0]=1;
+    for(int i=0;i<n;i++) {
+        int up=Math.min(k,m*(i+1));
+        long s=0;for(int j=up-m+1;j<=up;j++)s+=f[j];
+        for(int j=up;j>=0;j--){
+            s+=j-m>=0?f[j-m]:0;
+            s-=f[j];f[j]=(s%p+p)%p;
+        }
+    }
+    io.println(Arrays.stream(f).sum()%p);
+}
+
+
+// This is the buggy function and its fixed version. In the fixed function, the mod operator (%) is applied to the sum variable (s) after it is incremented in the outer loop. This is because the sum may become negative due to the subtraction operation, and if we apply the mod operator to it before incrementing it, it may not give the expected result. Applying the mod operator after the increment operation ensures that we always get a positive result.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.james.webfluxsample;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@SpringBootApplication
+public class WebFluxSampleApplication {
+
+    public static void main(String[] args) {
+        SpringApplication
+No.6 Patch
+private static void tc() {
+    int p=998244353;        
+    int n=io.nextInt(),m=io.nextInt(),k=io.nextInt();
+    long []f=new long[k+1];f[0]=1;
+    for(int i=0;i<n;i++) {
+        int up=Math.min(k,m*(i+1));
+        long s=0;for(int j=up-m+1;j<=up;j++)s+=f[j];
+        for(int j=up;j>=0;j--){
+            s+=j-m>=0?f[j-m]:0;
+            s-=f[j];f[j]=s%p;
+        }
+    }
+    io.println(Arrays.stream(f).sum()%p);
+}    
+
+// The bug in this function is in the for loop where it updates the elements of f[] array. 
+// The value of f[j] is calculated and updated without taking modulus with 'p'. 
+// It might become a large number which may cause overflow in the next iteration.
+// Hence we need to take modulus of 's' with 'p' before assigning it to f[j].
+ ```
+
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜># 05 Third-Party APIs: Work Day Scheduler
+
+## Your Task
+
+Create a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+
+You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+
+## User Story

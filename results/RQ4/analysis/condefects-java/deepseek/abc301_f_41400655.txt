@@ -1,0 +1,69 @@
+No.0 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Problem Link:
+// https://www.hackerrank.com/challenges/breaking
+No.1 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Note: This function will return false for characters that are not lowercase letters, including uppercase letters and other
+No.2 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// This way, 'z' is included in the range and the function works as expected.
+
+// The
+No.3 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// The fixed function now correctly checks if a character is a lowercase letter. It does this by
+No.4 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Analysis
+// This function now correctly checks if the character is between 'a' and 'z', inclusive.
+No.5 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+
+// Test Cases
+// Test Case 1: 'a'
+// Expected output: true
+No.6 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// This function will now correctly return true for all lowercase letters. 
+
+// Alternative Solution
+No.7 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+// Explaination:
+// The bug in the function is that it does not include 'z' in the
+No.8 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}
+
+
+// Explanation:
+// This function is supposed to check whether a given character is a lowercase letter
+No.9 Patch
+boolean isLower(char c) {
+	return 'a' <= c && c <= 'z';
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Write a method named numUnique that accepts three integers as parameters and returns the number of unique integers among the

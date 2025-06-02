@@ -1,0 +1,83 @@
+No.0 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Test the function
+public static void main(String[] args) {
+    int X = 2;
+No.1 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+This function now correctly uses the addition operator to perform the mathematical operations.
+ // In this code, a bug was found
+No.2 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+In the corrected function, the bitwise XOR operator is replaced by the multiplication (*) operator. This corrects the
+No.3 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The fix involves changing the bitwise XOR operator (^) to the multiplication (*
+No.4 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The corrected function has the return statement corrected to use the multiplication operator (*) instead of
+No.5 Patch
+public static int F(int X) {
+    return X*X + 2*X + 3;
+}
+
+// Analysis
+Analysis:
+
+The fixed function now uses the multiplication (*) operator for squaring X and the addition
+No.6 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Explanation
+Explanation:
+
+The correct function should use the multiplication (*) operator instead of the
+No.7 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The corrected function corrects the logical error by replacing the bitwise XOR operator (
+No.8 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+
+The fixed function now uses the multiplication (*) operator to square the value of X before adding it to
+No.9 Patch
+public static int F(int X) {
+    return X*X+2*X+3;
+}
+
+// Analysis
+Analysis:
+
+The fixed function correctly calculates the value of the given function. The corrected function correctly

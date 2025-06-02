@@ -1,0 +1,26 @@
+No.6 Patch
+public static void main(String[] args){
+	
+	//入力の読み込み
+	Scanner sc = new Scanner(System.in);
+	int K = sc.nextInt();
+	int H = (21 + (K / 60)) % 24;
+	int M = (K % 60);
+	
+   	//計算
+	String ans = String.format("%02d:%02d", H, M);
+	
+	//回答出力
+	System.out.println(ans);
+}
+
+// Analysis of the fixed function
+1. We have imported the Scanner class.
+
+2. We are getting input from the user and storing it in the variable K.
+
+3. We are calculating the hour by adding K/60 to 21 and taking modulo 24 because the starting time is 21:00 and we want the hour to be in the range of 0-23.
+
+4. We are calculating the minute by taking modulo 60 of K because a day has 24*60 minutes and we want the minute to be in the range of 0-59.
+
+5. We are formatting the output string with

@@ -1,0 +1,313 @@
+No.0 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K; i >= x; i--) {
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+                if (dp[i] < 0) dp[i] += mod; // Addition fix
+            }
+        } else {
+            for (int i = x; i <= K; i++) {
+                dp[i] = (dp[i] - dp[i - x]) % mod;
+                if (dp[i] < 0) dp[i] += mod; // Subtraction fix
+            }
+        }
+        System.out.println(dp[K]);
+    }
+}
+
+// Explanation
+
+// The original code does not take care of negative remainders when performing addition or subtraction. 
+// The mod operation can sometimes result in negative numbers, which is incorrect. 
+// By adding a check to convert any negative result to a positive one, we can ensure that the result is always within the expected range (0 to mod-1).
+
+// The addition fix makes sure that the result of dp[i] + dp[i - x] is always positive before the mod operation.
+// The subtraction fix makes sure that the result of dp[i] - dp[i - x] is always positive before the mod operation.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>// Buggy Function
+public class BuggyFunction {
+    public static void main(String[] args) {
+        int N = 3
+No.1 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K; i >= x; i--) {
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+            }
+        } else {
+            for (int i = x; i <= K; i++) {
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod;
+            }
+        }
+        System.out.println(dp[K]);
+    }
+}
+
+// Explanation
+// In the buggy function, the code for the '-' operation does not handle negative results correctly. 
+// It just subtracts the value at dp[i - x] from dp[i]. However, if the result is negative, it is converted to a positive value using the mod operator. 
+// This leads to incorrect results when the mod value is less than the negative result.
+
+// To fix this, the code checks if the value at dp[i - x] is less than the value of dp[i]. If it is, then mod is added to the result to make it positive. 
+// Then, the result is reduced by mod to get a value in the range [0, mod - 1].
+// This way, the '-' operation can correctly handle both positive and negative results.
+
+// The overall logic of the function remains the same. It still calculates the number of ways to make K using the first x elements and the remaining elements. 
+// The difference is
+No.2 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K; i >= x; i--)
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+        } else {
+            for (int i = x; i <= K; i++)
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod;
+        }
+        System.out.println(dp[K]);
+    }
+
+}
+
+// Analysis
+
+
+// Description
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy Function
+
+
+// Fixed Function
+
+
+// Analysis
+
+
+// Buggy
+No.7 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K;i >= x;i --)
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+        } else {
+            for (int i = x;i <= K;i ++)
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod;
+        }
+        System.out.println(dp[K]);
+    }
+
+}
+
+// Analysis
+// To handle negative numbers, adding 'mod' to the result before modulo operation.
+
+
+
+
+
+
+
+<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+
+Description
+
+You are given an array of integers. Find the maximum sum of all possible contiguous subarrays of the array.
+
+The first line of input contains an integer n(1<=n<=100000), the number of elements in the array. The next line contains n space-separated integers.
+
+Output the maximum subarray sum.
+
+
+Example
+
+Input
+
+5
+1 2 3 4 -10
+
+Output
+
+10
+
+
+Input format
+
+The input consists of two lines. The first line contains a single integer n. The second line contains n space-separated integers.
+
+
+Output format
+
+Print the maximum subarray sum.
+
+
+Sample testcases
+
+Input 1            Output 1
+
+5                 10
+1 2 3 4 -10
+
+Input 2
+No.8 Patch
+public static void main(String[] args) {
+    final int mod = 998244353;
+    Scanner scan = new Scanner(System.in);
+    int Q = scan.nextInt();
+    int K = scan.nextInt();
+
+    long[] dp = new long[K + 1];
+    dp[0] = 1;
+    while (Q-- > 0) {
+        String op = scan.next();
+        int x = scan.nextInt();
+        if (op.equals("+")) {
+            for (int i = K;i >= x;i --)
+                dp[i] = (dp[i] + dp[i - x]) % mod;
+        } else {
+            for (int i = x;i <= K;i ++)
+                dp[i] = (dp[i] - dp[i - x] + mod) % mod;
+        }
+        System.out.println(dp[K]);
+    }
+
+}
+
+// Analysis
+// The bug in the original function was that it was performing subtraction without taking mod on dp[i - x]. As a result, it was causing overflow when the subtraction operation is performed. To fix the bug, the subtraction operation was adjusted to first take mod on dp[i - x] before the subtraction operation. This ensures that the result is always non-negative and within the range of a long integer. The "+ mod" operation is added in case the subtraction operation results in a negative number. This operation adds mod to the negative number to shift it back into the positive range. The mod operation then ensures that the number is within the range of a long integer.
+
+// This fixed function now works as expected, and performs the operations correctly, taking into account the mod operation to avoid overflow. It calculates the correct value for dp[i] and then takes the mod to ensure the result fits into a long integer.
+
+// In the end, the function correctly implements dynamic programming, and it prints the correct output for each operation.
+
+// The

@@ -1,0 +1,24 @@
+No.7 Patch
+public static void main(String args[]){
+
+    //Using booleans when dealing with yes/no, true/false, 1/0.. , minimising no of variables
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int orgPrice = sc.nextInt();
+    int discPrice = sc.nextInt();
+    int minDPrice = Integer.MAX_VALUE;
+
+    int[] dishesPrice = new int[N];
+    for(int i = 0; i < N; i++){
+        dishesPrice[i] = sc.nextInt();
+        if(dishesPrice[i] < minDPrice) minDPrice = dishesPrice[i];
+    }
+
+    System.out.println(Math.min(orgPrice, minDPrice + discPrice));
+}
+
+In this fixed function, the loop starts from 0 and the minimum dish price is initialized to Integer.MAX_VALUE so that any dish price is less than it. 
+The System.out.println line prints the minimum of the original price and the sum of the minimum dish price and the discounted price.
+
+This function now correctly finds the minimum dish price, and correctly calculates the price to pay based on the original price, the discounted price, and the minimum dish price.
+<|EOT|>

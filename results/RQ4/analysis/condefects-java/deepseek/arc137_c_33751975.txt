@@ -1,0 +1,18 @@
+No.1 Patch
+void solve() {
+    int n = in.nextInt();
+    long[] a = in.nextLongArray(n);
+    if (Math.abs(a[n - 1] - a[n - 2]) == 1) {
+        if ((a[n - 1] - (n - 1)) % 2 == 0) {
+            out.println("Bob");
+        } else {
+            out.println("Alice");
+        }
+    } else {
+        out.println("Alice");
+    }
+}
+
+// Explanation
+The buggy function was checking the condition for the winner incorrectly and the modulus operation was not being performed correctly on the difference between the last two elements of the array. The correct function now checks the condition for the winner correctly and performs the modulus operation correctly. If the difference between the last two elements of the array is 1 and the difference between the last element and n-1 is even, then Bob is the winner. Otherwise, Alice is the winner. If the difference between the last two elements of the array is not 1, then Alice is the winner.
+<|EOT|>

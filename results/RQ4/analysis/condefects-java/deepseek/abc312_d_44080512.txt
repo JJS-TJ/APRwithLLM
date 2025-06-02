@@ -1,0 +1,45 @@
+No.6 Patch
+public static void main(String...args) {
+    Scanner sc = new Scanner(System.in);
+    final char[] string = sc.next().toCharArray();
+    //文字列をi列目まで見たとき(個がｊ個ある
+    int[][] dp=new int[string.length+1][string.length/2+1];
+    dp[0][0]=1;
+
+    final int M=string.length/2;
+    for(int i=1;i<=string.length;i++){
+        for(int j=0;j<=M;j++){
+
+            switch (string[i-1]){
+                case '(':{
+                    if(0<j){
+                        dp[i][j]=(dp[i-1][j-1]+dp[i][j])%998244353;
+
+                    }
+                    break;
+                }
+                case ')':{
+                    if(j<M){
+                        dp[i][j]=(dp[i-1][j+1]+dp[i][j])%998244353;
+
+                    }
+                    break;
+                }
+                default:{
+                    if(j<M){
+                        dp[i][j]=(dp[i-1][j+1]+dp[i][j])%998244353;
+                    }
+                    if(0<j){
+                        dp[i][j]=(dp[i-1][j-1]+dp[i][j])%998244353;
+                    }
+                }
+            }
+        }
+        
+    }
+    System.out.println(dp[string.length][0]);
+}
+
+// Explanation
+This function is trying to count the number of ways to arrange parentheses in a given string. It uses a dynamic programming approach to solve the problem. It first initializes a 2D array 'dp' with size 'string.length + 1' x 'string.length/2 + 1'. The 'i'th element of 'dp' represents the number of ways to arrange the parentheses up to the 'i'th character of the string such that there are 'j' unmatched '(' parentheses. The base case is when 'i' is 0 and 'j' is also 0, where there is only 1 way to arrange the parentheses (empty string). The function then iterates over each character in the string and each possible number of unmatched '(' parentheses. For each character, it checks if the character is '(' or ')'. If it is, it updates the 'dp' array based on the number of ways to arrange the parentheses up to the 'i'th character such that there are 'j' unmatched '(' parentheses. If the character is '?', it updates the 'dp' array based on the number of ways to arrange the parentheses up to the 'i'th character such that there are either 'j' or 'j-1' unmatched '(' parentheses. After iterating over all characters and numbers of unmatched '(' parentheses, it returns the number of ways to arrange the parentheses such that there are 0 unmatched '(' parentheses.
+<|EOT|>

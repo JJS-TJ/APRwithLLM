@@ -1,0 +1,84 @@
+No.0 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double) cost1/dist1 < (double) cost2/dist2;
+}
+
+This fixed function works by casting both the cost and distance variables to double before performing the division. This ensures that decimal division is performed correctly.
+
+For example, if `dist1=10, cost1=100,
+No.1 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // (double)cost1/dist1 < (double)cost2/dist2
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}
+
+This function does the division using double precision numbers, which will give the correct result even when `dist1` and `dist2` are not equal. 
+
+Testing:
+You can test this
+No.2 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // (double)cost1/dist1 < (double)cost2/dist2
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}
+
+// Analysis
+In this fixed function, we're converting the integers to doubles before performing the division operation. This ensures that the division operation will give the correct result even if the result is not a whole
+No.3 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    // using double to avoid integer division
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}
+
+// Explanation
+To fix this bug, we need to convert the integers to doubles before the division operation. This will ensure that the division operation is performed with floating point arithmetic,
+No.4 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // (cost1/dist1) < (cost2/dist2)
+    return (long) cost1 * dist2 < (long) cost2 * dist1;
+}
+
+// Analysis
+To fix this bug, we need to convert the cost and distance to long before performing the multiplication. This is because, when doing integer division, if the result is fractional, it gets truncated to
+No.5 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (double)cost1/dist1 < (double)cost2/dist2;
+}
+
+// Analysis
+In the fixed function, we are casting `cost1`, `dist1`, `cost2`, and `dist2` to `double` before performing the division, which ensures that the division is not integer
+No.6 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // cost1/dist1 < cost2/dist2
+    return (long)cost1 * dist2 < (long)cost2 * dist1;
+}
+
+// Explaination
+In the fixed function, we cast `cost1` and `cost2` to `long` before the multiplication. This is to avoid integer overflow and ensures that the division is done with the correct precision. Now
+No.7 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    return (long) cost1 * dist2 < (long) cost2 * dist1;
+}
+
+This function does the correct comparison by multiplying the costs by the distances as longs. This is because `*` is binary numeric promotion, which promotes both operands to a type at least as wide as the other, and results in a value of that type. Thus, the multiplication of `
+No.8 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // (cost1/dist1) < (cost2/dist2)
+    return (long)cost1 * dist2 < (long)cost2 * dist1;
+}
+
+// Analysis
+The fixed function now multiplies `cost1` and `dist2` as longs to ensure that the division is done correctly. This should fix the bug and give the correct comparison between the cost per
+No.9 Patch
+static boolean isCheap(int dist1, int cost1, int dist2, int cost2) {
+    // (float)cost1/dist1 < (float)cost2/dist2
+    return (float)cost1/dist1 < (float)cost2/dist2;
+}
+
+// Analysis
+In the fixed function, we are casting `cost1` and `dist1` as float before doing the division operation, which will give us the correct result.
+
+The function now comp

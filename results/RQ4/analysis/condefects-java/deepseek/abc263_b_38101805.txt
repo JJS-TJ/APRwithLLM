@@ -1,0 +1,249 @@
+No.0 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// これで答えが合うようになるのは、dp[i]を正しく計算しているから。
+// dp[i]の正しい値は、dp[a[i]] + 1である。
+// もし、dp[i]の値をdp[i] = parent + 1と計算していた場合、dp[i]の値は常に同じになり、
+// 正しい値を計算することができない。
+// そのため、dp[i]の正しい値はdp[a[i]] + 1である。
+// よって、dp[i] = dp[a[i]] + 1とする必要がある。
+No.2 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// Explanation
+
+// The bug was in the "value" calculation, where dp[parent] was used instead of just parent. This was because it was trying to get the value of the parent from the dp array, but this array is not yet fully populated, as the loop is still going on. This is why the original code was using a placeholder value of -1, as dp[0] was initialized to -1.
+
+// The fixed code now correctly uses dp[parent] to get the parent's generation in the dp array, ensuring that it gets the correct value. This is why the bug was fixed.
+
+// In conclusion, the bug in the code was due to incorrectly using the dp array to get the parent's generation before it had been fully populated. The fixed code correctly uses dp[parent] to get the parent's generation, ensuring the correct value is used.
+
+// Time Complexity: O(n)
+
+// Space Complexity: O(n)
+
+// This solution ensures that each person is only processed once, thus giving it a time complexity of O(n), and also requires O(n) space for the dp array.<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.
+No.3 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// Analysis
+
+
+// Difference
+
+// Difference 1
+// dp[i] 人i+1は人1の何代後か
+// dp[parent] とする
+
+// Difference 2
+// dp[parent] を dp[i] とすると、それまでの人1との遠ざかり度を把握できていない
+// よって、dp[i] = dp[parent] + 1 となると、人i+1と人1の遠ざかり度を把握できていない
+
+// Difference 3
+// それゆえ、dp[i] = dp[parent] + 1 ではなく、dp[i] = dp[i] + 1 とするべきである
+
+// Difference 4
+// �
+No.5 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		int parent = a[i];
+		
+		//dp[i] 人i+1は人1の何代後か
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+
+// これにより、初期値の0を持ったdp配列の添え字のように、dp[i]の値を更新し続けることが可能になった。
+// これは、人i+1の親の遠ざかり度が既に確定していることがわかるため、dp[i]をdp[parent] + 1と計算することが可能になった。
+// これは、動的計画法のコアである、小さい問題の解を利用して大きい問題の解を求める、という考え方を表している。
+
+
+// また、dp[i]は人i+1と人1の間の遠ざ�
+No.6 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	
+	// Person 0 is the root.
+	a[0] = -1;
+	
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		//dp[i] means person i+1 is the ith generation from person 1.
+		int parent = a[i];
+		int value = dp[parent] + 1;
+		dp[i] = value;
+	}
+	
+	println(dp[n-1]);
+	
+}
+
+// Fixed Analysis
+
+The buggy function works in a wrong way. 
+The array dp is supposed to store the generation distance from person 1 to each person, but the buggy function is using the parent array to calculate the distance.
+This is because the dp array is supposed to be used to store the calculated distances, not the parent array.
+So, we should use dp[parent] to calculate the distance. 
+And the person 1 is the root, so we set a[0] to -1. 
+And the distance from person 1 to himself is 0, so we initialize dp[0] to 0. 
+
+The fixed function calculates the generation distance correctly.
+No.8 Patch
+static void solve () {
+	
+	int n = nextInt();
+	int[] a = new int[n];
+	for (int i=1; i<n; i++) {
+		a[i] = nextInt() - 1;
+	}
+	
+	int[] dp = new int[n];
+	
+	for (int i=1; i<n; i++) {
+		
+		//dp[i] 人i+1は人1の何代後か
+		
+		//人i+1の親は？ 添え字で求めておく
+		int parent = a[i];
+		
+		//人i+1の人1との遠ざかり度（仮）は、
+		//人i+1の親の遠ざかり度+1である（これは理解できる）
+		int value = dp[parent] + 1;
+		
+		dp[i] = value;
+		
+	}
+	
+	println(dp[n-1]);
+	
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+ * Copyright 2016-2017, OpenRemote Inc.
+ *
+ * See the CONTRIBUTORS.txt file in the distribution for a
+ * full listing of individual contributors.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package org.openremote.model.attribute;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.

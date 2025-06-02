@@ -1,0 +1,59 @@
+No.8 Patch
+public static void main(String ars[]) {
+
+	// 거듭제곱 연산자
+
+	Scanner input = new Scanner(System.in);
+
+	long N = input.nextLong();
+
+	// int형으로 처음부터 받으려면 
+
+	long result = (long) Math.pow(2, 31);
+	
+	// 범위 체크시 정수형으로 변환하지 않고 바로 범위 체크 가능
+
+	if (N >= -result && N <= result-1 ) {
+
+	System.out.println("Yes");
+
+	}
+	else {
+		System.out.println("No");
+	}
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/entity/User.java
+package com.example.demo.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class User {
+    private Integer id;
+    private String name;
+    private Integer age
+No.9 Patch
+public static void main(String[] args) {
+
+	Scanner input = new Scanner(System.in);
+	
+	long N = input.nextLong();
+	
+	if (N >= -2147483648 && N <= 2147483647) {
+
+	System.out.println("Yes");
+	
+	}
+	else {
+		System.out.println("No");
+	}
+
+}
+
+// 원래 의도는 2의 31승이 범위 내인지 확인하는 것이었으나, 2의 31승은 int의 범위인 2147483648를 넘어가므로, 이를 확인할 방법이 없다.
+// 따라서, 입력받은 숫자가 int의 범위인 -2147483648 ~ 2147483647 사이인지 확인하는 �

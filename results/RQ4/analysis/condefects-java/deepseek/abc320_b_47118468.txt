@@ -1,0 +1,91 @@
+No.4 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    int n = s.length();
+    boolean[][] dp = new boolean[n][n];
+    int maxLen = 0;
+    for (int gap = 0; gap < n; gap++) {
+        for (int i = 0, j = gap; j < n; i++, j++) {
+            if (gap == 0) {
+                dp[i][j] = true;
+            } else if (gap == 1 && s.charAt(i) == s.charAt(j)) {
+                dp[i][j] = true;
+            } else {
+                dp[i][j] = s.charAt(i) == s.charAt(j) && dp[i+1][j-1];
+            }
+            if (dp[i][j] && gap + 1 > maxLen) {
+                maxLen = gap + 1;
+            }
+        }
+    }
+    System.out.println(maxLen);
+    sc.close();
+}
+
+// Analysis
+This function now uses dynamic programming to solve the problem in O(n^2) time and O(n^2) space. It creates a 2D boolean array dp where dp[i][j] is true if the substring from index i to j is a palindrome. The function iterates through the string s, checking all substrings of different lengths, updating the dp array and tracking the maximum length of a palindromic substring. After the function is done, it prints out the maximum length of a palindromic substring in s. The function also closes the Scanner instance to free up resources.
+
+The function now correctly handles the case when the input string is empty. If the string is empty, the function will print
+No.5 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    int n = s.length();
+    boolean[][] dp = new boolean[n][n];
+    int maxLen = 0;
+    for (int gap = 0; gap < n; gap++) {
+        for (int i = 0, j = gap; j < n; i++, j++) {
+            if (gap == 0) {
+                dp[i][j] = true;
+            } else if (gap == 1) {
+                dp[i][j] = s.charAt(i) == s.charAt(j);
+            } else {
+                dp[i][j] = s.charAt(i) == s.charAt(j) && dp[i + 1][j - 1];
+            }
+            if (dp[i][j]) {
+                maxLen = gap + 1;
+            }
+        }
+    }
+    System.out.println(maxLen);
+    sc.close();
+}
+
+This code uses dynamic programming to find the longest palindromic substring. It checks each possible substring of the input string, and stores the result in a 2D boolean array dp. If a substring is a palindrome, dp[i][j] is true, otherwise it is false. The variable maxLen is used to keep track of the maximum length of a palindromic substring.
+
+The time complexity of this code is O(n^2), which is much better than the original code, and it has a space complexity of O(n^2), which is also better.
+
+Please note that this code does not handle the case when the input string is empty. If you want to handle this case, you should add a check at the beginning of the code to return 0 if
+No.8 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    int n = s.length();
+    boolean[][] dp = new boolean[n][n];
+    int maxLen = 0;
+
+    for (int gap = 0; gap < n; gap++) {
+        for (int i = 0, j = gap; j < n; i++, j++) {
+            if (gap == 0) {
+                dp[i][j] = true;
+            } else if (gap == 1) {
+                dp[i][j] = s.charAt(i) == s.charAt(j);
+            } else {
+                dp[i][j] = s.charAt(i) == s.charAt(j) && dp[i+1][j-1];
+            }
+
+            if (dp[i][j]) {
+                maxLen = gap + 1;
+            }
+        }
+    }
+
+    System.out.println(maxLen);
+    sc.close();
+}
+
+In this fixed version, a 2D boolean array dp is used to store whether the substring from i to j is a palindrome. For each gap between i and j, it checks whether the characters at the ends of the gap are the same and whether the substring between them is a palindrome (which is stored in dp[i+1][j-1]). If the substring is a palindrome, it updates maxLen to be the length of the gap + 1.
+
+The time complexity of this code is O(n^2), which is a significant improvement over the original code. It finds all substrings in a single pass and uses a 2D array to store intermediate results, which avoids the need for string reversals and substring extractions.
+<|EOT|>

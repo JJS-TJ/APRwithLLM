@@ -1,0 +1,47 @@
+No.0 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int sum = 0;
+    for (int i = 0; i < n - 1; i++) { // corrected loop condition
+        int a = sc.nextInt();
+        sum += a;
+    }
+    System.out.println(0 - sum);
+    sc.close();
+}
+
+Explanation: The loop condition was corrected from i < 0 to i < n. This change ensures that all n numbers are included in the sum.
+
+The loop runs from 0 to n - 1 (inclusive) to correctly calculate the sum of the first n - 1 numbers.
+
+// Debugging Code
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System
+No.2 Patch
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int sum = 0;
+    for (int i = 0; i < n - 1; i++) {
+        int a = sc.nextInt();
+        sum += a;
+    }
+    System.out.println(0 - sum);
+    sc.close();
+}
+
+Explanation: The bug in the original code is that it does not subtract the sum of the first n - 1 numbers from 0, but instead adds them. To correct this, we should subtract the sum from 0.
+
+The corrected code now calculates the sum of n - 1 integers and then subtracts this sum from 0.
+
+// Test cases
+Input: 
+5
+1
+2
+3
+4
+5
+Output

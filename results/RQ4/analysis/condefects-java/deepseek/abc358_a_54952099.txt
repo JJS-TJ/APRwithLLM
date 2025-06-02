@@ -1,0 +1,71 @@
+No.0 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+
+The corrected function compares the strings "t" and "Land" correctly. It will print "Yes" if the strings are equal and "No" otherwise.
+<|EOT|>
+No.1 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+<|EOT|>
+No.3 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+<|EOT|>
+No.4 Patch
+public static void main(String[] args) {
+	// TODO 自動生成されたメソッド・スタブ
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+<|EOT|>
+No.6 Patch
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	String s = scan.next();
+
+	String t = scan.next();
+	if (s.equals("AtCoder") && t.equals("Land")) {
+		System.out.println("Yes");
+	} else {
+		System.out.println("No");
+	}
+	scan.close();
+}
+<|EOT|>

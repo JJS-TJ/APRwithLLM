@@ -1,0 +1,75 @@
+No.3 Patch
+public static void main(String[]args){
+    Scanner scan = new Scanner(System.in);
+    int n=scan.nextInt();
+    int ar[]=new int[n];
+    for(int i=0;i<n;i++){
+        ar[i]=scan.nextInt();
+    }
+    Arrays.sort(ar);
+
+    for(int i=0;i<=2000;i++){
+        if(Arrays.binarySearch(ar,i)<0){
+            System.out.println(i);
+            break;
+        }
+    }
+}
+
+In the fixed function, the return type of the main function is provided, and the loop variable 'i' in the for loop is incremented up to 2000. The binarySearch method is used to check if the current number 'i' is present in the array. If 'i' is not present, it is printed and the loop is broken using the break statement.
+
+Please note, the break statement is inside the if block. This means that as soon as the first non-present number is found, it will be printed and the loop will be terminated.
+
+Now the code will correctly print the first non-present number from the array.
+
+This bug was likely introduced during the development
+No.6 Patch
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    int n = scan.nextInt();
+    int[] ar = new int[n];
+    for (int i = 0; i < n; i++) {
+        ar[i] = scan.nextInt();
+    }
+    Arrays.sort(ar);
+
+    for (int i = 0; i <= 2000; i++) {
+        if (Arrays.binarySearch(ar, i) < 0) {
+            System.out.println(i);
+            break;
+        }
+    }
+}
+
+// Explanation
+The provided code is fixed and running as expected. The main function is now of type void and the 'i' variable in the for loop is incremented properly. The binarySearch method is used to check if a number is present in the array or not. If a number is not present, it will print that number and break the loop. The loop breaks after the first non-present number is found and printed. This way, all non-present numbers in the range 0-2000 are printed.
+
+The problem was that the loop was incorrectly written and the binarySearch method was being used incorrectly. The loop was supposed to stop when it found the first non
+No.8 Patch
+public static void main(String[]args){
+    Scanner scan = new Scanner(System.in);
+    int n=scan.nextInt();
+    int ar[]=new int[n];
+    for(int i=0;i<n;i++){
+        ar[i]=scan.nextInt();
+    }
+    Arrays.sort(ar);
+
+    for(int i=0;i<=2000;i++){
+        if(Arrays.binarySearch(ar,i)>=0)continue;
+        else{
+            System.out.println(i);
+            break;
+        }
+    }
+
+}
+
+// Analysis
+// Analysis
+
+The given code is now fixed. The return type of the main function is now specified as void. The for loop in the fixed code is now iterating from 0 to 2000, which is the required range. The break statement is now in the else block, so it will break the loop only after the first non-present number is found and printed.
+
+Now, the fixed code will run correctly and will print the first non-present number in the range 0 to 2000.
+
+Please note that this code assumes that the input array does not contain any negative numbers. If the input array can contain negative numbers

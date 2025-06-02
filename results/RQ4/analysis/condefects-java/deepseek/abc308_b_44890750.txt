@@ -1,0 +1,141 @@
+No.1 Patch
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	Scanner scanner = new Scanner(System.in);
+	int N = scanner.nextInt();
+	int M = scanner.nextInt();
+	
+	ArrayList<String> checkStrings = new ArrayList<>();
+	int[] price = new int[M];
+	String[] firstBatchOfStrings = new String[N];
+	for(int i = 0; i < N; i++) {
+		firstBatchOfStrings[i] = scanner.next();
+	}
+	
+	for(int i = 0; i < M; i++) {
+		String str = scanner.next();
+		checkStrings.add(str);
+	}
+	
+	int default_price = scanner.nextInt();
+	for(int i = 0; i < M; i++) {
+		price[i] = scanner.nextInt();
+	}
+	
+	int result = 0;
+	for(String key : firstBatchOfStrings) {
+		if (checkStrings.contains(key)) {
+			result += price[checkStrings.indexOf(key)];
+		} else {
+			result += default_price;
+		}
+	}
+	System.out.println(result);
+	
+	scanner.close();
+
+}
+
+// Analysis
+This fixed version of the code initializes the "price" array with the correct size (M instead of N). It also checks whether the key is present in the "checkStrings" list before getting the index using the contains() method. This way, it prevents the NullPointerException. The "for each" loop is also corrected to iterate over the correct array of strings (firstBatchOfStrings instead of price). Lastly, the scanner.close() method is added to close the scanner after use. The variable names are also made more descriptive.
+<|EOT|>
+No.2 Patch
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	Scanner scanner = new Scanner(System.in);
+	int N = scanner.nextInt();
+	int M = scanner.nextInt();
+	
+	ArrayList<String> secondBatchOfStrings = new ArrayList<>();
+	int[] price = new int[M];
+	String[] firstBatchOfStrings = new String[N];
+	for(int i = 0; i < N; i++) {
+		firstBatchOfStrings[i] = scanner.next();
+	}
+	
+	for(int i = 0; i < M; i++) {
+		String str = scanner.next();
+		secondBatchOfStrings.add(str);
+	}
+	
+	int default_price = scanner.nextInt();
+	for(int i = 0; i < M; i++) {
+		price[i] = scanner.nextInt();
+	}
+	
+	int result = 0;
+	for(String key : firstBatchOfStrings) {
+		int money = secondBatchOfStrings.contains(key) ? price[secondBatchOfStrings.indexOf(key)] : default_price;
+		result += money;
+	}
+	System.out.println(result);
+	
+	scanner.close();
+
+}
+<|EOT|>
+No.3 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	int N = scanner.nextInt();
+	int M = scanner.nextInt();
+
+	ArrayList<String> secondBatchOfStrings = new ArrayList<>();
+	int[] price = new int[M];
+	String[] firstBatchOfStrings = new String[N];
+	for(int i = 0; i < N; i++) {
+		firstBatchOfStrings[i] = scanner.next();
+	}
+
+	for(int i = 0; i < M; i++) {
+		String str = scanner.next();
+		secondBatchOfStrings.add(str);
+	}
+
+	int default_price = scanner.nextInt();
+	for(int i = 0; i < M; i++) {
+		price[i] = scanner.nextInt();
+	}
+
+	int result = 0;
+	for(String key : firstBatchOfStrings) {
+		int money = secondBatchOfStrings.contains(key) ? price[secondBatchOfStrings.indexOf(key)] : default_price;
+		result += money;
+	}
+	System.out.println(result);
+	scanner.close();
+}
+<|EOT|>
+No.9 Patch
+public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	int N = scanner.nextInt();
+	int M = scanner.nextInt();
+	
+	ArrayList<String> secondBatchOfStrings = new ArrayList<>();
+	int[] price = new int[M];
+	String[] firstBatchOfStrings = new String[N];
+	for(int i = 0; i < N; i++) {
+		firstBatchOfStrings[i] = scanner.next();
+	}
+	
+	for(int i = 0; i < M; i++) {
+		String str = scanner.next();
+		secondBatchOfStrings.add(str);
+	}
+	
+	int default_price = scanner.nextInt();
+	for(int i = 0; i < M; i++) {
+		price[i] = scanner.nextInt();
+	}
+	
+	int result = 0;
+	for(String key : firstBatchOfStrings) {
+		int money = secondBatchOfStrings.contains(key) ? price[secondBatchOfStrings.indexOf(key)] : default_price;
+		result += money;
+	}
+	System.out.println(result);
+	
+	scanner.close();
+}
+<|EOT|>

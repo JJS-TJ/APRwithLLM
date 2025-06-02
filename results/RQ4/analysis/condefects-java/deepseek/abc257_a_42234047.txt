@@ -1,0 +1,18 @@
+No.7 Patch
+public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       int c = sc.nextInt();
+       int n = sc.nextInt();
+       String a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       int index = (int) Math.floor(n / c);
+       if(n % c == 0){
+           System.out.println(a.charAt(index - 1) + "");
+       }else {
+           System.out.println(a.charAt(index) + "");
+       }
+}
+
+
+This code will ensure that the index is always an integer, which will be a valid index for the string a. It also correctly handles the case where n is not divisible by c, by using the Math.floor function to round down to the nearest integer.
+
+Remember that the index of the string starts at 0, not 1, so when you subtract 1 from the index in the first case, you are accessing the correct character.

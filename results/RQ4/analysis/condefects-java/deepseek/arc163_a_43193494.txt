@@ -1,0 +1,17 @@
+No.1 Patch
+static boolean isGreater(String s, String t) {
+    int x = Math.min(s.length(), t.length());
+    for (int i = 0; i < x; i++) {
+        if (s.charAt(i) < t.charAt(i)) return true;
+        else if (s.charAt(i) > t.charAt(i)) return false;
+    }
+    return s.length() < t.length();
+}
+
+// Explanation
+This version of the function fixes the bug by adding a return statement at the end.
+This return statement checks whether the lengths of the strings are unequal. If s is shorter than t, it means s is lexicographically less than t, so it should return true.
+If the strings are of equal length, it means they are the same string, so it should return false.
+```
+
+Note: This function assumes that

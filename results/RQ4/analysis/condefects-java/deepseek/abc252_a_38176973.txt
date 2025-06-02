@@ -1,0 +1,21 @@
+No.4 Patch
+public static void main(String []args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    char[] c = Character.toChars(n);
+    System.out.println(c);
+}
+
+// Analysis
+Analysis: The corrected code reads an integer input from the user, then converts it to a character array using the Character.toChars method, and then prints the character array. This is the correct way to convert an integer to a Unicode character in Java
+No.5 Patch
+public static void main(String []args) {
+      Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+    char c = (char)n;
+  System.out.println(c);
+ 
+}
+
+// Analysis: The fixed code is almost the same as the original, but the print statement now correctly prints the character 'c'.
+// The issue with the original code was that it was printing the integer 'n' instead of the character 'c'. The corrected code now correctly prints the

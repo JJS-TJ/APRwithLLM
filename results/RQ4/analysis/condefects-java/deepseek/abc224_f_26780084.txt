@@ -1,0 +1,60 @@
+No.3 Patch
+public void run() {
+	FastScanner sc = new FastScanner();
+	PrintWriter pw = new PrintWriter(System.out);
+	char[] s = sc.next().toCharArray();
+	int n = s.length;
+	long ans = 0;
+	long cum = 1;
+	for (int i = n - 1; i >= 0; --i) {
+		int v = (int) (s[i] - '0');
+		ans += v * pow2[i] % p * cum % p;
+		ans %= p;
+		cum = (2 * cum - pow10[n - 1 - i] + pow10[n - i] + p) % p;
+	}
+	pw.println(ans);
+	pw.close();
+}
+
+// Analysis
+// The bug is that we are not adding p (mod) everytime because in java -2%5 = -2 not 3 so we need to make sure that the 
+// cum is always positive so we add p before mod
+
+// Example of bug
+// consider cum = 0 and p = 5
+// so if we write cum = cum - pow10[n - 1 - i] + pow10[n - i]
+// cum = -10 % 5 will be -10 not 0 which is wrong
+// so we add p before mod<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>package com.example.demo.Controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+No.8 Patch
+public void run() {
+	FastScanner sc = new FastScanner();
+	PrintWriter pw=new PrintWriter(System.out);
+	char[] s=sc.next().toCharArray();
+	int n=s.length;
+	long ans=0;
+	long cum=1;
+	for (int i=n-1;i>=0;--i) {
+		int v=(int)(s[i]-'0');
+		ans+=v*pow2[i]%p*cum%p;
+		ans%=p;
+		cum=2*cum-pow10[n-1-i]+pow10[n-i];
+		cum%=p;
+		if (cum<0) {
+			cum+=p;
+		}
+	}
+	pw.println(ans);
+	pw.close();
+}
+
+// The bug was that "cum" can become negative due to subtraction, so it can result in wrong answers.
+// To prevent it, we add "p" whenever "cum" becomes negative.
+ ```
+
+## Tutorial 1
+
+The first problem involves understanding that this problem is looking for the number of subarrays of a binary string that contain at least 1 digit. In this case, because this is a binary string, the only valid subarrays are the ones that contain a 1. Therefore, we can iterate through the string and for each character, add the total number of substrings that can be created with the previous characters to the total sum. This is done by adding the number of characters we've already seen (i+1

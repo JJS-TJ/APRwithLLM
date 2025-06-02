@@ -1,0 +1,60 @@
+No.7 Patch
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int n = scanner.nextInt();
+    int m = scanner.nextInt();
+
+    if (n - 1 != m) {
+        System.out.println("No");
+        return;
+    }
+
+    ArrayList<HashSet<Integer>> list = new ArrayList<>();
+    for (int i = 0; i <= n; i++) {
+        list.add(new HashSet<>());
+    }
+
+    for (int i = 0; i < m; i++) {
+        int u = scanner.nextInt();
+        int v = scanner.nextInt();
+
+        list.get(u).add(v);
+        list.get(v).add(u);
+    }
+
+    boolean[] visited = new boolean[n + 1];
+    visited[0] = true;
+    visited[1] = true;
+    LinkedList<Integer> queue = new LinkedList<>();
+    queue.add(1);
+
+    while (!queue.isEmpty()) {
+        int element = queue.pop();
+        HashSet<Integer> l = list.get(element);
+
+        if (l.size() > 2) {
+            System.out.println("No");
+            return;
+        }
+
+        for (int rec : l) {
+            if (!visited[rec]) {
+                visited[rec] = true;
+                queue.add(rec);
+            }
+        }
+    }
+
+    for (int i = 2; i < n + 1; i++) {
+        if (!visited[i]) {
+            System.out.println("No");
+            return;
+        }
+    }
+
+    System.out.println("Yes");
+}
+
+// Analysis
+The fixed function now correctly checks if a graph can be formed with given vertices and edges. It checks if the number of edges for each vertex is less than or equal to 2, and if all vertices (except the starting vertex) are reachable from the starting vertex after performing a breadth-first search. If all conditions are met, it outputs "Yes", otherwise it outputs "No".
+<|EOT|>

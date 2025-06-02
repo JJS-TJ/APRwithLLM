@@ -1,0 +1,76 @@
+No.1 Patch
+static void solve(){
+	int N = nextInt();
+	HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
+	for(int i = 0; i < N; i++){
+		int F = nextInt();
+		int S = nextInt();
+		if(!map.containsKey(F)){
+			map.put(F, new ArrayList<Integer>());
+		}
+		map.get(F).add(S);
+	}
+	int output = 0;
+	ArrayList<Integer> maxes = new ArrayList<>();
+	for(int key : map.keySet()){
+		ArrayList<Integer> list = map.get(key);
+		Collections.sort(list, Comparator.reverseOrder());
+		maxes.add(list.get(0));
+		if(list.size() > 1){
+			output = Math.max(output, list.get(0) + (list.get(1) / 2));
+		}
+	}
+	Collections.sort(maxes, Comparator.reverseOrder());
+	if(maxes.size() > 1){
+		output = Math.max(output, maxes.get(0) + maxes.get(1));
+	}
+	myout(output);
+}
+
+// Analysis of the Fixed Function
+// 修正後の関数の解析
+
+修正後の関数は、バグがないため、以前と同じ動作をします。
+
+1. この関数は、マップを使って整数を管理している。マップのキーは整数で、値はそのキーに対応する整数のリストである。
+
+2. この関数は、キーに対応するリストが存在するかどうかを確認し、存在しない場合は新しいリストを作成する。
+
+3. リストには、各キーに対応する値が格納されている。この値は、キーに対応す
+No.2 Patch
+//修正された関数
+
+static void solve(){
+	int N = nextInt();
+	HashMap<Integer, PriorityQueue<Integer>> map = new HashMap<>();
+	for(int i = 0; i < N; i++){
+		int F = nextInt();
+		int S = nextInt();
+		if(!map.containsKey(F)){
+			map.put(F, new PriorityQueue<Integer>(Comparator.reverseOrder()));
+		}
+		map.get(F).add(S);
+	}
+	int output = 0;
+	PriorityQueue<Integer> maxes = new PriorityQueue<>(Comparator.reverseOrder());
+	for(PriorityQueue<Integer> pq : map.values()){
+		int max = pq.poll();
+		maxes.add(max);
+		if(!pq.isEmpty()){
+			output = Math.max(output, max + (pq.peek() / 2));
+		}
+	}
+	if(maxes.size() > 1){
+		output = Math.max(output, maxes.poll() + maxes.poll());
+	}
+	myout(output);
+}
+
+// Explanation
+//説明
+
+1. この関数は、マップを使って整数を管理している。マップのキーは整数で、値はそのキーに対応する優先度付きキューである。優先度付きキューは、要素を追加するときに自然順序で並べ替えられる。ここでは、降順で並べ替えられるようにしている。
+
+2. この関数は、キーに対応する優先度付きキューが存在するかどうかを確認し、存在しない場合は新しい優先度付きキューを作成する。
+
+3. 優先度付きキューには

@@ -1,0 +1,58 @@
+No.2 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    if (c < 100) {
+        System.out.println("No");
+    }
+    else {
+        int s=c%100;
+        if(s==0){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+    }
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>//src/main/java/com/example/demo/domain/Girl.java
+package com.example.demo.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+No.4 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+
+    if(c < 100){
+        System.out.println("No");
+        return;
+    }
+
+    int s=c%100;
+    if(s==0){
+    System.out.println("Yes");
+    }else{
+        System.out.println("No");
+    }
+}
+
+In the corrected function, we check if the input (c) is less than 100. If it is, the function prints "No" and then returns, ending the execution of the function.
+
+If c is not less than 100
+No.8 Patch
+public static void main (String[]args) {
+    Scanner scan=new Scanner(System.in);
+    int c= scan.nextInt();
+    if(c<100){
+        System.out.println("No");
+    }else{
+        int s=c%100;
+        if(s==0){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+    }
+}
+
+This updated function first checks if the input is less than 100. If it is, it prints "No" and terminates. If it's not, it then checks if the input is divisible by 100. If it is, it

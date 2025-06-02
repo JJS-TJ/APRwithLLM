@@ -1,0 +1,95 @@
+No.1 Patch
+private static String solve(int n, int m, int k, int[] a) {
+    long ans = 0L;
+    for (int i = 1; i <= m; i++) {
+        int rem = n + 1 - k;
+        int zero = 0;
+        for (int j : a) {
+            if (j >= i) rem--;
+            if (j == 0) zero++;
+        }
+        if (rem < 0 || rem > zero) {
+            ans += (rem < 0 ? 1 : 0);
+            continue;
+        }
+        // Corrected inverse calculation
+        long p = (m + 1 - i) * quickPow(m, MOD - 2) % MOD;
+        long[] pPow = new long[zero + 1];
+        long[] qPow = new long[zero + 1];
+        Arrays.fill(pPow, 1);
+        Arrays.fill(qPow, 1);
+        for (int j = 0; j < zero; j++) {
+            pPow[j + 1] = (pPow[j] * p % MOD + MOD) % MOD;
+            qPow[j + 1] = (qPow[j] * (1 - p) % MOD + MOD) % MOD;
+        }
+        for (int j = rem; j <= zero; j++) {
+            long x = binom[zero][j] * pPow[j] % MOD * qPow[zero - j] % MOD;
+            ans = (ans + x) % MOD;
+        }
+    }
+    return String.valueOf(ans);
+}
+<|EOT|>
+No.2 Patch
+private static String solve(int n, int m, int k, int[] a) {
+    long ans = 0L;
+    for (int i = 1; i <= m; i++) {
+        int rem = n + 1 - k;
+        int zero = 0;
+        for (int j : a) {
+            if (j >= i) rem--;
+            if (j == 0) zero++;
+        }
+        if (rem < 0 || rem > zero) {
+            ans += (rem < 0 ? 1 : 0);
+            continue;
+        }
+        long p = (m + 1 - i) * quickPow(m, MOD - 2) % MOD;
+        long[] pPow = new long[zero + 1];
+        long[] qPow = new long[zero + 1];
+        Arrays.fill(pPow, 1);
+        Arrays.fill(qPow, 1);
+        for (int j = 0; j < zero; j++) {
+            pPow[j + 1] = (pPow[j] * p % MOD + MOD) % MOD;
+            qPow[j + 1] = (qPow[j] * (1 - p) % MOD + MOD) % MOD;
+        }
+        for (int j = rem; j <= zero; j++) {
+            long x = binom[zero][j] * pPow[j] % MOD * qPow[zero - j] % MOD;
+            ans = (ans + x) % MOD;
+        }
+    }
+    return String.valueOf(ans);
+}
+<|EOT|>
+No.4 Patch
+private static String solve(int n, int m, int k, int[] a) {
+    long ans = 0L;
+    for (int i = 1; i <= m; i++) {
+        int rem = n + 1 - k;
+        int zero = 0;
+        for (int j : a) {
+            if (j >= i) rem--;
+            if (j == 0) zero++;
+        }
+        if (rem < 0 || rem > zero) {
+            ans += (rem < 0 ? 1 : 0);
+            continue;
+        }
+        // Calculate the inverse of m
+        long p = (m + 1 - i) * quickPow(m, MOD - 2) % MOD;
+        long[] pPow = new long[zero + 1];
+        long[] qPow = new long[zero + 1];
+        Arrays.fill(pPow, 1);
+        Arrays.fill(qPow, 1);
+        for (int j = 0; j < zero; j++) {
+            pPow[j + 1] = (pPow[j] * p % MOD + MOD) % MOD;
+            qPow[j + 1] = (qPow[j] * (1 - p) % MOD + MOD) % MOD;
+        }
+        for (int j = rem; j <= zero; j++) {
+            long x = binom[zero][j] * pPow[j] % MOD * qPow[zero - j] % MOD;
+            ans = (ans + x) % MOD;
+        }
+    }
+    return String.valueOf(ans);
+}
+<|EOT|>

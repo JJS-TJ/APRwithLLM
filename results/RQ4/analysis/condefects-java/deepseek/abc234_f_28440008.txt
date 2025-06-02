@@ -1,0 +1,25 @@
+No.8 Patch
+long choose(int n, int r) {
+    if(n < r) {
+        return 0;
+    }
+    if(n == r || r == 0) {
+        return 1;
+    }
+
+    if(map[n][r] != 0) {
+        return map[n][r];
+    }
+
+    map[n][r] = (choose(n - 1, r) + choose(n - 1, r - 1)) % mod;
+    return map[n][r];
+}
+
+// Analysis
+In the fixed function, we first handle the base cases where r > n and n = r or r = 0, and return 0 in the former case and 1 in the latter.
+
+Next, if the result is already calculated and stored in map[n][r], we return it directly instead of recalculating it. 
+
+Then, we calculate the result using the formula for combinations, and store it in map[n][r] before returning it. 
+
+This function is now efficient as it avoid

@@ -1,0 +1,54 @@
+No.2 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();;
+int r = sc.nextInt();
+
+StringBuilder sb = new StringBuilder(s);
+
+String ans = sb.substring(l-1,r);
+    System.out.println(ans);
+
+}
+
+// Analysis
+Here, the substring function works as expected because we are now giving it indexes as per 0-based indexing system. We need to convert these indexes from 1-based to 0-based. So, we subtract 1 from l and r. Now, if user inputs l
+No.8 Patch
+public static void main(String[] args) {
+
+String s = "atcoder";
+Scanner sc = new Scanner(System.in);
+int l = sc.nextInt();;
+int r = sc.nextInt();
+String ans = "";
+for (int i = l-1; i < r; i++)
+ans += s.charAt(i);
+
+System.out.println(ans);
+
+}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>/*
+This function is trying to reverse a string. However, it does not work correctly due to the problem mentioned in the previous explanation.
+
+The corrected code is:
+*/
+
+public static void main(String[] args) {
+    Scanner sc = new Scan
+No.9 Patch
+public static void main(String[] args) {
+
+    String s = "atcoder";
+    Scanner sc = new Scanner(System.in);
+    int l = sc.nextInt();
+    int r = sc.nextInt();
+    String ans = s.substring(l - 1, r);
+    System.out.println(ans);
+}
+
+// Explanation
+This function corrects the buggy function by subtracting 1 from the l input before using it as the start index in the substring function. Now, if the user inputs l=1 and r=3, it will print "tat" as expected.
+
+// Note
+If your input index starts from 1, you
