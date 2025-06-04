@@ -1,0 +1,750 @@
+No.0 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) {
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.3 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Check if dataset is null before using it
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.4 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) {  // check if dataset is null before returning
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.5 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Check if dataset is not null
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.7 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Change the condition to check if the dataset is null
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.8 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Check if dataset is null
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.13 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset != null) {
+        if (dataset.getRowCount() == 0) {
+            return result;
+        }
+    } else {
+        return result;
+    }
+
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    } else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.16 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    // If there's no dataset, return the empty LegendItemCollection
+    if (dataset == null) {
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.18 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset != null) {
+        int seriesCount = dataset.getRowCount();
+        if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+            for (int i = 0; i < seriesCount; i++) {
+                if (isSeriesVisibleInLegend(i)) {
+                    LegendItem item = getLegendItem(index, i);
+                    if (item != null) {
+                        result.add(item);
+                    }
+                }
+            }
+        }
+        else {
+            for (int i = seriesCount - 1; i >= 0; i--) {
+                if (isSeriesVisibleInLegend(i)) {
+                    LegendItem item = getLegendItem(index, i);
+                    if (item != null) {
+                        result.add(item);
+                    }
+                }
+            }
+        }
+    }
+    return result;
+}
+No.20 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) {  // check if the dataset is null
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.29 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null || this.plot.getDataset(this.plot.getIndexOf(this)) == null) {
+        return result;
+    }
+    CategoryDataset dataset = this.plot.getDataset(this.plot.getIndexOf(this));
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(this.plot.getIndexOf(this), i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(this.plot.getIndexOf(this), i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.30 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Check if dataset is null before trying to get its row count
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.32 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null || !(dataset instanceof CategoryDataset)) {
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (seriesCount == 0) {
+        return result;
+    }
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.35 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) {
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (seriesCount == 0) {
+        return result;
+    }
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.37 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Check for null dataset
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.38 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    // remove the condition here
+    /* if (dataset == null) {
+        return result;
+    } */
+    int seriesCount = dataset == null ? 0 : dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.44 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Fixed condition
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.47 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    if (this.plot.getDataset(index) instanceof CategoryDataset) {
+        CategoryDataset dataset = (CategoryDataset) this.plot.getDataset(index);
+        int seriesCount = dataset.getRowCount();
+        if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+            for (int i = 0; i < seriesCount; i++) {
+                if (isSeriesVisibleInLegend(i)) {
+                    LegendItem item = getLegendItem(index, i);
+                    if (item != null) {
+                        result.add(item);
+                    }
+                }
+            }
+        } else {
+            for (int i = seriesCount - 1; i >= 0; i--) {
+                if (isSeriesVisibleInLegend(i)) {
+                    LegendItem item = getLegendItem(index, i);
+                    if (item != null) {
+                        result.add(item);
+                    }
+                }
+            }
+        }
+    }
+    return result;
+}
+No.49 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null || dataset.getRowCount() == 0) {
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.52 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Change from != null to == null
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.54 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null || this.plot.getDataset(this.plot.getIndexOf(this)) == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}
+No.61 Patch
+public LegendItemCollection getLegendItems() {
+    LegendItemCollection result = new LegendItemCollection();
+    if (this.plot == null) {
+        return result;
+    }
+    int index = this.plot.getIndexOf(this);
+    CategoryDataset dataset = this.plot.getDataset(index);
+    if (dataset == null) { // Corrected the condition here
+        return result;
+    }
+    int seriesCount = dataset.getRowCount();
+    if (plot.getRowRenderingOrder().equals(SortOrder.ASCENDING)) {
+        for (int i = 0; i < seriesCount; i++) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    else {
+        for (int i = seriesCount - 1; i >= 0; i--) {
+            if (isSeriesVisibleInLegend(i)) {
+                LegendItem item = getLegendItem(index, i);
+                if (item != null) {
+                    result.add(item);
+                }
+            }
+        }
+    }
+    return result;
+}

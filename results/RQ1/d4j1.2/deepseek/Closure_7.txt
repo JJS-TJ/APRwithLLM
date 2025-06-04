@@ -1,0 +1,28 @@
+No.3 Patch
+public JSType caseObjectType(ObjectType type) {
+  if (value.equals("function")) {
+    JSType ctorType = getNativeType(U2U_CONSTRUCTOR_TYPE);
+    return resultEqualsValue && ctorType.isSubtype(type) ? ctorType : type;
+      // If ctorType is a subtype of type, return ctorType, otherwise return type
+  }
+  return matchesExpectation("object") ? type : null;
+}
+No.33 Patch
+public JSType caseObjectType(ObjectType type) {
+  if (value.equals("function")) {
+    JSType ctorType = getNativeType(U2U_CONSTRUCTOR_TYPE);
+    return resultEqualsValue && ctorType.isSubtype(type) ? ctorType : type;
+      // Objects are restricted to "Function", subtypes are left
+      // Only filter out subtypes of "function"
+  }
+  return matchesExpectation("object") ? type : null;
+}
+No.59 Patch
+public JSType caseObjectType(ObjectType type) {
+  if (value.equals("function")) {
+    JSType ctorType = getNativeType(U2U_CONSTRUCTOR_TYPE);
+    return resultEqualsValue && ctorType.isSubtype(type) ? ctorType : type;
+      // If the resultEqualsValue and ctorType is a subtype of the type, return ctorType, else return the type
+  }
+  return matchesExpectation("object") ? type : null;
+}

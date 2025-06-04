@@ -1,0 +1,149 @@
+No.1 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+        // use mean
+        if (d > 2.0) {
+            ret = d / (d - 2.0);
+        } else {
+            ret = d;
+        }
+    return ret;
+}
+No.2 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        // use mean
+        ret = d / (d - 2.0);
+    } else {
+        ret = 1.0; // or any other default value that makes sense in your context
+    }
+    return ret;
+}
+No.5 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        // use mean
+        ret = d / (d - 2.0);
+    } else {
+        ret = 0.0; // or some other default value
+    }
+    return ret;
+}
+No.12 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    ret = (d + 2.0) / d;
+    return ret;
+}
+No.15 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+        // use mean
+        if (d > 2.0) {
+            ret = d / (d - 2.0);
+        } else {
+            ret = 0.0;
+        }
+    return ret;
+}
+No.19 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        ret = d / (d - 2.0);
+    } else {
+        ret = 0.0; // or some other default value
+    }
+    return ret;
+}
+No.21 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        // use mean
+        ret = d / (d - 2.0);
+    } else {
+        // fallback to something sensible
+        ret = d;
+    }
+    return ret;
+}
+No.23 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        ret = d / (d - 2.0);
+    } else {
+        // handle the case where d <= 2.0, for example set ret to 0
+        ret = 0;
+    }
+    return ret;
+}
+No.24 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        ret = d / (d - 2.0);
+    } else {
+        ret = 0.0;
+    }
+    return ret;
+}
+No.26 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        ret = d / (d - 2.0);
+    } else {
+        ret = 0; // or any other appropriate value
+    }
+    return ret;
+}
+No.34 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        // use mean
+        ret = d / (d - 2.0);
+    } else {
+        // use variance
+        ret = d;
+    }
+    return ret;
+}
+No.35 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    if (d > 2.0) {
+        ret = d / (d - 2.0);
+    } else {
+        ret = 0.0;  // or handle the case as you see fit
+    }
+    return ret;
+}
+No.36 Patch
+protected double getInitialDomain(double p) {
+    double ret;
+    double d = getDenominatorDegreesOfFreedom();
+    // Check if denominator is less than or equal to 2.0 to avoid division by zero
+    if (d <= 2.0) {
+        ret = 0.0;
+    } else {
+        ret = d / (d - 2.0);
+    }
+    return ret;
+}

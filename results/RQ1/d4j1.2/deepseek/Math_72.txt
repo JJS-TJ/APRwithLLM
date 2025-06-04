@@ -1,0 +1,308 @@
+No.4 Patch
+public double solve(final UnivariateRealFunction f,
+                    final double min, final double max, final double initial)
+    throws MaxIterationsExceededException, FunctionEvaluationException {
+
+    clearResult();
+    verifySequence(min, initial, max);
+
+    // return the initial guess if it is good enough
+    double yInitial = f.value(initial);
+    if (Math.abs(yInitial) <= functionValueAccuracy) {
+        setResult(initial, 0);
+        return result;
+    }
+
+    // return the first endpoint if it is good enough
+    double yMin = f.value(min);
+    if (Math.abs(yMin) <= functionValueAccuracy) {
+        setResult(min, 0);
+        return result;
+    }
+
+    // reduce interval if min and initial bracket the root
+    if (yInitial * yMin < 0) {
+        return solve(f, min, yMin, initial, yInitial, min, yMin);
+    }
+
+    // return the second endpoint if it is good enough
+    double yMax = f.value(max);
+    if (Math.abs(yMax) <= functionValueAccuracy) {
+        setResult(max, 0);
+        return result;
+    }
+
+    // reduce interval if initial and max bracket the root
+    if (yInitial * yMax < 0) {
+        return solve(f, initial, yInitial, max, yMax, initial, yInitial);
+    }
+
+    if (yMin * yMax > 0) {
+        throw MathRuntimeException.createIllegalArgumentException(
+              NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+    }
+
+    // full Brent algorithm starting with provided initial guess
+    return solve(f, min, yMin, max, yMax, initial, yInitial);
+
+}
+No.27 Patch
+public double solve(final UnivariateRealFunction f,
+                    final double min, final double max, final double initial)
+    throws MaxIterationsExceededException, FunctionEvaluationException {
+
+    clearResult();
+    verifySequence(min, initial, max);
+
+    // return the initial guess if it is good enough
+    double yInitial = f.value(initial);
+    if (Math.abs(yInitial) <= functionValueAccuracy) {
+        setResult(initial, 0);
+        return result;
+    }
+
+    // return the first endpoint if it is good enough
+    double yMin = f.value(min);
+    if (Math.abs(yMin) <= functionValueAccuracy) {
+        setResult(min, 0); // Changed result to min
+        return result;
+    }
+
+    // reduce interval if min and initial bracket the root
+    if (yInitial * yMin < 0) {
+        return solve(f, min, yMin, initial, yInitial, min, yMin);
+    }
+
+    // return the second endpoint if it is good enough
+    double yMax = f.value(max);
+    if (Math.abs(yMax) <= functionValueAccuracy) {
+        setResult(max, 0); // Changed result to max
+        return result;
+    }
+
+    // reduce interval if initial and max bracket the root
+    if (yInitial * yMax < 0) {
+        return solve(f, initial, yInitial, max, yMax, initial, yInitial);
+    }
+
+    if (yMin * yMax > 0) {
+        throw MathRuntimeException.createIllegalArgumentException(
+              NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+    }
+
+    // full Brent algorithm starting with provided initial guess
+    return solve(f, min, yMin, max, yMax, initial, yInitial);
+
+}
+No.34 Patch
+public double solve(final UnivariateRealFunction f,
+                    final double min, final double max, final double initial)
+    throws MaxIterationsExceededException, FunctionEvaluationException {
+
+    clearResult();
+    verifySequence(min, initial, max);
+
+    double yInitial = f.value(initial);
+    if (Math.abs(yInitial) <= functionValueAccuracy) {
+        setResult(initial, 0);
+        return result;
+    }
+
+    double yMin = f.value(min);
+    if (Math.abs(yMin) <= functionValueAccuracy) {
+        setResult(min, 0);
+        return result;
+    }
+
+    if (yInitial * yMin < 0) {
+        return solve(f, min, yMin, initial, yInitial, min, yMin);
+    }
+
+    double yMax = f.value(max);
+    if (Math.abs(yMax) <= functionValueAccuracy) {
+        setResult(max, 0);
+        return result;
+    }
+
+    if (yInitial * yMax < 0) {
+        return solve(f, initial, yInitial, max, yMax, initial, yInitial);
+    }
+
+    if (yMin * yMax > 0) {
+        throw MathRuntimeException.createIllegalArgumentException(
+              NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+    }
+
+    return solve(f, min, yMin, max, yMax, initial, yInitial);
+}
+No.47 Patch
+public double solve(final UnivariateRealFunction f,
+                    final double min, final double max, final double initial)
+    throws MaxIterationsExceededException, FunctionEvaluationException {
+
+    clearResult();
+    verifySequence(min, initial, max);
+
+    // return the initial guess if it is good enough
+    double yInitial = f.value(initial);
+    if (Math.abs(yInitial) <= functionValueAccuracy) {
+        setResult(initial, 0);
+        return result;
+    }
+
+    // return the first endpoint if it is good enough
+    double yMin = f.value(min);
+    if (Math.abs(yMin) <= functionValueAccuracy) {
+        setResult(min, 0);
+        return result;
+    }
+
+    // reduce interval if min and initial bracket the root
+    if (yInitial * yMin < 0) {
+        return solve(f, min, yMin, initial, yInitial, min, yMin);
+    }
+
+    // return the second endpoint if it is good enough
+    double yMax = f.value(max);
+    if (Math.abs(yMax) <= functionValueAccuracy) {
+        setResult(max, 0);
+        return result;
+    }
+
+    // reduce interval if initial and max bracket the root
+    if (yInitial * yMax < 0) {
+        return solve(f, initial, yInitial, max, yMax, initial, yInitial);
+    }
+
+    if (yMin * yMax > 0) {
+        throw MathRuntimeException.createIllegalArgumentException(
+              NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+    }
+
+    // full Brent algorithm starting with provided initial guess
+    return solve(f, min, yMin, max, yMax, initial, yInitial);
+}
+No.66 Patch
+public double solve(final UnivariateRealFunction f,
+                    final double min, final double max, final double initial)
+    throws MaxIterationsExceededException, FunctionEvaluationException {
+
+    clearResult();
+    verifySequence(min, initial, max);
+
+    double yInitial = f.value(initial);
+    if (Math.abs(yInitial) <= functionValueAccuracy) {
+        setResult(initial, 0);
+        return result;
+    }
+
+    double yMin = f.value(min);
+    if (Math.abs(yMin) <= functionValueAccuracy) {
+        setResult(min, 0);
+        return result;
+    }
+
+    if (yInitial * yMin < 0) {
+        return solve(f, min, yMin, initial, yInitial, min, yMin);
+    }
+
+    double yMax = f.value(max);
+    if (Math.abs(yMax) <= functionValueAccuracy) {
+        setResult(max, 0);
+        return result;
+    }
+
+    if (yInitial * yMax < 0) {
+        return solve(f, initial, yInitial, max, yMax, initial, yInitial);
+    }
+
+    if (yMin * yMax > 0) {
+        throw MathRuntimeException.createIllegalArgumentException(
+              "Values at min and max do not bracket the root.", min, max, yMin, yMax);
+    }
+
+    return solve(f, min, yMin, max, yMax, initial, yInitial);
+
+}
+No.72 Patch
+public double solve(final UnivariateRealFunction f,
+                    final double min, final double max, final double initial)
+    throws MaxIterationsExceededException, FunctionEvaluationException {
+
+    clearResult();
+    verifySequence(min, initial, max);
+
+    // return the initial guess if it is good enough
+    double yInitial = f.value(initial);
+    if (Math.abs(yInitial) <= functionValueAccuracy) {
+        setResult(initial, 0);
+        return result;
+    }
+
+    // return the first endpoint if it is good enough
+    double yMin = f.value(min);
+    if (Math.abs(yMin) <= functionValueAccuracy) {
+        setResult(min, 0);
+        return result;
+    }
+
+    // return the second endpoint if it is good enough
+    double yMax = f.value(max);
+    if (Math.abs(yMax) <= functionValueAccuracy) {
+        setResult(max, 0);
+        return result;
+    }
+
+    if (yMin * yMax > 0) {
+        throw MathRuntimeException.createIllegalArgumentException(
+              NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+    }
+
+    // full Brent algorithm starting with provided initial guess
+    return solve(f, min, yMin, max, yMax, initial, yInitial);
+
+}
+No.81 Patch
+public double solve(final UnivariateRealFunction f,
+                    final double min, final double max, final double initial)
+    throws MaxIterationsExceededException, FunctionEvaluationException {
+
+    clearResult();
+
+    // verify sequence and initial guess
+    verifySequence(min, initial, max);
+    double yInitial = f.value(initial);
+
+    // return the initial guess if it is good enough
+    if (Math.abs(yInitial) <= functionValueAccuracy) {
+        setResult(initial, 0);
+        return result;
+    }
+
+    // check endpoints
+    double yMin = f.value(min);
+    double yMax = f.value(max);
+
+    if (Math.abs(yMin) <= functionValueAccuracy) {
+        setResult(min, 0);
+        return result;
+    }
+
+    if (Math.abs(yMax) <= functionValueAccuracy) {
+        setResult(max, 0);
+        return result;
+    }
+
+    // check if bracketing
+    if (yInitial * yMin < 0) {
+        return solve(f, min, yMin, initial, yInitial, min, yMin);
+    } else if (yInitial * yMax < 0) {
+        return solve(f, initial, yInitial, max, yMax, initial, yInitial);
+    } else if (yMin * yMax > 0) {
+        throw MathRuntimeException.createIllegalArgumentException(
+              NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
+    }
+
+    // full Brent algorithm starting with provided initial guess
+    return solve(f, min, yMin, max, yMax, initial, yInitial);
+}

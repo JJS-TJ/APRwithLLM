@@ -1,0 +1,113 @@
+No.6 Patch
+public double solve(double min, double max) throws MaxIterationsExceededException, 
+    FunctionEvaluationException {
+    
+    clearResult();
+    verifyInterval(min, max);
+    
+    double ret = Double.NaN;
+    
+    double yMin = f.value(min);
+    double yMax = f.value(max);
+    
+    // Verify bracketing
+    double sign = yMin * yMax;
+    if (sign >= 0) {
+        // check if either value is close to a zero
+        double epsilon = Math.ulp(min);  // smallest positive number such that (min + epsilon) != min
+        if (Math.abs(yMin) < epsilon || Math.abs(yMax) < epsilon) {
+            // min or max is a root
+            ret = Math.abs(yMin) < epsilon ? min : max;
+        } else {
+            // neither value is close to zero and min and max do not bracket root.
+            throw new IllegalArgumentException
+            ("Function values at endpoints do not have different signs." +
+                    "  Endpoints: [" + min + "," + max + "]" + 
+                    "  Values: [" + yMin + "," + yMax + "]");
+        }
+    } else {
+        // solve using only the first endpoint as initial guess
+        ret = solve(min, yMin, max, yMax, min, yMin);
+    }
+
+    return ret;
+}
+No.45 Patch
+public double solve(double min, double max) throws MaxIterationsExceededException, FunctionEvaluationException {
+    
+    clearResult();
+    verifyInterval(min, max);
+    
+    double ret = Double.NaN;
+    
+    double yMin = f.value(min);
+    double yMax = f.value(max);
+    
+    // Verify bracketing
+    double sign = yMin * yMax;
+    if (sign >= 0) {
+        // check if either value is close to a zero
+        if (isCloseToZero(yMin) || isCloseToZero(yMax)) {
+            if (isCloseToZero(yMin)) {
+                return min;
+            } else {
+                return max;
+            }
+        } else {
+            // min and max do not bracket root.
+            throw new IllegalArgumentException
+            ("Function values at endpoints do not have different signs." +
+                    "  Endpoints: [" + min + "," + max + "]" + 
+                    "  Values: [" + yMin + "," + yMax + "]");
+        }
+    } else {
+        // solve using only the first endpoint as initial guess
+        ret = solve(min, yMin, max, yMax, min, yMin);
+        // either min or max is a root
+    }
+
+    return ret;
+}
+
+private boolean isCloseToZero(double value) {
+    return Math.abs(value) < 1e-10;
+}
+No.78 Patch
+public double solve(double min, double max) throws MaxIterationsExceededException, FunctionEvaluationException {
+    
+    clearResult();
+    verifyInterval(min, max);
+    
+    double ret = Double.NaN;
+    
+    double yMin = f.value(min);
+    double yMax = f.value(max);
+    
+    // Verify bracketing
+    double sign = yMin * yMax;
+    if (sign >= 0) {
+        // check if either value is close to a zero
+        if (Math.abs(yMin) <= getFunctionValueAccuracy() || Math.abs(yMax) <= getFunctionValueAccuracy()) {
+            // at least one of the values is close to zero
+            if (Math.abs(yMin) <= getFunctionValueAccuracy()) {
+                // min is a root
+                ret = min;
+            } else {
+                // max is a root
+                ret = max;
+            }
+        } else {
+            // neither value is close to zero and min and max do not bracket root.
+            throw new IllegalArgumentException
+            ("Function values at endpoints do not have different signs." +
+                    "  Endpoints: [" + min + "," + max + "]" + 
+                    "  Values: [" + yMin + "," + yMax + "]");
+        }
+    } else {
+        // solve using only the first endpoint as initial guess
+        ret = solve(min, yMin, max, yMax, min, yMin);
+        // either min or max is a root
+    }
+
+    return ret;
+}

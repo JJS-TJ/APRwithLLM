@@ -1,0 +1,20 @@
+No.79 Patch
+void add(String newcode) {
+  maybeEndStatement();
+
+  if (newcode.length() == 0) {
+    return;
+  }
+
+  char c = newcode.charAt(0);
+  if ((isWordChar(c) || c == '\\') && isWordChar(getLastChar())) {
+    append(" ");
+  }
+
+  // If the first character is a slash and the last character is a slash, add a space
+  if (c == '/' && getLastChar() == '/') {
+    append(" ");
+  }
+
+  append(newcode);
+}

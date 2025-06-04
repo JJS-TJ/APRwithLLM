@@ -1,0 +1,41 @@
+No.1 Patch
+public Paint getPaint(double value) {
+    double v = Math.max(value, this.lowerBound);
+    v = Math.min(v, this.upperBound);
+    int g = (int) ((v - this.lowerBound) / (this.upperBound - this.lowerBound) * 255.0);
+    return new Color(g, g, g);
+}
+No.5 Patch
+public Paint getPaint(double value) {
+    double v = Math.max(value, this.lowerBound);
+    v = Math.min(v, this.upperBound);
+    int g = (int) ((v - this.lowerBound) / (this.upperBound 
+            - this.lowerBound) * 255.0);
+    return new Color(g, g, g);
+}
+No.14 Patch
+public Paint getPaint(double value) {
+    value = Math.max(value, this.lowerBound);
+    value = Math.min(value, this.upperBound);
+    int g = (int) ((value - this.lowerBound) / (this.upperBound 
+            - this.lowerBound) * 255.0);
+    return new Color(g, g, g);
+}
+No.15 Patch
+public Paint getPaint(double value) {
+    double v = Math.max(value, this.lowerBound);
+    v = Math.min(v, this.upperBound);
+    int g = (int) Math.max(0, Math.min(255, (value - this.lowerBound) / (this.upperBound 
+            - this.lowerBound) * 255.0));
+    return new Color(g, g, g);
+}
+No.19 Patch
+public Paint getPaint(double value) {
+    if (this.lowerBound > this.upperBound) {
+        throw new IllegalArgumentException("Lower bound is greater than upper bound.");
+    }
+    double v = Math.max(value, this.lowerBound);
+    v = Math.min(v, this.upperBound);
+    int g = (int) ((v - this.lowerBound) / (this.upperBound - this.lowerBound) * 255.0);
+    return new Color(g, g, g);
+}

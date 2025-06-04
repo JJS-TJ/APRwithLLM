@@ -1,0 +1,29 @@
+No.15 Patch
+private static int greatestCommonDivisor(int u, int v) {
+    if (u == 0 || v == 0) {
+        return u + v; // base case when u or v is 0
+    }
+    u = Math.abs(u);
+    v = Math.abs(v);
+    while (v != 0) {
+        int t = v;
+        v = u % v;
+        u = t;
+    }
+    return u;
+}
+No.73 Patch
+private static int greatestCommonDivisor(int u, int v) {
+    u = Math.abs(u);
+    v = Math.abs(v);
+    if (u == 0) return v;
+    if (v == 0) return u;
+
+    // Euclidean algorithm
+    while (v != 0) {
+        int r = u % v;
+        u = v;
+        v = r;
+    }
+    return u;
+}

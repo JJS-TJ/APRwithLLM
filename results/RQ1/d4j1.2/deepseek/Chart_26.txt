@@ -1,0 +1,340 @@
+No.10 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // remaining code...
+
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+            EntityCollection entities = owner.getEntityCollection();
+            if (entities != null) {
+                entities.add(new AxisLabelEntity(this, hotspot, 
+                        this.labelToolTip, this.labelURL));
+            }
+    }
+    return state;
+}
+No.40 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // ... rest of the code
+
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+            EntityCollection entities = owner.getEntityCollection();
+            if (entities != null) {
+                entities.add(new AxisLabelEntity(this, hotspot, 
+                        this.labelToolTip, this.labelURL));
+            }
+    }
+    return state;
+}
+No.46 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    //... rest of the function omitted for brevity
+
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+        EntityCollection entities = owner.getEntityCollection();
+        if (entities != null) {
+            entities.add(new AxisLabelEntity(this, hotspot, 
+                    this.labelToolTip, this.labelURL));
+        }
+    }
+    return state;
+
+}
+No.51 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // ... rest of the function ...
+
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+        EntityCollection entities = owner.getEntityCollection();
+        if (entities != null) {
+            entities.add(new AxisLabelEntity(this, hotspot, 
+                    this.labelToolTip, this.labelURL));
+        }
+    }
+    return state;
+
+}
+No.58 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    // it is unlikely that 'state' will be null, but check anyway...
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // Rest of the code...
+    
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+            EntityCollection entities = owner.getEntityCollection();
+            if (entities != null) {
+                entities.add(new AxisLabelEntity(this, hotspot, 
+                        this.labelToolTip, this.labelURL));
+            }
+    }
+    return state;
+
+}
+No.59 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // ... rest of the function ...
+
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+            EntityCollection entities = owner.getEntityCollection();
+            if (entities != null) {
+                entities.add(new AxisLabelEntity(this, hotspot, 
+                        this.labelToolTip, this.labelURL));
+            }
+    }
+    return state;
+}
+No.79 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // ... rest of the code for drawing labels on different edges
+    
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+        EntityCollection entities = owner.getEntityCollection();
+        if (entities != null) {
+            entities.add(new AxisLabelEntity(this, hotspot, 
+                    this.labelToolTip, this.labelURL));
+        }
+    }
+    return state;
+}
+No.84 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // Code for drawing the label on different edges omitted for brevity
+
+    if (plotState != null && hotspot != null) {
+        ChartRenderingInfo owner = plotState.getOwner();
+        EntityCollection entities = owner.getEntityCollection();
+        if (entities != null) {
+            entities.add(new AxisLabelEntity(this, hotspot, 
+                    this.labelToolTip, this.labelURL));
+        }
+    }
+    return state;
+
+}
+No.89 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    // it is unlikely that 'state' will be null, but check anyway...
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if ((label == null) || (label.equals(""))) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // ... rest of the function code
+
+    return state;
+}
+No.93 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, 
+        Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, 
+        AxisState state, PlotRenderingInfo plotState) {
+
+    // Check if 'state' is null
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    // Check if the label is null or empty
+    if ((label == null) || (label.trim().isEmpty())) {
+        return state;
+    }
+
+    // Draw the label based on the edge
+    // ...
+
+    // Add the label entity to the entity collection
+    // ...
+
+    return state;
+}
+No.97 Patch
+protected AxisState drawLabel(String label, Graphics2D g2, Rectangle2D plotArea, Rectangle2D dataArea, RectangleEdge edge, AxisState state, PlotRenderingInfo plotState) {
+    if (state == null) {
+        throw new IllegalArgumentException("Null 'state' argument.");
+    }
+    
+    if (label == null || label.equals("")) {
+        return state;
+    }
+
+    Font font = getLabelFont();
+    RectangleInsets insets = getLabelInsets();
+    g2.setFont(font);
+    g2.setPaint(getLabelPaint());
+    FontMetrics fm = g2.getFontMetrics();
+    Rectangle2D labelBounds = TextUtilities.getTextBounds(label, g2, fm);
+    Shape hotspot = null;
+    
+    // Remainder of the method...
+    
+    return state;
+}

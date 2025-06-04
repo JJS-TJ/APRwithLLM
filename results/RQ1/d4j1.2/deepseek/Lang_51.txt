@@ -1,0 +1,246 @@
+No.3 Patch
+public static boolean toBoolean(String str) {
+    // Previously used equalsIgnoreCase, which was fast for interned 'true'.
+    // Non interned 'true' matched 15 times slower.
+    // 
+    // Optimisation provides same performance as before for interned 'true'.
+    // Similar performance for null, 'false', and other strings not length 2/3/4.
+    // 'true'/'TRUE' match 4 times slower, 'tRUE'/'True' 7 times slower.
+    if ("true".equals(str)) {
+        return true;
+    }
+    if (str == null) {
+        return false;
+    }
+    switch (str.length()) {
+        case 2: {
+            char ch0 = str.charAt(0);
+            char ch1 = str.charAt(1);
+            return 
+                (ch0 == 'o' || ch0 == 'O') &&
+                (ch1 == 'n' || ch1 == 'N');
+        }
+        case 3: {
+            char ch = str.charAt(0);
+            if (ch == 'y') {
+                return 
+                    (str.charAt(1) == 'e' || str.charAt(1) == 'E') &&
+                    (str.charAt(2) == 's' || str.charAt(2) == 'S');
+            }
+            if (ch == 'Y') {
+                return 
+                    (str.charAt(1) == 'E' || str.charAt(1) == 'e') &&
+                    (str.charAt(2) == 'S' || str.charAt(2) == 's');
+            }
+            break;
+        }
+        case 4: {
+            char ch = str.charAt(0);
+            if (ch == 't') {
+                return 
+                    (str.charAt(1) == 'r' || str.charAt(1) == 'R') &&
+                    (str.charAt(2) == 'u' || str.charAt(2) == 'U') &&
+                    (str.charAt(3) == 'e' || str.charAt(3) == 'E');
+            }
+            if (ch == 'T') {
+                return 
+                    (str.charAt(1) == 'R' || str.charAt(1) == 'r') &&
+                    (str.charAt(2) == 'U' || str.charAt(2) == 'u') &&
+                    (str.charAt(3) == 'E' || str.charAt(3) == 'e');
+            }
+            break;
+        }
+    }
+    return false;
+}
+No.8 Patch
+public static boolean toBoolean(String str) {
+    // Use equalsIgnoreCase to handle all cases correctly.
+    if (str == null) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("true")) {
+        return true;
+    }
+    if (str.equalsIgnoreCase("yes")) {
+        return true;
+    }
+    if (str.equalsIgnoreCase("on")) {
+        return true;
+    }
+    if (str.equalsIgnoreCase("false")) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("no")) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("off")) {
+        return false;
+    }
+    return false;
+}
+No.41 Patch
+public static boolean toBoolean(String str) {
+    if (str == null) {
+        return false;
+    }
+    str = str.trim();
+    if (str.equalsIgnoreCase("true")) {
+        return true;
+    }
+    if (str.equalsIgnoreCase("false")) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("yes")) {
+        return true;
+    }
+    if (str.equalsIgnoreCase("no")) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("on")) {
+        return true;
+    }
+    if (str.equalsIgnoreCase("off")) {
+        return false;
+    }
+    return false;
+}
+No.50 Patch
+public static boolean toBoolean(String str) {
+    if (str == null) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("true")) {
+        return true;
+    }
+    int length = str.length();
+    if (length == 2) {
+        return (str.equalsIgnoreCase("on"));
+    } else if (length == 3) {
+        return (str.equalsIgnoreCase("yes"));
+    } else if (length == 4) {
+        return (str.equalsIgnoreCase("true"));
+    }
+    return false;
+}
+No.53 Patch
+public static boolean toBoolean(String str) {
+    if (str == null) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("true")) {
+        return true;
+    }
+    int len = str.length();
+    switch (len) {
+        case 2:
+            return (str.equalsIgnoreCase("on"));
+        case 3:
+            return (str.equalsIgnoreCase("yes"));
+        case 4:
+            return (str.equalsIgnoreCase("true"));
+        default:
+            return false;
+    }
+}
+No.70 Patch
+public static boolean toBoolean(String str) {
+    if (str == null) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("true") || str.equalsIgnoreCase("yes") || str.equalsIgnoreCase("on") || str.equalsIgnoreCase("1")) {
+        return true;
+    }
+    if (str.equalsIgnoreCase("false") || str.equalsIgnoreCase("no") || str.equalsIgnoreCase("off") || str.equalsIgnoreCase("0")) {
+        return false;
+    }
+    return false;
+}
+No.79 Patch
+public static boolean toBoolean(String str) {
+    // Changed `==` to `equals` to compare the actual content of the strings.
+    // Added `equalsIgnoreCase` to compare the strings ignoring case.
+    if (str == null) {
+        return false;
+    }
+    if (str.equalsIgnoreCase("true")) {
+        return true;
+    }
+    if (str.length() == 2) {
+        char ch0 = str.charAt(0);
+        char ch1 = str.charAt(1);
+        return 
+            (ch0 == 'o' || ch0 == 'O') &&
+            (ch1 == 'n' || ch1 == 'N');
+    }
+    if (str.length() == 3) {
+        char ch = str.charAt(0);
+        if (ch == 'y' || ch == 'Y') {
+            return 
+                (str.charAt(1) == 'e' || str.charAt(1) == 'E') &&
+                (str.charAt(2) == 's' || str.charAt(2) == 'S');
+        }
+    }
+    if (str.length() == 4) {
+        char ch = str.charAt(0);
+        if (ch == 't' || ch == 'T') {
+            return 
+                (str.charAt(1) == 'r' || str.charAt(1) == 'R') &&
+                (str.charAt(2) == 'u' || str.charAt(2) == 'U') &&
+                (str.charAt(3) == 'e' || str.charAt(3) == 'E');
+        }
+    }
+    return false;
+}
+No.84 Patch
+public static boolean toBoolean(String str) {
+    if (str == null) {
+        return false;
+    }
+    if (str.equals("true")) {
+        return true;
+    }
+    switch (str.length()) {
+        case 2: {
+            char ch0 = str.charAt(0);
+            char ch1 = str.charAt(1);
+            return 
+                (ch0 == 'o' || ch0 == 'O') &&
+                (ch1 == 'n' || ch1 == 'N');
+        }
+        case 3: {
+            char ch = str.charAt(0);
+            if (ch == 'y' || ch == 'Y') {
+                return 
+                    (str.charAt(1) == 'e' || str.charAt(1) == 'E') &&
+                    (str.charAt(2) == 's' || str.charAt(2) == 'S');
+            }
+            break;
+        }
+        case 4: {
+            char ch = str.charAt(0);
+            if (ch == 't' || ch == 'T') {
+                return 
+                    (str.charAt(1) == 'r' || str.charAt(1) == 'R') &&
+                    (str.charAt(2) == 'u' || str.charAt(2) == 'U') &&
+                    (str.charAt(3) == 'e' || str.charAt(3) == 'E');
+            }
+            break;
+        }
+    }
+    return false;
+}
+No.91 Patch
+public static boolean toBoolean(String str) {
+    if (str == null) {
+        return false;
+    }
+    str = str.toLowerCase();
+    if (str.equals("true") || str.equals("yes") || str.equals("on")) {
+        return true;
+    }
+    if (str.equals("false") || str.equals("no") || str.equals("off")) {
+        return false;
+    }
+    return false;
+}

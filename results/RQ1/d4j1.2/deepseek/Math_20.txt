@@ -1,0 +1,5 @@
+No.22 Patch
+public double[] repairAndDecode(final double[] x) {
+    double[] repairedArray = repair(x);
+    return decode(repairedArray);
+}

@@ -1,0 +1,9 @@
+No.23 Patch
+private void handleBlockComment(Comment comment) {
+  if (comment.getValue().contains("@")) {
+    errorReporter.warning(
+        SUSPICIOUS_COMMENT_WARNING,
+        sourceName,
+        comment.getLineno(), "", 0);
+  }
+}

@@ -1,0 +1,61 @@
+No.31 Patch
+private void visitGetProp(NodeTraversal t, Node n, Node parent) {
+  Node property = n.getLastChild();
+  Node objNode = n.getFirstChild();
+  JSType childType = getJSType(objNode);
+
+  if (validator.expectNotNullOrUndefined(t, n, childType, "No properties on this expression", getNativeType(OBJECT_TYPE))) {
+    if (childType.isDict()) {
+      report(t, property, TypeValidator.ILLEGAL_PROPERTY_ACCESS, "'.'", "dict");
+    } else {
+      checkPropertyAccess(childType, property.getString(), t, n);
+    }
+  }
+  ensureTyped(t, n);
+}
+No.41 Patch
+private void visitGetProp(NodeTraversal t, Node n, Node parent) {
+  Node property = n.getLastChild();
+  Node objNode = n.getFirstChild();
+  JSType childType = getJSType(objNode);
+
+  if (childType.isDict()) {
+    report(t, property, TypeValidator.ILLEGAL_PROPERTY_ACCESS, "'.'", "dict");
+  } else if (validator.expectNotNullOrUndefined(t, n, childType,
+      "No properties on this expression", getNativeType(OBJECT_TYPE))) {
+    checkPropertyAccess(childType, property.getString(), t, n);
+  } else if (n.getJSType() != null && parent.isAssign()) {
+    return;
+  }
+  ensureTyped(t, n);
+}
+No.50 Patch
+private void visitGetProp(NodeTraversal t, Node n, Node parent) {
+  Node property = n.getLastChild();
+  Node objNode = n.getFirstChild();
+  JSType childType = getJSType(objNode);
+
+  if (childType.isDict()) {
+    report(t, property, TypeValidator.ILLEGAL_PROPERTY_ACCESS, "'.'", "dict");
+  } else if (validator.expectNotNullOrUndefined(t, n, childType,
+      "No properties on this expression", getNativeType(OBJECT_TYPE))) {
+    checkPropertyAccess(childType, property.getString(), t, n);
+  }
+  ensureTyped(t, n);
+}
+No.80 Patch
+private void visitGetProp(NodeTraversal t, Node n, Node parent) {
+  Node property = n.getLastChild();
+  Node objNode = n.getFirstChild();
+  JSType childType = getJSType(objNode);
+
+  if (childType.isDict()) {
+    report(t, property, TypeValidator.ILLEGAL_PROPERTY_ACCESS, "'.'", "dict");
+  } else if (n.getJSType() != null && parent.isAssign() && parent.isCall()) {
+    return;
+  } else if (validator.expectNotNullOrUndefined(t, n, childType,
+      "No properties on this expression", getNativeType(OBJECT_TYPE))) {
+    checkPropertyAccess(childType, property.getString(), t, n);
+  }
+  ensureTyped(t, n);
+}
