@@ -1,0 +1,1199 @@
+No.0 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.1 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.2 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if(iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.4 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.7 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.9 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // add a comma and a space after each option except for the last one
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.10 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.12 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext())
+            {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.13 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.14 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // add a comma and space between option names, except for the last one
+            if (iter.hasNext())
+            {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.15 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext())
+            {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.16 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder sb = new StringBuilder("Missing required option");
+        sb.append(getRequiredOptions().size() == 1 ? "" : "s");
+        sb.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            sb.append(iter.next());
+
+            // Add comma and space for all but the last required option
+            if (iter.hasNext()) {
+                sb.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(sb.toString());
+    }
+}
+No.17 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.18 Patch
+protected void checkRequiredOptions() throws MissingOptionException {
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0) {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext()) {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.19 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            // check if there are more options left
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.22 Patch
+protected void checkRequiredOptions() throws MissingOptionException {
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0) {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext()) {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.25 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            
+            // check if it's not the last option
+            if(iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.26 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // Add a comma and space if there are more options
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.30 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if(iter.hasNext()) {
+                buff.append(", "); // add comma and space if there are more options
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.31 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // add comma and space between options if more than one
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.32 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // Add comma separator if there are more options
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.33 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.34 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if(iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.35 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            // add a comma and a space after each option
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.38 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", "); // add a comma and space if there are more options to list
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.39 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.40 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // add a comma and a space after each option, except for the last one
+            if (iter.hasNext())
+            {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.41 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.44 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // add a comma if there's more options left
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.45 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            
+            // Add a comma if there are more options
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.46 Patch
+protected void checkRequiredOptions() throws MissingOptionException {
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0) {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext()) {
+            buff.append(iter.next());
+            // Add a comma and space after each option except the last one
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.47 Patch
+protected void checkRequiredOptions() throws MissingOptionException {
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0) {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext()) {
+            buff.append(iter.next());
+            if(iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.49 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.50 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // Add a comma and space after each option, except for the last one
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.51 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.52 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processsed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            // Add a comma and space after each option, except for the last one
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.53 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.54 Patch
+protected void checkRequiredOptions() throws MissingOptionException {
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0) {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext()) {
+            buff.append(iter.next());
+            // Add a comma and a space after each option, except the last one
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.55 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // Add a comma and a space between options
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.56 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            // Add a comma and space if there are more options
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.60 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuilder buff = new StringBuilder("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.62 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            if(iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.68 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.69 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // Add a comma after each option (except for the last one)
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.71 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            if(iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.72 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been
+    // processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+
+            // check if there is more than one required option
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}
+No.73 Patch
+protected void checkRequiredOptions()
+    throws MissingOptionException
+{
+    // if there are required options that have not been processed
+    if (getRequiredOptions().size() > 0)
+    {
+        Iterator iter = getRequiredOptions().iterator();
+        StringBuffer buff = new StringBuffer("Missing required option");
+        buff.append(getRequiredOptions().size() == 1 ? "" : "s");
+        buff.append(": ");
+
+        // loop through the required options
+        while (iter.hasNext())
+        {
+            buff.append(iter.next());
+            
+            // Add comma if there are more options
+            if (iter.hasNext()) {
+                buff.append(", ");
+            }
+        }
+
+        throw new MissingOptionException(buff.toString());
+    }
+}

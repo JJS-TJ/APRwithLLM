@@ -1,0 +1,82 @@
+No.9 Patch
+private boolean isShortOption(String token)
+{
+    // short options (-S, -SV, -S=V, -SV1=V2, -S1S2)
+    if (token.startsWith("-") && token.length() >= 2 && options.hasShortOption(token.substring(1, 2))) {
+        return true;
+    }
+    // remove leading "-" and "=value"
+    else {
+        String shortOption = token.replaceFirst("^-", "").split("=")[0];
+        return shortOption.length() >= 1 && options.hasShortOption(shortOption);
+    }
+}
+No.15 Patch
+private boolean isShortOption(String token)
+{
+    // short options (-S, -SV, -S=V, -SV1=V2, -S1S2)
+    String shortOption = token.substring(1);
+    if(shortOption.contains("=")) {
+        shortOption = shortOption.substring(0, shortOption.indexOf('='));
+    }
+    return token.startsWith("-") && token.length() >= 2 && options.hasShortOption(shortOption);
+}
+No.19 Patch
+private boolean isShortOption(String token)
+{
+    // short options (-S, -SV, -S=V, -SV1=V2, -S1S2)
+    return token.startsWith("-") && token.length() >= 2 && options.hasShortOption(token.substring(1));
+}
+No.22 Patch
+private boolean isShortOption(String token)
+{
+    // short options (-S, -SV, -S=V, -SV1=V2, -S1S2)
+    String shortOption = token.substring(1);
+    if (shortOption.contains("=")) {
+        shortOption = shortOption.split("=")[0];
+    }
+    return token.startsWith("-") && token.length() >= 2 && options.hasShortOption(shortOption);
+
+    // remove leading "-" and "=value"
+}
+No.23 Patch
+private boolean isShortOption(String token)
+{
+    // short options (-S, -SV, -S=V, -SV1=V2, -S1S2)
+    if (token.startsWith("-") && token.length() >= 2) {
+        int equalsIndex = token.indexOf('=');
+        if (equalsIndex == -1) {
+            return options.hasShortOption(token.substring(1));
+        } else {
+            return options.hasShortOption(token.substring(1, equalsIndex));
+        }
+    }
+    return false;
+}
+No.36 Patch
+private boolean isShortOption(String token)
+{
+    // short options (-S, -SV, -S=V, -SV1=V2, -S1S2)
+    String subToken = token.substring(1);
+    if (subToken.contains("=")) {
+        subToken = subToken.substring(0, subToken.indexOf("="));
+    }
+    return token.startsWith("-") && token.length() >= 2 && options.hasShortOption(subToken);
+
+    // remove leading "-" and "=value"
+}
+No.41 Patch
+private boolean isShortOption(String token)
+{
+    // short options (-S, -SV, -S=V, -SV1=V2, -S1S2)
+    if (token.startsWith("-") && token.length() >= 2 && options.hasShortOption(token.substring(1, 2))) {
+        return true;
+    }
+
+    // remove leading "-" and "=value"
+    String shortOption = token.startsWith("-") ? token.substring(1) : token;
+    if (shortOption.contains("=")) {
+        shortOption = shortOption.substring(0, shortOption.indexOf("="));
+    }
+    return options.hasShortOption(shortOption);
+}

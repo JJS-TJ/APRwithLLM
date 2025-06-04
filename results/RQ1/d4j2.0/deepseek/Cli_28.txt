@@ -1,0 +1,240 @@
+No.7 Patch
+protected void processProperties(Properties properties)
+{
+    if (properties == null)
+    {
+        return;
+    }
+
+    for (Enumeration propertyNamesEnumeration = properties.propertyNames(); propertyNamesEnumeration.hasMoreElements();)
+    {
+        String propertyName = propertyNamesEnumeration.nextElement().toString();
+
+        if (!cmd.hasOption(propertyName))
+        {
+            Option commandLineOption = getOptions().getOption(propertyName);
+
+            // get the value from the properties instance
+            String value = properties.getProperty(propertyName);
+
+            if (commandLineOption.hasArg())
+            {
+                if (commandLineOption.getValues() == null || commandLineOption.getValues().length == 0)
+                {
+                    try
+                    {
+                        commandLineOption.addValueForProcessing(value);
+                    }
+                    catch (RuntimeException exp)
+                    {
+                        // if we cannot add the value don't worry about it
+                    }
+                }
+            }
+            else if (!"yes".equalsIgnoreCase(value)
+                    && !"true".equalsIgnoreCase(value)
+                    && !"1".equalsIgnoreCase(value))
+            {
+                // if the value is not yes, true or 1 then don't add the
+                // option to the CommandLine
+                continue;
+            }
+
+            cmd.addOption(commandLineOption);
+        }
+    }
+}
+No.33 Patch
+protected void processProperties(Properties properties)
+{
+    if (properties == null)
+    {
+        return;
+    }
+
+    for (Enumeration e = properties.propertyNames(); e.hasMoreElements();)
+    {
+        String option = e.nextElement().toString();
+
+        if (!cmd.hasOption(option))
+        {
+            Option opt = getOptions().getOption(option);
+
+            // get the value from the properties instance
+            String value = properties.getProperty(option);
+
+            if (opt == null) {
+                continue; // skip if option is not valid
+            }
+
+            if (opt.hasArg())
+            {
+                if (opt.getValues() == null || opt.getValues().length == 0)
+                {
+                    try
+                    {
+                        opt.addValueForProcessing(value);
+                    }
+                    catch (RuntimeException exp)
+                    {
+                        // if we cannot add the value don't worry about it
+                    }
+                }
+            }
+            else if (!("yes".equalsIgnoreCase(value)
+                    || "true".equalsIgnoreCase(value)
+                    || "1".equalsIgnoreCase(value)))
+            {
+                // if the value is not yes, true or 1 then don't add the
+                // option to the CommandLine
+                continue;
+            }
+
+            cmd.addOption(opt);
+        }
+    }
+}
+No.34 Patch
+protected void processProperties(Properties properties)
+{
+    if (properties == null)
+    {
+        return;
+    }
+
+    for (Enumeration e = properties.propertyNames(); e.hasMoreElements();)
+    {
+        String option = e.nextElement().toString();
+
+        if (!cmd.hasOption(option))
+        {
+            Option opt = getOptions().getOption(option);
+
+            // get the value from the properties instance
+            String value = properties.getProperty(option);
+
+            if (opt != null) {
+                if (opt.hasArg())
+                {
+                    if (opt.getValues() == null || opt.getValues().length == 0)
+                    {
+                        try
+                        {
+                            opt.addValueForProcessing(value);
+                        }
+                        catch (RuntimeException exp)
+                        {
+                            // if we cannot add the value don't worry about it
+                        }
+                    }
+                }
+                else if (!("yes".equalsIgnoreCase(value)
+                        || "true".equalsIgnoreCase(value)
+                        || "1".equalsIgnoreCase(value)))
+                {
+                    // if the value is not yes, true or 1 then don't add the
+                    // option to the CommandLine
+                    continue;
+                }
+
+                cmd.addOption(opt);
+            }
+        }
+    }
+}
+No.36 Patch
+protected void processProperties(Properties properties)
+{
+    if (properties == null)
+    {
+        return;
+    }
+
+    for (Enumeration e = properties.propertyNames(); e.hasMoreElements();)
+    {
+        String option = e.nextElement().toString();
+
+        if (!cmd.hasOption(option))
+        {
+            Option opt = getOptions().getOption(option);
+
+            // get the value from the properties instance
+            String value = properties.getProperty(option);
+
+            if (opt.hasArg())
+            {
+                if (opt.getValues() == null || opt.getValues().length == 0)
+                {
+                    try
+                    {
+                        opt.addValueForProcessing(value);
+                    }
+                    catch (RuntimeException exp)
+                    {
+                        // if we cannot add the value don't worry about it
+                    }
+                }
+            }
+            else if (!("yes".equalsIgnoreCase(value)
+                    || "true".equalsIgnoreCase(value)
+                    || "1".equalsIgnoreCase(value)))
+            {
+                // if the value is not yes, true or 1 then don't add the
+                // option to the CommandLine
+                continue; // Instead of break, use continue to skip current iteration
+            }
+
+            cmd.addOption(opt);
+        }
+    }
+}
+No.61 Patch
+protected void processProperties(Properties properties)
+{
+    if (properties == null)
+    {
+        return;
+    }
+
+    for (Enumeration e = properties.propertyNames(); e.hasMoreElements();)
+    {
+        String option = e.nextElement().toString();
+
+        if (!cmd.hasOption(option))
+        {
+            Option opt = getOptions().getOption(option);
+
+            // get the value from the properties instance
+            String value = properties.getProperty(option);
+
+            if (opt == null) {
+                continue; // if there's no Option for the property name, skip this iteration
+            }
+
+            if (opt.hasArg())
+            {
+                if (opt.getValues() == null || opt.getValues().length == 0)
+                {
+                    try
+                    {
+                        opt.addValueForProcessing(value);
+                    }
+                    catch (RuntimeException exp)
+                    {
+                        // if we cannot add the value don't worry about it
+                    }
+                }
+            }
+            else if (!("yes".equalsIgnoreCase(value)
+                    || "true".equalsIgnoreCase(value)
+                    || "1".equalsIgnoreCase(value)))
+            {
+                // if the value is not yes, true or 1 then don't add the
+                // option to the CommandLine
+                continue;
+            }
+
+            cmd.addOption(opt);
+        }
+    }
+}

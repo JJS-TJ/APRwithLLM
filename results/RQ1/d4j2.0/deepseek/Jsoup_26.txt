@@ -1,0 +1,108 @@
+No.0 Patch
+public Document clean(Document dirtyDocument) {
+    if (dirtyDocument == null) {
+        throw new IllegalArgumentException("dirtyDocument cannot be null");
+    }
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if (dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}
+No.1 Patch
+public Document clean(Document dirtyDocument) {
+    Validate.notNull(dirtyDocument);
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if (dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}
+No.6 Patch
+public Document clean(Document dirtyDocument) {
+    Validate.notNull(dirtyDocument);
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if(dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}
+No.7 Patch
+public Document clean(Document dirtyDocument) {
+    if (dirtyDocument == null) {
+        throw new IllegalArgumentException("Document cannot be null");
+    }
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if (dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}
+No.13 Patch
+public Document clean(Document dirtyDocument) {
+    Validate.notNull(dirtyDocument);
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    Element body = dirtyDocument.body();
+    if(body != null){
+        copySafeNodes(body, clean.body());
+    }
+
+    return clean;
+}
+No.16 Patch
+public Document clean(Document dirtyDocument) {
+    Validate.notNull(dirtyDocument, "dirtyDocument cannot be null");
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if (dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}
+No.17 Patch
+public Document clean(Document dirtyDocument) {
+    if (dirtyDocument == null) {
+        throw new IllegalArgumentException("dirtyDocument must not be null");
+    }
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if (dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}
+No.19 Patch
+public Document clean(Document dirtyDocument) {
+    Validate.notNull(dirtyDocument, "The dirtyDocument cannot be null");
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if (dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}
+No.22 Patch
+public Document clean(Document dirtyDocument) {
+    if (dirtyDocument == null) {
+        return null;
+    }
+
+    Document clean = Document.createShell(dirtyDocument.baseUri());
+    if (dirtyDocument.body() != null) {
+        copySafeNodes(dirtyDocument.body(), clean.body());
+    }
+
+    return clean;
+}

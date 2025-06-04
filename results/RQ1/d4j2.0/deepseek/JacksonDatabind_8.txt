@@ -1,0 +1,215 @@
+No.13 Patch
+protected void verifyNonDup(AnnotatedWithParams newOne, int typeIndex, boolean explicit)
+{
+    final int mask = (1 << typeIndex);
+    _hasNonDefaultCreator = true;
+    AnnotatedWithParams oldOne = _creators[typeIndex];
+    // already had an explicitly marked one?
+    if (oldOne != null) {
+
+        if ((_explicitCreators & mask) != 0) { // already had explicitly annotated, leave as-is
+            // but skip, if new one not annotated
+            if (!explicit) {
+                return;
+            }
+            // both explicit: verify
+            // otherwise only verify if neither explicitly annotated.
+        }
+
+        // one more thing: ok to override in sub-class
+        if (oldOne.getClass() == newOne.getClass()) {
+            // [databind#667]: avoid one particular class of bogus problems
+
+            if (explicit) {
+                throw new IllegalArgumentException("Conflicting "+TYPE_DESCS[typeIndex]
+                        +" creators: already had explicitly marked "+oldOne+", encountered "+newOne);
+            }
+            // otherwise, which one to choose?
+            // new type more generic, use old
+            // new type more specific, use it
+        }
+    }
+    if (explicit) {
+        _explicitCreators |= mask;
+    }
+    _creators[typeIndex] = _fixAccess(newOne);
+}
+No.44 Patch
+protected void verifyNonDup(AnnotatedWithParams newOne, int typeIndex, boolean explicit)
+{
+    final int mask = (1 << typeIndex);
+    _hasNonDefaultCreator = true;
+    AnnotatedWithParams oldOne = _creators[typeIndex];
+    // already had an explicitly marked one?
+    if (oldOne != null) {
+        if ((_explicitCreators & mask) != 0) { // already had explicitly annotated, leave as-is
+            // but skip, if new one not annotated
+            if (!explicit) {
+                return;
+            }
+        }
+        // one more thing: ok to override in sub-class
+        if (oldOne.getClass() == newOne.getClass()) {
+            if (!explicit) {
+                // If the new creator is not explicitly marked and is a subclass of the old one, keep the old one
+                if (oldOne.getClass().isAssignableFrom(newOne.getClass())) {
+                    return;
+                }
+            }
+            throw new IllegalArgumentException("Conflicting "+TYPE_DESCS[typeIndex]
+                    +" creators: already had explicitly marked "+oldOne+", encountered "+newOne);
+        }
+    }
+    if (explicit) {
+        _explicitCreators |= mask;
+    }
+    _creators[typeIndex] = _fixAccess(newOne);
+}
+No.53 Patch
+protected void verifyNonDup(AnnotatedWithParams newOne, int typeIndex, boolean explicit)
+{
+    final int mask = (1 << typeIndex);
+    _hasNonDefaultCreator = true;
+    AnnotatedWithParams oldOne = _creators[typeIndex];
+    // already had an explicitly marked one?
+    if (oldOne != null) {
+
+        if ((_explicitCreators & mask) != 0) { // already had explicitly annotated, leave as-is
+            // but skip, if new one not annotated
+            if (!explicit) {
+                return;
+            }
+        }
+
+        // one more thing: ok to override in sub-class
+        if (oldOne.getClass() == newOne.getClass()) {
+            // [databind#667]: avoid one particular class of bogus problems
+            if (explicit) {
+                throw new IllegalArgumentException("Conflicting "+TYPE_DESCS[typeIndex]
+                        +" creators: already had explicitly marked "+oldOne+", encountered "+newOne);
+            } else {
+                return;
+            }
+            // otherwise, which one to choose?
+            // new type more generic, use old
+            // new type more specific, use it
+        }
+    }
+    if (explicit) {
+        _explicitCreators |= mask;
+    }
+    _creators[typeIndex] = _fixAccess(newOne);
+}
+No.56 Patch
+protected void verifyNonDup(AnnotatedWithParams newOne, int typeIndex, boolean explicit)
+{
+    final int mask = (1 << typeIndex);
+    _hasNonDefaultCreator = true;
+    AnnotatedWithParams oldOne = _creators[typeIndex];
+    // already had an explicitly marked one?
+    if (oldOne != null) {
+
+        if ((_explicitCreators & mask) != 0) { // already had explicitly annotated, leave as-is
+            // but skip, if new one not annotated
+            if (!explicit) {
+                return;
+            }
+            // both explicit: verify
+            // otherwise only verify if neither explicitly annotated.
+        } else {
+            // if oldOne is not explicitly marked, always use newOne
+            _creators[typeIndex] = _fixAccess(newOne);
+            return;
+        }
+
+        // one more thing: ok to override in sub-class
+        if (oldOne.getClass() == newOne.getClass()) {
+            // [databind#667]: avoid one particular class of bogus problems
+
+                throw new IllegalArgumentException("Conflicting "+TYPE_DESCS[typeIndex]
+                        +" creators: already had explicitly marked "+oldOne+", encountered "+newOne);
+            // otherwise, which one to choose?
+            // new type more generic, use old
+            // new type more specific, use it
+        }
+    }
+    if (explicit) {
+        _explicitCreators |= mask;
+    }
+    _creators[typeIndex] = _fixAccess(newOne);
+}
+No.62 Patch
+protected void verifyNonDup(AnnotatedWithParams newOne, int typeIndex, boolean explicit)
+{
+    final int mask = (1 << typeIndex);
+    _hasNonDefaultCreator = true;
+    AnnotatedWithParams oldOne = _creators[typeIndex];
+    // already had an explicitly marked one?
+    if (oldOne != null) {
+
+        if ((_explicitCreators & mask) != 0) { // already had explicitly annotated, leave as-is
+            // but skip, if new one not annotated
+            if (!explicit) {
+                return;
+            }
+            // both explicit: verify
+            // otherwise only verify if neither explicitly annotated.
+        }
+
+        // one more thing: ok to override in sub-class
+        if (oldOne.getClass() == newOne.getClass()) {
+            // [databind#667]: avoid one particular class of bogus problems
+
+                if (!explicit) {
+                    return;
+                }
+                
+                throw new IllegalArgumentException("Conflicting "+TYPE_DESCS[typeIndex]
+                        +" creators: already had explicitly marked "+oldOne+", encountered "+newOne);
+            // otherwise, which one to choose?
+            // new type more generic, use old
+            // new type more specific, use it
+        }
+    }
+    if (explicit) {
+        _explicitCreators |= mask;
+    }
+    _creators[typeIndex] = _fixAccess(newOne);
+}
+No.81 Patch
+protected void verifyNonDup(AnnotatedWithParams newOne, int typeIndex, boolean explicit)
+{
+    final int mask = (1 << typeIndex);
+    _hasNonDefaultCreator = true;
+    AnnotatedWithParams oldOne = _creators[typeIndex];
+    // already had an explicitly marked one?
+    if (oldOne != null) {
+
+        if ((_explicitCreators & mask) != 0) { // already had explicitly annotated, leave as-is
+            // but skip, if new one not annotated
+            if (!explicit) {
+                return;
+            }
+            // both explicit: verify
+            // otherwise only verify if neither explicitly annotated.
+        }
+
+        // one more thing: ok to override in sub-class
+        if (oldOne.getClass() == newOne.getClass()) {
+            // [databind#667]: avoid one particular class of bogus problems
+            if (explicit) {
+                throw new IllegalArgumentException("Conflicting "+TYPE_DESCS[typeIndex]
+                        +" creators: already had explicitly marked "+oldOne+", encountered "+newOne);
+            } else {
+                // otherwise, which one to choose?
+                // new type more generic, use old
+                return;
+                // new type more specific, use it
+            }
+        }
+    }
+    if (explicit) {
+        _explicitCreators |= mask;
+    }
+    _creators[typeIndex] = _fixAccess(newOne);
+}

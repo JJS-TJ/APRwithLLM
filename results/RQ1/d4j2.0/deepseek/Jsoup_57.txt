@@ -1,0 +1,63 @@
+No.2 Patch
+public void removeIgnoreCase(String key) {
+    Validate.notEmpty(key);
+    if (attributes == null)
+        return;
+    for (Iterator<String> it = attributes.keySet().iterator(); it.hasNext(); ) {
+        String attrKey = it.next();
+        if (attrKey.equalsIgnoreCase(key)) {
+            it.remove();
+            attributes.remove(attrKey);
+        }
+    }
+}
+No.3 Patch
+public void removeIgnoreCase(String key) {
+    Validate.notEmpty(key);
+    if (attributes == null)
+        return;
+    for (Iterator<String> it = attributes.keySet().iterator(); it.hasNext(); ) {
+        String attrKey = it.next();
+        if (attrKey.equalsIgnoreCase(key))
+            it.remove();
+    }
+}
+No.4 Patch
+public void removeIgnoreCase(String key) {
+    Validate.notEmpty(key);
+    if (attributes == null)
+        return;
+    for (Iterator<String> it = attributes.keySet().iterator(); it.hasNext(); ) {
+        String attrKey = it.next();
+        if (attrKey.equalsIgnoreCase(key)) {
+            it.remove();
+        }
+    }
+}
+No.20 Patch
+public void removeIgnoreCase(String key) {
+    Validate.notEmpty(key);
+    if (attributes == null)
+        return;
+    Iterator<String> it = attributes.keySet().iterator();
+    while (it.hasNext()) {
+        String attrKey = it.next();
+        if (attrKey.equalsIgnoreCase(key))
+            it.remove();
+    }
+}
+No.23 Patch
+public void removeIgnoreCase(String key) {
+    if (key == null || key.isEmpty()) {
+        throw new IllegalArgumentException("Key cannot be null or empty");
+    }
+    if (attributes == null) {
+        return;
+    }
+    for (Iterator<String> it = attributes.keySet().iterator(); it.hasNext(); ) {
+        String attrKey = it.next();
+        if (attrKey.equalsIgnoreCase(key)) {
+            it.remove();
+        }
+    }
+}

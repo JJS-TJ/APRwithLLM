@@ -1,0 +1,20 @@
+No.1 Patch
+public StringBuilder getGenericSignature(StringBuilder sb)
+{
+    _classSignature(_class, sb, false);
+    sb.append('<');
+    sb = _referencedType.getGenericSignature(sb);
+    sb.append('>');
+    sb.append(';');
+    return sb;
+}
+No.14 Patch
+public StringBuilder getGenericSignature(StringBuilder sb)
+{
+    _classSignature(_class, sb, false);
+    sb.append('<');
+    sb = _referencedType.getGenericSignature(sb);
+    sb.append('>'); // add this line
+    sb.append(';');
+    return sb;
+}

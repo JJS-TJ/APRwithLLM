@@ -1,0 +1,11 @@
+No.10 Patch
+public DocumentType(String name, String publicId, String systemId, String baseUri) {
+    super(baseUri);
+
+    Validate.notNull(name);
+    Validate.notNull(publicId);
+    Validate.notNull(systemId);
+    attr("name", name);
+    attr("publicId", publicId);
+    attr("systemId", systemId);
+}

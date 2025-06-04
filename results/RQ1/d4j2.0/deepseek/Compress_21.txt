@@ -1,0 +1,290 @@
+No.0 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        shift--;
+        if (shift < 0) {
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) {
+        header.write(cache);
+    }
+}
+No.1 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // check if shift is less than 0 instead of equal to 0
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // check if shift is less than 7 instead of equal to 7
+        header.write(cache);
+    }
+}
+No.4 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) {
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) {
+        header.write(cache);
+    }
+}
+No.5 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    byte cache = 0;
+    byte shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) {
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) {
+        header.write(cache);
+    }
+}
+No.7 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    if (length == 0) {
+        return; // No need to write anything
+    }
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift == -1) { // shift is -1 after decrementing, indicating a full byte
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (shift != 7) { // if there are remaining bits in the cache, write them
+        header.write(cache);
+    }
+}
+No.11 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // Fix: Change condition to check if shift is less than 0
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // Fix: Change condition to check if shift is less than 7
+        header.write(cache);
+    }
+}
+No.12 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift == -1) {
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) {
+        header.write(cache);
+    }
+}
+No.15 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift == -1) { // When shift becomes -1, it means we have completed a byte
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // If we have some bits left in the cache, we write them
+        header.write(cache);
+    }
+}
+No.22 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // Change condition to < 0
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // Change condition to < 7
+        header.write(cache);
+    }
+}
+No.27 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        if (shift == 0 || i == length - 1) { // If the last bit or the last iteration
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        } else {
+            shift--;
+        }
+    }
+}
+No.29 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // fixed the condition here to be less than 0
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // fixed the condition here to be less than 7
+        header.write(cache);
+    }
+}
+No.34 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // Fix: Use '<' instead of '=='
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // Fix: Use '<' instead of '=='
+        header.write(cache);
+    }
+}
+No.47 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // Changed condition to check if shift is less than 0
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // Changed condition to check if shift is less than 7
+        header.write(cache);
+    }
+}
+No.50 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // shift is now less than 0, meaning we have written 8 bits
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // shift is still less than 7, meaning we have some bits left to write
+        header.write(cache);
+    }
+}
+No.51 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) {
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (shift < 7) {
+        header.write(cache);
+    }
+}
+No.56 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // Change this condition to shift < 0
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // Change this condition to shift < 7
+        header.write(cache);
+    }
+}
+No.62 Patch
+private void writeBits(final DataOutput header, final BitSet bits, final int length) throws IOException {
+    int cache = 0;
+    int shift = 7;
+    for (int i = 0; i < length; i++) {
+        cache |= ((bits.get(i) ? 1 : 0) << shift);
+        --shift;
+        if (shift < 0) { // shift should never be less than 0
+            header.write(cache);
+            shift = 7;
+            cache = 0;
+        }
+    }
+    if (length > 0 && shift < 7) { // Only write if there are bits left to write
+        header.write(cache);
+    }
+}

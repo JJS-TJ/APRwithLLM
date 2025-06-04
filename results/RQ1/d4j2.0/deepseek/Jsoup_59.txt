@@ -1,0 +1,209 @@
+No.9 Patch
+void newAttribute() {
+    if (attributes == null) {
+        attributes = new Attributes();
+    }
+
+    if (pendingAttributeName != null) {
+        String attributeName = pendingAttributeName.trim();
+        Attribute attribute;
+        
+        try {
+            if (hasPendingAttributeValue) {
+                String attributeValue = pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS;
+                attribute = new Attribute(attributeName, attributeValue);
+            } else if (hasEmptyAttributeValue) {
+                attribute = new Attribute(attributeName, "");
+            } else {
+                attribute = new BooleanAttribute(attributeName);
+            }
+
+            attributes.put(attribute);
+        } catch (Exception e) {
+            System.out.println("Error creating or adding attribute: " + e.getMessage());
+        }
+        
+        pendingAttributeName = null;
+        hasEmptyAttributeValue = false;
+        hasPendingAttributeValue = false;
+        reset(pendingAttributeValue);
+        pendingAttributeValueS = null;
+    }
+}
+No.40 Patch
+final void newAttribute() {
+    if (attributes == null)
+        attributes = new Attributes();
+
+    if (pendingAttributeName != null) {
+        // the tokeniser has skipped whitespace control chars, but trimming could collapse to empty for other control codes, so verify here
+        pendingAttributeName = pendingAttributeName.trim();
+        if (!pendingAttributeName.isEmpty()) {
+            Attribute attribute;
+            if (hasPendingAttributeValue)
+                attribute = new Attribute(pendingAttributeName,
+                    pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);
+            else if (hasEmptyAttributeValue)
+                attribute = new Attribute(pendingAttributeName, "");
+            else
+                attribute = new BooleanAttribute(pendingAttributeName);
+            attributes.put(attribute);
+        }
+    }
+    pendingAttributeName = null;
+    hasEmptyAttributeValue = false;
+    hasPendingAttributeValue = false;
+    reset(pendingAttributeValue);
+    pendingAttributeValueS = null;
+}
+No.55 Patch
+final void newAttribute() {
+    if (attributes == null) {
+        attributes = new Attributes();
+    }
+
+    if (pendingAttributeName != null) {
+        // the tokeniser has skipped whitespace control chars, but trimming could collapse to empty for other control codes, so verify here
+        pendingAttributeName = pendingAttributeName.trim();
+        
+        // check if pendingAttributeName is not empty
+        if (!pendingAttributeName.isEmpty()) {
+            Attribute attribute;
+            if (hasPendingAttributeValue) {
+                String value = pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS;
+                attribute = new Attribute(pendingAttributeName, value);
+            } else if (hasEmptyAttributeValue) {
+                attribute = new Attribute(pendingAttributeName, "");
+            } else {
+                attribute = new BooleanAttribute(pendingAttributeName);
+            }
+            attributes.put(attribute);
+        }
+    }
+    pendingAttributeName = null;
+    hasEmptyAttributeValue = false;
+    hasPendingAttributeValue = false;
+    reset(pendingAttributeValue);
+    pendingAttributeValueS = null;
+}
+No.65 Patch
+final void newAttribute() {
+    if (attributes == null)
+        attributes = new Attributes();
+
+    if (pendingAttributeName != null) {
+        // the tokeniser has skipped whitespace control chars, but trimming could collapse to empty for other control codes, so verify here
+        pendingAttributeName = pendingAttributeName.trim();
+        
+        if (!pendingAttributeName.isEmpty()) {
+            Attribute attribute;
+            if (hasPendingAttributeValue)
+                attribute = new Attribute(pendingAttributeName,
+                    pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);
+            else if (hasEmptyAttributeValue)
+                attribute = new Attribute(pendingAttributeName, "");
+            else
+                attribute = new BooleanAttribute(pendingAttributeName);
+            attributes.put(attribute);
+        } else {
+            System.out.println("Pending attribute name is empty, skipping attribute creation.");
+        }
+    } else {
+        System.out.println("Pending attribute name is null, skipping attribute creation.");
+    }
+    
+    pendingAttributeName = null;
+    hasEmptyAttributeValue = false;
+    hasPendingAttributeValue = false;
+    reset(pendingAttributeValue);
+    pendingAttributeValueS = null;
+}
+No.71 Patch
+final void newAttribute() {
+    if (attributes == null)
+        attributes = new Attributes();
+
+    if (pendingAttributeName != null) {
+        // Trim the attribute name and check if it's not empty
+        String trimmedName = pendingAttributeName.trim();
+        if (!"".equals(trimmedName)) {
+            Attribute attribute;
+            if (hasPendingAttributeValue)
+                attribute = new Attribute(trimmedName,
+                    pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);
+            else if (hasEmptyAttributeValue)
+                attribute = new Attribute(trimmedName, "");
+            else
+                attribute = new BooleanAttribute(trimmedName);
+            attributes.put(attribute);
+        }
+    }
+    pendingAttributeName = null;
+    hasEmptyAttributeValue = false;
+    hasPendingAttributeValue = false;
+    reset(pendingAttributeValue);
+    pendingAttributeValueS = null;
+}
+No.78 Patch
+final void newAttribute() {
+    if (attributes == null)
+        attributes = new Attributes();
+
+    if (pendingAttributeName != null) {
+        // the tokeniser has skipped whitespace control chars, but trimming could collapse to empty for other control codes, so verify here
+        pendingAttributeName = pendingAttributeName.trim();
+        if (!pendingAttributeName.isEmpty()) {
+            Attribute attribute;
+            if (hasPendingAttributeValue)
+                attribute = new Attribute(pendingAttributeName,
+                    pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);
+            else if (hasEmptyAttributeValue)
+                attribute = new Attribute(pendingAttributeName, "");
+            else
+                attribute = new BooleanAttribute(pendingAttributeName);
+            attributes.put(attribute);
+        } else {
+            System.out.println("Pending attribute name is empty. Ignoring attribute creation.");
+        }
+    }
+    pendingAttributeName = null;
+    hasEmptyAttributeValue = false;
+    hasPendingAttributeValue = false;
+    reset(pendingAttributeValue);
+    pendingAttributeValueS = null;
+}
+No.89 Patch
+final void newAttribute() {
+    if (attributes == null)
+        attributes = new Attributes();
+
+    if (pendingAttributeName != null) {
+        // the tokeniser has skipped whitespace control chars, but trimming could collapse to empty for other control codes, so verify here
+        pendingAttributeName = pendingAttributeName.trim();
+        
+        if (pendingAttributeName.isEmpty()) {
+            // Skip adding an attribute with an empty name
+            pendingAttributeName = null;
+            hasEmptyAttributeValue = false;
+            hasPendingAttributeValue = false;
+            reset(pendingAttributeValue);
+            pendingAttributeValueS = null;
+            return;
+        }
+
+        Attribute attribute;
+        if (hasPendingAttributeValue)
+            attribute = new Attribute(pendingAttributeName,
+                pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);
+        else if (hasEmptyAttributeValue)
+            attribute = new Attribute(pendingAttributeName, "");
+        else
+            attribute = new BooleanAttribute(pendingAttributeName);
+        attributes.put(attribute);
+    }
+    pendingAttributeName = null;
+    hasEmptyAttributeValue = false;
+    hasPendingAttributeValue = false;
+    reset(pendingAttributeValue);
+    pendingAttributeValueS = null;
+}

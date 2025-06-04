@@ -1,0 +1,1019 @@
+No.0 Patch
+private final static int _parseIndex(String str) {
+    // Remove leading zeroes
+    str = str.replaceFirst("^0+(?!$)", "");
+    
+    final int len = str.length();
+    
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    
+    // No need to check length again, we have already done that
+    long l = NumberInput.parseLong(str);
+    if (l > Integer.MAX_VALUE) {
+        return -1;
+    }
+    
+    return (int) l;
+}
+No.1 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Removed the extra increment
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.2 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.3 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // remove the extra ++i
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.6 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    long l = Long.parseLong(str);
+    if (l > Integer.MAX_VALUE) {
+        return -1;
+    }
+    return (int) l;
+}
+No.7 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.8 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // the increment should be outside the charAt call
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.10 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // fixed here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.13 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.15 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) { // Changed ++i to i++
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.20 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (!Character.isDigit(c) || c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.22 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) { // increment i only once
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.24 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        try {
+            long l = Long.parseLong(str);
+            if (l > Integer.MAX_VALUE) {
+                return -1;
+            }
+        } catch (NumberFormatException e) {
+            return -1;
+        }
+    }
+    return Integer.parseInt(str);
+}
+No.25 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    long value = 0;
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+        value = value * 10 + (c - '0');
+        if (value > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return (int) value;
+}
+No.26 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) { // Removed increment operation i++
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.28 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // remove the extra increment
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.32 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);  // removed i++
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.33 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // fixed the increment here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.34 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len >= 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.39 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    // Check for leading zero
+    if (str.charAt(0) == '0' && len > 1) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.41 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // removed the ++i
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.42 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.45 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10 || (len > 1 && str.charAt(0) == '0')) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.47 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Remove the extra increment here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.48 Patch
+private final static int _parseIndex(String str) {
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (str == null || str.length() > 10) {
+        return -1;
+    }
+
+    // Check for negative numbers
+    if (str.charAt(0) == '-') {
+        return -1;
+    }
+
+    // Check for leading zeroes
+    if (str.charAt(0) == '0' && str.length() > 1) {
+        return -1;
+    }
+
+    for (int i = 0; i < str.length(); ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+
+    if (str.length() == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.50 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Fix for logical error: i should not be incremented
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.52 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Removed the unnecessary increment
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.55 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Changed i++ to i
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.57 Patch
+private final static int _parseIndex(String str) {
+    if (str == null || str.isEmpty()) {
+        return -1;
+    }
+
+    final int len = str.length();
+    if (len > 10) {
+        return -1;
+    }
+
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+
+    long l = NumberInput.parseLong(str);
+    if (l > Integer.MAX_VALUE) {
+        return -1;
+    }
+
+    return NumberInput.parseInt(str);
+}
+No.59 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) { // change i++ to i in the for loop
+        char c = str.charAt(i); // remove i++ from charAt()
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.62 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);  // Here we removed the increment operation
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.63 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // removed the i++
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.64 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Change here: remove the increment
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.68 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) { // Fix: i++ to i++
+        char c = str.charAt(i); // Fix: i-- to i
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.72 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Remove the increment of i here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.73 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // Removed the increment inside the loop
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.75 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+
+    long l = NumberInput.parseLong(str);
+    if (l > Integer.MAX_VALUE) {
+        return -1;
+    }
+
+    return (int) l;
+}
+No.76 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    long l = Long.parseLong(str);
+    if (l > Integer.MAX_VALUE) {
+        return -1;
+    }
+    return (int) l;
+}
+No.77 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // increment i only once in the loop
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.79 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    long l = NumberInput.parseLong(str);
+    if (l > Integer.MAX_VALUE) {
+        return -1;
+    }
+    return NumberInput.parseInt(str);
+}
+No.80 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // fixed here, we should not increment i here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.81 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // remove the extra increment here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.83 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; ++i) {
+        char c = str.charAt(i); // i++ removed here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.90 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) { // i is incremented only once here
+        char c = str.charAt(i); // i is not incremented here
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.93 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    // [Issue#133]: beware of super long indexes; assume we never
+    // have arrays over 2 billion entries so ints are fine.
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) { // changed i++ to i
+        char c = str.charAt(i); // removed i++
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = NumberInput.parseLong(str);
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return NumberInput.parseInt(str);
+}
+No.95 Patch
+private final static int _parseIndex(String str) {
+    final int len = str.length();
+    if (len == 0 || len > 10) {
+        return -1;
+    }
+    for (int i = 0; i < len; i++) {
+        char c = str.charAt(i);
+        if (c > '9' || c < '0') {
+            return -1;
+        }
+    }
+    if (len == 10) {
+        long l = Long.parseLong(str); // Using `Long.parseLong` instead of `NumberInput.parseLong`
+        if (l > Integer.MAX_VALUE) {
+            return -1;
+        }
+    }
+    return Integer.parseInt(str); // Using `Integer.parseInt` instead of `NumberInput.parseInt`
+}

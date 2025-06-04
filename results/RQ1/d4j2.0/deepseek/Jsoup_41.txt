@@ -1,0 +1,40 @@
+No.14 Patch
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    if (!super.equals(o)) return false;
+
+    Element element = (Element) o;
+
+    // You might want to compare some fields in the Element class here.
+    // For example, if you have a field called "value", you could compare it like this:
+    // return this.value.equals(element.value);
+
+    return true;
+}
+No.23 Patch
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    if (!super.equals(o)) return false;
+
+    Element element = (Element) o;
+
+    // Add your own equality check here, for example:
+    // return this.someField.equals(element.someField);
+    // Without knowing the structure of your class, I can't provide a specific fix.
+    // This line is just a placeholder to prevent a compilation error.
+    return true;
+}
+No.26 Patch
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    if (!super.equals(o)) return false;
+
+    Element element = (Element) o;
+
+    // Assuming that the superclass has already implemented equals() method,
+    // we can directly use it for comparison.
+    return super.equals(element);
+}
