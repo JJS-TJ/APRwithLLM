@@ -1,0 +1,59 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [424,465]
+to
+parenthesized_expression [423,450]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [424,465]
+to
+parenthesized_expression [423,450]
+at 1
+===
+insert-node
+---
+&&: && [437,439]
+to
+binary_expression [424,465]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_expression [424,436]
+    !: ! [424,425]
+    identifier: found_param [425,436]
+to
+binary_expression [424,465]
+at 0
+
+New cluster:
+MOVE from binary_expression [424,465]
+------------
+===
+move-tree
+---
+call_expression [424,449]
+    field_expression [424,438]
+        identifier: grammar_ [424,432]
+        .: . [432,433]
+        field_identifier: count [433,438]
+    argument_list [438,449]
+        (: ( [438,439]
+        field_expression [439,448]
+            identifier: ope [439,442]
+            .: . [442,443]
+            field_identifier: name_ [443,448]
+        ): ) [448,449]
+to
+binary_expression [424,465]
+at 2
+

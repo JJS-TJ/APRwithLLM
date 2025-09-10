@@ -1,0 +1,83 @@
+New cluster:
+MOVE from compound_statement [58,841]
+------------
+===
+move-tree
+---
+if_statement [710,770]
+    if: if [710,712]
+    parenthesized_expression [713,732]
+        (: ( [713,714]
+        field_expression [715,730]
+            identifier: pgdata [715,721]
+            ->: -> [721,723]
+            field_identifier: bSelect [723,730]
+        ): ) [731,732]
+    compound_statement [733,770]
+        {: { [733,734]
+        expression_statement [739,765]
+            call_expression [739,764]
+                identifier: ChoiceEndChoice [739,754]
+                argument_list [754,764]
+                    (: ( [754,755]
+                    identifier: pgdata [756,762]
+                    ): ) [763,764]
+            ;: ; [764,765]
+        }: } [769,770]
+to
+compound_statement [58,841]
+at 15
+
+New cluster:
+===
+delete-node
+---
+if_statement [657,774]
+===
+------------
+===
+delete-node
+---
+if: if [657,659]
+===
+===
+delete-node
+---
+{: { [705,706]
+===
+===
+delete-node
+---
+compound_statement [705,774]
+===
+===
+delete-node
+---
+if_statement [657,774]
+===
+===
+delete-node
+---
+}: } [773,774]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [660,704]
+    (: ( [660,661]
+    unary_expression [662,702]
+        !: ! [662,663]
+        subscript_expression [664,702]
+            field_expression [664,684]
+                identifier: pgdata [664,670]
+                ->: -> [670,672]
+                field_identifier: symbolKeyBuf [672,684]
+            [: [ [684,685]
+            identifier: key_buf_cursor [686,700]
+            ]: ] [701,702]
+    ): ) [703,704]
+

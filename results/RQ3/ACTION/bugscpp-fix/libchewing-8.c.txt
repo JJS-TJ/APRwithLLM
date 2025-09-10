@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+<=: <= [1108,1110]
+to
+binary_expression [1104,1113]
+at 1
+------------
+===
+insert-node
+---
+<=: <= [1108,1110]
+to
+binary_expression [1104,1113]
+at 1
+
+New cluster:
+===
+delete-node
+---
+<: < [1108,1109]
+===
+------------
+===
+delete-node
+---
+<: < [1108,1109]
+===
+

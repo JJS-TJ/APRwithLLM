@@ -1,0 +1,121 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [775,900]
+to
+return_statement [768,888]
+at 1
+------------
+===
+insert-node
+---
+||: || [888,890]
+to
+binary_expression [775,900]
+at 1
+===
+insert-node
+---
+binary_expression [775,900]
+to
+return_statement [768,888]
+at 1
+
+New cluster:
+MOVE from binary_expression [775,900]
+------------
+===
+move-tree
+---
+binary_expression [775,887]
+    binary_expression [775,874]
+        binary_expression [775,861]
+            binary_expression [775,836]
+                binary_expression [775,823]
+                    binary_expression [775,810]
+                        binary_expression [775,797]
+                            binary_expression [775,784]
+                                identifier: ch [775,777]
+                                ==: == [778,780]
+                                char_literal [781,784]
+                                    ': ' [781,782]
+                                    character:   [782,783]
+                                    ': ' [783,784]
+                            ||: || [785,787]
+                            binary_expression [788,797]
+                                identifier: ch [788,790]
+                                ==: == [791,793]
+                                char_literal [794,797]
+                                    ': ' [794,795]
+                                    character: _ [795,796]
+                                    ': ' [796,797]
+                        ||: || [798,800]
+                        binary_expression [801,810]
+                            identifier: ch [801,803]
+                            ==: == [804,806]
+                            char_literal [807,810]
+                                ': ' [807,808]
+                                character: - [808,809]
+                                ': ' [809,810]
+                    ||: || [811,813]
+                    binary_expression [814,823]
+                        identifier: ch [814,816]
+                        ==: == [817,819]
+                        char_literal [820,823]
+                            ': ' [820,821]
+                            character: / [821,822]
+                            ': ' [822,823]
+                ||: || [824,826]
+                binary_expression [827,836]
+                    identifier: ch [827,829]
+                    ==: == [830,832]
+                    char_literal [833,836]
+                        ': ' [833,834]
+                        character: ( [834,835]
+                        ': ' [835,836]
+            ||: || [837,839]
+            binary_expression [852,861]
+                identifier: ch [852,854]
+                ==: == [855,857]
+                char_literal [858,861]
+                    ': ' [858,859]
+                    character: ) [859,860]
+                    ': ' [860,861]
+        ||: || [862,864]
+        binary_expression [865,874]
+            identifier: ch [865,867]
+            ==: == [868,870]
+            char_literal [871,874]
+                ': ' [871,872]
+                character: . [872,873]
+                ': ' [873,874]
+    ||: || [875,877]
+    binary_expression [878,887]
+        identifier: ch [878,880]
+        ==: == [881,883]
+        char_literal [884,887]
+            ': ' [884,885]
+            character: & [885,886]
+            ': ' [886,887]
+to
+binary_expression [775,900]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [891,900]
+    identifier: ch [891,893]
+    ==: == [894,896]
+    char_literal [897,900]
+        ': ' [897,898]
+        character: , [898,899]
+        ': ' [899,900]
+to
+binary_expression [775,900]
+at 2
+

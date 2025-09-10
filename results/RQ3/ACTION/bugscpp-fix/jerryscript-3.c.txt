@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: last_index [4122,4132]
+to
+argument_list [4059,4158]
+at 5
+------------
+===
+insert-node
+---
+identifier: last_index [4122,4132]
+to
+argument_list [4059,4158]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [4122,4151]
+    identifier: ecma_make_length_value [4122,4144]
+    argument_list [4144,4151]
+        (: ( [4144,4145]
+        identifier: index [4145,4150]
+        ): ) [4150,4151]
+
