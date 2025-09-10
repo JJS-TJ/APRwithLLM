@@ -1,9 +1,0 @@
-New cluster:
-UPDATE from num2 to num1
-------------
-===
-update-node
----
-identifier: num2 [265,269]
-replace num2 by num1
-

@@ -1,9 +1,0 @@
-New cluster:
-UPDATE from %d is the smalles to %d is the smallest
-------------
-===
-update-node
----
-string_content: %d is the smalles [370,387]
-replace %d is the smalles by %d is the smallest
-

@@ -1,9 +1,0 @@
-New cluster:
-UPDATE from Stdent has an A grade to Student has an A grade
-------------
-===
-update-node
----
-string_content: Stdent has an A grade [302,323]
-replace Stdent has an A grade by Student has an A grade
-

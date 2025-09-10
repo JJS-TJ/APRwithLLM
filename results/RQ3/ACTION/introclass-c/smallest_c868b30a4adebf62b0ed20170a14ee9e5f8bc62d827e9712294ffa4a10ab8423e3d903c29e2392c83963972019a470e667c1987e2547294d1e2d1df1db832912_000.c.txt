@@ -1,9 +1,0 @@
-New cluster:
-UPDATE from 3 to 4
-------------
-===
-update-node
----
-number_literal: 3 [148,149]
-replace 3 by 4
-
