@@ -1,9 +1,0 @@
-New cluster:
-UPDATE from "%d is the smalles\n" to "%d is the smallest\n"
-------------
-===
-update-node
----
-StringLiteral: "%d is the smalles\n" [795,816]
-replace "%d is the smalles\n" by "%d is the smallest\n"
-

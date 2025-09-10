@@ -1,9 +1,0 @@
-New cluster:
-UPDATE from b.value to a.value
-------------
-===
-update-node
----
-QualifiedName: b.value [408,415]
-replace b.value by a.value
-
