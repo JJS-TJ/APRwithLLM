@@ -1,0 +1,59 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [192,224]
+to
+if_statement [189,220]
+at 0
+------------
+===
+insert-node
+---
+boolean_operator [192,224]
+to
+if_statement [189,220]
+at 0
+===
+insert-node
+---
+and: and [207,210]
+to
+boolean_operator [192,224]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [192,206]
+    call [192,201]
+        identifier: len [192,195]
+        argument_list [195,201]
+            identifier: heap [196,200]
+    comparison_operator: == [202,204]
+    integer: 0 [205,206]
+to
+boolean_operator [192,224]
+at 0
+
+New cluster:
+MOVE from boolean_operator [192,224]
+------------
+===
+move-tree
+---
+comparison_operator [192,205]
+    identifier: t [192,193]
+    comparison_operator: < [194,195]
+    subscript [196,205]
+        subscript [196,202]
+            identifier: arr [196,199]
+            identifier: i [200,201]
+        integer: 0 [203,204]
+to
+boolean_operator [192,224]
+at 2
+

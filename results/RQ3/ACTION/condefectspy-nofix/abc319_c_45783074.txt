@@ -1,0 +1,29 @@
+New cluster:
+===
+insert-node
+---
+comment: #print(m) [155,165]
+to
+module [0,1005]
+at 4
+------------
+===
+insert-node
+---
+comment: #print(m) [155,165]
+to
+module [0,1005]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [155,163]
+    call [155,163]
+        identifier: print [155,160]
+        argument_list [160,163]
+            identifier: m [161,162]
+

@@ -1,0 +1,96 @@
+New cluster:
+===
+insert-node
+---
+if_statement [57,78]
+to
+module [0,114]
+at 4
+------------
+===
+insert-node
+---
+if_statement [57,78]
+to
+module [0,114]
+at 4
+
+New cluster:
+MOVE from if_statement [57,78]
+------------
+===
+move-tree
+---
+comparison_operator [60,69]
+    subscript [60,66]
+        identifier: t [60,61]
+        slice [62,65]
+            integer: 0 [62,63]
+            identifier: n [64,65]
+    comparison_operator: == [66,68]
+    identifier: s [68,69]
+to
+if_statement [57,78]
+at 0
+===
+move-tree
+---
+block [74,78]
+    expression_statement [74,78]
+        augmented_assignment [74,78]
+            identifier: k [74,75]
+            -=: -= [75,77]
+            integer: 2 [77,78]
+to
+if_statement [57,78]
+at 1
+
+New cluster:
+MOVE from if_statement [57,104]
+------------
+===
+move-tree
+---
+block [100,104]
+    expression_statement [100,104]
+        augmented_assignment [100,104]
+            identifier: k [100,101]
+            -=: -= [101,103]
+            integer: 1 [103,104]
+to
+if_statement [57,104]
+at 1
+===
+move-tree
+---
+comparison_operator [85,95]
+    subscript [85,92]
+        identifier: t [85,86]
+        slice [87,91]
+            unary_operator [87,89]
+                -: - [87,88]
+                identifier: n [88,89]
+    comparison_operator: == [92,94]
+    identifier: s [94,95]
+to
+if_statement [57,104]
+at 0
+
+New cluster:
+===
+delete-node
+---
+elif_clause [80,104]
+===
+------------
+===
+delete-node
+---
+elif_clause [80,104]
+===
+===
+delete-node
+---
+elif: elif [80,84]
+===
+

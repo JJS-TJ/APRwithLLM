@@ -1,0 +1,37 @@
+New cluster:
+MOVE from comparison_operator [40,52]
+------------
+===
+move-tree
+---
+binary_operator [44,48]
+    identifier: x [44,45]
+    **: ** [45,47]
+    integer: 2 [47,48]
+to
+comparison_operator [40,52]
+at 0
+
+New cluster:
+===
+delete-node
+---
+binary_operator [40,48]
+===
+------------
+===
+delete-node
+---
+integer: 2 [40,41]
+===
+===
+delete-node
+---
+*: * [42,43]
+===
+===
+delete-node
+---
+binary_operator [40,48]
+===
+

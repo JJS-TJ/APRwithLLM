@@ -1,0 +1,19 @@
+New cluster:
+UPDATE from rfind to find
+------------
+===
+update-node
+---
+identifier: rfind [74,79]
+replace rfind by find
+===
+update-node
+---
+identifier: rfind [46,51]
+replace rfind by find
+===
+update-node
+---
+identifier: rfind [60,65]
+replace rfind by find
+

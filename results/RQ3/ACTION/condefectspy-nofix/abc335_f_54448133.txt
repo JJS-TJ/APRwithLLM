@@ -1,0 +1,75 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [207,220]
+to
+argument_list [204,215]
+at 1
+------------
+===
+insert-node
+---
+binary_operator [207,220]
+to
+argument_list [204,215]
+at 1
+===
+insert-node
+---
++: + [218,219]
+to
+binary_operator [207,220]
+at 1
+===
+insert-node
+---
+integer: 1 [219,220]
+to
+binary_operator [207,220]
+at 2
+
+New cluster:
+MOVE from binary_operator [207,220]
+------------
+===
+move-tree
+---
+binary_operator [207,214]
+    identifier: n [207,208]
+    //: // [208,210]
+    subscript [210,214]
+        identifier: a [210,211]
+        integer: 0 [212,213]
+to
+binary_operator [207,220]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [207,212]
+    binary_operator [208,211]
+        identifier: n [208,209]
+        -: - [209,210]
+        integer: 1 [210,211]
+to
+binary_operator [207,214]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: n [207,208]
+===
+------------
+===
+delete-node
+---
+identifier: n [207,208]
+===
+

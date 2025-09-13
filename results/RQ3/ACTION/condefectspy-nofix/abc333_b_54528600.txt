@@ -1,0 +1,85 @@
+New cluster:
+===
+insert-node
+---
+string: "BA" [39,43]
+to
+list [33,63]
+at 1
+------------
+===
+insert-node
+---
+string: "BA" [39,43]
+to
+list [33,63]
+at 1
+
+New cluster:
+===
+insert-node
+---
+string: "CB" [51,55]
+to
+list [33,63]
+at 3
+------------
+===
+insert-node
+---
+string: "CB" [51,55]
+to
+list [33,63]
+at 3
+
+New cluster:
+===
+insert-node
+---
+string: "DC" [63,67]
+to
+list [33,63]
+at 5
+------------
+===
+insert-node
+---
+string: "DC" [63,67]
+to
+list [33,63]
+at 5
+
+New cluster:
+===
+insert-node
+---
+string: "ED" [75,79]
+to
+list [33,63]
+at 7
+------------
+===
+insert-node
+---
+string: "ED" [75,79]
+to
+list [33,63]
+at 7
+
+New cluster:
+===
+insert-node
+---
+string: "AE" [87,91]
+to
+list [33,63]
+at 9
+------------
+===
+insert-node
+---
+string: "AE" [87,91]
+to
+list [33,63]
+at 9
+

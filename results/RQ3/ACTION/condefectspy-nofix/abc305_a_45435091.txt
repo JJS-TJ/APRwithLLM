@@ -1,0 +1,29 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [2,14]
+    identifier: int [2,5]
+    argument_list [5,14]
+        call [6,13]
+            identifier: input [6,11]
+            argument_list [11,13]
+to
+assignment [0,5]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 100 [2,5]
+===
+------------
+===
+delete-node
+---
+integer: 100 [2,5]
+===
+

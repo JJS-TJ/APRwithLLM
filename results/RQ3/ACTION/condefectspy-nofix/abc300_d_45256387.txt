@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [4,16]
+    identifier: int [4,7]
+    argument_list [7,16]
+        call [8,15]
+            identifier: input [8,13]
+            argument_list [13,15]
+to
+assignment [0,10]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [4,10]
+    integer: 10 [4,6]
+    **: ** [6,8]
+    integer: 12 [8,10]
+

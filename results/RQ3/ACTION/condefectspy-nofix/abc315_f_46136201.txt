@@ -1,0 +1,70 @@
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [848,873]
+to
+binary_operator [827,856]
+at 2
+------------
+===
+insert-node
+---
+parenthesized_expression [848,873]
+to
+binary_operator [827,856]
+at 2
+===
+insert-node
+---
+conditional_expression [849,872]
+to
+parenthesized_expression [848,873]
+at 0
+===
+insert-node
+---
+else: else [866,870]
+to
+conditional_expression [849,872]
+at 2
+===
+insert-node
+---
+integer: 0 [871,872]
+to
+conditional_expression [849,872]
+at 3
+
+New cluster:
+MOVE from conditional_expression [849,872]
+------------
+===
+move-tree
+---
+binary_operator [848,856]
+    integer: 2 [848,849]
+    **: ** [849,851]
+    parenthesized_expression [851,856]
+        binary_operator [852,855]
+            identifier: j [852,853]
+            -: - [853,854]
+            integer: 1 [854,855]
+to
+conditional_expression [849,872]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [861,865]
+    identifier: j [861,862]
+    comparison_operator: >= [862,864]
+    integer: 1 [864,865]
+to
+conditional_expression [849,872]
+at 1
+

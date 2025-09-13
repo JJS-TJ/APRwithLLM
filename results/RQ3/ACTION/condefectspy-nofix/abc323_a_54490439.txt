@@ -1,0 +1,13 @@
+New cluster:
+===
+delete-node
+---
+integer: 3 [41,42]
+===
+------------
+===
+delete-node
+---
+integer: 3 [41,42]
+===
+

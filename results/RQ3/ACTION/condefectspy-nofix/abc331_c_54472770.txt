@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from list to sorted
+------------
+===
+update-node
+---
+identifier: list [85,89]
+replace list by sorted
+

@@ -1,0 +1,87 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [53,59]
+    binary_operator [54,58]
+        identifier: A [54,55]
+        **: ** [55,57]
+        identifier: B [57,58]
+to
+binary_operator [53,62]
+at 0
+
+New cluster:
+===
+insert-node
+---
++: + [60,61]
+to
+binary_operator [53,62]
+at 1
+------------
+===
+insert-node
+---
++: + [60,61]
+to
+binary_operator [53,62]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [62,68]
+    binary_operator [63,67]
+        identifier: B [63,64]
+        **: ** [64,66]
+        identifier: A [66,67]
+to
+binary_operator [53,62]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [53,60]
+    identifier: A [53,54]
+    ^: ^ [54,55]
+    binary_operator [55,60]
+        identifier: B [55,56]
+        +: + [57,58]
+        identifier: B [59,60]
+
+New cluster:
+===
+delete-node
+---
+^: ^ [60,61]
+===
+------------
+===
+delete-node
+---
+^: ^ [60,61]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: A [61,62]
+===
+------------
+===
+delete-node
+---
+identifier: A [61,62]
+===
+

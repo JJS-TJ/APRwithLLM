@@ -1,0 +1,94 @@
+New cluster:
+===
+insert-node
+---
+call [1487,1505]
+to
+comparison_operator [1487,1506]
+at 0
+------------
+===
+insert-node
+---
+identifier: count [1495,1500]
+to
+attribute [1487,1500]
+at 1
+===
+insert-node
+---
+call [1487,1505]
+to
+comparison_operator [1487,1506]
+at 0
+===
+insert-node
+---
+attribute [1487,1500]
+to
+call [1487,1505]
+at 0
+
+New cluster:
+UPDATE from != to >
+------------
+===
+update-node
+---
+comparison_operator: != [1495,1497]
+replace != by >
+
+New cluster:
+===
+insert-node
+---
+integer: 0 [1508,1509]
+to
+comparison_operator [1487,1506]
+at 3
+------------
+===
+insert-node
+---
+integer: 0 [1508,1509]
+to
+comparison_operator [1487,1506]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+argument_list [1500,1505]
+    string: '1' [1501,1504]
+to
+call [1487,1505]
+at 1
+
+New cluster:
+MOVE from attribute [1487,1500]
+------------
+===
+move-tree
+---
+subscript [1487,1494]
+    identifier: s1 [1487,1489]
+    slice [1490,1493]
+        identifier: le [1491,1493]
+to
+attribute [1487,1500]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [1498,1506]
+    string: '?' [1498,1501]
+    *: * [1502,1503]
+    identifier: le [1504,1506]
+

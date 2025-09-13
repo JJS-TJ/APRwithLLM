@@ -1,0 +1,44 @@
+New cluster:
+===
+insert-node
+---
+false: False [93,98]
+to
+list_comprehension [92,120]
+at 0
+------------
+===
+insert-node
+---
+false: False [93,98]
+to
+list_comprehension [92,120]
+at 0
+
+New cluster:
+UPDATE from _ to j
+------------
+===
+update-node
+---
+identifier: _ [124,125]
+replace _ by j
+
+New cluster:
+UPDATE from _ to i
+------------
+===
+update-node
+---
+identifier: _ [104,105]
+replace _ by i
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+list [93,100]
+    false: False [94,99]
+

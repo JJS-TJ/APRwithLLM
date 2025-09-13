@@ -1,0 +1,74 @@
+New cluster:
+MOVE from assignment [1437,1470]
+------------
+===
+move-tree
+---
+call [1444,1468]
+    identifier: min [1444,1447]
+    argument_list [1447,1468]
+        identifier: cost [1448,1452]
+        call [1454,1467]
+            identifier: dfs [1454,1457]
+            argument_list [1457,1467]
+                binary_operator [1458,1464]
+                    binary_operator [1458,1462]
+                        identifier: t [1458,1459]
+                        +: + [1459,1460]
+                        identifier: dt [1460,1462]
+                    +: + [1462,1463]
+                    integer: 1 [1463,1464]
+                identifier: d [1465,1466]
+to
+assignment [1437,1470]
+at 2
+
+New cluster:
+MOVE from argument_list [1447,1468]
+------------
+===
+move-tree
+---
+binary_operator [1444,1470]
+    call [1444,1468]
+        identifier: min [1444,1447]
+        argument_list [1447,1468]
+            identifier: cost [1448,1452]
+            call [1454,1467]
+                identifier: dfs [1454,1457]
+                argument_list [1457,1467]
+                    binary_operator [1458,1464]
+                        binary_operator [1458,1462]
+                            identifier: t [1458,1459]
+                            +: + [1459,1460]
+                            identifier: dt [1460,1462]
+                        +: + [1462,1463]
+                        integer: 1 [1463,1464]
+                    identifier: d [1465,1466]
+    +: + [1468,1469]
+    integer: 1 [1469,1470]
+to
+argument_list [1447,1468]
+at 1
+
+New cluster:
+MOVE from binary_operator [1444,1470]
+------------
+===
+move-tree
+---
+call [1454,1467]
+    identifier: dfs [1454,1457]
+    argument_list [1457,1467]
+        binary_operator [1458,1464]
+            binary_operator [1458,1462]
+                identifier: t [1458,1459]
+                +: + [1459,1460]
+                identifier: dt [1460,1462]
+            +: + [1462,1463]
+            integer: 1 [1463,1464]
+        identifier: d [1465,1466]
+to
+binary_operator [1444,1470]
+at 0
+

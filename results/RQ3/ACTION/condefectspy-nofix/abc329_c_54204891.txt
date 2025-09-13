@@ -1,0 +1,68 @@
+New cluster:
+===
+insert-node
+---
+call [282,300]
+to
+expression_statement [282,302]
+at 0
+------------
+===
+insert-node
+---
+argument_list [287,300]
+to
+call [282,300]
+at 1
+===
+insert-node
+---
+call [282,300]
+to
+expression_statement [282,302]
+at 0
+===
+insert-node
+---
+identifier: print [282,287]
+to
+call [282,300]
+at 0
+
+New cluster:
+MOVE from argument_list [287,300]
+------------
+===
+move-tree
+---
+call [291,302]
+    identifier: len [291,294]
+    argument_list [294,302]
+        identifier: result [295,301]
+to
+argument_list [287,300]
+at 0
+
+New cluster:
+===
+delete-node
+---
+assignment [282,302]
+===
+------------
+===
+delete-node
+---
+=: = [289,290]
+===
+===
+delete-node
+---
+identifier: result [282,288]
+===
+===
+delete-node
+---
+assignment [282,302]
+===
+

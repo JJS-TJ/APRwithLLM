@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 6 to 7
+------------
+===
+update-node
+---
+integer: 6 [35,36]
+replace 6 by 7
+

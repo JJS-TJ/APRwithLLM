@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Grove" to "Glove"
+------------
+===
+update-node
+---
+string: "Grove" [78,85]
+replace "Grove" by "Glove"
+

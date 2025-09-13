@@ -1,0 +1,52 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_operator [195,197]
+    -: - [195,196]
+    identifier: x [196,197]
+to
+list [192,199]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_operator [198,200]
+    -: - [198,199]
+    identifier: y [199,200]
+to
+list [192,199]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: x [195,196]
+===
+------------
+===
+delete-node
+---
+identifier: x [195,196]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: y [197,198]
+===
+------------
+===
+delete-node
+---
+identifier: y [197,198]
+===
+

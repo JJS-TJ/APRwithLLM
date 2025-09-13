@@ -1,0 +1,15 @@
+New cluster:
+MOVE from block [167,197]
+------------
+===
+move-tree
+---
+expression_statement [235,239]
+    augmented_assignment [235,239]
+        identifier: k [235,236]
+        -=: -= [236,238]
+        integer: 1 [238,239]
+to
+block [167,197]
+at 2
+

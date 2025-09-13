@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "LURD" to "RULD"
+------------
+===
+update-node
+---
+string: "LURD" [80,86]
+replace "LURD" by "RULD"
+

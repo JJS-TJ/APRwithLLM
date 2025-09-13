@@ -1,0 +1,25 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+for_statement [332,383]
+    identifier: i [336,337]
+    call [341,349]
+        identifier: range [341,346]
+        argument_list [346,349]
+            identifier: N [347,348]
+    block [356,383]
+        expression_statement [356,383]
+            call [356,383]
+                attribute [356,374]
+                    identifier: rotate_list [356,367]
+                    identifier: append [368,374]
+                argument_list [374,383]
+                    subscript [375,382]
+                        subscript [375,379]
+                            identifier: A [375,376]
+                            integer: 0 [377,378]
+                        identifier: i [380,381]
+

@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list_splat [192,196]
+    *: * [192,193]
+    identifier: res [193,196]
+to
+argument_list [191,196]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: res [192,195]
+===
+------------
+===
+delete-node
+---
+identifier: res [192,195]
+===
+

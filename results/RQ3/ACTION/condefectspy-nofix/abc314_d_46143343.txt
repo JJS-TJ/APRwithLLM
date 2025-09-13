@@ -1,0 +1,36 @@
+New cluster:
+===
+insert-node
+---
+identifier: c [709,710]
+to
+argument_list [708,740]
+at 0
+------------
+===
+insert-node
+---
+identifier: c [709,710]
+to
+argument_list [708,740]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+conditional_expression [709,739]
+    identifier: c [709,710]
+    comparison_operator [714,724]
+        identifier: lm [714,716]
+        comparison_operator: > [716,717]
+        identifier: islower [717,724]
+    else: else [725,729]
+    call [730,739]
+        attribute [730,737]
+            identifier: c [730,731]
+            identifier: lower [732,737]
+        argument_list [737,739]
+

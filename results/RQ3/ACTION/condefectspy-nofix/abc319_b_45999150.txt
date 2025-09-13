@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 11 to 10
+------------
+===
+update-node
+---
+integer: 11 [60,62]
+replace 11 by 10
+

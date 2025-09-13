@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [134,141]
+    identifier: n [134,135]
+    -: - [135,136]
+    identifier: extra [136,141]
+to
+comparison_operator [132,139]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: extra [134,139]
+===
+------------
+===
+delete-node
+---
+identifier: extra [134,139]
+===
+

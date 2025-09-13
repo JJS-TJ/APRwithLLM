@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from dpnxt to P
+------------
+===
+update-node
+---
+identifier: dpnxt [675,680]
+replace dpnxt by P
+

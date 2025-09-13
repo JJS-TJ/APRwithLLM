@@ -1,0 +1,27 @@
+New cluster:
+===
+insert-node
+---
+integer: 0 [54,55]
+to
+conditional_expression [54,116]
+at 0
+------------
+===
+insert-node
+---
+integer: 0 [54,55]
+to
+conditional_expression [54,116]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [54,58]
+    identifier: p [54,55]
+    integer: 0 [56,57]
+

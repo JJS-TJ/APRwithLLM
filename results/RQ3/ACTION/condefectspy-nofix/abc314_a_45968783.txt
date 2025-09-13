@@ -1,0 +1,52 @@
+New cluster:
+MOVE from expression_statement [132,153]
+------------
+===
+move-tree
+---
+call [138,152]
+    identifier: float [138,143]
+    argument_list [143,152]
+        subscript [144,151]
+            identifier: s [144,145]
+            slice [146,150]
+                binary_operator [147,150]
+                    identifier: n [147,148]
+                    +: + [148,149]
+                    integer: 2 [149,150]
+to
+expression_statement [132,153]
+at 0
+
+New cluster:
+UPDATE from float to print
+------------
+===
+update-node
+---
+identifier: float [138,143]
+replace float by print
+
+New cluster:
+===
+delete-node
+---
+call [132,153]
+===
+------------
+===
+delete-node
+---
+identifier: print [132,137]
+===
+===
+delete-node
+---
+argument_list [137,153]
+===
+===
+delete-node
+---
+call [132,153]
+===
+

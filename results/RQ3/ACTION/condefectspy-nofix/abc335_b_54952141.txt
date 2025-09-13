@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: n [112,113]
+to
+comparison_operator [99,113]
+at 2
+------------
+===
+insert-node
+---
+identifier: n [112,113]
+to
+comparison_operator [99,113]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 3 [112,113]
+===
+------------
+===
+delete-node
+---
+integer: 3 [112,113]
+===
+

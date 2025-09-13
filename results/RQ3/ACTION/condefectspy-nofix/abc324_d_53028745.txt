@@ -1,0 +1,76 @@
+New cluster:
+UPDATE from 1 to 0
+------------
+===
+update-node
+---
+integer: 1 [205,206]
+replace 1 by 0
+
+New cluster:
+UPDATE from 1 to 10
+------------
+===
+update-node
+---
+integer: 1 [213,214]
+replace 1 by 10
+
+New cluster:
+===
+insert-node
+---
+**: ** [209,211]
+to
+binary_operator [207,214]
+at 3
+------------
+===
+insert-node
+---
+**: ** [209,211]
+to
+binary_operator [207,214]
+at 3
+
+New cluster:
+===
+insert-node
+---
+integer: 7 [211,212]
+to
+binary_operator [207,214]
+at 4
+------------
+===
+insert-node
+---
+integer: 7 [211,212]
+to
+binary_operator [207,214]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [207,212]
+    integer: 10 [207,209]
+    **: ** [209,211]
+    integer: 8 [211,212]
+
+New cluster:
+===
+delete-node
+---
++: + [212,213]
+===
+------------
+===
+delete-node
+---
++: + [212,213]
+===
+

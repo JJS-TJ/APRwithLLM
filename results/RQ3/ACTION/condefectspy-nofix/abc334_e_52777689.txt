@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1945,1955]
+    call [1945,1955]
+        identifier: print [1945,1950]
+        argument_list [1950,1955]
+            identifier: ans [1951,1954]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1957,1969]
+    call [1957,1969]
+        identifier: print [1957,1962]
+        argument_list [1962,1969]
+            identifier: bunbo [1963,1968]
+

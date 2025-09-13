@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list_splat [81,85]
+    *: * [81,82]
+    identifier: ans [82,85]
+to
+argument_list [80,85]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [81,84]
+===
+------------
+===
+delete-node
+---
+identifier: ans [81,84]
+===
+

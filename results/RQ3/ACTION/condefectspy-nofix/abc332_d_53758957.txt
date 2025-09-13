@@ -1,0 +1,56 @@
+New cluster:
+===
+insert-node
+---
+identifier: tbl [1161,1164]
+to
+comparison_operator [1161,1186]
+at 0
+------------
+===
+insert-node
+---
+identifier: tbl [1161,1164]
+to
+comparison_operator [1161,1186]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: Bt [1168,1170]
+to
+comparison_operator [1161,1186]
+at 3
+------------
+===
+insert-node
+---
+identifier: Bt [1168,1170]
+to
+comparison_operator [1161,1186]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call [1161,1172]
+    identifier: sorted [1161,1167]
+    argument_list [1167,1172]
+        identifier: tbl [1168,1171]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call [1176,1186]
+    identifier: sorted [1176,1182]
+    argument_list [1182,1186]
+        identifier: Bt [1183,1185]
+

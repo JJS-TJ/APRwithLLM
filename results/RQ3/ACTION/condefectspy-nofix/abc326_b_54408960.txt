@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+identifier: c [125,126]
+to
+comparison_operator [116,130]
+at 2
+------------
+===
+insert-node
+---
+identifier: c [125,126]
+to
+comparison_operator [116,130]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [125,130]
+    identifier: b [125,126]
+    *: * [127,128]
+    identifier: c [129,130]
+

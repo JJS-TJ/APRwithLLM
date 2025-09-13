@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "1" to "4"
+------------
+===
+update-node
+---
+string: "1" [30,33]
+replace "1" by "4"
+

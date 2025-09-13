@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from T1 to T0
+------------
+===
+update-node
+---
+identifier: T1 [327,329]
+replace T1 by T0
+

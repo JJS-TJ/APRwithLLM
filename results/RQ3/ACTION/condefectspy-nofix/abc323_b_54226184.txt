@@ -1,0 +1,34 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+elif_clause [205,254]
+    elif: elif [205,209]
+    boolean_operator [210,234]
+        comparison_operator [210,215]
+            identifier: i [210,211]
+            comparison_operator: > [212,213]
+            identifier: k [214,215]
+        and: and [216,219]
+        comparison_operator [220,234]
+            subscript [220,227]
+                subscript [220,224]
+                    identifier: s [220,221]
+                    identifier: i [222,223]
+                identifier: k [225,226]
+            comparison_operator: == [228,230]
+            string: "x" [231,234]
+    block [243,254]
+        expression_statement [243,254]
+            augmented_assignment [243,254]
+                subscript [243,249]
+                    identifier: dic [243,246]
+                    identifier: k [247,248]
+                +=: += [250,252]
+                integer: 1 [253,254]
+to
+if_statement [152,199]
+at 2
+

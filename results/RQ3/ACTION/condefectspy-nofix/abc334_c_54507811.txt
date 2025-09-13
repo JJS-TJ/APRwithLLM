@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+identifier: K [201,202]
+to
+argument_list [197,208]
+at 1
+------------
+===
+insert-node
+---
+identifier: K [201,202]
+to
+argument_list [197,208]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [201,204]
+    identifier: K [201,202]
+    -: - [202,203]
+    integer: 1 [203,204]
+

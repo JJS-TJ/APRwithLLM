@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [641,649]
+    identifier: min [641,644]
+    argument_list [644,649]
+        identifier: H [645,646]
+        identifier: W [647,648]
+to
+binary_operator [641,644]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: H [641,642]
+===
+------------
+===
+delete-node
+---
+identifier: H [641,642]
+===
+

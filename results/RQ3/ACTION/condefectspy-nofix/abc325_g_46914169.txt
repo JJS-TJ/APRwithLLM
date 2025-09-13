@@ -1,0 +1,81 @@
+New cluster:
+UPDATE from dfs to max
+------------
+===
+update-node
+---
+identifier: dfs [452,455]
+replace dfs by max
+
+New cluster:
+===
+insert-node
+---
+integer: 0 [456,457]
+to
+argument_list [455,473]
+at 0
+------------
+===
+insert-node
+---
+integer: 0 [456,457]
+to
+argument_list [455,473]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [458,470]
+    call [458,468]
+        identifier: dfs [458,461]
+        argument_list [461,468]
+            binary_operator [462,465]
+                identifier: x [462,463]
+                +: + [463,464]
+                integer: 1 [464,465]
+            identifier: j [466,467]
+    -: - [468,469]
+    identifier: K [469,470]
+to
+argument_list [455,473]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call [456,470]
+    identifier: min [456,459]
+    argument_list [459,470]
+        binary_operator [460,465]
+            binary_operator [460,463]
+                identifier: x [460,461]
+                +: + [461,462]
+                identifier: K [462,463]
+            +: + [463,464]
+            integer: 1 [464,465]
+        binary_operator [466,469]
+            identifier: j [466,467]
+            +: + [467,468]
+            integer: 1 [468,469]
+
+New cluster:
+===
+delete-node
+---
+identifier: j [471,472]
+===
+------------
+===
+delete-node
+---
+identifier: j [471,472]
+===
+

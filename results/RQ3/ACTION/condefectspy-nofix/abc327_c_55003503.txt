@@ -1,0 +1,54 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [515,520]
+    identifier: col [515,518]
+    +: + [518,519]
+    identifier: j [519,520]
+to
+subscript [503,517]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [508,513]
+    identifier: row [508,511]
+    +: + [511,512]
+    identifier: i [512,513]
+to
+subscript [503,512]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: row [508,511]
+===
+------------
+===
+delete-node
+---
+identifier: row [508,511]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: col [513,516]
+===
+------------
+===
+delete-node
+---
+identifier: col [513,516]
+===
+

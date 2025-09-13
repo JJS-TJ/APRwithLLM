@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [834,837]
+    identifier: H [834,835]
+    -: - [835,836]
+    integer: 1 [836,837]
+to
+assignment [830,835]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 0 [834,835]
+===
+------------
+===
+delete-node
+---
+integer: 0 [834,835]
+===
+

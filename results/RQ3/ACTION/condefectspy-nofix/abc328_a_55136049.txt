@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [128,132]
+    identifier: S [128,129]
+    identifier: i [130,131]
+to
+augmented_assignment [121,129]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [128,129]
+===
+------------
+===
+delete-node
+---
+integer: 1 [128,129]
+===
+

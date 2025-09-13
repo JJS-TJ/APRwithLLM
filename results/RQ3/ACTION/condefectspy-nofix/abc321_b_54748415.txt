@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 100 to 101
+------------
+===
+update-node
+---
+integer: 100 [139,142]
+replace 100 by 101
+

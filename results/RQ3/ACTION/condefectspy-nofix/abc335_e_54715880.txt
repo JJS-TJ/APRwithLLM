@@ -1,0 +1,78 @@
+New cluster:
+===
+insert-node
+---
+argument_list [850,863]
+to
+call [829,843]
+at 1
+------------
+===
+insert-node
+---
+call [851,862]
+to
+argument_list [850,863]
+at 0
+===
+insert-node
+---
+argument_list [850,863]
+to
+call [829,843]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [831,842]
+    attribute [831,839]
+        identifier: D [831,832]
+        identifier: leader [833,839]
+    argument_list [839,842]
+        identifier: u [840,841]
+to
+subscript [829,833]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+attribute [851,859]
+    identifier: D [851,852]
+    identifier: leader [853,859]
+to
+call [851,862]
+at 0
+
+New cluster:
+MOVE from call [851,862]
+------------
+===
+move-tree
+---
+argument_list [840,843]
+    identifier: v [841,842]
+to
+call [851,862]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: u [831,832]
+===
+------------
+===
+delete-node
+---
+identifier: u [831,832]
+===
+

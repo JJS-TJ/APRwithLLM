@@ -1,0 +1,62 @@
+New cluster:
+===
+insert-node
+---
+subscript [211,230]
+to
+argument_list [210,229]
+at 0
+------------
+===
+insert-node
+---
+subscript [211,230]
+to
+argument_list [210,229]
+at 0
+===
+insert-node
+---
+integer: 0 [228,229]
+to
+subscript [211,230]
+at 1
+
+New cluster:
+MOVE from subscript [211,230]
+------------
+===
+move-tree
+---
+subscript [212,228]
+    identifier: ans [212,215]
+    binary_operator [216,227]
+        parenthesized_expression [216,225]
+            binary_operator [217,224]
+                identifier: i [217,218]
+                +: + [218,219]
+                identifier: INDEX [219,224]
+        %: % [225,226]
+        identifier: n [226,227]
+to
+subscript [211,230]
+at 0
+
+New cluster:
+===
+delete-node
+---
+list_splat [211,228]
+===
+------------
+===
+delete-node
+---
+list_splat [211,228]
+===
+===
+delete-node
+---
+*: * [211,212]
+===
+

@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+identifier: q [111,112]
+to
+binary_operator [111,116]
+at 0
+------------
+===
+insert-node
+---
+identifier: q [111,112]
+to
+binary_operator [111,116]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [111,114]
+    identifier: p [111,112]
+    -: - [112,113]
+    identifier: q [113,114]
+

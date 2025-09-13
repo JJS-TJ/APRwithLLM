@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from grid to bool
+------------
+===
+update-node
+---
+identifier: grid [723,727]
+replace grid by bool
+

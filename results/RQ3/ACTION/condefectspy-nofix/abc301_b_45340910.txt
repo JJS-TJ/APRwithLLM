@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list_splat [250,252]
+    *: * [250,251]
+    identifier: b [251,252]
+to
+argument_list [249,252]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: b [250,251]
+===
+------------
+===
+delete-node
+---
+identifier: b [250,251]
+===
+

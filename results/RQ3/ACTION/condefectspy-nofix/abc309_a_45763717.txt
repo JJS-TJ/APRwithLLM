@@ -1,0 +1,44 @@
+New cluster:
+===
+insert-node
+---
+comparison_operator: == [77,79]
+to
+comparison_operator [69,86]
+at 1
+------------
+===
+insert-node
+---
+comparison_operator: == [77,79]
+to
+comparison_operator [69,86]
+at 1
+
+New cluster:
+===
+insert-node
+---
+integer: 1 [79,80]
+to
+comparison_operator [69,86]
+at 2
+------------
+===
+insert-node
+---
+integer: 1 [79,80]
+to
+comparison_operator [69,86]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+list [81,86]
+    integer: 1 [82,83]
+    integer: 3 [84,85]
+

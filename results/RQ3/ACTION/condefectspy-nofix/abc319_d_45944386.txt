@@ -1,0 +1,44 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [336,344]
+to
+assignment [329,340]
+at 2
+------------
+===
+insert-node
+---
+binary_operator [336,344]
+to
+assignment [329,340]
+at 2
+===
+insert-node
+---
++: + [341,342]
+to
+binary_operator [336,344]
+at 1
+===
+insert-node
+---
+integer: 1 [343,344]
+to
+binary_operator [336,344]
+at 2
+
+New cluster:
+MOVE from binary_operator [336,344]
+------------
+===
+move-tree
+---
+subscript [336,340]
+    identifier: L [336,337]
+    identifier: i [338,339]
+to
+binary_operator [336,344]
+at 0
+

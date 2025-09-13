@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [367,372]
+    binary_operator [368,371]
+        identifier: j [368,369]
+        +: + [369,370]
+        integer: 1 [370,371]
+to
+augmented_assignment [362,368]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [367,368]
+===
+------------
+===
+delete-node
+---
+integer: 1 [367,368]
+===
+

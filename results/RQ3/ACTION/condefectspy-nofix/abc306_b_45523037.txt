@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 63 to 64
+------------
+===
+update-node
+---
+integer: 63 [123,125]
+replace 63 by 64
+

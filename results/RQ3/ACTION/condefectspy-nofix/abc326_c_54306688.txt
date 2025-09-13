@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: i [161,162]
+to
+binary_operator [132,162]
+at 2
+------------
+===
+insert-node
+---
+identifier: i [161,162]
+to
+binary_operator [132,162]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [161,162]
+===
+------------
+===
+delete-node
+---
+integer: 1 [161,162]
+===
+

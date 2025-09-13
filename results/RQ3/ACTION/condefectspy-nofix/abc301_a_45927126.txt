@@ -1,0 +1,69 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [96,146]
+to
+if_statement [93,149]
+at 0
+------------
+===
+insert-node
+---
+boolean_operator [96,146]
+to
+if_statement [93,149]
+at 0
+===
+insert-node
+---
+or: or [110,112]
+to
+boolean_operator [96,146]
+at 1
+
+New cluster:
+MOVE from boolean_operator [96,146]
+------------
+===
+move-tree
+---
+comparison_operator [96,109]
+    identifier: cnt [96,99]
+    comparison_operator: > [100,101]
+    binary_operator [102,109]
+        identifier: N [102,103]
+        -: - [104,105]
+        identifier: cnt [106,109]
+to
+boolean_operator [96,146]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [113,146]
+    boolean_operator [114,145]
+        comparison_operator [114,128]
+            identifier: cnt [114,117]
+            comparison_operator: == [118,120]
+            binary_operator [121,128]
+                identifier: N [121,122]
+                -: - [123,124]
+                identifier: cnt [125,128]
+        and: and [129,132]
+        comparison_operator [133,145]
+            subscript [133,138]
+                identifier: S [133,134]
+                unary_operator [135,137]
+                    -: - [135,136]
+                    integer: 1 [136,137]
+            comparison_operator: == [139,141]
+            string: "A" [142,145]
+to
+boolean_operator [96,146]
+at 2
+

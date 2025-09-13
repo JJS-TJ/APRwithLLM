@@ -1,0 +1,25 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+augmented_assignment [363,371]
+    identifier: sr [363,365]
+    >>=: >>= [366,369]
+    integer: 1 [370,371]
+to
+expression_statement [363,370]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [363,370]
+    identifier: sr [363,365]
+    >>: >> [366,368]
+    integer: 1 [369,370]
+
