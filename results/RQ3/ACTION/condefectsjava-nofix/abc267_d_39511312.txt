@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: infl [520,524]
+to
+PrefixExpression [519,521]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: infl [520,524]
+to
+PrefixExpression [519,521]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [520,521]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [520,521]
+===
+

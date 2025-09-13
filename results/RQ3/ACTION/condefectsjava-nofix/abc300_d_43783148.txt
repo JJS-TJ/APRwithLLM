@@ -1,0 +1,39 @@
+New cluster:
+===
+insert-node
+---
+PrefixExpression [1484,1501]
+to
+IfStatement [1480,1511]
+at 0
+------------
+===
+insert-node
+---
+PREFIX_EXPRESSION_OPERATOR: ! [1484,1485]
+to
+PrefixExpression [1484,1501]
+at 0
+===
+insert-node
+---
+PrefixExpression [1484,1501]
+to
+IfStatement [1480,1511]
+at 0
+
+New cluster:
+MOVE from PrefixExpression [1484,1501]
+------------
+===
+move-tree
+---
+ArrayAccess [1484,1500]
+    SimpleName: isPrime [1484,1491]
+    CastExpression [1492,1499]
+        PrimitiveType: int [1493,1496]
+        SimpleName: c [1498,1499]
+to
+PrefixExpression [1484,1501]
+at 1
+

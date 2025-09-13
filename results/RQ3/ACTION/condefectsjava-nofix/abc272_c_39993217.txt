@@ -1,0 +1,34 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [512,534]
+    MethodInvocation [512,533]
+        METHOD_INVOCATION_RECEIVER [512,523]
+            SimpleName: Collections [512,523]
+        SimpleName: sort [524,528]
+        METHOD_INVOCATION_ARGUMENTS [529,532]
+            SimpleName: odd [529,532]
+to
+Block [82,1040]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [543,566]
+    MethodInvocation [543,565]
+        METHOD_INVOCATION_RECEIVER [543,554]
+            SimpleName: Collections [543,554]
+        SimpleName: sort [555,559]
+        METHOD_INVOCATION_ARGUMENTS [560,564]
+            SimpleName: even [560,564]
+to
+Block [82,1040]
+at 7
+

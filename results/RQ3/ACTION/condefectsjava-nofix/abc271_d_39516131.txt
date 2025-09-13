@@ -1,0 +1,33 @@
+New cluster:
+MOVE from InfixExpression [930,972]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: && [958,960]
+to
+InfixExpression [930,972]
+at 2
+===
+move-tree
+---
+InfixExpression [930,957]
+    ArrayAccess [930,949]
+        ArrayAccess [930,937]
+            SimpleName: dp [930,932]
+            InfixExpression [933,936]
+                SimpleName: i [933,934]
+                INFIX_EXPRESSION_OPERATOR: - [934,935]
+                NumberLiteral: 1 [935,936]
+        InfixExpression [938,948]
+            SimpleName: now [938,941]
+            INFIX_EXPRESSION_OPERATOR: - [942,943]
+            ArrayAccess [944,948]
+                SimpleName: a [944,945]
+                SimpleName: i [946,947]
+    INFIX_EXPRESSION_OPERATOR: == [950,952]
+    BooleanLiteral: true [953,957]
+to
+InfixExpression [930,972]
+at 2
+

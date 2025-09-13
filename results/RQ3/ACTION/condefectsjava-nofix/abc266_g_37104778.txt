@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from n1 to n2
+------------
+===
+update-node
+---
+SimpleName: n1 [420,422]
+replace n1 by n2
+
+New cluster:
+UPDATE from n2 to n3
+------------
+===
+update-node
+---
+SimpleName: n2 [425,427]
+replace n2 by n3
+

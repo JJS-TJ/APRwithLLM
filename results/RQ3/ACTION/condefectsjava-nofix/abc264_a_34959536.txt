@@ -1,0 +1,58 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [165,179]
+to
+VariableDeclarationFragment [161,177]
+at 1
+------------
+===
+insert-node
+---
+InfixExpression [165,179]
+to
+VariableDeclarationFragment [161,177]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: - [177,178]
+to
+InfixExpression [165,179]
+at 1
+===
+insert-node
+---
+NumberLiteral: 1 [178,179]
+to
+InfixExpression [165,179]
+at 2
+
+New cluster:
+MOVE from InfixExpression [165,179]
+------------
+===
+move-tree
+---
+MethodInvocation [165,177]
+    METHOD_INVOCATION_RECEIVER [165,167]
+        SimpleName: sc [165,167]
+    SimpleName: nextInt [168,175]
+to
+InfixExpression [165,179]
+at 0
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [178,179]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [178,179]
+===
+

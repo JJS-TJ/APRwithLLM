@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [829,836]
+    PrimitiveType: long [830,834]
+    SimpleName: L [835,836]
+to
+InfixExpression [829,832]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: L [829,830]
+===
+------------
+===
+delete-node
+---
+SimpleName: L [829,830]
+===
+

@@ -1,0 +1,120 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [529,604]
+to
+ExpressionStatement [529,572]
+at 0
+------------
+===
+insert-node
+---
+MethodInvocation [529,604]
+to
+ExpressionStatement [529,572]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [548,603]
+to
+MethodInvocation [529,604]
+at 2
+===
+insert-node
+---
+SimpleName: println [540,547]
+to
+MethodInvocation [529,604]
+at 1
+
+New cluster:
+MOVE from MethodInvocation [529,604]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [529,539]
+    QualifiedName: System.out [529,539]
+to
+MethodInvocation [529,604]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [548,603]
+------------
+===
+move-tree
+---
+MethodInvocation [529,571]
+    METHOD_INVOCATION_RECEIVER [529,539]
+        QualifiedName: System.out [529,539]
+    SimpleName: println [540,547]
+    METHOD_INVOCATION_ARGUMENTS [548,570]
+        MethodInvocation [548,570]
+            SimpleName: f [548,549]
+            METHOD_INVOCATION_ARGUMENTS [550,569]
+                SimpleName: a [550,551]
+                SimpleName: b [552,553]
+                MethodInvocation [554,569]
+                    METHOD_INVOCATION_RECEIVER [554,558]
+                        SimpleName: Math [554,558]
+                    SimpleName: round [559,564]
+                    METHOD_INVOCATION_ARGUMENTS [565,568]
+                        SimpleName: low [565,568]
+to
+METHOD_INVOCATION_ARGUMENTS [548,603]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [548,552]
+    SimpleName: Math [548,552]
+to
+MethodInvocation [529,571]
+at 0
+
+New cluster:
+UPDATE from println to min
+------------
+===
+update-node
+---
+SimpleName: println [540,547]
+replace println by min
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [581,602]
+    SimpleName: f [581,582]
+    METHOD_INVOCATION_ARGUMENTS [583,601]
+        SimpleName: a [583,584]
+        SimpleName: b [585,586]
+        MethodInvocation [587,601]
+            METHOD_INVOCATION_RECEIVER [587,591]
+                SimpleName: Math [587,591]
+            SimpleName: ceil [592,596]
+            METHOD_INVOCATION_ARGUMENTS [597,600]
+                SimpleName: low [597,600]
+to
+METHOD_INVOCATION_ARGUMENTS [548,570]
+at 1
+
+New cluster:
+UPDATE from round to floor
+------------
+===
+update-node
+---
+SimpleName: round [559,564]
+replace round by floor
+

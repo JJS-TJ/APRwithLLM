@@ -1,0 +1,109 @@
+New cluster:
+MOVE from MethodInvocation [742,779]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [761,767]
+    SimpleName: result [761,767]
+to
+MethodInvocation [742,779]
+at 0
+
+New cluster:
+UPDATE from println to forEach
+------------
+===
+update-node
+---
+SimpleName: println [753,760]
+replace println by forEach
+
+New cluster:
+===
+insert-node
+---
+LambdaExpression [757,793]
+to
+METHOD_INVOCATION_ARGUMENTS [761,778]
+at 0
+------------
+===
+insert-node
+---
+LambdaExpression [757,793]
+to
+METHOD_INVOCATION_ARGUMENTS [761,778]
+at 0
+===
+insert-node
+---
+SimpleName: print [776,781]
+to
+MethodInvocation [765,793]
+at 1
+===
+insert-node
+---
+MethodInvocation [765,793]
+to
+LambdaExpression [757,793]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+VariableDeclarationFragment [757,761]
+    SimpleName: item [757,761]
+to
+LambdaExpression [757,793]
+at 0
+
+New cluster:
+MOVE from MethodInvocation [765,793]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [742,752]
+    QualifiedName: System.out [742,752]
+to
+MethodInvocation [765,793]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [782,792]
+    InfixExpression [782,792]
+        SimpleName: item [782,786]
+        INFIX_EXPRESSION_OPERATOR: + [787,788]
+        StringLiteral: " " [789,792]
+to
+MethodInvocation [765,793]
+at 2
+
+New cluster:
+===
+delete-node
+---
+MethodInvocation [761,778]
+===
+------------
+===
+delete-node
+---
+MethodInvocation [761,778]
+===
+===
+delete-node
+---
+SimpleName: toString [768,776]
+===
+

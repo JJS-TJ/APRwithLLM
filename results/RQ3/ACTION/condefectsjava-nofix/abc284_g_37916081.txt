@@ -1,0 +1,185 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1245,1288]
+to
+InfixExpression [1245,1295]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1245,1288]
+to
+InfixExpression [1245,1295]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [1283,1284]
+to
+InfixExpression [1245,1288]
+at 1
+===
+insert-node
+---
+SimpleName: mod [1285,1288]
+to
+InfixExpression [1245,1288]
+at 2
+
+New cluster:
+MOVE from InfixExpression [1245,1288]
+------------
+===
+move-tree
+---
+InfixExpression [1245,1282]
+    InfixExpression [1245,1276]
+        SimpleName: perm [1245,1249]
+        INFIX_EXPRESSION_OPERATOR: * [1250,1251]
+        ParenthesizedExpression [1252,1276]
+            InfixExpression [1253,1275]
+                InfixExpression [1253,1271]
+                    CastExpression [1253,1261]
+                        PrimitiveType: long [1254,1258]
+                        SimpleName: i [1260,1261]
+                    INFIX_EXPRESSION_OPERATOR: * [1262,1263]
+                    ParenthesizedExpression [1264,1271]
+                        InfixExpression [1265,1270]
+                            SimpleName: i [1265,1266]
+                            INFIX_EXPRESSION_OPERATOR: - [1267,1268]
+                            NumberLiteral: 1 [1269,1270]
+                INFIX_EXPRESSION_OPERATOR: / [1272,1273]
+                NumberLiteral: 2 [1274,1275]
+    INFIX_EXPRESSION_OPERATOR: % [1277,1278]
+    SimpleName: mod [1279,1282]
+to
+InfixExpression [1245,1288]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [1252,1276]
+------------
+===
+move-tree
+---
+InfixExpression [1245,1276]
+    SimpleName: perm [1245,1249]
+    INFIX_EXPRESSION_OPERATOR: * [1250,1251]
+    ParenthesizedExpression [1252,1276]
+        InfixExpression [1253,1275]
+            InfixExpression [1253,1271]
+                CastExpression [1253,1261]
+                    PrimitiveType: long [1254,1258]
+                    SimpleName: i [1260,1261]
+                INFIX_EXPRESSION_OPERATOR: * [1262,1263]
+                ParenthesizedExpression [1264,1271]
+                    InfixExpression [1265,1270]
+                        SimpleName: i [1265,1266]
+                        INFIX_EXPRESSION_OPERATOR: - [1267,1268]
+                        NumberLiteral: 1 [1269,1270]
+            INFIX_EXPRESSION_OPERATOR: / [1272,1273]
+            NumberLiteral: 2 [1274,1275]
+to
+ParenthesizedExpression [1252,1276]
+at 0
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: % [1277,1278]
+to
+InfixExpression [1245,1282]
+at 2
+
+New cluster:
+UPDATE from mod to perm
+------------
+===
+update-node
+---
+SimpleName: mod [1279,1282]
+replace mod by perm
+
+New cluster:
+UPDATE from % to *
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: % [1277,1278]
+replace % by *
+
+New cluster:
+MOVE from InfixExpression [1245,1276]
+------------
+===
+move-tree
+---
+SimpleName: perm [1245,1249]
+to
+InfixExpression [1245,1276]
+at 1
+===
+move-tree
+---
+ParenthesizedExpression [1252,1276]
+    InfixExpression [1253,1275]
+        InfixExpression [1253,1271]
+            CastExpression [1253,1261]
+                PrimitiveType: long [1254,1258]
+                SimpleName: i [1260,1261]
+            INFIX_EXPRESSION_OPERATOR: * [1262,1263]
+            ParenthesizedExpression [1264,1271]
+                InfixExpression [1265,1270]
+                    SimpleName: i [1265,1266]
+                    INFIX_EXPRESSION_OPERATOR: - [1267,1268]
+                    NumberLiteral: 1 [1269,1270]
+        INFIX_EXPRESSION_OPERATOR: / [1272,1273]
+        NumberLiteral: 2 [1274,1275]
+to
+InfixExpression [1245,1282]
+at 3
+
+New cluster:
+MOVE from InfixExpression [1245,1276]
+------------
+===
+move-tree
+---
+InfixExpression [1253,1275]
+    InfixExpression [1253,1271]
+        CastExpression [1253,1261]
+            PrimitiveType: long [1254,1258]
+            SimpleName: i [1260,1261]
+        INFIX_EXPRESSION_OPERATOR: * [1262,1263]
+        ParenthesizedExpression [1264,1271]
+            InfixExpression [1265,1270]
+                SimpleName: i [1265,1266]
+                INFIX_EXPRESSION_OPERATOR: - [1267,1268]
+                NumberLiteral: 1 [1269,1270]
+    INFIX_EXPRESSION_OPERATOR: / [1272,1273]
+    NumberLiteral: 2 [1274,1275]
+to
+InfixExpression [1245,1276]
+at 0
+
+New cluster:
+UPDATE from * to %
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [1250,1251]
+replace * by %
+
+New cluster:
+UPDATE from perm to mod
+------------
+===
+update-node
+---
+SimpleName: perm [1245,1249]
+replace perm by mod
+

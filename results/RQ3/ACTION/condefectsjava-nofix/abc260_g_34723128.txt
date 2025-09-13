@@ -1,0 +1,64 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1537,1556]
+to
+METHOD_INVOCATION_ARGUMENTS [1529,1544]
+at 1
+------------
+===
+insert-node
+---
+InfixExpression [1537,1556]
+to
+METHOD_INVOCATION_ARGUMENTS [1529,1544]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: - [1544,1545]
+to
+InfixExpression [1537,1556]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1537,1556]
+------------
+===
+move-tree
+---
+InfixExpression [1537,1544]
+    ParenthesizedExpression [1537,1542]
+        InfixExpression [1538,1541]
+            SimpleName: N [1538,1539]
+            INFIX_EXPRESSION_OPERATOR: + [1539,1540]
+            NumberLiteral: 1 [1540,1541]
+    INFIX_EXPRESSION_OPERATOR: / [1542,1543]
+    NumberLiteral: 2 [1543,1544]
+to
+InfixExpression [1537,1556]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1545,1556]
+    ParenthesizedExpression [1545,1550]
+        InfixExpression [1546,1549]
+            SimpleName: N [1546,1547]
+            INFIX_EXPRESSION_OPERATOR: % [1547,1548]
+            NumberLiteral: 2 [1548,1549]
+    INFIX_EXPRESSION_OPERATOR: * [1550,1551]
+    ParenthesizedExpression [1551,1556]
+        InfixExpression [1552,1555]
+            SimpleName: s [1552,1553]
+            INFIX_EXPRESSION_OPERATOR: % [1553,1554]
+            NumberLiteral: 2 [1554,1555]
+to
+InfixExpression [1537,1556]
+at 2
+

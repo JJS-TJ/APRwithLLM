@@ -1,0 +1,57 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1306,1330]
+to
+ReturnStatement [1299,1322]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1322,1323]
+to
+InfixExpression [1306,1330]
+at 1
+===
+insert-node
+---
+InfixExpression [1306,1330]
+to
+ReturnStatement [1299,1322]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1306,1330]
+------------
+===
+move-tree
+---
+ArrayAccess [1306,1321]
+    SimpleName: sums [1306,1310]
+    InfixExpression [1311,1320]
+        ParenthesizedExpression [1311,1318]
+            InfixExpression [1312,1317]
+                SimpleName: now [1312,1315]
+                INFIX_EXPRESSION_OPERATOR: + [1315,1316]
+                NumberLiteral: 1 [1316,1317]
+        INFIX_EXPRESSION_OPERATOR: % [1318,1319]
+        SimpleName: n [1319,1320]
+to
+InfixExpression [1306,1330]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [1324,1330]
+    SimpleName: a [1324,1325]
+    SimpleName: now [1326,1329]
+to
+InfixExpression [1306,1330]
+at 2
+

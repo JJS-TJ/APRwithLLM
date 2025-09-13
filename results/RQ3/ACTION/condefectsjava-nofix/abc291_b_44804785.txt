@@ -1,0 +1,37 @@
+New cluster:
+UPDATE from -= to =
+------------
+===
+update-node
+---
+ASSIGNMENT_OPERATOR: -= [805,807]
+replace -= by =
+
+New cluster:
+MOVE from InfixExpression [807,814]
+------------
+===
+move-tree
+---
+SimpleName: max [807,810]
+to
+InfixExpression [807,814]
+at 1
+
+New cluster:
+===
+insert-node
+---
+SimpleName: sum [819,822]
+to
+InfixExpression [807,814]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: sum [819,822]
+to
+InfixExpression [807,814]
+at 0
+

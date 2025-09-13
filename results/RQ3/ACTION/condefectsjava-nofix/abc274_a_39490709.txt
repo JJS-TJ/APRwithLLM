@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "%.4f" to "%.3f"
+------------
+===
+update-node
+---
+StringLiteral: "%.4f" [265,271]
+replace "%.4f" by "%.3f"
+

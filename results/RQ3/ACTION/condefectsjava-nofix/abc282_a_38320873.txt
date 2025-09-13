@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 'a' to 'A'
+------------
+===
+update-node
+---
+CharacterLiteral: 'a' [5426,5429]
+replace 'a' by 'A'
+

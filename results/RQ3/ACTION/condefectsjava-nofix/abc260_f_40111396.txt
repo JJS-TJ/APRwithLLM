@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from y to x
+------------
+===
+update-node
+---
+SimpleName: y [866,867]
+replace y by x
+
+New cluster:
+UPDATE from x to y
+------------
+===
+update-node
+---
+SimpleName: x [861,862]
+replace x by y
+

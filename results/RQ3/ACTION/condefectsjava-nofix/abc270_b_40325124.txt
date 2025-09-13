@@ -1,0 +1,78 @@
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [802,821]
+------------
+===
+move-tree
+---
+InfixExpression [806,821]
+    NumberLiteral: 2 [806,807]
+    INFIX_EXPRESSION_OPERATOR: * [808,809]
+    MethodInvocation [810,821]
+        METHOD_INVOCATION_RECEIVER [810,814]
+            SimpleName: Math [810,814]
+        SimpleName: abs [815,818]
+        METHOD_INVOCATION_ARGUMENTS [819,820]
+            SimpleName: x [819,820]
+to
+METHOD_INVOCATION_ARGUMENTS [802,821]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [802,807]
+    NumberLiteral: 2 [802,803]
+    INFIX_EXPRESSION_OPERATOR: * [804,805]
+    SimpleName: z [806,807]
+to
+InfixExpression [806,821]
+at 0
+
+New cluster:
+UPDATE from * to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [808,809]
+replace * by +
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 2 [806,807]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 2 [806,807]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [802,821]
+===
+------------
+===
+delete-node
+---
+InfixExpression [802,821]
+===
+===
+delete-node
+---
+SimpleName: z [802,803]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: + [804,805]
+===
+

@@ -1,0 +1,44 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [2005,2012]
+    InfixExpression [2006,2011]
+        SimpleName: res [2006,2009]
+        INFIX_EXPRESSION_OPERATOR: + [2009,2010]
+        SimpleName: M [2010,2011]
+to
+InfixExpression [2005,2017]
+at 0
+
+New cluster:
+UPDATE from + to *
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: + [2015,2016]
+replace + by *
+
+New cluster:
+UPDATE from M to modinv
+------------
+===
+update-node
+---
+SimpleName: M [2016,2017]
+replace M by modinv
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [2005,2015]
+    SimpleName: res [2005,2008]
+    INFIX_EXPRESSION_OPERATOR: * [2008,2009]
+    SimpleName: modinv [2009,2015]
+

@@ -1,0 +1,11 @@
+New cluster:
+MOVE from ClassInstanceCreation [2444,2461]
+------------
+===
+move-tree
+---
+SimpleName: l [2456,2457]
+to
+ClassInstanceCreation [2444,2461]
+at 2
+

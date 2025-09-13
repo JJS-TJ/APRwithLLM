@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [651,658]
+    SimpleName: find [651,655]
+    METHOD_INVOCATION_ARGUMENTS [656,657]
+        SimpleName: e [656,657]
+to
+ArrayAccess [647,653]
+at 1
+
+New cluster:
+===
+delete-node
+---
+SimpleName: e [651,652]
+===
+------------
+===
+delete-node
+---
+SimpleName: e [651,652]
+===
+

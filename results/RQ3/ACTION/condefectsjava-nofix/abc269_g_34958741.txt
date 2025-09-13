@@ -1,0 +1,14 @@
+New cluster:
+UPDATE from last to first
+------------
+===
+update-node
+---
+SimpleName: last [1795,1799]
+replace last by first
+===
+update-node
+---
+SimpleName: last [1777,1781]
+replace last by first
+

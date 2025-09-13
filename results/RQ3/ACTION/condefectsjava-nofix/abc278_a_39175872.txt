@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: x [905,906]
+to
+InfixExpression [901,917]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: x [905,906]
+to
+InfixExpression [901,917]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [905,917]
+    METHOD_INVOCATION_RECEIVER [905,910]
+        SimpleName: queue [905,910]
+    SimpleName: size [911,915]
+

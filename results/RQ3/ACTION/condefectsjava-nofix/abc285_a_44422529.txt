@@ -1,0 +1,45 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [225,228]
+    SimpleName: a [225,226]
+    INFIX_EXPRESSION_OPERATOR: * [226,227]
+    NumberLiteral: 2 [227,228]
+to
+InfixExpression [225,228]
+at 0
+
+New cluster:
+UPDATE from * to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [226,227]
+replace * by +
+
+New cluster:
+UPDATE from 2 to 1
+------------
+===
+update-node
+---
+NumberLiteral: 2 [227,228]
+replace 2 by 1
+
+New cluster:
+===
+delete-node
+---
+SimpleName: a [225,226]
+===
+------------
+===
+delete-node
+---
+SimpleName: a [225,226]
+===
+

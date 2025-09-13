@@ -1,0 +1,56 @@
+New cluster:
+UPDATE from println to printf
+------------
+===
+update-node
+---
+SimpleName: println [195,202]
+replace println by printf
+
+New cluster:
+===
+insert-node
+---
+StringLiteral: "%02X" [202,208]
+to
+METHOD_INVOCATION_ARGUMENTS [203,225]
+at 0
+------------
+===
+insert-node
+---
+StringLiteral: "%02X" [202,208]
+to
+METHOD_INVOCATION_ARGUMENTS [203,225]
+at 0
+
+New cluster:
+===
+insert-node
+---
+SimpleName: n [209,210]
+to
+METHOD_INVOCATION_ARGUMENTS [203,225]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: n [209,210]
+to
+METHOD_INVOCATION_ARGUMENTS [203,225]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [203,225]
+    METHOD_INVOCATION_RECEIVER [203,210]
+        SimpleName: Integer [203,210]
+    SimpleName: toHexString [211,222]
+    METHOD_INVOCATION_ARGUMENTS [223,224]
+        SimpleName: n [223,224]
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from i to pos
+------------
+===
+update-node
+---
+SimpleName: i [1229,1230]
+replace i by pos
+

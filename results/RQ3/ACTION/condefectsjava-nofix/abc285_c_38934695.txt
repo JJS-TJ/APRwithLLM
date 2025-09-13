@@ -1,0 +1,42 @@
+New cluster:
+===
+insert-node
+---
+CastExpression [461,489]
+to
+InfixExpression [446,483]
+at 2
+------------
+===
+insert-node
+---
+PrimitiveType: long [462,466]
+to
+CastExpression [461,489]
+at 0
+===
+insert-node
+---
+CastExpression [461,489]
+to
+InfixExpression [446,483]
+at 2
+
+New cluster:
+MOVE from CastExpression [461,489]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [461,483]
+    MethodInvocation [462,482]
+        METHOD_INVOCATION_RECEIVER [462,466]
+            SimpleName: Math [462,466]
+        SimpleName: pow [467,470]
+        METHOD_INVOCATION_ARGUMENTS [471,481]
+            NumberLiteral: 26 [471,473]
+            SimpleName: counter [474,481]
+to
+CastExpression [461,489]
+at 1
+

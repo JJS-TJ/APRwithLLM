@@ -1,0 +1,30 @@
+New cluster:
+MOVE from InfixExpression [461,473]
+------------
+===
+move-tree
+---
+ArrayAccess [461,465]
+    SimpleName: a [461,462]
+    SimpleName: i [463,464]
+to
+InfixExpression [461,473]
+at 1
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1L [461,463]
+to
+InfixExpression [461,473]
+at 0
+------------
+===
+insert-node
+---
+NumberLiteral: 1L [461,463]
+to
+InfixExpression [461,473]
+at 0
+

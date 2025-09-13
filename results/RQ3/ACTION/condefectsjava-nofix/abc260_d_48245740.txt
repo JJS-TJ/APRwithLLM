@@ -1,0 +1,127 @@
+New cluster:
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [1076,1106]
+to
+MethodInvocation [1076,1092]
+at 0
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [1076,1106]
+to
+MethodInvocation [1076,1092]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [1076,1098]
+to
+MethodInvocation [1076,1106]
+at 0
+===
+insert-node
+---
+SimpleName: stream [1083,1089]
+to
+MethodInvocation [1076,1098]
+at 1
+===
+insert-node
+---
+MethodInvocation [1076,1098]
+to
+METHOD_INVOCATION_RECEIVER [1076,1098]
+at 0
+===
+insert-node
+---
+SimpleName: boxed [1099,1104]
+to
+MethodInvocation [1076,1106]
+at 1
+===
+insert-node
+---
+MethodInvocation [1076,1106]
+to
+METHOD_INVOCATION_RECEIVER [1076,1106]
+at 0
+
+New cluster:
+UPDATE from stream to sorted
+------------
+===
+update-node
+---
+SimpleName: stream [1083,1089]
+replace stream by sorted
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+LambdaExpression [1114,1151]
+    VariableDeclarationFragment [1115,1116]
+        SimpleName: i [1115,1116]
+    VariableDeclarationFragment [1118,1119]
+        SimpleName: j [1118,1119]
+    MethodInvocation [1124,1151]
+        METHOD_INVOCATION_RECEIVER [1124,1131]
+            SimpleName: Integer [1124,1131]
+        SimpleName: compare [1132,1139]
+        METHOD_INVOCATION_ARGUMENTS [1140,1150]
+            ArrayAccess [1140,1144]
+                SimpleName: p [1140,1141]
+                SimpleName: i [1142,1143]
+            ArrayAccess [1146,1150]
+                SimpleName: p [1146,1147]
+                SimpleName: j [1148,1149]
+to
+METHOD_INVOCATION_ARGUMENTS [1090,1091]
+at 0
+
+New cluster:
+MOVE from MethodInvocation [1076,1098]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [1076,1082]
+    SimpleName: Arrays [1076,1082]
+to
+MethodInvocation [1076,1098]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [1090,1097]
+    MethodInvocation [1090,1097]
+        SimpleName: iota [1090,1094]
+        METHOD_INVOCATION_ARGUMENTS [1095,1096]
+            SimpleName: n [1095,1096]
+to
+MethodInvocation [1076,1098]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: p [1090,1091]
+===
+------------
+===
+delete-node
+---
+SimpleName: p [1090,1091]
+===
+

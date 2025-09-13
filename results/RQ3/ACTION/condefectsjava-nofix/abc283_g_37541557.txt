@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 1 to 1L
+------------
+===
+update-node
+---
+NumberLiteral: 1 [1955,1956]
+replace 1 by 1L
+

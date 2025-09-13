@@ -1,0 +1,27 @@
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 0 [675,676]
+to
+Assignment [668,677]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 0 [675,676]
+to
+Assignment [668,677]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+PrefixExpression [675,677]
+    PREFIX_EXPRESSION_OPERATOR: - [675,676]
+    NumberLiteral: 1 [676,677]
+

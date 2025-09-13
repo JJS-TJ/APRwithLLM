@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 3000 to 3002
+------------
+===
+update-node
+---
+NumberLiteral: 3000 [266,270]
+replace 3000 by 3002
+

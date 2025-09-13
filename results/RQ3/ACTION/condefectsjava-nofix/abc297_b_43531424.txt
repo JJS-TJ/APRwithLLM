@@ -1,0 +1,51 @@
+New cluster:
+MOVE from IfStatement [368,487]
+------------
+===
+move-tree
+---
+InfixExpression [372,378]
+    SimpleName: r [372,373]
+    INFIX_EXPRESSION_OPERATOR: < [374,375]
+    SimpleName: r2 [376,378]
+to
+IfStatement [368,487]
+at 0
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [372,401]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: && [379,381]
+===
+===
+delete-node
+---
+InfixExpression [372,401]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [382,401]
+    ParenthesizedExpression [382,389]
+        InfixExpression [383,388]
+            SimpleName: r [383,384]
+            INFIX_EXPRESSION_OPERATOR: % [385,386]
+            NumberLiteral: 2 [387,388]
+    INFIX_EXPRESSION_OPERATOR: != [390,392]
+    ParenthesizedExpression [393,401]
+        InfixExpression [394,400]
+            SimpleName: r2 [394,396]
+            INFIX_EXPRESSION_OPERATOR: % [397,398]
+            NumberLiteral: 2 [399,400]
+

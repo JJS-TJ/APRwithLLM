@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Out" to "out"
+------------
+===
+update-node
+---
+StringLiteral: "Out" [215,220]
+replace "Out" by "out"
+

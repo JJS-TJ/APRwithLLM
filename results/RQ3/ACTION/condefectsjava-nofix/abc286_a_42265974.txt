@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [477,478]
+replace < by <=
+

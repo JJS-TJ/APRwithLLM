@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: k [545,546]
+to
+InfixExpression [539,546]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: k [545,546]
+to
+InfixExpression [539,546]
+at 2
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 3 [545,546]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 3 [545,546]
+===
+

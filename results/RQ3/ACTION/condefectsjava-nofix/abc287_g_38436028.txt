@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: s [2200,2201]
+to
+VariableDeclarationFragment [2195,2205]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: s [2200,2201]
+to
+VariableDeclarationFragment [2195,2205]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [2200,2205]
+    SimpleName: s [2200,2201]
+    INFIX_EXPRESSION_OPERATOR: - [2202,2203]
+    NumberLiteral: 1 [2204,2205]
+

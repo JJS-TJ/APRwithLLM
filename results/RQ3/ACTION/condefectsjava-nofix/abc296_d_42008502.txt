@@ -1,0 +1,56 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [936,942]
+    InfixExpression [937,941]
+        SimpleName: a [937,938]
+        INFIX_EXPRESSION_OPERATOR: - [939,940]
+        NumberLiteral: 1 [940,941]
+to
+InfixExpression [936,940]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [944,950]
+    InfixExpression [945,949]
+        SimpleName: a [945,946]
+        INFIX_EXPRESSION_OPERATOR: - [947,948]
+        NumberLiteral: 1 [948,949]
+to
+InfixExpression [936,940]
+at 3
+
+New cluster:
+===
+delete-node
+---
+SimpleName: a [936,937]
+===
+------------
+===
+delete-node
+---
+SimpleName: a [936,937]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: a [939,940]
+===
+------------
+===
+delete-node
+---
+SimpleName: a [939,940]
+===
+

@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [1607,1623]
+    METHOD_INVOCATION_RECEIVER [1607,1611]
+        SimpleName: Math [1607,1611]
+    SimpleName: nextUp [1612,1618]
+    METHOD_INVOCATION_ARGUMENTS [1619,1622]
+        SimpleName: max [1619,1622]
+to
+ConditionalExpression [1594,1626]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1607,1620]
+    SimpleName: max [1607,1610]
+    INFIX_EXPRESSION_OPERATOR: + [1611,1612]
+    NumberLiteral: 0.00001 [1613,1620]
+

@@ -1,0 +1,15 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [465,475]
+    MethodInvocation [465,474]
+        METHOD_INVOCATION_RECEIVER [465,467]
+            SimpleName: sc [465,467]
+        SimpleName: next [468,472]
+to
+Block [448,480]
+at 1
+

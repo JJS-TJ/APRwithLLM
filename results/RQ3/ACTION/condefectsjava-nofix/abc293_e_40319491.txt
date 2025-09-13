@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ConditionalExpression [777,790]
+    InfixExpression [777,781]
+        SimpleName: m [777,778]
+        INFIX_EXPRESSION_OPERATOR: == [778,780]
+        NumberLiteral: 1 [780,781]
+    NumberLiteral: 0 [783,784]
+    SimpleName: ans [787,790]
+to
+METHOD_INVOCATION_ARGUMENTS [777,780]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: ans [777,780]
+===
+------------
+===
+delete-node
+---
+SimpleName: ans [777,780]
+===
+

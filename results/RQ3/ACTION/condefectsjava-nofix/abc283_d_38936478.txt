@@ -1,0 +1,57 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [471,494]
+to
+ExpressionStatement [471,483]
+at 0
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [482,493]
+to
+MethodInvocation [471,494]
+at 2
+===
+insert-node
+---
+MethodInvocation [471,494]
+to
+ExpressionStatement [471,483]
+at 0
+===
+insert-node
+---
+SimpleName: remove [475,481]
+to
+MethodInvocation [471,494]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [471,474]
+    SimpleName: set [471,474]
+to
+MethodInvocation [471,494]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [482,493]
+------------
+===
+move-tree
+---
+MethodInvocation [471,482]
+    METHOD_INVOCATION_RECEIVER [471,476]
+        SimpleName: stack [471,476]
+    SimpleName: pop [477,480]
+to
+METHOD_INVOCATION_ARGUMENTS [482,493]
+at 0
+

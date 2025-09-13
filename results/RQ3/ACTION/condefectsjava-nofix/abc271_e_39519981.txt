@@ -1,0 +1,65 @@
+New cluster:
+===
+insert-node
+---
+ConditionalExpression [1154,1183]
+to
+ReturnStatement [1147,1162]
+at 0
+------------
+===
+insert-node
+---
+ConditionalExpression [1154,1183]
+to
+ReturnStatement [1147,1162]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1154,1168]
+    ArrayAccess [1154,1161]
+        SimpleName: dp [1154,1156]
+        InfixExpression [1157,1160]
+            SimpleName: N [1157,1158]
+            INFIX_EXPRESSION_OPERATOR: - [1158,1159]
+            NumberLiteral: 1 [1159,1160]
+    INFIX_EXPRESSION_OPERATOR: >= [1162,1164]
+    SimpleName: INF [1165,1168]
+to
+ConditionalExpression [1154,1183]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+PrefixExpression [1171,1173]
+    PREFIX_EXPRESSION_OPERATOR: - [1171,1172]
+    NumberLiteral: 1 [1172,1173]
+to
+ConditionalExpression [1154,1183]
+at 1
+
+New cluster:
+MOVE from ConditionalExpression [1154,1183]
+------------
+===
+move-tree
+---
+ArrayAccess [1154,1161]
+    SimpleName: dp [1154,1156]
+    InfixExpression [1157,1160]
+        SimpleName: N [1157,1158]
+        INFIX_EXPRESSION_OPERATOR: - [1158,1159]
+        NumberLiteral: 1 [1159,1160]
+to
+ConditionalExpression [1154,1183]
+at 2
+

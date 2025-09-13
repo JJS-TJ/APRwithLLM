@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 99999 to 999999
+------------
+===
+update-node
+---
+NumberLiteral: 99999 [360,365]
+replace 99999 by 999999
+

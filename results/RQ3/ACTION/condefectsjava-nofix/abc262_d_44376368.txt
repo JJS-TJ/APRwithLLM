@@ -1,0 +1,83 @@
+New cluster:
+UPDATE from += to =
+------------
+===
+update-node
+---
+ASSIGNMENT_OPERATOR: += [1067,1069]
+replace += by =
+
+New cluster:
+===
+insert-node
+---
+InfixExpression [1069,1090]
+to
+Assignment [1063,1077]
+at 2
+------------
+===
+insert-node
+---
+InfixExpression [1070,1083]
+to
+ParenthesizedExpression [1069,1084]
+at 0
+===
+insert-node
+---
+ParenthesizedExpression [1069,1084]
+to
+InfixExpression [1069,1090]
+at 0
+===
+insert-node
+---
+InfixExpression [1069,1090]
+to
+Assignment [1063,1077]
+at 2
+===
+insert-node
+---
+SimpleName: mod [1087,1090]
+to
+InfixExpression [1069,1090]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1074,1075]
+to
+InfixExpression [1070,1083]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [1085,1086]
+to
+InfixExpression [1069,1090]
+at 1
+===
+insert-node
+---
+SimpleName: ans [1070,1073]
+to
+InfixExpression [1070,1083]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1070,1083]
+------------
+===
+move-tree
+---
+ArrayAccess [1070,1077]
+    ArrayAccess [1070,1074]
+        SimpleName: f [1070,1071]
+        SimpleName: m [1072,1073]
+    NumberLiteral: 0 [1075,1076]
+to
+InfixExpression [1070,1083]
+at 2
+

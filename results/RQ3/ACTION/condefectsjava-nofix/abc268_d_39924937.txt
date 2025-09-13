@@ -1,0 +1,98 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [997,1029]
+to
+ForStatement [976,1230]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: j [997,998]
+to
+InfixExpression [997,1029]
+at 0
+===
+insert-node
+---
+InfixExpression [997,1029]
+to
+ForStatement [976,1230]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: < [998,999]
+to
+InfixExpression [997,1029]
+at 1
+
+New cluster:
+MOVE from InfixExpression [997,1029]
+------------
+===
+move-tree
+---
+InfixExpression [990,1020]
+    SimpleName: j [990,991]
+    INFIX_EXPRESSION_OPERATOR: < [991,992]
+    InfixExpression [992,1020]
+        SimpleName: underbarLimit [992,1005]
+        INFIX_EXPRESSION_OPERATOR: - [1005,1006]
+        SimpleName: nowUnderbarNum [1006,1020]
+to
+InfixExpression [997,1029]
+at 2
+
+New cluster:
+MOVE from InfixExpression [990,1020]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: < [991,992]
+to
+InfixExpression [990,1020]
+at 2
+
+New cluster:
+UPDATE from < to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [991,992]
+replace < by +
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1 [1028,1029]
+to
+InfixExpression [990,1020]
+at 3
+------------
+===
+insert-node
+---
+NumberLiteral: 1 [1028,1029]
+to
+InfixExpression [990,1020]
+at 3
+
+New cluster:
+===
+delete-node
+---
+SimpleName: j [990,991]
+===
+------------
+===
+delete-node
+---
+SimpleName: j [990,991]
+===
+

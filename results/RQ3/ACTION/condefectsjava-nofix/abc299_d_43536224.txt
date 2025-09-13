@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [676,694]
+    StringLiteral: "! " [676,680]
+    INFIX_EXPRESSION_OPERATOR: + [681,682]
+    SimpleName: leftPointer [683,694]
+to
+METHOD_INVOCATION_ARGUMENTS [676,687]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: leftPointer [676,687]
+===
+------------
+===
+delete-node
+---
+SimpleName: leftPointer [676,687]
+===
+

@@ -1,0 +1,40 @@
+New cluster:
+MOVE from InfixExpression [846,895]
+------------
+===
+move-tree
+---
+MethodInvocation [873,894]
+    METHOD_INVOCATION_RECEIVER [873,876]
+        StringLiteral: "L" [873,876]
+    SimpleName: equals [877,883]
+    METHOD_INVOCATION_ARGUMENTS [884,893]
+        ArrayAccess [884,893]
+            ArrayAccess [884,890]
+                SimpleName: fig [884,887]
+                SimpleName: i [888,889]
+            SimpleName: l [891,892]
+to
+InfixExpression [846,895]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [872,895]
+------------
+===
+move-tree
+---
+MethodInvocation [846,867]
+    METHOD_INVOCATION_RECEIVER [846,849]
+        StringLiteral: "W" [846,849]
+    SimpleName: equals [850,856]
+    METHOD_INVOCATION_ARGUMENTS [857,866]
+        ArrayAccess [857,866]
+            ArrayAccess [857,863]
+                SimpleName: fig [857,860]
+                SimpleName: l [861,862]
+            SimpleName: i [864,865]
+to
+ParenthesizedExpression [872,895]
+at 0
+

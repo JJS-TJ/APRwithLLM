@@ -1,0 +1,42 @@
+New cluster:
+UPDATE from <= to <
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: <= [306,308]
+replace <= by <
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 60 [308,310]
+to
+InfixExpression [301,324]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 60 [308,310]
+to
+InfixExpression [301,324]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [309,324]
+    MethodInvocation [309,320]
+        METHOD_INVOCATION_RECEIVER [309,313]
+            SimpleName: Math [309,313]
+        SimpleName: log [314,317]
+        METHOD_INVOCATION_ARGUMENTS [318,319]
+            SimpleName: n [318,319]
+    INFIX_EXPRESSION_OPERATOR: + [321,322]
+    NumberLiteral: 1 [323,324]
+

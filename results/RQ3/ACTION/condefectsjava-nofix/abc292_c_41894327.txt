@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: i [216,217]
+to
+VariableDeclarationFragment [214,217]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: i [216,217]
+to
+VariableDeclarationFragment [214,217]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [216,217]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [216,217]
+===
+

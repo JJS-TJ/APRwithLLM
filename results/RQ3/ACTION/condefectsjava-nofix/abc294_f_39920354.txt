@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 1e-10 to 1e-11
+------------
+===
+update-node
+---
+NumberLiteral: 1e-10 [524,529]
+replace 1e-10 by 1e-11
+

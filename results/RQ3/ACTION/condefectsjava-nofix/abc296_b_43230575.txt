@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [465,470]
+    NumberLiteral: 7 [465,466]
+    INFIX_EXPRESSION_OPERATOR: - [467,468]
+    SimpleName: i [469,470]
+to
+ArrayAccess [461,467]
+at 1
+
+New cluster:
+===
+delete-node
+---
+SimpleName: j [465,466]
+===
+------------
+===
+delete-node
+---
+SimpleName: j [465,466]
+===
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "YES" to "Yes"
+------------
+===
+update-node
+---
+StringLiteral: "YES" [325,330]
+replace "YES" by "Yes"
+

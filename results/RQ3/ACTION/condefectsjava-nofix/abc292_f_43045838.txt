@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 30.1d to 30d
+------------
+===
+update-node
+---
+NumberLiteral: 30.1d [642,647]
+replace 30.1d by 30d
+

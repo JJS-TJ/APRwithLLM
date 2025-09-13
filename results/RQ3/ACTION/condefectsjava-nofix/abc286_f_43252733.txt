@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from 2 to 4
+------------
+===
+update-node
+---
+NumberLiteral: 2 [527,528]
+replace 2 by 4
+
+New cluster:
+UPDATE from 3 to 9
+------------
+===
+update-node
+---
+NumberLiteral: 3 [529,530]
+replace 3 by 9
+
