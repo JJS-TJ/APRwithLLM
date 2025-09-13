@@ -1,0 +1,33 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: j [1858,1859]
+to
+METHOD_INVOCATION_ARGUMENTS [1855,1881]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: j [1858,1859]
+to
+METHOD_INVOCATION_ARGUMENTS [1855,1881]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1858,1881]
+    MethodInvocation [1858,1877]
+        METHOD_INVOCATION_RECEIVER [1858,1865]
+            SimpleName: Integer [1858,1865]
+        SimpleName: bitCount [1866,1874]
+        METHOD_INVOCATION_ARGUMENTS [1875,1876]
+            SimpleName: i [1875,1876]
+    INFIX_EXPRESSION_OPERATOR: - [1878,1879]
+    NumberLiteral: 1 [1880,1881]
+

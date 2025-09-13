@@ -1,0 +1,78 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [325,367]
+to
+Assignment [315,347]
+at 2
+------------
+===
+insert-node
+---
+InfixExpression [325,367]
+to
+Assignment [315,347]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [343,345]
+to
+InfixExpression [325,367]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [325,343]
+    InfixExpression [325,335]
+        ArrayAccess [325,333]
+            SimpleName: num [325,328]
+            InfixExpression [329,332]
+                SimpleName: i [329,330]
+                INFIX_EXPRESSION_OPERATOR: - [330,331]
+                NumberLiteral: 1 [331,332]
+        INFIX_EXPRESSION_OPERATOR: + [333,334]
+        NumberLiteral: 1 [334,335]
+    INFIX_EXPRESSION_OPERATOR: == [335,337]
+    ArrayAccess [337,343]
+        SimpleName: num [337,340]
+        SimpleName: i [341,342]
+to
+InfixExpression [325,367]
+at 0
+
+New cluster:
+MOVE from InfixExpression [325,367]
+------------
+===
+move-tree
+---
+InfixExpression [325,347]
+    InfixExpression [325,337]
+        InfixExpression [325,335]
+            ArrayAccess [325,333]
+                SimpleName: num [325,328]
+                InfixExpression [329,332]
+                    SimpleName: i [329,330]
+                    INFIX_EXPRESSION_OPERATOR: - [330,331]
+                    NumberLiteral: 1 [331,332]
+            INFIX_EXPRESSION_OPERATOR: % [333,334]
+            NumberLiteral: 7 [334,335]
+        INFIX_EXPRESSION_OPERATOR: + [335,336]
+        NumberLiteral: 1 [336,337]
+    INFIX_EXPRESSION_OPERATOR: == [337,339]
+    InfixExpression [339,347]
+        ArrayAccess [339,345]
+            SimpleName: num [339,342]
+            SimpleName: i [343,344]
+        INFIX_EXPRESSION_OPERATOR: % [345,346]
+        NumberLiteral: 7 [346,347]
+to
+InfixExpression [325,367]
+at 2
+

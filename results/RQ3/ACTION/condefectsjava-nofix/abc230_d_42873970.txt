@@ -1,0 +1,192 @@
+New cluster:
+MOVE from ExpressionStatement [366,442]
+------------
+===
+move-tree
+---
+MethodInvocation [388,440]
+    METHOD_INVOCATION_RECEIVER [388,417]
+        MethodInvocation [388,417]
+            METHOD_INVOCATION_RECEIVER [388,398]
+                SimpleName: Comparator [388,398]
+            SimpleName: comparing [399,408]
+            METHOD_INVOCATION_ARGUMENTS [409,416]
+                ExpressionMethodReference [409,416]
+                    SimpleName: pair [409,413]
+                    SimpleName: a [415,416]
+    SimpleName: thenComparing [418,431]
+    METHOD_INVOCATION_ARGUMENTS [432,439]
+        ExpressionMethodReference [432,439]
+            SimpleName: pair [432,436]
+            SimpleName: b [438,439]
+to
+ExpressionStatement [366,442]
+at 0
+
+New cluster:
+MOVE from MethodInvocation [388,440]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_ARGUMENTS [383,440]
+    SimpleName: wall [383,387]
+    MethodInvocation [388,440]
+        METHOD_INVOCATION_RECEIVER [388,417]
+            MethodInvocation [388,417]
+                METHOD_INVOCATION_RECEIVER [388,398]
+                    SimpleName: Comparator [388,398]
+                SimpleName: comparing [399,408]
+                METHOD_INVOCATION_ARGUMENTS [409,416]
+                    ExpressionMethodReference [409,416]
+                        SimpleName: pair [409,413]
+                        SimpleName: a [415,416]
+        SimpleName: thenComparing [418,431]
+        METHOD_INVOCATION_ARGUMENTS [432,439]
+            ExpressionMethodReference [432,439]
+                SimpleName: pair [432,436]
+                SimpleName: b [438,439]
+to
+MethodInvocation [388,440]
+at 3
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [366,377]
+    SimpleName: Collections [366,377]
+to
+MethodInvocation [388,440]
+at 0
+
+New cluster:
+UPDATE from thenComparing to sort
+------------
+===
+update-node
+---
+SimpleName: thenComparing [418,431]
+replace thenComparing by sort
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [383,440]
+------------
+===
+move-tree
+---
+MethodInvocation [388,417]
+    METHOD_INVOCATION_RECEIVER [388,398]
+        SimpleName: Comparator [388,398]
+    SimpleName: comparing [399,408]
+    METHOD_INVOCATION_ARGUMENTS [409,416]
+        ExpressionMethodReference [409,416]
+            SimpleName: pair [409,413]
+            SimpleName: a [415,416]
+to
+METHOD_INVOCATION_ARGUMENTS [383,440]
+at 1
+
+New cluster:
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [388,417]
+to
+MethodInvocation [388,417]
+at 0
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [388,417]
+to
+MethodInvocation [388,417]
+at 0
+
+New cluster:
+UPDATE from comparing to thenComparing
+------------
+===
+update-node
+---
+SimpleName: comparing [399,408]
+replace comparing by thenComparing
+
+New cluster:
+MOVE from METHOD_INVOCATION_RECEIVER [388,417]
+------------
+===
+move-tree
+---
+MethodInvocation [366,441]
+    METHOD_INVOCATION_RECEIVER [366,377]
+        SimpleName: Collections [366,377]
+    SimpleName: sort [378,382]
+    METHOD_INVOCATION_ARGUMENTS [383,440]
+        SimpleName: wall [383,387]
+        MethodInvocation [388,440]
+            METHOD_INVOCATION_RECEIVER [388,417]
+                MethodInvocation [388,417]
+                    METHOD_INVOCATION_RECEIVER [388,398]
+                        SimpleName: Comparator [388,398]
+                    SimpleName: comparing [399,408]
+                    METHOD_INVOCATION_ARGUMENTS [409,416]
+                        ExpressionMethodReference [409,416]
+                            SimpleName: pair [409,413]
+                            SimpleName: a [415,416]
+            SimpleName: thenComparing [418,431]
+            METHOD_INVOCATION_ARGUMENTS [432,439]
+                ExpressionMethodReference [432,439]
+                    SimpleName: pair [432,436]
+                    SimpleName: b [438,439]
+to
+METHOD_INVOCATION_RECEIVER [388,417]
+at 0
+
+New cluster:
+MOVE from MethodInvocation [366,441]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [388,398]
+    SimpleName: Comparator [388,398]
+to
+MethodInvocation [366,441]
+at 0
+
+New cluster:
+UPDATE from sort to comparing
+------------
+===
+update-node
+---
+SimpleName: sort [378,382]
+replace sort by comparing
+
+New cluster:
+MOVE from MethodInvocation [366,441]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_ARGUMENTS [432,439]
+    ExpressionMethodReference [432,439]
+        SimpleName: pair [432,436]
+        SimpleName: b [438,439]
+to
+MethodInvocation [366,441]
+at 2
+
+New cluster:
+===
+delete-node
+---
+METHOD_INVOCATION_RECEIVER [388,417]
+===
+------------
+===
+delete-node
+---
+METHOD_INVOCATION_RECEIVER [388,417]
+===
+

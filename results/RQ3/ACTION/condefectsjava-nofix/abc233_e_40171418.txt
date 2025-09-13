@@ -1,0 +1,29 @@
+New cluster:
+===
+insert-node
+---
+QualifiedName: x.length [3255,3263]
+to
+VariableDeclarationFragment [3249,3273]
+at 1
+------------
+===
+insert-node
+---
+QualifiedName: x.length [3255,3263]
+to
+VariableDeclarationFragment [3249,3273]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [3255,3273]
+    SimpleName: min [3255,3258]
+    METHOD_INVOCATION_ARGUMENTS [3259,3272]
+        NumberLiteral: 100 [3259,3262]
+        QualifiedName: x.length [3264,3272]
+

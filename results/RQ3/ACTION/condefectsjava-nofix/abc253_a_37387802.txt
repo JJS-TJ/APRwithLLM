@@ -1,0 +1,84 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [226,238]
+    InfixExpression [227,237]
+        InfixExpression [227,231]
+            SimpleName: a [227,228]
+            INFIX_EXPRESSION_OPERATOR: <= [228,230]
+            SimpleName: b [230,231]
+        INFIX_EXPRESSION_OPERATOR: && [231,233]
+        InfixExpression [233,237]
+            SimpleName: b [233,234]
+            INFIX_EXPRESSION_OPERATOR: <= [234,236]
+            SimpleName: c [236,237]
+to
+InfixExpression [226,242]
+at 0
+
+New cluster:
+UPDATE from == to ||
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: == [239,241]
+replace == by ||
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [240,252]
+    InfixExpression [241,251]
+        InfixExpression [241,245]
+            SimpleName: a [241,242]
+            INFIX_EXPRESSION_OPERATOR: >= [242,244]
+            SimpleName: b [244,245]
+        INFIX_EXPRESSION_OPERATOR: && [245,247]
+        InfixExpression [247,251]
+            SimpleName: b [247,248]
+            INFIX_EXPRESSION_OPERATOR: >= [248,250]
+            SimpleName: c [250,251]
+to
+InfixExpression [226,242]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ParenthesizedExpression [226,239]
+    InfixExpression [227,238]
+        ParenthesizedExpression [227,232]
+            InfixExpression [228,231]
+                SimpleName: a [228,229]
+                INFIX_EXPRESSION_OPERATOR: / [229,230]
+                NumberLiteral: 2 [230,231]
+        INFIX_EXPRESSION_OPERATOR: + [232,233]
+        ParenthesizedExpression [233,238]
+            InfixExpression [234,237]
+                SimpleName: c [234,235]
+                INFIX_EXPRESSION_OPERATOR: / [235,236]
+                NumberLiteral: 2 [236,237]
+
+New cluster:
+===
+delete-node
+---
+SimpleName: b [241,242]
+===
+------------
+===
+delete-node
+---
+SimpleName: b [241,242]
+===
+

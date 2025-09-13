@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from count to max
+------------
+===
+update-node
+---
+SimpleName: count [709,714]
+replace count by max
+

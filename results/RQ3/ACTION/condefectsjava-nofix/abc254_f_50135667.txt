@@ -1,0 +1,65 @@
+New cluster:
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1638,1664]
+to
+MethodInvocation [1626,1647]
+at 2
+------------
+===
+insert-node
+---
+MethodInvocation [1638,1664]
+to
+METHOD_INVOCATION_ARGUMENTS [1638,1664]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1638,1664]
+to
+MethodInvocation [1626,1647]
+at 2
+===
+insert-node
+---
+SimpleName: gcd [1638,1641]
+to
+MethodInvocation [1638,1664]
+at 0
+
+New cluster:
+MOVE from MethodInvocation [1638,1664]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_ARGUMENTS [1638,1646]
+    MethodInvocation [1638,1646]
+        SimpleName: gcd [1638,1641]
+        METHOD_INVOCATION_ARGUMENTS [1642,1645]
+            SimpleName: a [1642,1643]
+            SimpleName: b [1644,1645]
+to
+MethodInvocation [1638,1664]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1642,1654]
+    ArrayAccess [1642,1647]
+        SimpleName: A [1642,1643]
+        SimpleName: h1 [1644,1646]
+    INFIX_EXPRESSION_OPERATOR: + [1648,1649]
+    ArrayAccess [1649,1654]
+        SimpleName: B [1649,1650]
+        SimpleName: w1 [1651,1653]
+to
+METHOD_INVOCATION_ARGUMENTS [1638,1646]
+at 0
+

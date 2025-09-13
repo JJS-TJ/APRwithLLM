@@ -1,0 +1,31 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+IfStatement [2939,2994]
+    InfixExpression [2943,2973]
+        ParenthesizedExpression [2943,2956]
+            Assignment [2944,2955]
+                SimpleName: u [2944,2945]
+                ASSIGNMENT_OPERATOR: = [2946,2947]
+                MethodInvocation [2948,2955]
+                    SimpleName: root [2948,2952]
+                    METHOD_INVOCATION_ARGUMENTS [2953,2954]
+                        SimpleName: u [2953,2954]
+        INFIX_EXPRESSION_OPERATOR: == [2957,2959]
+        ParenthesizedExpression [2960,2973]
+            Assignment [2961,2972]
+                SimpleName: v [2961,2962]
+                ASSIGNMENT_OPERATOR: = [2963,2964]
+                MethodInvocation [2965,2972]
+                    SimpleName: root [2965,2969]
+                    METHOD_INVOCATION_ARGUMENTS [2970,2971]
+                        SimpleName: v [2970,2971]
+    ReturnStatement [2981,2994]
+        BooleanLiteral: false [2988,2993]
+to
+Block [2933,3045]
+at 0
+

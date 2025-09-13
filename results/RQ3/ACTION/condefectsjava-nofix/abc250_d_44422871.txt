@@ -1,0 +1,119 @@
+New cluster:
+MOVE from IfStatement [974,1040]
+------------
+===
+move-tree
+---
+InfixExpression [978,1005]
+    SimpleName: p [978,979]
+    INFIX_EXPRESSION_OPERATOR: * [980,981]
+    SimpleName: p [982,983]
+    SimpleName: p [986,987]
+    MethodInvocation [990,1005]
+        METHOD_INVOCATION_RECEIVER [990,996]
+            SimpleName: primes [990,996]
+        SimpleName: get [997,1000]
+        METHOD_INVOCATION_ARGUMENTS [1001,1004]
+            SimpleName: mid [1001,1004]
+to
+IfStatement [974,1040]
+at 0
+
+New cluster:
+MOVE from InfixExpression [978,1005]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: * [980,981]
+to
+InfixExpression [978,1005]
+at 4
+
+New cluster:
+UPDATE from * to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [980,981]
+replace * by <=
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [997,1010]
+    SimpleName: N [997,998]
+    INFIX_EXPRESSION_OPERATOR: / [999,1000]
+    SimpleName: p [1001,1002]
+    SimpleName: p [1005,1006]
+    SimpleName: p [1009,1010]
+to
+InfixExpression [978,1005]
+at 5
+
+New cluster:
+===
+delete-node
+---
+SimpleName: p [978,979]
+===
+------------
+===
+delete-node
+---
+SimpleName: p [978,979]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: p [982,983]
+===
+------------
+===
+delete-node
+---
+SimpleName: p [982,983]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: p [986,987]
+===
+------------
+===
+delete-node
+---
+SimpleName: p [986,987]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [978,1010]
+===
+------------
+===
+delete-node
+---
+InfixExpression [978,1010]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: <= [1006,1008]
+===
+===
+delete-node
+---
+SimpleName: N [1009,1010]
+===
+

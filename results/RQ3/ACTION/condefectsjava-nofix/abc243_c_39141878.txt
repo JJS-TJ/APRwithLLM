@@ -1,0 +1,63 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [834,883]
+to
+IfStatement [831,964]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [860,862]
+to
+InfixExpression [834,883]
+at 1
+===
+insert-node
+---
+InfixExpression [834,883]
+to
+IfStatement [831,964]
+at 0
+
+New cluster:
+MOVE from InfixExpression [834,883]
+------------
+===
+move-tree
+---
+MethodInvocation [834,859]
+    METHOD_INVOCATION_RECEIVER [834,836]
+        SimpleName: hm [834,836]
+    SimpleName: containsKey [837,848]
+    METHOD_INVOCATION_ARGUMENTS [849,858]
+        ArrayAccess [849,858]
+            ArrayAccess [849,855]
+                SimpleName: arr [849,852]
+                SimpleName: i [853,854]
+            NumberLiteral: 1 [856,857]
+to
+InfixExpression [834,883]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [863,883]
+    MethodInvocation [863,876]
+        METHOD_INVOCATION_RECEIVER [863,866]
+            SimpleName: dir [863,866]
+        SimpleName: charAt [867,873]
+        METHOD_INVOCATION_ARGUMENTS [874,875]
+            SimpleName: i [874,875]
+    INFIX_EXPRESSION_OPERATOR: == [877,879]
+    CharacterLiteral: 'R' [880,883]
+to
+InfixExpression [834,883]
+at 2
+

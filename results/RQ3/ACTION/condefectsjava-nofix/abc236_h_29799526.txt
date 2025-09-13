@@ -1,0 +1,92 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1003,1035]
+to
+Assignment [999,1026]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: mul [1006,1009]
+to
+MethodInvocation [1003,1035]
+at 1
+===
+insert-node
+---
+SimpleName: v [1010,1011]
+to
+METHOD_INVOCATION_ARGUMENTS [1010,1034]
+at 0
+===
+insert-node
+---
+MethodInvocation [1003,1035]
+to
+Assignment [999,1026]
+at 2
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1010,1034]
+to
+MethodInvocation [1003,1035]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [1003,1005]
+    SimpleName: mc [1003,1005]
+to
+MethodInvocation [1003,1035]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [1010,1034]
+------------
+===
+move-tree
+---
+MethodInvocation [1003,1026]
+    METHOD_INVOCATION_RECEIVER [1003,1005]
+        SimpleName: mc [1003,1005]
+    SimpleName: mul [1006,1009]
+    METHOD_INVOCATION_ARGUMENTS [1010,1025]
+        SimpleName: v [1010,1011]
+        InfixExpression [1013,1025]
+            SimpleName: m [1013,1014]
+            INFIX_EXPRESSION_OPERATOR: / [1015,1016]
+            SimpleName: lcmValue [1017,1025]
+to
+METHOD_INVOCATION_ARGUMENTS [1010,1034]
+at 1
+
+New cluster:
+UPDATE from mul to norm
+------------
+===
+update-node
+---
+SimpleName: mul [1006,1009]
+replace mul by norm
+
+New cluster:
+===
+delete-node
+---
+SimpleName: v [1010,1011]
+===
+------------
+===
+delete-node
+---
+SimpleName: v [1010,1011]
+===
+

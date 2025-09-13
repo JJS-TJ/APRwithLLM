@@ -1,0 +1,34 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [829,840]
+    ParenthesizedExpression [829,838]
+        InfixExpression [830,837]
+            InfixExpression [830,835]
+                SimpleName: ans [830,833]
+                INFIX_EXPRESSION_OPERATOR: % [833,834]
+                SimpleName: p [834,835]
+            INFIX_EXPRESSION_OPERATOR: + [835,836]
+            SimpleName: p [836,837]
+    INFIX_EXPRESSION_OPERATOR: % [838,839]
+    SimpleName: p [839,840]
+to
+METHOD_INVOCATION_ARGUMENTS [829,832]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: ans [829,832]
+===
+------------
+===
+delete-node
+---
+SimpleName: ans [829,832]
+===
+

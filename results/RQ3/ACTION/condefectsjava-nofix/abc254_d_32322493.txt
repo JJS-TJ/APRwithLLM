@@ -1,0 +1,151 @@
+New cluster:
+MOVE from IfStatement [735,930]
+------------
+===
+move-tree
+---
+InfixExpression [739,775]
+    InfixExpression [739,771]
+        SimpleName: counter [739,746]
+        INFIX_EXPRESSION_OPERATOR: * [747,748]
+        MethodInvocation [749,771]
+            METHOD_INVOCATION_RECEIVER [749,762]
+                SimpleName: squareNumbers [749,762]
+            SimpleName: get [763,766]
+            METHOD_INVOCATION_ARGUMENTS [767,770]
+                SimpleName: mid [767,770]
+    INFIX_EXPRESSION_OPERATOR: > [772,773]
+    SimpleName: N [774,775]
+to
+IfStatement [735,930]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [788,796]
+    PrimitiveType: long [789,793]
+    SimpleName: N [795,796]
+to
+InfixExpression [739,775]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [739,753]
+    PrimitiveType: long [740,744]
+    SimpleName: counter [746,753]
+to
+InfixExpression [739,771]
+at 0
+
+New cluster:
+===
+insert-node
+---
+CastExpression [756,785]
+to
+InfixExpression [739,771]
+at 3
+------------
+===
+insert-node
+---
+PrimitiveType: long [757,761]
+to
+CastExpression [756,785]
+at 0
+===
+insert-node
+---
+CastExpression [756,785]
+to
+InfixExpression [739,771]
+at 3
+
+New cluster:
+MOVE from CastExpression [756,785]
+------------
+===
+move-tree
+---
+MethodInvocation [749,771]
+    METHOD_INVOCATION_RECEIVER [749,762]
+        SimpleName: squareNumbers [749,762]
+    SimpleName: get [763,766]
+    METHOD_INVOCATION_ARGUMENTS [767,770]
+        SimpleName: mid [767,770]
+to
+CastExpression [756,785]
+at 1
+
+New cluster:
+===
+delete-node
+---
+SimpleName: counter [739,746]
+===
+------------
+===
+delete-node
+---
+SimpleName: counter [739,746]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: N [774,775]
+===
+------------
+===
+delete-node
+---
+SimpleName: N [774,775]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [739,821]
+===
+------------
+===
+delete-node
+---
+InfixExpression [739,821]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: || [776,778]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [779,821]
+    InfixExpression [779,811]
+        SimpleName: counter [779,786]
+        INFIX_EXPRESSION_OPERATOR: * [787,788]
+        MethodInvocation [789,811]
+            METHOD_INVOCATION_RECEIVER [789,802]
+                SimpleName: squareNumbers [789,802]
+            SimpleName: get [803,806]
+            METHOD_INVOCATION_ARGUMENTS [807,810]
+                SimpleName: mid [807,810]
+    INFIX_EXPRESSION_OPERATOR: < [812,813]
+    SimpleName: counter [814,821]
+

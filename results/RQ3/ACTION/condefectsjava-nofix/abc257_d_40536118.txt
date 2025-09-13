@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 2 to 4L
+------------
+===
+update-node
+---
+NumberLiteral: 2 [360,361]
+replace 2 by 4L
+

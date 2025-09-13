@@ -1,0 +1,77 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1082,1143]
+to
+IfStatement [1077,1246]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1082,1143]
+to
+IfStatement [1077,1246]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [1100,1102]
+to
+InfixExpression [1082,1143]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1082,1143]
+------------
+===
+move-tree
+---
+InfixExpression [1082,1099]
+    ArrayAccess [1082,1092]
+        ArrayAccess [1082,1089]
+            SimpleName: grid [1082,1086]
+            SimpleName: l [1087,1088]
+        SimpleName: m [1090,1091]
+    INFIX_EXPRESSION_OPERATOR: == [1093,1095]
+    CharacterLiteral: '.' [1096,1099]
+to
+InfixExpression [1082,1143]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [1103,1143]
+    InfixExpression [1104,1142]
+        InfixExpression [1104,1121]
+            ArrayAccess [1104,1116]
+                ArrayAccess [1104,1113]
+                    SimpleName: dp [1104,1106]
+                    InfixExpression [1107,1112]
+                        SimpleName: l [1107,1108]
+                        INFIX_EXPRESSION_OPERATOR: - [1109,1110]
+                        NumberLiteral: 1 [1111,1112]
+                SimpleName: m [1114,1115]
+            INFIX_EXPRESSION_OPERATOR: != [1117,1119]
+            NumberLiteral: 0 [1120,1121]
+        INFIX_EXPRESSION_OPERATOR: || [1122,1124]
+        InfixExpression [1125,1142]
+            ArrayAccess [1125,1137]
+                ArrayAccess [1125,1130]
+                    SimpleName: dp [1125,1127]
+                    SimpleName: l [1128,1129]
+                InfixExpression [1131,1136]
+                    SimpleName: m [1131,1132]
+                    INFIX_EXPRESSION_OPERATOR: - [1133,1134]
+                    NumberLiteral: 1 [1135,1136]
+            INFIX_EXPRESSION_OPERATOR: != [1138,1140]
+            NumberLiteral: 0 [1141,1142]
+to
+InfixExpression [1082,1143]
+at 2
+

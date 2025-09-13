@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 22 to 21
+------------
+===
+update-node
+---
+NumberLiteral: 22 [169,171]
+replace 22 by 21
+

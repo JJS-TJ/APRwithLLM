@@ -1,0 +1,38 @@
+New cluster:
+MOVE from Assignment [945,959]
+------------
+===
+move-tree
+---
+FieldAccess [950,957]
+    ArrayAccess [950,955]
+        SimpleName: xy [950,952]
+        SimpleName: i [953,954]
+    SimpleName: b [956,957]
+to
+Assignment [945,959]
+at 2
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [950,959]
+===
+------------
+===
+delete-node
+---
+InfixExpression [950,959]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: - [957,958]
+===
+===
+delete-node
+---
+NumberLiteral: 1 [958,959]
+===
+

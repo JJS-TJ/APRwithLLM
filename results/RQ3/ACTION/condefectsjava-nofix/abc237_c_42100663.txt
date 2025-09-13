@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [430,436]
+    SimpleName: arr [430,433]
+    SimpleName: n [434,435]
+to
+METHOD_INVOCATION_ARGUMENTS [430,433]
+at 0
+
+New cluster:
+===
+delete-node
+---
+StringLiteral: "a" [430,433]
+===
+------------
+===
+delete-node
+---
+StringLiteral: "a" [430,433]
+===
+

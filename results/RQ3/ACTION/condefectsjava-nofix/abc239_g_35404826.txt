@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from uu to vv
+------------
+===
+update-node
+---
+SimpleName: uu [466,468]
+replace uu by vv
+

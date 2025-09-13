@@ -1,0 +1,55 @@
+New cluster:
+===
+insert-node
+---
+IfStatement [408,435]
+to
+Block [361,432]
+at 1
+------------
+===
+insert-node
+---
+IfStatement [408,435]
+to
+Block [361,432]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [411,419]
+    ArrayAccess [411,415]
+        SimpleName: A [411,412]
+        SimpleName: i [413,414]
+    INFIX_EXPRESSION_OPERATOR: < [415,416]
+    InfixExpression [416,419]
+        SimpleName: W [416,417]
+        INFIX_EXPRESSION_OPERATOR: + [417,418]
+        NumberLiteral: 1 [418,419]
+to
+IfStatement [408,435]
+at 0
+
+New cluster:
+MOVE from IfStatement [408,435]
+------------
+===
+move-tree
+---
+ExpressionStatement [408,422]
+    MethodInvocation [408,421]
+        METHOD_INVOCATION_RECEIVER [408,411]
+            SimpleName: set [408,411]
+        SimpleName: add [412,415]
+        METHOD_INVOCATION_ARGUMENTS [416,420]
+            ArrayAccess [416,420]
+                SimpleName: A [416,417]
+                SimpleName: i [418,419]
+to
+IfStatement [408,435]
+at 1
+

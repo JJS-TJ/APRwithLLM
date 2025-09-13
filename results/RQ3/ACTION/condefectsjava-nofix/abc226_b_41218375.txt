@@ -1,0 +1,45 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [884,904]
+to
+METHOD_INVOCATION_ARGUMENTS [884,898]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [899,900]
+to
+InfixExpression [884,904]
+at 1
+===
+insert-node
+---
+StringLiteral: "," [901,904]
+to
+InfixExpression [884,904]
+at 2
+===
+insert-node
+---
+InfixExpression [884,904]
+to
+METHOD_INVOCATION_ARGUMENTS [884,898]
+at 0
+
+New cluster:
+MOVE from InfixExpression [884,904]
+------------
+===
+move-tree
+---
+MethodInvocation [884,898]
+    METHOD_INVOCATION_RECEIVER [884,886]
+        SimpleName: st [884,886]
+    SimpleName: nextToken [887,896]
+to
+InfixExpression [884,904]
+at 0
+

@@ -1,0 +1,45 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [951,965]
+to
+Assignment [942,963]
+at 2
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: - [963,964]
+to
+InfixExpression [951,965]
+at 1
+===
+insert-node
+---
+NumberLiteral: 1 [964,965]
+to
+InfixExpression [951,965]
+at 2
+===
+insert-node
+---
+InfixExpression [951,965]
+to
+Assignment [942,963]
+at 2
+
+New cluster:
+MOVE from InfixExpression [951,965]
+------------
+===
+move-tree
+---
+MethodInvocation [951,963]
+    METHOD_INVOCATION_RECEIVER [951,953]
+        SimpleName: sc [951,953]
+    SimpleName: nextInt [954,961]
+to
+InfixExpression [951,965]
+at 0
+

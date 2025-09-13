@@ -1,0 +1,31 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [453,460]
+    ParenthesizedExpression [453,458]
+        InfixExpression [454,457]
+            SimpleName: s [454,455]
+            INFIX_EXPRESSION_OPERATOR: + [455,456]
+            SimpleName: p [456,457]
+    INFIX_EXPRESSION_OPERATOR: % [458,459]
+    SimpleName: p [459,460]
+to
+Assignment [448,454]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: s [453,454]
+===
+------------
+===
+delete-node
+---
+SimpleName: s [453,454]
+===
+

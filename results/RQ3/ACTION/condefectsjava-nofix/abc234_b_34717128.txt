@@ -1,0 +1,21 @@
+New cluster:
+MOVE from Block [480,591]
+------------
+===
+move-tree
+---
+ExpressionStatement [599,624]
+    Assignment [599,623]
+        SimpleName: max [599,602]
+        ASSIGNMENT_OPERATOR: = [603,604]
+        MethodInvocation [605,623]
+            METHOD_INVOCATION_RECEIVER [605,609]
+                SimpleName: Math [605,609]
+            SimpleName: max [610,613]
+            METHOD_INVOCATION_ARGUMENTS [614,622]
+                SimpleName: len [614,617]
+                SimpleName: max [619,622]
+to
+Block [480,591]
+at 3
+

@@ -1,0 +1,46 @@
+New cluster:
+===
+insert-node
+---
+IfStatement [1208,1249]
+to
+Block [558,1308]
+at 8
+------------
+===
+insert-node
+---
+IfStatement [1208,1249]
+to
+Block [558,1308]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1211,1229]
+    SimpleName: tempCount [1211,1220]
+    INFIX_EXPRESSION_OPERATOR: >= [1221,1223]
+    SimpleName: sLoop [1224,1229]
+to
+IfStatement [1208,1249]
+at 0
+
+New cluster:
+MOVE from IfStatement [1208,1249]
+------------
+===
+move-tree
+---
+ExpressionStatement [1208,1226]
+    Assignment [1208,1225]
+        SimpleName: stopNum [1208,1215]
+        ASSIGNMENT_OPERATOR: = [1216,1217]
+        SimpleName: tempNum [1218,1225]
+to
+IfStatement [1208,1249]
+at 1
+

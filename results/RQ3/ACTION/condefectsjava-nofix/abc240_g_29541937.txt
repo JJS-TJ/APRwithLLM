@@ -1,0 +1,153 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1359,1438]
+to
+IfStatement [1355,1419]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1359,1438]
+to
+IfStatement [1355,1419]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [1392,1394]
+to
+InfixExpression [1359,1438]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1359,1438]
+------------
+===
+move-tree
+---
+InfixExpression [1359,1383]
+    InfixExpression [1359,1364]
+        SimpleName: N [1359,1360]
+        INFIX_EXPRESSION_OPERATOR: % [1361,1362]
+        NumberLiteral: 2 [1363,1364]
+    INFIX_EXPRESSION_OPERATOR: != [1365,1367]
+    InfixExpression [1368,1383]
+        ParenthesizedExpression [1368,1379]
+            InfixExpression [1369,1378]
+                SimpleName: X [1369,1370]
+                INFIX_EXPRESSION_OPERATOR: + [1371,1372]
+                SimpleName: Y [1373,1374]
+                SimpleName: Z [1377,1378]
+        INFIX_EXPRESSION_OPERATOR: % [1380,1381]
+        NumberLiteral: 2 [1382,1383]
+to
+InfixExpression [1359,1438]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1395,1438]
+    SimpleName: N [1395,1396]
+    INFIX_EXPRESSION_OPERATOR: < [1397,1398]
+    InfixExpression [1399,1438]
+        MethodInvocation [1399,1410]
+            METHOD_INVOCATION_RECEIVER [1399,1403]
+                SimpleName: Math [1399,1403]
+            SimpleName: abs [1404,1407]
+            METHOD_INVOCATION_ARGUMENTS [1408,1409]
+                SimpleName: X [1408,1409]
+        INFIX_EXPRESSION_OPERATOR: + [1411,1412]
+        MethodInvocation [1413,1424]
+            METHOD_INVOCATION_RECEIVER [1413,1417]
+                SimpleName: Math [1413,1417]
+            SimpleName: abs [1418,1421]
+            METHOD_INVOCATION_ARGUMENTS [1422,1423]
+                SimpleName: Y [1422,1423]
+        MethodInvocation [1427,1438]
+            METHOD_INVOCATION_RECEIVER [1427,1431]
+                SimpleName: Math [1427,1431]
+            SimpleName: abs [1432,1435]
+            METHOD_INVOCATION_ARGUMENTS [1436,1437]
+                SimpleName: Z [1436,1437]
+to
+InfixExpression [1359,1438]
+at 2
+
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1368,1387]
+to
+InfixExpression [1368,1383]
+at 0
+------------
+===
+insert-node
+---
+MethodInvocation [1368,1387]
+to
+InfixExpression [1368,1383]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1377,1386]
+to
+MethodInvocation [1368,1387]
+at 2
+===
+insert-node
+---
+SimpleName: abs [1373,1376]
+to
+MethodInvocation [1368,1387]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [1368,1372]
+    SimpleName: Math [1368,1372]
+to
+MethodInvocation [1368,1387]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [1377,1386]
+------------
+===
+move-tree
+---
+InfixExpression [1369,1378]
+    SimpleName: X [1369,1370]
+    INFIX_EXPRESSION_OPERATOR: + [1371,1372]
+    SimpleName: Y [1373,1374]
+    SimpleName: Z [1377,1378]
+to
+METHOD_INVOCATION_ARGUMENTS [1377,1386]
+at 0
+
+New cluster:
+===
+delete-node
+---
+ParenthesizedExpression [1368,1379]
+===
+------------
+===
+delete-node
+---
+ParenthesizedExpression [1368,1379]
+===
+

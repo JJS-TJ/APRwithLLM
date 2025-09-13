@@ -1,0 +1,64 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [550,585]
+to
+InfixExpression [550,588]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [565,567]
+to
+InfixExpression [550,585]
+at 1
+===
+insert-node
+---
+InfixExpression [550,585]
+to
+InfixExpression [550,588]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [550,564]
+    InfixExpression [550,555]
+        SimpleName: a [550,551]
+        INFIX_EXPRESSION_OPERATOR: < [552,553]
+        NumberLiteral: 0 [554,555]
+    INFIX_EXPRESSION_OPERATOR: || [556,558]
+    InfixExpression [559,564]
+        SimpleName: b [559,560]
+        INFIX_EXPRESSION_OPERATOR: < [561,562]
+        NumberLiteral: 0 [563,564]
+to
+InfixExpression [550,585]
+at 0
+
+New cluster:
+MOVE from InfixExpression [550,585]
+------------
+===
+move-tree
+---
+PrefixExpression [550,567]
+    PREFIX_EXPRESSION_OPERATOR: ! [550,551]
+    MethodInvocation [551,567]
+        METHOD_INVOCATION_RECEIVER [551,556]
+            ArrayAccess [551,556]
+                SimpleName: dp [551,553]
+                SimpleName: n [554,555]
+        SimpleName: testBit [557,564]
+        METHOD_INVOCATION_ARGUMENTS [565,566]
+            SimpleName: a [565,566]
+to
+InfixExpression [550,585]
+at 2
+

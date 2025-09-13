@@ -1,0 +1,24 @@
+New cluster:
+UPDATE from 2 to 1
+------------
+===
+update-node
+---
+NumberLiteral: 2 [1122,1123]
+replace 2 by 1
+===
+update-node
+---
+NumberLiteral: 2 [1099,1100]
+replace 2 by 1
+===
+update-node
+---
+NumberLiteral: 2 [1094,1095]
+replace 2 by 1
+===
+update-node
+---
+NumberLiteral: 2 [1114,1115]
+replace 2 by 1
+

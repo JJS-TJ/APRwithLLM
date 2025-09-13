@@ -1,0 +1,25 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [1020,1025]
+    SimpleName: np [1020,1022]
+    NumberLiteral: 0 [1023,1024]
+to
+InfixExpression [1016,1032]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+FieldAccess [1020,1032]
+    ArrayAccess [1020,1025]
+        SimpleName: dp [1020,1022]
+        NumberLiteral: 0 [1023,1024]
+    SimpleName: length [1026,1032]
+

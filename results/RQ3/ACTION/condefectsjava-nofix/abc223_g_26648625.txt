@@ -1,0 +1,15 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+PrefixExpression [2127,2143]
+    PREFIX_EXPRESSION_OPERATOR: ! [2127,2128]
+    ArrayAccess [2128,2143]
+        SimpleName: parentUse [2128,2137]
+        SimpleName: node [2138,2142]
+to
+InfixExpression [2106,2158]
+at 2
+

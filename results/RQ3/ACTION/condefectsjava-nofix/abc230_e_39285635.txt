@@ -1,0 +1,27 @@
+New cluster:
+UPDATE from n to i
+------------
+===
+update-node
+---
+SimpleName: n [8306,8307]
+replace n by i
+
+New cluster:
+UPDATE from i to n
+------------
+===
+update-node
+---
+SimpleName: i [8299,8300]
+replace i by n
+
+New cluster:
+UPDATE from * to /
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [8300,8301]
+replace * by /
+

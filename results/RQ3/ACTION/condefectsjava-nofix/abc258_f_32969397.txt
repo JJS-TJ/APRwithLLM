@@ -1,0 +1,74 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [2005,2049]
+    Assignment [2005,2048]
+        SimpleName: d [2005,2006]
+        ASSIGNMENT_OPERATOR: = [2007,2008]
+        MethodInvocation [2009,2048]
+            SimpleName: min [2009,2012]
+            METHOD_INVOCATION_ARGUMENTS [2013,2047]
+                SimpleName: d [2013,2014]
+                InfixExpression [2016,2047]
+                    InfixExpression [2016,2032]
+                        MethodInvocation [2016,2028]
+                            SimpleName: abs [2016,2019]
+                            METHOD_INVOCATION_ARGUMENTS [2020,2027]
+                                InfixExpression [2020,2027]
+                                    SimpleName: x2 [2020,2022]
+                                    INFIX_EXPRESSION_OPERATOR: - [2023,2024]
+                                    SimpleName: x1 [2025,2027]
+                        INFIX_EXPRESSION_OPERATOR: * [2029,2030]
+                        SimpleName: k [2031,2032]
+                    INFIX_EXPRESSION_OPERATOR: + [2033,2034]
+                    MethodInvocation [2035,2047]
+                        SimpleName: abs [2035,2038]
+                        METHOD_INVOCATION_ARGUMENTS [2039,2046]
+                            InfixExpression [2039,2046]
+                                SimpleName: y2 [2039,2041]
+                                INFIX_EXPRESSION_OPERATOR: - [2042,2043]
+                                SimpleName: y1 [2044,2046]
+to
+Block [1849,2002]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [2313,2357]
+    Assignment [2313,2356]
+        SimpleName: d [2313,2314]
+        ASSIGNMENT_OPERATOR: = [2315,2316]
+        MethodInvocation [2317,2356]
+            SimpleName: min [2317,2320]
+            METHOD_INVOCATION_ARGUMENTS [2321,2355]
+                SimpleName: d [2321,2322]
+                InfixExpression [2324,2355]
+                    MethodInvocation [2324,2336]
+                        SimpleName: abs [2324,2327]
+                        METHOD_INVOCATION_ARGUMENTS [2328,2335]
+                            InfixExpression [2328,2335]
+                                SimpleName: x2 [2328,2330]
+                                INFIX_EXPRESSION_OPERATOR: - [2331,2332]
+                                SimpleName: x1 [2333,2335]
+                    INFIX_EXPRESSION_OPERATOR: + [2337,2338]
+                    InfixExpression [2339,2355]
+                        MethodInvocation [2339,2351]
+                            SimpleName: abs [2339,2342]
+                            METHOD_INVOCATION_ARGUMENTS [2343,2350]
+                                InfixExpression [2343,2350]
+                                    SimpleName: y2 [2343,2345]
+                                    INFIX_EXPRESSION_OPERATOR: - [2346,2347]
+                                    SimpleName: y1 [2348,2350]
+                        INFIX_EXPRESSION_OPERATOR: * [2352,2353]
+                        SimpleName: k [2354,2355]
+to
+Block [2096,2249]
+at 3
+

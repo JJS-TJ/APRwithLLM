@@ -1,0 +1,50 @@
+New cluster:
+===
+insert-node
+---
+IfStatement [4436,4462]
+to
+Block [4418,4491]
+at 0
+------------
+===
+insert-node
+---
+IfStatement [4436,4462]
+to
+Block [4418,4491]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [4439,4449]
+    ArrayAccess [4439,4444]
+        SimpleName: pt [4439,4441]
+        SimpleName: i [4442,4443]
+    INFIX_EXPRESSION_OPERATOR: == [4445,4447]
+    NumberLiteral: 0 [4448,4449]
+to
+IfStatement [4436,4462]
+at 0
+
+New cluster:
+MOVE from IfStatement [4436,4462]
+------------
+===
+move-tree
+---
+ExpressionStatement [4436,4447]
+    Assignment [4436,4446]
+        ArrayAccess [4436,4441]
+            SimpleName: pt [4436,4438]
+            SimpleName: i [4439,4440]
+        ASSIGNMENT_OPERATOR: = [4442,4443]
+        SimpleName: at [4444,4446]
+to
+IfStatement [4436,4462]
+at 1
+

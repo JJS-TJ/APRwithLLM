@@ -1,0 +1,18 @@
+New cluster:
+MOVE from Block [748,1184]
+------------
+===
+move-tree
+---
+ExpressionStatement [996,1007]
+    MethodInvocation [996,1006]
+        SimpleName: f [996,997]
+        METHOD_INVOCATION_ARGUMENTS [998,1005]
+            SimpleName: A [998,999]
+            SimpleName: B [1000,1001]
+            NumberLiteral: 3 [1002,1003]
+            NumberLiteral: 5 [1004,1005]
+to
+Block [748,1184]
+at 7
+

@@ -1,0 +1,246 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1604,1631]
+to
+InfixExpression [1604,1653]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: t3 [1604,1606]
+to
+InfixExpression [1604,1631]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: - [1606,1607]
+to
+InfixExpression [1604,1631]
+at 1
+===
+insert-node
+---
+InfixExpression [1604,1631]
+to
+InfixExpression [1604,1653]
+at 0
+
+New cluster:
+===
+insert-node
+---
+InfixExpression [1633,1674]
+to
+InfixExpression [1604,1653]
+at 3
+------------
+===
+insert-node
+---
+InfixExpression [1633,1674]
+to
+InfixExpression [1604,1653]
+at 3
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [1669,1670]
+to
+InfixExpression [1633,1674]
+at 1
+===
+insert-node
+---
+SimpleName: mod [1671,1674]
+to
+InfixExpression [1633,1674]
+at 2
+
+New cluster:
+MOVE from InfixExpression [1633,1674]
+------------
+===
+move-tree
+---
+InfixExpression [1625,1653]
+    SimpleName: t1 [1625,1627]
+    INFIX_EXPRESSION_OPERATOR: * [1627,1628]
+    ParenthesizedExpression [1628,1640]
+        InfixExpression [1629,1639]
+            ArrayAccess [1629,1637]
+                ArrayAccess [1629,1634]
+                    SimpleName: qu [1629,1631]
+                    SimpleName: i [1632,1633]
+                NumberLiteral: 1 [1635,1636]
+            INFIX_EXPRESSION_OPERATOR: + [1637,1638]
+            NumberLiteral: 1 [1638,1639]
+    ParenthesizedExpression [1641,1653]
+        InfixExpression [1642,1652]
+            ArrayAccess [1642,1650]
+                ArrayAccess [1642,1647]
+                    SimpleName: qu [1642,1644]
+                    SimpleName: i [1645,1646]
+                NumberLiteral: 1 [1648,1649]
+            INFIX_EXPRESSION_OPERATOR: + [1650,1651]
+            NumberLiteral: 2 [1651,1652]
+to
+InfixExpression [1633,1674]
+at 0
+===
+move-tree
+---
+InfixExpression [1604,1624]
+    SimpleName: t3 [1604,1606]
+    INFIX_EXPRESSION_OPERATOR: - [1606,1607]
+    InfixExpression [1607,1624]
+        SimpleName: t2 [1607,1609]
+        INFIX_EXPRESSION_OPERATOR: * [1609,1610]
+        ParenthesizedExpression [1610,1624]
+            InfixExpression [1611,1623]
+                InfixExpression [1611,1621]
+                    NumberLiteral: 2 [1611,1612]
+                    INFIX_EXPRESSION_OPERATOR: * [1612,1613]
+                    ArrayAccess [1613,1621]
+                        ArrayAccess [1613,1618]
+                            SimpleName: qu [1613,1615]
+                            SimpleName: i [1616,1617]
+                        NumberLiteral: 1 [1619,1620]
+                INFIX_EXPRESSION_OPERATOR: + [1621,1622]
+                NumberLiteral: 3 [1622,1623]
+to
+InfixExpression [1604,1631]
+at 2
+
+New cluster:
+MOVE from InfixExpression [1604,1624]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: - [1606,1607]
+to
+InfixExpression [1604,1624]
+at 2
+===
+move-tree
+---
+SimpleName: t3 [1604,1606]
+to
+InfixExpression [1604,1624]
+at 2
+
+New cluster:
+UPDATE from - to %
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: - [1606,1607]
+replace - by %
+
+New cluster:
+UPDATE from t3 to mod
+------------
+===
+update-node
+---
+SimpleName: t3 [1604,1606]
+replace t3 by mod
+
+New cluster:
+===
+insert-node
+---
+InfixExpression [1633,1654]
+to
+InfixExpression [1625,1653]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: t1 [1633,1635]
+to
+InfixExpression [1633,1648]
+at 0
+===
+insert-node
+---
+InfixExpression [1633,1648]
+to
+InfixExpression [1633,1654]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: * [1635,1636]
+to
+InfixExpression [1633,1648]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [1649,1650]
+to
+InfixExpression [1633,1654]
+at 1
+===
+insert-node
+---
+SimpleName: mod [1651,1654]
+to
+InfixExpression [1633,1654]
+at 2
+===
+insert-node
+---
+InfixExpression [1633,1654]
+to
+InfixExpression [1625,1653]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1633,1648]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [1628,1640]
+    InfixExpression [1629,1639]
+        ArrayAccess [1629,1637]
+            ArrayAccess [1629,1634]
+                SimpleName: qu [1629,1631]
+                SimpleName: i [1632,1633]
+            NumberLiteral: 1 [1635,1636]
+        INFIX_EXPRESSION_OPERATOR: + [1637,1638]
+        NumberLiteral: 1 [1638,1639]
+to
+InfixExpression [1633,1648]
+at 2
+
+New cluster:
+UPDATE from 2 to 2L
+------------
+===
+update-node
+---
+NumberLiteral: 2 [1611,1612]
+replace 2 by 2L
+
+New cluster:
+===
+delete-node
+---
+SimpleName: t1 [1625,1627]
+===
+------------
+===
+delete-node
+---
+SimpleName: t1 [1625,1627]
+===
+

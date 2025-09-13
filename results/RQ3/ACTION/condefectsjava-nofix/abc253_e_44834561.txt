@@ -1,0 +1,40 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [2207,2231]
+    SimpleName: j [2207,2208]
+    INFIX_EXPRESSION_OPERATOR: + [2209,2210]
+    SimpleName: k [2211,2212]
+    ParenthesizedExpression [2215,2231]
+        ConditionalExpression [2216,2230]
+            InfixExpression [2216,2222]
+                SimpleName: k [2216,2217]
+                INFIX_EXPRESSION_OPERATOR: == [2218,2220]
+                NumberLiteral: 0 [2221,2222]
+            NumberLiteral: 1 [2225,2226]
+            NumberLiteral: 0 [2229,2230]
+to
+VariableDeclarationFragment [2203,2229]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ConditionalExpression [2207,2229]
+    InfixExpression [2207,2221]
+        InfixExpression [2207,2216]
+            SimpleName: j [2207,2208]
+            INFIX_EXPRESSION_OPERATOR: + [2209,2210]
+            SimpleName: k [2211,2212]
+            SimpleName: k [2215,2216]
+        INFIX_EXPRESSION_OPERATOR: == [2217,2219]
+        NumberLiteral: 0 [2220,2221]
+    NumberLiteral: 1 [2224,2225]
+    NumberLiteral: 0 [2228,2229]
+

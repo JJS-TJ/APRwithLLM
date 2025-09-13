@@ -1,0 +1,80 @@
+New cluster:
+MOVE from InfixExpression [1662,1671]
+------------
+===
+move-tree
+---
+InfixExpression [1662,1667]
+    SimpleName: i [1662,1663]
+    INFIX_EXPRESSION_OPERATOR: + [1664,1665]
+    SimpleName: K [1666,1667]
+to
+InfixExpression [1662,1671]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1662,1671]
+    InfixExpression [1662,1667]
+        SimpleName: N [1662,1663]
+        INFIX_EXPRESSION_OPERATOR: - [1664,1665]
+        SimpleName: i [1666,1667]
+    INFIX_EXPRESSION_OPERATOR: > [1668,1669]
+    SimpleName: K [1670,1671]
+to
+InfixExpression [1662,1671]
+at 0
+
+New cluster:
+UPDATE from < to ||
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [1668,1669]
+replace < by ||
+
+New cluster:
+UPDATE from i to K
+------------
+===
+update-node
+---
+SimpleName: i [1662,1663]
+replace i by K
+
+New cluster:
+UPDATE from + to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1664,1665]
+replace + by <=
+
+New cluster:
+UPDATE from K to i
+------------
+===
+update-node
+---
+SimpleName: K [1666,1667]
+replace K by i
+
+New cluster:
+===
+delete-node
+---
+SimpleName: N [1670,1671]
+===
+------------
+===
+delete-node
+---
+SimpleName: N [1670,1671]
+===
+

@@ -1,0 +1,43 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+SimpleType [259,265]
+    SimpleName: Double [259,265]
+to
+VariableDeclarationStatement [259,299]
+at 0
+
+New cluster:
+UPDATE from parseInt to parseDouble
+------------
+===
+update-node
+---
+SimpleName: parseInt [275,283]
+replace parseInt by parseDouble
+
+New cluster:
+UPDATE from Integer to Double
+------------
+===
+update-node
+---
+SimpleName: Integer [267,274]
+replace Integer by Double
+
+New cluster:
+===
+delete-node
+---
+PrimitiveType: int [259,262]
+===
+------------
+===
+delete-node
+---
+PrimitiveType: int [259,262]
+===
+

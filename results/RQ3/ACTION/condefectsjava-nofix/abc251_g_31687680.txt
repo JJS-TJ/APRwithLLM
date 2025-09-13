@@ -1,0 +1,72 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [749,794]
+    Assignment [749,793]
+        ArrayAccess [749,763]
+            ArrayAccess [749,760]
+                SimpleName: edge [749,753]
+                InfixExpression [754,759]
+                    SimpleName: N [754,755]
+                    INFIX_EXPRESSION_OPERATOR: - [756,757]
+                    NumberLiteral: 1 [758,759]
+            NumberLiteral: 0 [761,762]
+        ASSIGNMENT_OPERATOR: = [764,765]
+        InfixExpression [766,793]
+            ArrayAccess [766,776]
+                ArrayAccess [766,773]
+                    SimpleName: poly [766,770]
+                    NumberLiteral: 0 [771,772]
+                NumberLiteral: 0 [774,775]
+            INFIX_EXPRESSION_OPERATOR: - [777,778]
+            ArrayAccess [779,793]
+                ArrayAccess [779,790]
+                    SimpleName: poly [779,783]
+                    InfixExpression [784,789]
+                        SimpleName: N [784,785]
+                        INFIX_EXPRESSION_OPERATOR: - [786,787]
+                        NumberLiteral: 1 [788,789]
+                NumberLiteral: 0 [791,792]
+to
+Block [200,1428]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [803,848]
+    Assignment [803,847]
+        ArrayAccess [803,817]
+            ArrayAccess [803,814]
+                SimpleName: edge [803,807]
+                InfixExpression [808,813]
+                    SimpleName: N [808,809]
+                    INFIX_EXPRESSION_OPERATOR: - [810,811]
+                    NumberLiteral: 1 [812,813]
+            NumberLiteral: 1 [815,816]
+        ASSIGNMENT_OPERATOR: = [818,819]
+        InfixExpression [820,847]
+            ArrayAccess [820,830]
+                ArrayAccess [820,827]
+                    SimpleName: poly [820,824]
+                    NumberLiteral: 0 [825,826]
+                NumberLiteral: 1 [828,829]
+            INFIX_EXPRESSION_OPERATOR: - [831,832]
+            ArrayAccess [833,847]
+                ArrayAccess [833,844]
+                    SimpleName: poly [833,837]
+                    InfixExpression [838,843]
+                        SimpleName: N [838,839]
+                        INFIX_EXPRESSION_OPERATOR: - [840,841]
+                        NumberLiteral: 1 [842,843]
+                NumberLiteral: 1 [845,846]
+to
+Block [200,1428]
+at 11
+

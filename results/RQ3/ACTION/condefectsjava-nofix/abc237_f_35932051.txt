@@ -1,0 +1,87 @@
+New cluster:
+UPDATE from += to =
+------------
+===
+update-node
+---
+ASSIGNMENT_OPERATOR: += [1239,1241]
+replace += by =
+
+New cluster:
+===
+insert-node
+---
+InfixExpression [1241,1269]
+to
+Assignment [1235,1256]
+at 2
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1246,1247]
+to
+InfixExpression [1242,1262]
+at 1
+===
+insert-node
+---
+ParenthesizedExpression [1241,1263]
+to
+InfixExpression [1241,1269]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: % [1264,1265]
+to
+InfixExpression [1241,1269]
+at 1
+===
+insert-node
+---
+InfixExpression [1242,1262]
+to
+ParenthesizedExpression [1241,1263]
+at 0
+===
+insert-node
+---
+SimpleName: mod [1266,1269]
+to
+InfixExpression [1241,1269]
+at 2
+===
+insert-node
+---
+InfixExpression [1241,1269]
+to
+Assignment [1235,1256]
+at 2
+===
+insert-node
+---
+SimpleName: ans [1242,1245]
+to
+InfixExpression [1242,1262]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1242,1262]
+------------
+===
+move-tree
+---
+ArrayAccess [1242,1256]
+    ArrayAccess [1242,1253]
+        ArrayAccess [1242,1250]
+            ArrayAccess [1242,1247]
+                SimpleName: dp [1242,1244]
+                SimpleName: n [1245,1246]
+            SimpleName: x [1248,1249]
+        SimpleName: y [1251,1252]
+    SimpleName: z [1254,1255]
+to
+InfixExpression [1242,1262]
+at 2
+

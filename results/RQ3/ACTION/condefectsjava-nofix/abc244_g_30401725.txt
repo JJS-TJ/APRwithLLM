@@ -1,0 +1,45 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1039,1056]
+to
+METHOD_INVOCATION_ARGUMENTS [1039,1050]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1039,1056]
+to
+METHOD_INVOCATION_ARGUMENTS [1039,1050]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: - [1050,1051]
+to
+InfixExpression [1039,1056]
+at 1
+===
+insert-node
+---
+SimpleName: start [1051,1056]
+to
+InfixExpression [1039,1056]
+at 2
+
+New cluster:
+MOVE from InfixExpression [1039,1056]
+------------
+===
+move-tree
+---
+MethodInvocation [1039,1050]
+    METHOD_INVOCATION_RECEIVER [1039,1043]
+        SimpleName: list [1039,1043]
+    SimpleName: size [1044,1048]
+to
+InfixExpression [1039,1056]
+at 0
+

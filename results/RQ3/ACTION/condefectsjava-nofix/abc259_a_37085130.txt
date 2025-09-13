@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from n to x
+------------
+===
+update-node
+---
+SimpleName: n [334,335]
+replace n by x
+

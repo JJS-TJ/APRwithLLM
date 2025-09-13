@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: adultNum [635,643]
+to
+VariableDeclarationFragment [629,636]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: adultNum [635,643]
+to
+VariableDeclarationFragment [629,636]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [635,636]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [635,636]
+===
+

@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Assignment [406,415]
+    SimpleName: count [406,411]
+    ASSIGNMENT_OPERATOR: = [412,413]
+    NumberLiteral: 3 [414,415]
+to
+ExpressionStatement [406,414]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+PostfixExpression [406,413]
+    SimpleName: count [406,411]
+    POSTFIX_EXPRESSION_OPERATOR: ++ [411,413]
+

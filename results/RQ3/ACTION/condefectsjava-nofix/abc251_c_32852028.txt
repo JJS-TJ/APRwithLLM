@@ -1,0 +1,203 @@
+New cluster:
+MOVE from IfStatement [536,678]
+------------
+===
+move-tree
+---
+PrefixExpression [498,517]
+    PREFIX_EXPRESSION_OPERATOR: ! [498,499]
+    MethodInvocation [499,517]
+        METHOD_INVOCATION_RECEIVER [499,502]
+            SimpleName: set [499,502]
+        SimpleName: contains [503,511]
+        METHOD_INVOCATION_ARGUMENTS [512,516]
+            ArrayAccess [512,516]
+                SimpleName: S [512,513]
+                SimpleName: i [514,515]
+to
+IfStatement [536,678]
+at 0
+===
+move-tree
+---
+Block [518,692]
+    IfStatement [536,678]
+        InfixExpression [539,555]
+            ArrayAccess [539,543]
+                SimpleName: T [539,540]
+                SimpleName: i [541,542]
+            INFIX_EXPRESSION_OPERATOR: > [544,545]
+            SimpleName: bestscore [546,555]
+        Block [556,678]
+            ExpressionStatement [578,587]
+                Assignment [578,586]
+                    SimpleName: best [578,582]
+                    ASSIGNMENT_OPERATOR: = [583,584]
+                    SimpleName: i [585,586]
+            ExpressionStatement [608,625]
+                Assignment [608,624]
+                    SimpleName: bestscore [608,617]
+                    ASSIGNMENT_OPERATOR: = [618,619]
+                    ArrayAccess [620,624]
+                        SimpleName: T [620,621]
+                        SimpleName: i [622,623]
+            ExpressionStatement [646,660]
+                MethodInvocation [646,659]
+                    METHOD_INVOCATION_RECEIVER [646,649]
+                        SimpleName: set [646,649]
+                    SimpleName: add [650,653]
+                    METHOD_INVOCATION_ARGUMENTS [654,658]
+                        ArrayAccess [654,658]
+                            SimpleName: S [654,655]
+                            SimpleName: i [656,657]
+to
+ForStatement [457,702]
+at 3
+
+New cluster:
+MOVE from Block [556,678]
+------------
+===
+move-tree
+---
+IfStatement [495,692]
+    PrefixExpression [498,517]
+        PREFIX_EXPRESSION_OPERATOR: ! [498,499]
+        MethodInvocation [499,517]
+            METHOD_INVOCATION_RECEIVER [499,502]
+                SimpleName: set [499,502]
+            SimpleName: contains [503,511]
+            METHOD_INVOCATION_ARGUMENTS [512,516]
+                ArrayAccess [512,516]
+                    SimpleName: S [512,513]
+                    SimpleName: i [514,515]
+    Block [518,692]
+        IfStatement [536,678]
+            InfixExpression [539,555]
+                ArrayAccess [539,543]
+                    SimpleName: T [539,540]
+                    SimpleName: i [541,542]
+                INFIX_EXPRESSION_OPERATOR: > [544,545]
+                SimpleName: bestscore [546,555]
+            Block [556,678]
+                ExpressionStatement [578,587]
+                    Assignment [578,586]
+                        SimpleName: best [578,582]
+                        ASSIGNMENT_OPERATOR: = [583,584]
+                        SimpleName: i [585,586]
+                ExpressionStatement [608,625]
+                    Assignment [608,624]
+                        SimpleName: bestscore [608,617]
+                        ASSIGNMENT_OPERATOR: = [618,619]
+                        ArrayAccess [620,624]
+                            SimpleName: T [620,621]
+                            SimpleName: i [622,623]
+                ExpressionStatement [646,660]
+                    MethodInvocation [646,659]
+                        METHOD_INVOCATION_RECEIVER [646,649]
+                            SimpleName: set [646,649]
+                        SimpleName: add [650,653]
+                        METHOD_INVOCATION_ARGUMENTS [654,658]
+                            ArrayAccess [654,658]
+                                SimpleName: S [654,655]
+                                SimpleName: i [656,657]
+to
+Block [556,678]
+at 0
+
+New cluster:
+MOVE from IfStatement [495,692]
+------------
+===
+move-tree
+---
+InfixExpression [539,555]
+    ArrayAccess [539,543]
+        SimpleName: T [539,540]
+        SimpleName: i [541,542]
+    INFIX_EXPRESSION_OPERATOR: > [544,545]
+    SimpleName: bestscore [546,555]
+to
+IfStatement [495,692]
+at 0
+
+New cluster:
+MOVE from IfStatement [495,692]
+------------
+===
+move-tree
+---
+Block [481,702]
+    IfStatement [495,692]
+        PrefixExpression [498,517]
+            PREFIX_EXPRESSION_OPERATOR: ! [498,499]
+            MethodInvocation [499,517]
+                METHOD_INVOCATION_RECEIVER [499,502]
+                    SimpleName: set [499,502]
+                SimpleName: contains [503,511]
+                METHOD_INVOCATION_ARGUMENTS [512,516]
+                    ArrayAccess [512,516]
+                        SimpleName: S [512,513]
+                        SimpleName: i [514,515]
+        Block [518,692]
+            IfStatement [536,678]
+                InfixExpression [539,555]
+                    ArrayAccess [539,543]
+                        SimpleName: T [539,540]
+                        SimpleName: i [541,542]
+                    INFIX_EXPRESSION_OPERATOR: > [544,545]
+                    SimpleName: bestscore [546,555]
+                Block [556,678]
+                    ExpressionStatement [578,587]
+                        Assignment [578,586]
+                            SimpleName: best [578,582]
+                            ASSIGNMENT_OPERATOR: = [583,584]
+                            SimpleName: i [585,586]
+                    ExpressionStatement [608,625]
+                        Assignment [608,624]
+                            SimpleName: bestscore [608,617]
+                            ASSIGNMENT_OPERATOR: = [618,619]
+                            ArrayAccess [620,624]
+                                SimpleName: T [620,621]
+                                SimpleName: i [622,623]
+                    ExpressionStatement [646,660]
+                        MethodInvocation [646,659]
+                            METHOD_INVOCATION_RECEIVER [646,649]
+                                SimpleName: set [646,649]
+                            SimpleName: add [650,653]
+                            METHOD_INVOCATION_ARGUMENTS [654,658]
+                                ArrayAccess [654,658]
+                                    SimpleName: S [654,655]
+                                    SimpleName: i [656,657]
+to
+IfStatement [495,692]
+at 1
+
+New cluster:
+MOVE from Block [481,702]
+------------
+===
+move-tree
+---
+ExpressionStatement [608,625]
+    Assignment [608,624]
+        SimpleName: bestscore [608,617]
+        ASSIGNMENT_OPERATOR: = [618,619]
+        ArrayAccess [620,624]
+            SimpleName: T [620,621]
+            SimpleName: i [622,623]
+to
+Block [481,702]
+at 1
+===
+move-tree
+---
+ExpressionStatement [578,587]
+    Assignment [578,586]
+        SimpleName: best [578,582]
+        ASSIGNMENT_OPERATOR: = [583,584]
+        SimpleName: i [585,586]
+to
+Block [481,702]
+at 0
+
