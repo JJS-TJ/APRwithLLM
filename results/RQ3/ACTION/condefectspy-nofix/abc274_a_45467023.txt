@@ -1,0 +1,78 @@
+New cluster:
+===
+insert-node
+---
+call [36,74]
+to
+expression_statement [36,56]
+at 0
+------------
+===
+insert-node
+---
+argument_list [41,74]
+to
+call [36,74]
+at 1
+===
+insert-node
+---
+identifier: print [36,41]
+to
+call [36,74]
+at 0
+===
+insert-node
+---
+call [36,74]
+to
+expression_statement [36,56]
+at 0
+
+New cluster:
+MOVE from argument_list [41,74]
+------------
+===
+move-tree
+---
+call [36,56]
+    identifier: print [36,41]
+    argument_list [41,56]
+        call [42,55]
+            identifier: round [42,47]
+            argument_list [47,55]
+                binary_operator [48,51]
+                    identifier: B [48,49]
+                    /: / [49,50]
+                    identifier: A [50,51]
+                integer: 3 [53,54]
+to
+argument_list [41,74]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+attribute [42,58]
+    string: '{:.03f}' [42,51]
+    identifier: format [52,58]
+to
+call [36,56]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: print [36,41]
+===
+------------
+===
+delete-node
+---
+identifier: print [36,41]
+===
+

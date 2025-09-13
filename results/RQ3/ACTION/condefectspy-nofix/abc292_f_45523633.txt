@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from < to >
+------------
+===
+update-node
+---
+comparison_operator: < [256,257]
+replace < by >
+
+New cluster:
+UPDATE from 9 to 15
+------------
+===
+update-node
+---
+integer: 9 [264,265]
+replace 9 by 15
+

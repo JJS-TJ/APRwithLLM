@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [286,295]
+    identifier: count2 [286,292]
+    //: // [292,294]
+    integer: 2 [294,295]
+to
+argument_list [285,293]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: count2 [286,292]
+===
+------------
+===
+delete-node
+---
+identifier: count2 [286,292]
+===
+

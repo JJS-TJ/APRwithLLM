@@ -1,0 +1,41 @@
+New cluster:
+MOVE from binary_operator [117,120]
+------------
+===
+move-tree
+---
+identifier: X [117,118]
+to
+binary_operator [117,120]
+at 2
+
+New cluster:
+===
+insert-node
+---
++: + [119,120]
+to
+binary_operator [117,120]
+at 2
+------------
+===
+insert-node
+---
++: + [119,120]
+to
+binary_operator [117,120]
+at 2
+
+New cluster:
+===
+delete-node
+---
+-: - [118,119]
+===
+------------
+===
+delete-node
+---
+-: - [118,119]
+===
+

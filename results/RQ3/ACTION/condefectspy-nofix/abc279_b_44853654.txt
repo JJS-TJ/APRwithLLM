@@ -1,0 +1,21 @@
+New cluster:
+MOVE from comparison_operator [31,46]
+------------
+===
+move-tree
+---
+comparison_operator: > [38,39]
+to
+comparison_operator [31,46]
+at 2
+===
+move-tree
+---
+call [31,37]
+    identifier: len [31,34]
+    argument_list [34,37]
+        identifier: s [35,36]
+to
+comparison_operator [31,46]
+at 2
+

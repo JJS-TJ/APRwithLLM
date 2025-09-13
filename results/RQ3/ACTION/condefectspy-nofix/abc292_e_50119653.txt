@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [469,474]
+    identifier: ans [469,472]
+    -: - [472,473]
+    identifier: m [473,474]
+to
+argument_list [468,473]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [469,472]
+===
+------------
+===
+delete-node
+---
+identifier: ans [469,472]
+===
+

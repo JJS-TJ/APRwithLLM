@@ -1,0 +1,54 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [800,806]
+    identifier: abs [800,803]
+    argument_list [803,806]
+        identifier: x [804,805]
+to
+comparison_operator [800,810]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [819,825]
+    identifier: abs [819,822]
+    argument_list [822,825]
+        identifier: y [823,824]
+to
+comparison_operator [814,824]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: x [800,801]
+===
+------------
+===
+delete-node
+---
+identifier: x [800,801]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: y [814,815]
+===
+------------
+===
+delete-node
+---
+identifier: y [814,815]
+===
+

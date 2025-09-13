@@ -1,0 +1,357 @@
+New cluster:
+===
+insert-node
+---
+call [0,68]
+to
+expression_statement [0,50]
+at 0
+------------
+===
+insert-node
+---
+call [0,68]
+to
+expression_statement [0,50]
+at 0
+===
+insert-node
+---
+call [6,67]
+to
+argument_list [5,68]
+at 0
+===
+insert-node
+---
+argument_list [5,68]
+to
+call [0,68]
+at 1
+===
+insert-node
+---
+argument_list [13,67]
+to
+call [6,67]
+at 1
+===
+insert-node
+---
+identifier: print [0,5]
+to
+call [0,68]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+attribute [6,13]
+    string: "" [6,8]
+    identifier: join [9,13]
+to
+call [6,67]
+at 0
+
+New cluster:
+MOVE from argument_list [13,67]
+------------
+===
+move-tree
+---
+call [0,50]
+    identifier: print [0,5]
+    argument_list [5,50]
+        call [6,49]
+            attribute [6,39]
+                call [6,31]
+                    attribute [6,21]
+                        call [6,13]
+                            identifier: input [6,11]
+                            argument_list [11,13]
+                        identifier: replace [14,21]
+                    argument_list [21,31]
+                        string: "0" [22,25]
+                        string: "1" [27,30]
+                identifier: replace [32,39]
+            argument_list [39,49]
+                string: "1" [40,43]
+                string: "0" [45,48]
+to
+argument_list [13,67]
+at 0
+
+New cluster:
+UPDATE from print to map
+------------
+===
+update-node
+---
+identifier: print [0,5]
+replace print by map
+
+New cluster:
+===
+insert-node
+---
+identifier: str [18,21]
+to
+argument_list [5,50]
+at 0
+------------
+===
+insert-node
+---
+identifier: str [18,21]
+to
+argument_list [5,50]
+at 0
+
+New cluster:
+===
+insert-node
+---
+list_comprehension [23,65]
+to
+argument_list [5,50]
+at 1
+------------
+===
+insert-node
+---
+list_comprehension [23,65]
+to
+argument_list [5,50]
+at 1
+===
+insert-node
+---
+identifier: i [36,37]
+to
+for_in_clause [32,64]
+at 0
+===
+insert-node
+---
+for_in_clause [32,64]
+to
+list_comprehension [23,65]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [24,31]
+    parenthesized_expression [24,29]
+        binary_operator [25,28]
+            identifier: i [25,26]
+            +: + [26,27]
+            integer: 1 [27,28]
+    %: % [29,30]
+    integer: 2 [30,31]
+to
+list_comprehension [23,65]
+at 0
+
+New cluster:
+MOVE from for_in_clause [32,64]
+------------
+===
+move-tree
+---
+call [6,49]
+    attribute [6,39]
+        call [6,31]
+            attribute [6,21]
+                call [6,13]
+                    identifier: input [6,11]
+                    argument_list [11,13]
+                identifier: replace [14,21]
+            argument_list [21,31]
+                string: "0" [22,25]
+                string: "1" [27,30]
+        identifier: replace [32,39]
+    argument_list [39,49]
+        string: "1" [40,43]
+        string: "0" [45,48]
+to
+for_in_clause [32,64]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: map [41,44]
+to
+call [6,49]
+at 0
+------------
+===
+insert-node
+---
+identifier: map [41,44]
+to
+call [6,49]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: int [45,48]
+to
+argument_list [39,49]
+at 0
+------------
+===
+insert-node
+---
+identifier: int [45,48]
+to
+argument_list [39,49]
+at 0
+
+New cluster:
+MOVE from argument_list [39,49]
+------------
+===
+move-tree
+---
+call [6,31]
+    attribute [6,21]
+        call [6,13]
+            identifier: input [6,11]
+            argument_list [11,13]
+        identifier: replace [14,21]
+    argument_list [21,31]
+        string: "0" [22,25]
+        string: "1" [27,30]
+to
+argument_list [39,49]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: list [50,54]
+to
+call [6,31]
+at 0
+------------
+===
+insert-node
+---
+identifier: list [50,54]
+to
+call [6,31]
+at 0
+
+New cluster:
+MOVE from argument_list [21,31]
+------------
+===
+move-tree
+---
+call [6,13]
+    identifier: input [6,11]
+    argument_list [11,13]
+to
+argument_list [21,31]
+at 0
+
+New cluster:
+===
+delete-node
+---
+attribute [6,39]
+===
+------------
+===
+delete-node
+---
+identifier: replace [32,39]
+===
+===
+delete-node
+---
+attribute [6,39]
+===
+
+New cluster:
+===
+delete-node
+---
+attribute [6,21]
+===
+------------
+===
+delete-node
+---
+attribute [6,21]
+===
+===
+delete-node
+---
+identifier: replace [14,21]
+===
+
+New cluster:
+===
+delete-node
+---
+string: "0" [22,25]
+===
+------------
+===
+delete-node
+---
+string: "0" [22,25]
+===
+
+New cluster:
+===
+delete-node
+---
+string: "1" [27,30]
+===
+------------
+===
+delete-node
+---
+string: "1" [27,30]
+===
+
+New cluster:
+===
+delete-node
+---
+string: "1" [40,43]
+===
+------------
+===
+delete-node
+---
+string: "1" [40,43]
+===
+
+New cluster:
+===
+delete-node
+---
+string: "0" [45,48]
+===
+------------
+===
+delete-node
+---
+string: "0" [45,48]
+===
+

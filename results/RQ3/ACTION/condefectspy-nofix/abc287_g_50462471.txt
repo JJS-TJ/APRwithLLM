@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 100 to 3
+------------
+===
+update-node
+---
+integer: 100 [2231,2234]
+replace 100 by 3
+

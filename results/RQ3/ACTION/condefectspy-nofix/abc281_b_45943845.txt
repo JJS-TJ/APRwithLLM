@@ -1,0 +1,56 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [77,102]
+to
+boolean_operator [77,115]
+at 0
+------------
+===
+insert-node
+---
+and: and [87,90]
+to
+boolean_operator [77,102]
+at 1
+===
+insert-node
+---
+boolean_operator [77,102]
+to
+boolean_operator [77,115]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [77,86]
+    call [77,83]
+        identifier: len [77,80]
+        argument_list [80,83]
+            identifier: s [81,82]
+    comparison_operator: == [83,85]
+    integer: 8 [85,86]
+to
+boolean_operator [77,102]
+at 0
+
+New cluster:
+MOVE from boolean_operator [77,102]
+------------
+===
+move-tree
+---
+call [77,88]
+    attribute [77,86]
+        identifier: t [77,78]
+        identifier: isdigit [79,86]
+    argument_list [86,88]
+to
+boolean_operator [77,102]
+at 2
+

@@ -1,0 +1,32 @@
+New cluster:
+===
+insert-node
+---
+comment: #print(sorted(call)) [238,259]
+to
+module [0,402]
+at 8
+------------
+===
+insert-node
+---
+comment: #print(sorted(call)) [238,259]
+to
+module [0,402]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [238,257]
+    call [238,257]
+        identifier: print [238,243]
+        argument_list [243,257]
+            call [244,256]
+                identifier: sorted [244,250]
+                argument_list [250,256]
+                    identifier: call [251,255]
+

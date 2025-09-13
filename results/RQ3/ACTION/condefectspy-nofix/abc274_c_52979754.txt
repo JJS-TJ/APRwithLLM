@@ -1,0 +1,17 @@
+New cluster:
+===
+insert-node
+---
+integer: 1 [92,93]
+to
+argument_list [91,102]
+at 0
+------------
+===
+insert-node
+---
+integer: 1 [92,93]
+to
+argument_list [91,102]
+at 0
+

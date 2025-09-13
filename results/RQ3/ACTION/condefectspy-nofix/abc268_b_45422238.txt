@@ -1,0 +1,60 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [29,40]
+    identifier: s [29,30]
+    slice [31,39]
+        integer: 0 [31,32]
+        call [33,39]
+            identifier: len [33,36]
+            argument_list [36,39]
+                identifier: s [37,38]
+to
+comparison_operator [29,45]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [44,55]
+    identifier: t [44,45]
+    slice [46,54]
+        integer: 0 [46,47]
+        call [48,54]
+            identifier: len [48,51]
+            argument_list [51,54]
+                identifier: s [52,53]
+to
+comparison_operator [29,45]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [29,35]
+    identifier: s [29,30]
+    slice [31,34]
+        integer: 0 [31,32]
+        integer: 3 [33,34]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [39,45]
+    identifier: t [39,40]
+    slice [41,44]
+        integer: 0 [41,42]
+        integer: 3 [43,44]
+

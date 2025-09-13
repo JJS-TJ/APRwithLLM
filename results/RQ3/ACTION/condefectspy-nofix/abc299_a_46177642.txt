@@ -1,0 +1,317 @@
+New cluster:
+===
+insert-node
+---
+expression_statement [0,11]
+to
+module [0,55]
+at 0
+------------
+===
+insert-node
+---
+expression_statement [0,11]
+to
+module [0,55]
+at 0
+===
+insert-node
+---
+assignment [0,11]
+to
+expression_statement [0,11]
+at 0
+===
+insert-node
+---
+=: = [3,4]
+to
+assignment [0,11]
+at 1
+
+New cluster:
+===
+insert-node
+---
+;: ; [11,12]
+to
+module [0,55]
+at 1
+------------
+===
+insert-node
+---
+;: ; [11,12]
+to
+module [0,55]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [12,57]
+to
+module [0,55]
+at 2
+------------
+===
+insert-node
+---
+argument_list [17,57]
+to
+call [12,57]
+at 1
+===
+insert-node
+---
+comparison_operator: == [43,45]
+to
+comparison_operator [26,52]
+at 1
+===
+insert-node
+---
+slice [26,55]
+to
+subscript [18,56]
+at 1
+===
+insert-node
+---
+call [26,43]
+to
+comparison_operator [26,52]
+at 0
+===
+insert-node
+---
+string: '|*|\n' [45,52]
+to
+comparison_operator [26,52]
+at 2
+===
+insert-node
+---
+string: 'oiunt' [18,25]
+to
+subscript [18,56]
+at 0
+===
+insert-node
+---
+expression_statement [12,57]
+to
+module [0,55]
+at 2
+===
+insert-node
+---
+call [12,57]
+to
+expression_statement [12,57]
+at 0
+===
+insert-node
+---
+integer: 2 [54,55]
+to
+slice [26,55]
+at 1
+===
+insert-node
+---
+identifier: print [12,17]
+to
+call [12,57]
+at 0
+===
+insert-node
+---
+subscript [18,56]
+to
+argument_list [17,57]
+at 0
+===
+insert-node
+---
+comparison_operator [26,52]
+to
+slice [26,55]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pattern_list [0,3]
+    identifier: _ [0,1]
+    identifier: s [2,3]
+to
+assignment [0,11]
+at 0
+
+New cluster:
+MOVE from assignment [0,11]
+------------
+===
+move-tree
+---
+call [15,23]
+    list_splat [15,20]
+        *: * [15,16]
+        identifier: open [16,20]
+    argument_list [20,23]
+        integer: 0 [21,22]
+to
+assignment [0,11]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: open [4,8]
+to
+call [15,23]
+at 0
+------------
+===
+insert-node
+---
+identifier: open [4,8]
+to
+call [15,23]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+attribute [26,35]
+    identifier: s [26,27]
+    identifier: replace [28,35]
+to
+call [26,43]
+at 0
+
+New cluster:
+MOVE from call [26,43]
+------------
+===
+move-tree
+---
+argument_list [35,43]
+    string: '.' [36,39]
+    string: '' [40,42]
+to
+call [26,43]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+list_splat [15,20]
+    *: * [15,16]
+    identifier: open [16,20]
+
+New cluster:
+===
+delete-node
+---
+expression_statement [0,55]
+===
+------------
+===
+delete-node
+---
+string: '|*|' [45,50]
+===
+===
+delete-node
+---
+string: 'oiunt' [6,13]
+===
+===
+delete-node
+---
+slice [14,53]
+===
+===
+delete-node
+---
+subscript [14,27]
+===
+===
+delete-node
+---
+identifier: print [0,5]
+===
+===
+delete-node
+---
+expression_statement [0,55]
+===
+===
+delete-node
+---
+list [14,24]
+===
+===
+delete-node
+---
+comparison_operator [14,50]
+===
+===
+delete-node
+---
+call [14,43]
+===
+===
+delete-node
+---
+identifier: replace [28,35]
+===
+===
+delete-node
+---
+subscript [6,54]
+===
+===
+delete-node
+---
+integer: 2 [52,53]
+===
+===
+delete-node
+---
+attribute [14,35]
+===
+===
+delete-node
+---
+argument_list [5,55]
+===
+===
+delete-node
+---
+call [0,55]
+===
+===
+delete-node
+---
+comparison_operator: != [43,45]
+===
+===
+delete-node
+---
+integer: 1 [25,26]
+===
+

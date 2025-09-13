@@ -1,0 +1,18 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+else_clause [222,241]
+    else: else [222,226]
+    block [233,241]
+        expression_statement [233,241]
+            call [233,241]
+                identifier: print [233,238]
+                argument_list [238,241]
+                    integer: 0 [239,240]
+to
+if_statement [40,220]
+at 5
+

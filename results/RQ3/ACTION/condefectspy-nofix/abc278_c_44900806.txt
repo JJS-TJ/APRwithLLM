@@ -1,0 +1,23 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [313,374]
+    comparison_operator [316,335]
+        identifier: user1 [316,321]
+        subscript [325,335]
+            identifier: dic [325,328]
+            identifier: user2 [329,334]
+    block [350,374]
+        expression_statement [350,374]
+            call [350,374]
+                attribute [350,367]
+                    subscript [350,360]
+                        identifier: dic [350,353]
+                        identifier: user2 [354,359]
+                    identifier: remove [361,367]
+                argument_list [367,374]
+                    identifier: user1 [368,373]
+

@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from print('takahashi')# coding: utf-8 to print('Takahashi')# coding: utf-8
+------------
+===
+update-node
+---
+comment: print('takahashi')# coding: utf-8 [72,88]
+replace print('takahashi')# coding: utf-8 by print('Takahashi')# coding: utf-8
+
+New cluster:
+UPDATE from 'takahashi' to 'Takahashi'
+------------
+===
+update-node
+---
+string: 'takahashi' [60,71]
+replace 'takahashi' by 'Takahashi'
+

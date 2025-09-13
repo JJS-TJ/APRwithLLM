@@ -1,0 +1,95 @@
+New cluster:
+UPDATE from min to max
+------------
+===
+update-node
+---
+identifier: min [35,38]
+replace min by max
+
+New cluster:
+===
+insert-node
+---
+call [39,47]
+to
+argument_list [38,47]
+at 0
+------------
+===
+insert-node
+---
+argument_list [42,47]
+to
+call [39,47]
+at 1
+===
+insert-node
+---
+identifier: abs [39,42]
+to
+call [39,47]
+at 0
+===
+insert-node
+---
+call [39,47]
+to
+argument_list [38,47]
+at 0
+
+New cluster:
+===
+insert-node
+---
+call [48,56]
+to
+argument_list [38,47]
+at 1
+------------
+===
+insert-node
+---
+argument_list [51,56]
+to
+call [48,56]
+at 1
+===
+insert-node
+---
+identifier: abs [48,51]
+to
+call [48,56]
+at 0
+===
+insert-node
+---
+call [48,56]
+to
+argument_list [38,47]
+at 1
+
+New cluster:
+MOVE from argument_list [42,47]
+------------
+===
+move-tree
+---
+binary_operator [39,42]
+    identifier: R [39,40]
+    -: - [40,41]
+    integer: 8 [41,42]
+to
+argument_list [42,47]
+at 0
+===
+move-tree
+---
+binary_operator [43,46]
+    identifier: C [43,44]
+    -: - [44,45]
+    integer: 8 [45,46]
+to
+argument_list [51,56]
+at 0
+

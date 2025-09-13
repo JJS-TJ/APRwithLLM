@@ -1,0 +1,142 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [108,248]
+to
+if_statement [105,217]
+at 0
+------------
+===
+insert-node
+---
+or: or [177,179]
+to
+boolean_operator [108,212]
+at 1
+===
+insert-node
+---
+or: or [213,215]
+to
+boolean_operator [108,248]
+at 1
+===
+insert-node
+---
+boolean_operator [108,248]
+to
+if_statement [105,217]
+at 0
+===
+insert-node
+---
+boolean_operator [108,212]
+to
+boolean_operator [108,248]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+boolean_operator [216,248]
+    comparison_operator [216,230]
+        subscript [216,223]
+            subscript [216,220]
+                identifier: A [216,217]
+                identifier: i [218,219]
+            identifier: j [221,222]
+        comparison_operator: != [224,226]
+        string: 'D' [227,230]
+    and: and [231,234]
+    comparison_operator [235,248]
+        subscript [235,242]
+            subscript [235,239]
+                identifier: A [235,236]
+                identifier: j [237,238]
+            identifier: i [240,241]
+        comparison_operator: == [243,245]
+        string: 'D' [245,248]
+to
+boolean_operator [108,248]
+at 2
+
+New cluster:
+MOVE from boolean_operator [108,212]
+------------
+===
+move-tree
+---
+boolean_operator [108,176]
+    boolean_operator [108,140]
+        comparison_operator [108,122]
+            subscript [108,115]
+                subscript [108,112]
+                    identifier: A [108,109]
+                    identifier: i [110,111]
+                identifier: j [113,114]
+            comparison_operator: == [116,118]
+            string: 'W' [119,122]
+        and: and [123,126]
+        comparison_operator [127,140]
+            subscript [127,134]
+                subscript [127,131]
+                    identifier: A [127,128]
+                    identifier: j [129,130]
+                identifier: i [132,133]
+            comparison_operator: == [135,137]
+            string: 'W' [137,140]
+    or: or [141,143]
+    boolean_operator [144,176]
+        comparison_operator [144,158]
+            subscript [144,151]
+                subscript [144,148]
+                    identifier: A [144,145]
+                    identifier: i [146,147]
+                identifier: j [149,150]
+            comparison_operator: == [152,154]
+            string: 'L' [155,158]
+        and: and [159,162]
+        comparison_operator [163,176]
+            subscript [163,170]
+                subscript [163,167]
+                    identifier: A [163,164]
+                    identifier: j [165,166]
+                identifier: i [168,169]
+            comparison_operator: == [171,173]
+            string: 'L' [173,176]
+to
+boolean_operator [108,212]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+boolean_operator [180,212]
+    comparison_operator [180,194]
+        subscript [180,187]
+            subscript [180,184]
+                identifier: A [180,181]
+                identifier: i [182,183]
+            identifier: j [185,186]
+        comparison_operator: == [188,190]
+        string: 'D' [191,194]
+    and: and [195,198]
+    comparison_operator [199,212]
+        subscript [199,206]
+            subscript [199,203]
+                identifier: A [199,200]
+                identifier: j [201,202]
+            identifier: i [204,205]
+        comparison_operator: != [207,209]
+        string: 'D' [209,212]
+to
+boolean_operator [108,212]
+at 2
+

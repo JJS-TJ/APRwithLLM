@@ -1,0 +1,18 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [523,546]
+    identifier: f [526,527]
+    block [538,546]
+        expression_statement [538,546]
+            augmented_assignment [538,546]
+                identifier: ans [538,541]
+                +=: += [542,544]
+                integer: 1 [545,546]
+to
+block [82,535]
+at 5
+

@@ -1,0 +1,17 @@
+New cluster:
+MOVE from block [100,1180]
+------------
+===
+move-tree
+---
+expression_statement [492,510]
+    assignment [492,510]
+        identifier: minimum_index [492,505]
+        =: = [506,507]
+        unary_operator [508,510]
+            -: - [508,509]
+            integer: 1 [509,510]
+to
+block [100,1180]
+at 10
+

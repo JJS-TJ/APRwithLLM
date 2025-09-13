@@ -1,0 +1,14 @@
+New cluster:
+UPDATE from 2002 to 2003
+------------
+===
+update-node
+---
+integer: 2002 [1838,1842]
+replace 2002 by 2003
+===
+update-node
+---
+integer: 2002 [1843,1847]
+replace 2002 by 2003
+

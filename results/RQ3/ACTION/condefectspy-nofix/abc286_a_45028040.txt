@@ -1,0 +1,69 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [84,113]
+to
+binary_operator [84,113]
+at 0
+------------
+===
+insert-node
+---
++: + [103,104]
+to
+binary_operator [84,113]
+at 1
+===
+insert-node
+---
+binary_operator [84,113]
+to
+binary_operator [84,113]
+at 0
+
+New cluster:
+MOVE from binary_operator [84,113]
+------------
+===
+move-tree
+---
+binary_operator [84,102]
+    subscript [84,91]
+        identifier: A [84,85]
+        slice [86,90]
+            binary_operator [87,90]
+                identifier: P [87,88]
+                -: - [88,89]
+                integer: 1 [89,90]
+    +: + [92,93]
+    subscript [94,102]
+        identifier: A [94,95]
+        slice [96,101]
+            binary_operator [96,99]
+                identifier: R [96,97]
+                -: - [97,98]
+                integer: 1 [98,99]
+            identifier: S [100,101]
+to
+binary_operator [84,113]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [105,113]
+    identifier: A [105,106]
+    slice [107,112]
+        identifier: Q [107,108]
+        binary_operator [109,112]
+            identifier: R [109,110]
+            -: - [110,111]
+            integer: 1 [111,112]
+to
+binary_operator [84,113]
+at 2
+

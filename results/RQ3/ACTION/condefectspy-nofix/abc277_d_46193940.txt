@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [498,509]
+    identifier: max [498,501]
+    argument_list [501,509]
+        identifier: ans [502,505]
+        integer: 0 [507,508]
+to
+argument_list [497,502]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [498,501]
+===
+------------
+===
+delete-node
+---
+identifier: ans [498,501]
+===
+

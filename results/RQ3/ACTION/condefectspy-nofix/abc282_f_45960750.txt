@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+*=: *= [109,111]
+to
+augmented_assignment [107,113]
+at 1
+------------
+===
+insert-node
+---
+*=: *= [109,111]
+to
+augmented_assignment [107,113]
+at 1
+
+New cluster:
+===
+delete-node
+---
++=: += [109,111]
+===
+------------
+===
+delete-node
+---
++=: += [109,111]
+===
+

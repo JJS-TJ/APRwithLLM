@@ -1,0 +1,48 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [1042,1054]
+    subscript [1042,1051]
+        identifier: dp [1042,1044]
+        binary_operator [1045,1050]
+            identifier: i [1045,1046]
+            +: + [1047,1048]
+            integer: 1 [1049,1050]
+    identifier: j [1052,1053]
+to
+assignment [1042,1088]
+at 0
+
+New cluster:
+MOVE from boolean_operator [1057,1088]
+------------
+===
+move-tree
+---
+subscript [1042,1054]
+    subscript [1042,1051]
+        identifier: dp [1042,1044]
+        binary_operator [1045,1050]
+            identifier: i [1045,1046]
+            +: + [1047,1048]
+            integer: 1 [1049,1050]
+    identifier: j [1052,1053]
+to
+boolean_operator [1057,1088]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [1057,1065]
+    subscript [1057,1062]
+        identifier: dp [1057,1059]
+        identifier: i [1060,1061]
+    identifier: j [1063,1064]
+

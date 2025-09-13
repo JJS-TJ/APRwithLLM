@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from check to lis
+------------
+===
+update-node
+---
+identifier: check [685,690]
+replace check by lis
+

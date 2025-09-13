@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from M to N
+------------
+===
+update-node
+---
+identifier: M [97,98]
+replace M by N
+
+New cluster:
+UPDATE from N to M
+------------
+===
+update-node
+---
+identifier: N [92,93]
+replace N by M
+

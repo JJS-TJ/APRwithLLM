@@ -1,0 +1,21 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [496,526]
+    comparison_operator [499,506]
+        identifier: ni [499,501]
+        comparison_operator: == [502,504]
+        identifier: N [505,506]
+    block [517,526]
+        expression_statement [517,526]
+            call [517,526]
+                identifier: print [517,522]
+                argument_list [522,526]
+                    identifier: ni [523,525]
+to
+block [318,488]
+at 2
+

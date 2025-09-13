@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [634,647]
+    identifier: float [634,639]
+    argument_list [639,647]
+        string: '-inf' [640,646]
+to
+assignment [625,635]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 0 [634,635]
+===
+------------
+===
+delete-node
+---
+integer: 0 [634,635]
+===
+

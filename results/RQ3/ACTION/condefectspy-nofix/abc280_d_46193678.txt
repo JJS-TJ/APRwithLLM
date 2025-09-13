@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [179,185]
+    identifier: max [179,182]
+    argument_list [182,185]
+        identifier: f [183,184]
+to
+argument_list [178,181]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: y [179,180]
+===
+------------
+===
+delete-node
+---
+identifier: y [179,180]
+===
+

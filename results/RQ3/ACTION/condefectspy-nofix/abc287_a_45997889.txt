@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 'for' to 'For'
+------------
+===
+update-node
+---
+string: 'for' [78,83]
+replace 'for' by 'For'
+

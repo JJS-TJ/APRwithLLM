@@ -1,0 +1,103 @@
+New cluster:
+MOVE from assignment [163,210]
+------------
+===
+move-tree
+---
+binary_operator [188,210]
+    parenthesized_expression [188,193]
+        binary_operator [189,192]
+            identifier: A [189,190]
+            +: + [190,191]
+            integer: 1 [191,192]
+    *: * [193,194]
+    call [194,210]
+        identifier: pow [194,197]
+        argument_list [197,210]
+            identifier: A [198,199]
+            binary_operator [200,205]
+                identifier: mod [200,203]
+                -: - [203,204]
+                integer: 2 [204,205]
+            identifier: mod [206,209]
+to
+assignment [163,210]
+at 2
+
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [168,195]
+to
+binary_operator [188,210]
+at 0
+------------
+===
+insert-node
+---
+parenthesized_expression [168,195]
+to
+binary_operator [188,210]
+at 0
+
+New cluster:
+MOVE from parenthesized_expression [168,195]
+------------
+===
+move-tree
+---
+binary_operator [168,210]
+    binary_operator [168,187]
+        subscript [168,176]
+            identifier: rui [168,171]
+            binary_operator [172,175]
+                identifier: i [172,173]
+                +: + [173,174]
+                integer: 1 [174,175]
+        -: - [176,177]
+        subscript [177,187]
+            identifier: rui [177,180]
+            binary_operator [181,186]
+                binary_operator [181,184]
+                    identifier: i [181,182]
+                    +: + [182,183]
+                    identifier: A [183,184]
+                +: + [184,185]
+                integer: 1 [185,186]
+    +: + [187,188]
+    binary_operator [188,210]
+        parenthesized_expression [188,193]
+            binary_operator [189,192]
+                identifier: A [189,190]
+                +: + [190,191]
+                integer: 1 [191,192]
+        *: * [193,194]
+        call [194,210]
+            identifier: pow [194,197]
+            argument_list [197,210]
+                identifier: A [198,199]
+                binary_operator [200,205]
+                    identifier: mod [200,203]
+                    -: - [203,204]
+                    integer: 2 [204,205]
+                identifier: mod [206,209]
+to
+parenthesized_expression [168,195]
+at 0
+
+New cluster:
+MOVE from binary_operator [168,210]
+------------
+===
+move-tree
+---
+parenthesized_expression [188,193]
+    binary_operator [189,192]
+        identifier: A [189,190]
+        +: + [190,191]
+        integer: 1 [191,192]
+to
+binary_operator [168,210]
+at 2
+

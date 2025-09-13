@@ -1,0 +1,22 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [219,257]
+    comparison_operator [222,234]
+        tuple [222,227]
+            identifier: A [223,224]
+            identifier: B [225,226]
+        comparison_operator: == [227,229]
+        tuple [229,234]
+            integer: 0 [230,231]
+            integer: 0 [232,233]
+    block [249,257]
+        return_statement [249,257]
+            integer: 0 [256,257]
+to
+block [219,1008]
+at 0
+

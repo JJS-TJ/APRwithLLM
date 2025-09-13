@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [532,536]
+    identifier: S [532,533]
+    integer: 0 [534,535]
+to
+comparison_operator [532,545]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call [532,540]
+    identifier: tuple [532,537]
+    argument_list [537,540]
+        identifier: S [538,539]
+

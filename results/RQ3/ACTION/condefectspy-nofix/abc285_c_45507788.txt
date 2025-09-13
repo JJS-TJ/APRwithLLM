@@ -1,0 +1,29 @@
+New cluster:
+===
+insert-node
+---
+comment:     #print(x) [104,114]
+to
+block [76,143]
+at 1
+------------
+===
+insert-node
+---
+comment:     #print(x) [104,114]
+to
+block [76,143]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [104,112]
+    call [104,112]
+        identifier: print [104,109]
+        argument_list [109,112]
+            identifier: x [110,111]
+

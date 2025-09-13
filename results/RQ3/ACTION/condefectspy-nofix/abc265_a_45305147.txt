@@ -1,0 +1,77 @@
+New cluster:
+===
+insert-node
+---
+call [60,90]
+to
+expression_statement [60,79]
+at 0
+------------
+===
+insert-node
+---
+identifier: print [60,65]
+to
+call [60,90]
+at 0
+===
+insert-node
+---
+call [60,90]
+to
+expression_statement [60,79]
+at 0
+===
+insert-node
+---
+argument_list [65,90]
+to
+call [60,90]
+at 1
+
+New cluster:
+MOVE from argument_list [65,90]
+------------
+===
+move-tree
+---
+call [60,79]
+    identifier: print [60,65]
+    argument_list [65,79]
+        binary_operator [66,78]
+            binary_operator [66,70]
+                identifier: xn [66,68]
+                *: * [68,69]
+                identifier: x [69,70]
+            +: + [71,72]
+            binary_operator [74,78]
+                identifier: yn [74,76]
+                *: * [76,77]
+                identifier: y [77,78]
+to
+argument_list [65,90]
+at 0
+
+New cluster:
+UPDATE from print to min
+------------
+===
+update-node
+---
+identifier: print [60,65]
+replace print by min
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [85,88]
+    identifier: n [85,86]
+    *: * [86,87]
+    identifier: x [87,88]
+to
+argument_list [65,79]
+at 1
+

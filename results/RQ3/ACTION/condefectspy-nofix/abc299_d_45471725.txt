@@ -1,0 +1,54 @@
+New cluster:
+MOVE from argument_list [135,159]
+------------
+===
+move-tree
+---
+binary_operator [136,151]
+    string: "? " [136,140]
+    +: + [141,142]
+    call [143,151]
+        identifier: str [143,146]
+        argument_list [146,151]
+            identifier: mid [147,150]
+to
+argument_list [135,159]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+keyword_argument [152,162]
+    identifier: flush [152,157]
+    =: = [157,158]
+    true: True [158,162]
+to
+argument_list [135,159]
+at 1
+
+New cluster:
+===
+delete-node
+---
+binary_operator [136,158]
+===
+------------
+===
+delete-node
+---
+binary_operator [136,158]
+===
+===
+delete-node
+---
+string: '\n' [154,158]
+===
+===
+delete-node
+---
++: + [152,153]
+===
+

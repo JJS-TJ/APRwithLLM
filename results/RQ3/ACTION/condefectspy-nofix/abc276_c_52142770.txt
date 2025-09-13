@@ -1,0 +1,39 @@
+New cluster:
+UPDATE from r to l
+------------
+===
+update-node
+---
+identifier: r [222,223]
+replace r by l
+
+New cluster:
+===
+insert-node
+---
++: + [224,225]
+to
+binary_operator [222,227]
+at 1
+------------
+===
+insert-node
+---
++: + [224,225]
+to
+binary_operator [222,227]
+at 1
+
+New cluster:
+===
+delete-node
+---
+-: - [224,225]
+===
+------------
+===
+delete-node
+---
+-: - [224,225]
+===
+

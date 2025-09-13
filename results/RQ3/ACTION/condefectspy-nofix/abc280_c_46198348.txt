@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [119,125]
+    identifier: len [119,122]
+    argument_list [122,125]
+        identifier: t [123,124]
+to
+argument_list [118,121]
+at 0
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [119,120]
+===
+------------
+===
+delete-node
+---
+integer: 1 [119,120]
+===
+

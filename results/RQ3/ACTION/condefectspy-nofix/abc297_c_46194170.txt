@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 'T' to 'C'
+------------
+===
+update-node
+---
+string: 'T' [150,153]
+replace 'T' by 'C'
+
