@@ -1,0 +1,20 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [866,906]
+    comparison_operator [869,887]
+        subscript [869,882]
+            identifier: visited [869,876]
+            identifier: node [877,881]
+        comparison_operator: == [883,885]
+        integer: 1 [886,887]
+    block [898,906]
+        continue_statement [898,906]
+            continue: continue [898,906]
+to
+block [841,1054]
+at 1
+

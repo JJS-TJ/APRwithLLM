@@ -1,0 +1,56 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [411,436]
+to
+if_statement [408,481]
+at 0
+------------
+===
+insert-node
+---
+boolean_operator [411,436]
+to
+if_statement [408,481]
+at 0
+===
+insert-node
+---
+and: and [420,423]
+to
+boolean_operator [411,436]
+at 1
+
+New cluster:
+MOVE from boolean_operator [411,436]
+------------
+===
+move-tree
+---
+comparison_operator [411,419]
+    identifier: s [411,412]
+    comparison_operator: == [413,415]
+    string: "U" [416,419]
+to
+boolean_operator [411,436]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [424,436]
+    subscript [424,429]
+        identifier: q [424,425]
+        unary_operator [426,428]
+            -: - [426,427]
+            integer: 1 [427,428]
+    comparison_operator: != [430,432]
+    string: "U" [433,436]
+to
+boolean_operator [411,436]
+at 2
+

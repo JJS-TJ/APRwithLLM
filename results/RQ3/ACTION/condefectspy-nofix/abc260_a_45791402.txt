@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+elif_clause [204,243]
+    elif: elif [204,208]
+    comparison_operator [209,221]
+        subscript [209,213]
+            identifier: S [209,210]
+            integer: 0 [211,212]
+        comparison_operator: == [214,216]
+        subscript [217,221]
+            identifier: S [217,218]
+            integer: 1 [219,220]
+    block [232,243]
+        expression_statement [232,243]
+            call [232,243]
+                identifier: print [232,237]
+                argument_list [237,243]
+                    subscript [238,242]
+                        identifier: S [238,239]
+                        integer: 2 [240,241]
+to
+if_statement [167,230]
+at 2
+

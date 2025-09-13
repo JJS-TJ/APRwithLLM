@@ -1,0 +1,57 @@
+New cluster:
+===
+insert-node
+---
+identifier: rui [267,270]
+to
+binary_operator [253,272]
+at 2
+------------
+===
+insert-node
+---
+identifier: rui [267,270]
+to
+binary_operator [253,272]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [253,260]
+    binary_operator [254,259]
+        identifier: rui [254,257]
+        -: - [257,258]
+        integer: 1 [258,259]
+to
+binary_operator [253,262]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: rui [253,256]
+===
+------------
+===
+delete-node
+---
+identifier: rui [253,256]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [263,272]
+    binary_operator [264,271]
+        identifier: const [264,269]
+        +: + [269,270]
+        integer: 1 [270,271]
+

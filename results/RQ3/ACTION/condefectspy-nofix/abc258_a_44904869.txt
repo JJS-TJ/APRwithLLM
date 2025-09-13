@@ -1,0 +1,22 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+elif_clause [156,191]
+    elif: elif [156,160]
+    comparison_operator [161,167]
+        identifier: K [161,162]
+        comparison_operator: < [163,164]
+        integer: 10 [165,167]
+    block [174,191]
+        expression_statement [174,191]
+            call [174,191]
+                identifier: print [174,179]
+                argument_list [179,191]
+                    string: f"21:0{K}" [180,190]
+to
+if_statement [75,183]
+at 3
+

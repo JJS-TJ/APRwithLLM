@@ -1,0 +1,85 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [3798,3899]
+to
+argument_list [3797,3894]
+at 0
+------------
+===
+insert-node
+---
+binary_operator [3798,3899]
+to
+argument_list [3797,3894]
+at 0
+===
+insert-node
+---
+identifier: MOD [3896,3899]
+to
+binary_operator [3798,3899]
+at 2
+===
+insert-node
+---
+%: % [3894,3895]
+to
+binary_operator [3798,3899]
+at 1
+
+New cluster:
+MOVE from binary_operator [3798,3899]
+------------
+===
+move-tree
+---
+call [3798,3893]
+    identifier: sum [3798,3801]
+    generator_expression [3801,3893]
+        subscript [3802,3824]
+            identifier: dp [3802,3804]
+            binary_operator [3805,3823]
+                binary_operator [3805,3819]
+                    binary_operator [3805,3811]
+                        identifier: a [3805,3806]
+                        *: * [3807,3808]
+                        identifier: pp [3809,3811]
+                    +: + [3812,3813]
+                    binary_operator [3814,3819]
+                        identifier: b [3814,3815]
+                        *: * [3816,3817]
+                        identifier: p [3818,3819]
+                +: + [3820,3821]
+                identifier: c [3822,3823]
+        for_in_clause [3825,3842]
+            identifier: a [3829,3830]
+            call [3834,3842]
+                identifier: range [3834,3839]
+                argument_list [3839,3842]
+                    identifier: m [3840,3841]
+        for_in_clause [3843,3867]
+            identifier: b [3847,3848]
+            call [3852,3867]
+                identifier: range [3852,3857]
+                argument_list [3857,3867]
+                    binary_operator [3858,3863]
+                        identifier: a [3858,3859]
+                        +: + [3860,3861]
+                        integer: 1 [3862,3863]
+                    identifier: m [3865,3866]
+        for_in_clause [3868,3892]
+            identifier: c [3872,3873]
+            call [3877,3892]
+                identifier: range [3877,3882]
+                argument_list [3882,3892]
+                    binary_operator [3883,3888]
+                        identifier: b [3883,3884]
+                        +: + [3885,3886]
+                        integer: 1 [3887,3888]
+                    identifier: m [3890,3891]
+to
+binary_operator [3798,3899]
+at 0
+

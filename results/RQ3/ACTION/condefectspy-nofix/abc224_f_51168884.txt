@@ -1,0 +1,36 @@
+New cluster:
+===
+insert-node
+---
+comment:     # sys.stdin = io.StringIO(_INPUT) [950,984]
+to
+if_statement [918,993]
+at 1
+------------
+===
+insert-node
+---
+comment:     # sys.stdin = io.StringIO(_INPUT) [950,984]
+to
+if_statement [918,993]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [950,981]
+    assignment [950,981]
+        attribute [950,959]
+            identifier: sys [950,953]
+            identifier: stdin [954,959]
+        =: = [960,961]
+        call [962,981]
+            attribute [962,973]
+                identifier: io [962,964]
+                identifier: StringIO [965,973]
+            argument_list [973,981]
+                identifier: _INPUT [974,980]
+

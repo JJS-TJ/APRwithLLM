@@ -1,0 +1,80 @@
+New cluster:
+===
+insert-node
+---
+elif_clause [75,123]
+to
+if_statement [13,110]
+at 2
+------------
+===
+insert-node
+---
+elif_clause [75,123]
+to
+if_statement [13,110]
+at 2
+===
+insert-node
+---
+elif: elif [75,79]
+to
+elif_clause [75,123]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [79,92]
+    comparison_operator [80,91]
+        call [80,86]
+            identifier: len [80,83]
+            argument_list [83,86]
+                identifier: s [84,85]
+        comparison_operator: == [87,89]
+        integer: 2 [90,91]
+to
+elif_clause [75,123]
+at 1
+
+New cluster:
+MOVE from elif_clause [75,123]
+------------
+===
+move-tree
+---
+block [86,110]
+    expression_statement [86,98]
+        call [86,98]
+            identifier: print [86,91]
+            argument_list [91,98]
+                string: 'Yes' [92,97]
+    expression_statement [104,110]
+        call [104,110]
+            identifier: exit [104,108]
+            argument_list [108,110]
+to
+elif_clause [75,123]
+at 2
+
+New cluster:
+===
+delete-node
+---
+else_clause [75,110]
+===
+------------
+===
+delete-node
+---
+else_clause [75,110]
+===
+===
+delete-node
+---
+else: else [75,79]
+===
+

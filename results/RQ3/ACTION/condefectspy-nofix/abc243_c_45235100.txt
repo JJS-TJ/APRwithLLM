@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [515,567]
+    boolean_operator [518,548]
+        comparison_operator [518,531]
+            identifier: y [518,519]
+            not in: not [520,523]
+            not in: in [524,526]
+            identifier: r_ok [527,531]
+        or: or [532,534]
+        comparison_operator [535,548]
+            identifier: y [535,536]
+            not in: not [537,540]
+            not in: in [541,543]
+            identifier: l_ok [544,548]
+    block [559,567]
+        continue_statement [559,567]
+            continue: continue [559,567]
+to
+block [515,574]
+at 0
+

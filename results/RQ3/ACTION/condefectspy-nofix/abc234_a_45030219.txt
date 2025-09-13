@@ -1,0 +1,75 @@
+New cluster:
+MOVE from argument_list [53,75]
+------------
+===
+move-tree
+---
+call [54,66]
+    identifier: f [54,55]
+    argument_list [55,66]
+        call [56,65]
+            identifier: f [56,57]
+            argument_list [57,65]
+                binary_operator [58,64]
+                    call [58,62]
+                        identifier: f [58,59]
+                        argument_list [59,62]
+                            identifier: n [60,61]
+                    +: + [62,63]
+                    identifier: n [63,64]
+to
+argument_list [53,75]
+at 0
+
+New cluster:
+MOVE from argument_list [55,66]
+------------
+===
+move-tree
+---
+binary_operator [54,74]
+    call [54,66]
+        identifier: f [54,55]
+        argument_list [55,66]
+            call [56,65]
+                identifier: f [56,57]
+                argument_list [57,65]
+                    binary_operator [58,64]
+                        call [58,62]
+                            identifier: f [58,59]
+                            argument_list [59,62]
+                                identifier: n [60,61]
+                        +: + [62,63]
+                        identifier: n [63,64]
+    +: + [66,67]
+    call [67,74]
+        identifier: f [67,68]
+        argument_list [68,74]
+            call [69,73]
+                identifier: f [69,70]
+                argument_list [70,73]
+                    identifier: n [71,72]
+to
+argument_list [55,66]
+at 0
+
+New cluster:
+MOVE from binary_operator [54,74]
+------------
+===
+move-tree
+---
+call [56,65]
+    identifier: f [56,57]
+    argument_list [57,65]
+        binary_operator [58,64]
+            call [58,62]
+                identifier: f [58,59]
+                argument_list [59,62]
+                    identifier: n [60,61]
+            +: + [62,63]
+            identifier: n [63,64]
+to
+binary_operator [54,74]
+at 0
+

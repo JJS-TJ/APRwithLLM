@@ -1,0 +1,74 @@
+New cluster:
+===
+insert-node
+---
+not in: not [866,869]
+to
+comparison_operator [859,871]
+at 1
+------------
+===
+insert-node
+---
+not in: not [866,869]
+to
+comparison_operator [859,871]
+at 1
+
+New cluster:
+===
+insert-node
+---
+not in: in [870,872]
+to
+comparison_operator [859,871]
+at 2
+------------
+===
+insert-node
+---
+not in: in [870,872]
+to
+comparison_operator [859,871]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: nowb [873,877]
+to
+comparison_operator [859,871]
+at 3
+------------
+===
+insert-node
+---
+identifier: nowb [873,877]
+to
+comparison_operator [859,871]
+at 3
+
+New cluster:
+===
+delete-node
+---
+comparison_operator: != [865,867]
+===
+------------
+===
+delete-node
+---
+comparison_operator: != [865,867]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [867,871]
+    identifier: a [867,868]
+    identifier: i [869,870]
+

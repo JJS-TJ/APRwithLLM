@@ -1,0 +1,41 @@
+New cluster:
+MOVE from return_statement [90,106]
+------------
+===
+move-tree
+---
+binary_operator [97,104]
+    identifier: A [97,98]
+    *: * [98,99]
+    parenthesized_expression [99,104]
+        binary_operator [100,103]
+            identifier: T [100,101]
+            -: - [101,102]
+            identifier: S [102,103]
+to
+return_statement [90,106]
+at 0
+
+New cluster:
+===
+delete-node
+---
+binary_operator [97,106]
+===
+------------
+===
+delete-node
+---
+binary_operator [97,106]
+===
+===
+delete-node
+---
+/: / [104,105]
+===
+===
+delete-node
+---
+integer: 2 [105,106]
+===
+

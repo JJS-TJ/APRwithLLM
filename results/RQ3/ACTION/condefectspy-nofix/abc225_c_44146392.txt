@@ -1,0 +1,150 @@
+New cluster:
+MOVE from binary_operator [267,284]
+------------
+===
+move-tree
+---
+binary_operator [267,279]
+    binary_operator [267,275]
+        parenthesized_expression [267,273]
+            binary_operator [268,272]
+                identifier: i [268,269]
+                +: + [269,270]
+                identifier: i0 [270,272]
+        *: * [273,274]
+        integer: 7 [274,275]
+    +: + [276,277]
+    identifier: j [278,279]
+to
+binary_operator [267,284]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: j [283,284]
+to
+binary_operator [267,287]
+at 2
+------------
+===
+insert-node
+---
+identifier: j [283,284]
+to
+binary_operator [267,287]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [267,274]
+    subscript [267,271]
+        identifier: B [267,268]
+        integer: 0 [269,270]
+    integer: 0 [272,273]
+to
+binary_operator [267,284]
+at 0
+
+New cluster:
+UPDATE from j to i
+------------
+===
+update-node
+---
+identifier: j [278,279]
+replace j by i
+
+New cluster:
+===
+insert-node
+---
+*: * [278,279]
+to
+binary_operator [267,279]
+at 3
+------------
+===
+insert-node
+---
+*: * [278,279]
+to
+binary_operator [267,279]
+at 3
+
+New cluster:
+===
+insert-node
+---
+integer: 7 [279,280]
+to
+binary_operator [267,279]
+at 4
+------------
+===
+insert-node
+---
+integer: 7 [279,280]
+to
+binary_operator [267,279]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [267,275]
+    parenthesized_expression [267,273]
+        binary_operator [268,272]
+            identifier: i [268,269]
+            +: + [269,270]
+            identifier: i0 [270,272]
+    *: * [273,274]
+    integer: 7 [274,275]
+
+New cluster:
+===
+delete-node
+---
++: + [276,277]
+===
+------------
+===
+delete-node
+---
++: + [276,277]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: j0 [282,284]
+===
+------------
+===
+delete-node
+---
+identifier: j0 [282,284]
+===
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [286,287]
+===
+------------
+===
+delete-node
+---
+integer: 1 [286,287]
+===
+

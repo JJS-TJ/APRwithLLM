@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [590,600]
+    attribute [590,597]
+        string: '' [590,592]
+        identifier: join [593,597]
+    argument_list [597,600]
+        identifier: i [598,599]
+to
+argument_list [589,593]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+list_splat [590,592]
+    *: * [590,591]
+    identifier: i [591,592]
+

@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [243,250]
+    identifier: ans [243,246]
+    slice [247,249]
+        integer: 1 [247,248]
+to
+list_splat [242,246]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [243,246]
+===
+------------
+===
+delete-node
+---
+identifier: ans [243,246]
+===
+

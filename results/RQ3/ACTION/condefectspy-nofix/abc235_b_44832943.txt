@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+subscript [63,67]
+    identifier: H [63,64]
+    integer: 0 [65,66]
+to
+assignment [57,64]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 0 [63,64]
+===
+------------
+===
+delete-node
+---
+integer: 0 [63,64]
+===
+

@@ -1,0 +1,44 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [149,155]
+to
+argument_list [148,154]
+at 0
+------------
+===
+insert-node
+---
+integer: 1 [154,155]
+to
+binary_operator [149,155]
+at 2
+===
+insert-node
+---
+binary_operator [149,155]
+to
+argument_list [148,154]
+at 0
+===
+insert-node
+---
+-: - [153,154]
+to
+binary_operator [149,155]
+at 1
+
+New cluster:
+MOVE from binary_operator [149,155]
+------------
+===
+move-tree
+---
+subscript [149,153]
+    identifier: A [149,150]
+    identifier: i [151,152]
+to
+binary_operator [149,155]
+at 0
+

@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [659,670]
+    identifier: sorted [659,665]
+    argument_list [665,670]
+        identifier: ans [666,669]
+to
+list_splat [658,662]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [659,662]
+===
+------------
+===
+delete-node
+---
+identifier: ans [659,662]
+===
+

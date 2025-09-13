@@ -1,0 +1,36 @@
+New cluster:
+MOVE from assignment [0,17]
+------------
+===
+move-tree
+---
+call [9,16]
+    identifier: input [9,14]
+    argument_list [14,16]
+to
+assignment [0,17]
+at 2
+
+New cluster:
+===
+delete-node
+---
+call [4,17]
+===
+------------
+===
+delete-node
+---
+call [4,17]
+===
+===
+delete-node
+---
+identifier: list [4,8]
+===
+===
+delete-node
+---
+argument_list [8,17]
+===
+

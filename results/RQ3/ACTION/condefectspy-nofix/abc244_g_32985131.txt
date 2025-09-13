@@ -1,0 +1,31 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list_comprehension [1019,1039]
+    binary_operator [1020,1025]
+        identifier: a [1020,1021]
+        +: + [1022,1023]
+        integer: 1 [1024,1025]
+    for_in_clause [1026,1038]
+        identifier: a [1030,1031]
+        identifier: ans [1035,1038]
+to
+argument_list [1013,1023]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [1019,1022]
+===
+------------
+===
+delete-node
+---
+identifier: ans [1019,1022]
+===
+

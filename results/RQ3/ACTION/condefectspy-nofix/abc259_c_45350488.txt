@@ -1,0 +1,142 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [359,389]
+to
+boolean_operator [359,397]
+at 0
+------------
+===
+insert-node
+---
+boolean_operator [359,389]
+to
+boolean_operator [359,397]
+at 0
+===
+insert-node
+---
+and: and [376,379]
+to
+boolean_operator [359,389]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [359,375]
+    subscript [359,366]
+        subscript [359,363]
+            identifier: l [359,360]
+            identifier: o [361,362]
+        integer: 0 [364,365]
+    comparison_operator: == [366,368]
+    subscript [368,375]
+        subscript [368,372]
+            identifier: m [368,369]
+            identifier: o [370,371]
+        integer: 0 [373,374]
+to
+boolean_operator [359,389]
+at 0
+
+New cluster:
+MOVE from boolean_operator [359,389]
+------------
+===
+move-tree
+---
+comparison_operator [359,380]
+    call [359,369]
+        identifier: list [359,363]
+        argument_list [363,369]
+            subscript [364,368]
+                identifier: l [364,365]
+                identifier: o [366,367]
+    comparison_operator: < [369,370]
+    call [370,380]
+        identifier: list [370,374]
+        argument_list [374,380]
+            subscript [375,379]
+                identifier: m [375,376]
+                identifier: o [377,378]
+to
+boolean_operator [359,389]
+at 2
+
+New cluster:
+MOVE from comparison_operator [359,380]
+------------
+===
+move-tree
+---
+subscript [364,368]
+    identifier: l [364,365]
+    identifier: o [366,367]
+to
+comparison_operator [359,380]
+at 0
+
+New cluster:
+MOVE from comparison_operator [359,380]
+------------
+===
+move-tree
+---
+subscript [375,379]
+    identifier: m [375,376]
+    identifier: o [377,378]
+to
+comparison_operator [359,380]
+at 3
+
+New cluster:
+===
+delete-node
+---
+call [359,369]
+===
+------------
+===
+delete-node
+---
+call [359,369]
+===
+===
+delete-node
+---
+argument_list [363,369]
+===
+===
+delete-node
+---
+identifier: list [359,363]
+===
+
+New cluster:
+===
+delete-node
+---
+call [370,380]
+===
+------------
+===
+delete-node
+---
+argument_list [374,380]
+===
+===
+delete-node
+---
+identifier: list [370,374]
+===
+===
+delete-node
+---
+call [370,380]
+===
+

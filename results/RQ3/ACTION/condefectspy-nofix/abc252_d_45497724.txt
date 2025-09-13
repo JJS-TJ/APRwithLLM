@@ -1,0 +1,54 @@
+New cluster:
+===
+insert-node
+---
+call [213,228]
+to
+expression_statement [213,223]
+at 0
+------------
+===
+insert-node
+---
+identifier: print [213,218]
+to
+call [213,228]
+at 0
+===
+insert-node
+---
+call [213,228]
+to
+expression_statement [213,223]
+at 0
+===
+insert-node
+---
+argument_list [218,228]
+to
+call [213,228]
+at 1
+
+New cluster:
+MOVE from argument_list [218,228]
+------------
+===
+move-tree
+---
+call [213,223]
+    identifier: print [213,218]
+    argument_list [218,223]
+        identifier: ans [219,222]
+to
+argument_list [218,228]
+at 0
+
+New cluster:
+UPDATE from print to int
+------------
+===
+update-node
+---
+identifier: print [213,218]
+replace print by int
+

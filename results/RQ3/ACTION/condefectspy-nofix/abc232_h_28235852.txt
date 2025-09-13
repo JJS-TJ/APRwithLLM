@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from i to j0
+------------
+===
+update-node
+---
+identifier: i [870,871]
+replace i by j0
+
+New cluster:
+UPDATE from j to t
+------------
+===
+update-node
+---
+identifier: j [873,874]
+replace j by t
+

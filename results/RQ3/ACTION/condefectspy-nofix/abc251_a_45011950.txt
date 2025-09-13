@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [28,31]
+    integer: 6 [28,29]
+    +: + [29,30]
+    integer: 1 [30,31]
+to
+argument_list [27,30]
+at 0
+
+New cluster:
+===
+delete-node
+---
+integer: 6 [28,29]
+===
+------------
+===
+delete-node
+---
+integer: 6 [28,29]
+===
+

@@ -1,0 +1,33 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+boolean_operator [520,541]
+    identifier: ans [520,523]
+    and: and [524,527]
+    comparison_operator [528,541]
+        call [528,536]
+            identifier: len [528,531]
+            argument_list [531,536]
+                identifier: ans [532,535]
+        comparison_operator: == [537,539]
+        identifier: N [540,541]
+to
+if_statement [517,563]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [520,523]
+===
+------------
+===
+delete-node
+---
+identifier: ans [520,523]
+===
+

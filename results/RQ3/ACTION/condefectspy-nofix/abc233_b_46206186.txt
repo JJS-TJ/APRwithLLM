@@ -1,0 +1,114 @@
+New cluster:
+===
+insert-node
+---
+identifier: r [85,86]
+to
+slice [83,87]
+at 0
+------------
+===
+insert-node
+---
+identifier: r [85,86]
+to
+slice [83,87]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [59,62]
+    identifier: l [59,60]
+    -: - [60,61]
+    integer: 1 [61,62]
+to
+slice [58,60]
+at 0
+
+New cluster:
+MOVE from slice [66,71]
+------------
+===
+move-tree
+---
+identifier: l [66,67]
+to
+slice [66,71]
+at 1
+
+New cluster:
+UPDATE from l to r
+------------
+===
+update-node
+---
+identifier: l [66,67]
+replace l by r
+
+New cluster:
+UPDATE from r to l
+------------
+===
+update-node
+---
+identifier: r [68,69]
+replace r by l
+
+New cluster:
+===
+insert-node
+---
+-: - [69,70]
+to
+binary_operator [68,71]
+at 1
+------------
+===
+insert-node
+---
+-: - [69,70]
+to
+binary_operator [68,71]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: l [59,60]
+===
+------------
+===
+delete-node
+---
+identifier: l [59,60]
+===
+
+New cluster:
+===
+delete-node
+---
++: + [69,70]
+===
+------------
+===
+delete-node
+---
++: + [69,70]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [83,86]
+    identifier: r [83,84]
+    +: + [84,85]
+    integer: 1 [85,86]
+

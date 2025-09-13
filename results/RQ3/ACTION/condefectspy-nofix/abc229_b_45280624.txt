@@ -1,0 +1,23 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [126,132]
+    call [126,132]
+        identifier: exit [126,130]
+        argument_list [130,132]
+to
+block [103,131]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+break_statement [126,131]
+    break: break [126,131]
+

@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: N [522,523]
+to
+binary_operator [520,523]
+at 2
+------------
+===
+insert-node
+---
+identifier: N [522,523]
+to
+binary_operator [520,523]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [522,523]
+===
+------------
+===
+delete-node
+---
+integer: 1 [522,523]
+===
+

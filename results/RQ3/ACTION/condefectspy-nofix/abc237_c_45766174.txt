@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from s to tmp1
+------------
+===
+update-node
+---
+identifier: s [101,102]
+replace s by tmp1
+

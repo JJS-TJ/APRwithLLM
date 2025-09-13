@@ -1,0 +1,74 @@
+New cluster:
+===
+insert-node
+---
+call [371,406]
+to
+expression_statement [371,411]
+at 0
+------------
+===
+insert-node
+---
+call [371,406]
+to
+expression_statement [371,411]
+at 0
+===
+insert-node
+---
+argument_list [376,406]
+to
+call [371,406]
+at 1
+===
+insert-node
+---
+identifier: print [371,376]
+to
+call [371,406]
+at 0
+
+New cluster:
+MOVE from argument_list [376,406]
+------------
+===
+move-tree
+---
+call [383,411]
+    identifier: max [383,386]
+    generator_expression [386,411]
+        call [387,395]
+            identifier: max [387,390]
+            argument_list [390,395]
+                identifier: row [391,394]
+        for_in_clause [396,410]
+            identifier: row [400,403]
+            identifier: ans [407,410]
+to
+argument_list [376,406]
+at 0
+
+New cluster:
+===
+delete-node
+---
+assignment [371,411]
+===
+------------
+===
+delete-node
+---
+=: = [381,382]
+===
+===
+delete-node
+---
+identifier: max_value [371,380]
+===
+===
+delete-node
+---
+assignment [371,411]
+===
+

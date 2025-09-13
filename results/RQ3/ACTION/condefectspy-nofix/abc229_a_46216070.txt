@@ -1,0 +1,50 @@
+New cluster:
+===
+insert-node
+---
+comparison_operator [60,81]
+to
+boolean_operator [35,70]
+at 2
+------------
+===
+insert-node
+---
+comparison_operator: == [68,70]
+to
+comparison_operator [60,81]
+at 1
+===
+insert-node
+---
+comparison_operator [60,81]
+to
+boolean_operator [35,70]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list [60,68]
+    identifier: s1 [61,63]
+    identifier: s2 [65,67]
+to
+comparison_operator [60,81]
+at 0
+
+New cluster:
+MOVE from comparison_operator [60,81]
+------------
+===
+move-tree
+---
+list [59,70]
+    string: ".#" [60,64]
+    string: "#." [65,69]
+to
+comparison_operator [60,81]
+at 2
+

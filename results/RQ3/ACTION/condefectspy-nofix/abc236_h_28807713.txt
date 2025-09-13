@@ -1,0 +1,96 @@
+New cluster:
+MOVE from comparison_operator [987,1006]
+------------
+===
+move-tree
+---
+comparison_operator: <= [997,999]
+to
+comparison_operator [987,1006]
+at 2
+===
+move-tree
+---
+binary_operator [987,996]
+    identifier: INF [987,990]
+    //: // [991,993]
+    identifier: ot [994,996]
+to
+comparison_operator [987,1006]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [987,997]
+    identifier: float [987,992]
+    argument_list [992,997]
+        identifier: INF [993,996]
+to
+binary_operator [1000,1006]
+at 0
+
+New cluster:
+===
+insert-node
+---
+/: / [998,999]
+to
+binary_operator [1000,1006]
+at 1
+------------
+===
+insert-node
+---
+/: / [998,999]
+to
+binary_operator [1000,1006]
+at 1
+
+New cluster:
+UPDATE from INF to ot
+------------
+===
+update-node
+---
+identifier: INF [987,990]
+replace INF by ot
+
+New cluster:
+UPDATE from ot to g
+------------
+===
+update-node
+---
+identifier: ot [994,996]
+replace ot by g
+
+New cluster:
+===
+delete-node
+---
+//: // [1002,1004]
+===
+------------
+===
+delete-node
+---
+//: // [1002,1004]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: g [1005,1006]
+===
+------------
+===
+delete-node
+---
+identifier: g [1005,1006]
+===
+

@@ -1,0 +1,39 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+list [553,559]
+    integer: 0 [554,555]
+    integer: 2 [557,558]
+to
+comparison_operator [537,554]
+at 1
+
+New cluster:
+===
+delete-node
+---
+comparison_operator: == [550,552]
+===
+------------
+===
+delete-node
+---
+comparison_operator: == [550,552]
+===
+
+New cluster:
+===
+delete-node
+---
+integer: 0 [553,554]
+===
+------------
+===
+delete-node
+---
+integer: 0 [553,554]
+===
+

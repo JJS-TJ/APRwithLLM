@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 299 to 298
+------------
+===
+update-node
+---
+integer: 299 [22,25]
+replace 299 by 298
+

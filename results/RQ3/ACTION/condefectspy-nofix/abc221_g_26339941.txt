@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "DLRU" to "LDUR"
+------------
+===
+update-node
+---
+string: "DLRU" [371,377]
+replace "DLRU" by "LDUR"
+

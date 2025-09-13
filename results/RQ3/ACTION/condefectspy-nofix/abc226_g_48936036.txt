@@ -1,0 +1,53 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [735,746]
+to
+comparison_operator [732,739]
+at 2
+------------
+===
+insert-node
+---
++: + [741,742]
+to
+binary_operator [735,746]
+at 1
+===
+insert-node
+---
+binary_operator [735,746]
+to
+comparison_operator [732,739]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [735,741]
+    integer: 2 [735,736]
+    *: * [736,737]
+    subscript [737,741]
+        identifier: A [737,738]
+        integer: 1 [739,740]
+to
+binary_operator [735,746]
+at 0
+
+New cluster:
+MOVE from binary_operator [735,746]
+------------
+===
+move-tree
+---
+subscript [735,739]
+    identifier: A [735,736]
+    integer: 0 [737,738]
+to
+binary_operator [735,746]
+at 2
+

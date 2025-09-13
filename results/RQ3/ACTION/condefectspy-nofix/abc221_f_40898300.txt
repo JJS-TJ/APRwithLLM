@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from i to nxt
+------------
+===
+update-node
+---
+identifier: i [1775,1776]
+replace i by nxt
+

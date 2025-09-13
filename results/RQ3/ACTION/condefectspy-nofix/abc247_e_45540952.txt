@@ -1,0 +1,91 @@
+New cluster:
+===
+insert-node
+---
+if_statement [225,259]
+to
+block [225,408]
+at 0
+------------
+===
+insert-node
+---
+if_statement [225,259]
+to
+block [225,408]
+at 0
+
+New cluster:
+MOVE from if_statement [225,259]
+------------
+===
+move-tree
+---
+block [248,259]
+    expression_statement [248,259]
+        assignment [248,259]
+            identifier: index_X [248,255]
+            =: = [256,257]
+            identifier: i [258,259]
+to
+if_statement [225,259]
+at 1
+===
+move-tree
+---
+comparison_operator [228,237]
+    subscript [228,232]
+        identifier: A [228,229]
+        identifier: i [230,231]
+    comparison_operator: == [233,235]
+    identifier: X [236,237]
+to
+if_statement [225,259]
+at 0
+
+New cluster:
+MOVE from if_statement [225,355]
+------------
+===
+move-tree
+---
+comparison_operator [270,279]
+    subscript [270,274]
+        identifier: A [270,271]
+        identifier: i [272,273]
+    comparison_operator: == [275,277]
+    identifier: Y [278,279]
+to
+if_statement [225,355]
+at 0
+===
+move-tree
+---
+block [290,301]
+    expression_statement [290,301]
+        assignment [290,301]
+            identifier: index_Y [290,297]
+            =: = [298,299]
+            identifier: i [300,301]
+to
+if_statement [225,355]
+at 1
+
+New cluster:
+===
+delete-node
+---
+elif_clause [265,301]
+===
+------------
+===
+delete-node
+---
+elif: elif [265,269]
+===
+===
+delete-node
+---
+elif_clause [265,301]
+===
+

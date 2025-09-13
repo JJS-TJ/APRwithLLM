@@ -1,0 +1,150 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [1051,1107]
+to
+if_statement [1048,1162]
+at 0
+------------
+===
+insert-node
+---
+or: or [1078,1080]
+to
+boolean_operator [1051,1107]
+at 1
+===
+insert-node
+---
+parenthesized_expression [1051,1077]
+to
+boolean_operator [1051,1107]
+at 0
+===
+insert-node
+---
+boolean_operator [1082,1106]
+to
+parenthesized_expression [1081,1107]
+at 0
+===
+insert-node
+---
+and: and [1091,1094]
+to
+boolean_operator [1082,1106]
+at 1
+===
+insert-node
+---
+boolean_operator [1051,1107]
+to
+if_statement [1048,1162]
+at 0
+===
+insert-node
+---
+parenthesized_expression [1081,1107]
+to
+boolean_operator [1051,1107]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [1051,1077]
+------------
+===
+move-tree
+---
+boolean_operator [1051,1071]
+    comparison_operator [1051,1059]
+        identifier: sx [1051,1053]
+        comparison_operator: == [1054,1056]
+        identifier: gx [1057,1059]
+    or: or [1060,1062]
+    comparison_operator [1063,1071]
+        identifier: sy [1063,1065]
+        comparison_operator: == [1066,1068]
+        identifier: gy [1069,1071]
+to
+parenthesized_expression [1051,1077]
+at 0
+
+New cluster:
+===
+insert-node
+---
+and: and [1061,1064]
+to
+boolean_operator [1051,1071]
+at 1
+------------
+===
+insert-node
+---
+and: and [1061,1064]
+to
+boolean_operator [1051,1071]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [1065,1076]
+    binary_operator [1065,1071]
+        identifier: sx [1065,1067]
+        %: % [1068,1069]
+        identifier: B [1070,1071]
+    comparison_operator: == [1072,1074]
+    integer: 0 [1075,1076]
+to
+boolean_operator [1051,1071]
+at 2
+
+New cluster:
+MOVE from boolean_operator [1082,1106]
+------------
+===
+move-tree
+---
+comparison_operator [1063,1071]
+    identifier: sy [1063,1065]
+    comparison_operator: == [1066,1068]
+    identifier: gy [1069,1071]
+to
+boolean_operator [1082,1106]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [1095,1106]
+    binary_operator [1095,1101]
+        identifier: sy [1095,1097]
+        %: % [1098,1099]
+        identifier: B [1100,1101]
+    comparison_operator: == [1102,1104]
+    integer: 0 [1105,1106]
+to
+boolean_operator [1082,1106]
+at 2
+
+New cluster:
+===
+delete-node
+---
+or: or [1060,1062]
+===
+------------
+===
+delete-node
+---
+or: or [1060,1062]
+===
+

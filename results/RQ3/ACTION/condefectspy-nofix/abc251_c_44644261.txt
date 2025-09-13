@@ -1,0 +1,17 @@
+New cluster:
+MOVE from block [222,385]
+------------
+===
+move-tree
+---
+expression_statement [339,362]
+    call [339,362]
+        attribute [339,354]
+            identifier: max_strings [339,350]
+            identifier: add [351,354]
+        argument_list [354,362]
+            identifier: string [355,361]
+to
+block [222,385]
+at 2
+

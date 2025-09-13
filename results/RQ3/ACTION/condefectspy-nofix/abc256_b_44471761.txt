@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 5 to 4
+------------
+===
+update-node
+---
+integer: 5 [151,152]
+replace 5 by 4
+

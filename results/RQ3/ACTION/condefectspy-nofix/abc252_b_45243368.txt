@@ -1,0 +1,46 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [705,714]
+to
+comparison_operator [705,717]
+at 0
+------------
+===
+insert-node
+---
+integer: 1 [713,714]
+to
+binary_operator [705,714]
+at 2
+===
+insert-node
+---
+binary_operator [705,714]
+to
+comparison_operator [705,717]
+at 0
+===
+insert-node
+---
++: + [712,713]
+to
+binary_operator [705,714]
+at 1
+
+New cluster:
+MOVE from binary_operator [705,714]
+------------
+===
+move-tree
+---
+subscript [705,712]
+    subscript [705,709]
+        identifier: A [705,706]
+        identifier: i [707,708]
+    integer: 1 [710,711]
+to
+binary_operator [705,714]
+at 0
+

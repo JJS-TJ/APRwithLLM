@@ -1,0 +1,56 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [330,335]
+    binary_operator [330,333]
+        identifier: x [330,331]
+        +: + [331,332]
+        identifier: s [332,333]
+    +: + [333,334]
+    integer: 1 [334,335]
+to
+argument_list [329,353]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [336,341]
+    binary_operator [336,339]
+        identifier: y [336,337]
+        +: + [337,338]
+        identifier: s [338,339]
+    +: + [339,340]
+    integer: 1 [340,341]
+to
+argument_list [329,353]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [330,333]
+    identifier: x [330,331]
+    +: + [331,332]
+    identifier: t [332,333]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [334,337]
+    identifier: y [334,335]
+    +: + [335,336]
+    identifier: t [336,337]
+

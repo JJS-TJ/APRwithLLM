@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [1228,1233]
+    integer: 2 [1228,1229]
+    *: * [1230,1231]
+    identifier: N [1232,1233]
+to
+binary_operator [1228,1233]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: N [1228,1229]
+===
+------------
+===
+delete-node
+---
+identifier: N [1228,1229]
+===
+

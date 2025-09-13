@@ -1,0 +1,103 @@
+New cluster:
+===
+insert-node
+---
+integer: 1 [269,270]
+to
+argument_list [268,278]
+at 0
+------------
+===
+insert-node
+---
+integer: 1 [269,270]
+to
+argument_list [268,278]
+at 0
+
+New cluster:
+===
+insert-node
+---
+integer: 1 [271,272]
+to
+binary_operator [269,277]
+at 0
+------------
+===
+insert-node
+---
+integer: 1 [271,272]
+to
+binary_operator [269,277]
+at 0
+
+New cluster:
+===
+insert-node
+---
++: + [272,273]
+to
+binary_operator [269,277]
+at 1
+------------
+===
+insert-node
+---
++: + [272,273]
+to
+binary_operator [269,277]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [273,277]
+    identifier: m [273,274]
+    //: // [274,276]
+    identifier: i [276,277]
+to
+binary_operator [269,277]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [269,274]
+    binary_operator [270,273]
+        identifier: m [270,271]
+        -: - [271,272]
+        integer: 1 [272,273]
+
+New cluster:
+===
+delete-node
+---
+//: // [274,276]
+===
+------------
+===
+delete-node
+---
+//: // [274,276]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: i [276,277]
+===
+------------
+===
+delete-node
+---
+identifier: i [276,277]
+===
+

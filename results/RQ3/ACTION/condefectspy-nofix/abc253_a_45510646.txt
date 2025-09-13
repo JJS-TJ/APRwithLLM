@@ -1,0 +1,42 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+boolean_operator [42,68]
+    comparison_operator [42,53]
+        identifier: a [42,43]
+        comparison_operator: <= [44,46]
+        identifier: b [47,48]
+        comparison_operator: <= [49,51]
+        identifier: c [52,53]
+    or: or [54,56]
+    comparison_operator [57,68]
+        identifier: c [57,58]
+        comparison_operator: <= [59,61]
+        identifier: b [62,63]
+        comparison_operator: <= [64,66]
+        identifier: a [67,68]
+to
+if_statement [39,102]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+comparison_operator [42,59]
+    binary_operator [42,54]
+        parenthesized_expression [42,49]
+            binary_operator [43,48]
+                identifier: a [43,44]
+                +: + [45,46]
+                identifier: c [47,48]
+        //: // [50,52]
+        integer: 2 [53,54]
+    comparison_operator: == [55,57]
+    identifier: b [58,59]
+

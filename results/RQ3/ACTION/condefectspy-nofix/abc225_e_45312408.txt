@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from r to l
+------------
+===
+update-node
+---
+identifier: r [403,404]
+replace r by l
+
+New cluster:
+UPDATE from > to >=
+------------
+===
+update-node
+---
+comparison_operator: > [405,406]
+replace > by >=
+

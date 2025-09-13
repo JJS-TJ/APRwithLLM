@@ -1,0 +1,105 @@
+New cluster:
+MOVE from expression_statement [0,23]
+------------
+===
+move-tree
+---
+call [6,18]
+    identifier: int [6,9]
+    argument_list [9,18]
+        call [10,17]
+            identifier: input [10,15]
+            argument_list [15,17]
+to
+expression_statement [0,23]
+at 0
+
+New cluster:
+UPDATE from int to print
+------------
+===
+update-node
+---
+identifier: int [6,9]
+replace int by print
+
+New cluster:
+===
+insert-node
+---
+subscript [6,17]
+to
+argument_list [9,18]
+at 0
+------------
+===
+insert-node
+---
+subscript [6,17]
+to
+argument_list [9,18]
+at 0
+
+New cluster:
+MOVE from subscript [6,17]
+------------
+===
+move-tree
+---
+call [10,17]
+    identifier: input [10,15]
+    argument_list [15,17]
+to
+subscript [6,17]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+slice [14,16]
+    integer: 1 [14,15]
+to
+subscript [6,17]
+at 1
+
+New cluster:
+===
+delete-node
+---
+call [0,23]
+===
+------------
+===
+delete-node
+---
+argument_list [5,23]
+===
+===
+delete-node
+---
+call [0,23]
+===
+===
+delete-node
+---
+%: % [18,19]
+===
+===
+delete-node
+---
+identifier: print [0,5]
+===
+===
+delete-node
+---
+integer: 100 [19,22]
+===
+===
+delete-node
+---
+binary_operator [6,22]
+===
+
