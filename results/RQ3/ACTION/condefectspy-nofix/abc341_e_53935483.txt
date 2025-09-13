@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+identifier: left [680,684]
+to
+argument_list [679,687]
+at 0
+------------
+===
+insert-node
+---
+identifier: left [680,684]
+to
+argument_list [679,687]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [680,686]
+    identifier: left [680,684]
+    -: - [684,685]
+    integer: 1 [685,686]
+

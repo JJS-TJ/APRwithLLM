@@ -1,0 +1,28 @@
+New cluster:
+MOVE from pattern_list [661,674]
+------------
+===
+move-tree
+---
+subscript [661,665]
+    identifier: A [661,662]
+    identifier: u [663,664]
+to
+pattern_list [661,674]
+at 1
+
+New cluster:
+MOVE from expression_list [677,690]
+------------
+===
+move-tree
+---
+subscript [677,684]
+    identifier: A [677,678]
+    subscript [679,683]
+        identifier: A [679,680]
+        identifier: u [681,682]
+to
+expression_list [677,690]
+at 1
+

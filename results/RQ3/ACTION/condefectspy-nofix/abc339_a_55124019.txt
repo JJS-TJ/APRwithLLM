@@ -1,0 +1,62 @@
+New cluster:
+===
+insert-node
+---
+integer: 1 [28,29]
+to
+argument_list [27,35]
+at 0
+------------
+===
+insert-node
+---
+integer: 1 [28,29]
+to
+argument_list [27,35]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_operator [30,38]
+to
+argument_list [27,35]
+at 1
+------------
+===
+insert-node
+---
+integer: 1 [37,38]
+to
+binary_operator [30,38]
+at 2
+===
+insert-node
+---
+binary_operator [30,38]
+to
+argument_list [27,35]
+at 1
+===
+insert-node
+---
++: + [36,37]
+to
+binary_operator [30,38]
+at 1
+
+New cluster:
+MOVE from binary_operator [30,38]
+------------
+===
+move-tree
+---
+call [28,34]
+    identifier: len [28,31]
+    argument_list [31,34]
+        identifier: S [32,33]
+to
+binary_operator [30,38]
+at 0
+

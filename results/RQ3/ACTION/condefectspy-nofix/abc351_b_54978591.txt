@@ -1,0 +1,35 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [129,144]
+    call [129,144]
+        identifier: print [129,134]
+        argument_list [134,144]
+            binary_operator [135,138]
+                identifier: i [135,136]
+                +: + [136,137]
+                integer: 1 [137,138]
+            binary_operator [140,143]
+                identifier: j [140,141]
+                +: + [141,142]
+                integer: 1 [142,143]
+to
+block [158,179]
+at 0
+
+New cluster:
+===
+delete-node
+---
+comment:            #print(i+1, j+1) [128,145]
+===
+------------
+===
+delete-node
+---
+comment:            #print(i+1, j+1) [128,145]
+===
+

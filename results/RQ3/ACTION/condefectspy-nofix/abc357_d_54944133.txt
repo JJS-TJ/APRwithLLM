@@ -1,0 +1,98 @@
+New cluster:
+MOVE from assignment [75,108]
+------------
+===
+move-tree
+---
+call [79,104]
+    attribute [79,89]
+        identifier: math [79,83]
+        identifier: floor [84,89]
+    argument_list [89,104]
+        call [90,103]
+            attribute [90,100]
+                identifier: math [90,94]
+                identifier: log10 [95,100]
+            argument_list [100,103]
+                identifier: n [101,102]
+to
+assignment [75,108]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: len [79,82]
+to
+call [79,104]
+at 0
+------------
+===
+insert-node
+---
+identifier: len [79,82]
+to
+call [79,104]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: str [83,86]
+to
+call [90,103]
+at 0
+------------
+===
+insert-node
+---
+identifier: str [83,86]
+to
+call [90,103]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+attribute [79,89]
+    identifier: math [79,83]
+    identifier: floor [84,89]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+attribute [90,100]
+    identifier: math [90,94]
+    identifier: log10 [95,100]
+
+New cluster:
+===
+delete-node
+---
+binary_operator [79,108]
+===
+------------
+===
+delete-node
+---
+binary_operator [79,108]
+===
+===
+delete-node
+---
++: + [105,106]
+===
+===
+delete-node
+---
+integer: 1 [107,108]
+===
+

@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+identifier: num [159,162]
+to
+unary_operator [158,160]
+at 1
+------------
+===
+insert-node
+---
+identifier: num [159,162]
+to
+unary_operator [158,160]
+at 1
+
+New cluster:
+===
+delete-node
+---
+integer: 1 [159,160]
+===
+------------
+===
+delete-node
+---
+integer: 1 [159,160]
+===
+

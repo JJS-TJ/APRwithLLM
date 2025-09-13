@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+boolean_operator [902,913]
+    identifier: flg [902,905]
+    or: or [906,908]
+    comparison_operator [909,913]
+        identifier: K [909,910]
+        comparison_operator: == [910,912]
+        integer: 0 [912,913]
+to
+if_statement [899,986]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: flg [902,905]
+===
+------------
+===
+delete-node
+---
+identifier: flg [902,905]
+===
+

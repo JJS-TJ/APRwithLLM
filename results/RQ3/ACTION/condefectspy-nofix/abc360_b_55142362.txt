@@ -1,0 +1,147 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [172,194]
+to
+augmented_assignment [162,190]
+at 2
+------------
+===
+insert-node
+---
+string: " " [172,175]
+to
+binary_operator [172,194]
+at 0
+===
+insert-node
+---
+binary_operator [172,194]
+to
+augmented_assignment [162,190]
+at 2
+===
+insert-node
+---
+*: * [176,177]
+to
+binary_operator [172,194]
+at 1
+
+New cluster:
+MOVE from binary_operator [172,194]
+------------
+===
+move-tree
+---
+parenthesized_expression [178,190]
+    binary_operator [179,189]
+        call [179,185]
+            identifier: len [179,182]
+            argument_list [182,185]
+                identifier: s [183,184]
+        %: % [186,187]
+        identifier: w [188,189]
+to
+binary_operator [172,194]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [178,190]
+------------
+===
+move-tree
+---
+binary_operator [172,190]
+    string: " " [172,175]
+    *: * [176,177]
+    parenthesized_expression [178,190]
+        binary_operator [179,189]
+            call [179,185]
+                identifier: len [179,182]
+                argument_list [182,185]
+                    identifier: s [183,184]
+            %: % [186,187]
+            identifier: w [188,189]
+to
+parenthesized_expression [178,190]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: w [179,180]
+to
+binary_operator [172,190]
+at 0
+------------
+===
+insert-node
+---
+identifier: w [179,180]
+to
+binary_operator [172,190]
+at 0
+
+New cluster:
+===
+insert-node
+---
+-: - [181,182]
+to
+binary_operator [172,190]
+at 1
+------------
+===
+insert-node
+---
+-: - [181,182]
+to
+binary_operator [172,190]
+at 1
+
+New cluster:
+MOVE from binary_operator [172,190]
+------------
+===
+move-tree
+---
+binary_operator [179,189]
+    call [179,185]
+        identifier: len [179,182]
+        argument_list [182,185]
+            identifier: s [183,184]
+    %: % [186,187]
+    identifier: w [188,189]
+to
+binary_operator [172,190]
+at 2
+
+New cluster:
+===
+delete-node
+---
+string: " " [172,175]
+===
+------------
+===
+delete-node
+---
+string: " " [172,175]
+===
+
+New cluster:
+===
+delete-node
+---
+*: * [176,177]
+===
+------------
+===
+delete-node
+---
+*: * [176,177]
+===
+

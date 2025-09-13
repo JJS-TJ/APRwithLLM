@@ -1,0 +1,36 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+conditional_expression [614,639]
+    identifier: ans [614,617]
+    comparison_operator [621,631]
+        identifier: ans [621,624]
+        comparison_operator: < [624,625]
+        binary_operator [625,631]
+            integer: 10 [625,627]
+            **: ** [627,629]
+            integer: 10 [629,631]
+    else: else [632,636]
+    unary_operator [637,639]
+        -: - [637,638]
+        integer: 1 [638,639]
+to
+argument_list [613,618]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: ans [614,617]
+===
+------------
+===
+delete-node
+---
+identifier: ans [614,617]
+===
+

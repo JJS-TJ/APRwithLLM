@@ -1,0 +1,137 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [1009,1035]
+to
+comparison_operator [1009,1030]
+at 0
+------------
+===
+insert-node
+---
++: + [1032,1033]
+to
+binary_operator [1009,1035]
+at 1
+===
+insert-node
+---
+binary_operator [1009,1031]
+to
+binary_operator [1009,1035]
+at 0
+===
+insert-node
+---
+integer: 1 [1034,1035]
+to
+binary_operator [1009,1035]
+at 2
+===
+insert-node
+---
+%: % [1028,1029]
+to
+binary_operator [1009,1031]
+at 1
+===
+insert-node
+---
+identifier: K [1030,1031]
+to
+binary_operator [1009,1031]
+at 2
+===
+insert-node
+---
+binary_operator [1009,1035]
+to
+comparison_operator [1009,1030]
+at 0
+===
+insert-node
+---
+parenthesized_expression [1009,1027]
+to
+binary_operator [1009,1031]
+at 0
+
+New cluster:
+MOVE from parenthesized_expression [1009,1027]
+------------
+===
+move-tree
+---
+binary_operator [1009,1025]
+    subscript [1009,1021]
+        identifier: dp [1009,1011]
+        subscript [1012,1020]
+            identifier: c_lst [1012,1017]
+            identifier: j [1018,1019]
+    %: % [1022,1023]
+    identifier: K [1024,1025]
+to
+parenthesized_expression [1009,1027]
+at 0
+
+New cluster:
+===
+insert-node
+---
+-: - [1023,1024]
+to
+binary_operator [1009,1025]
+at 1
+------------
+===
+insert-node
+---
+-: - [1023,1024]
+to
+binary_operator [1009,1025]
+at 1
+
+New cluster:
+===
+insert-node
+---
+integer: 1 [1025,1026]
+to
+binary_operator [1009,1025]
+at 2
+------------
+===
+insert-node
+---
+integer: 1 [1025,1026]
+to
+binary_operator [1009,1025]
+at 2
+
+New cluster:
+===
+delete-node
+---
+%: % [1022,1023]
+===
+------------
+===
+delete-node
+---
+%: % [1022,1023]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: K [1024,1025]
+===
+------------
+===
+delete-node
+---
+identifier: K [1024,1025]
+===
+

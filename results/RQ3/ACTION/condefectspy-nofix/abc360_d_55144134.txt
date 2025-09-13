@@ -1,0 +1,32 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [197,206]
+    call [197,206]
+        attribute [197,204]
+            identifier: x0 [197,199]
+            identifier: sort [200,204]
+        argument_list [204,206]
+to
+module [0,417]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [208,217]
+    call [208,217]
+        attribute [208,215]
+            identifier: x1 [208,210]
+            identifier: sort [211,215]
+        argument_list [215,217]
+to
+module [0,417]
+at 7
+

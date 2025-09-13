@@ -1,0 +1,18 @@
+New cluster:
+MOVE from binary_operator [31,35]
+------------
+===
+move-tree
+---
+identifier: n [31,32]
+to
+binary_operator [31,35]
+at 2
+===
+move-tree
+---
+**: ** [32,34]
+to
+binary_operator [31,35]
+at 2
+

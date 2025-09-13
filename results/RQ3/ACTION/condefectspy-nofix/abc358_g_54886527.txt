@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+*: * [841,842]
+to
+binary_operator [840,843]
+at 1
+------------
+===
+insert-node
+---
+*: * [841,842]
+to
+binary_operator [840,843]
+at 1
+
+New cluster:
+===
+delete-node
+---
++: + [841,842]
+===
+------------
+===
+delete-node
+---
++: + [841,842]
+===
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from bisect_left to bisect_right
+------------
+===
+update-node
+---
+identifier: bisect_left [371,382]
+replace bisect_left by bisect_right
+

@@ -1,0 +1,45 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [515,522]
+to
+tuple [514,525]
+at 0
+------------
+===
+insert-node
+---
+binary_operator [515,522]
+to
+tuple [514,525]
+at 0
+===
+insert-node
+---
+-: - [519,520]
+to
+binary_operator [515,522]
+at 1
+===
+insert-node
+---
+identifier: a [521,522]
+to
+binary_operator [515,522]
+at 2
+
+New cluster:
+MOVE from binary_operator [515,522]
+------------
+===
+move-tree
+---
+binary_operator [515,518]
+    identifier: a [515,516]
+    *: * [516,517]
+    integer: 4 [517,518]
+to
+binary_operator [515,522]
+at 0
+

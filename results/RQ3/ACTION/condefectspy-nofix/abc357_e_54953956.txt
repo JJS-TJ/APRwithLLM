@@ -1,0 +1,180 @@
+New cluster:
+===
+insert-node
+---
+conditional_expression [173,209]
+to
+assignment [168,194]
+at 2
+------------
+===
+insert-node
+---
+conditional_expression [173,209]
+to
+assignment [168,194]
+at 2
+===
+insert-node
+---
+else: else [190,194]
+to
+conditional_expression [173,209]
+at 2
+
+New cluster:
+MOVE from conditional_expression [173,209]
+------------
+===
+move-tree
+---
+call [173,179]
+    identifier: len [173,176]
+    argument_list [176,179]
+        identifier: g [177,178]
+to
+conditional_expression [173,209]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [182,190]
+    call [182,188]
+        identifier: len [182,185]
+        argument_list [185,188]
+            identifier: g [186,187]
+    comparison_operator: > [188,189]
+    integer: 1 [189,190]
+to
+conditional_expression [173,209]
+at 1
+
+New cluster:
+MOVE from conditional_expression [173,209]
+------------
+===
+move-tree
+---
+binary_operator [173,194]
+    call [173,179]
+        identifier: len [173,176]
+        argument_list [176,179]
+            identifier: g [177,178]
+    *: * [179,180]
+    unary_operator [180,194]
+        -: - [180,181]
+        unary_operator [181,194]
+            ~: ~ [181,182]
+            subscript [182,194]
+                identifier: d [182,183]
+                binary_operator [184,193]
+                    subscript [184,191]
+                        identifier: A [184,185]
+                        subscript [186,190]
+                            identifier: g [186,187]
+                            integer: 0 [188,189]
+                    -: - [191,192]
+                    integer: 1 [192,193]
+to
+conditional_expression [173,209]
+at 3
+
+New cluster:
+MOVE from binary_operator [173,194]
+------------
+===
+move-tree
+---
+subscript [182,194]
+    identifier: d [182,183]
+    binary_operator [184,193]
+        subscript [184,191]
+            identifier: A [184,185]
+            subscript [186,190]
+                identifier: g [186,187]
+                integer: 0 [188,189]
+        -: - [191,192]
+        integer: 1 [192,193]
+to
+binary_operator [173,194]
+at 0
+
+New cluster:
+===
+insert-node
+---
++: + [207,208]
+to
+binary_operator [173,194]
+at 1
+------------
+===
+insert-node
+---
++: + [207,208]
+to
+binary_operator [173,194]
+at 1
+
+New cluster:
+===
+insert-node
+---
+integer: 1 [208,209]
+to
+binary_operator [173,194]
+at 2
+------------
+===
+insert-node
+---
+integer: 1 [208,209]
+to
+binary_operator [173,194]
+at 2
+
+New cluster:
+===
+delete-node
+---
+*: * [179,180]
+===
+------------
+===
+delete-node
+---
+*: * [179,180]
+===
+
+New cluster:
+===
+delete-node
+---
+unary_operator [180,194]
+===
+------------
+===
+delete-node
+---
+unary_operator [181,194]
+===
+===
+delete-node
+---
+~: ~ [181,182]
+===
+===
+delete-node
+---
+-: - [180,181]
+===
+===
+delete-node
+---
+unary_operator [180,194]
+===
+

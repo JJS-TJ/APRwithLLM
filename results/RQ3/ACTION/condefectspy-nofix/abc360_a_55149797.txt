@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 'S' to 'M'
+------------
+===
+update-node
+---
+string: 'S' [89,92]
+replace 'S' by 'M'
+

@@ -1,0 +1,22 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [595,642]
+    comparison_operator [598,615]
+        subscript [598,608]
+            subscript [598,605]
+                identifier: dist [598,602]
+                identifier: u [603,604]
+            identifier: v [606,607]
+        comparison_operator: == [609,611]
+        identifier: inf [612,615]
+    block [634,642]
+        continue_statement [634,642]
+            continue: continue [634,642]
+to
+block [595,666]
+at 0
+

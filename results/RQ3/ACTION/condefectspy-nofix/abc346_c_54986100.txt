@@ -1,0 +1,106 @@
+New cluster:
+MOVE from assignment [72,100]
+------------
+===
+move-tree
+---
+binary_operator [82,99]
+    parenthesized_expression [82,95]
+        binary_operator [83,94]
+            identifier: K [83,84]
+            *: * [85,86]
+            parenthesized_expression [87,94]
+                binary_operator [88,93]
+                    identifier: K [88,89]
+                    +: + [90,91]
+                    integer: 1 [92,93]
+    /: / [96,97]
+    integer: 2 [98,99]
+to
+assignment [72,100]
+at 2
+
+New cluster:
+MOVE from binary_operator [82,99]
+------------
+===
+move-tree
+---
+binary_operator [83,94]
+    identifier: K [83,84]
+    *: * [85,86]
+    parenthesized_expression [87,94]
+        binary_operator [88,93]
+            identifier: K [88,89]
+            +: + [90,91]
+            integer: 1 [92,93]
+to
+binary_operator [82,99]
+at 0
+
+New cluster:
+===
+insert-node
+---
+//: // [90,92]
+to
+binary_operator [82,99]
+at 1
+------------
+===
+insert-node
+---
+//: // [90,92]
+to
+binary_operator [82,99]
+at 1
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [82,95]
+===
+------------
+===
+delete-node
+---
+parenthesized_expression [82,95]
+===
+
+New cluster:
+===
+delete-node
+---
+/: / [96,97]
+===
+------------
+===
+delete-node
+---
+/: / [96,97]
+===
+
+New cluster:
+===
+delete-node
+---
+call [78,100]
+===
+------------
+===
+delete-node
+---
+call [78,100]
+===
+===
+delete-node
+---
+argument_list [81,100]
+===
+===
+delete-node
+---
+identifier: int [78,81]
+===
+

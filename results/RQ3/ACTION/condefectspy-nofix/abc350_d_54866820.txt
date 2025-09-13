@@ -1,0 +1,14 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [467,499]
+    comparison_operator [470,478]
+        identifier: rx [470,472]
+        comparison_operator: == [473,475]
+        identifier: ry [476,478]
+    block [493,499]
+        return_statement [493,499]
+

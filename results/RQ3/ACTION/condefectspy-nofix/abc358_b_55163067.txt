@@ -1,0 +1,19 @@
+New cluster:
+MOVE from block [101,127]
+------------
+===
+move-tree
+---
+expression_statement [129,151]
+    call [129,151]
+        identifier: print [129,134]
+        argument_list [134,151]
+            identifier: time [135,139]
+            keyword_argument [141,150]
+                identifier: end [141,144]
+                =: = [145,146]
+                string: ' ' [147,150]
+to
+block [101,127]
+at 1
+

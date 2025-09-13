@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from sort to reverse
+------------
+===
+update-node
+---
+identifier: sort [78,82]
+replace sort by reverse
+

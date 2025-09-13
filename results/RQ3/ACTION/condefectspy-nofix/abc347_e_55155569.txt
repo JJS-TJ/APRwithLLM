@@ -1,0 +1,49 @@
+New cluster:
+===
+insert-node
+---
+list_splat [866,900]
+to
+argument_list [865,900]
+at 0
+------------
+===
+insert-node
+---
+list_splat [866,900]
+to
+argument_list [865,900]
+at 0
+===
+insert-node
+---
+*: * [866,867]
+to
+list_splat [866,900]
+at 0
+
+New cluster:
+MOVE from list_splat [866,900]
+------------
+===
+move-tree
+---
+list_comprehension [866,899]
+    subscript [867,880]
+        call [867,877]
+            attribute [867,874]
+                identifier: seg [867,870]
+                identifier: get [871,874]
+            argument_list [874,877]
+                identifier: i [875,876]
+        integer: 0 [878,879]
+    for_in_clause [881,898]
+        identifier: i [885,886]
+        call [890,898]
+            identifier: range [890,895]
+            argument_list [895,898]
+                identifier: n [896,897]
+to
+list_splat [866,900]
+at 1
+

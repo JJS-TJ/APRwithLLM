@@ -1,0 +1,31 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [3016,3024]
+    binary_operator [3017,3023]
+        identifier: x [3017,3018]
+        &: & [3018,3019]
+        parenthesized_expression [3019,3023]
+            unary_operator [3020,3022]
+                -: - [3020,3021]
+                identifier: x [3021,3022]
+to
+attribute [3016,3028]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: x [3016,3017]
+===
+------------
+===
+delete-node
+---
+identifier: x [3016,3017]
+===
+

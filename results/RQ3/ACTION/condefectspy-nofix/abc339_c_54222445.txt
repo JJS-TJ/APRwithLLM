@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_operator [75,77]
+    -: - [75,76]
+    integer: 1 [76,77]
+to
+assignment [68,76]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 0 [75,76]
+===
+------------
+===
+delete-node
+---
+integer: 0 [75,76]
+===
+

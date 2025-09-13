@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+comparison_operator: < [274,275]
+replace < by <=
+

@@ -1,0 +1,92 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [468,553]
+to
+conditional_expression [459,548]
+at 1
+------------
+===
+insert-node
+---
+boolean_operator [468,553]
+to
+conditional_expression [459,548]
+at 1
+===
+insert-node
+---
+or: or [539,541]
+to
+boolean_operator [468,553]
+at 1
+
+New cluster:
+MOVE from boolean_operator [468,553]
+------------
+===
+move-tree
+---
+call [468,538]
+    identifier: any [468,471]
+    generator_expression [471,538]
+        comparison_operator [472,514]
+            binary_operator [472,510]
+                parenthesized_expression [472,500]
+                    binary_operator [473,499]
+                        subscript [473,492]
+                            identifier: D [473,474]
+                            binary_operator [475,491]
+                                parenthesized_expression [475,482]
+                                    binary_operator [476,481]
+                                        identifier: i [476,477]
+                                        +: + [478,479]
+                                        integer: 1 [480,481]
+                                %: % [483,484]
+                                call [485,491]
+                                    identifier: len [485,488]
+                                    argument_list [488,491]
+                                        identifier: D [489,490]
+                        -: - [493,494]
+                        subscript [495,499]
+                            identifier: D [495,496]
+                            identifier: i [497,498]
+                %: % [501,502]
+                parenthesized_expression [503,510]
+                    binary_operator [504,509]
+                        identifier: A [504,505]
+                        +: + [506,507]
+                        identifier: B [508,509]
+            comparison_operator: > [511,512]
+            identifier: B [513,514]
+        for_in_clause [515,537]
+            identifier: i [519,520]
+            call [524,537]
+                identifier: range [524,529]
+                argument_list [529,537]
+                    call [530,536]
+                        identifier: len [530,533]
+                        argument_list [533,536]
+                            identifier: D [534,535]
+to
+boolean_operator [468,553]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [542,553]
+    call [542,548]
+        identifier: len [542,545]
+        argument_list [545,548]
+            identifier: D [546,547]
+    comparison_operator: == [549,551]
+    integer: 1 [552,553]
+to
+boolean_operator [468,553]
+at 2
+

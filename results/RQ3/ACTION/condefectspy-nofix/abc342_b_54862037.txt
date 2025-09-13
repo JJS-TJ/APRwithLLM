@@ -1,0 +1,58 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [142,148]
+    subscript [142,146]
+        identifier: P [142,143]
+        identifier: i [144,145]
+    -: - [146,147]
+    integer: 1 [147,148]
+to
+subscript [130,139]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [134,140]
+    subscript [134,138]
+        identifier: P [134,135]
+        identifier: j [136,137]
+    -: - [138,139]
+    integer: 1 [139,140]
+to
+subscript [130,136]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: j [134,135]
+===
+------------
+===
+delete-node
+---
+identifier: j [134,135]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: i [137,138]
+===
+------------
+===
+delete-node
+---
+identifier: i [137,138]
+===
+

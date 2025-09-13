@@ -1,0 +1,97 @@
+New cluster:
+===
+insert-node
+---
+for_statement [125,193]
+to
+module [0,200]
+at 5
+------------
+===
+insert-node
+---
+identifier: _ [129,130]
+to
+for_statement [125,193]
+at 0
+===
+insert-node
+---
+for_statement [125,193]
+to
+module [0,200]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [134,144]
+    identifier: range [134,139]
+    argument_list [139,144]
+        binary_operator [140,143]
+            identifier: N [140,141]
+            -: - [141,142]
+            integer: 1 [142,143]
+to
+for_statement [125,193]
+at 1
+
+New cluster:
+MOVE from for_statement [125,193]
+------------
+===
+move-tree
+---
+block [145,187]
+    expression_statement [145,167]
+        call [145,167]
+            identifier: print [145,150]
+            argument_list [150,167]
+                identifier: next [151,155]
+                keyword_argument [157,166]
+                    identifier: end [157,160]
+                    =: = [161,162]
+                    string: ' ' [163,166]
+    expression_statement [173,187]
+        assignment [173,187]
+            identifier: next [173,177]
+            =: = [178,179]
+            subscript [180,187]
+                identifier: d [180,181]
+                identifier: next [182,186]
+to
+for_statement [125,193]
+at 2
+
+New cluster:
+===
+delete-node
+---
+while_statement [125,187]
+===
+------------
+===
+delete-node
+---
+while: while [125,130]
+===
+===
+delete-node
+---
+while_statement [125,187]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+comparison_operator [131,138]
+    identifier: next [131,135]
+    comparison_operator: != [135,137]
+    identifier: N [137,138]
+

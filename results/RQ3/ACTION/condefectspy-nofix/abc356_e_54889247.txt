@@ -1,0 +1,66 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [1735,1788]
+to
+augmented_assignment [1728,1780]
+at 2
+------------
+===
+insert-node
+---
+*: * [1781,1782]
+to
+binary_operator [1735,1788]
+at 1
+===
+insert-node
+---
+binary_operator [1735,1788]
+to
+augmented_assignment [1728,1780]
+at 2
+===
+insert-node
+---
+identifier: value [1783,1788]
+to
+binary_operator [1735,1788]
+at 2
+
+New cluster:
+MOVE from binary_operator [1735,1788]
+------------
+===
+move-tree
+---
+binary_operator [1735,1780]
+    identifier: alpha [1735,1740]
+    *: * [1741,1742]
+    parenthesized_expression [1743,1780]
+        binary_operator [1744,1779]
+            subscript [1744,1763]
+                identifier: le [1744,1746]
+                binary_operator [1747,1762]
+                    binary_operator [1747,1760]
+                        parenthesized_expression [1747,1756]
+                            binary_operator [1748,1755]
+                                identifier: alpha [1748,1753]
+                                +: + [1753,1754]
+                                integer: 1 [1754,1755]
+                        *: * [1756,1757]
+                        identifier: key [1757,1760]
+                    -: - [1760,1761]
+                    integer: 1 [1761,1762]
+            -: - [1764,1765]
+            subscript [1766,1779]
+                identifier: le [1766,1768]
+                binary_operator [1769,1778]
+                    identifier: alpha [1769,1774]
+                    *: * [1774,1775]
+                    identifier: key [1775,1778]
+to
+binary_operator [1735,1788]
+at 0
+

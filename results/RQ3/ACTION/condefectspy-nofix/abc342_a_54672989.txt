@@ -1,0 +1,32 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [117,130]
+    call [117,130]
+        identifier: print [117,122]
+        argument_list [122,130]
+            call [123,129]
+                identifier: len [123,126]
+                argument_list [126,129]
+                    identifier: S [127,128]
+to
+module [0,97]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [103,109]
+    call [103,109]
+        identifier: exit [103,107]
+        argument_list [107,109]
+to
+block [87,97]
+at 1
+

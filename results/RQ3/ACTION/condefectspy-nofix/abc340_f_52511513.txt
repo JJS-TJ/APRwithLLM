@@ -1,0 +1,128 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [576,601]
+to
+argument_list [575,584]
+at 0
+------------
+===
+insert-node
+---
+parenthesized_expression [576,581]
+to
+binary_operator [576,601]
+at 0
+===
+insert-node
+---
+//: // [581,583]
+to
+binary_operator [576,601]
+at 1
+===
+insert-node
+---
+binary_operator [576,601]
+to
+argument_list [575,584]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_operator [602,627]
+to
+argument_list [575,584]
+at 1
+------------
+===
+insert-node
+---
+parenthesized_expression [602,607]
+to
+binary_operator [602,627]
+at 0
+===
+insert-node
+---
+//: // [607,609]
+to
+binary_operator [602,627]
+at 1
+===
+insert-node
+---
+binary_operator [602,627]
+to
+argument_list [575,584]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [583,601]
+    identifier: gcd [583,586]
+    argument_list [586,601]
+        call [587,593]
+            identifier: abs [587,590]
+            argument_list [590,593]
+                identifier: X [591,592]
+        call [594,600]
+            identifier: abs [594,597]
+            argument_list [597,600]
+                identifier: Y [598,599]
+to
+binary_operator [576,601]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [609,627]
+    identifier: gcd [609,612]
+    argument_list [612,627]
+        call [613,619]
+            identifier: abs [613,616]
+            argument_list [616,619]
+                identifier: X [617,618]
+        call [620,626]
+            identifier: abs [620,623]
+            argument_list [623,626]
+                identifier: Y [624,625]
+to
+binary_operator [602,627]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [602,607]
+------------
+===
+move-tree
+---
+binary_operator [580,583]
+    integer: 2 [580,581]
+    *: * [581,582]
+    identifier: a [582,583]
+to
+parenthesized_expression [602,607]
+at 0
+===
+move-tree
+---
+binary_operator [576,579]
+    integer: 2 [576,577]
+    *: * [577,578]
+    identifier: b [578,579]
+to
+parenthesized_expression [576,581]
+at 0
+

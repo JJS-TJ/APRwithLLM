@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [152,167]
+    assignment [152,167]
+        identifier: MOD [152,155]
+        =: = [156,157]
+        integer: 998244353 [158,167]
+to
+module [0,454]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [463,473]
+    augmented_assignment [463,473]
+        identifier: res [463,466]
+        %=: %= [467,469]
+        identifier: MOD [470,473]
+to
+block [404,442]
+at 1
+

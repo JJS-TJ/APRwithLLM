@@ -1,0 +1,59 @@
+New cluster:
+MOVE from return_statement [74,108]
+------------
+===
+move-tree
+---
+call [81,95]
+    identifier: max [81,84]
+    argument_list [84,95]
+        integer: 0 [85,86]
+        call [88,94]
+            identifier: min [88,91]
+            argument_list [91,94]
+                identifier: v [92,93]
+to
+return_statement [74,108]
+at 0
+
+New cluster:
+MOVE from argument_list [84,95]
+------------
+===
+move-tree
+---
+binary_operator [81,108]
+    binary_operator [81,99]
+        call [81,95]
+            identifier: max [81,84]
+            argument_list [84,95]
+                integer: 0 [85,86]
+                call [88,94]
+                    identifier: min [88,91]
+                    argument_list [91,94]
+                        identifier: v [92,93]
+        +: + [96,97]
+        integer: 7 [98,99]
+    -: - [100,101]
+    call [102,108]
+        identifier: max [102,105]
+        argument_list [105,108]
+            identifier: v [106,107]
+to
+argument_list [84,95]
+at 1
+
+New cluster:
+MOVE from binary_operator [81,99]
+------------
+===
+move-tree
+---
+call [88,94]
+    identifier: min [88,91]
+    argument_list [91,94]
+        identifier: v [92,93]
+to
+binary_operator [81,99]
+at 0
+

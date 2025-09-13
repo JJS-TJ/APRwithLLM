@@ -1,0 +1,29 @@
+New cluster:
+===
+insert-node
+---
+identifier: N [29,30]
+to
+binary_operator [23,34]
+at 2
+------------
+===
+insert-node
+---
+identifier: N [29,30]
+to
+binary_operator [23,34]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [29,34]
+    binary_operator [30,33]
+        identifier: N [30,31]
+        -: - [31,32]
+        integer: 3 [32,33]
+

@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [251,259]
+    call [251,259]
+        identifier: print [251,256]
+        argument_list [256,259]
+            identifier: i [257,258]
+to
+block [266,271]
+at 0
+
+New cluster:
+===
+delete-node
+---
+comment:     #print(i) [251,261]
+===
+------------
+===
+delete-node
+---
+comment:     #print(i) [251,261]
+===
+

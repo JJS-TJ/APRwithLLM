@@ -1,0 +1,37 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [273,323]
+    comparison_operator [276,287]
+        call [276,282]
+            identifier: len [276,279]
+            argument_list [279,282]
+                identifier: s [280,281]
+        comparison_operator: == [283,285]
+        identifier: k [286,287]
+    block [298,323]
+        expression_statement [298,323]
+            assignment [298,323]
+                identifier: ans [298,301]
+                =: = [302,303]
+                call [304,323]
+                    identifier: min [304,307]
+                    argument_list [307,323]
+                        identifier: ans [308,311]
+                        binary_operator [312,322]
+                            subscript [312,317]
+                                identifier: s [312,313]
+                                unary_operator [314,316]
+                                    -: - [314,315]
+                                    integer: 1 [315,316]
+                            -: - [317,318]
+                            subscript [318,322]
+                                identifier: s [318,319]
+                                integer: 0 [320,321]
+to
+block [254,351]
+at 1
+
