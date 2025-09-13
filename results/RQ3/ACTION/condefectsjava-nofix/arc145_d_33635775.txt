@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from -= to +=
+------------
+===
+update-node
+---
+ASSIGNMENT_OPERATOR: -= [1196,1198]
+replace -= by +=
+

@@ -1,0 +1,36 @@
+New cluster:
+UPDATE from j to y
+------------
+===
+update-node
+---
+SimpleName: j [1352,1353]
+replace j by y
+
+New cluster:
+UPDATE from i to x
+------------
+===
+update-node
+---
+SimpleName: i [1339,1340]
+replace i by x
+
+New cluster:
+UPDATE from y to j
+------------
+===
+update-node
+---
+SimpleName: y [1350,1351]
+replace y by j
+
+New cluster:
+UPDATE from x to i
+------------
+===
+update-node
+---
+SimpleName: x [1337,1338]
+replace x by i
+

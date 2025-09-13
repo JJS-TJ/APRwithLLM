@@ -1,0 +1,141 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [638,698]
+to
+IfStatement [634,1035]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [667,669]
+to
+InfixExpression [638,698]
+at 1
+===
+insert-node
+---
+ParenthesizedExpression [670,698]
+to
+InfixExpression [638,698]
+at 2
+===
+insert-node
+---
+InfixExpression [638,698]
+to
+IfStatement [634,1035]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [638,666]
+    InfixExpression [639,665]
+        InfixExpression [639,651]
+            InfixExpression [639,646]
+                SimpleName: ura [639,642]
+                INFIX_EXPRESSION_OPERATOR: % [643,644]
+                NumberLiteral: 2 [645,646]
+            INFIX_EXPRESSION_OPERATOR: == [647,649]
+            NumberLiteral: 0 [650,651]
+        INFIX_EXPRESSION_OPERATOR: && [652,654]
+        InfixExpression [655,665]
+            InfixExpression [655,660]
+                SimpleName: n [655,656]
+                INFIX_EXPRESSION_OPERATOR: % [657,658]
+                NumberLiteral: 2 [659,660]
+            INFIX_EXPRESSION_OPERATOR: == [661,663]
+            NumberLiteral: 0 [664,665]
+to
+InfixExpression [638,698]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [670,698]
+------------
+===
+move-tree
+---
+InfixExpression [638,665]
+    InfixExpression [638,650]
+        InfixExpression [638,645]
+            SimpleName: ura [638,641]
+            INFIX_EXPRESSION_OPERATOR: % [642,643]
+            NumberLiteral: 2 [644,645]
+        INFIX_EXPRESSION_OPERATOR: == [646,648]
+        NumberLiteral: 1 [649,650]
+    INFIX_EXPRESSION_OPERATOR: && [651,653]
+    InfixExpression [654,665]
+        InfixExpression [654,661]
+            SimpleName: ura [654,657]
+            INFIX_EXPRESSION_OPERATOR: * [658,659]
+            NumberLiteral: 2 [660,661]
+        INFIX_EXPRESSION_OPERATOR: < [662,663]
+        SimpleName: n [664,665]
+to
+ParenthesizedExpression [670,698]
+at 0
+
+New cluster:
+UPDATE from < to ==
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [662,663]
+replace < by ==
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1 [696,697]
+to
+InfixExpression [654,665]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 1 [696,697]
+to
+InfixExpression [654,665]
+at 2
+
+New cluster:
+UPDATE from ura to n
+------------
+===
+update-node
+---
+SimpleName: ura [654,657]
+replace ura by n
+
+New cluster:
+UPDATE from * to %
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [658,659]
+replace * by %
+
+New cluster:
+===
+delete-node
+---
+SimpleName: n [664,665]
+===
+------------
+===
+delete-node
+---
+SimpleName: n [664,665]
+===
+

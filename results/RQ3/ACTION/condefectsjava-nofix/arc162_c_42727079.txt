@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from == to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: == [1328,1330]
+replace == by <=
+
+New cluster:
+UPDATE from 0 to 1
+------------
+===
+update-node
+---
+NumberLiteral: 0 [1330,1331]
+replace 0 by 1
+

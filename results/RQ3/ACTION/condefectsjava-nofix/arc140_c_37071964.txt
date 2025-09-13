@@ -1,0 +1,104 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1077,1150]
+to
+IfStatement [1073,1181]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1077,1116]
+to
+InfixExpression [1077,1150]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [1083,1085]
+to
+InfixExpression [1077,1116]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [1117,1119]
+to
+InfixExpression [1077,1150]
+at 1
+===
+insert-node
+---
+InfixExpression [1077,1150]
+to
+IfStatement [1073,1181]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1120,1150]
+    MethodInvocation [1120,1145]
+        METHOD_INVOCATION_RECEIVER [1120,1124]
+            SimpleName: Math [1120,1124]
+        SimpleName: abs [1125,1128]
+        METHOD_INVOCATION_ARGUMENTS [1129,1144]
+            InfixExpression [1129,1144]
+                ArrayAccess [1129,1135]
+                    SimpleName: dp1 [1129,1132]
+                    NumberLiteral: 2 [1133,1134]
+                INFIX_EXPRESSION_OPERATOR: - [1136,1137]
+                ArrayAccess [1138,1144]
+                    SimpleName: dp1 [1138,1141]
+                    NumberLiteral: 1 [1142,1143]
+    INFIX_EXPRESSION_OPERATOR: == [1146,1148]
+    NumberLiteral: 2 [1149,1150]
+to
+InfixExpression [1077,1150]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1077,1082]
+    SimpleName: n [1077,1078]
+    INFIX_EXPRESSION_OPERATOR: > [1079,1080]
+    NumberLiteral: 2 [1081,1082]
+to
+InfixExpression [1077,1116]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1077,1116]
+------------
+===
+move-tree
+---
+InfixExpression [1077,1107]
+    MethodInvocation [1077,1102]
+        METHOD_INVOCATION_RECEIVER [1077,1081]
+            SimpleName: Math [1077,1081]
+        SimpleName: abs [1082,1085]
+        METHOD_INVOCATION_ARGUMENTS [1086,1101]
+            InfixExpression [1086,1101]
+                ArrayAccess [1086,1092]
+                    SimpleName: dp1 [1086,1089]
+                    NumberLiteral: 0 [1090,1091]
+                INFIX_EXPRESSION_OPERATOR: - [1093,1094]
+                ArrayAccess [1095,1101]
+                    SimpleName: dp1 [1095,1098]
+                    NumberLiteral: 1 [1099,1100]
+    INFIX_EXPRESSION_OPERATOR: == [1103,1105]
+    NumberLiteral: 1 [1106,1107]
+to
+InfixExpression [1077,1116]
+at 2
+

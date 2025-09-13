@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [847,857]
+    PrimitiveType: long [848,852]
+    NumberLiteral: 1e18 [853,857]
+to
+VariableDeclarationFragment [839,861]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [847,861]
+    CastExpression [847,857]
+        PrimitiveType: long [848,852]
+        NumberLiteral: 1e12 [853,857]
+    INFIX_EXPRESSION_OPERATOR: + [858,859]
+    NumberLiteral: 1 [860,861]
+

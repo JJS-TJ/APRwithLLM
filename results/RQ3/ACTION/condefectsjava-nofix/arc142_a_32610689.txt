@@ -1,0 +1,53 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+WhileStatement [648,728]
+    InfixExpression [654,664]
+        SimpleName: tempK [654,659]
+        INFIX_EXPRESSION_OPERATOR: <= [660,662]
+        SimpleName: n [663,664]
+    Block [665,728]
+        ExpressionStatement [679,693]
+            MethodInvocation [679,692]
+                METHOD_INVOCATION_RECEIVER [679,681]
+                    SimpleName: hs [679,681]
+                SimpleName: add [682,685]
+                METHOD_INVOCATION_ARGUMENTS [686,691]
+                    SimpleName: tempK [686,691]
+        ExpressionStatement [706,718]
+            Assignment [706,717]
+                SimpleName: tempK [706,711]
+                ASSIGNMENT_OPERATOR: *= [712,714]
+                NumberLiteral: 10 [715,717]
+to
+Block [365,877]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [648,725]
+    InfixExpression [651,661]
+        SimpleName: tempK [651,656]
+        INFIX_EXPRESSION_OPERATOR: <= [657,659]
+        SimpleName: n [660,661]
+    Block [662,725]
+        ExpressionStatement [676,690]
+            MethodInvocation [676,689]
+                METHOD_INVOCATION_RECEIVER [676,678]
+                    SimpleName: hs [676,678]
+                SimpleName: add [679,682]
+                METHOD_INVOCATION_ARGUMENTS [683,688]
+                    SimpleName: tempK [683,688]
+        ExpressionStatement [703,715]
+            Assignment [703,714]
+                SimpleName: tempK [703,708]
+                ASSIGNMENT_OPERATOR: *= [709,711]
+                NumberLiteral: 10 [712,714]
+

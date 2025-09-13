@@ -1,0 +1,39 @@
+New cluster:
+UPDATE from >= to >
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [815,817]
+replace >= by >
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 0 [817,818]
+to
+InfixExpression [808,824]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 0 [817,818]
+to
+InfixExpression [808,824]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: count1 [818,824]
+===
+------------
+===
+delete-node
+---
+SimpleName: count1 [818,824]
+===
+

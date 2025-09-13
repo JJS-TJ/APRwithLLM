@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [1011,1035]
+    PrimitiveType: long [1012,1016]
+    MethodInvocation [1017,1035]
+        METHOD_INVOCATION_RECEIVER [1017,1021]
+            SimpleName: Math [1017,1021]
+        SimpleName: pow [1022,1025]
+        METHOD_INVOCATION_ARGUMENTS [1026,1034]
+            SimpleName: i [1026,1027]
+            SimpleName: count [1029,1034]
+to
+Assignment [996,1020]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1011,1020]
+    SimpleName: i [1011,1012]
+    INFIX_EXPRESSION_OPERATOR: * [1013,1014]
+    SimpleName: count [1015,1020]
+

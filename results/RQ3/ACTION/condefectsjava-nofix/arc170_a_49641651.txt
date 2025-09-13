@@ -1,0 +1,11 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [1800,1809]
+    PostfixExpression [1800,1808]
+        SimpleName: stockA [1800,1806]
+        POSTFIX_EXPRESSION_OPERATOR: ++ [1806,1808]
+

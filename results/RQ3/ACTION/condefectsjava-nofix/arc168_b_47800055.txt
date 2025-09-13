@@ -1,0 +1,100 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1001,1029]
+to
+ExpressionStatement [1000,1016]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: pl [1005,1007]
+to
+MethodInvocation [1001,1029]
+at 1
+===
+insert-node
+---
+MethodInvocation [1001,1029]
+to
+ExpressionStatement [1000,1016]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1008,1028]
+to
+MethodInvocation [1001,1029]
+at 2
+
+New cluster:
+MOVE from MethodInvocation [1001,1029]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [1000,1003]
+    SimpleName: out [1000,1003]
+to
+MethodInvocation [1001,1029]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [1008,1028]
+------------
+===
+move-tree
+---
+MethodInvocation [1000,1015]
+    METHOD_INVOCATION_RECEIVER [1000,1003]
+        SimpleName: out [1000,1003]
+    SimpleName: pl [1004,1006]
+    METHOD_INVOCATION_ARGUMENTS [1007,1014]
+        InfixExpression [1007,1014]
+            SimpleName: max [1007,1010]
+            INFIX_EXPRESSION_OPERATOR: - [1011,1012]
+            NumberLiteral: 1 [1013,1014]
+to
+METHOD_INVOCATION_ARGUMENTS [1008,1028]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [1008,1012]
+    SimpleName: Math [1008,1012]
+to
+MethodInvocation [1000,1015]
+at 0
+
+New cluster:
+UPDATE from pl to max
+------------
+===
+update-node
+---
+SimpleName: pl [1004,1006]
+replace pl by max
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 0 [1017,1018]
+to
+METHOD_INVOCATION_ARGUMENTS [1007,1014]
+at 0
+------------
+===
+insert-node
+---
+NumberLiteral: 0 [1017,1018]
+to
+METHOD_INVOCATION_ARGUMENTS [1007,1014]
+at 0
+

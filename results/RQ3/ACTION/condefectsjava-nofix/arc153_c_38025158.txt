@@ -1,0 +1,62 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1852,1896]
+to
+IfStatement [1848,2063]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1852,1896]
+to
+IfStatement [1848,2063]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [1862,1864]
+to
+InfixExpression [1852,1896]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1852,1861]
+    SimpleName: eSum [1852,1856]
+    INFIX_EXPRESSION_OPERATOR: == [1857,1859]
+    NumberLiteral: 0 [1860,1861]
+to
+InfixExpression [1852,1896]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1852,1896]
+------------
+===
+move-tree
+---
+InfixExpression [1852,1883]
+    ParenthesizedExpression [1852,1862]
+        InfixExpression [1853,1861]
+            SimpleName: eSum [1853,1857]
+            INFIX_EXPRESSION_OPERATOR: < [1858,1859]
+            NumberLiteral: 0 [1860,1861]
+    INFIX_EXPRESSION_OPERATOR: != [1863,1865]
+    ParenthesizedExpression [1866,1883]
+        InfixExpression [1867,1882]
+            ArrayAccess [1867,1878]
+                SimpleName: prefix [1867,1873]
+                SimpleName: idx [1874,1877]
+            INFIX_EXPRESSION_OPERATOR: < [1879,1880]
+            NumberLiteral: 0 [1881,1882]
+to
+InfixExpression [1852,1896]
+at 2
+

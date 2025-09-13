@@ -1,0 +1,133 @@
+New cluster:
+MOVE from Assignment [517,560]
+------------
+===
+move-tree
+---
+InfixExpression [523,554]
+    InfixExpression [523,548]
+        InfixExpression [523,542]
+            SimpleName: ans [523,526]
+            INFIX_EXPRESSION_OPERATOR: * [527,528]
+            ParenthesizedExpression [529,542]
+                InfixExpression [530,541]
+                    SimpleName: length [530,536]
+                    INFIX_EXPRESSION_OPERATOR: + [537,538]
+                    NumberLiteral: 1L [539,541]
+        INFIX_EXPRESSION_OPERATOR: % [543,544]
+        SimpleName: MOD [545,548]
+    INFIX_EXPRESSION_OPERATOR: * [549,550]
+    SimpleName: div [551,554]
+to
+Assignment [517,560]
+at 2
+
+New cluster:
+UPDATE from * to %
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [549,550]
+replace * by %
+
+New cluster:
+UPDATE from div to MOD
+------------
+===
+update-node
+---
+SimpleName: div [551,554]
+replace div by MOD
+
+New cluster:
+MOVE from InfixExpression [523,542]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: * [527,528]
+to
+InfixExpression [523,542]
+at 2
+
+New cluster:
+UPDATE from % to *
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: % [543,544]
+replace % by *
+
+New cluster:
+UPDATE from MOD to ans
+------------
+===
+update-node
+---
+SimpleName: MOD [545,548]
+replace MOD by ans
+
+New cluster:
+UPDATE from * to /
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: * [527,528]
+replace * by /
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 2 [538,539]
+to
+InfixExpression [523,542]
+at 3
+------------
+===
+insert-node
+---
+NumberLiteral: 2 [538,539]
+to
+InfixExpression [523,542]
+at 3
+
+New cluster:
+===
+delete-node
+---
+SimpleName: ans [523,526]
+===
+------------
+===
+delete-node
+---
+SimpleName: ans [523,526]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [523,560]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: % [555,556]
+===
+===
+delete-node
+---
+SimpleName: MOD [557,560]
+===
+===
+delete-node
+---
+InfixExpression [523,560]
+===
+

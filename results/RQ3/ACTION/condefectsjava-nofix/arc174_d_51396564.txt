@@ -1,0 +1,108 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1854,1898]
+to
+METHOD_INVOCATION_ARGUMENTS [1851,1894]
+at 1
+------------
+===
+insert-node
+---
+InfixExpression [1854,1898]
+to
+METHOD_INVOCATION_ARGUMENTS [1851,1894]
+at 1
+===
+insert-node
+---
+NumberLiteral: 1 [1897,1898]
+to
+InfixExpression [1854,1898]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1896,1897]
+to
+InfixExpression [1854,1898]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1854,1898]
+------------
+===
+move-tree
+---
+InfixExpression [1854,1894]
+    MethodInvocation [1854,1882]
+        METHOD_INVOCATION_RECEIVER [1854,1858]
+            SimpleName: Math [1854,1858]
+        SimpleName: min [1859,1862]
+        METHOD_INVOCATION_ARGUMENTS [1863,1881]
+            SimpleName: n [1863,1864]
+            InfixExpression [1866,1881]
+                InfixExpression [1866,1875]
+                    SimpleName: now [1866,1869]
+                    INFIX_EXPRESSION_OPERATOR: * [1870,1871]
+                    SimpleName: now [1872,1875]
+                INFIX_EXPRESSION_OPERATOR: + [1876,1877]
+                SimpleName: now [1878,1881]
+    INFIX_EXPRESSION_OPERATOR: - [1883,1884]
+    InfixExpression [1885,1894]
+        SimpleName: now [1885,1888]
+        INFIX_EXPRESSION_OPERATOR: * [1889,1890]
+        SimpleName: now [1891,1894]
+to
+InfixExpression [1854,1898]
+at 0
+
+New cluster:
+===
+insert-node
+---
+InfixExpression [1866,1883]
+to
+METHOD_INVOCATION_ARGUMENTS [1863,1881]
+at 1
+------------
+===
+insert-node
+---
+InfixExpression [1866,1883]
+to
+METHOD_INVOCATION_ARGUMENTS [1863,1881]
+at 1
+===
+insert-node
+---
+NumberLiteral: 1 [1882,1883]
+to
+InfixExpression [1866,1883]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: - [1881,1882]
+to
+InfixExpression [1866,1883]
+at 1
+
+New cluster:
+MOVE from InfixExpression [1866,1883]
+------------
+===
+move-tree
+---
+InfixExpression [1866,1881]
+    InfixExpression [1866,1875]
+        SimpleName: now [1866,1869]
+        INFIX_EXPRESSION_OPERATOR: * [1870,1871]
+        SimpleName: now [1872,1875]
+    INFIX_EXPRESSION_OPERATOR: + [1876,1877]
+    SimpleName: now [1878,1881]
+to
+InfixExpression [1866,1883]
+at 0
+

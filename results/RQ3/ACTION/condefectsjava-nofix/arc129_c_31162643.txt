@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "1" to "2"
+------------
+===
+update-node
+---
+StringLiteral: "1" [2050,2053]
+replace "1" by "2"
+

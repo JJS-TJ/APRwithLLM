@@ -1,0 +1,38 @@
+New cluster:
+UPDATE from add to pow
+------------
+===
+update-node
+---
+SimpleName: add [1055,1058]
+replace add by pow
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [1059,1064]
+------------
+===
+move-tree
+---
+SimpleName: ca [1059,1061]
+to
+METHOD_INVOCATION_ARGUMENTS [1059,1064]
+at 1
+
+New cluster:
+UPDATE from 1 to 10
+------------
+===
+update-node
+---
+NumberLiteral: 1 [1063,1064]
+replace 1 by 10
+
+New cluster:
+UPDATE from ca to a
+------------
+===
+update-node
+---
+SimpleName: ca [1059,1061]
+replace ca by a
+

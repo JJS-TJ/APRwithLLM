@@ -1,0 +1,78 @@
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1 [846,847]
+to
+InfixExpression [838,847]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 1 [846,847]
+to
+InfixExpression [838,847]
+at 2
+
+New cluster:
+UPDATE from N to M
+------------
+===
+update-node
+---
+SimpleName: N [838,839]
+replace N by M
+
+New cluster:
+UPDATE from + to -
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: + [840,841]
+replace + by -
+
+New cluster:
+===
+insert-node
+---
+SimpleName: K [841,842]
+to
+InfixExpression [838,842]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: K [841,842]
+to
+InfixExpression [838,842]
+at 2
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [841,842]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [841,842]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: M [846,847]
+===
+------------
+===
+delete-node
+---
+SimpleName: M [846,847]
+===
+

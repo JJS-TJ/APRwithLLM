@@ -1,0 +1,52 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [272,280]
+    PrimitiveType: long [273,277]
+    SimpleName: n [279,280]
+to
+InfixExpression [272,275]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [284,291]
+    PrimitiveType: long [285,289]
+    SimpleName: n [290,291]
+to
+InfixExpression [276,283]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: n [272,273]
+===
+------------
+===
+delete-node
+---
+SimpleName: n [272,273]
+===
+
+New cluster:
+===
+delete-node
+---
+SimpleName: n [276,277]
+===
+------------
+===
+delete-node
+---
+SimpleName: n [276,277]
+===
+

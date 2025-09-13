@@ -1,0 +1,63 @@
+New cluster:
+UPDATE from R to L
+------------
+===
+update-node
+---
+SimpleName: R [748,749]
+replace R by L
+
+New cluster:
+===
+insert-node
+---
+SimpleName: L [756,757]
+to
+InfixExpression [756,765]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: L [756,757]
+to
+InfixExpression [756,765]
+at 0
+
+New cluster:
+UPDATE from - to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: - [762,763]
+replace - by +
+
+New cluster:
+===
+insert-node
+---
+SimpleName: j [760,761]
+to
+InfixExpression [756,765]
+at 3
+------------
+===
+insert-node
+---
+SimpleName: j [760,761]
+to
+InfixExpression [756,765]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [756,761]
+    SimpleName: R [756,757]
+    INFIX_EXPRESSION_OPERATOR: + [758,759]
+    SimpleName: j [760,761]
+

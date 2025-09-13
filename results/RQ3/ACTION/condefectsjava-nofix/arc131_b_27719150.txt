@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from H to W
+------------
+===
+update-node
+---
+SimpleName: H [585,586]
+replace H by W
+

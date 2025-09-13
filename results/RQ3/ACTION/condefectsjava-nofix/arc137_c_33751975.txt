@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "Bob" to "Alice"
+------------
+===
+update-node
+---
+StringLiteral: "Bob" [576,581]
+replace "Bob" by "Alice"
+

@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: k [854,855]
+to
+InfixExpression [852,855]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: k [854,855]
+to
+InfixExpression [852,855]
+at 2
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [854,855]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [854,855]
+===
+

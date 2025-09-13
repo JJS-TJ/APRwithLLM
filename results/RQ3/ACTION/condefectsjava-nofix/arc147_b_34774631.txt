@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [1228,1235]
+    InfixExpression [1229,1234]
+        SimpleName: i [1229,1230]
+        INFIX_EXPRESSION_OPERATOR: - [1231,1232]
+        SimpleName: p [1233,1234]
+to
+InfixExpression [1224,1229]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: i [1228,1229]
+===
+------------
+===
+delete-node
+---
+SimpleName: i [1228,1229]
+===
+

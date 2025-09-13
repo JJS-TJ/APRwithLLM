@@ -1,0 +1,17 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [483,524]
+    MethodInvocation [483,523]
+        METHOD_INVOCATION_RECEIVER [483,493]
+            QualifiedName: System.out [483,493]
+        SimpleName: println [494,501]
+        METHOD_INVOCATION_ARGUMENTS [502,522]
+            InfixExpression [502,522]
+                StringLiteral: "maxIndex:" [502,513]
+                INFIX_EXPRESSION_OPERATOR: + [513,514]
+                SimpleName: maxIndex [514,522]
+

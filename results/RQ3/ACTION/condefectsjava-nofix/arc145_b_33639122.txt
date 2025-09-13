@@ -1,0 +1,122 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [634,699]
+to
+ExpressionStatement [634,687]
+at 0
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [653,698]
+to
+MethodInvocation [634,699]
+at 2
+===
+insert-node
+---
+MethodInvocation [634,699]
+to
+ExpressionStatement [634,687]
+at 0
+===
+insert-node
+---
+SimpleName: println [645,652]
+to
+MethodInvocation [634,699]
+at 1
+
+New cluster:
+MOVE from MethodInvocation [634,699]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_RECEIVER [634,644]
+    QualifiedName: System.out [634,644]
+to
+MethodInvocation [634,699]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [653,698]
+------------
+===
+move-tree
+---
+MethodInvocation [634,686]
+    METHOD_INVOCATION_RECEIVER [634,644]
+        QualifiedName: System.out [634,644]
+    SimpleName: println [645,652]
+    METHOD_INVOCATION_ARGUMENTS [653,685]
+        InfixExpression [653,685]
+            InfixExpression [653,660]
+                SimpleName: B [653,654]
+                INFIX_EXPRESSION_OPERATOR: * [654,655]
+                ParenthesizedExpression [655,660]
+                    InfixExpression [656,659]
+                        SimpleName: M [656,657]
+                        INFIX_EXPRESSION_OPERATOR: - [657,658]
+                        NumberLiteral: 1 [658,659]
+            INFIX_EXPRESSION_OPERATOR: + [660,661]
+            MethodInvocation [661,685]
+                METHOD_INVOCATION_RECEIVER [661,665]
+                    SimpleName: Math [661,665]
+                SimpleName: min [666,669]
+                METHOD_INVOCATION_ARGUMENTS [670,684]
+                    InfixExpression [670,681]
+                        InfixExpression [670,677]
+                            SimpleName: N [670,671]
+                            INFIX_EXPRESSION_OPERATOR: - [672,673]
+                            InfixExpression [674,677]
+                                SimpleName: M [674,675]
+                                INFIX_EXPRESSION_OPERATOR: * [675,676]
+                                SimpleName: A [676,677]
+                        INFIX_EXPRESSION_OPERATOR: + [678,679]
+                        NumberLiteral: 1 [680,681]
+                    SimpleName: B [683,684]
+to
+METHOD_INVOCATION_ARGUMENTS [653,698]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [653,657]
+    SimpleName: Math [653,657]
+to
+MethodInvocation [634,686]
+at 0
+
+New cluster:
+UPDATE from println to max
+------------
+===
+update-node
+---
+SimpleName: println [645,652]
+replace println by max
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 0 [696,697]
+to
+METHOD_INVOCATION_ARGUMENTS [653,685]
+at 1
+------------
+===
+insert-node
+---
+NumberLiteral: 0 [696,697]
+to
+METHOD_INVOCATION_ARGUMENTS [653,685]
+at 1
+

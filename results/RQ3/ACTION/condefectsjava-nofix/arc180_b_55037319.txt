@@ -1,0 +1,16 @@
+New cluster:
+MOVE from ArrayInitializer [1247,1265]
+------------
+===
+move-tree
+---
+InfixExpression [1248,1255]
+    ArrayAccess [1248,1252]
+        SimpleName: Q [1248,1249]
+        SimpleName: a [1250,1251]
+    INFIX_EXPRESSION_OPERATOR: + [1253,1254]
+    NumberLiteral: 1 [1254,1255]
+to
+ArrayInitializer [1247,1265]
+at 1
+

@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [2479,2487]
+    StringLiteral: "0 " [2479,2483]
+    INFIX_EXPRESSION_OPERATOR: + [2484,2485]
+    SimpleName: Q [2486,2487]
+to
+METHOD_INVOCATION_ARGUMENTS [2479,2484]
+at 0
+
+New cluster:
+===
+delete-node
+---
+StringLiteral: "0 0" [2479,2484]
+===
+------------
+===
+delete-node
+---
+StringLiteral: "0 0" [2479,2484]
+===
+

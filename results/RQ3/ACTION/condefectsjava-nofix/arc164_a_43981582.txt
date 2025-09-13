@@ -1,0 +1,59 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [401,423]
+to
+IfStatement [398,510]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [401,423]
+to
+IfStatement [398,510]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [408,410]
+to
+InfixExpression [401,423]
+at 1
+
+New cluster:
+MOVE from InfixExpression [401,423]
+------------
+===
+move-tree
+---
+InfixExpression [401,407]
+    SimpleName: ans [401,404]
+    INFIX_EXPRESSION_OPERATOR: <= [404,406]
+    SimpleName: k [406,407]
+to
+InfixExpression [401,423]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [411,423]
+    InfixExpression [411,420]
+        ParenthesizedExpression [411,418]
+            InfixExpression [412,417]
+                SimpleName: k [412,413]
+                INFIX_EXPRESSION_OPERATOR: - [413,414]
+                SimpleName: ans [414,417]
+        INFIX_EXPRESSION_OPERATOR: % [418,419]
+        NumberLiteral: 2 [419,420]
+    INFIX_EXPRESSION_OPERATOR: == [420,422]
+    NumberLiteral: 0 [422,423]
+to
+InfixExpression [401,423]
+at 2
+

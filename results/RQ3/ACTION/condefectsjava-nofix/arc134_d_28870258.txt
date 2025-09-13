@@ -1,0 +1,81 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1202,1228]
+to
+IfStatement [1198,1433]
+at 0
+------------
+===
+insert-node
+---
+MethodInvocation [1202,1228]
+to
+IfStatement [1198,1433]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1216,1227]
+to
+MethodInvocation [1202,1228]
+at 2
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [1202,1208]
+to
+MethodInvocation [1202,1228]
+at 0
+===
+insert-node
+---
+SimpleName: equals [1209,1215]
+to
+MethodInvocation [1202,1228]
+at 1
+
+New cluster:
+MOVE from METHOD_INVOCATION_RECEIVER [1202,1208]
+------------
+===
+move-tree
+---
+ArrayAccess [1202,1208]
+    SimpleName: arr [1202,1205]
+    SimpleName: i [1206,1207]
+to
+METHOD_INVOCATION_RECEIVER [1202,1208]
+at 0
+===
+move-tree
+---
+MethodInvocation [1212,1223]
+    METHOD_INVOCATION_RECEIVER [1212,1216]
+        SimpleName: ans2 [1212,1216]
+    SimpleName: get [1217,1220]
+    METHOD_INVOCATION_ARGUMENTS [1221,1222]
+        NumberLiteral: 0 [1221,1222]
+to
+METHOD_INVOCATION_ARGUMENTS [1216,1227]
+at 0
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [1202,1223]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: == [1209,1211]
+===
+===
+delete-node
+---
+InfixExpression [1202,1223]
+===
+

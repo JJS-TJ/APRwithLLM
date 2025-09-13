@@ -1,0 +1,164 @@
+New cluster:
+MOVE from ParenthesizedExpression [1698,1719]
+------------
+===
+move-tree
+---
+InfixExpression [1723,1746]
+    InfixExpression [1723,1732]
+        ArrayAccess [1723,1727]
+            SimpleName: s [1723,1724]
+            SimpleName: i [1725,1726]
+        INFIX_EXPRESSION_OPERATOR: == [1727,1729]
+        CharacterLiteral: 'A' [1729,1732]
+    INFIX_EXPRESSION_OPERATOR: && [1733,1735]
+    ParenthesizedExpression [1736,1746]
+        InfixExpression [1737,1745]
+            ArrayAccess [1737,1741]
+                SimpleName: l [1737,1738]
+                SimpleName: i [1739,1740]
+            INFIX_EXPRESSION_OPERATOR: == [1741,1743]
+            PrefixExpression [1743,1745]
+                PREFIX_EXPRESSION_OPERATOR: - [1743,1744]
+                NumberLiteral: 1 [1744,1745]
+to
+ParenthesizedExpression [1698,1719]
+at 0
+===
+move-tree
+---
+InfixExpression [1683,1719]
+    InfixExpression [1683,1694]
+        ArrayAccess [1683,1687]
+            SimpleName: s [1683,1684]
+            SimpleName: i [1685,1686]
+        INFIX_EXPRESSION_OPERATOR: == [1688,1690]
+        CharacterLiteral: 'B' [1691,1694]
+    INFIX_EXPRESSION_OPERATOR: && [1695,1697]
+    ParenthesizedExpression [1698,1719]
+        InfixExpression [1699,1718]
+            InfixExpression [1699,1707]
+                ArrayAccess [1699,1703]
+                    SimpleName: l [1699,1700]
+                    SimpleName: i [1701,1702]
+                INFIX_EXPRESSION_OPERATOR: == [1703,1705]
+                PrefixExpression [1705,1707]
+                    PREFIX_EXPRESSION_OPERATOR: - [1705,1706]
+                    NumberLiteral: 1 [1706,1707]
+            INFIX_EXPRESSION_OPERATOR: || [1708,1710]
+            InfixExpression [1711,1718]
+                ArrayAccess [1711,1715]
+                    SimpleName: l [1711,1712]
+                    SimpleName: i [1713,1714]
+                INFIX_EXPRESSION_OPERATOR: == [1715,1717]
+                NumberLiteral: 0 [1717,1718]
+to
+IfStatement [1680,1786]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1723,1746]
+------------
+===
+move-tree
+---
+InfixExpression [1699,1718]
+    InfixExpression [1699,1707]
+        ArrayAccess [1699,1703]
+            SimpleName: l [1699,1700]
+            SimpleName: i [1701,1702]
+        INFIX_EXPRESSION_OPERATOR: == [1703,1705]
+        PrefixExpression [1705,1707]
+            PREFIX_EXPRESSION_OPERATOR: - [1705,1706]
+            NumberLiteral: 1 [1706,1707]
+    INFIX_EXPRESSION_OPERATOR: || [1708,1710]
+    InfixExpression [1711,1718]
+        ArrayAccess [1711,1715]
+            SimpleName: l [1711,1712]
+            SimpleName: i [1713,1714]
+        INFIX_EXPRESSION_OPERATOR: == [1715,1717]
+        NumberLiteral: 0 [1717,1718]
+to
+InfixExpression [1723,1746]
+at 0
+
+New cluster:
+UPDATE from && to ||
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: && [1733,1735]
+replace && by ||
+
+New cluster:
+MOVE from InfixExpression [1723,1746]
+------------
+===
+move-tree
+---
+InfixExpression [1737,1745]
+    ArrayAccess [1737,1741]
+        SimpleName: l [1737,1738]
+        SimpleName: i [1739,1740]
+    INFIX_EXPRESSION_OPERATOR: == [1741,1743]
+    PrefixExpression [1743,1745]
+        PREFIX_EXPRESSION_OPERATOR: - [1743,1744]
+        NumberLiteral: 1 [1744,1745]
+to
+InfixExpression [1723,1746]
+at 3
+
+New cluster:
+UPDATE from 1 to 2
+------------
+===
+update-node
+---
+NumberLiteral: 1 [1744,1745]
+replace 1 by 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1723,1732]
+    ArrayAccess [1723,1727]
+        SimpleName: s [1723,1724]
+        SimpleName: i [1725,1726]
+    INFIX_EXPRESSION_OPERATOR: == [1727,1729]
+    CharacterLiteral: 'A' [1729,1732]
+
+New cluster:
+===
+delete-node
+---
+ParenthesizedExpression [1736,1746]
+===
+------------
+===
+delete-node
+---
+ParenthesizedExpression [1736,1746]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [1683,1746]
+===
+------------
+===
+delete-node
+---
+InfixExpression [1683,1746]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: || [1720,1722]
+===
+

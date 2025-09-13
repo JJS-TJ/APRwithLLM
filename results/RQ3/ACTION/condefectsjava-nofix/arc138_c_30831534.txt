@@ -1,0 +1,33 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [839,857]
+    METHOD_INVOCATION_RECEIVER [839,843]
+        SimpleName: Math [839,843]
+    SimpleName: min [844,847]
+    METHOD_INVOCATION_ARGUMENTS [848,856]
+        SimpleName: k [848,849]
+        InfixExpression [851,856]
+            SimpleName: n [851,852]
+            INFIX_EXPRESSION_OPERATOR: - [853,854]
+            NumberLiteral: 1 [855,856]
+to
+InfixExpression [839,846]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: k [839,840]
+===
+------------
+===
+delete-node
+---
+SimpleName: k [839,840]
+===
+

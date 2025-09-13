@@ -1,0 +1,32 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: j [495,496]
+to
+InfixExpression [493,502]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: j [495,496]
+to
+InfixExpression [493,502]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [495,502]
+    ParenthesizedExpression [495,500]
+        InfixExpression [496,499]
+            SimpleName: n [496,497]
+            INFIX_EXPRESSION_OPERATOR: / [497,498]
+            SimpleName: m [498,499]
+    INFIX_EXPRESSION_OPERATOR: * [500,501]
+    SimpleName: j [501,502]
+

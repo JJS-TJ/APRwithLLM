@@ -1,0 +1,207 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [337,344]
+    InfixExpression [337,340]
+        SimpleName: a [337,338]
+        INFIX_EXPRESSION_OPERATOR: * [338,339]
+        NumberLiteral: 2 [339,340]
+    INFIX_EXPRESSION_OPERATOR: < [341,342]
+    SimpleName: n [343,344]
+to
+InfixExpression [337,375]
+at 0
+
+New cluster:
+===
+insert-node
+---
+InfixExpression [348,367]
+to
+InfixExpression [337,375]
+at 3
+------------
+===
+insert-node
+---
+SimpleName: tmp [352,355]
+to
+InfixExpression [352,367]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: > [350,351]
+to
+InfixExpression [348,367]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: * [355,356]
+to
+InfixExpression [352,367]
+at 1
+===
+insert-node
+---
+ParenthesizedExpression [356,367]
+to
+InfixExpression [352,367]
+at 2
+===
+insert-node
+---
+SimpleName: b [348,349]
+to
+InfixExpression [348,367]
+at 0
+===
+insert-node
+---
+InfixExpression [348,367]
+to
+InfixExpression [337,375]
+at 3
+===
+insert-node
+---
+InfixExpression [352,367]
+to
+InfixExpression [348,367]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [371,379]
+    InfixExpression [371,374]
+        SimpleName: a [371,372]
+        INFIX_EXPRESSION_OPERATOR: * [372,373]
+        NumberLiteral: 2 [373,374]
+    INFIX_EXPRESSION_OPERATOR: >= [375,377]
+    SimpleName: n [378,379]
+to
+InfixExpression [379,402]
+at 0
+
+New cluster:
+MOVE from ParenthesizedExpression [356,367]
+------------
+===
+move-tree
+---
+InfixExpression [379,387]
+    SimpleName: a [379,380]
+    INFIX_EXPRESSION_OPERATOR: >= [381,383]
+    InfixExpression [384,387]
+        SimpleName: n [384,385]
+        INFIX_EXPRESSION_OPERATOR: / [385,386]
+        NumberLiteral: 2 [386,387]
+to
+ParenthesizedExpression [356,367]
+at 0
+
+New cluster:
+MOVE from InfixExpression [379,387]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: >= [381,383]
+to
+InfixExpression [379,387]
+at 2
+
+New cluster:
+UPDATE from >= to +
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [381,383]
+replace >= by +
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [361,366]
+    ParenthesizedExpression [361,364]
+        SimpleName: n [362,363]
+    INFIX_EXPRESSION_OPERATOR: % [364,365]
+    NumberLiteral: 2 [365,366]
+to
+InfixExpression [379,387]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [337,344]
+    SimpleName: a [337,338]
+    INFIX_EXPRESSION_OPERATOR: < [339,340]
+    InfixExpression [341,344]
+        SimpleName: n [341,342]
+        INFIX_EXPRESSION_OPERATOR: / [342,343]
+        NumberLiteral: 2 [343,344]
+
+New cluster:
+===
+delete-node
+---
+SimpleName: a [379,380]
+===
+------------
+===
+delete-node
+---
+SimpleName: a [379,380]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [348,375]
+    SimpleName: b [348,349]
+    INFIX_EXPRESSION_OPERATOR: > [350,351]
+    InfixExpression [352,375]
+        SimpleName: tmp [352,355]
+        INFIX_EXPRESSION_OPERATOR: * [355,356]
+        ParenthesizedExpression [356,375]
+            InfixExpression [357,374]
+                InfixExpression [357,366]
+                    SimpleName: a [357,358]
+                    INFIX_EXPRESSION_OPERATOR: + [358,359]
+                    InfixExpression [359,366]
+                        ParenthesizedExpression [359,364]
+                            InfixExpression [360,363]
+                                SimpleName: n [360,361]
+                                INFIX_EXPRESSION_OPERATOR: - [361,362]
+                                SimpleName: a [362,363]
+                        INFIX_EXPRESSION_OPERATOR: / [364,365]
+                        NumberLiteral: 2 [365,366]
+                INFIX_EXPRESSION_OPERATOR: + [366,367]
+                InfixExpression [367,374]
+                    ParenthesizedExpression [367,372]
+                        InfixExpression [368,371]
+                            SimpleName: n [368,369]
+                            INFIX_EXPRESSION_OPERATOR: - [369,370]
+                            SimpleName: a [370,371]
+                    INFIX_EXPRESSION_OPERATOR: % [372,373]
+                    NumberLiteral: 2 [373,374]
+

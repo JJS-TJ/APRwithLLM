@@ -1,0 +1,17 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [1941,1960]
+    MethodInvocation [1941,1959]
+        METHOD_INVOCATION_RECEIVER [1941,1944]
+            SimpleName: out [1941,1944]
+        SimpleName: println [1945,1952]
+        METHOD_INVOCATION_ARGUMENTS [1953,1958]
+            StringLiteral: "Yes" [1953,1958]
+to
+Block [707,1964]
+at 19
+

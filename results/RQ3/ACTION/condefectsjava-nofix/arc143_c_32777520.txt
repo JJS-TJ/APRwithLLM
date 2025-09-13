@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [284,299]
+to
+IfStatement [280,368]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [284,299]
+to
+IfStatement [280,368]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [291,293]
+to
+InfixExpression [284,299]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [284,290]
+    SimpleName: y [284,285]
+    INFIX_EXPRESSION_OPERATOR: <= [286,288]
+    SimpleName: i [289,290]
+to
+InfixExpression [284,299]
+at 0
+
+New cluster:
+MOVE from InfixExpression [284,299]
+------------
+===
+move-tree
+---
+InfixExpression [284,289]
+    SimpleName: i [284,285]
+    INFIX_EXPRESSION_OPERATOR: < [286,287]
+    SimpleName: x [288,289]
+to
+InfixExpression [284,299]
+at 2
+

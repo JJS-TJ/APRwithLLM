@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: L [3841,3842]
+to
+VariableDeclarationFragment [3837,3846]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: L [3841,3842]
+to
+VariableDeclarationFragment [3837,3846]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [3841,3846]
+    SimpleName: L [3841,3842]
+    INFIX_EXPRESSION_OPERATOR: + [3843,3844]
+    NumberLiteral: 1 [3845,3846]
+

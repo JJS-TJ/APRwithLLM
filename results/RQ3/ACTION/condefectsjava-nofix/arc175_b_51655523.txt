@@ -1,0 +1,48 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: b [1430,1431]
+to
+InfixExpression [1431,1452]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: b [1430,1431]
+to
+InfixExpression [1431,1452]
+at 0
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 2 [1434,1435]
+to
+InfixExpression [1431,1452]
+at 3
+------------
+===
+insert-node
+---
+NumberLiteral: 2 [1434,1435]
+to
+InfixExpression [1431,1452]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [1431,1445]
+    METHOD_INVOCATION_RECEIVER [1431,1435]
+        SimpleName: Math [1431,1435]
+    SimpleName: min [1436,1439]
+    METHOD_INVOCATION_ARGUMENTS [1440,1444]
+        SimpleName: a [1440,1441]
+        SimpleName: b [1443,1444]
+

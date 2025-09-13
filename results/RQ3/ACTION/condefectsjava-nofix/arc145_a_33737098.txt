@@ -1,0 +1,73 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [150,199]
+to
+InfixExpression [150,205]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [150,199]
+to
+InfixExpression [150,205]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [173,175]
+to
+InfixExpression [150,199]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [150,172]
+    InfixExpression [150,156]
+        SimpleName: n [150,151]
+        INFIX_EXPRESSION_OPERATOR: == [152,154]
+        NumberLiteral: 2 [155,156]
+    INFIX_EXPRESSION_OPERATOR: && [157,159]
+    InfixExpression [160,172]
+        ArrayAccess [160,164]
+            SimpleName: s [160,161]
+            NumberLiteral: 0 [162,163]
+        INFIX_EXPRESSION_OPERATOR: == [165,167]
+        ArrayAccess [168,172]
+            SimpleName: s [168,169]
+            NumberLiteral: 1 [170,171]
+to
+InfixExpression [150,199]
+at 0
+
+New cluster:
+MOVE from InfixExpression [150,199]
+------------
+===
+move-tree
+---
+InfixExpression [150,173]
+    InfixExpression [150,156]
+        SimpleName: n [150,151]
+        INFIX_EXPRESSION_OPERATOR: >= [152,154]
+        NumberLiteral: 3 [155,156]
+    INFIX_EXPRESSION_OPERATOR: && [157,159]
+    InfixExpression [160,173]
+        ArrayAccess [160,166]
+            SimpleName: s [160,161]
+            InfixExpression [162,165]
+                SimpleName: n [162,163]
+                INFIX_EXPRESSION_OPERATOR: - [163,164]
+                NumberLiteral: 1 [164,165]
+        INFIX_EXPRESSION_OPERATOR: == [167,169]
+        CharacterLiteral: 'A' [170,173]
+to
+InfixExpression [150,199]
+at 2
+

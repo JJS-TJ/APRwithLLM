@@ -1,0 +1,36 @@
+New cluster:
+UPDATE from == to >=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: == [1234,1236]
+replace == by >=
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1237,1244]
+    SimpleName: inf [1237,1240]
+    INFIX_EXPRESSION_OPERATOR: / [1241,1242]
+    NumberLiteral: 2 [1243,1244]
+to
+InfixExpression [1229,1240]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: inf [1237,1240]
+===
+------------
+===
+delete-node
+---
+SimpleName: inf [1237,1240]
+===
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from s to rev_s
+------------
+===
+update-node
+---
+SimpleName: s [965,966]
+replace s by rev_s
+

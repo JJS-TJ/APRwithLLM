@@ -1,0 +1,118 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [196,244]
+to
+ExpressionStatement [196,225]
+at 0
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [196,222]
+to
+MethodInvocation [196,233]
+at 0
+===
+insert-node
+---
+SimpleName: println [234,241]
+to
+MethodInvocation [196,244]
+at 1
+===
+insert-node
+---
+MethodInvocation [196,233]
+to
+METHOD_INVOCATION_RECEIVER [196,233]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [196,233]
+to
+MethodInvocation [196,244]
+at 0
+===
+insert-node
+---
+MethodInvocation [196,244]
+to
+ExpressionStatement [196,225]
+at 0
+===
+insert-node
+---
+SimpleName: print [223,228]
+to
+MethodInvocation [196,233]
+at 1
+
+New cluster:
+MOVE from MethodInvocation [196,244]
+------------
+===
+move-tree
+---
+METHOD_INVOCATION_ARGUMENTS [222,223]
+    NumberLiteral: 1 [222,223]
+to
+MethodInvocation [196,244]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [229,232]
+    StringLiteral: " " [229,232]
+to
+MethodInvocation [196,233]
+at 2
+
+New cluster:
+MOVE from METHOD_INVOCATION_RECEIVER [196,222]
+------------
+===
+move-tree
+---
+MethodInvocation [196,224]
+    METHOD_INVOCATION_RECEIVER [196,213]
+        MethodInvocation [196,213]
+            METHOD_INVOCATION_RECEIVER [196,198]
+                SimpleName: ou [196,198]
+            SimpleName: println [199,206]
+            METHOD_INVOCATION_ARGUMENTS [207,212]
+                StringLiteral: "Yes" [207,212]
+    SimpleName: println [214,221]
+    METHOD_INVOCATION_ARGUMENTS [222,223]
+        NumberLiteral: 1 [222,223]
+to
+METHOD_INVOCATION_RECEIVER [196,222]
+at 0
+
+New cluster:
+UPDATE from println to print
+------------
+===
+update-node
+---
+SimpleName: println [214,221]
+replace println by print
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [220,221]
+    NumberLiteral: 0 [220,221]
+to
+MethodInvocation [196,224]
+at 2
+

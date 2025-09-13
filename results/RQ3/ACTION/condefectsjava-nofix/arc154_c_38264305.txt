@@ -1,0 +1,98 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1034,1041]
+to
+IfStatement [1031,1051]
+at 0
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: < [1035,1036]
+to
+InfixExpression [1034,1041]
+at 1
+===
+insert-node
+---
+SimpleName: k [1034,1035]
+to
+InfixExpression [1034,1041]
+at 0
+===
+insert-node
+---
+InfixExpression [1034,1041]
+to
+IfStatement [1031,1051]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1034,1041]
+------------
+===
+move-tree
+---
+InfixExpression [1034,1039]
+    SimpleName: k [1034,1035]
+    INFIX_EXPRESSION_OPERATOR: < [1035,1036]
+    InfixExpression [1036,1039]
+        SimpleName: n [1036,1037]
+        INFIX_EXPRESSION_OPERATOR: + [1037,1038]
+        SimpleName: i [1038,1039]
+to
+InfixExpression [1034,1041]
+at 2
+
+New cluster:
+MOVE from InfixExpression [1034,1039]
+------------
+===
+move-tree
+---
+INFIX_EXPRESSION_OPERATOR: < [1035,1036]
+to
+InfixExpression [1034,1039]
+at 2
+
+New cluster:
+UPDATE from < to -
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [1035,1036]
+replace < by -
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1 [1040,1041]
+to
+InfixExpression [1034,1039]
+at 3
+------------
+===
+insert-node
+---
+NumberLiteral: 1 [1040,1041]
+to
+InfixExpression [1034,1039]
+at 3
+
+New cluster:
+===
+delete-node
+---
+SimpleName: k [1034,1035]
+===
+------------
+===
+delete-node
+---
+SimpleName: k [1034,1035]
+===
+

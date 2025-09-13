@@ -1,0 +1,74 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [867,913]
+to
+IfStatement [863,963]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [867,913]
+to
+IfStatement [863,963]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: && [876,878]
+to
+InfixExpression [867,913]
+at 1
+
+New cluster:
+MOVE from InfixExpression [867,913]
+------------
+===
+move-tree
+---
+InfixExpression [866,874]
+    SimpleName: d34 [866,869]
+    INFIX_EXPRESSION_OPERATOR: == [870,872]
+    NumberLiteral: 1 [873,874]
+to
+InfixExpression [867,913]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [879,913]
+    InfixExpression [879,894]
+        ArrayAccess [879,886]
+            ArrayAccess [879,883]
+                SimpleName: d [879,880]
+                NumberLiteral: 2 [881,882]
+            NumberLiteral: 0 [884,885]
+        INFIX_EXPRESSION_OPERATOR: + [886,887]
+        ArrayAccess [887,894]
+            ArrayAccess [887,891]
+                SimpleName: d [887,888]
+                NumberLiteral: 2 [889,890]
+            NumberLiteral: 1 [892,893]
+    INFIX_EXPRESSION_OPERATOR: == [895,897]
+    InfixExpression [898,913]
+        ArrayAccess [898,905]
+            ArrayAccess [898,902]
+                SimpleName: d [898,899]
+                NumberLiteral: 3 [900,901]
+            NumberLiteral: 0 [903,904]
+        INFIX_EXPRESSION_OPERATOR: + [905,906]
+        ArrayAccess [906,913]
+            ArrayAccess [906,910]
+                SimpleName: d [906,907]
+                NumberLiteral: 3 [908,909]
+            NumberLiteral: 1 [911,912]
+to
+InfixExpression [867,913]
+at 2
+

@@ -1,0 +1,78 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [732,750]
+    InfixExpression [732,746]
+        SimpleName: N [732,733]
+        INFIX_EXPRESSION_OPERATOR: - [734,735]
+        ParenthesizedExpression [736,746]
+            InfixExpression [737,745]
+                ArrayAccess [737,741]
+                    SimpleName: P [737,738]
+                    NumberLiteral: 0 [739,740]
+                INFIX_EXPRESSION_OPERATOR: + [742,743]
+                NumberLiteral: 1 [744,745]
+    INFIX_EXPRESSION_OPERATOR: + [747,748]
+    NumberLiteral: 1 [749,750]
+to
+METHOD_INVOCATION_ARGUMENTS [732,768]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [752,760]
+    ArrayAccess [752,756]
+        SimpleName: P [752,753]
+        NumberLiteral: 0 [754,755]
+    INFIX_EXPRESSION_OPERATOR: + [757,758]
+    NumberLiteral: 2 [759,760]
+to
+METHOD_INVOCATION_ARGUMENTS [732,768]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [732,754]
+    InfixExpression [732,750]
+        SimpleName: N [732,733]
+        INFIX_EXPRESSION_OPERATOR: - [734,735]
+        ParenthesizedExpression [736,750]
+            InfixExpression [737,749]
+                ArrayAccess [737,745]
+                    SimpleName: P [737,738]
+                    InfixExpression [739,744]
+                        SimpleName: N [739,740]
+                        INFIX_EXPRESSION_OPERATOR: - [741,742]
+                        NumberLiteral: 1 [743,744]
+                INFIX_EXPRESSION_OPERATOR: + [746,747]
+                NumberLiteral: 1 [748,749]
+    INFIX_EXPRESSION_OPERATOR: + [751,752]
+    NumberLiteral: 1 [753,754]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [756,768]
+    ArrayAccess [756,764]
+        SimpleName: P [756,757]
+        InfixExpression [758,763]
+            SimpleName: N [758,759]
+            INFIX_EXPRESSION_OPERATOR: - [760,761]
+            NumberLiteral: 1 [762,763]
+    INFIX_EXPRESSION_OPERATOR: + [765,766]
+    NumberLiteral: 2 [767,768]
+

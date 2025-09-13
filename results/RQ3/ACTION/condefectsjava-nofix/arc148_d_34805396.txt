@@ -1,0 +1,33 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1236,1254]
+    SimpleName: ok [1236,1238]
+    INFIX_EXPRESSION_OPERATOR: && [1239,1241]
+    InfixExpression [1242,1254]
+        InfixExpression [1242,1249]
+            SimpleName: odd [1242,1245]
+            INFIX_EXPRESSION_OPERATOR: % [1246,1247]
+            NumberLiteral: 4 [1248,1249]
+        INFIX_EXPRESSION_OPERATOR: == [1250,1252]
+        NumberLiteral: 0 [1253,1254]
+to
+IfStatement [1232,1318]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: ok [1236,1238]
+===
+------------
+===
+delete-node
+---
+SimpleName: ok [1236,1238]
+===
+

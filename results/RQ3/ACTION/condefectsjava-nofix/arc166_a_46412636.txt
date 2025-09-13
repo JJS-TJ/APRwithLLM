@@ -1,0 +1,36 @@
+New cluster:
+UPDATE from <= to >=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: <= [1328,1330]
+replace <= by >=
+
+New cluster:
+UPDATE from end to start
+------------
+===
+update-node
+---
+SimpleName: end [1331,1334]
+replace end by start
+
+New cluster:
+UPDATE from ++ to --
+------------
+===
+update-node
+---
+POSTFIX_EXPRESSION_OPERATOR: ++ [1337,1339]
+replace ++ by --
+
+New cluster:
+UPDATE from start to end
+------------
+===
+update-node
+---
+SimpleName: start [1319,1324]
+replace start by end
+

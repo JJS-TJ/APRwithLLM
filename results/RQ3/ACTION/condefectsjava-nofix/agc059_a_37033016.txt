@@ -1,0 +1,64 @@
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [782,797]
+------------
+===
+move-tree
+---
+NumberLiteral: 1 [782,783]
+to
+METHOD_INVOCATION_ARGUMENTS [782,797]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [755,806]
+    InfixExpression [756,805]
+        ArrayAccess [756,762]
+            SimpleName: pre [756,759]
+            SimpleName: r [760,761]
+        INFIX_EXPRESSION_OPERATOR: - [762,763]
+        ArrayAccess [763,769]
+            SimpleName: pre [763,766]
+            SimpleName: l [767,768]
+        ParenthesizedExpression [770,805]
+            ConditionalExpression [771,804]
+                ParenthesizedExpression [771,797]
+                    InfixExpression [772,796]
+                        MethodInvocation [772,783]
+                            METHOD_INVOCATION_RECEIVER [772,773]
+                                SimpleName: s [772,773]
+                            SimpleName: charAt [774,780]
+                            METHOD_INVOCATION_ARGUMENTS [781,782]
+                                SimpleName: l [781,782]
+                        INFIX_EXPRESSION_OPERATOR: == [783,785]
+                        MethodInvocation [785,796]
+                            METHOD_INVOCATION_RECEIVER [785,786]
+                                SimpleName: s [785,786]
+                            SimpleName: charAt [787,793]
+                            METHOD_INVOCATION_ARGUMENTS [794,795]
+                                SimpleName: r [794,795]
+                NumberLiteral: 1 [799,800]
+                NumberLiteral: 0 [803,804]
+to
+ParenthesizedExpression [754,769]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [755,768]
+    ArrayAccess [755,761]
+        SimpleName: pre [755,758]
+        SimpleName: r [759,760]
+    INFIX_EXPRESSION_OPERATOR: - [761,762]
+    ArrayAccess [762,768]
+        SimpleName: pre [762,765]
+        SimpleName: l [766,767]
+

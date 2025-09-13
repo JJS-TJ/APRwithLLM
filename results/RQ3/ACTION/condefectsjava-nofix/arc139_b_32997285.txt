@@ -1,0 +1,54 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [2719,2736]
+    CastExpression [2719,2730]
+        PrimitiveType: long [2720,2724]
+        SimpleName: cost1 [2725,2730]
+    INFIX_EXPRESSION_OPERATOR: * [2730,2731]
+    SimpleName: dist2 [2731,2736]
+to
+InfixExpression [2719,2744]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [2739,2756]
+    CastExpression [2739,2750]
+        PrimitiveType: long [2740,2744]
+        SimpleName: cost2 [2745,2750]
+    INFIX_EXPRESSION_OPERATOR: * [2750,2751]
+    SimpleName: dist1 [2751,2756]
+to
+InfixExpression [2719,2744]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [2719,2730]
+    SimpleName: cost1 [2719,2724]
+    INFIX_EXPRESSION_OPERATOR: * [2724,2725]
+    SimpleName: dist2 [2725,2730]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [2733,2744]
+    SimpleName: cost2 [2733,2738]
+    INFIX_EXPRESSION_OPERATOR: * [2738,2739]
+    SimpleName: dist1 [2739,2744]
+

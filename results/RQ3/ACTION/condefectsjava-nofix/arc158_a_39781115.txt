@@ -1,0 +1,79 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [1535,1593]
+to
+IfStatement [1532,1917]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [1535,1593]
+to
+IfStatement [1532,1917]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [1570,1572]
+to
+InfixExpression [1535,1593]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [1535,1569]
+    InfixExpression [1536,1568]
+        InfixExpression [1536,1550]
+            InfixExpression [1536,1541]
+                SimpleName: a [1536,1537]
+                INFIX_EXPRESSION_OPERATOR: % [1538,1539]
+                NumberLiteral: 2 [1540,1541]
+            INFIX_EXPRESSION_OPERATOR: != [1542,1544]
+            InfixExpression [1545,1550]
+                SimpleName: b [1545,1546]
+                INFIX_EXPRESSION_OPERATOR: % [1547,1548]
+                NumberLiteral: 2 [1549,1550]
+        INFIX_EXPRESSION_OPERATOR: || [1551,1553]
+        InfixExpression [1554,1568]
+            InfixExpression [1554,1559]
+                SimpleName: b [1554,1555]
+                INFIX_EXPRESSION_OPERATOR: % [1556,1557]
+                NumberLiteral: 2 [1558,1559]
+            INFIX_EXPRESSION_OPERATOR: != [1560,1562]
+            InfixExpression [1563,1568]
+                SimpleName: c [1563,1564]
+                INFIX_EXPRESSION_OPERATOR: % [1565,1566]
+                NumberLiteral: 2 [1567,1568]
+to
+InfixExpression [1535,1593]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1535,1593]
+------------
+===
+move-tree
+---
+InfixExpression [1535,1555]
+    InfixExpression [1535,1550]
+        ParenthesizedExpression [1535,1546]
+            InfixExpression [1536,1545]
+                SimpleName: a [1536,1537]
+                INFIX_EXPRESSION_OPERATOR: + [1538,1539]
+                SimpleName: b [1540,1541]
+                SimpleName: c [1544,1545]
+        INFIX_EXPRESSION_OPERATOR: % [1547,1548]
+        NumberLiteral: 3 [1549,1550]
+    INFIX_EXPRESSION_OPERATOR: != [1551,1553]
+    NumberLiteral: 0 [1554,1555]
+to
+InfixExpression [1535,1593]
+at 2
+

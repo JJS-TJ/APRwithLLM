@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+StringLiteral: "Yes 1" [1092,1099]
+to
+ReturnStatement [1085,1094]
+at 0
+------------
+===
+insert-node
+---
+StringLiteral: "Yes 1" [1092,1099]
+to
+ReturnStatement [1085,1094]
+at 0
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [1092,1093]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [1092,1093]
+===
+

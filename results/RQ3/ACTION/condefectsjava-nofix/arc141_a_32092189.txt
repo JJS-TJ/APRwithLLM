@@ -1,0 +1,25 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+IfStatement [794,810]
+    SimpleName: b [797,798]
+    Block [799,810]
+        BreakStatement [800,809]
+            SimpleName: lx [806,808]
+
+New cluster:
+===
+delete-node
+---
+EmptyStatement [810,811]
+===
+------------
+===
+delete-node
+---
+EmptyStatement [810,811]
+===
+

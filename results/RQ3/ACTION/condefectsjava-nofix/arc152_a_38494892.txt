@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from pair to i
+------------
+===
+update-node
+---
+SimpleName: pair [495,499]
+replace pair by i
+

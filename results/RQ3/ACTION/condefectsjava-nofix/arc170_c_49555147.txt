@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: ml [1065,1067]
+to
+Assignment [1054,1069]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: ml [1065,1067]
+to
+Assignment [1054,1069]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1065,1069]
+    SimpleName: ml [1065,1067]
+    INFIX_EXPRESSION_OPERATOR: - [1067,1068]
+    NumberLiteral: 1 [1068,1069]
+

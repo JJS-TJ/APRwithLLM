@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 0 [700,701]
+to
+METHOD_INVOCATION_ARGUMENTS [700,711]
+at 0
+------------
+===
+insert-node
+---
+NumberLiteral: 0 [700,701]
+to
+METHOD_INVOCATION_ARGUMENTS [700,711]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [700,711]
+    METHOD_INVOCATION_RECEIVER [700,701]
+        SimpleName: s [700,701]
+    SimpleName: charAt [702,708]
+    METHOD_INVOCATION_ARGUMENTS [709,710]
+        SimpleName: i [709,710]
+
