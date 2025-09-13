@@ -1,0 +1,114 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [294,379]
+to
+IfStatement [290,793]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [294,365]
+to
+InfixExpression [294,379]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [366,368]
+to
+InfixExpression [294,379]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [352,354]
+to
+InfixExpression [294,365]
+at 1
+===
+insert-node
+---
+InfixExpression [294,379]
+to
+IfStatement [290,793]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [369,379]
+    SimpleName: b [369,370]
+    INFIX_EXPRESSION_OPERATOR: > [371,372]
+    InfixExpression [373,379]
+        SimpleName: a [373,374]
+        INFIX_EXPRESSION_OPERATOR: + [375,376]
+        SimpleName: pc [377,379]
+to
+InfixExpression [294,379]
+at 2
+
+New cluster:
+MOVE from InfixExpression [294,365]
+------------
+===
+move-tree
+---
+InfixExpression [294,351]
+    InfixExpression [294,329]
+        InfixExpression [294,304]
+            InfixExpression [294,299]
+                SimpleName: a [294,295]
+                INFIX_EXPRESSION_OPERATOR: + [296,297]
+                SimpleName: b [298,299]
+            INFIX_EXPRESSION_OPERATOR: < [300,301]
+            SimpleName: pc [302,304]
+        INFIX_EXPRESSION_OPERATOR: || [305,307]
+        InfixExpression [308,329]
+            InfixExpression [308,324]
+                ParenthesizedExpression [308,320]
+                    InfixExpression [309,319]
+                        SimpleName: a [309,310]
+                        INFIX_EXPRESSION_OPERATOR: + [311,312]
+                        SimpleName: b [313,314]
+                        SimpleName: pc [317,319]
+                INFIX_EXPRESSION_OPERATOR: % [321,322]
+                NumberLiteral: 2 [323,324]
+            INFIX_EXPRESSION_OPERATOR: == [325,327]
+            NumberLiteral: 1 [328,329]
+    INFIX_EXPRESSION_OPERATOR: || [330,332]
+    InfixExpression [333,351]
+        ParenthesizedExpression [333,345]
+            InfixExpression [334,344]
+                SimpleName: a [334,335]
+                INFIX_EXPRESSION_OPERATOR: + [336,337]
+                SimpleName: b [338,339]
+                SimpleName: pc [342,344]
+        INFIX_EXPRESSION_OPERATOR: > [346,347]
+        NumberLiteral: 120 [348,351]
+to
+InfixExpression [294,365]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [355,365]
+    SimpleName: a [355,356]
+    INFIX_EXPRESSION_OPERATOR: > [357,358]
+    InfixExpression [359,365]
+        SimpleName: b [359,360]
+        INFIX_EXPRESSION_OPERATOR: + [361,362]
+        SimpleName: pc [363,365]
+to
+InfixExpression [294,365]
+at 2
+

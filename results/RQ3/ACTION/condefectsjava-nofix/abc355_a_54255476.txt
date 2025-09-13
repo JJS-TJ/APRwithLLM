@@ -1,0 +1,29 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [512,525]
+    METHOD_INVOCATION_RECEIVER [512,518]
+        SimpleName: people [512,518]
+    SimpleName: get [519,522]
+    METHOD_INVOCATION_ARGUMENTS [523,524]
+        NumberLiteral: 0 [523,524]
+to
+METHOD_INVOCATION_ARGUMENTS [512,518]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: people [512,518]
+===
+------------
+===
+delete-node
+---
+SimpleName: people [512,518]
+===
+

@@ -1,0 +1,57 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1510,1533]
+to
+InfixExpression [1500,1515]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: getRoot [1519,1526]
+to
+MethodInvocation [1510,1533]
+at 1
+===
+insert-node
+---
+MethodInvocation [1510,1533]
+to
+InfixExpression [1500,1515]
+at 2
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1527,1532]
+to
+MethodInvocation [1510,1533]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [1510,1518]
+    SimpleName: sameAuft [1510,1518]
+to
+MethodInvocation [1510,1533]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [1527,1532]
+------------
+===
+move-tree
+---
+InfixExpression [1510,1515]
+    SimpleName: N [1510,1511]
+    INFIX_EXPRESSION_OPERATOR: - [1512,1513]
+    NumberLiteral: 1 [1514,1515]
+to
+METHOD_INVOCATION_ARGUMENTS [1527,1532]
+at 0
+

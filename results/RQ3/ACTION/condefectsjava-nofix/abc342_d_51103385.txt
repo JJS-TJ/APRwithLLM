@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: i [2134,2135]
+to
+Assignment [2129,2137]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: i [2134,2135]
+to
+Assignment [2129,2137]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [2134,2137]
+    SimpleName: i [2134,2135]
+    INFIX_EXPRESSION_OPERATOR: + [2135,2136]
+    NumberLiteral: 1 [2136,2137]
+

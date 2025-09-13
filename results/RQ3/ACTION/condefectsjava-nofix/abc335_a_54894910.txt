@@ -1,0 +1,27 @@
+New cluster:
+UPDATE from replace to replaceAll
+------------
+===
+update-node
+---
+SimpleName: replace [155,162]
+replace replace by replaceAll
+
+New cluster:
+UPDATE from "4" to "3$"
+------------
+===
+update-node
+---
+StringLiteral: "4" [163,166]
+replace "4" by "3$"
+
+New cluster:
+UPDATE from "3" to "4"
+------------
+===
+update-node
+---
+StringLiteral: "3" [168,171]
+replace "3" by "4"
+

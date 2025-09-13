@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from indexOf to lastIndexOf
+------------
+===
+update-node
+---
+SimpleName: indexOf [5103,5110]
+replace indexOf by lastIndexOf
+

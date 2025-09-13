@@ -1,0 +1,58 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: res [949,952]
+to
+InfixExpression [949,959]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: res [949,952]
+to
+InfixExpression [949,959]
+at 0
+
+New cluster:
+===
+insert-node
+---
+SimpleName: K [956,957]
+to
+InfixExpression [949,959]
+at 3
+------------
+===
+insert-node
+---
+SimpleName: K [956,957]
+to
+InfixExpression [949,959]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [949,954]
+    SimpleName: K [949,950]
+    INFIX_EXPRESSION_OPERATOR: % [951,952]
+    NumberLiteral: 2 [953,954]
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [958,959]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [958,959]
+===
+

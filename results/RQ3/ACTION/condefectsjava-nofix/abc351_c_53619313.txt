@@ -1,0 +1,34 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [701,737]
+    MethodInvocation [701,736]
+        METHOD_INVOCATION_RECEIVER [701,711]
+            QualifiedName: System.out [701,711]
+        SimpleName: println [712,719]
+        METHOD_INVOCATION_ARGUMENTS [720,735]
+            InfixExpression [720,735]
+                SimpleName: addnumber [720,729]
+                INFIX_EXPRESSION_OPERATOR: + [729,730]
+                StringLiteral: "add" [730,735]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ExpressionStatement [819,858]
+    MethodInvocation [819,857]
+        METHOD_INVOCATION_RECEIVER [819,829]
+            QualifiedName: System.out [819,829]
+        SimpleName: println [830,837]
+        METHOD_INVOCATION_ARGUMENTS [838,856]
+            InfixExpression [838,856]
+                SimpleName: addnumber [838,847]
+                INFIX_EXPRESSION_OPERATOR: + [847,848]
+                StringLiteral: "remove" [848,856]
+

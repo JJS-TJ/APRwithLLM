@@ -1,0 +1,45 @@
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1 [986,987]
+to
+InfixExpression [977,998]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 1 [986,987]
+to
+InfixExpression [977,998]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [996,1008]
+    InfixExpression [997,1007]
+        SimpleName: index2 [997,1003]
+        INFIX_EXPRESSION_OPERATOR: + [1004,1005]
+        NumberLiteral: 1 [1006,1007]
+to
+InfixExpression [977,998]
+at 4
+
+New cluster:
+===
+delete-node
+---
+SimpleName: index2 [992,998]
+===
+------------
+===
+delete-node
+---
+SimpleName: index2 [992,998]
+===
+

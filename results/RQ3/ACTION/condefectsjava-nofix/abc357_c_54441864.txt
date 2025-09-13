@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from '*' to '#'
+------------
+===
+update-node
+---
+CharacterLiteral: '*' [328,331]
+replace '*' by '#'
+

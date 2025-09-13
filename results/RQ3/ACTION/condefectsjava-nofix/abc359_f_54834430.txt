@@ -1,0 +1,16 @@
+New cluster:
+MOVE from Block [603,833]
+------------
+===
+move-tree
+---
+ExpressionStatement [742,751]
+    PostfixExpression [742,750]
+        ArrayAccess [742,748]
+            SimpleName: d [742,743]
+            QualifiedName: o.i [744,747]
+        POSTFIX_EXPRESSION_OPERATOR: ++ [748,750]
+to
+Block [603,833]
+at 1
+

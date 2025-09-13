@@ -1,0 +1,67 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+IfStatement [838,891]
+    InfixExpression [842,880]
+        InfixExpression [842,859]
+            ArrayAccess [842,852]
+                ArrayAccess [842,849]
+                    SimpleName: dist [842,846]
+                    SimpleName: i [847,848]
+                SimpleName: k [850,851]
+            INFIX_EXPRESSION_OPERATOR: == [853,855]
+            SimpleName: INF [856,859]
+        INFIX_EXPRESSION_OPERATOR: || [860,862]
+        InfixExpression [863,880]
+            ArrayAccess [863,873]
+                ArrayAccess [863,870]
+                    SimpleName: dist [863,867]
+                    SimpleName: k [868,869]
+                SimpleName: j [871,872]
+            INFIX_EXPRESSION_OPERATOR: == [874,876]
+            SimpleName: INF [877,880]
+    ContinueStatement [882,891]
+to
+Block [816,915]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+IfStatement [1464,1529]
+    InfixExpression [1468,1518]
+        InfixExpression [1468,1497]
+            ArrayAccess [1468,1490]
+                ArrayAccess [1468,1487]
+                    SimpleName: dp [1468,1470]
+                    InfixExpression [1471,1486]
+                        SimpleName: mask [1471,1475]
+                        INFIX_EXPRESSION_OPERATOR: ^ [1476,1477]
+                        ParenthesizedExpression [1478,1486]
+                            InfixExpression [1479,1485]
+                                NumberLiteral: 1 [1479,1480]
+                                INFIX_EXPRESSION_OPERATOR: << [1481,1483]
+                                SimpleName: i [1484,1485]
+                SimpleName: j [1488,1489]
+            INFIX_EXPRESSION_OPERATOR: == [1491,1493]
+            SimpleName: INF [1494,1497]
+        INFIX_EXPRESSION_OPERATOR: || [1498,1500]
+        InfixExpression [1501,1518]
+            ArrayAccess [1501,1511]
+                ArrayAccess [1501,1508]
+                    SimpleName: dist [1501,1505]
+                    SimpleName: i [1506,1507]
+                SimpleName: j [1509,1510]
+            INFIX_EXPRESSION_OPERATOR: == [1512,1514]
+            SimpleName: INF [1515,1518]
+    ContinueStatement [1520,1529]
+to
+Block [1360,1489]
+at 0
+

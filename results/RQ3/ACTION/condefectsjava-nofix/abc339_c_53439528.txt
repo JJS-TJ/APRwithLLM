@@ -1,0 +1,86 @@
+New cluster:
+UPDATE from -= to =
+------------
+===
+update-node
+---
+ASSIGNMENT_OPERATOR: -= [665,667]
+replace -= by =
+
+New cluster:
+===
+insert-node
+---
+MethodInvocation [667,687]
+to
+Assignment [663,674]
+at 2
+------------
+===
+insert-node
+---
+MethodInvocation [667,687]
+to
+Assignment [663,674]
+at 2
+===
+insert-node
+---
+SimpleName: u [676,677]
+to
+METHOD_INVOCATION_ARGUMENTS [676,686]
+at 0
+===
+insert-node
+---
+PREFIX_EXPRESSION_OPERATOR: - [679,680]
+to
+PrefixExpression [679,686]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [676,686]
+to
+MethodInvocation [667,687]
+at 2
+===
+insert-node
+---
+PrefixExpression [679,686]
+to
+METHOD_INVOCATION_ARGUMENTS [676,686]
+at 1
+===
+insert-node
+---
+SimpleName: max [672,675]
+to
+MethodInvocation [667,687]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [667,671]
+    SimpleName: Math [667,671]
+to
+MethodInvocation [667,687]
+at 0
+
+New cluster:
+MOVE from PrefixExpression [679,686]
+------------
+===
+move-tree
+---
+ArrayAccess [668,674]
+    SimpleName: sum [668,671]
+    SimpleName: i [672,673]
+to
+PrefixExpression [679,686]
+at 1
+

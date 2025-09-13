@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "D" to "T"
+------------
+===
+update-node
+---
+StringLiteral: "D" [1405,1408]
+replace "D" by "T"
+

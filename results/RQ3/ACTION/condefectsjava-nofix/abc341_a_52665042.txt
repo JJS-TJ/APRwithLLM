@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from "1 " to "1"
+------------
+===
+update-node
+---
+StringLiteral: "1 " [4803,4807]
+replace "1 " by "1"
+
+New cluster:
+UPDATE from "0 " to "0"
+------------
+===
+update-node
+---
+StringLiteral: "0 " [4810,4814]
+replace "0 " by "0"
+

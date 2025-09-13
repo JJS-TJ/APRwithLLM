@@ -1,0 +1,53 @@
+New cluster:
+MOVE from IfStatement [387,507]
+------------
+===
+move-tree
+---
+InfixExpression [391,406]
+    ArrayAccess [391,395]
+        SimpleName: T [391,392]
+        SimpleName: i [393,394]
+    INFIX_EXPRESSION_OPERATOR: - [396,397]
+    ArrayAccess [398,406]
+        SimpleName: T [398,399]
+        InfixExpression [400,405]
+            SimpleName: i [400,401]
+            INFIX_EXPRESSION_OPERATOR: - [402,403]
+            NumberLiteral: 1 [404,405]
+to
+IfStatement [387,507]
+at 0
+
+New cluster:
+UPDATE from - to >=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: - [396,397]
+replace - by >=
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [391,411]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [407,409]
+===
+===
+delete-node
+---
+InfixExpression [391,411]
+===
+===
+delete-node
+---
+SimpleName: A [410,411]
+===
+

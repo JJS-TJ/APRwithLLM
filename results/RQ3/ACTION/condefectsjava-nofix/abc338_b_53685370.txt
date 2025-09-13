@@ -1,0 +1,244 @@
+New cluster:
+MOVE from IfStatement [378,534]
+------------
+===
+move-tree
+---
+InfixExpression [428,488]
+    ParenthesizedExpression [428,473]
+        InfixExpression [429,471]
+            MethodInvocation [429,445]
+                METHOD_INVOCATION_RECEIVER [429,438]
+                    SimpleName: frequency [429,438]
+                SimpleName: get [439,442]
+                METHOD_INVOCATION_ARGUMENTS [443,444]
+                    SimpleName: c [443,444]
+            INFIX_EXPRESSION_OPERATOR: == [446,448]
+            MethodInvocation [449,471]
+                METHOD_INVOCATION_RECEIVER [449,458]
+                    SimpleName: frequency [449,458]
+                SimpleName: get [459,462]
+                METHOD_INVOCATION_ARGUMENTS [463,470]
+                    SimpleName: maxChar [463,470]
+    INFIX_EXPRESSION_OPERATOR: && [474,476]
+    InfixExpression [477,488]
+        SimpleName: c [477,478]
+        INFIX_EXPRESSION_OPERATOR: < [479,480]
+        SimpleName: maxChar [481,488]
+to
+IfStatement [378,534]
+at 0
+
+New cluster:
+MOVE from InfixExpression [428,488]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [427,489]
+    InfixExpression [428,488]
+        ParenthesizedExpression [428,473]
+            InfixExpression [429,471]
+                MethodInvocation [429,445]
+                    METHOD_INVOCATION_RECEIVER [429,438]
+                        SimpleName: frequency [429,438]
+                    SimpleName: get [439,442]
+                    METHOD_INVOCATION_ARGUMENTS [443,444]
+                        SimpleName: c [443,444]
+                INFIX_EXPRESSION_OPERATOR: == [446,448]
+                MethodInvocation [449,471]
+                    METHOD_INVOCATION_RECEIVER [449,458]
+                        SimpleName: frequency [449,458]
+                    SimpleName: get [459,462]
+                    METHOD_INVOCATION_ARGUMENTS [463,470]
+                        SimpleName: maxChar [463,470]
+        INFIX_EXPRESSION_OPERATOR: && [474,476]
+        InfixExpression [477,488]
+            SimpleName: c [477,478]
+            INFIX_EXPRESSION_OPERATOR: < [479,480]
+            SimpleName: maxChar [481,488]
+to
+InfixExpression [428,488]
+at 3
+===
+move-tree
+---
+InfixExpression [382,423]
+    MethodInvocation [382,398]
+        METHOD_INVOCATION_RECEIVER [382,391]
+            SimpleName: frequency [382,391]
+        SimpleName: get [392,395]
+        METHOD_INVOCATION_ARGUMENTS [396,397]
+            SimpleName: c [396,397]
+    INFIX_EXPRESSION_OPERATOR: > [399,400]
+    MethodInvocation [401,423]
+        METHOD_INVOCATION_RECEIVER [401,410]
+            SimpleName: frequency [401,410]
+        SimpleName: get [411,414]
+        METHOD_INVOCATION_ARGUMENTS [415,422]
+            SimpleName: maxChar [415,422]
+to
+InfixExpression [428,488]
+at 0
+
+New cluster:
+UPDATE from && to ||
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: && [474,476]
+replace && by ||
+
+New cluster:
+MOVE from ParenthesizedExpression [427,489]
+------------
+===
+move-tree
+---
+InfixExpression [429,471]
+    MethodInvocation [429,445]
+        METHOD_INVOCATION_RECEIVER [429,438]
+            SimpleName: frequency [429,438]
+        SimpleName: get [439,442]
+        METHOD_INVOCATION_ARGUMENTS [443,444]
+            SimpleName: c [443,444]
+    INFIX_EXPRESSION_OPERATOR: == [446,448]
+    MethodInvocation [449,471]
+        METHOD_INVOCATION_RECEIVER [449,458]
+            SimpleName: frequency [449,458]
+        SimpleName: get [459,462]
+        METHOD_INVOCATION_ARGUMENTS [463,470]
+            SimpleName: maxChar [463,470]
+to
+ParenthesizedExpression [427,489]
+at 0
+
+New cluster:
+MOVE from InfixExpression [429,471]
+------------
+===
+move-tree
+---
+InfixExpression [477,488]
+    SimpleName: c [477,478]
+    INFIX_EXPRESSION_OPERATOR: < [479,480]
+    SimpleName: maxChar [481,488]
+to
+InfixExpression [429,471]
+at 3
+===
+move-tree
+---
+ParenthesizedExpression [428,473]
+    InfixExpression [429,471]
+        MethodInvocation [429,445]
+            METHOD_INVOCATION_RECEIVER [429,438]
+                SimpleName: frequency [429,438]
+            SimpleName: get [439,442]
+            METHOD_INVOCATION_ARGUMENTS [443,444]
+                SimpleName: c [443,444]
+        INFIX_EXPRESSION_OPERATOR: == [446,448]
+        MethodInvocation [449,471]
+            METHOD_INVOCATION_RECEIVER [449,458]
+                SimpleName: frequency [449,458]
+            SimpleName: get [459,462]
+            METHOD_INVOCATION_ARGUMENTS [463,470]
+                SimpleName: maxChar [463,470]
+to
+InfixExpression [429,471]
+at 0
+
+New cluster:
+UPDATE from == to &&
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: == [446,448]
+replace == by &&
+
+New cluster:
+===
+insert-node
+---
+MethodInvocation [429,476]
+to
+ParenthesizedExpression [428,473]
+at 0
+------------
+===
+insert-node
+---
+MethodInvocation [429,476]
+to
+ParenthesizedExpression [428,473]
+at 0
+===
+insert-node
+---
+SimpleName: equals [446,452]
+to
+MethodInvocation [429,476]
+at 1
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [429,445]
+to
+MethodInvocation [429,476]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [453,475]
+to
+MethodInvocation [429,476]
+at 2
+
+New cluster:
+MOVE from METHOD_INVOCATION_RECEIVER [429,445]
+------------
+===
+move-tree
+---
+MethodInvocation [429,445]
+    METHOD_INVOCATION_RECEIVER [429,438]
+        SimpleName: frequency [429,438]
+    SimpleName: get [439,442]
+    METHOD_INVOCATION_ARGUMENTS [443,444]
+        SimpleName: c [443,444]
+to
+METHOD_INVOCATION_RECEIVER [429,445]
+at 0
+===
+move-tree
+---
+MethodInvocation [449,471]
+    METHOD_INVOCATION_RECEIVER [449,458]
+        SimpleName: frequency [449,458]
+    SimpleName: get [459,462]
+    METHOD_INVOCATION_ARGUMENTS [463,470]
+        SimpleName: maxChar [463,470]
+to
+METHOD_INVOCATION_ARGUMENTS [453,475]
+at 0
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [382,489]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: || [424,426]
+===
+===
+delete-node
+---
+InfixExpression [382,489]
+===
+

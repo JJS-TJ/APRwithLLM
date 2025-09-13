@@ -1,0 +1,67 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [241,262]
+to
+InfixExpression [224,257]
+at 2
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: != [258,260]
+to
+InfixExpression [241,262]
+at 1
+===
+insert-node
+---
+NumberLiteral: 0 [261,262]
+to
+InfixExpression [241,262]
+at 2
+===
+insert-node
+---
+InfixExpression [241,262]
+to
+InfixExpression [224,257]
+at 2
+
+New cluster:
+MOVE from InfixExpression [241,262]
+------------
+===
+move-tree
+---
+InfixExpression [241,257]
+    ParenthesizedExpression [241,252]
+        InfixExpression [242,251]
+            SimpleName: input [242,247]
+            INFIX_EXPRESSION_OPERATOR: + [248,249]
+            NumberLiteral: 9 [250,251]
+    INFIX_EXPRESSION_OPERATOR: != [253,255]
+    NumberLiteral: 0 [256,257]
+to
+InfixExpression [241,262]
+at 0
+
+New cluster:
+UPDATE from != to %
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: != [253,255]
+replace != by %
+
+New cluster:
+UPDATE from 0 to 10
+------------
+===
+update-node
+---
+NumberLiteral: 0 [256,257]
+replace 0 by 10
+

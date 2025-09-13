@@ -1,0 +1,46 @@
+New cluster:
+MOVE from Block [94,2085]
+------------
+===
+move-tree
+---
+VariableDeclarationStatement [335,348]
+    PrimitiveType: long [335,339]
+    VariableDeclarationFragment [340,347]
+        SimpleName: res [340,343]
+        NumberLiteral: 0 [346,347]
+to
+Block [94,2085]
+at 14
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [1015,1031]
+    ArrayAccess [1015,1027]
+        ArrayAccess [1015,1023]
+            SimpleName: grid [1015,1019]
+            SimpleName: sx [1020,1022]
+        SimpleName: sy [1024,1026]
+    INFIX_EXPRESSION_OPERATOR: * [1028,1029]
+    SimpleName: k [1030,1031]
+to
+VariableDeclarationFragment [340,347]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [346,347]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [346,347]
+===
+

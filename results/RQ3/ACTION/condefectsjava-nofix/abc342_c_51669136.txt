@@ -1,0 +1,33 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [621,630]
+    SimpleName: change [621,627]
+    SimpleName: i [628,629]
+to
+InfixExpression [621,629]
+at 0
+
+New cluster:
+UPDATE from i to c
+------------
+===
+update-node
+---
+SimpleName: i [628,629]
+replace i by c
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [621,626]
+    SimpleName: c [621,622]
+    INFIX_EXPRESSION_OPERATOR: - [622,623]
+    CharacterLiteral: 'a' [623,626]
+

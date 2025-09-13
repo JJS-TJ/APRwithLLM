@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from getTaste to taste
+------------
+===
+update-node
+---
+SimpleName: getTaste [408,416]
+replace getTaste by taste
+
+New cluster:
+UPDATE from taste to getTaste
+------------
+===
+update-node
+---
+SimpleName: taste [419,424]
+replace taste by getTaste
+

@@ -1,0 +1,41 @@
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [560,577]
+------------
+===
+move-tree
+---
+InfixExpression [560,573]
+    SimpleName: L [560,561]
+    INFIX_EXPRESSION_OPERATOR: + [562,563]
+    ParenthesizedExpression [564,573]
+        InfixExpression [565,572]
+            NumberLiteral: 1L [565,567]
+            INFIX_EXPRESSION_OPERATOR: << [568,570]
+            SimpleName: i [571,572]
+to
+METHOD_INVOCATION_ARGUMENTS [560,577]
+at 0
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [560,577]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [576,577]
+===
+===
+delete-node
+---
+InfixExpression [560,577]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: - [574,575]
+===
+

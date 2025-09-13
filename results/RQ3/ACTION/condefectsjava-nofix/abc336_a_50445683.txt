@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "l" to "L"
+------------
+===
+update-node
+---
+StringLiteral: "l" [211,214]
+replace "l" by "L"
+

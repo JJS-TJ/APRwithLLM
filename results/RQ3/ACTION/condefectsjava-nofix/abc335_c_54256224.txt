@@ -1,0 +1,53 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [988,1009]
+to
+Assignment [984,1005]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 1 [1008,1009]
+to
+InfixExpression [988,1009]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1006,1007]
+to
+InfixExpression [988,1009]
+at 1
+===
+insert-node
+---
+InfixExpression [988,1009]
+to
+Assignment [984,1005]
+at 2
+
+New cluster:
+MOVE from InfixExpression [988,1009]
+------------
+===
+move-tree
+---
+MethodInvocation [988,1005]
+    METHOD_INVOCATION_RECEIVER [988,990]
+        SimpleName: dx [988,990]
+    SimpleName: get [991,994]
+    METHOD_INVOCATION_ARGUMENTS [995,1004]
+        InfixExpression [995,1004]
+            InfixExpression [995,1000]
+                SimpleName: t [995,996]
+                INFIX_EXPRESSION_OPERATOR: - [997,998]
+                SimpleName: m [999,1000]
+            INFIX_EXPRESSION_OPERATOR: + [1001,1002]
+            NumberLiteral: 1 [1003,1004]
+to
+InfixExpression [988,1009]
+at 0
+

@@ -1,0 +1,22 @@
+New cluster:
+MOVE from InfixExpression [912,933]
+------------
+===
+move-tree
+---
+ArrayAccess [927,933]
+    SimpleName: ans [927,930]
+    NumberLiteral: 1 [931,932]
+to
+InfixExpression [912,933]
+at 0
+===
+move-tree
+---
+ArrayAccess [912,918]
+    SimpleName: ans [912,915]
+    NumberLiteral: 0 [916,917]
+to
+InfixExpression [912,933]
+at 3
+

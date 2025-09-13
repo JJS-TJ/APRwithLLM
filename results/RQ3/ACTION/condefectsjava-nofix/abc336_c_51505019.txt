@@ -1,0 +1,25 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+IfStatement [433,483]
+    InfixExpression [437,452]
+        MethodInvocation [437,448]
+            METHOD_INVOCATION_RECEIVER [437,439]
+                SimpleName: sb [437,439]
+            SimpleName: length [440,446]
+        INFIX_EXPRESSION_OPERATOR: < [449,450]
+        NumberLiteral: 1 [451,452]
+    ExpressionStatement [470,483]
+        MethodInvocation [470,482]
+            METHOD_INVOCATION_RECEIVER [470,472]
+                SimpleName: sb [470,472]
+            SimpleName: append [473,479]
+            METHOD_INVOCATION_ARGUMENTS [480,481]
+                NumberLiteral: 0 [480,481]
+to
+Block [143,477]
+at 5
+

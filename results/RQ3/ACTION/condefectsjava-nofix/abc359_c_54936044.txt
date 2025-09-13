@@ -1,0 +1,62 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [251,285]
+    Assignment [251,284]
+        SimpleName: a [251,252]
+        ASSIGNMENT_OPERATOR: = [253,254]
+        ConditionalExpression [255,284]
+            InfixExpression [255,273]
+                InfixExpression [255,267]
+                    ParenthesizedExpression [255,262]
+                        InfixExpression [256,261]
+                            SimpleName: a [256,257]
+                            INFIX_EXPRESSION_OPERATOR: + [258,259]
+                            SimpleName: b [260,261]
+                    INFIX_EXPRESSION_OPERATOR: % [263,264]
+                    NumberLiteral: 2L [265,267]
+                INFIX_EXPRESSION_OPERATOR: == [268,270]
+                NumberLiteral: 0L [271,273]
+            SimpleName: a [276,277]
+            InfixExpression [279,284]
+                SimpleName: a [279,280]
+                INFIX_EXPRESSION_OPERATOR: - [281,282]
+                NumberLiteral: 1L [282,284]
+to
+Block [93,589]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ExpressionStatement [290,324]
+    Assignment [290,323]
+        SimpleName: c [290,291]
+        ASSIGNMENT_OPERATOR: = [292,293]
+        ConditionalExpression [294,323]
+            InfixExpression [294,312]
+                InfixExpression [294,306]
+                    ParenthesizedExpression [294,301]
+                        InfixExpression [295,300]
+                            SimpleName: c [295,296]
+                            INFIX_EXPRESSION_OPERATOR: + [297,298]
+                            SimpleName: d [299,300]
+                    INFIX_EXPRESSION_OPERATOR: % [302,303]
+                    NumberLiteral: 2L [304,306]
+                INFIX_EXPRESSION_OPERATOR: == [307,309]
+                NumberLiteral: 0L [310,312]
+            SimpleName: c [315,316]
+            InfixExpression [318,323]
+                SimpleName: c [318,319]
+                INFIX_EXPRESSION_OPERATOR: - [320,321]
+                NumberLiteral: 1L [321,323]
+to
+Block [93,589]
+at 6
+

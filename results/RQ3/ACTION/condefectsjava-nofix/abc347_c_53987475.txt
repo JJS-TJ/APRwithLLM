@@ -1,0 +1,17 @@
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1 [610,611]
+to
+InfixExpression [602,607]
+at 3
+------------
+===
+insert-node
+---
+NumberLiteral: 1 [610,611]
+to
+InfixExpression [602,607]
+at 3
+

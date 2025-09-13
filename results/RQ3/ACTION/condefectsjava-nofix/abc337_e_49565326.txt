@@ -1,0 +1,193 @@
+New cluster:
+MOVE from ForStatement [3148,3479]
+------------
+===
+move-tree
+---
+InfixExpression [3174,3210]
+    MethodInvocation [3174,3196]
+        METHOD_INVOCATION_RECEIVER [3174,3178]
+            SimpleName: Math [3174,3178]
+        SimpleName: ceil [3179,3183]
+        METHOD_INVOCATION_ARGUMENTS [3184,3195]
+            MethodInvocation [3184,3195]
+                METHOD_INVOCATION_RECEIVER [3184,3188]
+                    SimpleName: Math [3184,3188]
+                SimpleName: log [3189,3192]
+                METHOD_INVOCATION_ARGUMENTS [3193,3194]
+                    SimpleName: n [3193,3194]
+    INFIX_EXPRESSION_OPERATOR: / [3197,3198]
+    MethodInvocation [3199,3210]
+        METHOD_INVOCATION_RECEIVER [3199,3203]
+            SimpleName: Math [3199,3203]
+        SimpleName: log [3204,3207]
+        METHOD_INVOCATION_ARGUMENTS [3208,3209]
+            NumberLiteral: 2 [3208,3209]
+to
+ForStatement [3148,3479]
+at 1
+
+New cluster:
+===
+insert-node
+---
+SimpleName: i [3164,3165]
+to
+InfixExpression [3174,3210]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: i [3164,3165]
+to
+InfixExpression [3174,3210]
+at 0
+
+New cluster:
+UPDATE from / to <
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: / [3197,3198]
+replace / by <
+
+New cluster:
+MOVE from InfixExpression [3174,3210]
+------------
+===
+move-tree
+---
+CastExpression [3168,3211]
+    PrimitiveType: int [3169,3172]
+    ParenthesizedExpression [3173,3211]
+        InfixExpression [3174,3210]
+            MethodInvocation [3174,3196]
+                METHOD_INVOCATION_RECEIVER [3174,3178]
+                    SimpleName: Math [3174,3178]
+                SimpleName: ceil [3179,3183]
+                METHOD_INVOCATION_ARGUMENTS [3184,3195]
+                    MethodInvocation [3184,3195]
+                        METHOD_INVOCATION_RECEIVER [3184,3188]
+                            SimpleName: Math [3184,3188]
+                        SimpleName: log [3189,3192]
+                        METHOD_INVOCATION_ARGUMENTS [3193,3194]
+                            SimpleName: n [3193,3194]
+            INFIX_EXPRESSION_OPERATOR: / [3197,3198]
+            MethodInvocation [3199,3210]
+                METHOD_INVOCATION_RECEIVER [3199,3203]
+                    SimpleName: Math [3199,3203]
+                SimpleName: log [3204,3207]
+                METHOD_INVOCATION_ARGUMENTS [3208,3209]
+                    NumberLiteral: 2 [3208,3209]
+to
+InfixExpression [3174,3210]
+at 3
+
+New cluster:
+MOVE from InfixExpression [3164,3211]
+------------
+===
+move-tree
+---
+MethodInvocation [3199,3210]
+    METHOD_INVOCATION_RECEIVER [3199,3203]
+        SimpleName: Math [3199,3203]
+    SimpleName: log [3204,3207]
+    METHOD_INVOCATION_ARGUMENTS [3208,3209]
+        NumberLiteral: 2 [3208,3209]
+to
+InfixExpression [3164,3211]
+at 3
+===
+move-tree
+---
+MethodInvocation [3174,3196]
+    METHOD_INVOCATION_RECEIVER [3174,3178]
+        SimpleName: Math [3174,3178]
+    SimpleName: ceil [3179,3183]
+    METHOD_INVOCATION_ARGUMENTS [3184,3195]
+        MethodInvocation [3184,3195]
+            METHOD_INVOCATION_RECEIVER [3184,3188]
+                SimpleName: Math [3184,3188]
+            SimpleName: log [3189,3192]
+            METHOD_INVOCATION_ARGUMENTS [3193,3194]
+                SimpleName: n [3193,3194]
+to
+ParenthesizedExpression [3173,3211]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [3184,3195]
+------------
+===
+move-tree
+---
+InfixExpression [3164,3211]
+    SimpleName: i [3164,3165]
+    INFIX_EXPRESSION_OPERATOR: < [3166,3167]
+    CastExpression [3168,3211]
+        PrimitiveType: int [3169,3172]
+        ParenthesizedExpression [3173,3211]
+            InfixExpression [3174,3210]
+                MethodInvocation [3174,3196]
+                    METHOD_INVOCATION_RECEIVER [3174,3178]
+                        SimpleName: Math [3174,3178]
+                    SimpleName: ceil [3179,3183]
+                    METHOD_INVOCATION_ARGUMENTS [3184,3195]
+                        MethodInvocation [3184,3195]
+                            METHOD_INVOCATION_RECEIVER [3184,3188]
+                                SimpleName: Math [3184,3188]
+                            SimpleName: log [3189,3192]
+                            METHOD_INVOCATION_ARGUMENTS [3193,3194]
+                                SimpleName: n [3193,3194]
+                INFIX_EXPRESSION_OPERATOR: / [3197,3198]
+                MethodInvocation [3199,3210]
+                    METHOD_INVOCATION_RECEIVER [3199,3203]
+                        SimpleName: Math [3199,3203]
+                    SimpleName: log [3204,3207]
+                    METHOD_INVOCATION_ARGUMENTS [3208,3209]
+                        NumberLiteral: 2 [3208,3209]
+to
+METHOD_INVOCATION_ARGUMENTS [3184,3195]
+at 0
+
+New cluster:
+MOVE from InfixExpression [3164,3211]
+------------
+===
+move-tree
+---
+MethodInvocation [3184,3195]
+    METHOD_INVOCATION_RECEIVER [3184,3188]
+        SimpleName: Math [3184,3188]
+    SimpleName: log [3189,3192]
+    METHOD_INVOCATION_ARGUMENTS [3193,3194]
+        SimpleName: n [3193,3194]
+to
+InfixExpression [3164,3211]
+at 0
+
+New cluster:
+UPDATE from < to /
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [3166,3167]
+replace < by /
+
+New cluster:
+===
+delete-node
+---
+SimpleName: i [3164,3165]
+===
+------------
+===
+delete-node
+---
+SimpleName: i [3164,3165]
+===
+

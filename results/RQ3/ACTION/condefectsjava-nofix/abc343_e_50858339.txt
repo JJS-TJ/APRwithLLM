@@ -1,0 +1,65 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1891,1911]
+to
+ReturnStatement [1884,1900]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: max [1896,1899]
+to
+MethodInvocation [1891,1911]
+at 1
+===
+insert-node
+---
+NumberLiteral: 0 [1909,1910]
+to
+METHOD_INVOCATION_ARGUMENTS [1900,1910]
+at 1
+===
+insert-node
+---
+MethodInvocation [1891,1911]
+to
+ReturnStatement [1884,1900]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1900,1910]
+to
+MethodInvocation [1891,1911]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [1891,1895]
+    SimpleName: Math [1891,1895]
+to
+MethodInvocation [1891,1911]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [1900,1910]
+------------
+===
+move-tree
+---
+InfixExpression [1891,1899]
+    SimpleName: dx [1891,1893]
+    INFIX_EXPRESSION_OPERATOR: * [1893,1894]
+    SimpleName: dy [1894,1896]
+    SimpleName: dz [1897,1899]
+to
+METHOD_INVOCATION_ARGUMENTS [1900,1910]
+at 0
+

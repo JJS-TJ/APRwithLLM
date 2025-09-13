@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from m to base_m
+------------
+===
+update-node
+---
+SimpleName: m [1497,1498]
+replace m by base_m
+

@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [527,534]
+    InfixExpression [528,533]
+        SimpleName: n [528,529]
+        INFIX_EXPRESSION_OPERATOR: % [529,530]
+        SimpleName: mod [530,533]
+to
+InfixExpression [527,536]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: n [527,528]
+===
+------------
+===
+delete-node
+---
+SimpleName: n [527,528]
+===
+

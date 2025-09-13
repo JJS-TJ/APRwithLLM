@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: row [1396,1399]
+to
+ArrayAccess [1393,1404]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: row [1396,1399]
+to
+ArrayAccess [1393,1404]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [1396,1403]
+    SimpleName: row [1396,1399]
+    INFIX_EXPRESSION_OPERATOR: - [1400,1401]
+    NumberLiteral: 1 [1402,1403]
+

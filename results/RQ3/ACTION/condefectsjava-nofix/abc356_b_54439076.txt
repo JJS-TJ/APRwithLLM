@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from "YES\n" to "Yes\n"
+------------
+===
+update-node
+---
+StringLiteral: "YES\n" [655,662]
+replace "YES\n" by "Yes\n"
+
+New cluster:
+UPDATE from "NO\n" to "No\n"
+------------
+===
+update-node
+---
+StringLiteral: "NO\n" [665,671]
+replace "NO\n" by "No\n"
+

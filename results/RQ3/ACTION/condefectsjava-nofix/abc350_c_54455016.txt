@@ -1,0 +1,58 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: i [1332,1333]
+to
+InfixExpression [1332,1352]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: i [1332,1333]
+to
+InfixExpression [1332,1352]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1332,1352]
+------------
+===
+move-tree
+---
+ArrayAccess [1345,1351]
+    SimpleName: idx [1345,1348]
+    SimpleName: i [1349,1350]
+to
+InfixExpression [1332,1352]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+ArrayAccess [1332,1336]
+    SimpleName: a [1332,1333]
+    SimpleName: i [1334,1335]
+
+New cluster:
+===
+delete-node
+---
+ArrayAccess [1343,1352]
+===
+------------
+===
+delete-node
+---
+ArrayAccess [1343,1352]
+===
+===
+delete-node
+---
+SimpleName: a [1343,1344]
+===
+
