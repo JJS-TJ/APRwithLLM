@@ -1,0 +1,36 @@
+New cluster:
+UPDATE from <= to <
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: <= [322,324]
+replace <= by <
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [324,329]
+    SimpleName: N [324,325]
+    INFIX_EXPRESSION_OPERATOR: + [326,327]
+    NumberLiteral: 2 [328,329]
+to
+InfixExpression [320,326]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: N [325,326]
+===
+------------
+===
+delete-node
+---
+SimpleName: N [325,326]
+===
+

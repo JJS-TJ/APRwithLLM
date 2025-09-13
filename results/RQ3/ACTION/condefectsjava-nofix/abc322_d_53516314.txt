@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 3 to 4
+------------
+===
+update-node
+---
+NumberLiteral: 3 [2123,2124]
+replace 3 by 4
+

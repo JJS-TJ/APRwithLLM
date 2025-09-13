@@ -1,0 +1,105 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [616,693]
+to
+Assignment [608,670]
+at 2
+------------
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [616,666]
+to
+MethodInvocation [616,693]
+at 0
+===
+insert-node
+---
+SimpleName: add [667,670]
+to
+MethodInvocation [616,693]
+at 1
+===
+insert-node
+---
+MethodInvocation [616,693]
+to
+Assignment [608,670]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_ARGUMENTS [671,692]
+    MethodInvocation [671,692]
+        METHOD_INVOCATION_RECEIVER [671,681]
+            SimpleName: BigInteger [671,681]
+        SimpleName: valueOf [682,689]
+        METHOD_INVOCATION_ARGUMENTS [690,691]
+            NumberLiteral: 1 [690,691]
+to
+MethodInvocation [616,693]
+at 2
+
+New cluster:
+MOVE from METHOD_INVOCATION_RECEIVER [616,666]
+------------
+===
+move-tree
+---
+MethodInvocation [616,670]
+    METHOD_INVOCATION_RECEIVER [616,643]
+        MethodInvocation [616,643]
+            METHOD_INVOCATION_RECEIVER [616,626]
+                SimpleName: BigInteger [616,626]
+            SimpleName: valueOf [627,634]
+            METHOD_INVOCATION_ARGUMENTS [635,642]
+                InfixExpression [635,642]
+                    SimpleName: ans [635,638]
+                    INFIX_EXPRESSION_OPERATOR: + [639,640]
+                    NumberLiteral: 1 [641,642]
+    SimpleName: add [644,647]
+    METHOD_INVOCATION_ARGUMENTS [648,669]
+        MethodInvocation [648,669]
+            METHOD_INVOCATION_RECEIVER [648,658]
+                SimpleName: BigInteger [648,658]
+            SimpleName: valueOf [659,666]
+            METHOD_INVOCATION_ARGUMENTS [667,668]
+                SimpleName: L [667,668]
+to
+METHOD_INVOCATION_RECEIVER [616,666]
+at 0
+
+New cluster:
+===
+insert-node
+---
+SimpleName: ans [635,638]
+to
+METHOD_INVOCATION_ARGUMENTS [635,642]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: ans [635,638]
+to
+METHOD_INVOCATION_ARGUMENTS [635,642]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [635,642]
+    SimpleName: ans [635,638]
+    INFIX_EXPRESSION_OPERATOR: + [639,640]
+    NumberLiteral: 1 [641,642]
+

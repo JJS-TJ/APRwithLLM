@@ -1,0 +1,30 @@
+New cluster:
+MOVE from Block [690,1677]
+------------
+===
+move-tree
+---
+ForStatement [641,678]
+    VariableDeclarationExpression [646,655]
+        PrimitiveType: int [646,649]
+        VariableDeclarationFragment [650,655]
+            SimpleName: i [650,651]
+            NumberLiteral: 0 [654,655]
+    InfixExpression [657,662]
+        SimpleName: i [657,658]
+        INFIX_EXPRESSION_OPERATOR: < [659,660]
+        SimpleName: w [661,662]
+    PostfixExpression [664,667]
+        SimpleName: i [664,665]
+        POSTFIX_EXPRESSION_OPERATOR: ++ [665,667]
+    ExpressionStatement [669,678]
+        Assignment [669,677]
+            ArrayAccess [669,673]
+                SimpleName: q [669,670]
+                SimpleName: i [671,672]
+            ASSIGNMENT_OPERATOR: = [674,675]
+            SimpleName: i [676,677]
+to
+Block [690,1677]
+at 0
+

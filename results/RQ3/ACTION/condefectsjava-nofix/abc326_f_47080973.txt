@@ -1,0 +1,46 @@
+New cluster:
+MOVE from ReturnStatement [4309,4341]
+------------
+===
+move-tree
+---
+MethodInvocation [4316,4329]
+    METHOD_INVOCATION_RECEIVER [4316,4319]
+        SimpleName: ret [4316,4319]
+    SimpleName: reverse [4320,4327]
+to
+ReturnStatement [4309,4341]
+at 0
+
+New cluster:
+UPDATE from reverse to toString
+------------
+===
+update-node
+---
+SimpleName: reverse [4320,4327]
+replace reverse by toString
+
+New cluster:
+===
+delete-node
+---
+MethodInvocation [4316,4340]
+===
+------------
+===
+delete-node
+---
+METHOD_INVOCATION_RECEIVER [4316,4329]
+===
+===
+delete-node
+---
+MethodInvocation [4316,4340]
+===
+===
+delete-node
+---
+SimpleName: toString [4330,4338]
+===
+

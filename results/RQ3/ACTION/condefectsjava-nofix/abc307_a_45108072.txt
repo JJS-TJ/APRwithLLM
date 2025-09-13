@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [217,222]
+    NumberLiteral: 7 [217,218]
+    INFIX_EXPRESSION_OPERATOR: * [219,220]
+    SimpleName: n [221,222]
+to
+InfixExpression [212,218]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: n [217,218]
+===
+------------
+===
+delete-node
+---
+SimpleName: n [217,218]
+===
+

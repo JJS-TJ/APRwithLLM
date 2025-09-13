@@ -1,0 +1,39 @@
+New cluster:
+UPDATE from int to double
+------------
+===
+update-node
+---
+PrimitiveType: int [167,170]
+replace int by double
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [183,198]
+    METHOD_INVOCATION_RECEIVER [183,187]
+        SimpleName: Math [183,187]
+    SimpleName: pow [188,191]
+    METHOD_INVOCATION_ARGUMENTS [192,197]
+        NumberLiteral: 10 [192,194]
+        NumberLiteral: 9 [196,197]
+to
+VariableDeclarationFragment [171,183]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 101 [180,183]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 101 [180,183]
+===
+

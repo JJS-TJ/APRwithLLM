@@ -1,0 +1,20 @@
+New cluster:
+MOVE from ConditionalExpression [283,312]
+------------
+===
+move-tree
+---
+SimpleName: total [295,300]
+to
+ConditionalExpression [283,312]
+at 2
+
+New cluster:
+UPDATE from > to <
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: > [289,290]
+replace > by <
+

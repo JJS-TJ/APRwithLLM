@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from A to B
+------------
+===
+update-node
+---
+SimpleName: A [422,423]
+replace A by B
+
+New cluster:
+UPDATE from B to A
+------------
+===
+update-node
+---
+SimpleName: B [425,426]
+replace B by A
+

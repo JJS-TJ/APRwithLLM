@@ -1,0 +1,27 @@
+New cluster:
+===
+insert-node
+---
+StringLiteral: "No" [683,687]
+to
+METHOD_INVOCATION_ARGUMENTS [683,685]
+at 0
+------------
+===
+insert-node
+---
+StringLiteral: "No" [683,687]
+to
+METHOD_INVOCATION_ARGUMENTS [683,685]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+PrefixExpression [683,685]
+    PREFIX_EXPRESSION_OPERATOR: - [683,684]
+    NumberLiteral: 1 [684,685]
+

@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: H [285,286]
+to
+Assignment [278,286]
+at 2
+------------
+===
+insert-node
+---
+SimpleName: H [285,286]
+to
+Assignment [278,286]
+at 2
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [285,286]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [285,286]
+===
+

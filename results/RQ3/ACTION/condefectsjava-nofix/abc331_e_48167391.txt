@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 100 to 500
+------------
+===
+update-node
+---
+NumberLiteral: 100 [1926,1929]
+replace 100 by 500
+

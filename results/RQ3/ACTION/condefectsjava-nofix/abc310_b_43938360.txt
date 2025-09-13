@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from hasMinusOne to hasPlusOne
+------------
+===
+update-node
+---
+SimpleName: hasMinusOne [2315,2326]
+replace hasMinusOne by hasPlusOne
+

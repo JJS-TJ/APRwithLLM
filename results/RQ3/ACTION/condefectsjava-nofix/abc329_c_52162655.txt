@@ -1,0 +1,42 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Assignment [2358,2401]
+    ArrayAccess [2358,2373]
+        SimpleName: cnt [2358,2361]
+        InfixExpression [2362,2372]
+            ArrayAccess [2362,2366]
+                SimpleName: s [2362,2363]
+                SimpleName: i [2364,2365]
+            INFIX_EXPRESSION_OPERATOR: - [2367,2368]
+            CharacterLiteral: 'a' [2369,2372]
+    ASSIGNMENT_OPERATOR: = [2374,2375]
+    MethodInvocation [2376,2401]
+        SimpleName: max [2376,2379]
+        METHOD_INVOCATION_ARGUMENTS [2380,2400]
+            ArrayAccess [2380,2395]
+                SimpleName: cnt [2380,2383]
+                InfixExpression [2384,2394]
+                    ArrayAccess [2384,2388]
+                        SimpleName: s [2384,2385]
+                        SimpleName: i [2386,2387]
+                    INFIX_EXPRESSION_OPERATOR: - [2389,2390]
+                    CharacterLiteral: 'a' [2391,2394]
+            SimpleName: tmp [2397,2400]
+to
+ExpressionStatement [2358,2364]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+PostfixExpression [2358,2363]
+    SimpleName: tmp [2358,2361]
+    POSTFIX_EXPRESSION_OPERATOR: ++ [2361,2363]
+

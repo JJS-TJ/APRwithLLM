@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+MethodInvocation [720,734]
+    METHOD_INVOCATION_RECEIVER [720,727]
+        SimpleName: newText [720,727]
+    SimpleName: trim [728,732]
+to
+METHOD_INVOCATION_ARGUMENTS [720,727]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: newText [720,727]
+===
+------------
+===
+delete-node
+---
+SimpleName: newText [720,727]
+===
+

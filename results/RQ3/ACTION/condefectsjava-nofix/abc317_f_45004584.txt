@@ -1,0 +1,44 @@
+New cluster:
+MOVE from Assignment [698,731]
+------------
+===
+move-tree
+---
+InfixExpression [710,725]
+    ArrayAccess [710,721]
+        ArrayAccess [710,716]
+            SimpleName: pow [710,713]
+            SimpleName: i [714,715]
+        InfixExpression [717,720]
+            SimpleName: j [717,718]
+            INFIX_EXPRESSION_OPERATOR: - [718,719]
+            NumberLiteral: 1 [719,720]
+    INFIX_EXPRESSION_OPERATOR: * [722,723]
+    SimpleName: i [724,725]
+to
+Assignment [698,731]
+at 2
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [710,731]
+===
+------------
+===
+delete-node
+---
+SimpleName: mod [728,731]
+===
+===
+delete-node
+---
+InfixExpression [710,731]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: % [726,727]
+===
+

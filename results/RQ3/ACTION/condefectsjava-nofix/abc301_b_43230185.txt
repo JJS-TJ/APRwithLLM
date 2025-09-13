@@ -1,0 +1,47 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [448,462]
+to
+METHOD_INVOCATION_ARGUMENTS [448,456]
+at 0
+------------
+===
+insert-node
+---
+StringLiteral: " " [459,462]
+to
+InfixExpression [448,462]
+at 2
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [457,458]
+to
+InfixExpression [448,462]
+at 1
+===
+insert-node
+---
+InfixExpression [448,462]
+to
+METHOD_INVOCATION_ARGUMENTS [448,456]
+at 0
+
+New cluster:
+MOVE from InfixExpression [448,462]
+------------
+===
+move-tree
+---
+ArrayAccess [448,456]
+    SimpleName: s [448,449]
+    InfixExpression [450,455]
+        SimpleName: i [450,451]
+        INFIX_EXPRESSION_OPERATOR: + [452,453]
+        NumberLiteral: 1 [454,455]
+to
+InfixExpression [448,462]
+at 0
+

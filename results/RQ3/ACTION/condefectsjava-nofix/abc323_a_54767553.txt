@@ -1,0 +1,33 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Assignment [247,251]
+    SimpleName: i [247,248]
+    ASSIGNMENT_OPERATOR: += [248,250]
+    NumberLiteral: 2 [250,251]
+to
+ForStatement [223,342]
+at 2
+
+New cluster:
+UPDATE from < to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: < [240,241]
+replace < by <=
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+PostfixExpression [246,249]
+    SimpleName: i [246,247]
+    POSTFIX_EXPRESSION_OPERATOR: ++ [247,249]
+

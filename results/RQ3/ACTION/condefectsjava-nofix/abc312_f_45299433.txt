@@ -1,0 +1,70 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: k [2560,2561]
+to
+CastExpression [2555,2583]
+at 1
+------------
+===
+insert-node
+---
+SimpleName: k [2560,2561]
+to
+CastExpression [2555,2583]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ParenthesizedExpression [2599,2606]
+    InfixExpression [2600,2605]
+        SimpleName: num [2600,2603]
+        INFIX_EXPRESSION_OPERATOR: - [2603,2604]
+        SimpleName: k [2604,2605]
+to
+CastExpression [2616,2648]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [2560,2583]
+    METHOD_INVOCATION_RECEIVER [2560,2564]
+        SimpleName: Math [2560,2564]
+    SimpleName: min [2565,2568]
+    METHOD_INVOCATION_ARGUMENTS [2569,2582]
+        MethodInvocation [2569,2579]
+            METHOD_INVOCATION_RECEIVER [2569,2572]
+                SimpleName: li2 [2569,2572]
+            SimpleName: size [2573,2577]
+        SimpleName: k [2581,2582]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+MethodInvocation [2621,2648]
+    METHOD_INVOCATION_RECEIVER [2621,2625]
+        SimpleName: Math [2621,2625]
+    SimpleName: min [2626,2629]
+    METHOD_INVOCATION_ARGUMENTS [2630,2647]
+        MethodInvocation [2630,2640]
+            METHOD_INVOCATION_RECEIVER [2630,2633]
+                SimpleName: li1 [2630,2633]
+            SimpleName: size [2634,2638]
+        ParenthesizedExpression [2642,2647]
+            InfixExpression [2643,2646]
+                SimpleName: t [2643,2644]
+                INFIX_EXPRESSION_OPERATOR: - [2644,2645]
+                SimpleName: k [2645,2646]
+

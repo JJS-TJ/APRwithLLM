@@ -1,0 +1,11 @@
+New cluster:
+MOVE from ConditionalExpression [381,432]
+------------
+===
+move-tree
+---
+StringLiteral: "Bat" [419,424]
+to
+ConditionalExpression [381,432]
+at 2
+

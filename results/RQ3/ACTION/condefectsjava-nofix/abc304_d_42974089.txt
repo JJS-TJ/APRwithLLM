@@ -1,0 +1,39 @@
+New cluster:
+===
+insert-node
+---
+CastExpression [1872,1886]
+to
+InfixExpression [1872,1891]
+at 0
+------------
+===
+insert-node
+---
+PrimitiveType: long [1873,1877]
+to
+CastExpression [1872,1886]
+at 0
+===
+insert-node
+---
+CastExpression [1872,1886]
+to
+InfixExpression [1872,1891]
+at 0
+
+New cluster:
+MOVE from CastExpression [1872,1886]
+------------
+===
+move-tree
+---
+ParenthesizedExpression [1872,1880]
+    InfixExpression [1873,1879]
+        SimpleName: NA [1873,1875]
+        INFIX_EXPRESSION_OPERATOR: + [1876,1877]
+        NumberLiteral: 1 [1878,1879]
+to
+CastExpression [1872,1886]
+at 1
+

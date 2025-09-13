@@ -1,0 +1,13 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [312,316]
+    SimpleName: s [312,313]
+    SimpleName: i [314,315]
+to
+InfixExpression [298,309]
+at 3
+

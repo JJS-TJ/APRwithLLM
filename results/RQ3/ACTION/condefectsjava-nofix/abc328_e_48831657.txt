@@ -1,0 +1,37 @@
+New cluster:
+===
+insert-node
+---
+PrefixExpression [1254,1263]
+to
+IfStatement [1250,1273]
+at 0
+------------
+===
+insert-node
+---
+PREFIX_EXPRESSION_OPERATOR: ! [1254,1255]
+to
+PrefixExpression [1254,1263]
+at 0
+===
+insert-node
+---
+PrefixExpression [1254,1263]
+to
+IfStatement [1250,1273]
+at 0
+
+New cluster:
+MOVE from PrefixExpression [1254,1263]
+------------
+===
+move-tree
+---
+ArrayAccess [1254,1262]
+    SimpleName: visit [1254,1259]
+    SimpleName: i [1260,1261]
+to
+PrefixExpression [1254,1263]
+at 1
+

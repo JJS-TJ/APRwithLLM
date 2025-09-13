@@ -1,0 +1,50 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [616,627]
+to
+LambdaExpression [611,620]
+at 1
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [621,622]
+to
+InfixExpression [616,627]
+at 1
+===
+insert-node
+---
+InfixExpression [616,627]
+to
+LambdaExpression [611,620]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [616,620]
+    SimpleName: a [616,617]
+    NumberLiteral: 0 [618,619]
+to
+InfixExpression [616,627]
+at 0
+
+New cluster:
+MOVE from InfixExpression [616,627]
+------------
+===
+move-tree
+---
+ArrayAccess [616,620]
+    SimpleName: a [616,617]
+    NumberLiteral: 1 [618,619]
+to
+InfixExpression [616,627]
+at 2
+

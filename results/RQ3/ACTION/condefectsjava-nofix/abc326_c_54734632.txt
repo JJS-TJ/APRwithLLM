@@ -1,0 +1,69 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: r [351,352]
+to
+InfixExpression [351,370]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: r [351,352]
+to
+InfixExpression [351,370]
+at 0
+
+New cluster:
+UPDATE from && to <=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: && [355,357]
+replace && by <=
+
+New cluster:
+===
+insert-node
+---
+SimpleName: N [354,355]
+to
+InfixExpression [351,370]
+at 3
+------------
+===
+insert-node
+---
+SimpleName: N [354,355]
+to
+InfixExpression [351,370]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [351,354]
+    SimpleName: r [351,352]
+    INFIX_EXPRESSION_OPERATOR: < [352,353]
+    SimpleName: N [353,354]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [358,370]
+    ArrayAccess [358,362]
+        SimpleName: A [358,359]
+        SimpleName: l [360,361]
+    INFIX_EXPRESSION_OPERATOR: <= [363,365]
+    ArrayAccess [366,370]
+        SimpleName: A [366,367]
+        SimpleName: r [368,369]
+

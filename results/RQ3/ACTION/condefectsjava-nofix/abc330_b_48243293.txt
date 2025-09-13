@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+SimpleName: X [488,489]
+to
+METHOD_INVOCATION_ARGUMENTS [488,491]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: X [488,489]
+to
+METHOD_INVOCATION_ARGUMENTS [488,491]
+at 0
+
+New cluster:
+===
+delete-node
+---
+StringLiteral: "X" [488,491]
+===
+------------
+===
+delete-node
+---
+StringLiteral: "X" [488,491]
+===
+

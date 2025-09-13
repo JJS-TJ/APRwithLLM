@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from nb to b
+------------
+===
+update-node
+---
+SimpleName: nb [1526,1528]
+replace nb by b
+

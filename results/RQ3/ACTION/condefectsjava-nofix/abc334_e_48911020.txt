@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [2224,2231]
+    SimpleName: res [2224,2227]
+    INFIX_EXPRESSION_OPERATOR: % [2227,2228]
+    SimpleName: MOD [2228,2231]
+to
+InfixExpression [2224,2231]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: res [2224,2227]
+===
+------------
+===
+delete-node
+---
+SimpleName: res [2224,2227]
+===
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from "san" to " san"
+------------
+===
+update-node
+---
+StringLiteral: "san" [243,248]
+replace "san" by " san"
+

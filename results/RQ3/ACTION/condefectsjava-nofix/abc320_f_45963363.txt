@@ -1,0 +1,138 @@
+New cluster:
+MOVE from InfixExpression [1853,1870]
+------------
+===
+move-tree
+---
+InfixExpression [1832,1849]
+    InfixExpression [1832,1844]
+        InfixExpression [1832,1840]
+            SimpleName: k [1832,1833]
+            INFIX_EXPRESSION_OPERATOR: - [1834,1835]
+            ArrayAccess [1836,1840]
+                SimpleName: f [1836,1837]
+                SimpleName: i [1838,1839]
+        INFIX_EXPRESSION_OPERATOR: + [1841,1842]
+        SimpleName: d [1843,1844]
+    INFIX_EXPRESSION_OPERATOR: <= [1845,1847]
+    SimpleName: h [1848,1849]
+to
+InfixExpression [1853,1870]
+at 0
+===
+move-tree
+---
+InfixExpression [1853,1870]
+    InfixExpression [1853,1865]
+        InfixExpression [1853,1861]
+            SimpleName: k [1853,1854]
+            INFIX_EXPRESSION_OPERATOR: - [1855,1856]
+            ArrayAccess [1857,1861]
+                SimpleName: f [1857,1858]
+                SimpleName: i [1859,1860]
+        INFIX_EXPRESSION_OPERATOR: + [1862,1863]
+        SimpleName: d [1864,1865]
+    INFIX_EXPRESSION_OPERATOR: >= [1866,1868]
+    NumberLiteral: 0 [1869,1870]
+to
+IfStatement [1828,2004]
+at 0
+
+New cluster:
+MOVE from InfixExpression [1853,1870]
+------------
+===
+move-tree
+---
+InfixExpression [1853,1865]
+    InfixExpression [1853,1861]
+        SimpleName: k [1853,1854]
+        INFIX_EXPRESSION_OPERATOR: - [1855,1856]
+        ArrayAccess [1857,1861]
+            SimpleName: f [1857,1858]
+            SimpleName: i [1859,1860]
+    INFIX_EXPRESSION_OPERATOR: + [1862,1863]
+    SimpleName: d [1864,1865]
+to
+InfixExpression [1853,1870]
+at 1
+
+New cluster:
+UPDATE from >= to &&
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: >= [1866,1868]
+replace >= by &&
+
+New cluster:
+UPDATE from + to >=
+------------
+===
+update-node
+---
+INFIX_EXPRESSION_OPERATOR: + [1862,1863]
+replace + by >=
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 0 [1865,1866]
+to
+InfixExpression [1853,1865]
+at 2
+------------
+===
+insert-node
+---
+NumberLiteral: 0 [1865,1866]
+to
+InfixExpression [1853,1865]
+at 2
+
+New cluster:
+===
+delete-node
+---
+SimpleName: d [1864,1865]
+===
+------------
+===
+delete-node
+---
+SimpleName: d [1864,1865]
+===
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 0 [1869,1870]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 0 [1869,1870]
+===
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [1832,1870]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: && [1850,1852]
+===
+===
+delete-node
+---
+InfixExpression [1832,1870]
+===
+

@@ -1,0 +1,124 @@
+New cluster:
+===
+insert-node
+---
+IfStatement [512,805]
+to
+IfStatement [429,692]
+at 2
+------------
+===
+insert-node
+---
+IfStatement [512,805]
+to
+IfStatement [429,692]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [516,572]
+    InfixExpression [516,529]
+        MethodInvocation [516,526]
+            METHOD_INVOCATION_RECEIVER [516,517]
+                SimpleName: s [516,517]
+            SimpleName: length [518,524]
+        INFIX_EXPRESSION_OPERATOR: == [526,528]
+        NumberLiteral: 2 [528,529]
+    INFIX_EXPRESSION_OPERATOR: && [530,532]
+    InfixExpression [533,572]
+        MethodInvocation [533,567]
+            METHOD_INVOCATION_RECEIVER [533,540]
+                SimpleName: Integer [533,540]
+            SimpleName: parseInt [541,549]
+            METHOD_INVOCATION_ARGUMENTS [550,566]
+                MethodInvocation [550,566]
+                    METHOD_INVOCATION_RECEIVER [550,551]
+                        SimpleName: s [550,551]
+                    SimpleName: substring [552,561]
+                    METHOD_INVOCATION_ARGUMENTS [562,565]
+                        NumberLiteral: 0 [562,563]
+                        NumberLiteral: 1 [564,565]
+        INFIX_EXPRESSION_OPERATOR: <= [567,569]
+        SimpleName: val [569,572]
+to
+IfStatement [512,805]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+Block [574,619]
+    ExpressionStatement [596,601]
+        PostfixExpression [596,600]
+            SimpleName: ct [596,598]
+            POSTFIX_EXPRESSION_OPERATOR: ++ [598,600]
+to
+IfStatement [512,805]
+at 1
+
+New cluster:
+MOVE from IfStatement [512,805]
+------------
+===
+move-tree
+---
+IfStatement [512,692]
+    InfixExpression [516,562]
+        InfixExpression [516,529]
+            MethodInvocation [516,526]
+                METHOD_INVOCATION_RECEIVER [516,517]
+                    SimpleName: s [516,517]
+                SimpleName: length [518,524]
+            INFIX_EXPRESSION_OPERATOR: == [526,528]
+            NumberLiteral: 1 [528,529]
+        INFIX_EXPRESSION_OPERATOR: && [530,532]
+        InfixExpression [533,562]
+            MethodInvocation [533,557]
+                METHOD_INVOCATION_RECEIVER [533,540]
+                    SimpleName: Integer [533,540]
+                SimpleName: parseInt [541,549]
+                METHOD_INVOCATION_ARGUMENTS [550,556]
+                    InfixExpression [550,556]
+                        SimpleName: i [550,551]
+                        INFIX_EXPRESSION_OPERATOR: + [551,552]
+                        StringLiteral: "" [552,554]
+                        SimpleName: i [555,556]
+            INFIX_EXPRESSION_OPERATOR: <= [557,559]
+            SimpleName: val [559,562]
+    Block [564,612]
+        ExpressionStatement [586,594]
+            Assignment [586,593]
+                SimpleName: ct [586,588]
+                ASSIGNMENT_OPERATOR: += [589,591]
+                NumberLiteral: 2 [592,593]
+    IfStatement [618,692]
+        InfixExpression [622,645]
+            InfixExpression [622,635]
+                MethodInvocation [622,632]
+                    METHOD_INVOCATION_RECEIVER [622,623]
+                        SimpleName: s [622,623]
+                    SimpleName: length [624,630]
+                INFIX_EXPRESSION_OPERATOR: == [632,634]
+                NumberLiteral: 1 [634,635]
+            INFIX_EXPRESSION_OPERATOR: && [636,638]
+            InfixExpression [639,645]
+                SimpleName: i [639,640]
+                INFIX_EXPRESSION_OPERATOR: <= [640,642]
+                SimpleName: val [642,645]
+        Block [647,692]
+            ExpressionStatement [669,674]
+                PostfixExpression [669,673]
+                    SimpleName: ct [669,671]
+                    POSTFIX_EXPRESSION_OPERATOR: ++ [671,673]
+to
+IfStatement [512,805]
+at 2
+

@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from needT to needLogoT
+------------
+===
+update-node
+---
+SimpleName: needT [1107,1112]
+replace needT by needLogoT
+

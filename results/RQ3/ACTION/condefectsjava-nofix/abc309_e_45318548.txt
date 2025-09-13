@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [756,769]
+    SimpleName: generation [756,766]
+    NumberLiteral: 0 [767,768]
+to
+METHOD_INVOCATION_ARGUMENTS [753,757]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 1 [756,757]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 1 [756,757]
+===
+

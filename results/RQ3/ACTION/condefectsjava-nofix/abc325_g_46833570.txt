@@ -1,0 +1,113 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ArrayAccess [1910,1918]
+    ArrayAccess [1910,1915]
+        SimpleName: ok [1910,1912]
+        SimpleName: i [1913,1914]
+    SimpleName: r [1916,1917]
+to
+Assignment [1910,1975]
+at 0
+
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1921,1995]
+to
+Assignment [1910,1975]
+at 3
+------------
+===
+insert-node
+---
+SimpleName: max [1926,1929]
+to
+MethodInvocation [1921,1995]
+at 1
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [1930,1994]
+to
+MethodInvocation [1921,1995]
+at 2
+===
+insert-node
+---
+MethodInvocation [1921,1995]
+to
+Assignment [1910,1975]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+METHOD_INVOCATION_RECEIVER [1921,1925]
+    SimpleName: Math [1921,1925]
+to
+MethodInvocation [1921,1995]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [1930,1994]
+------------
+===
+move-tree
+---
+InfixExpression [1921,1975]
+    MethodInvocation [1921,1961]
+        METHOD_INVOCATION_RECEIVER [1921,1925]
+            SimpleName: Math [1921,1925]
+        SimpleName: min [1926,1929]
+        METHOD_INVOCATION_ARGUMENTS [1930,1960]
+            InfixExpression [1930,1947]
+                ArrayAccess [1930,1943]
+                    ArrayAccess [1930,1940]
+                        SimpleName: ok2 [1930,1933]
+                        InfixExpression [1934,1939]
+                            SimpleName: j [1934,1935]
+                            INFIX_EXPRESSION_OPERATOR: + [1936,1937]
+                            NumberLiteral: 1 [1938,1939]
+                    SimpleName: r [1941,1942]
+                INFIX_EXPRESSION_OPERATOR: + [1944,1945]
+                SimpleName: k [1946,1947]
+            InfixExpression [1949,1960]
+                SimpleName: r [1949,1950]
+                INFIX_EXPRESSION_OPERATOR: - [1951,1952]
+                ParenthesizedExpression [1953,1960]
+                    InfixExpression [1954,1959]
+                        SimpleName: j [1954,1955]
+                        INFIX_EXPRESSION_OPERATOR: + [1956,1957]
+                        NumberLiteral: 1 [1958,1959]
+    INFIX_EXPRESSION_OPERATOR: + [1962,1963]
+    ParenthesizedExpression [1964,1975]
+        InfixExpression [1965,1974]
+            InfixExpression [1965,1970]
+                SimpleName: j [1965,1966]
+                INFIX_EXPRESSION_OPERATOR: + [1967,1968]
+                NumberLiteral: 1 [1969,1970]
+            INFIX_EXPRESSION_OPERATOR: - [1971,1972]
+            SimpleName: i [1973,1974]
+to
+METHOD_INVOCATION_ARGUMENTS [1930,1994]
+at 1
+===
+move-tree
+---
+ArrayAccess [1910,1918]
+    ArrayAccess [1910,1915]
+        SimpleName: ok [1910,1912]
+        SimpleName: i [1913,1914]
+    SimpleName: r [1916,1917]
+to
+METHOD_INVOCATION_ARGUMENTS [1930,1994]
+at 0
+

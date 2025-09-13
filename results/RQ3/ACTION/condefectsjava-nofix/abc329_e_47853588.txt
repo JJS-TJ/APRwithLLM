@@ -1,0 +1,123 @@
+New cluster:
+===
+insert-node
+---
+IfStatement [753,852]
+to
+Block [691,853]
+at 1
+------------
+===
+insert-node
+---
+IfStatement [753,852]
+to
+Block [691,853]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [758,771]
+    SimpleName: possible [758,766]
+    INFIX_EXPRESSION_OPERATOR: == [767,769]
+    NumberLiteral: 0 [770,771]
+to
+IfStatement [753,852]
+at 0
+
+New cluster:
+MOVE from IfStatement [753,852]
+------------
+===
+move-tree
+---
+ExpressionStatement [753,846]
+    Assignment [753,844]
+        SimpleName: possible [753,761]
+        ASSIGNMENT_OPERATOR: = [762,763]
+        ParenthesizedExpression [764,844]
+            InfixExpression [766,842]
+                SimpleName: possible [766,774]
+                INFIX_EXPRESSION_OPERATOR: ^ [775,776]
+                MethodInvocation [777,842]
+                    SimpleName: rec [777,780]
+                    METHOD_INVOCATION_ARGUMENTS [783,840]
+                        InfixExpression [783,800]
+                            SimpleName: i [783,784]
+                            INFIX_EXPRESSION_OPERATOR: + [785,786]
+                            ParenthesizedExpression [787,796]
+                                InfixExpression [789,794]
+                                    SimpleName: k [789,790]
+                                    INFIX_EXPRESSION_OPERATOR: - [791,792]
+                                    SimpleName: j [793,794]
+                            NumberLiteral: 1 [799,800]
+                        SimpleName: isNexStrictStart [803,819]
+                        SimpleName: a [822,823]
+                        SimpleName: b [826,827]
+                        SimpleName: n [830,831]
+                        SimpleName: m [834,835]
+                        SimpleName: dp [838,840]
+to
+IfStatement [753,852]
+at 1
+
+New cluster:
+MOVE from Assignment [753,844]
+------------
+===
+move-tree
+---
+MethodInvocation [777,842]
+    SimpleName: rec [777,780]
+    METHOD_INVOCATION_ARGUMENTS [783,840]
+        InfixExpression [783,800]
+            SimpleName: i [783,784]
+            INFIX_EXPRESSION_OPERATOR: + [785,786]
+            ParenthesizedExpression [787,796]
+                InfixExpression [789,794]
+                    SimpleName: k [789,790]
+                    INFIX_EXPRESSION_OPERATOR: - [791,792]
+                    SimpleName: j [793,794]
+            NumberLiteral: 1 [799,800]
+        SimpleName: isNexStrictStart [803,819]
+        SimpleName: a [822,823]
+        SimpleName: b [826,827]
+        SimpleName: n [830,831]
+        SimpleName: m [834,835]
+        SimpleName: dp [838,840]
+to
+Assignment [753,844]
+at 2
+
+New cluster:
+===
+delete-node
+---
+ParenthesizedExpression [764,844]
+===
+------------
+===
+delete-node
+---
+SimpleName: possible [766,774]
+===
+===
+delete-node
+---
+InfixExpression [766,842]
+===
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: ^ [775,776]
+===
+===
+delete-node
+---
+ParenthesizedExpression [764,844]
+===
+

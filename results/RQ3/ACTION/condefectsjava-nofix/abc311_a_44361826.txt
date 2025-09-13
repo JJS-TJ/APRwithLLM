@@ -1,0 +1,17 @@
+New cluster:
+MOVE from Block [86,670]
+------------
+===
+move-tree
+---
+ExpressionStatement [133,153]
+    MethodInvocation [133,152]
+        METHOD_INVOCATION_RECEIVER [133,135]
+            SimpleName: sc [133,135]
+        SimpleName: useDelimiter [136,148]
+        METHOD_INVOCATION_ARGUMENTS [149,151]
+            StringLiteral: "" [149,151]
+to
+Block [86,670]
+at 2
+

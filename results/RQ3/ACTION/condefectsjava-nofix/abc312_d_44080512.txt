@@ -1,0 +1,45 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [328,345]
+to
+VariableDeclarationFragment [326,343]
+at 1
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [343,344]
+to
+InfixExpression [328,345]
+at 1
+===
+insert-node
+---
+NumberLiteral: 1 [344,345]
+to
+InfixExpression [328,345]
+at 2
+===
+insert-node
+---
+InfixExpression [328,345]
+to
+VariableDeclarationFragment [326,343]
+at 1
+
+New cluster:
+MOVE from InfixExpression [328,345]
+------------
+===
+move-tree
+---
+InfixExpression [328,343]
+    QualifiedName: string.length [328,341]
+    INFIX_EXPRESSION_OPERATOR: / [341,342]
+    NumberLiteral: 2 [342,343]
+to
+InfixExpression [328,345]
+at 0
+

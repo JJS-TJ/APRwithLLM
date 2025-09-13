@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+PostfixExpression [1238,1243]
+    SimpleName: max [1238,1241]
+    POSTFIX_EXPRESSION_OPERATOR: -- [1241,1243]
+to
+ExpressionStatement [1238,1246]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+Assignment [1238,1245]
+    SimpleName: max [1238,1241]
+    ASSIGNMENT_OPERATOR: = [1242,1243]
+    NumberLiteral: 0 [1244,1245]
+

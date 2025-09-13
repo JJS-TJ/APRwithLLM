@@ -1,0 +1,65 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [1712,1760]
+to
+ReturnStatement [1705,1752]
+at 0
+------------
+===
+insert-node
+---
+SimpleName: toArray [1751,1758]
+to
+MethodInvocation [1712,1760]
+at 1
+===
+insert-node
+---
+MethodInvocation [1712,1760]
+to
+ReturnStatement [1705,1752]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_RECEIVER [1712,1750]
+to
+MethodInvocation [1712,1760]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_RECEIVER [1712,1750]
+------------
+===
+move-tree
+---
+MethodInvocation [1712,1751]
+    METHOD_INVOCATION_RECEIVER [1712,1741]
+        MethodInvocation [1712,1741]
+            METHOD_INVOCATION_RECEIVER [1712,1724]
+                MethodInvocation [1712,1724]
+                    METHOD_INVOCATION_RECEIVER [1712,1715]
+                        SimpleName: ans [1712,1715]
+                    SimpleName: stream [1716,1722]
+            SimpleName: mapToInt [1725,1733]
+            METHOD_INVOCATION_ARGUMENTS [1734,1740]
+                LambdaExpression [1734,1740]
+                    VariableDeclarationFragment [1734,1735]
+                        SimpleName: i [1734,1735]
+                    SimpleName: i [1739,1740]
+    SimpleName: toArray [1742,1749]
+to
+METHOD_INVOCATION_RECEIVER [1712,1750]
+at 0
+
+New cluster:
+UPDATE from toArray to sorted
+------------
+===
+update-node
+---
+SimpleName: toArray [1742,1749]
+replace toArray by sorted
+

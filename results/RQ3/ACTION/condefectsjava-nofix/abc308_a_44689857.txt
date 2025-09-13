@@ -1,0 +1,89 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [689,738]
+to
+IfStatement [684,741]
+at 0
+------------
+===
+insert-node
+---
+InfixExpression [689,721]
+to
+InfixExpression [689,738]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [706,708]
+to
+InfixExpression [689,721]
+at 1
+===
+insert-node
+---
+InfixExpression [689,738]
+to
+IfStatement [684,741]
+at 0
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: || [722,724]
+to
+InfixExpression [689,738]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [725,738]
+    ArrayAccess [725,732]
+        SimpleName: arry [725,729]
+        SimpleName: a [730,731]
+    INFIX_EXPRESSION_OPERATOR: > [733,734]
+    NumberLiteral: 675 [735,738]
+to
+InfixExpression [689,738]
+at 2
+
+New cluster:
+MOVE from InfixExpression [689,721]
+------------
+===
+move-tree
+---
+InfixExpression [689,704]
+    InfixExpression [689,699]
+        ArrayAccess [689,696]
+            SimpleName: arry [689,693]
+            SimpleName: a [694,695]
+        INFIX_EXPRESSION_OPERATOR: % [696,697]
+        NumberLiteral: 25 [697,699]
+    INFIX_EXPRESSION_OPERATOR: != [700,702]
+    NumberLiteral: 0 [703,704]
+to
+InfixExpression [689,721]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+InfixExpression [709,721]
+    ArrayAccess [709,716]
+        SimpleName: arry [709,713]
+        SimpleName: a [714,715]
+    INFIX_EXPRESSION_OPERATOR: < [716,717]
+    NumberLiteral: 100 [718,721]
+to
+InfixExpression [689,721]
+at 2
+

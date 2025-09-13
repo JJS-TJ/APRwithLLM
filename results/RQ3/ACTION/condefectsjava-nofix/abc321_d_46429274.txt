@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from int to long
+------------
+===
+update-node
+---
+PrimitiveType: int [768,771]
+replace int by long
+

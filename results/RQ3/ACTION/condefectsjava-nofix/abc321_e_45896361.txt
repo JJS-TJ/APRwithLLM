@@ -1,0 +1,59 @@
+New cluster:
+===
+insert-node
+---
+MethodInvocation [4272,4297]
+to
+ReturnStatement [4265,4290]
+at 0
+------------
+===
+insert-node
+---
+MethodInvocation [4272,4297]
+to
+ReturnStatement [4265,4290]
+at 0
+===
+insert-node
+---
+NumberLiteral: 0 [4276,4277]
+to
+METHOD_INVOCATION_ARGUMENTS [4276,4296]
+at 0
+===
+insert-node
+---
+METHOD_INVOCATION_ARGUMENTS [4276,4296]
+to
+MethodInvocation [4272,4297]
+at 1
+===
+insert-node
+---
+SimpleName: max [4272,4275]
+to
+MethodInvocation [4272,4297]
+at 0
+
+New cluster:
+MOVE from METHOD_INVOCATION_ARGUMENTS [4276,4296]
+------------
+===
+move-tree
+---
+InfixExpression [4272,4289]
+    InfixExpression [4272,4285]
+        MethodInvocation [4272,4281]
+            SimpleName: min [4272,4275]
+            METHOD_INVOCATION_ARGUMENTS [4276,4280]
+                SimpleName: n [4276,4277]
+                SimpleName: r [4279,4280]
+        INFIX_EXPRESSION_OPERATOR: - [4282,4283]
+        SimpleName: l [4284,4285]
+    INFIX_EXPRESSION_OPERATOR: + [4286,4287]
+    NumberLiteral: 1 [4288,4289]
+to
+METHOD_INVOCATION_ARGUMENTS [4276,4296]
+at 1
+

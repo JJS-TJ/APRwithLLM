@@ -1,0 +1,68 @@
+New cluster:
+===
+insert-node
+---
+InfixExpression [536,558]
+to
+VariableDeclarationFragment [532,550]
+at 1
+------------
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: - [555,556]
+to
+InfixExpression [536,558]
+at 1
+===
+insert-node
+---
+NumberLiteral: 1 [557,558]
+to
+InfixExpression [536,558]
+at 2
+===
+insert-node
+---
+InfixExpression [536,558]
+to
+VariableDeclarationFragment [532,550]
+at 1
+===
+insert-node
+---
+INFIX_EXPRESSION_OPERATOR: + [551,552]
+to
+InfixExpression [536,554]
+at 1
+===
+insert-node
+---
+InfixExpression [536,554]
+to
+InfixExpression [536,558]
+at 0
+===
+insert-node
+---
+SimpleName: n [553,554]
+to
+InfixExpression [536,554]
+at 2
+
+New cluster:
+MOVE from InfixExpression [536,554]
+------------
+===
+move-tree
+---
+InfixExpression [536,550]
+    CastExpression [536,546]
+        PrimitiveType: long [537,541]
+        NumberLiteral: 1e9 [543,546]
+    INFIX_EXPRESSION_OPERATOR: * [547,548]
+    SimpleName: n [549,550]
+to
+InfixExpression [536,554]
+at 0
+

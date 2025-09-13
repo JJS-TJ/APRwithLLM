@@ -1,0 +1,28 @@
+New cluster:
+MOVE from InfixExpression [1632,1643]
+------------
+===
+move-tree
+---
+SimpleName: j [1632,1633]
+to
+InfixExpression [1632,1643]
+at 1
+
+New cluster:
+===
+insert-node
+---
+NumberLiteral: 1L [1632,1634]
+to
+InfixExpression [1632,1643]
+at 0
+------------
+===
+insert-node
+---
+NumberLiteral: 1L [1632,1634]
+to
+InfixExpression [1632,1643]
+at 0
+

@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+CastExpression [1983,1990]
+    PrimitiveType: long [1984,1988]
+    SimpleName: n [1989,1990]
+to
+InfixExpression [1983,1998]
+at 0
+
+New cluster:
+===
+delete-node
+---
+SimpleName: n [1983,1984]
+===
+------------
+===
+delete-node
+---
+SimpleName: n [1983,1984]
+===
+

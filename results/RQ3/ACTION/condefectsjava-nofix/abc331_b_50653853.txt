@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+QualifiedName: Integer.MAX_VALUE [304,321]
+to
+VariableDeclarationFragment [294,309]
+at 1
+------------
+===
+insert-node
+---
+QualifiedName: Integer.MAX_VALUE [304,321]
+to
+VariableDeclarationFragment [294,309]
+at 1
+
+New cluster:
+===
+delete-node
+---
+NumberLiteral: 10000 [304,309]
+===
+------------
+===
+delete-node
+---
+NumberLiteral: 10000 [304,309]
+===
+

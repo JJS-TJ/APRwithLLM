@@ -1,0 +1,43 @@
+New cluster:
+MOVE from IfStatement [293,345]
+------------
+===
+move-tree
+---
+InfixExpression [307,318]
+    SimpleName: saikyo [307,313]
+    INFIX_EXPRESSION_OPERATOR: < [314,315]
+    SimpleName: P2 [316,318]
+to
+IfStatement [293,345]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+InfixExpression [297,303]
+    SimpleName: P [297,298]
+    INFIX_EXPRESSION_OPERATOR: < [299,300]
+    SimpleName: P2 [301,303]
+
+New cluster:
+===
+delete-node
+---
+InfixExpression [297,318]
+===
+------------
+===
+delete-node
+---
+INFIX_EXPRESSION_OPERATOR: && [304,306]
+===
+===
+delete-node
+---
+InfixExpression [297,318]
+===
+

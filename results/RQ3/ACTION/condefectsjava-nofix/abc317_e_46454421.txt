@@ -1,0 +1,20 @@
+New cluster:
+MOVE from ArrayInitializer [1177,1192]
+------------
+===
+move-tree
+---
+NumberLiteral: 0 [1183,1184]
+to
+ArrayInitializer [1177,1192]
+at 3
+===
+move-tree
+---
+PrefixExpression [1179,1181]
+    PREFIX_EXPRESSION_OPERATOR: - [1179,1180]
+    NumberLiteral: 1 [1180,1181]
+to
+ArrayInitializer [1177,1192]
+at 3
+
