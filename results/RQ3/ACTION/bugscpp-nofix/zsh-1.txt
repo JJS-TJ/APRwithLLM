@@ -1,0 +1,29 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [156,180]
+    identifier: interact [156,164]
+    &&: && [165,167]
+    unary_expression [168,180]
+        !: ! [168,169]
+        identifier: sourcelevel [169,180]
+to
+binary_expression [156,194]
+at 0
+
+New cluster:
+===
+delete-node
+---
+identifier: interact [156,164]
+===
+------------
+===
+delete-node
+---
+identifier: interact [156,164]
+===
+

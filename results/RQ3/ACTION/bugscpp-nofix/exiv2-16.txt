@@ -1,0 +1,164 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ERROR [1250,1251]
+    }: } [1250,1251]
+to
+translation_unit [4,620]
+at 1
+
+New cluster:
+MOVE from translation_unit [4,620]
+------------
+===
+move-tree
+---
+return_statement [603,613]
+    return: return [603,609]
+    identifier: os [610,612]
+    ;: ; [612,613]
+to
+translation_unit [4,620]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ERROR [1277,1278]
+    }: } [1277,1278]
+to
+translation_unit [4,620]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+labeled_statement [1041,1101]
+    statement_identifier: catch [1041,1046]
+    ERROR [1047,1052]
+        (: ( [1047,1048]
+        type_descriptor [1048,1051]
+            type_identifier: std [1048,1051]
+        :: : [1051,1052]
+    :: : [1052,1053]
+    expression_statement [1053,1101]
+        binary_expression [1053,1100]
+            identifier: out_of_range [1053,1065]
+            &: & [1065,1066]
+            ERROR [1066,1069]
+                ): ) [1066,1067]
+                {: { [1068,1069]
+            binary_expression [1083,1100]
+                identifier: os [1083,1085]
+                <<: << [1086,1088]
+                string_literal [1089,1100]
+                    ": " [1089,1090]
+                    string_content: Bad value [1090,1099]
+                    ": " [1099,1100]
+        ;: ; [1100,1101]
+to
+compound_statement [91,620]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_ifdef [1103,1227]
+    #ifdef: #ifdef [1103,1109]
+    identifier: EXIV2_DEBUG_MESSAGES [1110,1130]
+    labeled_statement [1144,1219]
+        statement_identifier: std [1144,1147]
+        :: : [1147,1148]
+        ERROR [1148,1149]
+            :: : [1148,1149]
+        expression_statement [1149,1219]
+            binary_expression [1149,1218]
+                identifier: cerr [1149,1153]
+                <<: << [1154,1156]
+                string_literal [1157,1218]
+                    ": " [1157,1158]
+                    string_content: Caught std::out_of_range exception in Exifdatum::write(). [1158,1215]
+                    escape_sequence: \n [1215,1217]
+                    ": " [1217,1218]
+            ;: ; [1218,1219]
+    #endif: #endif [1221,1227]
+to
+compound_statement [91,620]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+compound_statement [565,1040]
+    {: { [565,566]
+    comment:           // https://github.com/Exiv2/exiv2/issues/1706 [578,624]
+    comment:           // Sometimes the type of the value doesn't match what the [635,693]
+    comment:           // print function expects. (The expected types are stored [704,762]
+    comment:           // in the TagInfo tables, but they are not enforced when the [773,834]
+    comment:           // metadata is parsed.) These type mismatches can sometimes [845,905]
+    comment:           // cause a std::out_of_range exception to be thrown. [916,969]
+    declaration [980,1027]
+        type_identifier: try [980,983]
+        ERROR [984,985]
+            {: { [984,985]
+        function_declarator [999,1026]
+            identifier: fct [999,1002]
+            parameter_list [1002,1026]
+                (: ( [1002,1003]
+                parameter_declaration [1003,1005]
+                    type_identifier: os [1003,1005]
+                ,: , [1005,1006]
+                parameter_declaration [1007,1014]
+                    type_identifier: value [1007,1012]
+                    abstract_function_declarator [1012,1014]
+                        parameter_list [1012,1014]
+                            (: ( [1012,1013]
+                            ): ) [1013,1014]
+                ,: , [1014,1015]
+                parameter_declaration [1016,1025]
+                    type_identifier: pMetadata [1016,1025]
+                ): ) [1025,1026]
+        ;: ; [1026,1027]
+    }: } [1039,1040]
+to
+if_statement [554,593]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [565,593]
+    call_expression [565,592]
+        identifier: fct [565,568]
+        argument_list [568,592]
+            (: ( [568,569]
+            identifier: os [569,571]
+            ,: , [571,572]
+            call_expression [573,580]
+                identifier: value [573,578]
+                argument_list [578,580]
+                    (: ( [578,579]
+                    ): ) [579,580]
+            ,: , [580,581]
+            identifier: pMetadata [582,591]
+            ): ) [591,592]
+    ;: ; [592,593]
+

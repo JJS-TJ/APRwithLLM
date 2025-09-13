@@ -1,0 +1,38 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+null [514,518]
+    NULL: NULL [514,518]
+to
+binary_expression [419,547]
+at 2
+
+New cluster:
+MOVE from argument_list [439,539]
+------------
+===
+move-tree
+---
+null [543,547]
+    NULL: NULL [543,547]
+to
+argument_list [439,539]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+field_expression [505,538]
+    field_expression [505,532]
+        identifier: compiler [505,513]
+        ->: -> [513,515]
+        field_identifier: current_namespace [515,532]
+    ->: -> [532,534]
+    field_identifier: name [534,538]
+

@@ -1,0 +1,28 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [356,415]
+    call_expression [356,414]
+        identifier: chewing_set_ShapeMode [356,377]
+        argument_list [377,414]
+            (: ( [377,378]
+            identifier: ctx [378,381]
+            ,: , [381,382]
+            binary_expression [383,413]
+                number_literal: 1 [383,384]
+                -: - [385,386]
+                call_expression [387,413]
+                    identifier: chewing_get_ShapeMode [387,408]
+                    argument_list [408,413]
+                        (: ( [408,409]
+                        identifier: ctx [409,412]
+                        ): ) [412,413]
+            ): ) [413,414]
+    ;: ; [414,415]
+to
+compound_statement [64,451]
+at 9
+

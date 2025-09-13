@@ -1,0 +1,136 @@
+New cluster:
+===
+insert-node
+---
+declaration [682,721]
+to
+compound_statement [21,842]
+at 9
+------------
+===
+insert-node
+---
+init_declarator [695,720]
+to
+declaration [682,721]
+at 2
+===
+insert-node
+---
+identifier: denom [695,700]
+to
+init_declarator [695,720]
+at 0
+===
+insert-node
+---
+=: = [701,702]
+to
+init_declarator [695,720]
+at 1
+===
+insert-node
+---
+;: ; [720,721]
+to
+declaration [682,721]
+at 3
+===
+insert-node
+---
+primitive_type: double [688,694]
+to
+declaration [682,721]
+at 1
+===
+insert-node
+---
+declaration [682,721]
+to
+compound_statement [21,842]
+at 9
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [727,824]
+    if: if [727,729]
+    parenthesized_expression [729,743]
+        (: ( [729,730]
+        binary_expression [731,741]
+            identifier: denom [731,736]
+            ==: == [737,739]
+            number_literal: 0 [740,741]
+        ): ) [742,743]
+    compound_statement [744,824]
+        {: { [744,745]
+        return_statement [755,817]
+            return: return [755,761]
+            call_expression [762,816]
+                identifier: pj_default_destructor [762,783]
+                argument_list [783,816]
+                    (: ( [783,784]
+                    identifier: P [784,785]
+                    ,: , [785,786]
+                    identifier: PJD_ERR_LAT_0_OR_ALPHA_EQ_90 [787,815]
+                    ): ) [815,816]
+            ;: ; [816,817]
+        }: } [823,824]
+to
+compound_statement [21,842]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+type_qualifier [682,687]
+    const: const [682,687]
+to
+declaration [682,721]
+at 0
+
+New cluster:
+MOVE from init_declarator [695,720]
+------------
+===
+move-tree
+---
+call_expression [703,720]
+    identifier: sqrt [703,707]
+    argument_list [708,720]
+        (: ( [708,709]
+        binary_expression [709,719]
+            number_literal: 1. [709,711]
+            -: - [712,713]
+            binary_expression [714,719]
+                identifier: t [714,715]
+                *: * [716,717]
+                identifier: t [718,719]
+        ): ) [719,720]
+to
+init_declarator [695,720]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: denom [851,856]
+to
+binary_expression [689,720]
+at 2
+------------
+===
+insert-node
+---
+identifier: denom [851,856]
+to
+binary_expression [689,720]
+at 2
+

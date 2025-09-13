@@ -1,0 +1,48 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [1731,1852]
+    if: if [1731,1733]
+    parenthesized_expression [1734,1793]
+        (: ( [1734,1735]
+        ERROR [1735,1742]
+            identifier: Token [1735,1740]
+            :: : [1740,1741]
+            :: : [1741,1742]
+        binary_expression [1742,1792]
+            call_expression [1742,1765]
+                identifier: Match [1742,1747]
+                argument_list [1747,1765]
+                    (: ( [1747,1748]
+                    identifier: rhs [1748,1751]
+                    ,: , [1751,1752]
+                    string_literal [1753,1764]
+                        ": " [1753,1754]
+                        string_content: :: %name% [1754,1763]
+                        ": " [1763,1764]
+                    ): ) [1764,1765]
+            &&: && [1766,1768]
+            call_expression [1769,1792]
+                field_expression [1769,1790]
+                    identifier: rhs [1769,1772]
+                    ->: -> [1772,1774]
+                    field_identifier: hasKnownIntValue [1774,1790]
+                argument_list [1790,1792]
+                    (: ( [1790,1791]
+                    ): ) [1791,1792]
+        ): ) [1792,1793]
+    return_statement [1823,1852]
+        return: return [1823,1829]
+        identifier: ChildrenToVisit [1830,1845]
+        ERROR [1845,1851]
+            :: : [1845,1846]
+            :: : [1846,1847]
+            identifier: none [1847,1851]
+        ;: ; [1851,1852]
+to
+compound_statement [1436,1927]
+at 3
+

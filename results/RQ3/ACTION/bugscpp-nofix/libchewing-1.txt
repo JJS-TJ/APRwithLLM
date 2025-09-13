@@ -1,0 +1,69 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [331,363]
+    call_expression [331,362]
+        identifier: chewing_clean_bopomofo_buf [331,357]
+        argument_list [357,362]
+            (: ( [357,358]
+            identifier: ctx [358,361]
+            ): ) [361,362]
+    ;: ; [362,363]
+to
+compound_statement [259,490]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [331,377]
+    call_expression [331,376]
+        identifier: BopomofoRemoveAll [331,348]
+        argument_list [348,376]
+            (: ( [348,349]
+            pointer_expression [349,375]
+                &: & [349,350]
+                parenthesized_expression [350,375]
+                    (: ( [350,351]
+                    field_expression [351,374]
+                        field_expression [351,360]
+                            identifier: ctx [351,354]
+                            ->: -> [354,356]
+                            field_identifier: data [356,360]
+                        ->: -> [360,362]
+                        field_identifier: bopomofoData [362,374]
+                    ): ) [374,375]
+            ): ) [375,376]
+    ;: ; [376,377]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [387,447]
+    call_expression [387,446]
+        identifier: MakeOutputWithRtn [387,404]
+        argument_list [404,446]
+            (: ( [404,405]
+            field_expression [405,416]
+                identifier: ctx [405,408]
+                ->: -> [408,410]
+                field_identifier: output [410,416]
+            ,: , [416,417]
+            field_expression [418,427]
+                identifier: ctx [418,421]
+                ->: -> [421,423]
+                field_identifier: data [423,427]
+            ,: , [427,428]
+            identifier: KEYSTROKE_ABSORB [429,445]
+            ): ) [445,446]
+    ;: ; [446,447]
+

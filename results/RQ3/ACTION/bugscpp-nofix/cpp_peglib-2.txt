@@ -1,0 +1,155 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [324,355]
+    call_expression [324,354]
+        field_expression [324,346]
+            field_expression [324,336]
+                identifier: c [324,325]
+                .: . [325,326]
+                field_identifier: rule_stack [326,336]
+            .: . [336,337]
+            field_identifier: push_back [337,346]
+        argument_list [346,354]
+            (: ( [346,347]
+            identifier: outer_ [347,353]
+            ): ) [353,354]
+    ;: ; [354,355]
+to
+compound_statement [317,357]
+at 1
+
+New cluster:
+===
+insert-node
+---
+declaration [361,401]
+to
+compound_statement [317,357]
+at 2
+------------
+===
+insert-node
+---
+;: ; [400,401]
+to
+declaration [361,401]
+at 3
+===
+insert-node
+---
+identifier [369,369]
+to
+init_declarator [369,400]
+at 0
+===
+insert-node
+---
+type_identifier: len [366,369]
+to
+declaration [361,401]
+at 1
+===
+insert-node
+---
+declaration [361,401]
+to
+compound_statement [317,357]
+at 2
+===
+insert-node
+---
+init_declarator [369,400]
+to
+declaration [361,401]
+at 2
+===
+insert-node
+---
+=: = [370,371]
+to
+init_declarator [369,400]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [407,431]
+    call_expression [407,430]
+        field_expression [407,428]
+            field_expression [407,419]
+                identifier: c [407,408]
+                .: . [408,409]
+                field_identifier: rule_stack [409,419]
+            .: . [419,420]
+            field_identifier: pop_back [420,428]
+        argument_list [428,430]
+            (: ( [428,429]
+            ): ) [429,430]
+    ;: ; [430,431]
+to
+compound_statement [317,357]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+storage_class_specifier [361,365]
+    auto: auto [361,365]
+to
+declaration [361,401]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: len [444,447]
+to
+return_statement [319,355]
+at 1
+------------
+===
+insert-node
+---
+identifier: len [444,447]
+to
+return_statement [319,355]
+at 1
+
+New cluster:
+MOVE from init_declarator [369,400]
+------------
+===
+move-tree
+---
+call_expression [326,354]
+    field_expression [326,337]
+        identifier: ope_ [326,330]
+        ->: -> [330,332]
+        field_identifier: parse [332,337]
+    argument_list [337,354]
+        (: ( [337,338]
+        identifier: s [338,339]
+        ,: , [339,340]
+        identifier: n [341,342]
+        ,: , [342,343]
+        identifier: sv [344,346]
+        ,: , [346,347]
+        identifier: c [348,349]
+        ,: , [349,350]
+        identifier: dt [351,353]
+        ): ) [353,354]
+to
+init_declarator [369,400]
+at 2
+

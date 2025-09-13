@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from %oror%|&&|(|,|! to %oror%|&&|(|,|.|!
+------------
+===
+update-node
+---
+string_content: %oror%|&&|(|,|! [515,530]
+replace %oror%|&&|(|,|! by %oror%|&&|(|,|.|!
+

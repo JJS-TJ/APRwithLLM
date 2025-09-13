@@ -1,0 +1,42 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [951,991]
+    call_expression [951,990]
+        identifier: json_dumper_begin_object [951,975]
+        argument_list [975,990]
+            (: ( [975,976]
+            field_expression [976,989]
+                identifier: pdata [976,981]
+                ->: -> [981,983]
+                field_identifier: dumper [983,989]
+            ): ) [989,990]
+    ;: ; [990,991]
+to
+compound_statement [889,1099]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1160,1198]
+    call_expression [1160,1197]
+        identifier: json_dumper_end_object [1160,1182]
+        argument_list [1182,1197]
+            (: ( [1182,1183]
+            field_expression [1183,1196]
+                identifier: pdata [1183,1188]
+                ->: -> [1188,1190]
+                field_identifier: dumper [1190,1196]
+            ): ) [1196,1197]
+    ;: ; [1197,1198]
+to
+compound_statement [889,1099]
+at 5
+

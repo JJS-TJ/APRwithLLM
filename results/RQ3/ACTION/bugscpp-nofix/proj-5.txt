@@ -1,0 +1,45 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [516,596]
+    if: if [516,518]
+    parenthesized_expression [519,568]
+        (: ( [519,520]
+        binary_expression [520,567]
+            call_expression [520,539]
+                field_expression [520,537]
+                    identifier: preparedOps [520,531]
+                    .: . [531,532]
+                    field_identifier: empty [532,537]
+                argument_list [537,539]
+                    (: ( [537,538]
+                    ): ) [538,539]
+            &&: && [540,542]
+            unary_expression [543,567]
+                !: ! [543,544]
+                call_expression [544,567]
+                    field_expression [544,565]
+                        field_expression [544,559]
+                            identifier: opList [544,550]
+                            ->: -> [550,552]
+                            field_identifier: objects [552,559]
+                        .: . [559,560]
+                        field_identifier: empty [560,565]
+                    argument_list [565,567]
+                        (: ( [565,566]
+                        ): ) [566,567]
+        ): ) [567,568]
+    compound_statement [569,596]
+        {: { [569,570]
+        return_statement [580,589]
+            return: return [580,586]
+            number_literal: 0 [587,588]
+            ;: ; [588,589]
+        }: } [595,596]
+to
+compound_statement [149,741]
+at 7
+

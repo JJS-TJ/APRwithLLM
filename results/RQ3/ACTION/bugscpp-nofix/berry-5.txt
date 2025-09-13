@@ -1,0 +1,99 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [295,383]
+to
+parenthesized_expression [294,345]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [295,383]
+to
+parenthesized_expression [294,345]
+at 1
+===
+insert-node
+---
+&&: && [345,347]
+to
+binary_expression [295,383]
+at 1
+
+New cluster:
+MOVE from binary_expression [295,383]
+------------
+===
+move-tree
+---
+binary_expression [295,344]
+    binary_expression [295,314]
+        field_expression [295,305]
+            field_expression [295,302]
+                field_expression [295,299]
+                    identifier: e [295,296]
+                    ->: -> [296,298]
+                    field_identifier: v [298,299]
+                .: . [299,300]
+                field_identifier: ss [300,302]
+            .: . [302,303]
+            field_identifier: tt [303,305]
+        ==: == [306,308]
+        identifier: ETREG [309,314]
+    &&: && [315,317]
+    binary_expression [318,344]
+        cast_expression [318,334]
+            (: ( [318,319]
+            type_descriptor [319,322]
+                primitive_type: int [319,322]
+            ): ) [322,323]
+            field_expression [323,334]
+                field_expression [323,330]
+                    field_expression [323,327]
+                        identifier: e [323,324]
+                        ->: -> [324,326]
+                        field_identifier: v [326,327]
+                    .: . [327,328]
+                    field_identifier: ss [328,330]
+                .: . [330,331]
+                field_identifier: obj [331,334]
+        >=: >= [335,337]
+        identifier: nlocal [338,344]
+to
+binary_expression [295,383]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [348,383]
+    (: ( [348,349]
+    binary_expression [349,382]
+        binary_expression [349,364]
+            field_expression [349,360]
+                field_expression [349,356]
+                    field_expression [349,353]
+                        identifier: e [349,350]
+                        ->: -> [350,352]
+                        field_identifier: v [352,353]
+                    .: . [353,354]
+                    field_identifier: ss [354,356]
+                .: . [356,357]
+                field_identifier: obj [357,360]
+            +: + [361,362]
+            number_literal: 1 [363,364]
+        >=: >= [365,367]
+        field_expression [368,382]
+            identifier: finfo [368,373]
+            ->: -> [373,375]
+            field_identifier: freereg [375,382]
+    ): ) [382,383]
+to
+binary_expression [295,383]
+at 2
+

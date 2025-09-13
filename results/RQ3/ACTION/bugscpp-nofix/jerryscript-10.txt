@@ -1,0 +1,17 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [666,692]
+    call_expression [666,691]
+        identifier: ECMA_CHECK_STACK_USAGE [666,688]
+        argument_list [689,691]
+            (: ( [689,690]
+            ): ) [690,691]
+    ;: ; [691,692]
+to
+compound_statement [661,3707]
+at 1
+

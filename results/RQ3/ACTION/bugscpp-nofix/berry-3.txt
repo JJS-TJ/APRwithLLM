@@ -1,0 +1,62 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+declaration [120,137]
+    type_identifier: bexpdesc [120,128]
+    init_declarator [129,136]
+        identifier: ec [129,131]
+        =: = [132,133]
+        pointer_expression [134,136]
+            *: * [134,135]
+            identifier: e [135,136]
+    ;: ; [136,137]
+to
+compound_statement [99,299]
+at 2
+
+New cluster:
+===
+insert-node
+---
+comment: /* work on a copy because we preserve original class */ [141,196]
+to
+compound_statement [99,299]
+at 3
+------------
+===
+insert-node
+---
+comment: /* work on a copy because we preserve original class */ [141,196]
+to
+compound_statement [99,299]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pointer_expression [370,373]
+    &: & [370,371]
+    identifier: ec [371,373]
+to
+argument_list [268,291]
+at 3
+
+New cluster:
+===
+delete-node
+---
+identifier: e [284,285]
+===
+------------
+===
+delete-node
+---
+identifier: e [284,285]
+===
+

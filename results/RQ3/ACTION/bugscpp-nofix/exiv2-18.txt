@@ -1,0 +1,63 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+preproc_ifdef [1475,1688]
+    #ifndef: #ifndef [1475,1482]
+    identifier: SUPPRESS_WARNINGS [1483,1500]
+    if_statement [1514,1680]
+        if: if [1514,1516]
+        parenthesized_expression [1517,1526]
+            (: ( [1517,1518]
+            binary_expression [1518,1525]
+                identifier: len [1518,1521]
+                >: > [1522,1523]
+                number_literal: 4 [1524,1525]
+            ): ) [1525,1526]
+        compound_statement [1527,1680]
+            {: { [1527,1528]
+            expression_statement [1546,1665]
+                binary_expression [1546,1664]
+                    binary_expression [1546,1655]
+                        binary_expression [1546,1621]
+                            identifier: EXV_ERROR [1546,1555]
+                            <<: << [1556,1558]
+                            string_literal [1559,1621]
+                                ": " [1559,1560]
+                                string_content: Unexpected length in TiffDirectory::writeDirEntry(): len ==  [1560,1620]
+                                ": " [1620,1621]
+                        <<: << [1649,1651]
+                        identifier: len [1652,1655]
+                    <<: << [1656,1658]
+                    string_literal [1659,1664]
+                        ": " [1659,1660]
+                        string_content: . [1660,1661]
+                        escape_sequence: \n [1661,1663]
+                        ": " [1663,1664]
+                ;: ; [1664,1665]
+            }: } [1679,1680]
+    #endif: #endif [1682,1688]
+to
+compound_statement [1106,1644]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1487,1504]
+    call_expression [1487,1503]
+        identifier: assert [1487,1493]
+        argument_list [1493,1503]
+            (: ( [1493,1494]
+            binary_expression [1494,1502]
+                identifier: len [1494,1497]
+                <=: <= [1498,1500]
+                number_literal: 4 [1501,1502]
+            ): ) [1502,1503]
+    ;: ; [1503,1504]
+

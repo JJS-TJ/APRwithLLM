@@ -1,0 +1,85 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [4054,4131]
+to
+binary_expression [4054,4138]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [4054,4131]
+to
+binary_expression [4054,4138]
+at 0
+===
+insert-node
+---
+&&: && [4090,4092]
+to
+binary_expression [4054,4131]
+at 1
+
+New cluster:
+MOVE from binary_expression [4054,4131]
+------------
+===
+move-tree
+---
+call_expression [4054,4089]
+    identifier: Match [4054,4059]
+    argument_list [4059,4089]
+        (: ( [4059,4060]
+        call_expression [4060,4074]
+            field_expression [4060,4070]
+                identifier: tok [4060,4063]
+                ->: -> [4063,4065]
+                field_identifier: tokAt [4065,4070]
+            argument_list [4070,4074]
+                (: ( [4070,4071]
+                number_literal: -2 [4071,4073]
+                ): ) [4073,4074]
+        ,: , [4074,4075]
+        string_literal [4076,4088]
+            ": " [4076,4077]
+            string_content: . %name% ( [4077,4087]
+            ": " [4087,4088]
+        ): ) [4088,4089]
+to
+binary_expression [4054,4131]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [4093,4131]
+    call_expression [4093,4123]
+        field_expression [4093,4121]
+            call_expression [4093,4107]
+                field_expression [4093,4103]
+                    identifier: tok [4093,4096]
+                    ->: -> [4096,4098]
+                    field_identifier: tokAt [4098,4103]
+                argument_list [4103,4107]
+                    (: ( [4103,4104]
+                    number_literal: -2 [4104,4106]
+                    ): ) [4106,4107]
+            ->: -> [4107,4109]
+            field_identifier: originalName [4109,4121]
+        argument_list [4121,4123]
+            (: ( [4121,4122]
+            ): ) [4122,4123]
+    !=: != [4124,4126]
+    string_literal [4127,4131]
+        ": " [4127,4128]
+        string_content: -> [4128,4130]
+        ": " [4130,4131]
+to
+binary_expression [4054,4131]
+at 2
+

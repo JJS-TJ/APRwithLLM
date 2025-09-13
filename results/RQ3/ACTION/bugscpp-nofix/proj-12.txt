@@ -1,0 +1,179 @@
+New cluster:
+===
+insert-node
+---
+declaration [330,397]
+to
+compound_statement [41,513]
+at 9
+------------
+===
+insert-node
+---
+=: = [349,350]
+to
+init_declarator [343,396]
+at 1
+===
+insert-node
+---
+primitive_type: double [336,342]
+to
+declaration [330,397]
+at 1
+===
+insert-node
+---
+init_declarator [343,396]
+to
+declaration [330,397]
+at 2
+===
+insert-node
+---
+declaration [330,397]
+to
+compound_statement [41,513]
+at 9
+===
+insert-node
+---
+identifier: denom [343,348]
+to
+init_declarator [343,396]
+at 0
+===
+insert-node
+---
+;: ; [396,397]
+to
+declaration [330,397]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [403,526]
+    if: if [403,405]
+    parenthesized_expression [405,421]
+        (: ( [405,406]
+        binary_expression [407,419]
+            identifier: denom [407,412]
+            ==: == [413,415]
+            number_literal: 0.0 [416,419]
+        ): ) [420,421]
+    compound_statement [422,526]
+        {: { [422,423]
+        expression_statement [433,480]
+            call_expression [433,479]
+                identifier: proj_errno_set [433,447]
+                argument_list [447,479]
+                    (: ( [447,448]
+                    identifier: P [448,449]
+                    ,: , [449,450]
+                    identifier: PJD_ERR_TOLERANCE_CONDITION [451,478]
+                    ): ) [478,479]
+            ;: ; [479,480]
+        return_statement [490,519]
+            return: return [490,496]
+            field_expression [497,518]
+                call_expression [497,515]
+                    identifier: proj_coord_error [497,513]
+                    argument_list [513,515]
+                        (: ( [513,514]
+                        ): ) [514,515]
+                .: . [515,516]
+                field_identifier: xy [516,518]
+            ;: ; [518,519]
+        }: } [525,526]
+to
+compound_statement [41,513]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+type_qualifier [330,335]
+    const: const [330,335]
+to
+declaration [330,397]
+at 0
+
+New cluster:
+MOVE from init_declarator [343,396]
+------------
+===
+move-tree
+---
+binary_expression [351,396]
+    binary_expression [351,371]
+        number_literal: 1. [351,353]
+        +: + [354,355]
+        binary_expression [356,371]
+            field_expression [356,364]
+                identifier: Q [356,357]
+                ->: -> [357,359]
+                field_identifier: sinc0 [359,364]
+            *: * [365,366]
+            identifier: sinc [367,371]
+    +: + [372,373]
+    binary_expression [374,396]
+        binary_expression [374,389]
+            field_expression [374,382]
+                identifier: Q [374,375]
+                ->: -> [375,377]
+                field_identifier: cosc0 [377,382]
+            *: * [383,384]
+            identifier: cosc [385,389]
+        *: * [390,391]
+        identifier: cosl [392,396]
+to
+init_declarator [343,396]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: denom [552,557]
+to
+binary_expression [334,397]
+at 2
+------------
+===
+insert-node
+---
+identifier: denom [552,557]
+to
+binary_expression [334,397]
+at 2
+
+New cluster:
+===
+delete-node
+---
+parenthesized_expression [350,397]
+===
+------------
+===
+delete-node
+---
+(: ( [350,351]
+===
+===
+delete-node
+---
+parenthesized_expression [350,397]
+===
+===
+delete-node
+---
+): ) [396,397]
+===
+

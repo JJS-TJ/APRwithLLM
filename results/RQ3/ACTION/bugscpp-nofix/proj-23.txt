@@ -1,0 +1,41 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [337,454]
+    if: if [337,339]
+    parenthesized_expression [340,358]
+        (: ( [340,341]
+        binary_expression [341,357]
+            identifier: osVal [341,346]
+            ==: == [347,349]
+            null [350,357]
+                nullptr: nullptr [350,357]
+        ): ) [357,358]
+    compound_statement [359,454]
+        {: { [359,360]
+        expression_statement [374,414]
+            call_expression [374,413]
+                field_expression [374,411]
+                    field_expression [374,390]
+                        identifier: ctx [374,377]
+                        ->: -> [377,379]
+                        field_identifier: cpp_context [379,390]
+                    ->: -> [390,392]
+                    field_identifier: autoCloseDbIfNeeded [392,411]
+                argument_list [411,413]
+                    (: ( [411,412]
+                    ): ) [412,413]
+            ;: ; [413,414]
+        return_statement [428,443]
+            return: return [428,434]
+            null [435,442]
+                nullptr: nullptr [435,442]
+            ;: ; [442,443]
+        }: } [453,454]
+to
+compound_statement [129,503]
+at 3
+

@@ -1,0 +1,42 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [3660,3755]
+    if: if [3660,3662]
+    parenthesized_expression [3663,3712]
+        (: ( [3663,3664]
+        call_expression [3664,3711]
+            identifier: xbps_find_pkg_in_array [3664,3686]
+            argument_list [3686,3711]
+                (: ( [3686,3687]
+                identifier: pkgs [3687,3691]
+                ,: , [3691,3692]
+                identifier: pkgname [3693,3700]
+                ,: , [3700,3701]
+                string_literal [3702,3710]
+                    ": " [3702,3703]
+                    string_content: update [3703,3709]
+                    ": " [3709,3710]
+                ): ) [3710,3711]
+        ): ) [3711,3712]
+    compound_statement [3713,3755]
+        {: { [3713,3714]
+        expression_statement [3720,3734]
+            call_expression [3720,3733]
+                identifier: free [3720,3724]
+                argument_list [3724,3733]
+                    (: ( [3724,3725]
+                    identifier: pkgname [3725,3732]
+                    ): ) [3732,3733]
+            ;: ; [3733,3734]
+        continue_statement [3740,3749]
+            continue: continue [3740,3748]
+            ;: ; [3748,3749]
+        }: } [3754,3755]
+to
+compound_statement [1334,3728]
+at 26
+

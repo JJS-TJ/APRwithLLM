@@ -1,0 +1,223 @@
+New cluster:
+===
+insert-node
+---
+if_statement [618,866]
+to
+compound_statement [476,754]
+at 3
+------------
+===
+insert-node
+---
+compound_statement [633,750]
+to
+if_statement [618,866]
+at 2
+===
+insert-node
+---
+parenthesized_expression [621,632]
+to
+if_statement [618,866]
+at 1
+===
+insert-node
+---
+(: ( [621,622]
+to
+parenthesized_expression [621,632]
+at 0
+===
+insert-node
+---
+): ) [631,632]
+to
+parenthesized_expression [621,632]
+at 2
+===
+insert-node
+---
+if_statement [618,866]
+to
+compound_statement [476,754]
+at 3
+===
+insert-node
+---
+{: { [633,634]
+to
+compound_statement [633,750]
+at 0
+===
+insert-node
+---
+}: } [749,750]
+to
+compound_statement [633,750]
+at 3
+===
+insert-node
+---
+if: if [618,620]
+to
+if_statement [618,866]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+else_clause [751,866]
+    else: else [751,755]
+    compound_statement [756,866]
+        {: { [756,757]
+        expression_statement [775,851]
+            binary_expression [775,850]
+                binary_expression [775,842]
+                    binary_expression [775,832]
+                        binary_expression [775,825]
+                            identifier: EXV_ERROR [775,784]
+                            <<: << [785,787]
+                            string_literal [788,825]
+                                ": " [788,789]
+                                string_content: packIfdId out-of-bounds error: s =  [789,824]
+                                ": " [824,825]
+                        <<: << [826,828]
+                        identifier: std [829,832]
+                    ERROR [832,837]
+                        :: : [832,833]
+                        :: : [833,834]
+                        identifier: dec [834,837]
+                    <<: << [838,840]
+                    identifier: s [841,842]
+                <<: << [843,845]
+                string_literal [846,850]
+                    ": " [846,847]
+                    escape_sequence: \n [847,849]
+                    ": " [849,850]
+            ;: ; [850,851]
+        }: } [865,866]
+to
+if_statement [618,866]
+at 3
+
+New cluster:
+MOVE from parenthesized_expression [621,632]
+------------
+===
+move-tree
+---
+binary_expression [625,634]
+    identifier: s [625,626]
+    <=: <= [627,629]
+    identifier: size [630,634]
+to
+parenthesized_expression [621,632]
+at 1
+
+New cluster:
+MOVE from compound_statement [633,750]
+------------
+===
+move-tree
+---
+if_statement [650,671]
+    if: if [650,652]
+    parenthesized_expression [653,662]
+        (: ( [653,654]
+        binary_expression [654,661]
+            identifier: len [654,657]
+            <: < [658,659]
+            identifier: s [660,661]
+        ): ) [661,662]
+    expression_statement [663,671]
+        assignment_expression [663,670]
+            identifier: len [663,666]
+            =: = [667,668]
+            identifier: s [669,670]
+        ;: ; [670,671]
+to
+compound_statement [633,750]
+at 1
+===
+move-tree
+---
+expression_statement [685,729]
+    call_expression [685,728]
+        field_expression [685,692]
+            identifier: i [685,686]
+            ->: -> [686,688]
+            field_identifier: copy [688,692]
+        argument_list [692,728]
+            (: ( [692,693]
+            binary_expression [693,716]
+                field_expression [693,703]
+                    identifier: buf [693,696]
+                    .: . [696,697]
+                    field_identifier: pData_ [697,703]
+                +: + [704,705]
+                binary_expression [706,716]
+                    call_expression [706,714]
+                        field_expression [706,712]
+                            identifier: i [706,707]
+                            ->: -> [707,709]
+                            field_identifier: tag [709,712]
+                        argument_list [712,714]
+                            (: ( [712,713]
+                            ): ) [713,714]
+                    *: * [714,715]
+                    number_literal: 2 [715,716]
+            ,: , [716,717]
+            identifier: byteOrder [718,727]
+            ): ) [727,728]
+    ;: ; [728,729]
+to
+compound_statement [633,750]
+at 2
+
+New cluster:
+===
+delete-node
+---
+expression_statement [618,636]
+===
+------------
+===
+delete-node
+---
+identifier: assert [618,624]
+===
+===
+delete-node
+---
+(: ( [624,625]
+===
+===
+delete-node
+---
+call_expression [618,635]
+===
+===
+delete-node
+---
+expression_statement [618,636]
+===
+===
+delete-node
+---
+): ) [634,635]
+===
+===
+delete-node
+---
+argument_list [624,635]
+===
+===
+delete-node
+---
+;: ; [635,636]
+===
+

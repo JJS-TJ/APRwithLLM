@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+field_expression [4579,4594]
+    identifier: sensKeys [4579,4587]
+    ->: -> [4587,4589]
+    field_identifier: count [4589,4594]
+to
+binary_expression [4573,4582]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: cnt [4579,4582]
+===
+------------
+===
+delete-node
+---
+identifier: cnt [4579,4582]
+===
+

@@ -1,0 +1,36 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [255,347]
+    if: if [255,257]
+    parenthesized_expression [258,273]
+        (: ( [258,259]
+        binary_expression [259,272]
+            field_expression [259,266]
+                identifier: P [259,260]
+                ->: -> [260,262]
+                field_identifier: phi0 [262,266]
+            ==: == [267,269]
+            number_literal: 0. [270,272]
+        ): ) [272,273]
+    compound_statement [274,347]
+        {: { [274,275]
+        return_statement [285,340]
+            return: return [285,291]
+            call_expression [292,339]
+                identifier: pj_default_destructor [292,313]
+                argument_list [313,339]
+                    (: ( [313,314]
+                    identifier: P [314,315]
+                    ,: , [315,316]
+                    identifier: PJD_ERR_LAT_0_IS_ZERO [317,338]
+                    ): ) [338,339]
+            ;: ; [339,340]
+        }: } [346,347]
+to
+compound_statement [22,979]
+at 5
+

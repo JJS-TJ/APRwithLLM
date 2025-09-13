@@ -1,0 +1,18 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1520,1542]
+    call_expression [1520,1541]
+        identifier: ecma_free_value [1520,1535]
+        argument_list [1536,1541]
+            (: ( [1536,1537]
+            identifier: idx [1537,1540]
+            ): ) [1540,1541]
+    ;: ; [1541,1542]
+to
+compound_statement [330,1739]
+at 23
+

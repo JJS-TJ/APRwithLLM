@@ -1,0 +1,78 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [278,378]
+to
+parenthesized_expression [277,338]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [278,378]
+to
+parenthesized_expression [277,338]
+at 1
+===
+insert-node
+---
+&&: && [348,350]
+to
+binary_expression [278,378]
+at 1
+
+New cluster:
+MOVE from binary_expression [278,378]
+------------
+===
+move-tree
+---
+binary_expression [278,337]
+    binary_expression [278,295]
+        identifier: i [278,279]
+        <: < [280,281]
+        identifier: string_length [282,295]
+    &&: && [296,298]
+    binary_expression [299,337]
+        subscript_expression [299,316]
+            identifier: yr_lowercase [299,311]
+            [: [ [311,312]
+            pointer_expression [312,315]
+                *: * [312,313]
+                identifier: s1 [313,315]
+            ]: ] [315,316]
+        ==: == [317,319]
+        subscript_expression [320,337]
+            identifier: yr_lowercase [320,332]
+            [: [ [332,333]
+            pointer_expression [333,336]
+                *: * [333,334]
+                identifier: s2 [334,336]
+            ]: ] [336,337]
+to
+binary_expression [278,378]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [361,378]
+    pointer_expression [361,370]
+        *: * [361,362]
+        parenthesized_expression [362,370]
+            (: ( [362,363]
+            binary_expression [363,369]
+                identifier: s1 [363,365]
+                +: + [366,367]
+                number_literal: 1 [368,369]
+            ): ) [369,370]
+    ==: == [371,373]
+    number_literal: 0x00 [374,378]
+to
+binary_expression [278,378]
+at 2
+

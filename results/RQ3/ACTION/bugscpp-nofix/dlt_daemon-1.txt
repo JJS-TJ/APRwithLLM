@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from %s to %254s
+------------
+===
+update-node
+---
+string_content: %s [657,659]
+replace %s by %254s
+

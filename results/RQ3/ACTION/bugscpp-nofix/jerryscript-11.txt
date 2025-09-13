@@ -1,0 +1,249 @@
+New cluster:
+===
+insert-node
+---
+else_clause [659,760]
+to
+if_statement [480,658]
+at 3
+------------
+===
+insert-node
+---
+else_clause [659,760]
+to
+if_statement [480,658]
+at 3
+===
+insert-node
+---
+else: else [659,663]
+to
+else_clause [659,760]
+at 0
+===
+insert-node
+---
+}: } [759,760]
+to
+compound_statement [667,760]
+at 2
+===
+insert-node
+---
+compound_statement [667,760]
+to
+else_clause [659,760]
+at 1
+===
+insert-node
+---
+{: { [667,668]
+to
+compound_statement [667,760]
+at 0
+
+New cluster:
+===
+insert-node
+---
+declaration [485,596]
+to
+compound_statement [563,658]
+at 1
+------------
+===
+insert-node
+---
+init_declarator [498,595]
+to
+declaration [485,596]
+at 1
+===
+insert-node
+---
+}: } [594,595]
+to
+initializer_list [509,595]
+at 4
+===
+insert-node
+---
+{: { [509,510]
+to
+initializer_list [509,595]
+at 0
+===
+insert-node
+---
+,: , [550,551]
+to
+initializer_list [509,595]
+at 2
+===
+insert-node
+---
+type_identifier: ecma_value_t [485,497]
+to
+declaration [485,596]
+at 0
+===
+insert-node
+---
+;: ; [595,596]
+to
+declaration [485,596]
+at 2
+===
+insert-node
+---
+declaration [485,596]
+to
+compound_statement [563,658]
+at 1
+===
+insert-node
+---
+=: = [507,508]
+to
+init_declarator [498,595]
+at 1
+===
+insert-node
+---
+initializer_list [509,595]
+to
+init_declarator [498,595]
+at 2
+
+New cluster:
+MOVE from compound_statement [667,760]
+------------
+===
+move-tree
+---
+expression_statement [393,474]
+    call_expression [393,473]
+        identifier: ecma_collection_push_back [393,418]
+        argument_list [419,473]
+            (: ( [419,420]
+            identifier: container_p [420,431]
+            ,: , [431,432]
+            call_expression [433,472]
+                identifier: ecma_copy_value_if_not_object [433,462]
+                argument_list [463,472]
+                    (: ( [463,464]
+                    identifier: key_arg [464,471]
+                    ): ) [471,472]
+            ): ) [472,473]
+    ;: ; [473,474]
+to
+compound_statement [667,760]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+array_declarator [498,506]
+    identifier: values [498,504]
+    [: [ [504,505]
+    ]: ] [505,506]
+to
+init_declarator [498,595]
+at 0
+
+New cluster:
+UPDATE from ecma_collection_push_back to ecma_collection_append
+------------
+===
+update-node
+---
+identifier: ecma_collection_push_back [570,595]
+replace ecma_collection_push_back by ecma_collection_append
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [511,550]
+    identifier: ecma_copy_value_if_not_object [511,540]
+    argument_list [541,550]
+        (: ( [541,542]
+        identifier: key_arg [542,549]
+        ): ) [549,550]
+to
+initializer_list [509,595]
+at 1
+
+New cluster:
+MOVE from initializer_list [509,595]
+------------
+===
+move-tree
+---
+call_expression [610,651]
+    identifier: ecma_copy_value_if_not_object [610,639]
+    argument_list [640,651]
+        (: ( [640,641]
+        identifier: value_arg [641,650]
+        ): ) [650,651]
+to
+initializer_list [509,595]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: values [639,645]
+to
+argument_list [596,652]
+at 3
+------------
+===
+insert-node
+---
+identifier: values [639,645]
+to
+argument_list [596,652]
+at 3
+
+New cluster:
+===
+insert-node
+---
+,: , [645,646]
+to
+argument_list [596,652]
+at 4
+------------
+===
+insert-node
+---
+,: , [645,646]
+to
+argument_list [596,652]
+at 4
+
+New cluster:
+===
+insert-node
+---
+number_literal: 2 [647,648]
+to
+argument_list [596,652]
+at 5
+------------
+===
+insert-node
+---
+number_literal: 2 [647,648]
+to
+argument_list [596,652]
+at 5
+

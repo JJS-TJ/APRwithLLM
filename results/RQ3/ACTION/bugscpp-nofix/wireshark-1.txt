@@ -1,0 +1,344 @@
+New cluster:
+===
+insert-node
+---
+switch_statement [298,735]
+to
+compound_statement [188,356]
+at 4
+------------
+===
+insert-node
+---
+{: { [324,325]
+to
+compound_statement [324,735]
+at 0
+===
+insert-node
+---
+switch_statement [298,735]
+to
+compound_statement [188,356]
+at 4
+===
+insert-node
+---
+case_statement [662,730]
+to
+compound_statement [324,735]
+at 4
+===
+insert-node
+---
+:: : [669,670]
+to
+case_statement [662,730]
+at 1
+===
+insert-node
+---
+default: default [662,669]
+to
+case_statement [662,730]
+at 0
+===
+insert-node
+---
+compound_statement [324,735]
+to
+switch_statement [298,735]
+at 2
+===
+insert-node
+---
+}: } [734,735]
+to
+compound_statement [324,735]
+at 5
+===
+insert-node
+---
+switch: switch [298,304]
+to
+switch_statement [298,735]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [122,158]
+    (: ( [122,123]
+    binary_expression [123,157]
+        parenthesized_expression [123,145]
+            (: ( [123,124]
+            binary_expression [124,144]
+                identifier: field_display [124,137]
+                &: & [138,139]
+                number_literal: 0xff [140,144]
+            ): ) [144,145]
+        ==: == [146,148]
+        identifier: BASE_HEX [149,157]
+    ): ) [157,158]
+to
+binary_expression [122,184]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [162,202]
+    (: ( [162,163]
+    binary_expression [163,201]
+        parenthesized_expression [163,185]
+            (: ( [163,164]
+            binary_expression [164,184]
+                identifier: field_display [164,177]
+                &: & [178,179]
+                number_literal: 0xff [180,184]
+            ): ) [184,185]
+        ==: == [186,188]
+        identifier: BASE_HEX_DEC [189,201]
+    ): ) [201,202]
+to
+binary_expression [122,184]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [305,323]
+    (: ( [305,306]
+    field_expression [306,322]
+        field_expression [306,315]
+            identifier: fv [306,308]
+            ->: -> [308,310]
+            field_identifier: ftype [310,315]
+        ->: -> [315,317]
+        field_identifier: ftype [317,322]
+    ): ) [322,323]
+to
+switch_statement [298,735]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+case_statement [332,407]
+    case: case [332,336]
+    identifier: FT_UINT8 [337,345]
+    :: : [345,346]
+    expression_statement [351,396]
+        assignment_expression [351,395]
+            identifier: buf [351,354]
+            =: = [355,356]
+            call_expression [357,395]
+                identifier: guint8_to_hex [357,370]
+                argument_list [370,395]
+                    (: ( [370,371]
+                    identifier: buf [371,374]
+                    ,: , [374,375]
+                    field_expression [376,394]
+                        field_expression [376,385]
+                            identifier: fv [376,378]
+                            ->: -> [378,380]
+                            field_identifier: value [380,385]
+                        .: . [385,386]
+                        field_identifier: uinteger [386,394]
+                    ): ) [394,395]
+        ;: ; [395,396]
+    break_statement [401,407]
+        break: break [401,406]
+        ;: ; [406,407]
+to
+compound_statement [324,735]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+case_statement [414,488]
+    case: case [414,418]
+    identifier: FT_UINT16 [419,428]
+    :: : [428,429]
+    expression_statement [434,477]
+        assignment_expression [434,476]
+            identifier: buf [434,437]
+            =: = [438,439]
+            call_expression [440,476]
+                identifier: word_to_hex [440,451]
+                argument_list [451,476]
+                    (: ( [451,452]
+                    identifier: buf [452,455]
+                    ,: , [455,456]
+                    field_expression [457,475]
+                        field_expression [457,466]
+                            identifier: fv [457,459]
+                            ->: -> [459,461]
+                            field_identifier: value [461,466]
+                        .: . [466,467]
+                        field_identifier: uinteger [467,475]
+                    ): ) [475,476]
+        ;: ; [476,477]
+    break_statement [482,488]
+        break: break [482,487]
+        ;: ; [487,488]
+to
+compound_statement [324,735]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+case_statement [495,655]
+    case: case [495,499]
+    identifier: FT_UINT24 [500,509]
+    :: : [509,510]
+    expression_statement [515,581]
+        assignment_expression [515,580]
+            identifier: buf [515,518]
+            =: = [519,520]
+            call_expression [521,580]
+                identifier: guint8_to_hex [521,534]
+                argument_list [534,580]
+                    (: ( [534,535]
+                    identifier: buf [535,538]
+                    ,: , [538,539]
+                    binary_expression [540,579]
+                        parenthesized_expression [540,573]
+                            (: ( [540,541]
+                            binary_expression [541,572]
+                                field_expression [541,559]
+                                    field_expression [541,550]
+                                        identifier: fv [541,543]
+                                        ->: -> [543,545]
+                                        field_identifier: value [545,550]
+                                    .: . [550,551]
+                                    field_identifier: uinteger [551,559]
+                                &: & [560,561]
+                                number_literal: 0x00ff0000 [562,572]
+                            ): ) [572,573]
+                        >>: >> [574,576]
+                        number_literal: 16 [577,579]
+                    ): ) [579,580]
+        ;: ; [580,581]
+    expression_statement [586,644]
+        assignment_expression [586,643]
+            identifier: buf [586,589]
+            =: = [590,591]
+            call_expression [592,643]
+                identifier: word_to_hex [592,603]
+                argument_list [603,643]
+                    (: ( [603,604]
+                    identifier: buf [604,607]
+                    ,: , [607,608]
+                    parenthesized_expression [609,642]
+                        (: ( [609,610]
+                        binary_expression [610,641]
+                            field_expression [610,628]
+                                field_expression [610,619]
+                                    identifier: fv [610,612]
+                                    ->: -> [612,614]
+                                    field_identifier: value [614,619]
+                                .: . [619,620]
+                                field_identifier: uinteger [620,628]
+                            &: & [629,630]
+                            number_literal: 0x0000ffff [631,641]
+                        ): ) [641,642]
+                    ): ) [642,643]
+        ;: ; [643,644]
+    break_statement [649,655]
+        break: break [649,654]
+        ;: ; [654,655]
+to
+compound_statement [324,735]
+at 3
+
+New cluster:
+MOVE from case_statement [662,730]
+------------
+===
+move-tree
+---
+expression_statement [290,334]
+    assignment_expression [290,333]
+        identifier: buf [290,293]
+        =: = [294,295]
+        call_expression [296,333]
+            identifier: dword_to_hex [296,308]
+            argument_list [308,333]
+                (: ( [308,309]
+                identifier: buf [309,312]
+                ,: , [312,313]
+                field_expression [314,332]
+                    field_expression [314,323]
+                        identifier: fv [314,316]
+                        ->: -> [316,318]
+                        field_identifier: value [318,323]
+                    .: . [323,324]
+                    field_identifier: uinteger [324,332]
+                ): ) [332,333]
+    ;: ; [333,334]
+to
+case_statement [662,730]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+break_statement [724,730]
+    break: break [724,729]
+    ;: ; [729,730]
+to
+case_statement [662,730]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [122,149]
+    (: ( [122,123]
+    binary_expression [123,148]
+        identifier: field_display [123,136]
+        ==: == [137,139]
+        identifier: BASE_HEX [140,148]
+    ): ) [148,149]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [153,184]
+    (: ( [153,154]
+    binary_expression [154,183]
+        identifier: field_display [154,167]
+        ==: == [168,170]
+        identifier: BASE_HEX_DEC [171,183]
+    ): ) [183,184]
+

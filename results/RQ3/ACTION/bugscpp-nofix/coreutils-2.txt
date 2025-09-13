@@ -1,0 +1,51 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [1272,1306]
+to
+binary_expression [1272,1310]
+at 0
+------------
+===
+insert-node
+---
+binary_expression [1272,1306]
+to
+binary_expression [1272,1310]
+at 0
+===
+insert-node
+---
+&&: && [1284,1286]
+to
+binary_expression [1272,1306]
+at 1
+
+New cluster:
+MOVE from binary_expression [1272,1306]
+------------
+===
+move-tree
+---
+unary_expression [1272,1283]
+    !: ! [1272,1273]
+    identifier: join_lines [1273,1283]
+to
+binary_expression [1272,1306]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1287,1306]
+    identifier: col_sep_length [1287,1301]
+    ==: == [1302,1304]
+    number_literal: 1 [1305,1306]
+to
+binary_expression [1272,1306]
+at 2
+

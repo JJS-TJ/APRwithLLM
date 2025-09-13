@@ -1,0 +1,490 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [269,328]
+    if: if [269,271]
+    parenthesized_expression [272,288]
+        (: ( [272,273]
+        binary_expression [273,287]
+            parenthesized_expression [273,282]
+                (: ( [273,274]
+                binary_expression [274,281]
+                    identifier: len [274,277]
+                    %: % [278,279]
+                    number_literal: 4 [280,281]
+                ): ) [281,282]
+            !=: != [283,285]
+            number_literal: 0 [286,287]
+        ): ) [287,288]
+    compound_statement [289,328]
+        {: { [289,290]
+        expression_statement [300,321]
+            assignment_expression [300,320]
+                identifier: len [300,303]
+                +=: += [304,306]
+                binary_expression [307,320]
+                    number_literal: 4 [307,308]
+                    -: - [309,310]
+                    parenthesized_expression [311,320]
+                        (: ( [311,312]
+                        binary_expression [312,319]
+                            identifier: len [312,315]
+                            %: % [316,317]
+                            number_literal: 4 [318,319]
+                        ): ) [319,320]
+            ;: ; [320,321]
+        }: } [327,328]
+to
+compound_statement [51,666]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+init_declarator [247,260]
+    identifier: len [247,250]
+    =: = [251,252]
+    field_expression [253,260]
+        identifier: ba [253,255]
+        ->: -> [255,257]
+        field_identifier: len [257,260]
+to
+declaration [241,251]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [395,428]
+to
+compound_statement [307,557]
+at 1
+------------
+===
+insert-node
+---
+;: ; [427,428]
+to
+expression_statement [395,428]
+at 1
+===
+insert-node
+---
+cast_expression [402,427]
+to
+assignment_expression [395,427]
+at 2
+===
+insert-node
+---
+(: ( [402,403]
+to
+cast_expression [402,427]
+at 0
+===
+insert-node
+---
+=: = [400,401]
+to
+assignment_expression [395,427]
+at 1
+===
+insert-node
+---
+assignment_expression [395,427]
+to
+expression_statement [395,428]
+at 0
+===
+insert-node
+---
+expression_statement [395,428]
+to
+compound_statement [307,557]
+at 1
+===
+insert-node
+---
+identifier: data [395,399]
+to
+assignment_expression [395,427]
+at 0
+===
+insert-node
+---
+): ) [409,410]
+to
+cast_expression [402,427]
+at 2
+
+New cluster:
+===
+insert-node
+---
+if_statement [480,571]
+to
+compound_statement [307,557]
+at 4
+------------
+===
+insert-node
+---
+{: { [499,500]
+to
+compound_statement [499,571]
+at 0
+===
+insert-node
+---
+if_statement [480,571]
+to
+compound_statement [307,557]
+at 4
+===
+insert-node
+---
+compound_statement [499,571]
+to
+if_statement [480,571]
+at 2
+===
+insert-node
+---
+if: if [480,482]
+to
+if_statement [480,571]
+at 0
+===
+insert-node
+---
+}: } [570,571]
+to
+compound_statement [499,571]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [483,498]
+    (: ( [483,484]
+    binary_expression [484,497]
+        identifier: len [484,487]
+        >: > [488,489]
+        field_expression [490,497]
+            identifier: ba [490,492]
+            ->: -> [492,494]
+            field_identifier: len [494,497]
+    ): ) [497,498]
+to
+if_statement [480,571]
+at 1
+
+New cluster:
+MOVE from compound_statement [499,571]
+------------
+===
+move-tree
+---
+expression_statement [318,355]
+    assignment_expression [318,354]
+        identifier: data [318,322]
+        =: = [323,324]
+        cast_expression [325,354]
+            (: ( [325,326]
+            type_descriptor [326,332]
+                type_identifier: gchar [326,331]
+                abstract_pointer_declarator [331,332]
+                    *: * [331,332]
+            ): ) [332,333]
+            call_expression [333,354]
+                identifier: g_malloc [333,341]
+                argument_list [341,354]
+                    (: ( [341,342]
+                    binary_expression [342,353]
+                        field_expression [342,349]
+                            identifier: ba [342,344]
+                            ->: -> [344,346]
+                            field_identifier: len [346,349]
+                        +: + [350,351]
+                        number_literal: 1 [352,353]
+                    ): ) [353,354]
+    ;: ; [354,355]
+to
+compound_statement [499,571]
+at 1
+
+New cluster:
+MOVE from cast_expression [402,427]
+------------
+===
+move-tree
+---
+type_descriptor [326,332]
+    type_identifier: gchar [326,331]
+    abstract_pointer_declarator [331,332]
+        *: * [331,332]
+to
+cast_expression [402,427]
+at 1
+===
+move-tree
+---
+call_expression [333,354]
+    identifier: g_malloc [333,341]
+    argument_list [341,354]
+        (: ( [341,342]
+        binary_expression [342,353]
+            field_expression [342,349]
+                identifier: ba [342,344]
+                ->: -> [344,346]
+                field_identifier: len [346,349]
+            +: + [350,351]
+            number_literal: 1 [352,353]
+        ): ) [353,354]
+to
+expression_statement [318,355]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [410,427]
+    identifier: g_malloc [410,418]
+    argument_list [418,427]
+        (: ( [418,419]
+        binary_expression [419,426]
+            identifier: len [419,422]
+            +: + [423,424]
+            number_literal: 1 [425,426]
+        ): ) [426,427]
+to
+cast_expression [402,427]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: len [586,589]
+to
+subscript_expression [407,420]
+at 2
+------------
+===
+insert-node
+---
+identifier: len [586,589]
+to
+subscript_expression [407,420]
+at 2
+
+New cluster:
+UPDATE from g_malloc to memcpy
+------------
+===
+update-node
+---
+identifier: g_malloc [333,341]
+replace g_malloc by memcpy
+
+New cluster:
+MOVE from binary_expression [342,353]
+------------
+===
+move-tree
+---
+field_expression [342,349]
+    identifier: ba [342,344]
+    ->: -> [344,346]
+    field_identifier: len [346,349]
+to
+binary_expression [342,353]
+at 1
+
+New cluster:
+===
+insert-node
+---
+,: , [535,536]
+to
+argument_list [341,354]
+at 2
+------------
+===
+insert-node
+---
+,: , [535,536]
+to
+argument_list [341,354]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+string_literal [537,543]
+    ": " [537,538]
+    string_content: ==== [538,542]
+    ": " [542,543]
+to
+argument_list [341,354]
+at 3
+
+New cluster:
+===
+insert-node
+---
+,: , [543,544]
+to
+argument_list [341,354]
+at 4
+------------
+===
+insert-node
+---
+,: , [543,544]
+to
+argument_list [341,354]
+at 4
+
+New cluster:
+===
+insert-node
+---
+binary_expression [545,558]
+to
+argument_list [341,354]
+at 5
+------------
+===
+insert-node
+---
+-: - [549,550]
+to
+binary_expression [545,558]
+at 1
+===
+insert-node
+---
+binary_expression [545,558]
+to
+argument_list [341,354]
+at 5
+===
+insert-node
+---
+identifier: len [545,548]
+to
+binary_expression [545,558]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: data [521,525]
+to
+binary_expression [342,353]
+at 0
+------------
+===
+insert-node
+---
+identifier: data [521,525]
+to
+binary_expression [342,353]
+at 0
+
+New cluster:
+MOVE from binary_expression [545,558]
+------------
+===
+move-tree
+---
+field_expression [412,419]
+    identifier: ba [412,414]
+    ->: -> [414,416]
+    field_identifier: len [416,419]
+to
+binary_expression [545,558]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: len [247,250]
+===
+------------
+===
+delete-node
+---
+identifier: len [247,250]
+===
+
+New cluster:
+===
+delete-node
+---
+number_literal: 1 [352,353]
+===
+------------
+===
+delete-node
+---
+number_literal: 1 [352,353]
+===
+
+New cluster:
+===
+delete-node
+---
+assignment_expression [318,354]
+===
+------------
+===
+delete-node
+---
+assignment_expression [318,354]
+===
+===
+delete-node
+---
+(: ( [325,326]
+===
+===
+delete-node
+---
+): ) [332,333]
+===
+===
+delete-node
+---
+=: = [323,324]
+===
+===
+delete-node
+---
+cast_expression [325,354]
+===
+===
+delete-node
+---
+identifier: data [318,322]
+===
+

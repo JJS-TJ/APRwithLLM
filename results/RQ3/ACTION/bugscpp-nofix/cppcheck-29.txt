@@ -1,0 +1,42 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+else_clause [2035,2130]
+    else: else [2035,2039]
+    if_statement [2040,2130]
+        if: if [2040,2042]
+        parenthesized_expression [2043,2062]
+            (: ( [2043,2044]
+            binary_expression [2044,2061]
+                call_expression [2044,2054]
+                    field_expression [2044,2052]
+                        identifier: par [2044,2047]
+                        ->: -> [2047,2049]
+                        field_identifier: str [2049,2052]
+                    argument_list [2052,2054]
+                        (: ( [2052,2053]
+                        ): ) [2053,2054]
+                !=: != [2055,2057]
+                string_literal [2058,2061]
+                    ": " [2058,2059]
+                    string_content: ( [2059,2060]
+                    ": " [2060,2061]
+            ): ) [2061,2062]
+        compound_statement [2063,2130]
+            {: { [2063,2064]
+            expression_statement [2082,2099]
+                call_expression [2082,2098]
+                    identifier: syntaxError [2082,2093]
+                    argument_list [2093,2098]
+                        (: ( [2093,2094]
+                        identifier: par [2094,2097]
+                        ): ) [2097,2098]
+                ;: ; [2098,2099]
+            }: } [2129,2130]
+to
+if_statement [1841,2034]
+at 3
+

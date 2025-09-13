@@ -1,0 +1,80 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [125,177]
+to
+parenthesized_expression [124,164]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [125,177]
+to
+parenthesized_expression [124,164]
+at 1
+===
+insert-node
+---
+&&: && [162,164]
+to
+binary_expression [125,177]
+at 1
+
+New cluster:
+MOVE from binary_expression [125,177]
+------------
+===
+move-tree
+---
+binary_expression [125,163]
+    parenthesized_expression [125,147]
+        (: ( [125,126]
+        assignment_expression [126,146]
+            identifier: count [126,131]
+            =: = [132,133]
+            call_expression [134,146]
+                identifier: getc [134,138]
+                argument_list [138,146]
+                    (: ( [138,139]
+                    identifier: infile [139,145]
+                    ): ) [145,146]
+        ): ) [146,147]
+    &&: && [148,150]
+    binary_expression [151,163]
+        identifier: count [151,156]
+        <=: <= [157,159]
+        number_literal: 255 [160,163]
+to
+binary_expression [125,177]
+at 0
+
+New cluster:
+MOVE from binary_expression [125,177]
+------------
+===
+move-tree
+---
+binary_expression [151,163]
+    identifier: count [151,156]
+    <=: <= [157,159]
+    number_literal: 255 [160,163]
+to
+binary_expression [125,177]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [151,161]
+    identifier: count [151,156]
+    >=: >= [157,159]
+    number_literal: 0 [160,161]
+to
+binary_expression [125,163]
+at 2
+

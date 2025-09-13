@@ -1,0 +1,25 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [59,89]
+    return: return [59,65]
+    ERROR [66,71]
+        identifier: peg [66,69]
+        :: : [69,70]
+        :: : [70,71]
+    call_expression [71,88]
+        identifier: line_info [71,80]
+        argument_list [80,88]
+            (: ( [80,81]
+            identifier: ss [81,83]
+            ,: , [83,84]
+            identifier: s_ [85,87]
+            ): ) [87,88]
+    ;: ; [88,89]
+to
+compound_statement [48,52]
+at 1
+

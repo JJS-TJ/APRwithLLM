@@ -1,0 +1,96 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [571,595]
+to
+parenthesized_expression [570,583]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [571,595]
+to
+parenthesized_expression [570,583]
+at 1
+===
+insert-node
+---
+&&: && [583,585]
+to
+binary_expression [571,595]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+case_statement [792,929]
+    case: case [792,796]
+    char_literal [797,800]
+        ': ' [797,798]
+        character: % [798,799]
+        ': ' [799,800]
+    :: : [800,801]
+    expression_statement [819,842]
+        call_expression [819,841]
+            identifier: be_pushstring [819,832]
+            argument_list [832,841]
+                (: ( [832,833]
+                identifier: vm [833,835]
+                ,: , [835,836]
+                string_literal [837,840]
+                    ": " [837,838]
+                    string_content: % [838,839]
+                    ": " [839,840]
+                ): ) [840,841]
+        ;: ; [841,842]
+    expression_statement [860,868]
+        update_expression [860,867]
+            --: -- [860,862]
+            identifier: index [862,867]
+        ;: ; [867,868]
+    comment: /* compensate the future ++index */ [870,905]
+    break_statement [923,929]
+        break: break [923,928]
+        ;: ; [928,929]
+to
+compound_statement [764,2188]
+at 1
+
+New cluster:
+MOVE from binary_expression [571,595]
+------------
+===
+move-tree
+---
+binary_expression [571,582]
+    identifier: index [571,576]
+    >: > [577,578]
+    identifier: top [579,582]
+to
+binary_expression [571,595]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [586,595]
+    pointer_expression [586,588]
+        *: * [586,587]
+        identifier: p [587,588]
+    !=: != [589,591]
+    char_literal [592,595]
+        ': ' [592,593]
+        character: % [593,594]
+        ': ' [594,595]
+to
+binary_expression [571,595]
+at 2
+

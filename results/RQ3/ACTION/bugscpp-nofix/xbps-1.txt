@@ -1,0 +1,170 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [757,820]
+    if: if [757,759]
+    parenthesized_expression [760,805]
+        (: ( [760,761]
+        binary_expression [761,804]
+            binary_expression [761,782]
+                identifier: idx [761,764]
+                <: < [765,766]
+                field_expression [767,782]
+                    field_expression [767,776]
+                        identifier: item [767,771]
+                        ->: -> [771,773]
+                        field_identifier: old [773,776]
+                    .: . [776,777]
+                    field_identifier: index [777,782]
+            ||: || [783,785]
+            field_expression [786,804]
+                field_expression [786,795]
+                    identifier: item [786,790]
+                    ->: -> [790,792]
+                    field_identifier: old [792,795]
+                .: . [795,796]
+                field_identifier: preserve [796,804]
+        ): ) [804,805]
+    return_statement [811,820]
+        return: return [811,817]
+        number_literal: 0 [818,819]
+        ;: ; [819,820]
+to
+compound_statement [625,771]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [825,853]
+    assignment_expression [825,852]
+        field_expression [825,842]
+            field_expression [825,834]
+                identifier: item [825,829]
+                ->: -> [829,831]
+                field_identifier: old [831,834]
+            .: . [834,835]
+            field_identifier: pkgname [835,842]
+        =: = [843,844]
+        identifier: pkgname [845,852]
+    ;: ; [852,853]
+to
+compound_statement [625,771]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [858,884]
+    assignment_expression [858,883]
+        field_expression [858,874]
+            field_expression [858,867]
+                identifier: item [858,862]
+                ->: -> [862,864]
+                field_identifier: old [864,867]
+            .: . [867,868]
+            field_identifier: pkgver [868,874]
+        =: = [875,876]
+        identifier: pkgver [877,883]
+    ;: ; [883,884]
+to
+compound_statement [625,771]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [889,911]
+    assignment_expression [889,910]
+        field_expression [889,904]
+            field_expression [889,898]
+                identifier: item [889,893]
+                ->: -> [893,895]
+                field_identifier: old [895,898]
+            .: . [898,899]
+            field_identifier: index [899,904]
+        =: = [905,906]
+        identifier: idx [907,910]
+    ;: ; [910,911]
+to
+compound_statement [625,771]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [916,946]
+    assignment_expression [916,945]
+        field_expression [916,934]
+            field_expression [916,925]
+                identifier: item [916,920]
+                ->: -> [920,922]
+                field_identifier: old [922,925]
+            .: . [925,926]
+            field_identifier: preserve [926,934]
+        =: = [935,936]
+        identifier: preserve [937,945]
+    ;: ; [945,946]
+to
+compound_statement [625,771]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [951,977]
+    assignment_expression [951,976]
+        field_expression [951,967]
+            field_expression [951,960]
+                identifier: item [951,955]
+                ->: -> [955,957]
+                field_identifier: old [957,960]
+            .: . [960,961]
+            field_identifier: update [961,967]
+        =: = [968,969]
+        identifier: update [970,976]
+    ;: ; [976,977]
+to
+compound_statement [625,771]
+at 7
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [982,1014]
+    assignment_expression [982,1013]
+        field_expression [982,1001]
+            field_expression [982,991]
+                identifier: item [982,986]
+                ->: -> [986,988]
+                field_identifier: old [988,991]
+            .: . [991,992]
+            field_identifier: removepkg [992,1001]
+        =: = [1002,1003]
+        identifier: removepkg [1004,1013]
+    ;: ; [1013,1014]
+to
+compound_statement [625,771]
+at 8
+

@@ -1,0 +1,36 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [295,389]
+    if: if [295,297]
+    parenthesized_expression [298,321]
+        (: ( [298,299]
+        binary_expression [299,319]
+            identifier: t [299,300]
+            >: > [301,302]
+            binary_expression [303,319]
+                identifier: M_HALFPI [303,311]
+                +: + [312,313]
+                identifier: EPS10 [314,319]
+        ): ) [320,321]
+    compound_statement [322,389]
+        {: { [322,323]
+        return_statement [333,382]
+            return: return [333,339]
+            call_expression [340,381]
+                identifier: destructor [340,350]
+                argument_list [350,381]
+                    (: ( [350,351]
+                    identifier: P [351,352]
+                    ,: , [352,353]
+                    identifier: PJD_ERR_LAT_LARGER_THAN_90 [354,380]
+                    ): ) [380,381]
+            ;: ; [381,382]
+        }: } [388,389]
+to
+compound_statement [21,1729]
+at 7
+

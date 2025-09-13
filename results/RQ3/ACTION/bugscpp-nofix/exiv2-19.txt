@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [4978,5030]
+    call_expression [4978,5029]
+        identifier: enforce [4978,4985]
+        argument_list [4985,5029]
+            (: ( [4985,4986]
+            binary_expression [4986,5006]
+                identifier: isize [4986,4991]
+                <=: <= [4992,4994]
+                binary_expression [4995,5006]
+                    number_literal: 1024 [4995,4999]
+                    *: * [5000,5001]
+                    number_literal: 1024 [5002,5006]
+            ,: , [5006,5007]
+            identifier: kerCorruptedMetadata [5008,5028]
+            ): ) [5028,5029]
+    ;: ; [5029,5030]
+to
+compound_statement [4870,5369]
+at 2
+

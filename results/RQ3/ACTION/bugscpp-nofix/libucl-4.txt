@@ -1,0 +1,47 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+while_statement [1170,1302]
+    while: while [1170,1175]
+    parenthesized_expression [1176,1259]
+        (: ( [1176,1177]
+        binary_expression [1177,1258]
+            binary_expression [1177,1191]
+                identifier: p [1177,1178]
+                <: < [1179,1180]
+                field_expression [1181,1191]
+                    identifier: chunk [1181,1186]
+                    ->: -> [1186,1188]
+                    field_identifier: end [1188,1191]
+            &&: && [1192,1194]
+            call_expression [1195,1258]
+                identifier: ucl_test_character [1195,1213]
+                argument_list [1214,1258]
+                    (: ( [1214,1215]
+                    pointer_expression [1215,1217]
+                        *: * [1215,1216]
+                        identifier: p [1216,1217]
+                    ,: , [1217,1218]
+                    identifier: UCL_CHARACTER_WHITESPACE_UNSAFE [1226,1257]
+                    ): ) [1257,1258]
+        ): ) [1258,1259]
+    compound_statement [1260,1302]
+        {: { [1260,1261]
+        expression_statement [1268,1295]
+            call_expression [1268,1294]
+                identifier: ucl_chunk_skipc [1268,1283]
+                argument_list [1284,1294]
+                    (: ( [1284,1285]
+                    identifier: chunk [1285,1290]
+                    ,: , [1290,1291]
+                    identifier: p [1292,1293]
+                    ): ) [1293,1294]
+            ;: ; [1294,1295]
+        }: } [1301,1302]
+to
+compound_statement [1136,1415]
+at 2
+

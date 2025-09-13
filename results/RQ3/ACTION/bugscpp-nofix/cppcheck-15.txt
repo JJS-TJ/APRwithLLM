@@ -1,0 +1,192 @@
+New cluster:
+===
+insert-node
+---
+declaration [4342,4383]
+to
+compound_statement [625,5295]
+at 18
+------------
+===
+insert-node
+---
+type_identifier: Token [4348,4353]
+to
+declaration [4342,4383]
+at 1
+===
+insert-node
+---
+init_declarator [4354,4382]
+to
+declaration [4342,4383]
+at 2
+===
+insert-node
+---
+;: ; [4382,4383]
+to
+declaration [4342,4383]
+at 3
+===
+insert-node
+---
+declaration [4342,4383]
+to
+compound_statement [625,5295]
+at 18
+===
+insert-node
+---
+=: = [4362,4363]
+to
+init_declarator [4354,4382]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+while_statement [4397,4483]
+    while: while [4397,4402]
+    parenthesized_expression [4403,4434]
+        (: ( [4403,4404]
+        ERROR [4404,4411]
+            identifier: Token [4404,4409]
+            :: : [4409,4410]
+            :: : [4410,4411]
+        call_expression [4411,4433]
+            identifier: Match [4411,4416]
+            argument_list [4416,4433]
+                (: ( [4416,4417]
+                identifier: op1tok [4417,4423]
+                ,: , [4423,4424]
+                string_literal [4425,4432]
+                    ": " [4425,4426]
+                    string_content: .|[|* [4426,4431]
+                    ": " [4431,4432]
+                ): ) [4432,4433]
+        ): ) [4433,4434]
+    expression_statement [4452,4483]
+        assignment_expression [4452,4482]
+            identifier: op1tok [4452,4458]
+            =: = [4459,4460]
+            call_expression [4461,4482]
+                field_expression [4461,4480]
+                    identifier: op1tok [4461,4467]
+                    ->: -> [4467,4469]
+                    field_identifier: astOperand1 [4469,4480]
+                argument_list [4480,4482]
+                    (: ( [4480,4481]
+                    ): ) [4481,4482]
+        ;: ; [4482,4483]
+to
+compound_statement [625,5295]
+at 19
+
+New cluster:
+MOVE from declaration [4342,4383]
+------------
+===
+move-tree
+---
+type_qualifier [4344,4349]
+    const: const [4344,4349]
+to
+declaration [4342,4383]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+type_qualifier [4499,4504]
+    const: const [4499,4504]
+to
+declaration [4344,4431]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pointer_declarator [4354,4361]
+    *: * [4354,4355]
+    identifier: op1tok [4355,4361]
+to
+init_declarator [4354,4382]
+at 0
+
+New cluster:
+MOVE from init_declarator [4354,4382]
+------------
+===
+move-tree
+---
+call_expression [4369,4387]
+    field_expression [4369,4385]
+        identifier: tok [4369,4372]
+        ->: -> [4372,4374]
+        field_identifier: astOperand1 [4374,4385]
+    argument_list [4385,4387]
+        (: ( [4385,4386]
+        ): ) [4386,4387]
+to
+init_declarator [4354,4382]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: op1tok [4524,4530]
+to
+conditional_expression [4369,4430]
+at 0
+------------
+===
+insert-node
+---
+identifier: op1tok [4524,4530]
+to
+conditional_expression [4369,4430]
+at 0
+
+New cluster:
+===
+insert-node
+---
+identifier: op1tok [4533,4539]
+to
+field_expression [4390,4418]
+at 0
+------------
+===
+insert-node
+---
+identifier: op1tok [4533,4539]
+to
+field_expression [4390,4418]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [4390,4408]
+    field_expression [4390,4406]
+        identifier: tok [4390,4393]
+        ->: -> [4393,4395]
+        field_identifier: astOperand1 [4395,4406]
+    argument_list [4406,4408]
+        (: ( [4406,4407]
+        ): ) [4407,4408]
+

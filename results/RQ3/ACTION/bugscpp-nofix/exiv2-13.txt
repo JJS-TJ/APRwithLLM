@@ -1,0 +1,80 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [2587,2659]
+to
+parenthesized_expression [2586,2629]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [2587,2659]
+to
+parenthesized_expression [2586,2629]
+at 1
+===
+insert-node
+---
+||: || [2615,2617]
+to
+binary_expression [2587,2659]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [2587,2614]
+    field_expression [2587,2600]
+        identifier: subBox [2587,2593]
+        .: . [2593,2594]
+        field_identifier: length [2594,2600]
+    <: < [2601,2602]
+    sizeof_expression [2603,2614]
+        sizeof: sizeof [2603,2609]
+        parenthesized_expression [2609,2614]
+            (: ( [2609,2610]
+            identifier: box [2610,2613]
+            ): ) [2613,2614]
+to
+binary_expression [2587,2659]
+at 0
+
+New cluster:
+MOVE from binary_expression [2587,2659]
+------------
+===
+move-tree
+---
+binary_expression [2587,2628]
+    field_expression [2587,2600]
+        identifier: subBox [2587,2593]
+        .: . [2593,2594]
+        field_identifier: length [2594,2600]
+    >: > [2601,2602]
+    binary_expression [2603,2628]
+        call_expression [2603,2614]
+            field_expression [2603,2612]
+                identifier: io_ [2603,2606]
+                ->: -> [2606,2608]
+                field_identifier: size [2608,2612]
+            argument_list [2612,2614]
+                (: ( [2612,2613]
+                ): ) [2613,2614]
+        -: - [2615,2616]
+        call_expression [2617,2628]
+            field_expression [2617,2626]
+                identifier: io_ [2617,2620]
+                ->: -> [2620,2622]
+                field_identifier: tell [2622,2626]
+            argument_list [2626,2628]
+                (: ( [2626,2627]
+                ): ) [2627,2628]
+to
+binary_expression [2587,2659]
+at 2
+

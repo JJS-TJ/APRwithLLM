@@ -1,0 +1,49 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [2777,2909]
+    if: if [2777,2779]
+    parenthesized_expression [2779,2820]
+        (: ( [2779,2780]
+        binary_expression [2781,2818]
+            call_expression [2781,2811]
+                identifier: fabs [2781,2785]
+                argument_list [2785,2811]
+                    (: ( [2785,2786]
+                    binary_expression [2786,2810]
+                        call_expression [2786,2799]
+                            identifier: fabs [2786,2790]
+                            argument_list [2790,2799]
+                                (: ( [2790,2791]
+                                field_expression [2791,2798]
+                                    identifier: P [2791,2792]
+                                    ->: -> [2792,2794]
+                                    field_identifier: phi0 [2794,2798]
+                                ): ) [2798,2799]
+                        -: - [2800,2801]
+                        identifier: M_HALFPI [2802,2810]
+                    ): ) [2810,2811]
+            <=: <= [2812,2814]
+            identifier: TOL [2815,2818]
+        ): ) [2819,2820]
+    compound_statement [2821,2909]
+        {: { [2821,2822]
+        return_statement [2836,2898]
+            return: return [2836,2842]
+            call_expression [2843,2897]
+                identifier: pj_default_destructor [2843,2864]
+                argument_list [2864,2897]
+                    (: ( [2864,2865]
+                    identifier: P [2865,2866]
+                    ,: , [2866,2867]
+                    identifier: PJD_ERR_LAT_0_OR_ALPHA_EQ_90 [2868,2896]
+                    ): ) [2896,2897]
+            ;: ; [2897,2898]
+        }: } [2908,2909]
+to
+compound_statement [2557,2867]
+at 2
+

@@ -1,0 +1,102 @@
+New cluster:
+MOVE from ERROR [793,2488]
+------------
+===
+move-tree
+---
+call_expression [1634,1738]
+    identifier: log [1634,1637]
+    argument_list [1637,1738]
+        (: ( [1637,1638]
+        field_expression [1638,1648]
+            identifier: line [1638,1642]
+            .: . [1642,1643]
+            field_identifier: first [1643,1648]
+        ,: , [1648,1649]
+        field_expression [1650,1661]
+            identifier: line [1650,1654]
+            .: . [1654,1655]
+            field_identifier: second [1655,1661]
+        ,: , [1661,1662]
+        binary_expression [1678,1737]
+            binary_expression [1678,1730]
+                string_literal [1678,1718]
+                    ": " [1678,1679]
+                    string_content: Ignore operator cannot be applied to ' [1679,1717]
+                    ": " [1717,1718]
+                +: + [1719,1720]
+                field_expression [1721,1730]
+                    identifier: rule [1721,1725]
+                    .: . [1725,1726]
+                    field_identifier: name [1726,1730]
+            +: + [1731,1732]
+            string_literal [1733,1737]
+                ": " [1733,1734]
+                string_content: '. [1734,1736]
+                ": " [1736,1737]
+        ): ) [1737,1738]
+to
+ERROR [793,2488]
+at 26
+
+New cluster:
+===
+insert-node
+---
+;: ; [1738,1739]
+to
+ERROR [793,2488]
+at 27
+------------
+===
+insert-node
+---
+;: ; [1738,1739]
+to
+ERROR [793,2488]
+at 27
+
+New cluster:
+===
+insert-node
+---
+}: } [1749,1750]
+to
+ERROR [793,2488]
+at 28
+------------
+===
+insert-node
+---
+}: } [1749,1750]
+to
+ERROR [793,2488]
+at 28
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+assignment_expression [1760,1771]
+    identifier: ret [1760,1763]
+    =: = [1764,1765]
+    false: false [1766,1771]
+to
+call_expression [1634,1783]
+at 0
+
+New cluster:
+===
+delete-node
+---
+}: } [1765,1766]
+===
+------------
+===
+delete-node
+---
+}: } [1765,1766]
+===
+

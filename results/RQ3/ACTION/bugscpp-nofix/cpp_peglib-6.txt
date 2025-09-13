@@ -1,0 +1,61 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ERROR [89,160]
+    for: for [89,92]
+    (: ( [93,94]
+    declaration [94,149]
+        storage_class_specifier [94,98]
+            auto: auto [94,98]
+        type_identifier: arg [99,102]
+        ERROR [102,135]
+            :: : [102,103]
+            identifier: ope [104,107]
+            .: . [107,108]
+            identifier: args_ [108,113]
+            ): ) [113,114]
+            {: { [115,116]
+            identifier: arg [130,133]
+            -: - [133,134]
+            >: > [134,135]
+        function_declarator [135,148]
+            identifier: accept [135,141]
+            parameter_list [141,148]
+                (: ( [141,142]
+                ERROR [142,143]
+                    *: * [142,143]
+                parameter_declaration [143,147]
+                    type_identifier: this [143,147]
+                ): ) [147,148]
+        ;: ; [148,149]
+    }: } [159,160]
+to
+compound_statement [78,121]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [89,114]
+    call_expression [89,113]
+        field_expression [89,106]
+            field_expression [89,98]
+                identifier: ope [89,92]
+                .: . [92,93]
+                field_identifier: rule_ [93,98]
+            ->: -> [98,100]
+            field_identifier: accept [100,106]
+        argument_list [106,113]
+            (: ( [106,107]
+            pointer_expression [107,112]
+                *: * [107,108]
+                identifier: this [108,112]
+            ): ) [112,113]
+    ;: ; [113,114]
+

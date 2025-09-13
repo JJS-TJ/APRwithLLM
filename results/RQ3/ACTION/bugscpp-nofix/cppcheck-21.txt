@@ -1,0 +1,39 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [272,345]
+    if: if [272,274]
+    parenthesized_expression [275,320]
+        (: ( [275,276]
+        binary_expression [276,319]
+            call_expression [276,314]
+                field_expression [276,287]
+                    identifier: str [276,279]
+                    .: . [279,280]
+                    field_identifier: compare [280,287]
+                argument_list [287,314]
+                    (: ( [287,288]
+                    number_literal: 0 [288,289]
+                    ,: , [289,290]
+                    number_literal: 16 [291,293]
+                    ,: , [293,294]
+                    string_literal [295,313]
+                        ": " [295,296]
+                        string_content: 'enum (anonymous [296,312]
+                        ": " [312,313]
+                    ): ) [313,314]
+            ==: == [315,317]
+            number_literal: 0 [318,319]
+        ): ) [319,320]
+    return_statement [330,345]
+        return: return [330,336]
+        null [337,344]
+            nullptr: nullptr [337,344]
+        ;: ; [344,345]
+to
+compound_statement [118,1255]
+at 2
+

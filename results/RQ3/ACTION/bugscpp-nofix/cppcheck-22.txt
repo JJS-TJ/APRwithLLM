@@ -1,0 +1,50 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [6681,6799]
+    if: if [6681,6683]
+    parenthesized_expression [6684,6774]
+        (: ( [6684,6685]
+        binary_expression [6685,6773]
+            call_expression [6685,6705]
+                identifier: astIsRhs [6685,6693]
+                argument_list [6693,6705]
+                    (: ( [6693,6694]
+                    identifier: derefValue [6694,6704]
+                    ): ) [6704,6705]
+            &&: && [6706,6708]
+            call_expression [6709,6773]
+                identifier: isLikelyStreamRead [6709,6727]
+                argument_list [6727,6773]
+                    (: ( [6727,6728]
+                    call_expression [6728,6747]
+                        field_expression [6728,6745]
+                            identifier: mTokenizer [6728,6738]
+                            ->: -> [6738,6740]
+                            field_identifier: isCPP [6740,6745]
+                        argument_list [6745,6747]
+                            (: ( [6745,6746]
+                            ): ) [6746,6747]
+                    ,: , [6747,6748]
+                    call_expression [6749,6772]
+                        field_expression [6749,6770]
+                            identifier: derefValue [6749,6759]
+                            ->: -> [6759,6761]
+                            field_identifier: astParent [6761,6770]
+                        argument_list [6770,6772]
+                            (: ( [6770,6771]
+                            ): ) [6771,6772]
+                    ): ) [6772,6773]
+        ): ) [6773,6774]
+    return_statement [6784,6799]
+        return: return [6784,6790]
+        null [6791,6798]
+            nullptr: nullptr [6791,6798]
+        ;: ; [6798,6799]
+to
+compound_statement [114,6951]
+at 32
+

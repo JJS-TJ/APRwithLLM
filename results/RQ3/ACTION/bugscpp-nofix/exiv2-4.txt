@@ -1,0 +1,135 @@
+New cluster:
+===
+insert-node
+---
+if_statement [315,489]
+to
+compound_statement [238,352]
+at 2
+------------
+===
+insert-node
+---
+}: } [488,489]
+to
+compound_statement [423,489]
+at 2
+===
+insert-node
+---
+else: else [418,422]
+to
+else_clause [418,489]
+at 0
+===
+insert-node
+---
+{: { [423,424]
+to
+compound_statement [423,489]
+at 0
+===
+insert-node
+---
+if: if [315,317]
+to
+if_statement [315,489]
+at 0
+===
+insert-node
+---
+compound_statement [423,489]
+to
+else_clause [418,489]
+at 1
+===
+insert-node
+---
+else_clause [418,489]
+to
+if_statement [315,489]
+at 3
+===
+insert-node
+---
+if_statement [315,489]
+to
+compound_statement [238,352]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+type_qualifier [253,258]
+    const: const [253,258]
+to
+declaration [253,295]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [318,360]
+    (: ( [318,319]
+    binary_expression [319,359]
+        identifier: focusArea [319,328]
+        >=: >= [329,331]
+        call_expression [332,359]
+            identifier: EXV_COUNTOF [332,343]
+            argument_list [343,359]
+                (: ( [343,344]
+                identifier: nikonFocusarea [344,358]
+                ): ) [358,359]
+    ): ) [359,360]
+to
+if_statement [315,489]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+compound_statement [361,417]
+    {: { [361,362]
+    expression_statement [380,402]
+        binary_expression [380,401]
+            identifier: os [380,382]
+            <<: << [383,385]
+            string_literal [386,401]
+                ": " [386,387]
+                string_content: Invalid value [387,400]
+                ": " [400,401]
+        ;: ; [401,402]
+    }: } [416,417]
+to
+if_statement [315,489]
+at 2
+
+New cluster:
+MOVE from compound_statement [423,489]
+------------
+===
+move-tree
+---
+expression_statement [309,341]
+    binary_expression [309,340]
+        identifier: os [309,311]
+        <<: << [312,314]
+        subscript_expression [315,340]
+            identifier: nikonFocusarea [315,329]
+            [: [ [329,330]
+            identifier: focusArea [330,339]
+            ]: ] [339,340]
+    ;: ; [340,341]
+to
+compound_statement [423,489]
+at 1
+

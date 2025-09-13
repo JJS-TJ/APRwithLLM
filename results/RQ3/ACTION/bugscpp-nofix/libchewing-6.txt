@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
++=: += [257,259]
+to
+assignment_expression [241,267]
+at 1
+------------
+===
+insert-node
+---
++=: += [257,259]
+to
+assignment_expression [241,267]
+at 1
+
+New cluster:
+===
+delete-node
+---
+=: = [257,258]
+===
+------------
+===
+delete-node
+---
+=: = [257,258]
+===
+

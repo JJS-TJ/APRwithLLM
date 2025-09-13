@@ -1,0 +1,537 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [1151,1222]
+    if: if [1151,1153]
+    parenthesized_expression [1154,1191]
+        (: ( [1154,1155]
+        ERROR [1155,1163]
+            unary_expression [1155,1161]
+                !: ! [1155,1156]
+                identifier: Token [1156,1161]
+            :: : [1161,1162]
+            :: : [1162,1163]
+        call_expression [1163,1190]
+            identifier: Match [1163,1168]
+            argument_list [1168,1190]
+                (: ( [1168,1169]
+                identifier: tok2 [1169,1173]
+                ,: , [1173,1174]
+                string_literal [1175,1189]
+                    ": " [1175,1176]
+                    string_content: return|(|{|, [1176,1188]
+                    ": " [1188,1189]
+                ): ) [1189,1190]
+        ): ) [1190,1191]
+    continue_statement [1213,1222]
+        continue: continue [1213,1221]
+        ;: ; [1221,1222]
+to
+compound_statement [1023,1443]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1242,1262]
+    assignment_expression [1242,1261]
+        identifier: tok2 [1242,1246]
+        =: = [1247,1248]
+        call_expression [1249,1261]
+            field_expression [1249,1259]
+                identifier: tok2 [1249,1253]
+                ->: -> [1253,1255]
+                field_identifier: next [1255,1259]
+            argument_list [1259,1261]
+                (: ( [1259,1260]
+                ): ) [1260,1261]
+    ;: ; [1261,1262]
+to
+compound_statement [1023,1443]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+while_statement [1280,1509]
+    while: while [1280,1285]
+    parenthesized_expression [1286,1416]
+        (: ( [1286,1287]
+        binary_expression [1287,1415]
+            binary_expression [1287,1309]
+                identifier: tok2 [1287,1291]
+                &&: && [1292,1294]
+                call_expression [1295,1309]
+                    field_expression [1295,1307]
+                        identifier: tok2 [1295,1299]
+                        ->: -> [1299,1301]
+                        field_identifier: isCast [1301,1307]
+                    argument_list [1307,1309]
+                        (: ( [1307,1308]
+                        ): ) [1308,1309]
+            &&: && [1310,1312]
+            parenthesized_expression [1313,1415]
+                (: ( [1313,1314]
+                binary_expression [1314,1414]
+                    field_expression [1314,1340]
+                        call_expression [1314,1331]
+                            field_expression [1314,1329]
+                                identifier: tok2 [1314,1318]
+                                ->: -> [1318,1320]
+                                field_identifier: valueType [1320,1329]
+                            argument_list [1329,1331]
+                                (: ( [1329,1330]
+                                ): ) [1330,1331]
+                        ->: -> [1331,1333]
+                        field_identifier: pointer [1333,1340]
+                    ||: || [1341,1343]
+                    parenthesized_expression [1344,1414]
+                        (: ( [1344,1345]
+                        binary_expression [1345,1413]
+                            call_expression [1345,1384]
+                                field_expression [1345,1372]
+                                    call_expression [1345,1362]
+                                        field_expression [1345,1360]
+                                            identifier: tok2 [1345,1349]
+                                            ->: -> [1349,1351]
+                                            field_identifier: valueType [1351,1360]
+                                        argument_list [1360,1362]
+                                            (: ( [1360,1361]
+                                            ): ) [1361,1362]
+                                    ->: -> [1362,1364]
+                                    field_identifier: typeSize [1364,1372]
+                                argument_list [1372,1384]
+                                    (: ( [1372,1373]
+                                    pointer_expression [1373,1383]
+                                        *: * [1373,1374]
+                                        identifier: mSettings [1374,1383]
+                                    ): ) [1383,1384]
+                            >=: >= [1385,1387]
+                            field_expression [1388,1413]
+                                identifier: mSettings [1388,1397]
+                                ->: -> [1397,1399]
+                                field_identifier: sizeof_pointer [1399,1413]
+                        ): ) [1413,1414]
+                ): ) [1414,1415]
+        ): ) [1415,1416]
+    expression_statement [1438,1509]
+        assignment_expression [1438,1508]
+            identifier: tok2 [1438,1442]
+            =: = [1443,1444]
+            conditional_expression [1445,1508]
+                call_expression [1445,1464]
+                    field_expression [1445,1462]
+                        identifier: tok2 [1445,1449]
+                        ->: -> [1449,1451]
+                        field_identifier: astOperand2 [1451,1462]
+                    argument_list [1462,1464]
+                        (: ( [1462,1463]
+                        ): ) [1463,1464]
+                ?: ? [1465,1466]
+                call_expression [1467,1486]
+                    field_expression [1467,1484]
+                        identifier: tok2 [1467,1471]
+                        ->: -> [1471,1473]
+                        field_identifier: astOperand2 [1473,1484]
+                    argument_list [1484,1486]
+                        (: ( [1484,1485]
+                        ): ) [1485,1486]
+                :: : [1487,1488]
+                call_expression [1489,1508]
+                    field_expression [1489,1506]
+                        identifier: tok2 [1489,1493]
+                        ->: -> [1493,1495]
+                        field_identifier: astOperand1 [1495,1506]
+                    argument_list [1506,1508]
+                        (: ( [1506,1507]
+                        ): ) [1507,1508]
+        ;: ; [1508,1509]
+to
+compound_statement [1023,1443]
+at 4
+
+New cluster:
+===
+insert-node
+---
+if_statement [1527,1782]
+to
+compound_statement [1023,1443]
+at 5
+------------
+===
+insert-node
+---
+(: ( [1530,1531]
+to
+parenthesized_expression [1530,1568]
+at 0
+===
+insert-node
+---
+): ) [1567,1568]
+to
+parenthesized_expression [1530,1568]
+at 3
+===
+insert-node
+---
+parenthesized_expression [1530,1568]
+to
+if_statement [1527,1782]
+at 1
+===
+insert-node
+---
+if: if [1527,1529]
+to
+if_statement [1527,1782]
+at 0
+===
+insert-node
+---
+if_statement [1527,1782]
+to
+compound_statement [1023,1443]
+at 5
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1590,1610]
+    assignment_expression [1590,1609]
+        identifier: tok2 [1590,1594]
+        =: = [1595,1596]
+        call_expression [1597,1609]
+            field_expression [1597,1607]
+                identifier: tok2 [1597,1601]
+                ->: -> [1601,1603]
+                field_identifier: next [1603,1607]
+            argument_list [1607,1609]
+                (: ( [1607,1608]
+                ): ) [1608,1609]
+    ;: ; [1609,1610]
+to
+if_statement [1527,1782]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+else_clause [1628,1782]
+    else: else [1628,1632]
+    if_statement [1633,1782]
+        if: if [1633,1635]
+        parenthesized_expression [1636,1685]
+            (: ( [1636,1637]
+            ERROR [1637,1644]
+                identifier: Token [1637,1642]
+                :: : [1642,1643]
+                :: : [1643,1644]
+            call_expression [1644,1684]
+                identifier: Match [1644,1649]
+                argument_list [1649,1684]
+                    (: ( [1649,1650]
+                    identifier: tok2 [1650,1654]
+                    ,: , [1654,1655]
+                    string_literal [1656,1676]
+                        ": " [1656,1657]
+                        string_content: & %varid% . %name% [1657,1675]
+                        ": " [1675,1676]
+                    ,: , [1676,1677]
+                    identifier: varid [1678,1683]
+                    ): ) [1683,1684]
+            ): ) [1684,1685]
+        expression_statement [1707,1729]
+            assignment_expression [1707,1728]
+                identifier: tok2 [1707,1711]
+                =: = [1712,1713]
+                call_expression [1714,1728]
+                    field_expression [1714,1725]
+                        identifier: tok2 [1714,1718]
+                        ->: -> [1718,1720]
+                        field_identifier: tokAt [1720,1725]
+                    argument_list [1725,1728]
+                        (: ( [1725,1726]
+                        number_literal: 4 [1726,1727]
+                        ): ) [1727,1728]
+            ;: ; [1728,1729]
+        else_clause [1747,1782]
+            else: else [1747,1751]
+            continue_statement [1773,1782]
+                continue: continue [1773,1781]
+                ;: ; [1781,1782]
+to
+if_statement [1527,1782]
+at 3
+
+New cluster:
+===
+insert-node
+---
+ERROR [1046,1075]
+to
+parenthesized_expression [1045,1065]
+at 1
+------------
+===
+insert-node
+---
+ERROR [1046,1075]
+to
+parenthesized_expression [1045,1065]
+at 1
+===
+insert-node
+---
+:: : [1074,1075]
+to
+ERROR [1046,1075]
+at 2
+===
+insert-node
+---
+||: || [1065,1067]
+to
+binary_expression [1046,1073]
+at 1
+===
+insert-node
+---
+identifier: Token [1068,1073]
+to
+binary_expression [1046,1073]
+at 2
+===
+insert-node
+---
+binary_expression [1046,1073]
+to
+ERROR [1046,1075]
+at 0
+===
+insert-node
+---
+:: : [1073,1074]
+to
+ERROR [1046,1075]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [1075,1104]
+    identifier: simpleMatch [1075,1086]
+    argument_list [1086,1104]
+        (: ( [1086,1087]
+        identifier: tok2 [1087,1091]
+        ,: , [1091,1092]
+        string_literal [1093,1103]
+            ": " [1093,1094]
+            string_content: return ; [1094,1102]
+            ": " [1102,1103]
+        ): ) [1103,1104]
+to
+parenthesized_expression [1045,1065]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [1530,1568]
+------------
+===
+move-tree
+---
+ERROR [1277,1284]
+    identifier: Token [1277,1282]
+    :: : [1282,1283]
+    :: : [1283,1284]
+to
+parenthesized_expression [1530,1568]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [1538,1567]
+    identifier: Match [1538,1543]
+    argument_list [1543,1567]
+        (: ( [1543,1544]
+        identifier: tok2 [1544,1548]
+        ,: , [1548,1549]
+        string_literal [1550,1559]
+            ": " [1550,1551]
+            string_content: %varid% [1551,1558]
+            ": " [1558,1559]
+        ,: , [1559,1560]
+        identifier: varid [1561,1566]
+        ): ) [1566,1567]
+to
+parenthesized_expression [1530,1568]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [1276,1345]
+------------
+===
+move-tree
+---
+ERROR [1115,1122]
+    identifier: Token [1115,1120]
+    :: : [1120,1121]
+    :: : [1121,1122]
+to
+parenthesized_expression [1276,1345]
+at 1
+
+New cluster:
+MOVE from binary_expression [1046,1073]
+------------
+===
+move-tree
+---
+binary_expression [1046,1064]
+    call_expression [1046,1057]
+        field_expression [1046,1055]
+            identifier: tok2 [1046,1050]
+            ->: -> [1050,1052]
+            field_identifier: str [1052,1055]
+        argument_list [1055,1057]
+            (: ( [1055,1056]
+            ): ) [1056,1057]
+    ==: == [1058,1060]
+    string_literal [1061,1064]
+        ": " [1061,1062]
+        string_content: ; [1062,1063]
+        ": " [1063,1064]
+to
+binary_expression [1046,1073]
+at 0
+
+New cluster:
+UPDATE from return|(|{|, & %varid% . %name% [});,] to [});,]
+------------
+===
+update-node
+---
+string_content: return|(|{|, & %varid% . %name% [});,] [1297,1335]
+replace return|(|{|, & %varid% . %name% [});,] by [});,]
+
+New cluster:
+===
+delete-node
+---
+if_statement [1111,1255]
+===
+------------
+===
+delete-node
+---
+if_statement [1111,1255]
+===
+===
+delete-node
+---
+): ) [1171,1172]
+===
+===
+delete-node
+---
+if: if [1111,1113]
+===
+===
+delete-node
+---
+(: ( [1114,1115]
+===
+===
+delete-node
+---
+parenthesized_expression [1114,1172]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call_expression [1122,1171]
+    identifier: Match [1122,1127]
+    argument_list [1127,1171]
+        (: ( [1127,1128]
+        identifier: tok2 [1128,1132]
+        ,: , [1132,1133]
+        string_literal [1134,1163]
+            ": " [1134,1135]
+            string_content: return|(|{|, %varid% [});,] [1135,1162]
+            ": " [1162,1163]
+        ,: , [1163,1164]
+        identifier: varid [1165,1170]
+        ): ) [1170,1171]
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+compound_statement [1173,1255]
+    {: { [1173,1174]
+    expression_statement [1196,1208]
+        assignment_expression [1196,1207]
+            identifier: used [1196,1200]
+            =: = [1201,1202]
+            true: true [1203,1207]
+        ;: ; [1207,1208]
+    break_statement [1230,1236]
+        break: break [1230,1235]
+        ;: ; [1235,1236]
+    }: } [1254,1255]
+
+New cluster:
+===
+delete-node
+---
+,: , [1336,1337]
+===
+------------
+===
+delete-node
+---
+,: , [1336,1337]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: varid [1338,1343]
+===
+------------
+===
+delete-node
+---
+identifier: varid [1338,1343]
+===
+

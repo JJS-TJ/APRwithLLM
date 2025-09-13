@@ -1,0 +1,580 @@
+New cluster:
+===
+insert-node
+---
+declaration [789,840]
+to
+compound_statement [597,1042]
+at 4
+------------
+===
+insert-node
+---
+type_identifier: Value [795,800]
+to
+declaration [789,840]
+at 1
+===
+insert-node
+---
+?: ? [818,819]
+to
+conditional_expression [807,839]
+at 1
+===
+insert-node
+---
+;: ; [839,840]
+to
+declaration [789,840]
+at 3
+===
+insert-node
+---
+=: = [805,806]
+to
+init_declarator [800,839]
+at 1
+===
+insert-node
+---
+:: : [833,834]
+to
+conditional_expression [807,839]
+at 3
+===
+insert-node
+---
+conditional_expression [807,839]
+to
+init_declarator [800,839]
+at 2
+===
+insert-node
+---
+init_declarator [800,839]
+to
+declaration [789,840]
+at 2
+===
+insert-node
+---
+declaration [789,840]
+to
+compound_statement [597,1042]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+type_qualifier [789,794]
+    const: const [789,794]
+to
+declaration [789,840]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+pointer_declarator [800,804]
+    *: * [800,801]
+    identifier: pV [802,804]
+to
+init_declarator [800,839]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [807,817]
+    identifier: te [807,809]
+    !=: != [810,812]
+    null [813,817]
+        NULL: NULL [813,817]
+to
+conditional_expression [807,839]
+at 0
+
+New cluster:
+MOVE from conditional_expression [807,839]
+------------
+===
+move-tree
+---
+call_expression [878,890]
+    field_expression [878,888]
+        identifier: te [878,880]
+        ->: -> [880,882]
+        field_identifier: pValue [882,888]
+    argument_list [888,890]
+        (: ( [888,889]
+        ): ) [889,890]
+to
+conditional_expression [807,839]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+null [835,839]
+    NULL: NULL [835,839]
+to
+conditional_expression [807,839]
+at 4
+
+New cluster:
+===
+insert-node
+---
+binary_expression [858,912]
+to
+binary_expression [796,958]
+at 0
+------------
+===
+insert-node
+---
+number_literal: 1 [911,912]
+to
+binary_expression [896,912]
+at 2
+===
+insert-node
+---
+identifier: pV [858,860]
+to
+binary_expression [858,892]
+at 0
+===
+insert-node
+---
+identifier: unsignedLong [880,892]
+to
+binary_expression [864,892]
+at 2
+===
+insert-node
+---
+binary_expression [896,912]
+to
+binary_expression [858,912]
+at 2
+===
+insert-node
+---
+call_expression [864,876]
+to
+binary_expression [864,892]
+at 0
+===
+insert-node
+---
+&&: && [893,895]
+to
+binary_expression [858,912]
+at 1
+===
+insert-node
+---
+&&: && [861,863]
+to
+binary_expression [858,892]
+at 1
+===
+insert-node
+---
+==: == [877,879]
+to
+binary_expression [864,892]
+at 1
+===
+insert-node
+---
+binary_expression [858,892]
+to
+binary_expression [858,912]
+at 0
+===
+insert-node
+---
+==: == [908,910]
+to
+binary_expression [896,912]
+at 1
+===
+insert-node
+---
+binary_expression [858,912]
+to
+binary_expression [796,958]
+at 0
+===
+insert-node
+---
+call_expression [896,907]
+to
+binary_expression [896,912]
+at 0
+===
+insert-node
+---
+binary_expression [864,892]
+to
+binary_expression [858,892]
+at 2
+
+New cluster:
+===
+insert-node
+---
+binary_expression [916,939]
+to
+binary_expression [796,958]
+at 3
+------------
+===
+insert-node
+---
+(: ( [916,917]
+to
+parenthesized_expression [916,934]
+at 0
+===
+insert-node
+---
+): ) [933,934]
+to
+parenthesized_expression [916,934]
+at 2
+===
+insert-node
+---
+number_literal: 1 [932,933]
+to
+binary_expression [917,933]
+at 2
+===
+insert-node
+---
+binary_expression [917,933]
+to
+parenthesized_expression [916,934]
+at 1
+===
+insert-node
+---
+==: == [935,937]
+to
+binary_expression [916,939]
+at 1
+===
+insert-node
+---
+&: & [930,931]
+to
+binary_expression [917,933]
+at 1
+===
+insert-node
+---
+number_literal: 0 [938,939]
+to
+binary_expression [916,939]
+at 2
+===
+insert-node
+---
+call_expression [917,929]
+to
+binary_expression [917,933]
+at 0
+===
+insert-node
+---
+parenthesized_expression [916,934]
+to
+binary_expression [916,939]
+at 0
+===
+insert-node
+---
+binary_expression [916,939]
+to
+binary_expression [796,958]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+field_expression [896,905]
+    identifier: pV [896,898]
+    ->: -> [898,900]
+    field_identifier: count [900,905]
+to
+call_expression [896,907]
+at 0
+
+New cluster:
+MOVE from call_expression [896,907]
+------------
+===
+move-tree
+---
+argument_list [897,899]
+    (: ( [897,898]
+    ): ) [898,899]
+to
+call_expression [896,907]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+field_expression [864,874]
+    identifier: pV [864,866]
+    ->: -> [866,868]
+    field_identifier: typeId [868,874]
+to
+call_expression [864,876]
+at 0
+
+New cluster:
+MOVE from call_expression [864,876]
+------------
+===
+move-tree
+---
+argument_list [839,841]
+    (: ( [839,840]
+    ): ) [840,841]
+to
+call_expression [864,876]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+field_expression [917,927]
+    identifier: pV [917,919]
+    ->: -> [919,921]
+    field_identifier: toLong [921,927]
+to
+call_expression [917,929]
+at 0
+
+New cluster:
+MOVE from call_expression [917,929]
+------------
+===
+move-tree
+---
+argument_list [946,948]
+    (: ( [946,947]
+    ): ) [947,948]
+to
+call_expression [917,929]
+at 1
+
+New cluster:
+===
+delete-node
+---
+binary_expression [796,904]
+===
+------------
+===
+delete-node
+---
+identifier: unsignedLong [845,857]
+===
+===
+delete-node
+---
+&&: && [816,818]
+===
+===
+delete-node
+---
+binary_expression [819,857]
+===
+===
+delete-node
+---
+call_expression [878,899]
+===
+===
+delete-node
+---
+==: == [900,902]
+===
+===
+delete-node
+---
+&&: && [875,877]
+===
+===
+delete-node
+---
+==: == [842,844]
+===
+===
+delete-node
+---
+identifier: te [796,798]
+===
+===
+delete-node
+---
+number_literal: 1 [903,904]
+===
+===
+delete-node
+---
+binary_expression [878,904]
+===
+===
+delete-node
+---
+field_expression [878,897]
+===
+===
+delete-node
+---
+binary_expression [796,857]
+===
+===
+delete-node
+---
+call_expression [819,841]
+===
+===
+delete-node
+---
+field_identifier: count [892,897]
+===
+===
+delete-node
+---
+binary_expression [796,904]
+===
+===
+delete-node
+---
+->: -> [890,892]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+field_expression [819,839]
+    call_expression [819,831]
+        field_expression [819,829]
+            identifier: te [819,821]
+            ->: -> [821,823]
+            field_identifier: pValue [823,829]
+        argument_list [829,831]
+            (: ( [829,830]
+            ): ) [830,831]
+    ->: -> [831,833]
+    field_identifier: typeId [833,839]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [925,958]
+===
+------------
+===
+delete-node
+---
+binary_expression [925,958]
+===
+===
+delete-node
+---
+number_literal: 1 [951,952]
+===
+===
+delete-node
+---
+number_literal: 0 [957,958]
+===
+===
+delete-node
+---
+==: == [954,956]
+===
+===
+delete-node
+---
+call_expression [926,948]
+===
+===
+delete-node
+---
+): ) [952,953]
+===
+===
+delete-node
+---
+&: & [949,950]
+===
+===
+delete-node
+---
+(: ( [925,926]
+===
+===
+delete-node
+---
+binary_expression [926,952]
+===
+===
+delete-node
+---
+parenthesized_expression [925,953]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+field_expression [926,946]
+    call_expression [926,938]
+        field_expression [926,936]
+            identifier: te [926,928]
+            ->: -> [928,930]
+            field_identifier: pValue [930,936]
+        argument_list [936,938]
+            (: ( [936,937]
+            ): ) [937,938]
+    ->: -> [938,940]
+    field_identifier: toLong [940,946]
+

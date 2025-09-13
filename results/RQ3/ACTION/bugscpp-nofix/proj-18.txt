@@ -1,0 +1,43 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [175,287]
+    if: if [175,177]
+    parenthesized_expression [177,187]
+        (: ( [177,178]
+        binary_expression [179,185]
+            identifier: h [179,180]
+            ==: == [181,183]
+            number_literal: 0 [184,185]
+        ): ) [186,187]
+    compound_statement [188,287]
+        {: { [188,189]
+        expression_statement [199,241]
+            call_expression [199,240]
+                identifier: proj_errno_set [199,213]
+                argument_list [213,240]
+                    (: ( [213,214]
+                    identifier: P [214,215]
+                    ,: , [215,216]
+                    identifier: PJD_ERR_INVALID_X_OR_Y [217,239]
+                    ): ) [239,240]
+            ;: ; [240,241]
+        return_statement [251,280]
+            return: return [251,257]
+            field_expression [258,279]
+                call_expression [258,276]
+                    identifier: proj_coord_error [258,274]
+                    argument_list [274,276]
+                        (: ( [274,275]
+                        ): ) [275,276]
+                .: . [276,277]
+                field_identifier: lp [277,279]
+            ;: ; [279,280]
+        }: } [286,287]
+to
+compound_statement [44,570]
+at 4
+

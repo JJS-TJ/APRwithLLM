@@ -1,0 +1,132 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ERROR [1298,1312]
+    binary_expression [1298,1310]
+        identifier: cpp [1298,1301]
+        &&: && [1302,1304]
+        identifier: Token [1305,1310]
+    :: : [1310,1311]
+    :: : [1311,1312]
+to
+parenthesized_expression [1297,1339]
+at 1
+
+New cluster:
+===
+insert-node
+---
+binary_expression [1312,1438]
+to
+parenthesized_expression [1297,1339]
+at 2
+------------
+===
+insert-node
+---
+binary_expression [1312,1438]
+to
+parenthesized_expression [1297,1339]
+at 2
+===
+insert-node
+---
+&&: && [1393,1395]
+to
+binary_expression [1312,1438]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1312,1392]
+    call_expression [1312,1348]
+        identifier: simpleMatch [1312,1323]
+        argument_list [1323,1348]
+            (: ( [1323,1324]
+            call_expression [1324,1341]
+                field_expression [1324,1339]
+                    identifier: tok2 [1324,1328]
+                    ->: -> [1328,1330]
+                    field_identifier: astParent [1330,1339]
+                argument_list [1339,1341]
+                    (: ( [1339,1340]
+                    ): ) [1340,1341]
+            ,: , [1341,1342]
+            string_literal [1343,1347]
+                ": " [1343,1344]
+                string_content: >> [1344,1346]
+                ": " [1346,1347]
+            ): ) [1347,1348]
+    &&: && [1349,1351]
+    binary_expression [1352,1392]
+        call_expression [1352,1384]
+            field_expression [1352,1382]
+                call_expression [1352,1369]
+                    field_expression [1352,1367]
+                        identifier: tok2 [1352,1356]
+                        ->: -> [1356,1358]
+                        field_identifier: astParent [1358,1367]
+                    argument_list [1367,1369]
+                        (: ( [1367,1368]
+                        ): ) [1368,1369]
+                ->: -> [1369,1371]
+                field_identifier: astOperand2 [1371,1382]
+            argument_list [1382,1384]
+                (: ( [1382,1383]
+                ): ) [1383,1384]
+        ==: == [1385,1387]
+        identifier: tok2 [1388,1392]
+to
+binary_expression [1312,1438]
+at 0
+
+New cluster:
+MOVE from binary_expression [1312,1438]
+------------
+===
+move-tree
+---
+call_expression [1298,1338]
+    identifier: isLikelyStreamRead [1298,1316]
+    argument_list [1316,1338]
+        (: ( [1316,1317]
+        identifier: cpp [1317,1320]
+        ,: , [1320,1321]
+        call_expression [1322,1337]
+            field_expression [1322,1335]
+                identifier: tok [1322,1325]
+                ->: -> [1325,1327]
+                field_identifier: previous [1327,1335]
+            argument_list [1335,1337]
+                (: ( [1335,1336]
+                ): ) [1336,1337]
+        ): ) [1337,1338]
+to
+binary_expression [1312,1438]
+at 2
+
+New cluster:
+UPDATE from tok to tok2
+------------
+===
+update-node
+---
+identifier: tok [1322,1325]
+replace tok by tok2
+
+New cluster:
+UPDATE from previous to astParent
+------------
+===
+update-node
+---
+field_identifier: previous [1327,1335]
+replace previous by astParent
+

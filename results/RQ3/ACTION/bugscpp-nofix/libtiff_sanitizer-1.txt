@@ -1,0 +1,40 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [234,380]
+    if: if [234,236]
+    parenthesized_expression [236,247]
+        (: ( [236,237]
+        binary_expression [238,245]
+            identifier: es [238,240]
+            <=: <= [241,243]
+            number_literal: 0 [244,245]
+        ): ) [246,247]
+    compound_statement [262,380]
+        {: { [262,263]
+        expression_statement [282,338]
+            call_expression [282,337]
+                identifier: TIFFError [282,291]
+                argument_list [291,337]
+                    (: ( [291,292]
+                    identifier: filename [292,300]
+                    ,: , [300,301]
+                    string_literal [302,332]
+                        ": " [302,303]
+                        string_content: Inconsistent value of es: %d [303,331]
+                        ": " [331,332]
+                    ,: , [332,333]
+                    identifier: es [334,336]
+                    ): ) [336,337]
+            ;: ; [337,338]
+        return_statement [357,364]
+            return: return [357,363]
+            ;: ; [363,364]
+        }: } [379,380]
+to
+compound_statement [74,1565]
+at 7
+

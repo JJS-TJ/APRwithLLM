@@ -1,0 +1,142 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [1255,1430]
+to
+parenthesized_expression [1254,1356]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [1255,1384]
+to
+binary_expression [1255,1430]
+at 0
+===
+insert-node
+---
+||: || [1356,1358]
+to
+binary_expression [1255,1384]
+at 1
+===
+insert-node
+---
+||: || [1385,1387]
+to
+binary_expression [1255,1430]
+at 1
+===
+insert-node
+---
+binary_expression [1255,1430]
+to
+parenthesized_expression [1254,1356]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1405,1430]
+    subscript_expression [1405,1423]
+        field_expression [1405,1420]
+            identifier: packet [1405,1411]
+            ->: -> [1411,1413]
+            field_identifier: payload [1413,1420]
+        [: [ [1420,1421]
+        identifier: i [1421,1422]
+        ]: ] [1422,1423]
+    ==: == [1424,1426]
+    char_literal [1427,1430]
+        ': ' [1427,1428]
+        character: - [1428,1429]
+        ': ' [1429,1430]
+to
+binary_expression [1255,1430]
+at 2
+
+New cluster:
+MOVE from binary_expression [1255,1384]
+------------
+===
+move-tree
+---
+binary_expression [1255,1355]
+    binary_expression [1255,1309]
+        binary_expression [1255,1280]
+            subscript_expression [1255,1273]
+                field_expression [1255,1270]
+                    identifier: packet [1255,1261]
+                    ->: -> [1261,1263]
+                    field_identifier: payload [1263,1270]
+                [: [ [1270,1271]
+                identifier: i [1271,1272]
+                ]: ] [1272,1273]
+            ==: == [1274,1276]
+            char_literal [1277,1280]
+                ': ' [1277,1278]
+                character:   [1278,1279]
+                ': ' [1279,1280]
+        ||: || [1281,1283]
+        binary_expression [1284,1309]
+            subscript_expression [1284,1302]
+                field_expression [1284,1299]
+                    identifier: packet [1284,1290]
+                    ->: -> [1290,1292]
+                    field_identifier: payload [1292,1299]
+                [: [ [1299,1300]
+                identifier: i [1300,1301]
+                ]: ] [1301,1302]
+            ==: == [1303,1305]
+            char_literal [1306,1309]
+                ': ' [1306,1307]
+                character: : [1307,1308]
+                ': ' [1308,1309]
+    ||: || [1310,1312]
+    binary_expression [1330,1355]
+        subscript_expression [1330,1348]
+            field_expression [1330,1345]
+                identifier: packet [1330,1336]
+                ->: -> [1336,1338]
+                field_identifier: payload [1338,1345]
+            [: [ [1345,1346]
+            identifier: i [1346,1347]
+            ]: ] [1347,1348]
+        ==: == [1349,1351]
+        char_literal [1352,1355]
+            ': ' [1352,1353]
+            character: = [1353,1354]
+            ': ' [1354,1355]
+to
+binary_expression [1255,1384]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1359,1384]
+    subscript_expression [1359,1377]
+        field_expression [1359,1374]
+            identifier: packet [1359,1365]
+            ->: -> [1365,1367]
+            field_identifier: payload [1367,1374]
+        [: [ [1374,1375]
+        identifier: i [1375,1376]
+        ]: ] [1376,1377]
+    ==: == [1378,1380]
+    char_literal [1381,1384]
+        ': ' [1381,1382]
+        character: [ [1382,1383]
+        ': ' [1383,1384]
+to
+binary_expression [1255,1384]
+at 2
+

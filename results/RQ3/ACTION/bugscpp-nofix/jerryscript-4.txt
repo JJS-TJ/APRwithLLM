@@ -1,0 +1,46 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [2380,2486]
+    if: if [2380,2382]
+    parenthesized_expression [2383,2421]
+        (: ( [2383,2384]
+        binary_expression [2384,2420]
+            field_expression [2384,2414]
+                field_expression [2384,2407]
+                    field_expression [2384,2401]
+                        identifier: ext_from_obj_p [2384,2398]
+                        ->: -> [2398,2400]
+                        field_identifier: u [2400,2401]
+                    .: . [2401,2402]
+                    field_identifier: array [2402,2407]
+                .: . [2407,2408]
+                field_identifier: length [2408,2414]
+            <: < [2415,2416]
+            identifier: end [2417,2420]
+        ): ) [2420,2421]
+    compound_statement [2429,2486]
+        {: { [2429,2430]
+        expression_statement [2440,2477]
+            assignment_expression [2440,2476]
+                identifier: end [2440,2443]
+                =: = [2444,2445]
+                field_expression [2446,2476]
+                    field_expression [2446,2469]
+                        field_expression [2446,2463]
+                            identifier: ext_from_obj_p [2446,2460]
+                            ->: -> [2460,2462]
+                            field_identifier: u [2462,2463]
+                        .: . [2463,2464]
+                        field_identifier: array [2464,2469]
+                    .: . [2469,2470]
+                    field_identifier: length [2470,2476]
+            ;: ; [2476,2477]
+        }: } [2485,2486]
+to
+compound_statement [1852,3869]
+at 3
+

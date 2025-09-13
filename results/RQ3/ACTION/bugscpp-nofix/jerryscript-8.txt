@@ -1,0 +1,1001 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [260,327]
+    if: if [260,262]
+    parenthesized_expression [263,295]
+        (: ( [263,264]
+        call_expression [264,294]
+            identifier: ECMA_IS_VALUE_ERROR [264,283]
+            argument_list [284,294]
+                (: ( [284,285]
+                identifier: base_obj [285,293]
+                ): ) [293,294]
+        ): ) [294,295]
+    compound_statement [299,327]
+        {: { [299,300]
+        return_statement [306,322]
+            return: return [306,312]
+            identifier: base_obj [313,321]
+            ;: ; [321,322]
+        }: } [326,327]
+to
+compound_statement [200,1476]
+at 2
+
+New cluster:
+===
+insert-node
+---
+declaration [334,395]
+to
+compound_statement [200,1476]
+at 3
+------------
+===
+insert-node
+---
+declaration [334,395]
+to
+compound_statement [200,1476]
+at 3
+===
+insert-node
+---
+type_identifier: ecma_object_t [334,347]
+to
+declaration [334,395]
+at 0
+===
+insert-node
+---
+=: = [355,356]
+to
+init_declarator [348,394]
+at 1
+===
+insert-node
+---
+;: ; [394,395]
+to
+declaration [334,395]
+at 2
+===
+insert-node
+---
+init_declarator [348,394]
+to
+declaration [334,395]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+declaration [615,635]
+    type_identifier: ecma_value_t [615,627]
+    identifier: result [628,634]
+    ;: ; [634,635]
+to
+compound_statement [200,1476]
+at 7
+
+New cluster:
+===
+insert-node
+---
+if_statement [643,1730]
+to
+compound_statement [200,1476]
+at 8
+------------
+===
+insert-node
+---
+if: if [643,645]
+to
+if_statement [643,1730]
+at 0
+===
+insert-node
+---
+else_clause [796,1730]
+to
+if_statement [643,1730]
+at 3
+===
+insert-node
+---
+else: else [796,800]
+to
+else_clause [796,1730]
+at 0
+===
+insert-node
+---
+if_statement [643,1730]
+to
+compound_statement [200,1476]
+at 8
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1736,1762]
+    call_expression [1736,1761]
+        identifier: ecma_deref_object [1736,1753]
+        argument_list [1754,1761]
+            (: ( [1754,1755]
+            identifier: obj_p [1755,1760]
+            ): ) [1760,1761]
+    ;: ; [1761,1762]
+to
+compound_statement [200,1476]
+at 9
+
+New cluster:
+UPDATE from ecma_object_t to ecma_value_t
+------------
+===
+update-node
+---
+type_identifier: ecma_object_t [205,218]
+replace ecma_object_t by ecma_value_t
+
+New cluster:
+MOVE from if_statement [643,1730]
+------------
+===
+move-tree
+---
+parenthesized_expression [491,507]
+    (: ( [491,492]
+    binary_expression [492,506]
+        identifier: prop_p [492,498]
+        ==: == [499,501]
+        null [502,506]
+            NULL: NULL [502,506]
+    ): ) [506,507]
+to
+if_statement [643,1730]
+at 1
+===
+move-tree
+---
+compound_statement [511,635]
+    {: { [511,512]
+    return_statement [518,630]
+        return: return [518,524]
+        call_expression [525,629]
+            identifier: ecma_raise_type_error [525,546]
+            argument_list [547,629]
+                (: ( [547,548]
+                identifier: ECMA_ERR_CANNOT_WRITE_PRIVATE_MEMBER_TO_AN_OBJECT_WHOSE_CLASS_DID_NOT_DECLARE_IT [548,628]
+                ): ) [628,629]
+        ;: ; [629,630]
+    }: } [634,635]
+to
+if_statement [643,1730]
+at 2
+
+New cluster:
+===
+insert-node
+---
+identifier: result [1775,1781]
+to
+return_statement [1416,1473]
+at 1
+------------
+===
+insert-node
+---
+identifier: result [1775,1781]
+to
+return_statement [1416,1473]
+at 1
+
+New cluster:
+===
+insert-node
+---
+identifier: base_obj [218,226]
+to
+init_declarator [219,261]
+at 0
+------------
+===
+insert-node
+---
+identifier: base_obj [218,226]
+to
+init_declarator [219,261]
+at 0
+
+New cluster:
+MOVE from init_declarator [348,394]
+------------
+===
+move-tree
+---
+pointer_declarator [219,225]
+    *: * [219,220]
+    identifier: obj_p [220,225]
+to
+init_declarator [348,394]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call_expression [357,394]
+    identifier: ecma_get_object_from_value [357,383]
+    argument_list [384,394]
+        (: ( [384,385]
+        identifier: base_obj [385,393]
+        ): ) [393,394]
+to
+init_declarator [348,394]
+at 2
+
+New cluster:
+===
+insert-node
+---
+expression_statement [673,787]
+to
+compound_statement [511,635]
+at 1
+------------
+===
+insert-node
+---
+expression_statement [673,787]
+to
+compound_statement [511,635]
+at 1
+===
+insert-node
+---
+=: = [680,681]
+to
+assignment_expression [673,786]
+at 1
+===
+insert-node
+---
+assignment_expression [673,786]
+to
+expression_statement [673,787]
+at 0
+===
+insert-node
+---
+;: ; [786,787]
+to
+expression_statement [673,787]
+at 1
+===
+insert-node
+---
+identifier: result [673,679]
+to
+assignment_expression [673,786]
+at 0
+
+New cluster:
+MOVE from compound_statement [1242,1730]
+------------
+===
+move-tree
+---
+declaration [1040,1156]
+    type_identifier: ecma_getter_setter_pointers_t [1040,1069]
+    init_declarator [1070,1155]
+        pointer_declarator [1070,1085]
+            *: * [1070,1071]
+            identifier: get_set_pair_p [1071,1085]
+        =: = [1086,1087]
+        call_expression [1088,1155]
+            identifier: ecma_get_named_accessor_property [1088,1120]
+            argument_list [1121,1155]
+                (: ( [1121,1122]
+                call_expression [1122,1154]
+                    identifier: ECMA_PROPERTY_VALUE_PTR [1122,1145]
+                    argument_list [1146,1154]
+                        (: ( [1146,1147]
+                        identifier: prop_p [1147,1153]
+                        ): ) [1153,1154]
+                ): ) [1154,1155]
+    ;: ; [1155,1156]
+to
+compound_statement [1242,1730]
+at 1
+===
+move-tree
+---
+if_statement [1164,1309]
+    if: if [1164,1166]
+    parenthesized_expression [1167,1210]
+        (: ( [1167,1168]
+        binary_expression [1168,1209]
+            field_expression [1168,1193]
+                identifier: get_set_pair_p [1168,1182]
+                ->: -> [1182,1184]
+                field_identifier: setter_cp [1184,1193]
+            ==: == [1194,1196]
+            identifier: JMEM_CP_NULL [1197,1209]
+        ): ) [1209,1210]
+    compound_statement [1214,1309]
+        {: { [1214,1215]
+        return_statement [1221,1304]
+            return: return [1221,1227]
+            call_expression [1228,1303]
+                identifier: ecma_raise_type_error [1228,1249]
+                argument_list [1250,1303]
+                    (: ( [1250,1251]
+                    identifier: ECMA_ERR_PRIVATE_FIELD_WAS_DEFINED_WITHOUT_A_SETTER [1251,1302]
+                    ): ) [1302,1303]
+            ;: ; [1303,1304]
+        }: } [1308,1309]
+to
+compound_statement [1242,1730]
+at 2
+===
+move-tree
+---
+declaration [1315,1410]
+    type_identifier: ecma_object_t [1315,1328]
+    init_declarator [1329,1409]
+        pointer_declarator [1329,1338]
+            *: * [1329,1330]
+            identifier: setter_p [1330,1338]
+        =: = [1339,1340]
+        call_expression [1341,1409]
+            identifier: ECMA_GET_NON_NULL_POINTER [1341,1366]
+            argument_list [1367,1409]
+                (: ( [1367,1368]
+                identifier: ecma_object_t [1368,1381]
+                ,: , [1381,1382]
+                field_expression [1383,1408]
+                    identifier: get_set_pair_p [1383,1397]
+                    ->: -> [1397,1399]
+                    field_identifier: setter_cp [1399,1408]
+                ): ) [1408,1409]
+    ;: ; [1409,1410]
+to
+compound_statement [1544,1725]
+at 1
+===
+move-tree
+---
+if_statement [639,1036]
+    if: if [639,641]
+    parenthesized_expression [642,677]
+        (: ( [642,643]
+        binary_expression [643,676]
+            pointer_expression [643,650]
+                *: * [643,644]
+                identifier: prop_p [644,650]
+            &: & [651,652]
+            identifier: ECMA_PROPERTY_FLAG_DATA [653,676]
+        ): ) [676,677]
+    compound_statement [681,1036]
+        {: { [681,682]
+        expression_statement [688,744]
+            call_expression [688,743]
+                identifier: JERRY_ASSERT [688,700]
+                argument_list [701,743]
+                    (: ( [701,702]
+                    call_expression [702,742]
+                        identifier: ecma_prop_name_is_symbol [702,726]
+                        argument_list [727,742]
+                            (: ( [727,728]
+                            identifier: private_key_p [728,741]
+                            ): ) [741,742]
+                    ): ) [742,743]
+            ;: ; [743,744]
+        if_statement [752,914]
+            if: if [752,754]
+            parenthesized_expression [755,821]
+                (: ( [755,756]
+                binary_expression [756,820]
+                    field_expression [756,777]
+                        field_expression [756,772]
+                            identifier: private_key_p [756,769]
+                            ->: -> [769,771]
+                            field_identifier: u [771,772]
+                        .: . [772,773]
+                        field_identifier: hash [773,777]
+                    &: & [778,779]
+                    identifier: ECMA_SYMBOL_FLAG_PRIVATE_INSTANCE_METHOD [780,820]
+                ): ) [820,821]
+            compound_statement [827,914]
+                {: { [827,828]
+                return_statement [836,907]
+                    return: return [836,842]
+                    call_expression [843,906]
+                        identifier: ecma_raise_type_error [843,864]
+                        argument_list [865,906]
+                            (: ( [865,866]
+                            identifier: ECMA_ERR_PRIVATE_METHOD_IS_NOT_WRITABLE [866,905]
+                            ): ) [905,906]
+                    ;: ; [906,907]
+                }: } [913,914]
+        expression_statement [920,994]
+            call_expression [920,993]
+                identifier: ecma_value_assign_value [920,943]
+                argument_list [944,993]
+                    (: ( [944,945]
+                    pointer_expression [945,985]
+                        &: & [945,946]
+                        field_expression [946,985]
+                            call_expression [946,978]
+                                identifier: ECMA_PROPERTY_VALUE_PTR [946,969]
+                                argument_list [970,978]
+                                    (: ( [970,971]
+                                    identifier: prop_p [971,977]
+                                    ): ) [977,978]
+                            ->: -> [978,980]
+                            field_identifier: value [980,985]
+                    ,: , [985,986]
+                    identifier: value [987,992]
+                    ): ) [992,993]
+            ;: ; [993,994]
+        return_statement [1000,1031]
+            return: return [1000,1006]
+            call_expression [1007,1030]
+                identifier: ecma_copy_value [1007,1022]
+                argument_list [1023,1030]
+                    (: ( [1023,1024]
+                    identifier: value [1024,1029]
+                    ): ) [1029,1030]
+            ;: ; [1030,1031]
+        }: } [1035,1036]
+to
+else_clause [796,1730]
+at 1
+
+New cluster:
+UPDATE from ecma_get_object_from_value to ecma_op_to_object
+------------
+===
+update-node
+---
+identifier: ecma_get_object_from_value [228,254]
+replace ecma_get_object_from_value by ecma_op_to_object
+
+New cluster:
+===
+insert-node
+---
+else_clause [1234,1730]
+to
+if_statement [639,1036]
+at 3
+------------
+===
+insert-node
+---
+}: } [1729,1730]
+to
+compound_statement [1242,1730]
+at 3
+===
+insert-node
+---
+compound_statement [1242,1730]
+to
+else_clause [1234,1730]
+at 1
+===
+insert-node
+---
+{: { [1242,1243]
+to
+compound_statement [1242,1730]
+at 0
+===
+insert-node
+---
+else_clause [1234,1730]
+to
+if_statement [639,1036]
+at 3
+===
+insert-node
+---
+else: else [1234,1238]
+to
+else_clause [1234,1730]
+at 0
+
+New cluster:
+MOVE from assignment_expression [673,786]
+------------
+===
+move-tree
+---
+call_expression [525,629]
+    identifier: ecma_raise_type_error [525,546]
+    argument_list [547,629]
+        (: ( [547,548]
+        identifier: ECMA_ERR_CANNOT_WRITE_PRIVATE_MEMBER_TO_AN_OBJECT_WHOSE_CLASS_DID_NOT_DECLARE_IT [548,628]
+        ): ) [628,629]
+to
+assignment_expression [673,786]
+at 2
+
+New cluster:
+===
+insert-node
+---
+else_clause [1084,1225]
+to
+if_statement [752,914]
+at 3
+------------
+===
+insert-node
+---
+else: else [1084,1088]
+to
+else_clause [1084,1225]
+at 0
+===
+insert-node
+---
+identifier: result [1185,1191]
+to
+assignment_expression [1185,1217]
+at 0
+===
+insert-node
+---
+{: { [1094,1095]
+to
+compound_statement [1094,1225]
+at 0
+===
+insert-node
+---
+}: } [1224,1225]
+to
+compound_statement [1094,1225]
+at 3
+===
+insert-node
+---
+compound_statement [1094,1225]
+to
+else_clause [1084,1225]
+at 1
+===
+insert-node
+---
+=: = [1192,1193]
+to
+assignment_expression [1185,1217]
+at 1
+===
+insert-node
+---
+expression_statement [1185,1218]
+to
+compound_statement [1094,1225]
+at 2
+===
+insert-node
+---
+;: ; [1217,1218]
+to
+expression_statement [1185,1218]
+at 1
+===
+insert-node
+---
+else_clause [1084,1225]
+to
+if_statement [752,914]
+at 3
+===
+insert-node
+---
+assignment_expression [1185,1217]
+to
+expression_statement [1185,1218]
+at 0
+
+New cluster:
+===
+insert-node
+---
+expression_statement [998,1071]
+to
+compound_statement [827,914]
+at 1
+------------
+===
+insert-node
+---
+identifier: result [998,1004]
+to
+assignment_expression [998,1070]
+at 0
+===
+insert-node
+---
+assignment_expression [998,1070]
+to
+expression_statement [998,1071]
+at 0
+===
+insert-node
+---
+;: ; [1070,1071]
+to
+expression_statement [998,1071]
+at 1
+===
+insert-node
+---
+=: = [1005,1006]
+to
+assignment_expression [998,1070]
+at 1
+===
+insert-node
+---
+expression_statement [998,1071]
+to
+compound_statement [827,914]
+at 1
+
+New cluster:
+===
+insert-node
+---
+else_clause [1534,1725]
+to
+if_statement [1164,1309]
+at 3
+------------
+===
+insert-node
+---
+;: ; [1717,1718]
+to
+expression_statement [1659,1718]
+at 1
+===
+insert-node
+---
+else_clause [1534,1725]
+to
+if_statement [1164,1309]
+at 3
+===
+insert-node
+---
+expression_statement [1659,1718]
+to
+compound_statement [1544,1725]
+at 2
+===
+insert-node
+---
+assignment_expression [1659,1717]
+to
+expression_statement [1659,1718]
+at 0
+===
+insert-node
+---
+}: } [1724,1725]
+to
+compound_statement [1544,1725]
+at 3
+===
+insert-node
+---
+identifier: result [1659,1665]
+to
+assignment_expression [1659,1717]
+at 0
+===
+insert-node
+---
+else: else [1534,1538]
+to
+else_clause [1534,1725]
+at 0
+===
+insert-node
+---
+{: { [1544,1545]
+to
+compound_statement [1544,1725]
+at 0
+===
+insert-node
+---
+compound_statement [1544,1725]
+to
+else_clause [1534,1725]
+at 1
+===
+insert-node
+---
+=: = [1666,1667]
+to
+assignment_expression [1659,1717]
+at 1
+
+New cluster:
+MOVE from compound_statement [1094,1225]
+------------
+===
+move-tree
+---
+expression_statement [920,994]
+    call_expression [920,993]
+        identifier: ecma_value_assign_value [920,943]
+        argument_list [944,993]
+            (: ( [944,945]
+            pointer_expression [945,985]
+                &: & [945,946]
+                field_expression [946,985]
+                    call_expression [946,978]
+                        identifier: ECMA_PROPERTY_VALUE_PTR [946,969]
+                        argument_list [970,978]
+                            (: ( [970,971]
+                            identifier: prop_p [971,977]
+                            ): ) [977,978]
+                    ->: -> [978,980]
+                    field_identifier: value [980,985]
+            ,: , [985,986]
+            identifier: value [987,992]
+            ): ) [992,993]
+    ;: ; [993,994]
+to
+compound_statement [1094,1225]
+at 1
+
+New cluster:
+===
+insert-node
+---
+expression_statement [1436,1521]
+to
+compound_statement [1214,1309]
+at 1
+------------
+===
+insert-node
+---
+;: ; [1520,1521]
+to
+expression_statement [1436,1521]
+at 1
+===
+insert-node
+---
+assignment_expression [1436,1520]
+to
+expression_statement [1436,1521]
+at 0
+===
+insert-node
+---
+identifier: result [1436,1442]
+to
+assignment_expression [1436,1520]
+at 0
+===
+insert-node
+---
+=: = [1443,1444]
+to
+assignment_expression [1436,1520]
+at 1
+===
+insert-node
+---
+expression_statement [1436,1521]
+to
+compound_statement [1214,1309]
+at 1
+
+New cluster:
+MOVE from assignment_expression [998,1070]
+------------
+===
+move-tree
+---
+call_expression [843,906]
+    identifier: ecma_raise_type_error [843,864]
+    argument_list [865,906]
+        (: ( [865,866]
+        identifier: ECMA_ERR_PRIVATE_METHOD_IS_NOT_WRITABLE [866,905]
+        ): ) [905,906]
+to
+assignment_expression [998,1070]
+at 2
+
+New cluster:
+MOVE from assignment_expression [1185,1217]
+------------
+===
+move-tree
+---
+call_expression [1007,1030]
+    identifier: ecma_copy_value [1007,1022]
+    argument_list [1023,1030]
+        (: ( [1023,1024]
+        identifier: value [1024,1029]
+        ): ) [1029,1030]
+to
+assignment_expression [1185,1217]
+at 2
+
+New cluster:
+MOVE from assignment_expression [1436,1520]
+------------
+===
+move-tree
+---
+call_expression [1228,1303]
+    identifier: ecma_raise_type_error [1228,1249]
+    argument_list [1250,1303]
+        (: ( [1250,1251]
+        identifier: ECMA_ERR_PRIVATE_FIELD_WAS_DEFINED_WITHOUT_A_SETTER [1251,1302]
+        ): ) [1302,1303]
+to
+assignment_expression [1436,1520]
+at 2
+
+New cluster:
+MOVE from assignment_expression [1659,1717]
+------------
+===
+move-tree
+---
+call_expression [1423,1472]
+    identifier: ecma_op_function_call [1423,1444]
+    argument_list [1445,1472]
+        (: ( [1445,1446]
+        identifier: setter_p [1446,1454]
+        ,: , [1454,1455]
+        identifier: base [1456,1460]
+        ,: , [1460,1461]
+        pointer_expression [1462,1468]
+            &: & [1462,1463]
+            identifier: value [1463,1468]
+        ,: , [1468,1469]
+        number_literal: 1 [1470,1471]
+        ): ) [1471,1472]
+to
+assignment_expression [1659,1717]
+at 2
+
+New cluster:
+===
+delete-node
+---
+return_statement [518,630]
+===
+------------
+===
+delete-node
+---
+return: return [518,524]
+===
+===
+delete-node
+---
+;: ; [629,630]
+===
+===
+delete-node
+---
+return_statement [518,630]
+===
+
+New cluster:
+===
+delete-node
+---
+return_statement [836,907]
+===
+------------
+===
+delete-node
+---
+return: return [836,842]
+===
+===
+delete-node
+---
+return_statement [836,907]
+===
+===
+delete-node
+---
+;: ; [906,907]
+===
+
+New cluster:
+===
+delete-node
+---
+return_statement [1000,1031]
+===
+------------
+===
+delete-node
+---
+return: return [1000,1006]
+===
+===
+delete-node
+---
+return_statement [1000,1031]
+===
+===
+delete-node
+---
+;: ; [1030,1031]
+===
+
+New cluster:
+===
+delete-node
+---
+return_statement [1221,1304]
+===
+------------
+===
+delete-node
+---
+return_statement [1221,1304]
+===
+===
+delete-node
+---
+return: return [1221,1227]
+===
+===
+delete-node
+---
+;: ; [1303,1304]
+===
+
+New cluster:
+===
+delete-node
+---
+if_statement [488,635]
+===
+------------
+===
+delete-node
+---
+if_statement [488,635]
+===
+===
+delete-node
+---
+if: if [488,490]
+===
+

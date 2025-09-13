@@ -1,0 +1,39 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [1111,1228]
+    if: if [1111,1113]
+    parenthesized_expression [1113,1188]
+        (: ( [1113,1114]
+        binary_expression [1115,1186]
+            binary_expression [1115,1161]
+                binary_expression [1115,1136]
+                    identifier: horizSubSampling [1115,1131]
+                    !=: != [1132,1134]
+                    number_literal: 1 [1135,1136]
+                &&: && [1137,1139]
+                binary_expression [1140,1161]
+                    identifier: horizSubSampling [1140,1156]
+                    !=: != [1157,1159]
+                    number_literal: 2 [1160,1161]
+            &&: && [1162,1164]
+            binary_expression [1165,1186]
+                identifier: horizSubSampling [1165,1181]
+                !=: != [1182,1184]
+                number_literal: 4 [1185,1186]
+        ): ) [1187,1188]
+    expression_statement [1218,1228]
+        call_expression [1218,1227]
+            identifier: usage [1218,1223]
+            argument_list [1223,1227]
+                (: ( [1223,1224]
+                number_literal: -1 [1224,1226]
+                ): ) [1226,1227]
+        ;: ; [1227,1228]
+to
+case_statement [1039,1096]
+at 4
+

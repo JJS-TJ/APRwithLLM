@@ -1,0 +1,34 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [2515,2583]
+    call_expression [2515,2582]
+        identifier: enforce [2515,2522]
+        argument_list [2522,2582]
+            (: ( [2522,2523]
+            binary_expression [2523,2552]
+                identifier: resourcesLength [2523,2538]
+                <: < [2539,2540]
+                call_expression [2541,2552]
+                    field_expression [2541,2550]
+                        identifier: io_ [2541,2544]
+                        ->: -> [2544,2546]
+                        field_identifier: size [2546,2550]
+                    argument_list [2550,2552]
+                        (: ( [2550,2551]
+                        ): ) [2551,2552]
+            ,: , [2552,2553]
+            ERROR [2554,2561]
+                identifier: Exiv2 [2554,2559]
+                :: : [2559,2560]
+                :: : [2560,2561]
+            identifier: kerCorruptedMetadata [2561,2581]
+            ): ) [2581,2582]
+    ;: ; [2582,2583]
+to
+compound_statement [36,3847]
+at 21
+

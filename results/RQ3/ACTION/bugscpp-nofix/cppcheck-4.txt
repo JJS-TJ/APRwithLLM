@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+unary_expression [3023,3050]
+to
+binary_expression [2997,3046]
+at 2
+------------
+===
+insert-node
+---
+!: ! [3023,3024]
+to
+unary_expression [3023,3050]
+at 0
+===
+insert-node
+---
+unary_expression [3023,3050]
+to
+binary_expression [2997,3046]
+at 2
+
+New cluster:
+MOVE from unary_expression [3023,3050]
+------------
+===
+move-tree
+---
+call_expression [3023,3046]
+    field_expression [3023,3041]
+        identifier: library [3023,3030]
+        .: . [3030,3031]
+        field_identifier: isnoreturn [3031,3041]
+    argument_list [3041,3046]
+        (: ( [3041,3042]
+        identifier: tok [3042,3045]
+        ): ) [3045,3046]
+to
+unary_expression [3023,3050]
+at 1
+
+New cluster:
+UPDATE from isnoreturn to isnotnoreturn
+------------
+===
+update-node
+---
+field_identifier: isnoreturn [3031,3041]
+replace isnoreturn by isnotnoreturn
+

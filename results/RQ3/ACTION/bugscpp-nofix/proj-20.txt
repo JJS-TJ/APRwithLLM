@@ -1,0 +1,201 @@
+New cluster:
+===
+insert-node
+---
+for_statement [2920,3076]
+to
+compound_statement [2803,3055]
+at 3
+------------
+===
+insert-node
+---
+for_statement [2920,3076]
+to
+compound_statement [2803,3055]
+at 3
+===
+insert-node
+---
+{: { [2948,2949]
+to
+compound_statement [2948,3076]
+at 0
+===
+insert-node
+---
+(: ( [2924,2925]
+to
+for_statement [2920,3076]
+at 1
+===
+insert-node
+---
+;: ; [2941,2942]
+to
+for_statement [2920,3076]
+at 4
+===
+insert-node
+---
+compound_statement [2948,3076]
+to
+for_statement [2920,3076]
+at 7
+===
+insert-node
+---
+): ) [2946,2947]
+to
+for_statement [2920,3076]
+at 6
+===
+insert-node
+---
+}: } [3075,3076]
+to
+compound_statement [2948,3076]
+at 2
+===
+insert-node
+---
+for: for [2920,2923]
+to
+for_statement [2920,3076]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+declaration [2925,2935]
+    primitive_type: int [2925,2928]
+    init_declarator [2929,2934]
+        identifier: i [2929,2930]
+        =: = [2931,2932]
+        number_literal: 0 [2933,2934]
+    ;: ; [2934,2935]
+to
+for_statement [2920,3076]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [2936,2941]
+    identifier: i [2936,2937]
+    <: < [2938,2939]
+    number_literal: 6 [2940,2941]
+to
+for_statement [2920,3076]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+update_expression [2943,2946]
+    identifier: i [2943,2944]
+    ++: ++ [2944,2946]
+to
+for_statement [2920,3076]
+at 5
+
+New cluster:
+MOVE from compound_statement [2948,3076]
+------------
+===
+move-tree
+---
+expression_statement [2920,2977]
+    call_expression [2920,2976]
+        identifier: swap_words [2920,2930]
+        argument_list [2930,2976]
+            (: ( [2930,2931]
+            binary_expression [2931,2956]
+                identifier: header [2931,2937]
+                +: + [2938,2939]
+                identifier: OFFSET_SOUTH_LAT [2940,2956]
+            ,: , [2956,2957]
+            sizeof_expression [2958,2972]
+                sizeof: sizeof [2958,2964]
+                (: ( [2964,2965]
+                type_descriptor [2965,2971]
+                    primitive_type: double [2965,2971]
+                ): ) [2971,2972]
+            ,: , [2972,2973]
+            number_literal: 6 [2974,2975]
+            ): ) [2975,2976]
+    ;: ; [2976,2977]
+to
+compound_statement [2948,3076]
+at 1
+
+New cluster:
+===
+insert-node
+---
+binary_expression [2978,3012]
+to
+argument_list [2930,2976]
+at 1
+------------
+===
+insert-node
+---
++: + [3004,3005]
+to
+binary_expression [2978,3012]
+at 1
+===
+insert-node
+---
+binary_expression [2978,3012]
+to
+argument_list [2930,2976]
+at 1
+
+New cluster:
+UPDATE from 6 to 1
+------------
+===
+update-node
+---
+number_literal: 6 [2974,2975]
+replace 6 by 1
+
+New cluster:
+MOVE from binary_expression [2978,3012]
+------------
+===
+move-tree
+---
+binary_expression [2931,2956]
+    identifier: header [2931,2937]
+    +: + [2938,2939]
+    identifier: OFFSET_SOUTH_LAT [2940,2956]
+to
+binary_expression [2978,3012]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [3006,3012]
+    number_literal: 16 [3006,3008]
+    *: * [3009,3010]
+    identifier: i [3011,3012]
+to
+binary_expression [2978,3012]
+at 2
+

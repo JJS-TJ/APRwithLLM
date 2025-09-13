@@ -1,0 +1,119 @@
+New cluster:
+===
+insert-node
+---
+call_expression [3458,3655]
+to
+call_expression [3458,3825]
+at 0
+------------
+===
+insert-node
+---
+call_expression [3458,3655]
+to
+call_expression [3458,3825]
+at 0
+
+New cluster:
+MOVE from call_expression [3458,3655]
+------------
+===
+move-tree
+---
+call_expression [3458,3498]
+    identifier: if [3458,3460]
+    argument_list [3461,3498]
+        (: ( [3461,3462]
+        unary_expression [3462,3497]
+            !: ! [3462,3463]
+            call_expression [3463,3497]
+                identifier: isLifetimeBorrowed [3463,3481]
+                argument_list [3481,3497]
+                    (: ( [3481,3482]
+                    identifier: tok [3482,3485]
+                    ,: , [3485,3486]
+                    identifier: mSettings [3487,3496]
+                    ): ) [3496,3497]
+        ): ) [3497,3498]
+to
+call_expression [3458,3655]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ERROR [3528,3565]
+    identifier: continue [3528,3536]
+    ;: ; [3536,3537]
+    if: if [3563,3565]
+to
+call_expression [3458,3655]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+argument_list [3566,3655]
+    (: ( [3566,3567]
+    binary_expression [3567,3654]
+        binary_expression [3567,3602]
+            call_expression [3567,3585]
+                field_expression [3567,3583]
+                    identifier: tokvalue [3567,3575]
+                    ->: -> [3575,3577]
+                    field_identifier: exprId [3577,3583]
+                argument_list [3583,3585]
+                    (: ( [3583,3584]
+                    ): ) [3584,3585]
+            ==: == [3586,3588]
+            call_expression [3589,3602]
+                field_expression [3589,3600]
+                    identifier: tok [3589,3592]
+                    ->: -> [3592,3594]
+                    field_identifier: exprId [3594,3600]
+                argument_list [3600,3602]
+                    (: ( [3600,3601]
+                    ): ) [3601,3602]
+        &&: && [3603,3605]
+        unary_expression [3606,3654]
+            !: ! [3606,3607]
+            parenthesized_expression [3607,3654]
+                (: ( [3607,3608]
+                binary_expression [3608,3653]
+                    call_expression [3608,3623]
+                        field_expression [3608,3621]
+                            identifier: tok [3608,3611]
+                            ->: -> [3611,3613]
+                            field_identifier: variable [3613,3621]
+                        argument_list [3621,3623]
+                            (: ( [3621,3622]
+                            ): ) [3622,3623]
+                    &&: && [3624,3626]
+                    call_expression [3627,3653]
+                        field_expression [3627,3651]
+                            call_expression [3627,3642]
+                                field_expression [3627,3640]
+                                    identifier: tok [3627,3630]
+                                    ->: -> [3630,3632]
+                                    field_identifier: variable [3632,3640]
+                                argument_list [3640,3642]
+                                    (: ( [3640,3641]
+                                    ): ) [3641,3642]
+                            ->: -> [3642,3644]
+                            field_identifier: isArray [3644,3651]
+                        argument_list [3651,3653]
+                            (: ( [3651,3652]
+                            ): ) [3652,3653]
+                ): ) [3653,3654]
+    ): ) [3654,3655]
+to
+call_expression [3458,3655]
+at 2
+

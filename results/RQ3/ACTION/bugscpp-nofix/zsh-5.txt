@@ -1,0 +1,69 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [535,548]
+    call_expression [535,547]
+        identifier: putchar [535,542]
+        argument_list [542,547]
+            (: ( [542,543]
+            char_literal [543,546]
+                ': ' [543,544]
+                character:   [544,545]
+                ': ' [545,546]
+            ): ) [546,547]
+    ;: ; [547,548]
+to
+compound_statement [441,566]
+at 3
+
+New cluster:
+UPDATE from printf to quotedzputs
+------------
+===
+update-node
+---
+identifier: printf [535,541]
+replace printf by quotedzputs
+
+New cluster:
+MOVE from argument_list [541,561]
+------------
+===
+move-tree
+---
+,: , [547,548]
+to
+argument_list [541,561]
+at 3
+
+New cluster:
+===
+insert-node
+---
+identifier: stdout [580,586]
+to
+argument_list [541,561]
+at 4
+------------
+===
+insert-node
+---
+identifier: stdout [580,586]
+to
+argument_list [541,561]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+string_literal [542,547]
+    ": " [542,543]
+    string_content:  %s [543,546]
+    ": " [546,547]
+

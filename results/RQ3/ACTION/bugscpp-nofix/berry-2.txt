@@ -1,0 +1,22 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [328,356]
+    call_expression [328,355]
+        identifier: unaryexp [328,336]
+        argument_list [336,355]
+            (: ( [336,337]
+            identifier: finfo [337,342]
+            ,: , [342,343]
+            identifier: OP_MOVE [344,351]
+            ,: , [351,352]
+            identifier: e [353,354]
+            ): ) [354,355]
+    ;: ; [355,356]
+to
+compound_statement [317,462]
+at 1
+

@@ -1,0 +1,17 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [436,447]
+    return: return [436,442]
+    parenthesized_expression [442,446]
+        (: ( [442,443]
+        number_literal: -1 [443,445]
+        ): ) [445,446]
+    ;: ; [446,447]
+to
+compound_statement [326,433]
+at 2
+

@@ -1,0 +1,283 @@
+New cluster:
+===
+insert-node
+---
+do_statement [2861,3038]
+to
+compound_statement [2717,3748]
+at 3
+------------
+===
+insert-node
+---
+argument_list [2896,2968]
+to
+call_expression [2889,2968]
+at 1
+===
+insert-node
+---
+;: ; [3037,3038]
+to
+do_statement [2861,3038]
+at 4
+===
+insert-node
+---
+identifier: kerCorruptedMetadata [2947,2967]
+to
+argument_list [2896,2968]
+at 4
+===
+insert-node
+---
+}: } [2991,2992]
+to
+compound_statement [2864,2992]
+at 2
+===
+insert-node
+---
+do: do [2861,2863]
+to
+do_statement [2861,3038]
+at 0
+===
+insert-node
+---
+compound_statement [2864,2992]
+to
+do_statement [2861,3038]
+at 1
+===
+insert-node
+---
+,: , [2938,2939]
+to
+argument_list [2896,2968]
+at 2
+===
+insert-node
+---
+): ) [2967,2968]
+to
+argument_list [2896,2968]
+at 5
+===
+insert-node
+---
+call_expression [2889,2968]
+to
+expression_statement [2889,2969]
+at 0
+===
+insert-node
+---
+;: ; [2968,2969]
+to
+expression_statement [2889,2969]
+at 1
+===
+insert-node
+---
+{: { [2864,2865]
+to
+compound_statement [2864,2992]
+at 0
+===
+insert-node
+---
+do_statement [2861,3038]
+to
+compound_statement [2717,3748]
+at 3
+===
+insert-node
+---
+(: ( [2896,2897]
+to
+argument_list [2896,2968]
+at 0
+===
+insert-node
+---
+expression_statement [2889,2969]
+to
+compound_statement [2864,2992]
+at 1
+===
+insert-node
+---
+identifier: enforce [2889,2896]
+to
+call_expression [2889,2968]
+at 0
+===
+insert-node
+---
+while: while [2993,2998]
+to
+do_statement [2861,3038]
+at 2
+
+New cluster:
+MOVE from do_statement [2861,3038]
+------------
+===
+move-tree
+---
+parenthesized_expression [2941,2980]
+    (: ( [2941,2942]
+    binary_expression [2942,2979]
+        subscript_expression [2942,2971]
+            field_expression [2942,2958]
+                identifier: chunkData [2942,2951]
+                .: . [2951,2952]
+                field_identifier: pData_ [2952,2958]
+            [: [ [2958,2959]
+            update_expression [2959,2970]
+                identifier: iccOffset [2959,2968]
+                ++: ++ [2968,2970]
+            ]: ] [2970,2971]
+        ==: == [2972,2974]
+        number_literal: 0x00 [2975,2979]
+    ): ) [2979,2980]
+to
+do_statement [2861,3038]
+at 3
+
+New cluster:
+===
+insert-node
+---
+!=: != [3029,3031]
+to
+binary_expression [2942,2979]
+at 1
+------------
+===
+insert-node
+---
+!=: != [3029,3031]
+to
+binary_expression [2942,2979]
+at 1
+
+New cluster:
+MOVE from argument_list [2896,2968]
+------------
+===
+move-tree
+---
+binary_expression [2868,2909]
+    binary_expression [2868,2882]
+        identifier: iccOffset [2868,2877]
+        <: < [2878,2879]
+        number_literal: 80 [2880,2882]
+    &&: && [2883,2885]
+    binary_expression [2886,2909]
+        identifier: iccOffset [2886,2895]
+        <: < [2896,2897]
+        identifier: chunkLength [2898,2909]
+to
+argument_list [2896,2968]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+ERROR [2940,2947]
+    identifier: Exiv2 [2940,2945]
+    :: : [2945,2946]
+    :: : [2946,2947]
+to
+argument_list [2896,2968]
+at 3
+
+New cluster:
+===
+delete-node
+---
+==: == [2972,2974]
+===
+------------
+===
+delete-node
+---
+==: == [2972,2974]
+===
+
+New cluster:
+===
+delete-node
+---
+while_statement [2861,3068]
+===
+------------
+===
+delete-node
+---
+while_statement [2861,3068]
+===
+===
+delete-node
+---
+compound_statement [2911,3068]
+===
+===
+delete-node
+---
+parenthesized_expression [2867,2910]
+===
+===
+delete-node
+---
+if: if [2938,2940]
+===
+===
+delete-node
+---
+while: while [2861,2866]
+===
+===
+delete-node
+---
+): ) [2909,2910]
+===
+===
+delete-node
+---
+}: } [3067,3068]
+===
+===
+delete-node
+---
+{: { [2911,2912]
+===
+===
+delete-node
+---
+if_statement [2938,3045]
+===
+===
+delete-node
+---
+(: ( [2867,2868]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+compound_statement [2981,3045]
+    {: { [2981,2982]
+    break_statement [3012,3018]
+        break: break [3012,3017]
+        ;: ; [3017,3018]
+    }: } [3044,3045]
+

@@ -1,0 +1,125 @@
+New cluster:
+===
+insert-node
+---
+if_statement [1388,1524]
+to
+case_statement [1366,1485]
+at 3
+------------
+===
+insert-node
+---
+if: if [1388,1390]
+to
+if_statement [1388,1524]
+at 0
+===
+insert-node
+---
+else: else [1458,1462]
+to
+else_clause [1458,1524]
+at 0
+===
+insert-node
+---
+if_statement [1388,1524]
+to
+case_statement [1366,1485]
+at 3
+===
+insert-node
+---
+else_clause [1458,1524]
+to
+if_statement [1388,1524]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [1390,1425]
+    (: ( [1390,1391]
+    binary_expression [1392,1423]
+        call_expression [1392,1415]
+            identifier: fabs [1392,1396]
+            argument_list [1396,1415]
+                (: ( [1396,1397]
+                binary_expression [1397,1414]
+                    field_expression [1397,1403]
+                        identifier: lp [1397,1399]
+                        .: . [1399,1400]
+                        field_identifier: phi [1400,1403]
+                    -: - [1404,1405]
+                    identifier: M_HALFPI [1406,1414]
+                ): ) [1414,1415]
+        <: < [1416,1417]
+        number_literal: 1e-15 [1418,1423]
+    ): ) [1424,1425]
+to
+if_statement [1388,1524]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1439,1448]
+    assignment_expression [1439,1447]
+        field_expression [1439,1443]
+            identifier: xy [1439,1441]
+            .: . [1441,1442]
+            field_identifier: x [1442,1443]
+        =: = [1444,1445]
+        number_literal: 0 [1446,1447]
+    ;: ; [1447,1448]
+to
+if_statement [1388,1524]
+at 2
+
+New cluster:
+MOVE from else_clause [1458,1524]
+------------
+===
+move-tree
+---
+expression_statement [1388,1436]
+    assignment_expression [1388,1435]
+        field_expression [1388,1392]
+            identifier: xy [1388,1390]
+            .: . [1390,1391]
+            field_identifier: x [1391,1392]
+        =: = [1393,1394]
+        binary_expression [1395,1435]
+            field_expression [1395,1402]
+                identifier: Q [1395,1396]
+                ->: -> [1396,1398]
+                field_identifier: akm1 [1398,1402]
+            *: * [1403,1404]
+            call_expression [1405,1435]
+                identifier: pj_tsfn [1405,1412]
+                argument_list [1413,1435]
+                    (: ( [1413,1414]
+                    field_expression [1414,1420]
+                        identifier: lp [1414,1416]
+                        .: . [1416,1417]
+                        field_identifier: phi [1417,1420]
+                    ,: , [1420,1421]
+                    identifier: sinphi [1422,1428]
+                    ,: , [1428,1429]
+                    field_expression [1430,1434]
+                        identifier: P [1430,1431]
+                        ->: -> [1431,1433]
+                        field_identifier: e [1433,1434]
+                    ): ) [1434,1435]
+    ;: ; [1435,1436]
+to
+else_clause [1458,1524]
+at 1
+

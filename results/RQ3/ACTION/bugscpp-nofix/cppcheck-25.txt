@@ -1,0 +1,84 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [171,291]
+to
+parenthesized_expression [170,252]
+at 1
+------------
+===
+insert-node
+---
+binary_expression [171,291]
+to
+parenthesized_expression [170,252]
+at 1
+===
+insert-node
+---
+&&: && [252,254]
+to
+binary_expression [171,291]
+at 2
+
+New cluster:
+MOVE from binary_expression [171,291]
+------------
+===
+move-tree
+---
+binary_expression [171,237]
+    binary_expression [171,192]
+        field_expression [171,179]
+            identifier: vt [171,173]
+            ->: -> [173,175]
+            field_identifier: type [175,179]
+        !=: != [180,182]
+        identifier: ValueType [183,192]
+    ERROR [192,206]
+        :: : [192,193]
+        :: : [193,194]
+        identifier: UNKNOWN_TYPE [194,206]
+    &&: && [207,209]
+    binary_expression [210,237]
+        field_expression [210,224]
+            identifier: vtParent [210,218]
+            ->: -> [218,220]
+            field_identifier: type [220,224]
+        !=: != [225,227]
+        identifier: ValueType [228,237]
+to
+binary_expression [171,291]
+at 0
+===
+move-tree
+---
+ERROR [237,251]
+    :: : [237,238]
+    :: : [238,239]
+    identifier: UNKNOWN_TYPE [239,251]
+to
+binary_expression [171,291]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [255,291]
+    field_expression [255,274]
+        identifier: vtParent [255,263]
+        ->: -> [263,265]
+        field_identifier: container [265,274]
+    ==: == [275,277]
+    field_expression [278,291]
+        identifier: vt [278,280]
+        ->: -> [280,282]
+        field_identifier: container [282,291]
+to
+binary_expression [171,291]
+at 3
+

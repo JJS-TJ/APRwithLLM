@@ -1,0 +1,23 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [560,605]
+    call_expression [560,604]
+        identifier: xmlFatalErr [560,571]
+        argument_list [571,604]
+            (: ( [571,572]
+            identifier: ctxt [572,576]
+            ,: , [576,577]
+            identifier: XML_ERR_ENTITY_LOOP [578,597]
+            ,: , [597,598]
+            null [599,603]
+                NULL: NULL [599,603]
+            ): ) [603,604]
+    ;: ; [604,605]
+to
+compound_statement [549,655]
+at 1
+

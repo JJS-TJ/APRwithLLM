@@ -1,0 +1,89 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+continue_statement [1964,1973]
+    continue: continue [1964,1972]
+    ;: ; [1972,1973]
+to
+if_statement [1946,1999]
+at 2
+
+New cluster:
+MOVE from binary_expression [1950,1976]
+------------
+===
+move-tree
+---
+call_expression [1905,1939]
+    identifier: xbps_transaction_pkg_type [1905,1930]
+    argument_list [1930,1939]
+        (: ( [1930,1931]
+        identifier: revpkgd [1931,1938]
+        ): ) [1938,1939]
+to
+binary_expression [1950,1976]
+at 0
+
+New cluster:
+===
+delete-node
+---
+expression_statement [1897,1940]
+===
+------------
+===
+delete-node
+---
+identifier: ttype [1897,1902]
+===
+===
+delete-node
+---
+=: = [1903,1904]
+===
+===
+delete-node
+---
+assignment_expression [1897,1939]
+===
+===
+delete-node
+---
+;: ; [1939,1940]
+===
+===
+delete-node
+---
+expression_statement [1897,1940]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: ttype [1950,1955]
+===
+------------
+===
+delete-node
+---
+identifier: ttype [1950,1955]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [1984,1999]
+    assignment_expression [1984,1998]
+        identifier: revpkgd [1984,1991]
+        =: = [1992,1993]
+        null [1994,1998]
+            NULL: NULL [1994,1998]
+    ;: ; [1998,1999]
+

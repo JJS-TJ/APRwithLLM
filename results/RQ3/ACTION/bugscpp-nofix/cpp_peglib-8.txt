@@ -1,0 +1,51 @@
+New cluster:
+===
+insert-node
+---
+escape_sequence: \x80 [1120,1124]
+to
+string_literal [1112,1121]
+at 2
+------------
+===
+insert-node
+---
+escape_sequence: \x80 [1120,1124]
+to
+string_literal [1112,1121]
+at 2
+
+New cluster:
+===
+insert-node
+---
+string_content: - [1124,1125]
+to
+string_literal [1112,1121]
+at 3
+------------
+===
+insert-node
+---
+string_content: - [1124,1125]
+to
+string_literal [1112,1121]
+at 3
+
+New cluster:
+===
+insert-node
+---
+escape_sequence: \xff [1125,1129]
+to
+string_literal [1112,1121]
+at 4
+------------
+===
+insert-node
+---
+escape_sequence: \xff [1125,1129]
+to
+string_literal [1112,1121]
+at 4
+

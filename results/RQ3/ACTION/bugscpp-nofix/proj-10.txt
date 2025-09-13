@@ -1,0 +1,43 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+return_statement [704,733]
+    return: return [704,710]
+    call_expression [711,732]
+        identifier: aeqd_e_forward [711,725]
+        argument_list [725,732]
+            (: ( [725,726]
+            identifier: lp [726,728]
+            ,: , [728,729]
+            identifier: P [730,731]
+            ): ) [731,732]
+    ;: ; [732,733]
+to
+else_clause [682,721]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [704,721]
+    assignment_expression [704,720]
+        field_expression [704,708]
+            identifier: xy [704,706]
+            .: . [706,707]
+            field_identifier: x [707,708]
+        =: = [709,710]
+        assignment_expression [711,720]
+            field_expression [711,715]
+                identifier: xy [711,713]
+                .: . [713,714]
+                field_identifier: y [714,715]
+            =: = [716,717]
+            number_literal: 0. [718,720]
+    ;: ; [720,721]
+

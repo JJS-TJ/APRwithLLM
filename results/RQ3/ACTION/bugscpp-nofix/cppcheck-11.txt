@@ -1,0 +1,36 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [923,957]
+    identifier: fun [923,926]
+    &&: && [927,929]
+    unary_expression [930,957]
+        !: ! [930,931]
+        call_expression [931,957]
+            field_expression [931,955]
+                identifier: fun [931,934]
+                ->: -> [934,936]
+                field_identifier: hasVirtualSpecifier [936,955]
+            argument_list [955,957]
+                (: ( [955,956]
+                ): ) [956,957]
+to
+parenthesized_expression [922,927]
+at 1
+
+New cluster:
+===
+delete-node
+---
+identifier: fun [923,926]
+===
+------------
+===
+delete-node
+---
+identifier: fun [923,926]
+===
+

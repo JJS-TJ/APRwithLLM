@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+binary_expression [1534,1560]
+to
+for_statement [1522,2171]
+at 4
+------------
+===
+insert-node
+---
+binary_expression [1534,1560]
+to
+for_statement [1522,2171]
+at 4
+===
+insert-node
+---
+&&: && [1542,1544]
+to
+binary_expression [1534,1560]
+at 1
+
+New cluster:
+MOVE from binary_expression [1534,1560]
+------------
+===
+move-tree
+---
+binary_expression [1534,1541]
+    identifier: s [1534,1535]
+    <: < [1536,1537]
+    identifier: spp [1538,1541]
+to
+binary_expression [1534,1560]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_expression [1545,1560]
+    identifier: s [1545,1546]
+    <: < [1547,1548]
+    identifier: MAX_SAMPLES [1549,1560]
+to
+binary_expression [1534,1560]
+at 2
+

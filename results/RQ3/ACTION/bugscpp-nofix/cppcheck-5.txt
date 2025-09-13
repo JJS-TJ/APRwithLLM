@@ -1,0 +1,101 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [1416,1457]
+    if: if [1416,1418]
+    parenthesized_expression [1419,1434]
+        (: ( [1419,1420]
+        call_expression [1420,1433]
+            field_expression [1420,1431]
+                identifier: tok [1420,1423]
+                ->: -> [1423,1425]
+                field_identifier: isCast [1425,1431]
+            argument_list [1431,1433]
+                (: ( [1431,1432]
+                ): ) [1432,1433]
+        ): ) [1433,1434]
+    return_statement [1444,1457]
+        return: return [1444,1450]
+        false: false [1451,1456]
+        ;: ; [1456,1457]
+to
+compound_statement [84,1431]
+at 9
+
+New cluster:
+===
+insert-node
+---
+comment:     // Currying a function is unknown in cppcheck [1463,1509]
+to
+compound_statement [84,1431]
+at 10
+------------
+===
+insert-node
+---
+comment:     // Currying a function is unknown in cppcheck [1463,1509]
+to
+compound_statement [84,1431]
+at 10
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [1514,1619]
+    if: if [1514,1516]
+    parenthesized_expression [1517,1594]
+        (: ( [1517,1518]
+        ERROR [1518,1557]
+            identifier: Token [1518,1523]
+            :: : [1523,1524]
+            :: : [1524,1525]
+            binary_expression [1525,1555]
+                call_expression [1525,1546]
+                    identifier: simpleMatch [1525,1536]
+                    argument_list [1536,1546]
+                        (: ( [1536,1537]
+                        identifier: tok [1537,1540]
+                        ,: , [1540,1541]
+                        string_literal [1542,1545]
+                            ": " [1542,1543]
+                            string_content: ( [1543,1544]
+                            ": " [1544,1545]
+                        ): ) [1545,1546]
+                &&: && [1547,1549]
+                identifier: Token [1550,1555]
+            :: : [1555,1556]
+            :: : [1556,1557]
+        call_expression [1557,1593]
+            identifier: simpleMatch [1557,1568]
+            argument_list [1568,1593]
+                (: ( [1568,1569]
+                call_expression [1569,1587]
+                    field_expression [1569,1585]
+                        identifier: tok [1569,1572]
+                        ->: -> [1572,1574]
+                        field_identifier: astOperand1 [1574,1585]
+                    argument_list [1585,1587]
+                        (: ( [1585,1586]
+                        ): ) [1586,1587]
+                ,: , [1587,1588]
+                string_literal [1589,1592]
+                    ": " [1589,1590]
+                    string_content: ( [1590,1591]
+                    ": " [1591,1592]
+                ): ) [1592,1593]
+        ): ) [1593,1594]
+    return_statement [1604,1619]
+        return: return [1604,1610]
+        identifier: unknown [1611,1618]
+        ;: ; [1618,1619]
+to
+compound_statement [84,1431]
+at 11
+

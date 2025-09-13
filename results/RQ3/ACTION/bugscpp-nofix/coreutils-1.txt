@@ -1,0 +1,43 @@
+New cluster:
+MOVE from parenthesized_expression [331,381]
+------------
+===
+move-tree
+---
+binary_expression [360,380]
+    identifier: start [360,365]
+    <: < [366,367]
+    identifier: initial_read [368,380]
+to
+parenthesized_expression [331,381]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_expression [332,356]
+    identifier: initial_read [332,344]
+    !=: != [345,347]
+    identifier: SIZE_MAX [348,356]
+
+New cluster:
+===
+delete-node
+---
+binary_expression [332,380]
+===
+------------
+===
+delete-node
+---
+binary_expression [332,380]
+===
+===
+delete-node
+---
+||: || [357,359]
+===
+
