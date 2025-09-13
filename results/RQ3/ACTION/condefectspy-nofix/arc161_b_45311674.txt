@@ -1,0 +1,108 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [266,290]
+    binary_operator [266,281]
+        parenthesized_expression [266,272]
+            binary_operator [267,271]
+                identifier: N [267,268]
+                >>: >> [268,270]
+                integer: 1 [270,271]
+        +: + [273,274]
+        parenthesized_expression [275,281]
+            binary_operator [276,280]
+                identifier: N [276,277]
+                >>: >> [277,279]
+                integer: 2 [279,280]
+    +: + [282,283]
+    parenthesized_expression [284,290]
+        binary_operator [285,289]
+            identifier: N [285,286]
+            >>: >> [286,288]
+            integer: 3 [288,289]
+to
+binary_operator [266,290]
+at 0
+
+New cluster:
+===
+insert-node
+---
+-: - [291,292]
+to
+binary_operator [266,290]
+at 1
+------------
+===
+insert-node
+---
+-: - [291,292]
+to
+binary_operator [266,290]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [293,301]
+    parenthesized_expression [293,298]
+        binary_operator [294,297]
+            identifier: N [294,295]
+            &: & [295,296]
+            integer: 2 [296,297]
+    //: // [298,300]
+    integer: 2 [300,301]
+to
+binary_operator [266,290]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [266,281]
+    parenthesized_expression [266,272]
+        binary_operator [267,271]
+            identifier: N [267,268]
+            >>: >> [268,270]
+            integer: 1 [270,271]
+    +: + [273,274]
+    parenthesized_expression [275,281]
+        binary_operator [276,280]
+            identifier: N [276,277]
+            >>: >> [277,279]
+            integer: 2 [279,280]
+
+New cluster:
+===
+delete-node
+---
++: + [282,283]
+===
+------------
+===
+delete-node
+---
++: + [282,283]
+===
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+parenthesized_expression [284,290]
+    binary_operator [285,289]
+        identifier: N [285,286]
+        >>: >> [286,288]
+        integer: 3 [288,289]
+

@@ -1,0 +1,31 @@
+New cluster:
+===
+insert-node
+---
+integer: 1 [386,387]
+to
+augmented_assignment [381,392]
+at 2
+------------
+===
+insert-node
+---
+integer: 1 [386,387]
+to
+augmented_assignment [381,392]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [386,392]
+    binary_operator [386,390]
+        identifier: x [386,387]
+        -: - [387,388]
+        identifier: px [388,390]
+    -: - [390,391]
+    integer: 2 [391,392]
+

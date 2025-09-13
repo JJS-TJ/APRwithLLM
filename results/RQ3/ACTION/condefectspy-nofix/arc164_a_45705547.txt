@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from 28 to 40
+------------
+===
+update-node
+---
+integer: 28 [43,45]
+replace 28 by 40
+

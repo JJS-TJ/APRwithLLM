@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from X to Z
+------------
+===
+update-node
+---
+identifier: X [115,116]
+replace X by Z
+

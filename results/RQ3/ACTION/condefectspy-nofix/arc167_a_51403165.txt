@@ -1,0 +1,29 @@
+New cluster:
+===
+insert-node
+---
+comment: #print(single_sz) [120,138]
+to
+module [0,300]
+at 4
+------------
+===
+insert-node
+---
+comment: #print(single_sz) [120,138]
+to
+module [0,300]
+at 4
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [120,136]
+    call [120,136]
+        identifier: print [120,125]
+        argument_list [125,136]
+            identifier: single_sz [126,135]
+

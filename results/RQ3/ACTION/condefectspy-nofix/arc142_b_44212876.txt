@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+if_statement [236,269]
+    comparison_operator [239,249]
+        binary_operator [239,244]
+            identifier: N [239,240]
+            %: % [241,242]
+            integer: 2 [243,244]
+        comparison_operator: == [245,247]
+        integer: 1 [248,249]
+    block [256,269]
+        expression_statement [256,269]
+            call [256,269]
+                identifier: print [256,261]
+                argument_list [261,269]
+                    list_splat [262,268]
+                        *: * [262,263]
+                        subscript [263,268]
+                            identifier: T [263,264]
+                            unary_operator [265,267]
+                                -: - [265,266]
+                                integer: 1 [266,267]
+to
+module [0,232]
+at 4
+

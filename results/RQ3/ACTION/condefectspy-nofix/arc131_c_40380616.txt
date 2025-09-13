@@ -1,0 +1,31 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [310,315]
+    identifier: n [310,311]
+    &: & [312,313]
+    integer: 1 [314,315]
+to
+boolean_operator [310,336]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+boolean_operator [310,326]
+    comparison_operator [310,316]
+        identifier: n [310,311]
+        comparison_operator: == [312,314]
+        integer: 1 [315,316]
+    or: or [317,319]
+    comparison_operator [320,326]
+        identifier: n [320,321]
+        comparison_operator: == [322,324]
+        integer: 3 [325,326]
+

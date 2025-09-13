@@ -1,0 +1,50 @@
+New cluster:
+UPDATE from A to li
+------------
+===
+update-node
+---
+identifier: A [164,165]
+replace A by li
+===
+update-node
+---
+identifier: A [152,153]
+replace A by li
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [157,160]
+    identifier: i [157,158]
+    -: - [158,159]
+    integer: 2 [159,160]
+to
+subscript [152,156]
+at 1
+
+New cluster:
+UPDATE from 1 to 3
+------------
+===
+update-node
+---
+integer: 1 [170,171]
+replace 1 by 3
+
+New cluster:
+===
+delete-node
+---
+identifier: i [154,155]
+===
+------------
+===
+delete-node
+---
+identifier: i [154,155]
+===
+

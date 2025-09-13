@@ -1,0 +1,54 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [306,311]
+    identifier: x [306,307]
+    %: % [308,309]
+    identifier: m [310,311]
+to
+comparison_operator [306,312]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [315,320]
+    identifier: s [315,316]
+    %: % [317,318]
+    identifier: m [319,320]
+to
+comparison_operator [306,312]
+at 3
+
+New cluster:
+===
+delete-node
+---
+identifier: x [306,307]
+===
+------------
+===
+delete-node
+---
+identifier: x [306,307]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: s [311,312]
+===
+------------
+===
+delete-node
+---
+identifier: s [311,312]
+===
+

@@ -1,0 +1,56 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [1213,1238]
+to
+assignment [1207,1232]
+at 2
+------------
+===
+insert-node
+---
+%: % [1234,1235]
+to
+binary_operator [1213,1238]
+at 1
+===
+insert-node
+---
+identifier: MOD [1235,1238]
+to
+binary_operator [1213,1238]
+at 2
+===
+insert-node
+---
+parenthesized_expression [1213,1234]
+to
+binary_operator [1213,1238]
+at 0
+===
+insert-node
+---
+binary_operator [1213,1238]
+to
+assignment [1207,1232]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [1213,1234]
+------------
+===
+move-tree
+---
+binary_operator [1213,1232]
+    call [1213,1221]
+        identifier: countL [1213,1219]
+        argument_list [1219,1221]
+    +: + [1222,1223]
+    call [1224,1232]
+        identifier: countR [1224,1230]
+        argument_list [1230,1232]
+to
+parenthesized_expression [1213,1234]
+at 0
+

@@ -1,0 +1,34 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [104,123]
+    identifier: int [104,107]
+    argument_list [107,123]
+        binary_operator [108,122]
+            string: "9" [108,111]
+            *: * [111,112]
+            parenthesized_expression [112,122]
+                binary_operator [113,121]
+                    identifier: length [113,119]
+                    -: - [119,120]
+                    integer: 1 [120,121]
+to
+assignment [94,105]
+at 2
+
+New cluster:
+===
+delete-node
+---
+integer: 0 [104,105]
+===
+------------
+===
+delete-node
+---
+integer: 0 [104,105]
+===
+

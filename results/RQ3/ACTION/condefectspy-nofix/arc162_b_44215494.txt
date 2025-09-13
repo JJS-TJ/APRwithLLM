@@ -1,0 +1,28 @@
+New cluster:
+===
+insert-node
+---
+identifier: i [363,364]
+to
+list [358,367]
+at 1
+------------
+===
+insert-node
+---
+identifier: i [363,364]
+to
+list [358,367]
+at 1
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [363,366]
+    identifier: i [363,364]
+    +: + [364,365]
+    integer: 1 [365,366]
+

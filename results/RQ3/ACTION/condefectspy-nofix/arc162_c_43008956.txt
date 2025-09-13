@@ -1,0 +1,59 @@
+New cluster:
+===
+insert-node
+---
+parenthesized_expression [888,902]
+to
+boolean_operator [889,904]
+at 2
+------------
+===
+insert-node
+---
+or: or [894,896]
+to
+boolean_operator [889,901]
+at 1
+===
+insert-node
+---
+parenthesized_expression [888,902]
+to
+boolean_operator [889,904]
+at 2
+===
+insert-node
+---
+boolean_operator [889,901]
+to
+parenthesized_expression [888,902]
+at 0
+
+New cluster:
+MOVE from boolean_operator [889,901]
+------------
+===
+move-tree
+---
+comparison_operator [900,904]
+    identifier: x [900,901]
+    comparison_operator: == [901,903]
+    integer: 0 [903,904]
+to
+boolean_operator [889,901]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [897,901]
+    identifier: x [897,898]
+    comparison_operator: == [898,900]
+    integer: 1 [900,901]
+to
+boolean_operator [889,901]
+at 2
+

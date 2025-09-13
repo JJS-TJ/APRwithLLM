@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from k to K
+------------
+===
+update-node
+---
+identifier: k [1303,1304]
+replace k by K
+

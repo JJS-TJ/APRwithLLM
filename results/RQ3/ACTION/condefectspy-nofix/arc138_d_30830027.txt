@@ -1,0 +1,27 @@
+New cluster:
+===
+insert-node
+---
+string: 'No' [462,466]
+to
+argument_list [461,465]
+at 0
+------------
+===
+insert-node
+---
+string: 'No' [462,466]
+to
+argument_list [461,465]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+unary_operator [462,464]
+    -: - [462,463]
+    integer: 1 [463,464]
+

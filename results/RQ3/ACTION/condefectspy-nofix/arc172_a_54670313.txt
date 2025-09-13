@@ -1,0 +1,51 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [288,300]
+to
+assignment [284,292]
+at 2
+------------
+===
+insert-node
+---
+binary_operator [288,300]
+to
+assignment [284,292]
+at 2
+===
+insert-node
+---
++: + [293,294]
+to
+binary_operator [288,300]
+at 1
+
+New cluster:
+MOVE from binary_operator [288,300]
+------------
+===
+move-tree
+---
+subscript [288,292]
+    identifier: D [288,289]
+    identifier: i [290,291]
+to
+binary_operator [288,300]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [295,300]
+    integer: 4 [295,296]
+    *: * [297,298]
+    identifier: s [299,300]
+to
+binary_operator [288,300]
+at 2
+

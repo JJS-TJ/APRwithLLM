@@ -1,0 +1,97 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [79,96]
+to
+if_statement [76,117]
+at 0
+------------
+===
+insert-node
+---
+boolean_operator [79,96]
+to
+if_statement [76,117]
+at 0
+===
+insert-node
+---
+and: and [86,89]
+to
+boolean_operator [79,96]
+at 1
+
+New cluster:
+MOVE from boolean_operator [79,96]
+------------
+===
+move-tree
+---
+comparison_operator [79,88]
+    identifier: n [79,80]
+    comparison_operator: == [80,82]
+    binary_operator [82,85]
+        identifier: m [82,83]
+        -: - [83,84]
+        integer: 1 [84,85]
+    comparison_operator: == [85,87]
+    identifier: k [87,88]
+to
+boolean_operator [79,96]
+at 0
+
+New cluster:
+MOVE from comparison_operator [79,88]
+------------
+===
+move-tree
+---
+comparison_operator: == [80,82]
+to
+comparison_operator [79,88]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [90,96]
+    identifier: n [90,91]
+    comparison_operator: >= [91,93]
+    binary_operator [93,96]
+        identifier: m [93,94]
+        -: - [94,95]
+        integer: 1 [95,96]
+to
+boolean_operator [79,96]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: n [79,80]
+===
+------------
+===
+delete-node
+---
+identifier: n [79,80]
+===
+
+New cluster:
+===
+delete-node
+---
+comparison_operator: == [85,87]
+===
+------------
+===
+delete-node
+---
+comparison_operator: == [85,87]
+===
+

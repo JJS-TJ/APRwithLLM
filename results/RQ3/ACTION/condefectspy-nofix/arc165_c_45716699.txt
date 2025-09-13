@@ -1,0 +1,15 @@
+New cluster:
+MOVE from block [1393,1573]
+------------
+===
+move-tree
+---
+expression_statement [1577,1587]
+    call [1577,1587]
+        identifier: print [1577,1582]
+        argument_list [1582,1587]
+            identifier: ans [1583,1586]
+to
+block [1393,1573]
+at 4
+

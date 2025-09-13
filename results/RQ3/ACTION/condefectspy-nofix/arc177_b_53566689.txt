@@ -1,0 +1,26 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [235,247]
+    attribute [235,242]
+        string: '' [235,237]
+        identifier: join [238,242]
+    argument_list [242,247]
+        identifier: ans [243,246]
+to
+argument_list [234,240]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+list_splat [235,239]
+    *: * [235,236]
+    identifier: ans [236,239]
+

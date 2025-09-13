@@ -1,0 +1,15 @@
+New cluster:
+MOVE from block [604,679]
+------------
+===
+move-tree
+---
+expression_statement [604,611]
+    assignment [604,611]
+        identifier: r_cnt [604,609]
+        =: = [609,610]
+        integer: 0 [610,611]
+to
+block [604,679]
+at 1
+

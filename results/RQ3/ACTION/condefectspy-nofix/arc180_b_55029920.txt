@@ -1,0 +1,40 @@
+New cluster:
+MOVE from block [218,268]
+------------
+===
+move-tree
+---
+expression_statement [218,237]
+    assignment [218,237]
+        pattern_list [218,227]
+            subscript [218,222]
+                identifier: q [218,219]
+                identifier: s [220,221]
+            subscript [223,227]
+                identifier: q [223,224]
+                identifier: t [225,226]
+        =: = [227,228]
+        expression_list [228,237]
+            subscript [228,232]
+                identifier: q [228,229]
+                identifier: s [230,231]
+            subscript [233,237]
+                identifier: q [233,234]
+                identifier: t [235,236]
+to
+block [218,268]
+at 1
+
+New cluster:
+MOVE from expression_list [228,237]
+------------
+===
+move-tree
+---
+subscript [228,232]
+    identifier: q [228,229]
+    identifier: s [230,231]
+to
+expression_list [228,237]
+at 1
+

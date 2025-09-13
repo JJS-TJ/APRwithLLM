@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+call [83,114]
+to
+assignment [78,108]
+at 2
+------------
+===
+insert-node
+---
+call [83,114]
+to
+assignment [78,108]
+at 2
+===
+insert-node
+---
+identifier: list [83,87]
+to
+call [83,114]
+at 0
+===
+insert-node
+---
+argument_list [87,114]
+to
+call [83,114]
+at 1
+
+New cluster:
+MOVE from argument_list [87,114]
+------------
+===
+move-tree
+---
+call [83,108]
+    identifier: map [83,86]
+    argument_list [86,108]
+        identifier: int [87,90]
+        call [92,107]
+            attribute [92,105]
+                call [92,99]
+                    identifier: input [92,97]
+                    argument_list [97,99]
+                identifier: split [100,105]
+            argument_list [105,107]
+to
+argument_list [87,114]
+at 0
+

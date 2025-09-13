@@ -1,0 +1,44 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [591,604]
+to
+argument_list [590,599]
+at 0
+------------
+===
+insert-node
+---
+binary_operator [591,604]
+to
+argument_list [590,599]
+at 0
+===
+insert-node
+---
+%: % [599,600]
+to
+binary_operator [591,604]
+at 1
+===
+insert-node
+---
+identifier: MOD [601,604]
+to
+binary_operator [591,604]
+at 2
+
+New cluster:
+MOVE from binary_operator [591,604]
+------------
+===
+move-tree
+---
+call [591,598]
+    identifier: solve [591,596]
+    argument_list [596,598]
+to
+binary_operator [591,604]
+at 0
+

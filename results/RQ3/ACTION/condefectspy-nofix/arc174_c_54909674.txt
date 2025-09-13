@@ -1,0 +1,170 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [339,346]
+to
+binary_operator [289,336]
+at 2
+------------
+===
+insert-node
+---
+*: * [340,341]
+to
+binary_operator [339,346]
+at 1
+===
+insert-node
+---
+binary_operator [339,346]
+to
+binary_operator [289,336]
+at 2
+===
+insert-node
+---
+identifier: n [339,340]
+to
+binary_operator [339,346]
+at 0
+
+New cluster:
+===
+insert-node
+---
+binary_operator [289,307]
+to
+binary_operator [289,328]
+at 0
+------------
+===
+insert-node
+---
+binary_operator [289,307]
+to
+binary_operator [289,328]
+at 0
+===
+insert-node
+---
+identifier: mod [304,307]
+to
+binary_operator [289,307]
+at 2
+===
+insert-node
+---
+%: % [303,304]
+to
+binary_operator [289,307]
+at 1
+
+New cluster:
+===
+insert-node
+---
+binary_operator [310,336]
+to
+binary_operator [289,328]
+at 3
+------------
+===
+insert-node
+---
+binary_operator [310,336]
+to
+binary_operator [289,328]
+at 3
+===
+insert-node
+---
+identifier: mod [333,336]
+to
+binary_operator [310,336]
+at 2
+===
+insert-node
+---
+%: % [332,333]
+to
+binary_operator [310,336]
+at 1
+
+New cluster:
+MOVE from binary_operator [339,346]
+------------
+===
+move-tree
+---
+parenthesized_expression [331,336]
+    binary_operator [332,335]
+        identifier: n [332,333]
+        -: - [333,334]
+        identifier: x [334,335]
+to
+binary_operator [339,346]
+at 2
+
+New cluster:
+MOVE from binary_operator [289,307]
+------------
+===
+move-tree
+---
+binary_operator [289,303]
+    binary_operator [289,296]
+        identifier: x [289,290]
+        *: * [290,291]
+        parenthesized_expression [291,296]
+            binary_operator [292,295]
+                identifier: x [292,293]
+                -: - [293,294]
+                integer: 1 [294,295]
+    *: * [296,297]
+    call [297,303]
+        identifier: e [297,298]
+        argument_list [298,303]
+            binary_operator [299,302]
+                identifier: x [299,300]
+                -: - [300,301]
+                integer: 2 [301,302]
+to
+binary_operator [289,307]
+at 0
+===
+move-tree
+---
+binary_operator [306,328]
+    parenthesized_expression [306,321]
+        binary_operator [307,320]
+            binary_operator [307,318]
+                binary_operator [307,312]
+                    binary_operator [307,310]
+                        integer: 2 [307,308]
+                        *: * [308,309]
+                        identifier: n [309,310]
+                    *: * [310,311]
+                    identifier: x [311,312]
+                -: - [312,313]
+                binary_operator [313,318]
+                    binary_operator [313,316]
+                        integer: 2 [313,314]
+                        *: * [314,315]
+                        identifier: x [315,316]
+                    *: * [316,317]
+                    identifier: x [317,318]
+            +: + [318,319]
+            identifier: x [319,320]
+    *: * [321,322]
+    call [322,328]
+        identifier: e [322,323]
+        argument_list [323,328]
+            binary_operator [324,327]
+                identifier: x [324,325]
+                -: - [325,326]
+                integer: 1 [326,327]
+to
+binary_operator [310,336]
+at 0
+

@@ -1,0 +1,29 @@
+New cluster:
+===
+insert-node
+---
+comment: # print(seg) [3222,3235]
+to
+module [0,3419]
+at 6
+------------
+===
+insert-node
+---
+comment: # print(seg) [3222,3235]
+to
+module [0,3419]
+at 6
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+expression_statement [3222,3232]
+    call [3222,3232]
+        identifier: print [3222,3227]
+        argument_list [3227,3232]
+            identifier: seg [3228,3231]
+

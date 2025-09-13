@@ -1,0 +1,232 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [54,94]
+to
+binary_operator [54,93]
+at 0
+------------
+===
+insert-node
+---
+string: "A" [54,57]
+to
+binary_operator [54,94]
+at 0
+===
+insert-node
+---
+binary_operator [54,94]
+to
+binary_operator [54,93]
+at 0
+===
+insert-node
+---
+*: * [58,59]
+to
+binary_operator [54,94]
+at 1
+===
+insert-node
+---
+parenthesized_expression [60,94]
+to
+binary_operator [54,94]
+at 2
+
+New cluster:
+===
+insert-node
+---
+binary_operator [97,121]
+to
+binary_operator [54,93]
+at 3
+------------
+===
+insert-node
+---
+parenthesized_expression [103,121]
+to
+binary_operator [97,121]
+at 2
+===
+insert-node
+---
+binary_operator [97,121]
+to
+binary_operator [54,93]
+at 3
+===
+insert-node
+---
+string: "B" [97,100]
+to
+binary_operator [97,121]
+at 0
+===
+insert-node
+---
+*: * [101,102]
+to
+binary_operator [97,121]
+at 1
+
+New cluster:
+MOVE from parenthesized_expression [60,94]
+------------
+===
+move-tree
+---
+binary_operator [54,72]
+    string: "A" [54,57]
+    *: * [58,59]
+    call [60,72]
+        attribute [60,67]
+            identifier: p [60,61]
+            identifier: count [62,67]
+        argument_list [67,72]
+            string: "A" [68,71]
+to
+parenthesized_expression [60,94]
+at 0
+===
+move-tree
+---
+binary_operator [75,93]
+    string: "B" [75,78]
+    *: * [79,80]
+    call [81,93]
+        attribute [81,88]
+            identifier: p [81,82]
+            identifier: count [83,88]
+        argument_list [88,93]
+            string: "B" [89,92]
+to
+parenthesized_expression [103,121]
+at 0
+
+New cluster:
+===
+insert-node
+---
++: + [74,75]
+to
+binary_operator [54,72]
+at 3
+------------
+===
+insert-node
+---
++: + [74,75]
+to
+binary_operator [54,72]
+at 3
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [76,93]
+    call [76,88]
+        attribute [76,83]
+            identifier: p [76,77]
+            identifier: count [78,83]
+        argument_list [83,88]
+            string: "B" [84,87]
+    //: // [89,91]
+    integer: 2 [92,93]
+to
+binary_operator [54,72]
+at 4
+
+New cluster:
+===
+insert-node
+---
+%: % [117,118]
+to
+binary_operator [75,93]
+at 3
+------------
+===
+insert-node
+---
+%: % [117,118]
+to
+binary_operator [75,93]
+at 3
+
+New cluster:
+===
+insert-node
+---
+integer: 2 [119,120]
+to
+binary_operator [75,93]
+at 4
+------------
+===
+insert-node
+---
+integer: 2 [119,120]
+to
+binary_operator [75,93]
+at 4
+
+New cluster:
+===
+delete-node
+---
+string: "A" [54,57]
+===
+------------
+===
+delete-node
+---
+string: "A" [54,57]
+===
+
+New cluster:
+===
+delete-node
+---
+*: * [58,59]
+===
+------------
+===
+delete-node
+---
+*: * [58,59]
+===
+
+New cluster:
+===
+delete-node
+---
+string: "B" [75,78]
+===
+------------
+===
+delete-node
+---
+string: "B" [75,78]
+===
+
+New cluster:
+===
+delete-node
+---
+*: * [79,80]
+===
+------------
+===
+delete-node
+---
+*: * [79,80]
+===
+

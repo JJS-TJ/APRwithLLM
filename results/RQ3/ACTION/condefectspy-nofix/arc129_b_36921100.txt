@@ -1,0 +1,68 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+parenthesized_expression [131,138]
+    binary_operator [132,137]
+        binary_operator [132,135]
+            identifier: A [132,133]
+            -: - [133,134]
+            identifier: B [134,135]
+        +: + [135,136]
+        integer: 1 [136,137]
+to
+binary_operator [131,136]
+at 0
+
+New cluster:
+===
+insert-node
+---
+//: // [138,140]
+to
+binary_operator [131,136]
+at 1
+------------
+===
+insert-node
+---
+//: // [138,140]
+to
+binary_operator [131,136]
+at 1
+
+New cluster:
+UPDATE from 1 to 2
+------------
+===
+update-node
+---
+integer: 1 [135,136]
+replace 1 by 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [131,134]
+    identifier: B [131,132]
+    -: - [132,133]
+    identifier: A [133,134]
+
+New cluster:
+===
+delete-node
+---
++: + [134,135]
+===
+------------
+===
+delete-node
+---
++: + [134,135]
+===
+

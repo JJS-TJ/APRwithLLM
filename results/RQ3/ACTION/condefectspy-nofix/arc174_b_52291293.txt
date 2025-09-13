@@ -1,0 +1,60 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [263,279]
+    binary_operator [263,274]
+        identifier: target [263,269]
+        //: // [270,272]
+        integer: 2 [273,274]
+    *: * [275,276]
+    identifier: p4 [277,279]
+to
+binary_operator [263,274]
+at 0
+
+New cluster:
+===
+insert-node
+---
+integer: 2 [282,283]
+to
+binary_operator [263,274]
+at 3
+------------
+===
+insert-node
+---
+integer: 2 [282,283]
+to
+binary_operator [263,274]
+at 3
+
+New cluster:
+===
+delete-node
+---
+identifier: target [263,269]
+===
+------------
+===
+delete-node
+---
+identifier: target [263,269]
+===
+
+New cluster:
+===
+delete-node
+---
+identifier: p4 [272,274]
+===
+------------
+===
+delete-node
+---
+identifier: p4 [272,274]
+===
+

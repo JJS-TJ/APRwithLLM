@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [779,787]
+    assignment [779,787]
+        identifier: nowi [779,783]
+        =: = [784,785]
+        identifier: i [786,787]
+to
+block [715,765]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+expression_statement [1179,1187]
+    assignment [1179,1187]
+        identifier: nowi [1179,1183]
+        =: = [1184,1185]
+        identifier: i [1186,1187]
+to
+block [1093,1143]
+at 2
+

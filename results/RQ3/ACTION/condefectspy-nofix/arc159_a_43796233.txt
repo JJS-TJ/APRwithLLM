@@ -1,0 +1,21 @@
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+if_statement [233,267]
+    comparison_operator [236,246]
+        binary_operator [236,243]
+            identifier: cnt [236,239]
+            %: % [239,240]
+            integer: 100 [240,243]
+        comparison_operator: == [243,245]
+        integer: 0 [245,246]
+    block [257,267]
+        expression_statement [257,267]
+            call [257,267]
+                identifier: print [257,262]
+                argument_list [262,267]
+                    identifier: cnt [263,266]
+

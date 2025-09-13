@@ -1,0 +1,76 @@
+New cluster:
+===
+insert-node
+---
+call [535,578]
+to
+binary_operator [535,572]
+at 0
+------------
+===
+insert-node
+---
+argument_list [538,578]
+to
+call [535,578]
+at 1
+===
+insert-node
+---
+identifier: max [535,538]
+to
+call [535,578]
+at 0
+===
+insert-node
+---
+call [535,578]
+to
+binary_operator [535,572]
+at 0
+
+New cluster:
+MOVE from argument_list [538,578]
+------------
+===
+move-tree
+---
+binary_operator [535,570]
+    call [535,554]
+        identifier: min [535,538]
+        argument_list [538,554]
+            binary_operator [539,551]
+                subscript [539,549]
+                    identifier: power [539,544]
+                    binary_operator [545,548]
+                        identifier: i [545,546]
+                        +: + [546,547]
+                        integer: 1 [547,548]
+                -: - [549,550]
+                integer: 1 [550,551]
+            identifier: r [552,553]
+    -: - [554,555]
+    call [555,570]
+        identifier: max [555,558]
+        argument_list [558,570]
+            subscript [559,567]
+                identifier: power [559,564]
+                identifier: i [565,566]
+            identifier: l [568,569]
+to
+argument_list [538,578]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_operator [575,577]
+    -: - [575,576]
+    integer: 1 [576,577]
+to
+argument_list [538,578]
+at 1
+

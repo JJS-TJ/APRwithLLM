@@ -1,0 +1,18 @@
+New cluster:
+UPDATE from "B" to "A"
+------------
+===
+update-node
+---
+string: "B" [44,47]
+replace "B" by "A"
+
+New cluster:
+UPDATE from "A" to "B"
+------------
+===
+update-node
+---
+string: "A" [61,64]
+replace "A" by "B"
+

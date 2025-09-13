@@ -1,0 +1,35 @@
+New cluster:
+===
+insert-node
+---
+identifier: p [598,599]
+to
+argument_list [597,620]
+at 0
+------------
+===
+insert-node
+---
+identifier: p [598,599]
+to
+argument_list [597,620]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+call [598,619]
+    identifier: list [598,602]
+    argument_list [602,619]
+        call [603,618]
+            identifier: range [603,608]
+            argument_list [608,618]
+                integer: 1 [609,610]
+                binary_operator [612,617]
+                    identifier: n [612,613]
+                    +: + [614,615]
+                    integer: 1 [616,617]
+

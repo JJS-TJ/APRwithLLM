@@ -1,0 +1,27 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+binary_operator [299,304]
+    identifier: M [299,300]
+    -: - [301,302]
+    integer: 1 [303,304]
+to
+comparison_operator [295,300]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: M [299,300]
+===
+------------
+===
+delete-node
+---
+identifier: M [299,300]
+===
+

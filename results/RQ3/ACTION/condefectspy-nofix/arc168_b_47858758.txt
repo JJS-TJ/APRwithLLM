@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from cnt to elem
+------------
+===
+update-node
+---
+identifier: cnt [401,404]
+replace cnt by elem
+

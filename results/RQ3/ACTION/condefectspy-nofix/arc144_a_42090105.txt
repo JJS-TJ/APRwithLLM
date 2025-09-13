@@ -1,0 +1,92 @@
+New cluster:
+===
+insert-node
+---
+assignment [216,238]
+to
+expression_statement [216,233]
+at 0
+------------
+===
+insert-node
+---
+binary_operator [222,238]
+to
+assignment [216,238]
+at 2
+===
+insert-node
+---
+=: = [220,221]
+to
+assignment [216,238]
+at 1
+===
+insert-node
+---
+identifier: ans [235,238]
+to
+binary_operator [222,238]
+at 2
+===
+insert-node
+---
+assignment [216,238]
+to
+expression_statement [216,233]
+at 0
+===
+insert-node
+---
++: + [233,234]
+to
+binary_operator [222,238]
+at 1
+===
+insert-node
+---
+identifier: ans [216,219]
+to
+assignment [216,238]
+at 0
+
+New cluster:
+MOVE from binary_operator [222,238]
+------------
+===
+move-tree
+---
+call [223,233]
+    identifier: str [223,226]
+    argument_list [226,233]
+        binary_operator [227,232]
+            identifier: N [227,228]
+            %: % [229,230]
+            integer: 4 [231,232]
+to
+binary_operator [222,238]
+at 0
+
+New cluster:
+===
+delete-node
+---
+augmented_assignment [216,233]
+===
+------------
+===
+delete-node
+---
+augmented_assignment [216,233]
+===
+===
+delete-node
+---
++=: += [220,222]
+===
+===
+delete-node
+---
+identifier: ans [216,219]
+===
+

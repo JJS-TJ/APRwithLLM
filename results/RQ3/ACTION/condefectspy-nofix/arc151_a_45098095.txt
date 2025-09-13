@@ -1,0 +1,27 @@
+New cluster:
+===
+insert-node
+---
+string: "0" [2288,2291]
+to
+argument_list [2287,2293]
+at 0
+------------
+===
+insert-node
+---
+string: "0" [2288,2291]
+to
+argument_list [2287,2293]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+subscript [2288,2292]
+    identifier: S [2288,2289]
+    identifier: i [2290,2291]
+

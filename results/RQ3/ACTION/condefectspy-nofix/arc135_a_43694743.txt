@@ -1,0 +1,24 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+call [889,892]
+    identifier: I [889,890]
+    argument_list [890,892]
+to
+assignment [885,895]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [889,895]
+    integer: 10 [889,891]
+    **: ** [891,893]
+    integer: 18 [893,895]
+

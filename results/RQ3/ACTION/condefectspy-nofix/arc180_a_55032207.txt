@@ -1,0 +1,30 @@
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+unary_operator [135,145]
+    -: - [135,136]
+    parenthesized_expression [136,145]
+        binary_operator [137,144]
+            unary_operator [137,141]
+                -: - [137,138]
+                identifier: cnt [138,141]
+            //: // [141,143]
+            integer: 2 [143,144]
+to
+augmented_assignment [130,141]
+at 2
+
+New cluster:
+Unknown cluster type
+------------
+===
+delete-tree
+---
+binary_operator [135,141]
+    identifier: cnt [135,138]
+    //: // [138,140]
+    integer: 2 [140,141]
+

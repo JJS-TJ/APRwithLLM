@@ -1,0 +1,9 @@
+New cluster:
+UPDATE from cnta to cntc
+------------
+===
+update-node
+---
+identifier: cnta [366,370]
+replace cnta by cntc
+

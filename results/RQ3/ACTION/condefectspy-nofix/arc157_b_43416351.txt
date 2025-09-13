@@ -1,0 +1,74 @@
+New cluster:
+===
+insert-node
+---
+call [254,271]
+to
+expression_statement [254,264]
+at 0
+------------
+===
+insert-node
+---
+call [254,271]
+to
+expression_statement [254,264]
+at 0
+===
+insert-node
+---
+identifier: print [254,259]
+to
+call [254,271]
+at 0
+===
+insert-node
+---
+argument_list [259,271]
+to
+call [254,271]
+at 1
+
+New cluster:
+MOVE from argument_list [259,271]
+------------
+===
+move-tree
+---
+call [254,264]
+    identifier: print [254,259]
+    argument_list [259,264]
+        binary_operator [260,263]
+            identifier: K [260,261]
+            -: - [261,262]
+            integer: 1 [262,263]
+to
+argument_list [259,271]
+at 0
+
+New cluster:
+UPDATE from print to max
+------------
+===
+update-node
+---
+identifier: print [254,259]
+replace print by max
+
+New cluster:
+===
+insert-node
+---
+integer: 0 [264,265]
+to
+argument_list [259,264]
+at 0
+------------
+===
+insert-node
+---
+integer: 0 [264,265]
+to
+argument_list [259,264]
+at 0
+

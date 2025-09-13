@@ -1,0 +1,52 @@
+New cluster:
+===
+insert-node
+---
+binary_operator [274,282]
+to
+argument_list [273,283]
+at 0
+------------
+===
+insert-node
+---
+parenthesized_expression [274,280]
+to
+binary_operator [274,282]
+at 0
+===
+insert-node
+---
+binary_operator [274,282]
+to
+argument_list [273,283]
+at 0
+===
+insert-node
+---
+%: % [280,281]
+to
+binary_operator [274,282]
+at 1
+===
+insert-node
+---
+identifier: n [281,282]
+to
+binary_operator [274,282]
+at 2
+
+New cluster:
+MOVE from parenthesized_expression [274,280]
+------------
+===
+move-tree
+---
+binary_operator [274,278]
+    identifier: id [274,276]
+    +: + [276,277]
+    integer: 1 [277,278]
+to
+parenthesized_expression [274,280]
+at 0
+

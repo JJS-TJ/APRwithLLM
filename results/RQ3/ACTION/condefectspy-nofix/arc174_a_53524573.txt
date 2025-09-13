@@ -1,0 +1,30 @@
+New cluster:
+===
+insert-node
+---
+integer: 0 [173,174]
+to
+assignment [169,176]
+at 2
+------------
+===
+insert-node
+---
+integer: 0 [173,174]
+to
+assignment [169,176]
+at 2
+
+New cluster:
+===
+delete-node
+---
+identifier: INF [173,176]
+===
+------------
+===
+delete-node
+---
+identifier: INF [173,176]
+===
+

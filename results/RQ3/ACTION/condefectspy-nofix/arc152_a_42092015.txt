@@ -1,0 +1,63 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [355,400]
+to
+if_statement [366,448]
+at 0
+------------
+===
+insert-node
+---
+and: and [390,393]
+to
+boolean_operator [355,400]
+at 1
+===
+insert-node
+---
+boolean_operator [355,400]
+to
+if_statement [366,448]
+at 0
+
+New cluster:
+MOVE from boolean_operator [355,400]
+------------
+===
+move-tree
+---
+boolean_operator [369,403]
+    boolean_operator [369,391]
+        identifier: no_more_two [369,380]
+        and: and [381,384]
+        comparison_operator [385,391]
+            identifier: a [385,386]
+            comparison_operator: == [387,389]
+            integer: 2 [390,391]
+    and: and [392,395]
+    comparison_operator [396,403]
+        identifier: L [396,397]
+        comparison_operator: != [398,400]
+        unary_operator [401,403]
+            -: - [401,402]
+            integer: 1 [402,403]
+to
+boolean_operator [355,400]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [394,400]
+    identifier: L [394,395]
+    comparison_operator: != [396,398]
+    integer: 0 [399,400]
+to
+boolean_operator [355,400]
+at 2
+

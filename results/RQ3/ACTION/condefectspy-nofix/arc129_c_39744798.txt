@@ -1,0 +1,189 @@
+New cluster:
+===
+insert-node
+---
+argument_list [304,334]
+to
+call [286,331]
+at 1
+------------
+===
+insert-node
+---
+call [305,333]
+to
+argument_list [304,334]
+at 0
+===
+insert-node
+---
+argument_list [304,334]
+to
+call [286,331]
+at 1
+===
+insert-node
+---
+identifier: str [305,308]
+to
+call [305,333]
+at 0
+
+New cluster:
+MOVE from call [305,333]
+------------
+===
+move-tree
+---
+argument_list [304,331]
+    call [305,330]
+        identifier: str [305,308]
+        argument_list [308,330]
+            binary_operator [309,329]
+                parenthesized_expression [309,327]
+                    binary_operator [310,326]
+                        binary_operator [310,324]
+                            integer: 3 [310,311]
+                            *: * [311,312]
+                            call [312,324]
+                                identifier: len [312,315]
+                                argument_list [315,324]
+                                    identifier: fin_ans [316,323]
+                        -: - [324,325]
+                        integer: 3 [325,326]
+                %: % [327,328]
+                integer: 7 [328,329]
+to
+call [305,333]
+at 1
+
+New cluster:
+UPDATE from str to pow
+------------
+===
+update-node
+---
+identifier: str [305,308]
+replace str by pow
+
+New cluster:
+===
+insert-node
+---
+integer: 3 [313,314]
+to
+argument_list [308,330]
+at 0
+------------
+===
+insert-node
+---
+integer: 3 [313,314]
+to
+argument_list [308,330]
+at 0
+
+New cluster:
+MOVE from argument_list [308,330]
+------------
+===
+move-tree
+---
+binary_operator [310,324]
+    integer: 3 [310,311]
+    *: * [311,312]
+    call [312,324]
+        identifier: len [312,315]
+        argument_list [315,324]
+            identifier: fin_ans [316,323]
+to
+argument_list [308,330]
+at 1
+
+New cluster:
+MOVE from binary_operator [310,324]
+------------
+===
+move-tree
+---
+*: * [311,312]
+to
+binary_operator [310,324]
+at 2
+===
+move-tree
+---
+integer: 3 [310,311]
+to
+binary_operator [310,324]
+at 2
+
+New cluster:
+===
+insert-node
+---
+integer: 7 [330,331]
+to
+argument_list [308,330]
+at 2
+------------
+===
+insert-node
+---
+integer: 7 [330,331]
+to
+argument_list [308,330]
+at 2
+
+New cluster:
+UPDATE from 3 to 5
+------------
+===
+update-node
+---
+integer: 3 [310,311]
+replace 3 by 5
+
+New cluster:
+===
+delete-node
+---
+binary_operator [309,329]
+===
+------------
+===
+delete-node
+---
+integer: 7 [328,329]
+===
+===
+delete-node
+---
+binary_operator [309,329]
+===
+===
+delete-node
+---
+-: - [324,325]
+===
+===
+delete-node
+---
+binary_operator [310,326]
+===
+===
+delete-node
+---
+integer: 3 [325,326]
+===
+===
+delete-node
+---
+parenthesized_expression [309,327]
+===
+===
+delete-node
+---
+%: % [327,328]
+===
+

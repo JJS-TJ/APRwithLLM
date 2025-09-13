@@ -1,0 +1,80 @@
+New cluster:
+===
+insert-node
+---
+boolean_operator [202,272]
+to
+if_statement [199,374]
+at 0
+------------
+===
+insert-node
+---
+and: and [248,251]
+to
+boolean_operator [202,272]
+at 1
+===
+insert-node
+---
+boolean_operator [202,272]
+to
+if_statement [199,374]
+at 0
+
+New cluster:
+MOVE from boolean_operator [202,272]
+------------
+===
+move-tree
+---
+boolean_operator [202,247]
+    comparison_operator [202,219]
+        binary_operator [202,207]
+            identifier: v [202,203]
+            +: + [204,205]
+            integer: 1 [206,207]
+        not in: not [208,211]
+        not in: in [212,214]
+        identifier: used [215,219]
+    and: and [220,223]
+    comparison_operator [224,247]
+        binary_operator [224,235]
+            identifier: v [224,225]
+            *: * [226,227]
+            parenthesized_expression [228,235]
+                binary_operator [229,234]
+                    identifier: v [229,230]
+                    +: + [231,232]
+                    integer: 1 [233,234]
+        not in: not [236,239]
+        not in: in [240,242]
+        identifier: used [243,247]
+to
+boolean_operator [202,272]
+at 0
+
+New cluster:
+Unknown cluster type
+------------
+===
+insert-tree
+---
+comparison_operator [252,272]
+    binary_operator [252,263]
+        identifier: v [252,253]
+        *: * [254,255]
+        parenthesized_expression [256,263]
+            binary_operator [257,262]
+                identifier: v [257,258]
+                +: + [259,260]
+                integer: 1 [261,262]
+    comparison_operator: <= [264,266]
+    binary_operator [267,272]
+        integer: 10 [267,269]
+        **: ** [269,271]
+        integer: 9 [271,272]
+to
+boolean_operator [202,272]
+at 2
+
